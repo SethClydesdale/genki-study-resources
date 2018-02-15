@@ -2,7 +2,7 @@
 Genki Study Resources is a collection of quizzes for practicing what is learned in the [Genki Japanese textbooks](http://genki.japantimes.co.jp/index_en). Feel free to visit the website to beging testing your knowledge.
 
 
-**Website : ** https://sethclydesdale.github.io/genki-study-resources/
+**Website :** https://sethclydesdale.github.io/genki-study-resources/
 
 
 ### Notice

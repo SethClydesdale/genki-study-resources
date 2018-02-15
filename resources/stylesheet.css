@@ -69,7 +69,8 @@ a#fork-me {
   position:absolute;
   right:-55px;
   top:30px;
-  transition:300ms;
+  transition-property:color, background;
+  transition-duration:300ms;
 }
 
 a#fork-me:hover {
