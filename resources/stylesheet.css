@@ -1,0 +1,243 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+body {
+  color:#333;
+  background:#FFF;
+  font-size:13px;
+  font-family:'Meiryo', 'Osaka', Arial, sans-serif;
+  padding:0;
+  margin:0;
+  overflow-x:hidden;
+  display:flex;
+  min-height:100vh;
+  flex-direction:column;
+}
+
+a {
+  color:#039;
+  text-decoration:none;
+}
+a:hover { text-decoration:underline; }
+
+.button, a.button {
+  color:#FFF;
+  background:#F60;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+  padding:6px 12px;
+  margin:3px;
+}
+
+.button:hover, a.button:hover { background:#F50; }
+
+.center { text-align:center; }
+
+.clear:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+
+/* header */
+header {
+  color:#FFF;
+  background:url('images/genki.png') no-repeat 10px 0px #F60;
+  padding:15px 15px 15px 140px;
+  position:relative;
+  overflow:hidden;
+}
+
+header h1 { font-size:32px; }
+header h1 a { color:#FFF; }
+
+h2 { margin:30px 0 0 0; }
+
+a#fork-me {
+  color:#FFF;
+  background:#333;
+  font-size:16px;
+  font-weight:bold;
+  text-align:center;
+  text-transform:uppercase;
+  text-decoration:none;
+  line-height:30px;
+  height:30px;
+  width:200px;
+  transform:rotate(45deg);
+  position:absolute;
+  right:-55px;
+  top:30px;
+  transition:300ms;
+}
+
+a#fork-me:hover {
+  color:#333;
+  background:#FFF;
+}
+
+
+/* content */
+#content { flex:1 0 auto; }
+
+.content-block {
+  max-width:1000px;
+  margin:0 auto;
+  padding:30px;
+}
+
+/* titles */
+.title {
+  color:#F60;
+  font-size:28px;
+}
+
+.title-desc {
+  font-size:16px;
+}
+
+.title-med {
+  font-size:18px;
+  margin:10px 0;
+}
+
+.section-title {
+  color:#F60;
+  border-bottom:2px solid #F60;
+  font-size:24px;
+  margin:0;
+  padding-bottom:6px;
+}
+
+.sub-title {
+  font-size:18px;
+  margin:16px 0;
+}
+
+
+/* footer */
+footer {
+  color:#FFF;
+  background:#333;
+  padding:15px;
+}
+
+footer a { color:#CCC; }
+footer a:hover { color:#FFF; }
+
+footer ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+footer li { display:inline-block; }
+footer li:before { content:"| "; }
+footer li:first-child:before { content:""; }
+
+.footer-left { float:left; }
+.footer-right { float:right; }
+
+/* quiz styles */
+#question-list, #drop-list { float:left; }
+#answer-list { float:right; }
+
+.quiz-item {
+  background:#EEE;
+  border:1px solid #CCC;
+  margin:3px;
+  padding:3px;
+}
+#answer-list .quiz-item { cursor:move; }
+
+#quiz-info {
+  color:#FFF;
+  background:#F60;
+  font-weight:bold;
+  text-align:left;
+  padding:15px 15px 15px 50px;
+  margin:10px 0;
+  position:relative;
+}
+
+#quiz-info:before {
+  content:"\f05a";
+  font-size:32px;
+  font-family:FontAwesome;
+  position:absolute;
+  top:50%;
+  margin-top:-16px;
+  left:12px;
+}
+
+/* timer styles */
+#quiz-timer { margin-top:10px; }
+#quiz-timer:before {
+  content:"Time Elapsed";
+  display:block;
+}
+
+/* answer styles */
+.quiz-answer-zone:empty {
+  border:1px solid #CCC;
+  margin:3px;
+  padding:3px;
+}
+
+.quiz-answer-zone:empty:after {
+  content:attr(data-text);
+  color:transparent;
+}
+
+.answer-correct { pointer-events:none; }
+.answer-correct .quiz-item:before {
+  content:"\f005\A0";
+  font-family:FontAwesome;
+  color:#F60;
+}
+
+.quiz-over [data-mistakes] { position:relative; }
+.quiz-over [data-mistakes] .quiz-item { border-color:#F00; }
+.quiz-over [data-mistakes]:after {
+  color:#F00;
+  content:"<-- " attr(data-mistakes) " mistakes";
+  display:block;
+  position:absolute;
+  top:3px;
+  right:-100px;
+}
+.quiz-over [data-mistakes="1"]:after { content:"<-- " attr(data-mistakes) " mistake"; }
+
+.quiz-over [data-mistakes="0"] .quiz-item { border-color:#CCC; }
+.quiz-over [data-mistakes="0"]:after { content:""; }
+
+
+/* RESULT LIST */
+#complete-banner {
+  color:#FFF;
+  background:#F60;
+  font-size:16px;
+  font-weight:bold;
+  padding:5px;
+}
+
+#result-list {
+  background:#EEE;
+  border:1px solid #CCC;
+}
+
+.result-row {
+  border-bottom:1px solid #CCC;
+  padding:3px;
+}
+
+.result-row:last-child { border:none; }
+
+.result-label {
+  text-align:right;
+  font-weight:bold;
+  display:inline-block;
+  width:150px;
+  margin-right:5px;
+}
