@@ -27,9 +27,103 @@ window.Genki = {
         '～じ' : 'o\'clock',
         '～じん' : '...people',
         'せんこう' : 'major'
-      },
-    }
+      }
+    },
     
+    
+    // Vocabulary : Part 2
+    vocab_2 : {
+      type : 'drag',
+      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
+      
+      quizlet : {
+        'せんせい' : 'teacher; Professor...',
+        'そうです' : 'That\'s right.',
+        'そうですか' : 'I see.; Is that so?',
+        'だいがく' : 'college; university',
+        'でんわ' : 'telephone',
+        'ともだち' : 'friend',
+        'なまえ' : 'name',
+        'なん／なんに' : 'what',
+        'にほん' : 'Japan',
+        '～ねんせい' : '...year student',
+        'はい' : 'yes',
+        'はん' : 'half',
+        'ばんごう' : 'number',
+        'りゅうがくせい' : 'international student',
+        'わたし' : 'I'
+      }
+    },
+    
+    
+    // Vocabulary : Countries
+    vocab_3 : {
+      type : 'drag',
+      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
+      
+      quizlet : {
+        'アメリカ／あめりか' : 'USA',
+        'イギリス／いぎりす' : 'Britain',
+        'オ―ストラリア／おおすとらりあ' : 'Australia',
+        'かんこく' : 'Korea',
+        'スウェ―デン／すうええでん' : 'Sweden',
+        'ちゅうごく' : 'China'
+      }
+    },
+    
+    
+    // Vocabulary : Majors
+    vocab_4 : {
+      type : 'drag',
+      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
+      
+      quizlet : {
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : ''
+      }
+    },
+    
+    
+    // Vocabulary : Occupations
+    vocab_5 : {
+      type : 'drag',
+      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
+      
+      quizlet : {
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : ''
+      }
+    },
+    
+    
+    // Vocabulary : Family
+    vocab_6 : {
+      type : 'drag',
+      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
+      
+      quizlet : {
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : '',
+        '' : ''
+      }
+    }
   }
   
 };
@@ -125,7 +219,7 @@ function generateQuiz (o) {
             '</div>'+
           '</div>';
           
-          document.getElementById('quiz-zone').className = 'quiz-over';
+          document.getElementById('quiz-zone').className += ' quiz-over';
           window.location.hash = '#complete-banner'; // jump to the quiz results
         }
       }
