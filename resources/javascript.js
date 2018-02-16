@@ -4,164 +4,14 @@ window.Genki = {
   mistakes : 0, // number of mistakes made in the lesson
   score : 0, // the student's score
   
-  
-  // pre-lesson exercises
-  lesson_0 : {
-    greetings : {
-      type : 'drag',
-      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
-      
-      quizlet : {
-        'おはよう。' : 'Good morning.',
-        'おはようございます。' : 'Good morning. (polite)',
-        'こんいちは。' : 'Good afternoon.',
-        'こんばんは。' : 'Good evening.',
-        'さようなら。' : 'Good-bye.',
-        'おやすみ（なさい）。' : 'Good night.',
-        'ありがとう。' : 'Thank you.',
-        'ありがとうございます。' : 'Thank you. (polite)',
-        'すみません。' : 'Excuse me.; I\'m sorry.',
-        'いいえ。' : 'No.; Not at all.',
-        'いってきます。' : 'I\'ll go and come back.',
-        'いってらっしゃい。' : 'Please go and come back.',
-        'ただいま。' : 'I\'m home.',
-        'おかえり（なさい）。' : 'Welcome home.',
-        'いただきます。' : 'Thank you for the meal. (before eating)',
-        'ほちそうさま（でした）。' : 'Thank you for the meal. (after eating)',
-        'はじめまして。' : 'How do you do?',
-        'よろしくおねがいします。' : 'Nice to meet you.'
-      }
-    }
-  },
-  
-  
-  // Questions and answers for Lesson 1 : New Friends
-  lesson_1 : {
-    
-    // Vocabulary : Part 1
-    vocab_1 : {
-      type : 'drag',
-      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
-      
-      quizlet : {
-        'あの' : 'um...',
-        'いま' : 'now',
-        'えいご' : 'English (language)',
-        'ええ' : 'yes',
-        'がくせい' : 'student',
-        '～ご' : '...language',
-        'こうこう' : 'high school',
-        'ごご' : 'P.M.',
-        'ごぜん' : 'A.M.',
-        '～さい' : '...years old',
-        '～さん' : 'Mr./Ms....',
-        '～じ' : 'o\'clock',
-        '～じん' : '...people',
-        'せんこう' : 'major'
-      }
-    },
-    
-    
-    // Vocabulary : Part 2
-    vocab_2 : {
-      type : 'drag',
-      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
-      
-      quizlet : {
-        'せんせい' : 'teacher; Professor...',
-        'そうです' : 'That\'s right.',
-        'そうですか' : 'I see.; Is that so?',
-        'だいがく' : 'college; university',
-        'でんわ' : 'telephone',
-        'ともだち' : 'friend',
-        'なまえ' : 'name',
-        'なん／なんに' : 'what',
-        'にほん' : 'Japan',
-        '～ねんせい' : '...year student',
-        'はい' : 'yes',
-        'はん' : 'half',
-        'ばんごう' : 'number',
-        'りゅうがくせい' : 'international student',
-        'わたし' : 'I'
-      }
-    },
-    
-    
-    // Vocabulary : Countries
-    vocab_3 : {
-      type : 'drag',
-      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
-      
-      quizlet : {
-        'アメリカ／あめりか' : 'USA',
-        'イギリス／いぎりす' : 'Britain',
-        'オ―ストラリア／おおすとらりあ' : 'Australia',
-        'かんこく' : 'Korea',
-        'スウェ―デン／すうええでん' : 'Sweden',
-        'ちゅうごく' : 'China'
-      }
-    },
-    
-    
-    // Vocabulary : Majors
-    vocab_4 : {
-      type : 'drag',
-      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
-      
-      quizlet : {
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : ''
-      }
-    },
-    
-    
-    // Vocabulary : Occupations
-    vocab_5 : {
-      type : 'drag',
-      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
-      
-      quizlet : {
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : ''
-      }
-    },
-    
-    
-    // Vocabulary : Family
-    vocab_6 : {
-      type : 'drag',
-      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
-      
-      quizlet : {
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : '',
-        '' : ''
-      }
-    }
+  // frequently used strings
+  lang : {
+    std_drag : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.'
   }
-  
 };
 
 
-// To generate a quiz simply pass an exercise from the Genki object.
-// EXAMPLE : generateQuiz(Genki.lesson_1.vocab_1); // SEE : lesson-1\vocab-1\index.html
+// To generate a quiz simply pass an object with the necessary data (see vocab-1/index.html and other quiz files for examples)
 function generateQuiz (o) {
   
   // create a drag and drop quiz
@@ -223,35 +73,7 @@ function generateQuiz (o) {
         // when all problems have been solved..
         // stop the timer, show the score, and congratulate the student
         if (++Genki.solved == Genki.problems) {
-          Genki.score = Math.floor((Genki.solved - Genki.mistakes) * 100 / Genki.problems);
-          Genki.timer.stop();
-          
-          var timer = document.getElementById('quiz-timer');
-          
-          timer.style.display = 'none';
-          
-          document.getElementById('quiz-result').innerHTML = 
-          '<div id="complete-banner" class="center">Quiz Complete!</div>'+
-          '<div id="result-list">'+
-            '<div class="result-row"><span class="result-label">Problems Solved:</span>' + Genki.problems + '</div>'+
-            '<div class="result-row"><span class="result-label">Mistakes:</span>' + Genki.mistakes + '</div>'+
-            '<div class="result-row"><span class="result-label">Score:</span>' + Genki.score + '%</div>'+
-            '<div class="result-row"><span class="result-label">Completion Time:</span>' + timer.innerHTML + '</div>'+
-            '<div class="result-row center">'+
-              (
-                Genki.score == 100 ? 'PERFECT! Great Job, you have mastered this quiz! Feel free to move on or challenge yourself by trying to beat your completion time.' :
-                Genki.score > 70 ? 'Nice work! Review the problems you got wrong (outlined in red) and take a short break before trying again.' :
-                'Keep studying! Review the problems you got wrong (outlined in red) and take a short break before trying again.' 
-              )+
-              '<div class="center">'+
-                '<a href="' + window.location.pathname + '" class="button">Try Again</a>'+
-                '<a href="https://sethclydesdale.github.io/genki-study-resources/" class="button">Back to Index</a>'+
-              '</div>'+
-            '</div>'+
-          '</div>';
-          
-          document.getElementById('quiz-zone').className += ' quiz-over';
-          window.location.hash = '#complete-banner'; // jump to the quiz results
+          endQuiz();
         }
       }
     }
@@ -274,3 +96,47 @@ function generateQuiz (o) {
   // jump to the quiz info
   window.location.hash = 'quiz-info';
 };
+
+
+// ends the quiz
+function endQuiz () {
+  Genki.score = Math.floor((Genki.solved - Genki.mistakes) * 100 / Genki.problems);
+  Genki.timer.stop();
+
+  var timer = document.getElementById('quiz-timer');
+
+  timer.style.display = 'none';
+
+  document.getElementById('quiz-result').innerHTML = 
+  '<div id="complete-banner" class="center">Quiz Complete!</div>'+
+  '<div id="result-list">'+
+    '<div class="result-row"><span class="result-label">Problems Solved:</span>' + Genki.problems + '</div>'+
+    '<div class="result-row"><span class="result-label">Mistakes:</span>' + Genki.mistakes + '</div>'+
+    '<div class="result-row"><span class="result-label">Score:</span>' + Genki.score + '%</div>'+
+    '<div class="result-row"><span class="result-label">Completion Time:</span>' + timer.innerHTML + '</div>'+
+    '<div class="result-row center">'+
+      (
+        Genki.score == 100 ? 'PERFECT! Great Job, you have mastered this quiz! Feel free to move on or challenge yourself by trying to beat your completion time.' :
+        Genki.score > 70 ? 'Nice work! Review the problems you got wrong (outlined in red) and take a short break before trying again.' :
+        'Keep studying! Review the problems you got wrong (outlined in red) and take a short break before trying again.' 
+      )+
+      '<div class="center">'+
+        '<a href="' + window.location.pathname + '" class="button">Try Again</a>'+
+        '<a href="' + document.getElementById('home-link').href + '" class="button">Back to Index</a>'+
+      '</div>'+
+    '</div>'+
+  '</div>';
+
+  document.getElementById('quiz-zone').className += ' quiz-over';
+  window.location.hash = '#complete-banner'; // jump to the quiz results
+};
+
+
+// append index.html to links if this project is hosted on the local file system
+if (window.location.protocol == 'file:') {
+  for (var a = document.querySelectorAll('a[href$="/"]'), i = 0, j = a.length; i < j; i++) {
+    if (!/http/.test(a[i].href)) {
+      a[i].href += 'index.html';
+    }
+  }
+}

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Greetings | Genki Study Resources</title>
+    <title>Vocabulary: Part 2 - Lesson 1 | Genki Study Resources</title>
     <meta name="title" content="Genki Study Resources">
     <meta name="twitter:title" content="Genki Study Resources">
     <meta property="og:title" content="Genki Study Resources">
     <meta name="description" content="A collection of resources for practicing what is taught in the Genki Japanese textbooks.">
     <meta property="og:description" content="A collection of resources for practicing what is taught in the Genki Japanese textbooks.">
-    <link rel="shortcut icon" type="image/x-icon" href="../../resources/images/genkico.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="genki, japanese, study, quizzes, exercises" lang="en">
     <meta name="language" content="en">
@@ -21,23 +21,24 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@SethC1995">
 
-    <link rel="stylesheet" href="../../resources/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css">
-    
+    <link rel="stylesheet" href="../../../resources/stylesheet.css">
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-114289226-1', 'auto');
-      ga('send', 'pageview');
+      // disables analytics if used locally or on another host
+      if (window.location.hostname == 'sethclydesdale.github.io') {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-114289226-1', 'auto');
+        ga('send', 'pageview');
+      }
     </script>
   </head>
 
   <body>
     
     <header>
-      <h1><a href="https://sethclydesdale.github.io/genki-study-resources/">Genki Study Resources</a></h1>
+      <h1><a href="../../../" id="home-link">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
     
@@ -51,8 +52,8 @@
     
     <footer class="clear">
       <ul class="footer-left">
-        <li><a href="https://sethclydesdale.github.io/genki-study-resources/">Home</a></li>
-        <li><a href="https://sethclydesdale.github.io/genki-study-resources/privacy/">Privacy</a></li>
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
       </ul>
       
       <ul class="footer-right">
@@ -60,9 +61,30 @@
       </ul>
     </footer>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"></script>
-    <script src="../../resources/javascript.js"></script>
-    <script>generateQuiz(Genki.lesson_0.greetings);</script>
+    <script src="../../../resources/dragula.min.js"></script>
+    <script src="../../../resources/easytimer.min.js"></script>
+    <script src="../../../resources/javascript.js"></script>
+    <script>generateQuiz({
+      type : 'drag',
+      info : Genki.lang.std_drag,
+      
+      quizlet : {
+        'せんせい' : 'teacher; Professor...',
+        'そうです' : 'That\'s right.',
+        'そうですか' : 'I see.; Is that so?',
+        'だいがく' : 'college; university',
+        'でんわ' : 'telephone',
+        'ともだち' : 'friend',
+        'なまえ' : 'name',
+        'なん／なんに' : 'what',
+        'にほん' : 'Japan',
+        '～ねんせい' : '...year student',
+        'はい' : 'yes',
+        'はん' : 'half',
+        'ばんごう' : 'number',
+        'りゅうがくせい' : 'international student',
+        'わたし' : 'I'
+      }
+    });</script>
   </body>
 </html>
