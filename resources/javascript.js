@@ -6,7 +6,8 @@ window.Genki = {
   
   // frequently used strings
   lang : {
-    std_drag : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.'
+    std_drag : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
+    std_kana : 'Drag the Kana to the matching Romaji.'
   }
 };
 
@@ -24,7 +25,7 @@ function scrollTo (el) {
 function generateQuiz (o) {
   
   // create a drag and drop quiz
-  if (o.type = 'drag') {
+  if (o.type == 'drag') {
     var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
         dropList = '<div id="drop-list">',
         keysQ = [],
@@ -58,35 +59,103 @@ function generateQuiz (o) {
     quiz += '</div>'; // close the answer list
     
     document.getElementById('quiz-zone').innerHTML = quiz;
+    
+    // setup drag and drop
+    var drake = dragula([document.querySelector('#answer-list')], {
+      isContainer : function (el) {
+        return el.classList.contains('quiz-answer-zone');
+      }
+    });
+
+    drake.on('drop', function (el, target, source) {
+      if (target.parentNode.id == 'drop-list'){
+        if (el.dataset.answer != target.dataset.text) {
+          document.getElementById('answer-list').append(el);
+
+          target.dataset.mistakes = ++target.dataset.mistakes;
+          ++Genki.mistakes;
+
+        } else {
+          target.className += ' answer-correct';
+
+          // when all problems have been solved..
+          // stop the timer, show the score, and congratulate the student
+          if (++Genki.solved == Genki.problems) {
+            endQuiz();
+          }
+        }
+      }
+    });
   }
   
   
-  // setup drag and drop
-  var drake = dragula([document.querySelector('#answer-list')], {
-    isContainer : function (el) {
-      return el.classList.contains('quiz-answer-zone');
+  // create a kana drag game
+  if (o.type == 'kana') {
+    var zone = document.getElementById('quiz-zone'),
+        quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list" class="clear">',
+        answers = '<div id="answer-list">',
+        kanaList = [],
+        kana = o.quizlet,
+        i = kana.length - 1,
+        k;
+    
+    // create the columns for the student to drop the kana into
+    for (; i > -1; i--) {
+      quiz += '<div class="quiz-column">';
+      
+      for (k in kana[i]) {
+        
+        quiz += 
+        '<div class="quiz-item-row">'+
+          '<div class="quiz-answer-zone" data-text="' + kana[i][k] + '" data-mistakes="0"></div>'+
+          '<div class="quiz-item">' + kana[i][k] + '</div>'+
+        '</div>';
+        
+        kanaList.push('<div class="quiz-item" data-answer="' + kana[i][k] + '">' + k + '</div>'); // put the kana into an array for later..
+        ++Genki.problems;
+      }
+      
+      quiz += '</div>';
     }
-  });
-  
-  drake.on('drop', function (el, target, source) {
-    if (target.parentNode.id == 'drop-list'){
-      if (el.dataset.answer != target.dataset.text) {
-        document.getElementById('answer-list').append(el);
-        
-        target.dataset.mistakes = ++target.dataset.mistakes;
-        ++Genki.mistakes;
-        
-      } else {
-        target.className += ' answer-correct';
-        
-        // when all problems have been solved..
-        // stop the timer, show the score, and congratulate the student
-        if (++Genki.solved == Genki.problems) {
-          endQuiz();
+    
+    // randomize the kana order, so the student cannot memorize the locations
+    while (kanaList.length) {
+      i = Math.floor(Math.random() * kanaList.length)
+      answers += kanaList[i];
+      kanaList.splice(i, 1);
+    }
+
+    // add the kana list to the quiz zone
+    zone.innerHTML = quiz + '</div>' + answers + '</div>';
+    zone.className += ' kana-quiz'; // change the quiz styles
+    
+    // setup drag and drop
+    var drake = dragula([document.querySelector('#answer-list')], {
+      isContainer : function (el) {
+        return el.classList.contains('quiz-answer-zone');
+      }
+    });
+
+    drake.on('drop', function (el, target, source) {
+      if (target.parentNode.className == 'quiz-item-row'){
+        if (el.dataset.answer != target.dataset.text) {
+          document.getElementById('answer-list').append(el);
+
+          target.dataset.mistakes = ++target.dataset.mistakes;
+          ++Genki.mistakes;
+
+        } else {
+          target.className += ' answer-correct';
+
+          // when all problems have been solved..
+          // stop the timer, show the score, and congratulate the student
+          if (++Genki.solved == Genki.problems) {
+            endQuiz();
+          }
         }
       }
-    }
-  });
+    });
+  }
   
   
   // setup timer

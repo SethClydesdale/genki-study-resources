@@ -239,6 +239,48 @@ footer li:first-child:before { content:""; }
 .quiz-over [data-mistakes="0"]:after { content:""; }
 
 
+/* kana quiz styles */
+.kana-quiz #question-list, .kana-quiz #answer-list {
+  float:none;
+}
+
+.kana-quiz #question-list {
+  margin-bottom:30px;
+}
+
+.kana-quiz .quiz-item, .kana-quiz .quiz-answer-zone {
+  text-align:center;
+  display:inline-block;
+  min-width:25px;
+}
+
+.kana-quiz .quiz-column {
+  margin:0 5px;
+  float:left;
+}
+.kana-quiz .quiz-column:first-child { margin-left:0; }
+.kana-quiz .quiz-column:last-child { margin-right:0; }
+
+.kana-quiz .answer-correct .quiz-item { position:relative; }
+.kana-quiz .answer-correct .quiz-item:before {
+  position:absolute;
+  right:-8px;
+  top:-5px;
+}
+
+.kana-quiz.quiz-over [data-mistakes]:after {
+  content:"x" attr(data-mistakes);
+  font-size:8px;
+  line-height:8px;
+  font-weight:bold;
+  right:auto;
+  top:auto;
+  bottom:3px;
+  right:4px;
+}
+.kana-quiz.quiz-over [data-mistakes="0"]:after { display:none; }
+
+
 /* RESULT LIST */
 #complete-banner {
   color:#FFF;
