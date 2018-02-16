@@ -10,10 +10,12 @@
     <loc>https://sethclydesdale.github.io/genki-study-resources/privacy/</loc>
   </url>
   
+  <!-- Lesson 0 -->
   <url>
     <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-0/greetings/</loc>
   </url>
 
+  <!-- Lesson 1 -->
   <url>
     <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-1/vocab-1/</loc>
   </url>
@@ -25,5 +27,37 @@
   <url>
     <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-1/vocab-3/</loc>
   </url>
+  
+  <url>
+    <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-1/vocab-4/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-1/vocab-5/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-1/vocab-6/</loc>
+  </url>
+  
+  <!-- Lesson 2 -->
+  <url>
+    <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-2/vocab-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-2/vocab-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-2/vocab-3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-2/vocab-4/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-2/vocab-5/</loc>
 
 </urlset>
