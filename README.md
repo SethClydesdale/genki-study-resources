@@ -1,8 +1,14 @@
 # Genki Study Resources
-Genki Study Resources is a collection of resources for practicing what is taught in the [Genki Japanese textbooks](http://genki.japantimes.co.jp/index_en). Feel free to visit the website to begin testing your knowledge.
+Genki Study Resources is a collection of resources for practicing what is taught in the [Genki Japanese textbooks](http://genki.japantimes.co.jp/index_en). It can be used to study online or offline, depending on your needs. Choose one of the links below to begin using Genki Study Resources.
 
 
-**Website :** https://sethclydesdale.github.io/genki-study-resources/
+**Online Version :** https://sethclydesdale.github.io/genki-study-resources/
+
+**Offline Version :** [download](https://github.com/SethClydesdale/genki-study-resources/archive/master.zip)
+
+
+### Using the Offline Version
+If you're using the offline version you'll have to unzip the files. Once you've done that, you can access all the study resources by opening any of the [**index.html**](https://i62.servimg.com/u/f62/18/21/41/30/captur11.png) files in the browser of your choice. It should have the same experience as the online version, however, whenever new exercises/lessons are added they wont be available; you'll have to download the latest version of the repository to get them.
 
 
 ### Notice
