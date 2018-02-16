@@ -4,6 +4,37 @@ window.Genki = {
   mistakes : 0, // number of mistakes made in the lesson
   score : 0, // the student's score
   
+  
+  // pre-lesson exercises
+  lesson_0 : {
+    greetings : {
+      type : 'drag',
+      info : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
+      
+      quizlet : {
+        'おはよう。' : 'Good morning.',
+        'おはようございます。' : 'Good morning. (polite)',
+        'こんいちは。' : 'Good afternoon.',
+        'こんばんは。' : 'Good evening.',
+        'さようなら。' : 'Good-bye.',
+        'おやすみ（なさい）。' : 'Good night.',
+        'ありがとう。' : 'Thank you.',
+        'ありがとうございます。' : 'Thank you. (polite)',
+        'すみません。' : 'Excuse me.; I\'m sorry.',
+        'いいえ。' : 'No.; Not at all.',
+        'いってきます。' : 'I\'ll go and come back.',
+        'いってらっしゃい。' : 'Please go and come back.',
+        'ただいま。' : 'I\'m home.',
+        'おかえり（なさい）。' : 'Welcome home.',
+        'いただきます。' : 'Thank you for the meal. (before eating)',
+        'ほちそうさま（でした）。' : 'Thank you for the meal. (after eating)',
+        'はじめまして。' : 'How do you do?',
+        'よろしくおねがいします。' : 'Nice to meet you.'
+      }
+    }
+  },
+  
+  
   // Questions and answers for Lesson 1 : New Friends
   lesson_1 : {
     
@@ -202,10 +233,10 @@ function generateQuiz (o) {
           document.getElementById('quiz-result').innerHTML = 
           '<div id="complete-banner" class="center">Quiz Complete!</div>'+
           '<div id="result-list">'+
-            '<div class="result-row"><span class="result-label">Problems Solved : </span>' + Genki.problems + '</div>'+
-            '<div class="result-row"><span class="result-label">Mistakes : </span>' + Genki.mistakes + '</div>'+
-            '<div class="result-row"><span class="result-label">Score : </span>' + Genki.score + '%</div>'+
-            '<div class="result-row"><span class="result-label">Completion Time : </span>' + timer.innerHTML + '</div>'+
+            '<div class="result-row"><span class="result-label">Problems Solved:</span>' + Genki.problems + '</div>'+
+            '<div class="result-row"><span class="result-label">Mistakes:</span>' + Genki.mistakes + '</div>'+
+            '<div class="result-row"><span class="result-label">Score:</span>' + Genki.score + '%</div>'+
+            '<div class="result-row"><span class="result-label">Completion Time:</span>' + timer.innerHTML + '</div>'+
             '<div class="result-row center">'+
               (
                 Genki.score == 100 ? 'PERFECT! Great Job, you have mastered this quiz! Feel free to move on or challenge yourself by trying to beat your completion time.' :
