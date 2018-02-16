@@ -11,6 +11,15 @@ window.Genki = {
 };
 
 
+// scroll to the specified element
+function scrollTo (el) {
+  window.setTimeout(function () {
+    document.body.scrollTop = el.offsetTop;
+    document.documentElement.scrollTop = el.offsetTop;
+  }, 50);
+};
+
+
 // To generate a quiz simply pass an object with the necessary data (see vocab-1/index.html and other quiz files for examples)
 function generateQuiz (o) {
   
@@ -94,7 +103,7 @@ function generateQuiz (o) {
   Genki.drake = drake;
   
   // jump to the quiz info
-  window.location.hash = 'quiz-info';
+  scrollTo(document.getElementById('quiz-info'));
 };
 
 
@@ -128,7 +137,7 @@ function endQuiz () {
   '</div>';
 
   document.getElementById('quiz-zone').className += ' quiz-over';
-  window.location.hash = '#complete-banner'; // jump to the quiz results
+  scrollTo(document.getElementById('complete-banner')); // jump to the quiz results
 };
 
 
