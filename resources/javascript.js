@@ -16,7 +16,7 @@ function scrollTo (el) {
   window.setTimeout(function () {
     document.body.scrollTop = el.offsetTop;
     document.documentElement.scrollTop = el.offsetTop;
-  }, 50);
+  }, 100);
 };
 
 
