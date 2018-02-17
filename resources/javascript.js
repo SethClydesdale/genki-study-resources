@@ -3,12 +3,16 @@ window.Genki = {
     solved : 0, // number of problems solved
   mistakes : 0, // number of mistakes made in the lesson
   score : 0, // the student's score
+  index : 0,
   
   // frequently used strings
   lang : {
     std_drag : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
     std_kana : 'Drag the Kana to the matching Romaji.',
-    mistakes : 'The items outlined in red were answered wrong before finding the correct answer. Review these problems before trying again.'
+    std_num : 'Drag the Numbers to the matching Kana.',
+    std_multi : 'Solve the problem by choosing one of the three answers.',
+    mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong before finding the correct answer. Review these problems before trying again.',
+    multi_mistakes : 'The items outlined in <span class="t-red">red</span> were the wrong answers. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.'
   }
 };
 
@@ -90,7 +94,7 @@ function generateQuiz (o) {
   }
   
   
-  // create a kana drag game
+  // create a kana drag and drop quiz
   if (o.type == 'kana') {
     var zone = document.getElementById('quiz-zone'),
         quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list" class="clear">',
@@ -159,6 +163,50 @@ function generateQuiz (o) {
   }
   
   
+  // create a multiple choice quiz
+  if (o.type == 'multi') {
+    var zone = document.getElementById('quiz-zone'),
+        quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
+        answers = '<div id="answer-list">',
+        option = ['A', 'B', 'C'],
+        oid = 0,
+        isAnswer = false,
+        q = o.quizlet,
+        i = 0,
+        j = q.length,
+        n;
+    
+    for (; i < j; i++) {
+      quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + q[i].question + '</div>';
+      while (q[i].answers.length) {
+        n = Math.floor(Math.random() * q[i].answers.length);
+        
+        // answers that begin with "A" are the correct answer
+        if (/^A/.test(q[i].answers[n])) {
+          q[i].answers[n] = q[i].answers[n].slice(1);
+          isAnswer = true;
+        }
+        
+        quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + option[oid++] + '" onclick="progressQuiz(this);">' + q[i].answers[n] + '</button></div>';
+        isAnswer = false;
+        
+        q[i].answers.splice(n, 1);
+      }
+      
+      quiz += '</div>';
+      oid = 0;
+      ++Genki.problems;
+    }
+    
+    // add the multi-choice quiz to the quiz zone
+    zone.innerHTML = quiz + '</div>';
+    zone.className += ' multi-quiz'; // change the quiz styles
+    
+    // begin the quiz
+    progressQuiz('init');
+  }
+  
+  
   // setup timer
   var timer = new Timer(),
       clock = document.getElementById('quiz-timer');
@@ -177,8 +225,43 @@ function generateQuiz (o) {
 };
 
 
+// show the next question in a multi-choice quiz
+function progressQuiz (answer) {
+  if (answer == 'init') {
+    document.getElementById('quiz-q' + Genki.index).style.display = '';
+    
+  } else {
+    // mark the selected answer for reviews
+    answer.className += ' selected-answer';
+    
+    // hide the prior question
+    document.getElementById('quiz-q' + Genki.index++).style.display = 'none';
+    
+    // increment mistakes if the chosen answer was wrong and add a class to the parent
+    if (answer.dataset.answer == 'false') {
+      answer.parentNode.parentNode.className += ' wrong-answer';
+      ++Genki.mistakes;
+    }
+    ++Genki.solved;
+    
+    // if there's another question, show it
+    var next = document.getElementById('quiz-q' + Genki.index);
+    if (next) {
+      next.style.display = '';
+    } else {
+      endQuiz(true);
+      
+      // show all questions and answers
+      for (var q = document.querySelectorAll('[id^="quiz-q"]'), i = 0, j = q.length; i < j; i++) {
+        q[i].style.display = '';
+      }
+    }
+  }
+};
+
+
 // ends the quiz
-function endQuiz () {
+function endQuiz (multi) {
   Genki.score = Math.floor((Genki.solved - Genki.mistakes) * 100 / Genki.problems);
   Genki.timer.stop();
 
@@ -196,8 +279,8 @@ function endQuiz () {
     '<div class="result-row center">'+
       (
         Genki.score == 100 ? 'PERFECT! Great Job, you have mastered this quiz! Feel free to move on or challenge yourself by trying to beat your completion time.' :
-        Genki.score > 70 ? 'Nice work! ' + Genki.lang.mistakes :
-        'Keep studying! ' + Genki.lang.mistakes
+        Genki.score > 70 ? 'Nice work! ' + Genki.lang[multi ? 'multi_mistakes' : 'mistakes'] :
+        'Keep studying! ' + Genki.lang[multi ? 'multi_mistakes' : 'mistakes']
       )+
       '<div class="center">'+
         '<a href="' + window.location.pathname + '" class="button">Try Again</a>'+
