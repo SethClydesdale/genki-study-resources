@@ -12,7 +12,7 @@ window.Genki = {
     std_num : 'Drag the Numbers to the matching Kana.',
     std_multi : 'Solve the problem by choosing one of the three answers.',
     mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong before finding the correct answer. Review these problems before trying again.',
-    multi_mistakes : 'The items outlined in <span class="t-red">red</span> were the wrong answers. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.'
+    multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red">red</span>. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.'
   }
 };
 
