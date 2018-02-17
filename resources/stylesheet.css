@@ -304,9 +304,8 @@ footer li:first-child:before { content:""; }
 .question-block:after {
   content:attr(data-qid) ".";
   position:absolute;
-  top:0px;
+  top:-20px;
   left:0px;
-  padding:3px;
 }
 
 .quiz-multi-question {
