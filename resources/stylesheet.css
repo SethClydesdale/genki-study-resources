@@ -227,13 +227,12 @@ footer li:first-child:before { content:""; }
 .quiz-over [data-mistakes] .quiz-item { border-color:#F00; }
 .quiz-over [data-mistakes]:after {
   color:#F00;
-  content:"<-- " attr(data-mistakes) " mistakes";
+  content:"<-- wrong " attr(data-mistakes) "x";
   display:block;
   position:absolute;
   top:3px;
-  right:-100px;
+  right:-90px;
 }
-.quiz-over [data-mistakes="1"]:after { content:"<-- " attr(data-mistakes) " mistake"; }
 
 .quiz-over [data-mistakes="0"] .quiz-item { border-color:#CCC; }
 .quiz-over [data-mistakes="0"]:after { content:""; }

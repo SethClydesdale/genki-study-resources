@@ -7,7 +7,8 @@ window.Genki = {
   // frequently used strings
   lang : {
     std_drag : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
-    std_kana : 'Drag the Kana to the matching Romaji.'
+    std_kana : 'Drag the Kana to the matching Romaji.',
+    mistakes : 'The items outlined in red were answered wrong before finding the correct answer. Review these problems before trying again.'
   }
 };
 
@@ -189,14 +190,14 @@ function endQuiz () {
   '<div id="complete-banner" class="center">Quiz Complete!</div>'+
   '<div id="result-list">'+
     '<div class="result-row"><span class="result-label">Problems Solved:</span>' + Genki.problems + '</div>'+
-    '<div class="result-row"><span class="result-label">Mistakes:</span>' + Genki.mistakes + '</div>'+
+    '<div class="result-row"><span class="result-label">Answers Wrong:</span>' + Genki.mistakes + '</div>'+
     '<div class="result-row"><span class="result-label">Score:</span>' + Genki.score + '%</div>'+
     '<div class="result-row"><span class="result-label">Completion Time:</span>' + timer.innerHTML + '</div>'+
     '<div class="result-row center">'+
       (
         Genki.score == 100 ? 'PERFECT! Great Job, you have mastered this quiz! Feel free to move on or challenge yourself by trying to beat your completion time.' :
-        Genki.score > 70 ? 'Nice work! Review the problems you got wrong (outlined in red) and take a short break before trying again.' :
-        'Keep studying! Review the problems you got wrong (outlined in red) and take a short break before trying again.' 
+        Genki.score > 70 ? 'Nice work! ' + Genki.lang.mistakes :
+        'Keep studying! ' + Genki.lang.mistakes
       )+
       '<div class="center">'+
         '<a href="' + window.location.pathname + '" class="button">Try Again</a>'+
