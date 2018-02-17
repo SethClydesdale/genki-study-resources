@@ -58,6 +58,15 @@ a:hover { text-decoration:underline; }
 
 .center { text-align:center; }
 
+.t-red { color:#F00; }
+.t-orange { color:#F60; }
+
+.new:after {
+  content:"New!";
+  color:#F60;
+  font-weight:bold;
+}
+
 .clear:after {
   content:"";
   display:table;
@@ -174,6 +183,7 @@ footer li:first-child:before { content:""; }
   border:1px solid #CCC;
   margin:3px;
   padding:3px;
+  min-width:25px;
 }
 #answer-list .quiz-item { cursor:move; }
 
@@ -278,6 +288,67 @@ footer li:first-child:before { content:""; }
   right:4px;
 }
 .kana-quiz.quiz-over [data-mistakes="0"]:after { display:none; }
+
+
+/* multi-choice quiz style */
+.multi-quiz #question-list { float:none; }
+.quiz-multi-row { margin:10px 0; }
+
+.question-block {
+  background:#EEE;
+  border:1px solid #CCC;
+  margin:30px 0;
+  position:relative;
+}
+
+.question-block:after {
+  content:attr(data-qid) ".";
+  position:absolute;
+  top:0px;
+  left:0px;
+  padding:3px;
+}
+
+.quiz-multi-question {
+  font-size:16px;
+  text-align:center;
+  border-bottom:1px solid #CCC;
+  padding:5px;
+}
+
+.quiz-multi-answer {
+  color:#333;
+  background:#FFF;
+  border:1px solid #CCC;
+  padding:6px;
+  display:block;
+  width:50%;
+  margin:0 auto;
+  cursor:pointer;
+  outline:none;
+  position:relative;
+}
+
+.quiz-multi-answer:before {
+  content:attr(data-option) ":";
+  font-size:18px;
+  position:absolute;
+  left:-25px;
+}
+
+.quiz-multi-answer:hover { border-color:#F60; }
+.quiz-multi-answer:hover:before { color:#F60; }
+
+.multi-quiz.quiz-over .quiz-multi-answer { pointer-events:none; }
+
+.multi-quiz.quiz-over .quiz-multi-answer.selected-answer { border-color:#080; }
+.multi-quiz.quiz-over .quiz-multi-answer.selected-answer:before { color:#080; }
+
+.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer.selected-answer { border-color:#F00; }
+.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer.selected-answer:before { color:#F00; }
+
+.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"] { border-color:#F60; }
+.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"]:before { color:#F60; }
 
 
 /* RESULT LIST */
