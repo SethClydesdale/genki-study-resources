@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice: Time - Lesson 1 | Genki Study Resources</title>
+    <meta name="title" content="Practice: Time - Lesson 1 | Genki Study Resources">
+    <meta name="twitter:title" content="Practice: Time - Lesson 1 | Genki Study Resources">
+    <meta property="og:title" content="Practice: Time - Lesson 1 | Genki Study Resources">
+    <meta name="description" content="A collection of resources for practicing what is taught in the Genki Japanese textbooks.">
+    <meta property="og:description" content="A collection of resources for practicing what is taught in the Genki Japanese textbooks.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="genki, japanese, study, quizzes, exercises" lang="en">
+    <meta name="language" content="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lesson-1/vocab-1">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/stylesheet.css">
+    <script>
+      // disables analytics if used locally or on another host
+      if (window.location.hostname == 'sethclydesdale.github.io') {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-114289226-1', 'auto');
+        ga('send', 'pageview');
+      }
+    </script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../../" id="home-link">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">Github Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/dragula.min.js"></script>
+    <script src="../../../resources/easytimer.min.js"></script>
+    <script src="../../../resources/javascript.js"></script>
+    <script>
+      const temp_q = 'いまなんじですか。';
+      generateQuiz({
+        type : 'multi',
+        info : 'Answer the questions. (the current time is in parenthesis)',
+
+        quizlet : [
+          // II-A
+          {
+            question : temp_q + '(01:00)',
+            answers : [
+              'Aいちじです。',
+              'いちじはんです。',
+              'いちじ。'
+            ]
+          },
+          
+          {
+            question : temp_q + '(03:00)',
+            answers : [
+              'Aさんじです。',
+              'さんじはんです。',
+              'さんじ。'
+            ]
+          },
+          
+          {
+            question : temp_q + '(09:00)',
+            answers : [
+              'Aくじです。',
+              'きゅうじです。',
+              'くじはんです。'
+            ]
+          },
+          
+          {
+            question : temp_q + '(11:00)',
+            answers : [
+              'Aじゅういちじです。',
+              'じゅういちじはんです。',
+              'じゅういちじ。'
+            ]
+          },
+          
+          {
+            question : temp_q + '(07:00)',
+            answers : [
+              'Aしちじです。',
+              'ななじです。',
+              'しちじはんです。'
+            ]
+          },
+          
+          {
+            question : temp_q + '(02:30)',
+            answers : [
+              'Aにじはんです。',
+              'にじです。',
+              'にじはん。'
+            ]
+          },
+          
+          {
+            question : temp_q + '(04:30)',
+            answers : [
+              'Aよじはんです。',
+              'よんじはんです。',
+              'よじです。'
+            ]
+          },
+          
+          {
+            question : temp_q + '(12:00)',
+            answers : [
+              'Aじゅうにじです。',
+              'じゅうにじはんです。',
+              'じゅうにじ。'
+            ]
+          },
+          
+          {
+            question : temp_q + '(06:00)',
+            answers : [
+              'Aろくじです。',
+              'ろくじはんです。',
+              'ろくじ。'
+            ]
+          },
+          
+          {
+            question : temp_q + '(09:30)',
+            answers : [
+              'Aくじはんです。',
+              'きゅうじはんです。',
+              'くじです。'
+            ]
+          },
+          
+          // II-B
+          {
+            question : 'とうきょうは' + temp_q + '(03:00 A.M.)',
+            answers : [
+              'Aごぜんさんじです。',
+              'ごごさんじです。',
+              'ごぜんさんじはんです。'
+            ]
+          },
+          
+          {
+            question : 'ロンドンは' + temp_q + '(06:00 P.M.)',
+            answers : [
+              'Aごごろくじです。',
+              'ごぜんろくじです。',
+              'ろくじです。'
+            ]
+          },
+          
+          {
+            question : 'ストックホルムは' + temp_q + '(07:00 P.M.)',
+            answers : [
+              'Aごごしちじです。',
+              'ごぜんしちじです。',
+              'ごごななじです。'
+            ]
+          },
+          
+          {
+            question : 'ナイロビは' + temp_q + '(09:00 P.M.)',
+            answers : [
+              'Aごごくじです。',
+              'ごぜんくじです。',
+              'ごごきゅうじです。'
+            ]
+          },
+          
+          {
+            question : 'ニューデリーは' + temp_q + '(11:30 P.M.)',
+            answers : [
+              'Aごごじゅういちじはんです。',
+              'ごぜんじゅういちじはんです。',
+              'ごごじゅういちじです。'
+            ]
+          },
+          
+          {
+            question : 'バンコクは' + temp_q + '(01:00 A.M.)',
+            answers : [
+              'Aごぜんいちじです。',
+              'ごごいちじです。',
+              'ごぜんいちじはんです。'
+            ]
+          },
+          
+          {
+            question : 'シドニーは' + temp_q + '(04:00 A.M.)',
+            answers : [
+              'Aごぜんよじです。',
+              'ごごよじです。',
+              'ごぜんよじはんです。'
+            ]
+          },
+          
+          {
+            question : 'ニューヨークは' + temp_q + '(01:00 P.M.)',
+            answers : [
+              'Aごごいちじです。',
+              'ごぜんいちじです。',
+              'ごごいちじはんです。'
+            ]
+          },
+          
+          {
+            question : 'リオデジャネイロは' + temp_q + '(03:00 P.M.)',
+            answers : [
+              'Aごごさんじです。',
+              'ごぜんさんじです。',
+              'ごごさんじはんです。'
+            ]
+          },
+          
+          {
+            question : 'アンカレッジは' + temp_q + '(09:00 A.M.)',
+            answers : [
+              'Aごぜんくじです。',
+              'ごごくじです。',
+              'ごぜんきゅうじです。'
+            ]
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
