@@ -3,7 +3,6 @@ window.Genki = {
     solved : 0, // number of problems solved
   mistakes : 0, // number of mistakes made in the lesson
   score : 0, // the student's score
-  index : 0,
   
   // frequently used strings
   lang : {
@@ -199,7 +198,7 @@ function generateQuiz (o) {
     }
     
     // add the multi-choice quiz to the quiz zone
-    zone.innerHTML = quiz + '</div>';
+    zone.innerHTML = quiz + '</div><div id="quiz-progress"><div id="quiz-progress-bar"></div></div>';
     zone.className += ' multi-quiz'; // change the quiz styles
     
     // begin the quiz
@@ -225,29 +224,40 @@ function generateQuiz (o) {
 };
 
 
+// increment the progress bar (for multi-choice quizzes)
+function progressBar () {
+  var bar = document.getElementById('quiz-progress-bar'),
+      progress = Math.floor((Genki.solved+1) / Genki.problems * 100);
+  
+  bar.style.width = progress + '%';
+  bar.innerHTML = '<span id="quiz-progress-text">' + (Genki.solved+1) + '/' + Genki.problems + '</span>';
+}
+
+
 // show the next question in a multi-choice quiz
 function progressQuiz (answer) {
   if (answer == 'init') {
-    document.getElementById('quiz-q' + Genki.index).style.display = '';
+    document.getElementById('quiz-q' + Genki.solved).style.display = '';
+    progressBar();
     
   } else {
     // mark the selected answer for reviews
     answer.className += ' selected-answer';
     
     // hide the prior question
-    document.getElementById('quiz-q' + Genki.index++).style.display = 'none';
+    document.getElementById('quiz-q' + Genki.solved++).style.display = 'none';
     
     // increment mistakes if the chosen answer was wrong and add a class to the parent
     if (answer.dataset.answer == 'false') {
       answer.parentNode.parentNode.className += ' wrong-answer';
       ++Genki.mistakes;
     }
-    ++Genki.solved;
     
     // if there's another question, show it
-    var next = document.getElementById('quiz-q' + Genki.index);
+    var next = document.getElementById('quiz-q' + Genki.solved);
     if (next) {
       next.style.display = '';
+      progressBar();
     } else {
       endQuiz(true);
       
@@ -255,6 +265,9 @@ function progressQuiz (answer) {
       for (var q = document.querySelectorAll('[id^="quiz-q"]'), i = 0, j = q.length; i < j; i++) {
         q[i].style.display = '';
       }
+      
+      // hide the progress bar
+      document.getElementById('quiz-progress').style.display = 'none';
     }
   }
 };
