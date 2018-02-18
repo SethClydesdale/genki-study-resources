@@ -62,6 +62,7 @@ function generateQuiz (o) {
     }
     quiz += '</div>'; // close the answer list
     
+    // add the quiz to the document
     document.getElementById('quiz-zone').innerHTML = quiz;
     
     // setup drag and drop
@@ -71,11 +72,15 @@ function generateQuiz (o) {
       }
     });
 
+    // check if the answer is correct before dropping the element
     drake.on('drop', function (el, target, source) {
       if (target.parentNode.id == 'drop-list'){
+        
+        // if the answer is wrong we'll send the item back to the answer list
         if (el.dataset.answer != target.dataset.text) {
           document.getElementById('answer-list').append(el);
 
+          // global mistakes are incremented along with mistakes specific to problems
           target.dataset.mistakes = ++target.dataset.mistakes;
           ++Genki.mistakes;
 
@@ -107,29 +112,30 @@ function generateQuiz (o) {
     for (; i > -1; i--) {
       quiz += '<div class="quiz-column">';
       
+      // insert the romaji and empty container for dropping the kana
       for (k in kana[i]) {
-        
         quiz += 
         '<div class="quiz-item-row">'+
           '<div class="quiz-answer-zone" data-text="' + kana[i][k] + '" data-mistakes="0"></div>'+
           '<div class="quiz-item">' + kana[i][k] + '</div>'+
         '</div>';
         
-        kanaList.push('<div class="quiz-item" data-answer="' + kana[i][k] + '">' + k + '</div>'); // put the kana into an array for later..
+        // put the kana into an array for later..
+        kanaList.push('<div class="quiz-item" data-answer="' + kana[i][k] + '">' + k + '</div>');
         ++Genki.problems;
       }
       
-      quiz += '</div>';
+      quiz += '</div>'; // close the column
     }
     
     // randomize the kana order, so the student cannot memorize the locations
     while (kanaList.length) {
-      i = Math.floor(Math.random() * kanaList.length)
+      i = Math.floor(Math.random() * kanaList.length);
       answers += kanaList[i];
       kanaList.splice(i, 1);
     }
 
-    // add the kana list to the quiz zone
+    // add the kana list to the document
     zone.innerHTML = quiz + '</div>' + answers + '</div>';
     zone.className += ' kana-quiz'; // change the quiz styles
     
@@ -140,11 +146,15 @@ function generateQuiz (o) {
       }
     });
 
+    // check if the answer is correct before dropping the element
     drake.on('drop', function (el, target, source) {
       if (target.parentNode.className == 'quiz-item-row'){
+        
+        // if the answer is wrong we'll send the kana back
         if (el.dataset.answer != target.dataset.text) {
           document.getElementById('answer-list').append(el);
 
+          // global mistakes are incremented along with mistakes specific to problems
           target.dataset.mistakes = ++target.dataset.mistakes;
           ++Genki.mistakes;
 
@@ -167,16 +177,18 @@ function generateQuiz (o) {
     var zone = document.getElementById('quiz-zone'),
         quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
         answers = '<div id="answer-list">',
-        option = ['A', 'B', 'C'],
-        oid = 0,
+        option = ['A', 'B', 'C'], oid = 0, // used for tagging answers as A, B, C..
         isAnswer = false,
         q = o.quizlet,
         i = 0,
         j = q.length,
         n;
     
+    // create individual blocks for each question and hide them until later
     for (; i < j; i++) {
       quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + q[i].question + '</div>';
+      
+      // add answers A-B to the question block
       while (q[i].answers.length) {
         n = Math.floor(Math.random() * q[i].answers.length);
         
@@ -192,8 +204,8 @@ function generateQuiz (o) {
         q[i].answers.splice(n, 1);
       }
       
-      quiz += '</div>';
-      oid = 0;
+      quiz += '</div>'; // ends the question block
+      oid = 0; // resets the option id so the next answers begin with A, B, C..
       ++Genki.problems;
     }
     
@@ -210,7 +222,7 @@ function generateQuiz (o) {
   var timer = new Timer(),
       clock = document.getElementById('quiz-timer');
   
-  clock.innerHTML = '00:00:00';
+  clock.innerHTML = '00:00:00'; // placeholder
   timer.start();
   timer.addEventListener('secondsUpdated', function (e) {
     clock.innerHTML = timer.getTimeValues().toString()
@@ -225,7 +237,7 @@ function generateQuiz (o) {
 
 
 // increment the progress bar (for multi-choice quizzes)
-function progressBar () {
+function incProgressBar () {
   var bar = document.getElementById('quiz-progress-bar'),
       progress = Math.floor((Genki.solved+1) / Genki.problems * 100);
   
@@ -238,7 +250,7 @@ function progressBar () {
 function progressQuiz (answer) {
   if (answer == 'init') {
     document.getElementById('quiz-q' + Genki.solved).style.display = '';
-    progressBar();
+    incProgressBar();
     
   } else {
     // mark the selected answer for reviews
@@ -257,7 +269,7 @@ function progressQuiz (answer) {
     var next = document.getElementById('quiz-q' + Genki.solved);
     if (next) {
       next.style.display = '';
-      progressBar();
+      incProgressBar();
     } else {
       endQuiz(true);
       
@@ -275,13 +287,15 @@ function progressQuiz (answer) {
 
 // ends the quiz
 function endQuiz (multi) {
+  // calculate the total score based on problems solved and mistakes made
   Genki.score = Math.floor((Genki.solved - Genki.mistakes) * 100 / Genki.problems);
   Genki.timer.stop();
 
+  // hide the timer and store it so we can show the completion time in the results
   var timer = document.getElementById('quiz-timer');
-
   timer.style.display = 'none';
 
+  // show the student their results
   document.getElementById('quiz-result').innerHTML = 
   '<div id="complete-banner" class="center">Quiz Complete!</div>'+
   '<div id="result-list">'+
@@ -290,7 +304,7 @@ function endQuiz (multi) {
     '<div class="result-row"><span class="result-label">Score:</span>' + Genki.score + '%</div>'+
     '<div class="result-row"><span class="result-label">Completion Time:</span>' + timer.innerHTML + '</div>'+
     '<div class="result-row center">'+
-      (
+      ( // depending on the score, a specific message will show
         Genki.score == 100 ? 'PERFECT! Great Job, you have mastered this quiz! Feel free to move on or challenge yourself by trying to beat your completion time.' :
         Genki.score > 70 ? 'Nice work! ' + Genki.lang[multi ? 'multi_mistakes' : 'mistakes'] :
         'Keep studying! ' + Genki.lang[multi ? 'multi_mistakes' : 'mistakes']
@@ -302,12 +316,14 @@ function endQuiz (multi) {
     '</div>'+
   '</div>';
 
+  // this class will indicate the quiz is over so post-test styles can be applied
   document.getElementById('quiz-zone').className += ' quiz-over';
   scrollTo(document.getElementById('complete-banner')); // jump to the quiz results
 };
 
 
 // append index.html to links if this project is hosted on the local file system
+// it makes browsing easier offline, since otherwise links will just open the directory and not the file
 if (window.location.protocol == 'file:') {
   for (var a = document.querySelectorAll('a[href$="/"]'), i = 0, j = a.length; i < j; i++) {
     if (!/http/.test(a[i].href)) {
