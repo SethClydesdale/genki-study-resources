@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice: Q&amp;A - Lesson 1 | Genki Study Resources</title>
+    <meta name="title" content="Practice: Q&amp;A - Lesson 1 | Genki Study Resources">
+    <meta name="twitter:title" content="Practice: Q&amp;A - Lesson 1 | Genki Study Resources">
+    <meta property="og:title" content="Practice: Q&amp;A - Lesson 1 | Genki Study Resources">
+    <meta name="description" content="A collection of resources for practicing what is taught in the Genki Japanese textbooks.">
+    <meta property="og:description" content="A collection of resources for practicing what is taught in the Genki Japanese textbooks.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="genki, japanese, study, quizzes, exercises" lang="en">
+    <meta name="language" content="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lesson-1/vocab-1">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/stylesheet.css">
+    <script>
+      // disables analytics if used locally or on another host
+      if (window.location.hostname == 'sethclydesdale.github.io') {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-114289226-1', 'auto');
+        ga('send', 'pageview');
+      }
+    </script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../../" id="home-link">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">Github Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/dragula.min.js"></script>
+    <script src="../../../resources/easytimer.min.js"></script>
+    <script src="../../../resources/javascript.js"></script>
+    <script>
+      var l_q = 'Create a Question using the que: ',
+          l_a = 'Create an Answer using the que: ';
+      generateQuiz({
+      type : 'multi',
+      info : 'Craft Questions and Answers using the given ques. (info on a person will be given in parentheses)',
+
+      quizlet : [
+        {
+          question : l_q + 'メアリーさん／アメリカじん',
+          answers : [
+            'Aメアリーさんはアメリカじんですか。',
+            'メアリーさんのアメリカじんですか。',
+            'メアリーさんはアメリカじんです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'メアリーさん／アメリカじん (Nationality: American)',
+          answers : [
+            'Aええ、そうです。',
+            'いいえ、にほんじんです。',
+            'いいえ、かんこくじんです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'メアリーさん／アリゾナだいがくのがくせい',
+          answers : [
+            'Aメアリーさんはアリゾナだいがくのがくせいですか。',
+            'メアリーさんはがくせいのアリゾナだいがくですか。',
+            'メアリーさんはアリゾナだいがくのがくせいです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'メアリーさん／アリゾナだいがくのがくせい (School: Arizona University)',
+          answers : [
+            'Aええ、そうです。',
+            'いいえ、さくらだいがくのがくせいです。',
+            'いいえ、ハワイだいがくのがくせいです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'メアリーさん／いちねんせい',
+          answers : [
+            'Aメアリーさんはいちねんせいですか。',
+            'メアリーさんのいちねんせいですか。',
+            'メアリーさんはいちねんせいです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'メアリーさん／いちねんせい (Year: 2nd year)',
+          answers : [
+            'Aいいえ、にねんせいです。',
+            'ええ、そうです。',
+            'いいえ、よねんせいです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'たけしさん／にほんじん',
+          answers : [
+            'Aたけしさんはにほんじんですか。',
+            'たけしさんのにほんじんですか。',
+            'たけしさんはにほんじんです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'たけしさん／にほんじん (Nationality: Japanese)',
+          answers : [
+            'Aええ、そうです。',
+            'いいえ、アメリカじんです。',
+            'いいえ、ちゅうごくじんです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'たけしさん／にほんだいがくのがくせい',
+          answers : [
+            'Aたけしさんはにほんだいがくのがくせいですか。',
+            'たけしさんはがくせいのにほんだいがくですか。',
+            'たけしさんはにほんだいがくのがくせいです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'たけしさん／にほんだいがくのがくせい (School: Sakura University)',
+          answers : [
+            'Aいいえ、さくらだいがくのがくせいです。',
+            'ええ、そうです。',
+            'いいえ、がくせいのさくらだいがくです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'たけしさん／じゅうきゅうさい',
+          answers : [
+            'Aたけしさんはじゅうきゅうさいですか。',
+            'たけしさんのじゅうきゅうさいですか。',
+            'たけしさんはじゅうきゅうさいです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'たけしさん／じゅうきゅうさい (Age: 22)',
+          answers : [
+            'Aいいえ、にじゅうにさいです。',
+            'ええ、そうです。',
+            'いいえ、にじゅうさいです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'スーさん／スウェーデンじん',
+          answers : [
+            'Aスーさんはスウェーデンじんですか。',
+            'スーさんのスウェーデンじんですか。',
+            'スーさんはスウェーデンじんです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'スーさん／スウェーデンじん (Nationality: Korean)',
+          answers : [
+            'Aいいえ、かんこくじんです。',
+            'ええ、そうです。',
+            'いいえ、ちゅうごくじんです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'スーさんのせんこう／けいざい',
+          answers : [
+            'Aスーさんのせんこうはけいざいですか。',
+            'スーさんのけいざいはせんこうですか',
+            'スーさんのせんこうはけいざいです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'スーさんのせんこう／けいざい (Major: Computer)',
+          answers : [
+            'Aいいえ、コンピューターです。',
+            'ええ、そうです。',
+            'いいえ、ばんごしです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'ロバートさんのせんこう／ビジネス',
+          answers : [
+            'Aロバートさんのせんこうはビジネスですか。',
+            'ロバートさんのビジネスはせんこうですか。',
+            'ロバートさんのせんこうはビジネスです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'ロバートさんのせんこう／ビジネス (Major: Business)',
+          answers : [
+            'Aええ、そうです。',
+            'いいえ、れきしです。',
+            'いいえ、コンピューターです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'ロバートさん／よねんせい',
+          answers : [
+            'Aロバートさんはよねんせいですか。',
+            'ロバートさんのよねんせいですか。',
+            'ロバートさんはよねんせいです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'ロバートさん／よねんせい (Year: 4th year)',
+          answers : [
+            'Aええ、そうです。',
+            'いいえ、にねんせいです。',
+            'いいえ、さんねんせいです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'ロバートさん／にじゅういっさい',
+          answers : [
+            'Aロバートさんはにじゅういっさいですか。',
+            'ロバートさんのにじゅういっさいですか。',
+            'ロバートさんはにじゅういっさいです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'ロバートさん／にじゅういっさい (Age: 22)',
+          answers : [
+            'Aいいえ、にじゅうにさいです。',
+            'ええ、そうです。',
+            'いいえ、にじゅうさいです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'やましたせんせい／にほんじん',
+          answers : [
+            'Aやましたせんせいはにほんじんですか。',
+            'やましたせんせいのにほんじんですか。',
+            'やましたせんせいはにほんじんです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'やましたせんせい／にほんじん (Nationality: Japanese)',
+          answers : [
+            'Aええ、そうです。',
+            'いいえ、かんこくじんです。',
+            'いいえ、ちゅうごくじんです。'
+          ]
+        },
+        
+        {
+          question : l_q + 'やましたせんせい／ハワイだいがくのせんせい',
+          answers : [
+            'Aやましたせんせいはハワイだいがくのせんせいですか。',
+            'やましたせんせいはせんせいのハワイだいがくですか。',
+            'やましたせんせいはハワイだいがくのせんせいです。'
+          ]
+        },
+        
+        {
+          question : l_a + 'やましたせんせい／ハワイだいがくのせんせい (School: Sakura University)',
+          answers : [
+            'Aいいえ、さくらだいがくのせんせいです。',
+            'ええ、そうです。',
+            'いいえ、さくらだいがくのがくせいです。'
+          ]
+        }
+      ]
+    });</script>
+  </body>
+</html>
