@@ -177,7 +177,7 @@ function generateQuiz (o) {
     var zone = document.getElementById('quiz-zone'),
         quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
         answers = '<div id="answer-list">',
-        option = ['A', 'B', 'C'], oid = 0, // used for tagging answers as A, B, C..
+        option = ['A', 'B', 'C', 'D'], oid = 0, // used for tagging answers as A, B, C..
         isAnswer = false,
         q = o.quizlet,
         i = 0,
