@@ -54,16 +54,17 @@
     <script src="../../../resources/dragula.min.js"></script>
     <script src="../../../resources/easytimer.min.js"></script>
     <script src="../../../resources/javascript.js"></script>
-    <script>
-      var temp_q = 'いまなんじですか。';
-      generateQuiz({
+    <script>(function() {
+      var q = 'いまなんじですか。';
+      
+      Genki.generateQuiz({
         type : 'multi',
         info : 'Answer the questions. (the current time is in parentheses)',
 
         quizlet : [
           // II-A
           {
-            question : temp_q + '(01:00)',
+            question : q + '(01:00)',
             answers : [
               'Aいちじです。',
               'いちじはんです。',
@@ -72,7 +73,7 @@
           },
           
           {
-            question : temp_q + '(03:00)',
+            question : q + '(03:00)',
             answers : [
               'Aさんじです。',
               'さんじはんです。',
@@ -81,7 +82,7 @@
           },
           
           {
-            question : temp_q + '(09:00)',
+            question : q + '(09:00)',
             answers : [
               'Aくじです。',
               'きゅうじです。',
@@ -90,7 +91,7 @@
           },
           
           {
-            question : temp_q + '(11:00)',
+            question : q + '(11:00)',
             answers : [
               'Aじゅういちじです。',
               'じゅういちじはんです。',
@@ -99,7 +100,7 @@
           },
           
           {
-            question : temp_q + '(07:00)',
+            question : q + '(07:00)',
             answers : [
               'Aしちじです。',
               'ななじです。',
@@ -108,7 +109,7 @@
           },
           
           {
-            question : temp_q + '(02:30)',
+            question : q + '(02:30)',
             answers : [
               'Aにじはんです。',
               'にじです。',
@@ -117,7 +118,7 @@
           },
           
           {
-            question : temp_q + '(04:30)',
+            question : q + '(04:30)',
             answers : [
               'Aよじはんです。',
               'よんじはんです。',
@@ -126,7 +127,7 @@
           },
           
           {
-            question : temp_q + '(12:00)',
+            question : q + '(12:00)',
             answers : [
               'Aじゅうにじです。',
               'じゅうにじはんです。',
@@ -135,7 +136,7 @@
           },
           
           {
-            question : temp_q + '(06:00)',
+            question : q + '(06:00)',
             answers : [
               'Aろくじです。',
               'ろくじはんです。',
@@ -144,7 +145,7 @@
           },
           
           {
-            question : temp_q + '(09:30)',
+            question : q + '(09:30)',
             answers : [
               'Aくじはんです。',
               'きゅうじはんです。',
@@ -154,7 +155,7 @@
           
           // II-B
           {
-            question : 'とうきょうは' + temp_q + '(03:00 A.M.)',
+            question : 'とうきょうは' + q + '(03:00 A.M.)',
             answers : [
               'Aごぜんさんじです。',
               'ごごさんじです。',
@@ -163,7 +164,7 @@
           },
           
           {
-            question : 'ロンドンは' + temp_q + '(06:00 P.M.)',
+            question : 'ロンドンは' + q + '(06:00 P.M.)',
             answers : [
               'Aごごろくじです。',
               'ごぜんろくじです。',
@@ -172,7 +173,7 @@
           },
           
           {
-            question : 'ストックホルムは' + temp_q + '(07:00 P.M.)',
+            question : 'ストックホルムは' + q + '(07:00 P.M.)',
             answers : [
               'Aごごしちじです。',
               'ごぜんしちじです。',
@@ -181,7 +182,7 @@
           },
           
           {
-            question : 'ナイロビは' + temp_q + '(09:00 P.M.)',
+            question : 'ナイロビは' + q + '(09:00 P.M.)',
             answers : [
               'Aごごくじです。',
               'ごぜんくじです。',
@@ -190,7 +191,7 @@
           },
           
           {
-            question : 'ニューデリーは' + temp_q + '(11:30 P.M.)',
+            question : 'ニューデリーは' + q + '(11:30 P.M.)',
             answers : [
               'Aごごじゅういちじはんです。',
               'ごぜんじゅういちじはんです。',
@@ -199,7 +200,7 @@
           },
           
           {
-            question : 'バンコクは' + temp_q + '(01:00 A.M.)',
+            question : 'バンコクは' + q + '(01:00 A.M.)',
             answers : [
               'Aごぜんいちじです。',
               'ごごいちじです。',
@@ -208,7 +209,7 @@
           },
           
           {
-            question : 'シドニーは' + temp_q + '(04:00 A.M.)',
+            question : 'シドニーは' + q + '(04:00 A.M.)',
             answers : [
               'Aごぜんよじです。',
               'ごごよじです。',
@@ -217,7 +218,7 @@
           },
           
           {
-            question : 'ニューヨークは' + temp_q + '(01:00 P.M.)',
+            question : 'ニューヨークは' + q + '(01:00 P.M.)',
             answers : [
               'Aごごいちじです。',
               'ごぜんいちじです。',
@@ -226,7 +227,7 @@
           },
           
           {
-            question : 'リオデジャネイロは' + temp_q + '(03:00 P.M.)',
+            question : 'リオデジャネイロは' + q + '(03:00 P.M.)',
             answers : [
               'Aごごさんじです。',
               'ごぜんさんじです。',
@@ -235,7 +236,7 @@
           },
           
           {
-            question : 'アンカレッジは' + temp_q + '(09:00 A.M.)',
+            question : 'アンカレッジは' + q + '(09:00 A.M.)',
             answers : [
               'Aごぜんくじです。',
               'ごごくじです。',
@@ -244,6 +245,6 @@
           }
         ]
       });
-    </script>
+    }());</script>
   </body>
 </html>
