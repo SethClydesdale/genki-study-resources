@@ -201,6 +201,8 @@ footer li:first-child:before { content:""; }
   left:12px;
 }
 
+#quiz-info a { color:#FF0; }
+
 /* timer styles */
 #quiz-timer { margin-top:10px; }
 #quiz-timer:before {
