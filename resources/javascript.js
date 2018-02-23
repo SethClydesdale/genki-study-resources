@@ -383,7 +383,10 @@ window.Genki = {
       { '/lessons/lesson-2/numbers-3/' : 'Numbers: Ten Thousands' },
       { '/lessons/lesson-2/numbers-4/' : 'Practice: Numbers' },
       { '/lessons/lesson-2/numbers-5/' : 'Practice: Prices' },
-      { '/lessons/lesson-2/grammar-1/' : 'Practice: これ and それ' }
+      { '/lessons/lesson-2/grammar-1/' : 'Practice: これ, それ, and あれ' },
+      { '/lessons/lesson-2/grammar-2/' : 'Practice: この, その, and あの' },
+      { '/lessons/lesson-2/grammar-3/' : 'Practice: Asking for Directions' },
+      { '/lessons/lesson-2/grammar-4/' : 'Practice: Giving Directions' }
     ],
     i = 0,
     j = exercises.length,
