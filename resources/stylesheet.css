@@ -217,6 +217,32 @@ footer li:first-child:before { content:""; }
   padding:3px;
 }
 
+
+/* more exercises style */
+#more-exercises { margin-top:10px; }
+
+#more-exercises a.button { margin:3px 0; }
+#more-exercises a:before, #more-exercises a:after {
+  font-size:18px;
+  font-family:FontAwesome;
+  font-weight:normal;
+  vertical-align:middle;
+}
+
+#more-exercises a.prev-ex { float:left }
+#more-exercises a.prev-ex:before {
+  content:"\f060";
+  margin-right:10px;
+}
+
+#more-exercises a.next-ex { float:right }
+#more-exercises a.next-ex:after {
+  content:"\f061";
+  margin-left:10px;
+}
+
+
+/* quiz answers */
 .quiz-answer-zone:empty:after {
   content:attr(data-text);
   color:transparent;
