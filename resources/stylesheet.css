@@ -483,6 +483,8 @@ footer li:first-child:before { content:""; }
   font-size:18px;
   position:absolute;
   left:-25px;
+  top:50%;
+  margin-top:-10px;
 }
 
 .quiz-multi-answer:hover { border-color:#F60; }
