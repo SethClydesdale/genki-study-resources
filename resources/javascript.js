@@ -429,9 +429,10 @@ window.Genki = {
     // create the prev/next exercise links
     j = 2;
     while (j --> 0) {
-      a = exercises[j == 1 ? i - 1 : i + 1].split('|'); // the prev/next exercise; j=1 is prev, j=0 is next
+      a = exercises[j == 1 ? i - 1 : i + 1]; // the prev/next exercise; j=1 is prev, j=0 is next
       
       if (a) { // if there's a prev/next exercise we'll add the link to more
+        a = a.split('|');
         more += '<a href="../../..' + a[0] + (fileSys ? 'index.html' : '') + '" class="button ' + (j == 1 ? 'prev' : 'next') + '-ex" title="' + (j == 1 ? 'Previous' : 'Next') + ' exercise">' + a[1] + '</a>';
       }
     }
