@@ -242,7 +242,8 @@ footer li:first-child:before { content:""; }
 }
 
 
-/* exercise list */
+/* EXERCISE LIST */
+#exercise-list, #toggle-exercises, #toggle-exercises:after, #toggle-exercises:before { transition:300ms; } /* list transition */
 #exercise-list {
   background:#EEE;
   border-right:1px solid #CCC;
@@ -255,10 +256,10 @@ footer li:first-child:before { content:""; }
   overflow-y:auto;
   overflow-x:hidden;
   z-index:10;
-  transition:300ms;
 }
 #exercise-list.list-open { left:0; }
 
+/* toggle button */
 #toggle-exercises {
   background:#C50;
   text-align:center;
@@ -270,20 +271,28 @@ footer li:first-child:before { content:""; }
   left:0;
   z-index:11;
   cursor:pointer;
-  transition:300ms;
 }
 
-#toggle-exercises:after {
-  content:"\f0c9";
+#toggle-exercises:after, #toggle-exercises:before {
   color:#FFF;
   font-size:28px;
   font-family:FontAwesome;
+  position:absolute;
+  left:0;
+  right:0;
+}
+
+#toggle-exercises:after { content:"\f0c9"; }
+#toggle-exercises:before {
+  content:"\f00d";
+  opacity:0;
 }
 
 #exercise-list.list-open + #toggle-exercises { left:268px; }
-#exercise-list.list-open + #toggle-exercises:after { content:"\f00d"; }
+#exercise-list.list-open + #toggle-exercises:after { opacity:0; }
+#exercise-list.list-open + #toggle-exercises:before { opacity:1; }
 
-
+/* titles */
 #exercise-list .main-title {
   color:#FFF;
   background:#F60;
@@ -294,7 +303,7 @@ footer li:first-child:before { content:""; }
 }
 
 #exercise-list .lesson-title {
-  font-size:15px;
+  font-size:13px;
   border-bottom:1px solid #CCC;
   margin:0;
   padding:3px;
@@ -313,16 +322,21 @@ footer li:first-child:before { content:""; }
 }
 #exercise-list .lesson-title[data-open="true"]:before { content:"\f078"; }
 
+
+/* list and links */
 #exercise-list ul {
   border-bottom:1px solid #CCC;
   margin:0;
-  padding:3px 3px 6px 3px;
+  padding:3px 3px 10px 3px;
   list-style-type:none;
+  display:none;
 }
+#exercise-list .lesson-title[data-open="true"] + ul { display:block; }
 
 #exercise-list a {
   text-decoration:none;
   display:block;
+  position:relative;
 }
 
 #exercise-list a.active-lesson {
@@ -339,6 +353,21 @@ footer li:first-child:before { content:""; }
 
 #exercise-list a:hover { color:#F60; }
 #exercise-list a:hover:before { color:#F60; }
+
+/* show page num. on hover */
+#exercise-list a:hover:after {
+  content:attr(data-page);
+  color:#FFF;
+  font-size:12px;
+  font-weight:normal;
+  line-height:12px;
+  background:#F60;
+  border:1px solid #E50;;
+  border-radius:3px;
+  position:absolute;
+  right:3px;
+  padding:3px;
+}
 
 
 /* quiz answers */
