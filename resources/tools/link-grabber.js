@@ -9,7 +9,7 @@
   
   // loop over the links and parse them into a neat {key:value} pair
   for (; i < j; i++) {
-    str += '  { \'' + a[i].href.replace(/.*?(\/lessons\/.*?\/.*?\/).*/g, '$1') + '\' : \'' + a[i].innerText + '\' }' + ( i == j - 1 ? '' : ',' ) + '\n'
+    str += '  \'' + a[i].href.replace(/.*?(\/lessons\/.*?\/.*?\/).*/g, '$1') + '|' + a[i].innerText + '\'' + ( i == j - 1 ? '' : ',' ) + '\n'
   }
 
   str += ']'; // close the array

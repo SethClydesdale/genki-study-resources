@@ -318,6 +318,27 @@ window.Genki = {
     // this class will indicate the quiz is over so post-test styles can be applied
     document.getElementById('quiz-zone').className += ' quiz-over';
     Genki.scrollTo(document.getElementById('complete-banner')); // jump to the quiz results
+  },
+  
+  
+  // toggle the exercise list
+  toggleExercises : function () {
+    var list = document.getElementById('exercise-list');
+    list.className = list.className == 'list-open' ? '' : 'list-open';
+  },
+  
+  
+  // toggles the display of lists
+  toggleList : function (el) {
+    var list = el.nextSibling;
+    
+    if (/none/.test(list.style.display)) {
+      list.style.display = '';
+      el.dataset.open = true;
+    } else {
+      list.style.display = 'none';
+      el.dataset.open = false;
+    }
   }
 };
 
@@ -342,80 +363,107 @@ window.Genki = {
   // show prev/next exercise if currently viewing one
   if (/\/lessons\//.test(window.location.pathname)) {
     var exercises = [ // exercise list
-      { '/lessons/lesson-0/hiragana-1/' : 'Hiragana' },
-      { '/lessons/lesson-0/hiragana-2/' : 'Hiragana: Diacritical Marks' },
-      { '/lessons/lesson-0/hiragana-3/' : 'Hiragana: Combos' },
-      { '/lessons/lesson-0/katakana-1/' : 'Katakana' },
-      { '/lessons/lesson-0/katakana-2/' : 'Katakana: Diacritical Marks' },
-      { '/lessons/lesson-0/katakana-3/' : 'Katakana: Combos' },
-      { '/lessons/lesson-0/katakana-4/' : 'Katakana: Additional Combos' },
-      { '/lessons/lesson-0/greetings/' : 'Greetings' },
-      { '/lessons/lesson-0/greetings-practice/' : 'Practice: Greetings' },
-      { '/lessons/lesson-0/culture-1/' : 'Culture Note: Greetings and Bowing' },
-      { '/lessons/lesson-1/vocab-1/' : 'Vocabulary: Part 1' },
-      { '/lessons/lesson-1/vocab-2/' : 'Vocabulary: Part 2' },
-      { '/lessons/lesson-1/vocab-3/' : 'Vocabulary: Countries' },
-      { '/lessons/lesson-1/vocab-4/' : 'Vocabulary: Majors' },
-      { '/lessons/lesson-1/vocab-5/' : 'Vocabulary: Occupations' },
-      { '/lessons/lesson-1/vocab-6/' : 'Vocabulary: Family' },
-      { '/lessons/lesson-1/culture-1/' : 'Culture Note: Japanese Names' },
-      { '/lessons/lesson-1/numbers-1/' : 'Numbers: 0-10' },
-      { '/lessons/lesson-1/numbers-2/' : 'Numbers: 11-20, 30, 40...' },
-      { '/lessons/lesson-1/numbers-3/' : 'Practice: Numbers' },
-      { '/lessons/lesson-1/time-1/' : 'Time' },
-      { '/lessons/lesson-1/time-2/' : 'Practice: Time' },
-      { '/lessons/lesson-1/phone-1/' : 'Practice: Telephone Numbers' },
-      { '/lessons/lesson-1/grammar-1/' : 'Practice: の' },
-      { '/lessons/lesson-1/grammar-2/' : 'Practice: Describing People' },
-      { '/lessons/lesson-1/grammar-3/' : 'Practice: Q&A' },
-      { '/lessons/lesson-1/grammar-4/' : 'Practice: Describing People 2' },
-      { '/lessons/lesson-1/grammar-5/' : 'Practice: Q&A 2' },
-      { '/lessons/lesson-1/time-3/' : 'Time: Minutes' },
-      { '/lessons/lesson-1/age-1/' : 'Age' },
-      { '/lessons/lesson-2/vocab-1/' : 'Vocabulary: Words that Point' },
-      { '/lessons/lesson-2/vocab-2/' : 'Vocabulary: Food' },
-      { '/lessons/lesson-2/vocab-3/' : 'Vocabulary: Things' },
-      { '/lessons/lesson-2/vocab-4/' : 'Vocabulary: Places' },
-      { '/lessons/lesson-2/vocab-5/' : 'Vocabulary: Money and Expressions' },
-      { '/lessons/lesson-2/culture-1/' : 'Culture Note: Japanese Currency' },
-      { '/lessons/lesson-2/numbers-1/' : 'Numbers: Hundreds' },
-      { '/lessons/lesson-2/numbers-2/' : 'Numbers: Thousands' },
-      { '/lessons/lesson-2/numbers-3/' : 'Numbers: Ten Thousands' },
-      { '/lessons/lesson-2/numbers-4/' : 'Practice: Numbers' },
-      { '/lessons/lesson-2/numbers-5/' : 'Practice: Prices' },
-      { '/lessons/lesson-2/grammar-1/' : 'Practice: これ, それ, and あれ' },
-      { '/lessons/lesson-2/grammar-2/' : 'Practice: この, その, and あの' },
-      { '/lessons/lesson-2/grammar-3/' : 'Practice: Asking for Directions' },
-      { '/lessons/lesson-2/grammar-4/' : 'Practice: Giving Directions' }
+      '/lessons/lesson-0/hiragana-1/|Hiragana',
+      '/lessons/lesson-0/hiragana-2/|Hiragana: Diacritical Marks',
+      '/lessons/lesson-0/hiragana-3/|Hiragana: Combos',
+      '/lessons/lesson-0/katakana-1/|Katakana',
+      '/lessons/lesson-0/katakana-2/|Katakana: Diacritical Marks',
+      '/lessons/lesson-0/katakana-3/|Katakana: Combos',
+      '/lessons/lesson-0/katakana-4/|Katakana: Additional Combos',
+      '/lessons/lesson-0/greetings/|Greetings',
+      '/lessons/lesson-0/greetings-practice/|Practice: Greetings',
+      '/lessons/lesson-0/culture-1/|Culture Note: Greetings and Bowing',
+      '/lessons/lesson-1/vocab-1/|Vocabulary: Part 1',
+      '/lessons/lesson-1/vocab-2/|Vocabulary: Part 2',
+      '/lessons/lesson-1/vocab-3/|Vocabulary: Countries',
+      '/lessons/lesson-1/vocab-4/|Vocabulary: Majors',
+      '/lessons/lesson-1/vocab-5/|Vocabulary: Occupations',
+      '/lessons/lesson-1/vocab-6/|Vocabulary: Family',
+      '/lessons/lesson-1/culture-1/|Culture Note: Japanese Names',
+      '/lessons/lesson-1/numbers-1/|Numbers: 0-10',
+      '/lessons/lesson-1/numbers-2/|Numbers: 11-20, 30, 40...',
+      '/lessons/lesson-1/numbers-3/|Practice: Numbers',
+      '/lessons/lesson-1/time-1/|Time',
+      '/lessons/lesson-1/time-2/|Practice: Time',
+      '/lessons/lesson-1/phone-1/|Practice: Telephone Numbers',
+      '/lessons/lesson-1/grammar-1/|Practice: の',
+      '/lessons/lesson-1/grammar-2/|Practice: Describing People',
+      '/lessons/lesson-1/grammar-3/|Practice: Q&A',
+      '/lessons/lesson-1/grammar-4/|Practice: Describing People 2',
+      '/lessons/lesson-1/grammar-5/|Practice: Q&A 2',
+      '/lessons/lesson-1/time-3/|Time: Minutes',
+      '/lessons/lesson-1/age-1/|Age',
+      '/lessons/lesson-2/vocab-1/|Vocabulary: Words that Point',
+      '/lessons/lesson-2/vocab-2/|Vocabulary: Food',
+      '/lessons/lesson-2/vocab-3/|Vocabulary: Things',
+      '/lessons/lesson-2/vocab-4/|Vocabulary: Places',
+      '/lessons/lesson-2/vocab-5/|Vocabulary: Money and Expressions',
+      '/lessons/lesson-2/culture-1/|Culture Note: Japanese Currency',
+      '/lessons/lesson-2/numbers-1/|Numbers: Hundreds',
+      '/lessons/lesson-2/numbers-2/|Numbers: Thousands',
+      '/lessons/lesson-2/numbers-3/|Numbers: Ten Thousands',
+      '/lessons/lesson-2/numbers-4/|Practice: Numbers',
+      '/lessons/lesson-2/numbers-5/|Practice: Prices',
+      '/lessons/lesson-2/grammar-1/|Practice: これ, それ, and あれ',
+      '/lessons/lesson-2/grammar-2/|Practice: この, その, and あの',
+      '/lessons/lesson-2/grammar-3/|Practice: Asking for Directions',
+      '/lessons/lesson-2/grammar-4/|Practice: Giving Directions'
     ],
     i = 0,
     j = exercises.length,
     k, a,
     current = window.location.pathname.replace(/.*?(\/lessons\/.*?\/.*?\/).*/g, '$1'),
-    timer = document.getElementById('quiz-timer'),
-    more = '<div id="more-exercises" class="clear">';
+    more = '<div id="more-exercises" class="clear">',
+    activeLesson;
     
     // find the current exercise
     for (; i < j; i++) {
-      if (exercises[i][current]) {
+      if (current == exercises[i].split('|')[0]) {
         break;
       }
     }
     
+    // update the active lesson
+    activeLesson = exercises[i].split('|');
+    
     // create the prev/next exercise links
     j = 2;
     while (j --> 0) {
-      a = exercises[j == 1 ? i - 1 : i + 1]; // the prev/next exercise; j=1 is prev, j=0 is next
+      a = exercises[j == 1 ? i - 1 : i + 1].split('|'); // the prev/next exercise; j=1 is prev, j=0 is next
       
       if (a) { // if there's a prev/next exercise we'll add the link to more
-        for (k in a) {
-          more += '<a href="../../..' + k + (fileSys ? 'index.html' : '') + '" class="button ' + (j == 1 ? 'prev' : 'next') + '-ex" title="' + (j == 1 ? 'Previous' : 'Next') + ' exercise">' + a[k] + '</a>';
-        }
+        more += '<a href="../../..' + a[0] + (fileSys ? 'index.html' : '') + '" class="button ' + (j == 1 ? 'prev' : 'next') + '-ex" title="' + (j == 1 ? 'Previous' : 'Next') + ' exercise">' + a[1] + '</a>';
       }
     }
     
     // add the "more exercises" buttons to the document
-    timer.insertAdjacentHTML('afterend', more + '</div>');
+    document.getElementById('quiz-timer').insertAdjacentHTML('afterend', more + '</div>');
+    
+    
+    // Create the exercise list
+    var list = '<div id="exercise-list"><h2 class="main-title">Exercise List</h2><h3 class="lesson-title" onclick="Genki.toggleList(this);">Pre-Lesson</h3><ul id="lesson-0" style="display:none;">',
+        lesson = 'lesson-0',
+        linkData;
+    
+    for (i = 0, j = exercises.length; i < j; i++) {
+      linkData = exercises[i].split('|');
+      
+      if (!new RegExp(lesson).test(linkData[0])) {
+        lesson = linkData[0].replace(/.*?\/(lesson-\d+)\/.*/, '$1');
+        list += '</ul><h3 class="lesson-title" onclick="Genki.toggleList(this);">' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h3><ul id="' + lesson + '" style="display:none;">'
+      }
+      
+      list += '<li><a href="../../..' + linkData[0] + (fileSys ? 'index.html' : '') + '">' + linkData[1] + '</a></li>';
+    }
+    
+    // add the exercise list to the document
+    document.getElementById('content').insertAdjacentHTML('afterbegin', list + '</ul></div><div id="toggle-exercises" onclick="Genki.toggleExercises();" title="Toggle exercise list"></div>');
+    
+    // open the current lesson
+    Genki.toggleList(document.getElementById(activeLesson[0].replace(/.*?\/(lesson-\d+)\/.*/, '$1')).previousSibling);
+    
+    // highlight the active exercise
+    document.querySelector('a[href*="' + activeLesson[0] + '"]').className += ' active-lesson';
   }
   
 }());

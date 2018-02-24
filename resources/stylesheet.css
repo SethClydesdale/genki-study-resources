@@ -242,6 +242,105 @@ footer li:first-child:before { content:""; }
 }
 
 
+/* exercise list */
+#exercise-list {
+  background:#EEE;
+  border-right:1px solid #CCC;
+  position:fixed;
+  top:0;
+  left:-301px;
+  bottom:0;
+  width:300px;
+  white-space:nowrap;
+  overflow-y:auto;
+  overflow-x:hidden;
+  z-index:10;
+  transition:300ms;
+}
+#exercise-list.list-open { left:0; }
+
+#toggle-exercises {
+  background:#C50;
+  text-align:center;
+  line-height:32px;
+  height:32px;
+  width:32px;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:11;
+  cursor:pointer;
+  transition:300ms;
+}
+
+#toggle-exercises:after {
+  content:"\f0c9";
+  color:#FFF;
+  font-size:28px;
+  font-family:FontAwesome;
+}
+
+#exercise-list.list-open + #toggle-exercises { left:268px; }
+#exercise-list.list-open + #toggle-exercises:after { content:"\f00d"; }
+
+
+#exercise-list .main-title {
+  color:#FFF;
+  background:#F60;
+  font-size:18px;
+  text-align:center;
+  line-height:32px;
+  margin:0;
+}
+
+#exercise-list .lesson-title {
+  font-size:15px;
+  border-bottom:1px solid #CCC;
+  margin:0;
+  padding:3px;
+  cursor:pointer;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select: none;
+          user-select:none;
+}
+#exercise-list .lesson-title:hover { color:#F60; }
+
+#exercise-list .lesson-title:before {
+  content:"\f054";
+  font-family:FontAwesome;
+  margin-right:3px;
+}
+#exercise-list .lesson-title[data-open="true"]:before { content:"\f078"; }
+
+#exercise-list ul {
+  border-bottom:1px solid #CCC;
+  margin:0;
+  padding:3px 3px 6px 3px;
+  list-style-type:none;
+}
+
+#exercise-list a {
+  text-decoration:none;
+  display:block;
+}
+
+#exercise-list a.active-lesson {
+  color:#F60;
+  font-weight:bold;
+}
+
+#exercise-list a:before {
+  content:"\f054";
+  color:#333;
+  font-family:FontAwesome;
+  margin-right:3px;
+}
+
+#exercise-list a:hover { color:#F60; }
+#exercise-list a:hover:before { color:#F60; }
+
+
 /* quiz answers */
 .quiz-answer-zone:empty:after {
   content:attr(data-text);
