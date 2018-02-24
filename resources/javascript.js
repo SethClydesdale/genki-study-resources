@@ -330,14 +330,13 @@ window.Genki = {
   
   // toggles the display of lists
   toggleList : function (el) {
-    var list = el.nextSibling;
+    el.dataset.open = el.dataset.open == 'true' ? false : true;
     
-    if (/none/.test(list.style.display)) {
-      list.style.display = '';
-      el.dataset.open = true;
-    } else {
-      list.style.display = 'none';
-      el.dataset.open = false;
+    // close any open lists
+    for (var a = el.parentNode.querySelectorAll('.lesson-title'), i = 0, j = a.length; i < j; i++) {
+      if (a[i] != el) {
+        a[i].dataset.open = false;
+      }
     }
   }
 };
@@ -363,51 +362,51 @@ window.Genki = {
   // show prev/next exercise if currently viewing one
   if (/\/lessons\//.test(window.location.pathname)) {
     var exercises = [ // exercise list
-      '/lessons/lesson-0/hiragana-1/|Hiragana',
-      '/lessons/lesson-0/hiragana-2/|Hiragana: Diacritical Marks',
-      '/lessons/lesson-0/hiragana-3/|Hiragana: Combos',
-      '/lessons/lesson-0/katakana-1/|Katakana',
-      '/lessons/lesson-0/katakana-2/|Katakana: Diacritical Marks',
-      '/lessons/lesson-0/katakana-3/|Katakana: Combos',
-      '/lessons/lesson-0/katakana-4/|Katakana: Additional Combos',
-      '/lessons/lesson-0/greetings/|Greetings',
-      '/lessons/lesson-0/greetings-practice/|Practice: Greetings',
-      '/lessons/lesson-0/culture-1/|Culture Note: Greetings and Bowing',
-      '/lessons/lesson-1/vocab-1/|Vocabulary: Part 1',
-      '/lessons/lesson-1/vocab-2/|Vocabulary: Part 2',
-      '/lessons/lesson-1/vocab-3/|Vocabulary: Countries',
-      '/lessons/lesson-1/vocab-4/|Vocabulary: Majors',
-      '/lessons/lesson-1/vocab-5/|Vocabulary: Occupations',
-      '/lessons/lesson-1/vocab-6/|Vocabulary: Family',
-      '/lessons/lesson-1/culture-1/|Culture Note: Japanese Names',
-      '/lessons/lesson-1/numbers-1/|Numbers: 0-10',
-      '/lessons/lesson-1/numbers-2/|Numbers: 11-20, 30, 40...',
-      '/lessons/lesson-1/numbers-3/|Practice: Numbers',
-      '/lessons/lesson-1/time-1/|Time',
-      '/lessons/lesson-1/time-2/|Practice: Time',
-      '/lessons/lesson-1/phone-1/|Practice: Telephone Numbers',
-      '/lessons/lesson-1/grammar-1/|Practice: の',
-      '/lessons/lesson-1/grammar-2/|Practice: Describing People',
-      '/lessons/lesson-1/grammar-3/|Practice: Q&A',
-      '/lessons/lesson-1/grammar-4/|Practice: Describing People 2',
-      '/lessons/lesson-1/grammar-5/|Practice: Q&A 2',
-      '/lessons/lesson-1/time-3/|Time: Minutes',
-      '/lessons/lesson-1/age-1/|Age',
-      '/lessons/lesson-2/vocab-1/|Vocabulary: Words that Point',
-      '/lessons/lesson-2/vocab-2/|Vocabulary: Food',
-      '/lessons/lesson-2/vocab-3/|Vocabulary: Things',
-      '/lessons/lesson-2/vocab-4/|Vocabulary: Places',
-      '/lessons/lesson-2/vocab-5/|Vocabulary: Money and Expressions',
-      '/lessons/lesson-2/culture-1/|Culture Note: Japanese Currency',
-      '/lessons/lesson-2/numbers-1/|Numbers: Hundreds',
-      '/lessons/lesson-2/numbers-2/|Numbers: Thousands',
-      '/lessons/lesson-2/numbers-3/|Numbers: Ten Thousands',
-      '/lessons/lesson-2/numbers-4/|Practice: Numbers',
-      '/lessons/lesson-2/numbers-5/|Practice: Prices',
-      '/lessons/lesson-2/grammar-1/|Practice: これ, それ, and あれ',
-      '/lessons/lesson-2/grammar-2/|Practice: この, その, and あの',
-      '/lessons/lesson-2/grammar-3/|Practice: Asking for Directions',
-      '/lessons/lesson-2/grammar-4/|Practice: Giving Directions'
+      '/lessons/lesson-0/hiragana-1/|Hiragana|p.24-25',
+      '/lessons/lesson-0/hiragana-2/|Hiragana: Diacritical Marks|p.25',
+      '/lessons/lesson-0/hiragana-3/|Hiragana: Combos|p.25-26',
+      '/lessons/lesson-0/katakana-1/|Katakana|p.28',
+      '/lessons/lesson-0/katakana-2/|Katakana: Diacritical Marks|p.28-29',
+      '/lessons/lesson-0/katakana-3/|Katakana: Combos|p.29',
+      '/lessons/lesson-0/katakana-4/|Katakana: Additional Combos|p.30',
+      '/lessons/lesson-0/greetings/|Greetings|p.34-35',
+      '/lessons/lesson-0/greetings-practice/|Practice: Greetings|p.37',
+      '/lessons/lesson-0/culture-1/|Culture Note: Greetings and Bowing|p.37',
+      '/lessons/lesson-1/vocab-1/|Vocabulary: Part 1|p.40',
+      '/lessons/lesson-1/vocab-2/|Vocabulary: Part 2|p.40',
+      '/lessons/lesson-1/vocab-3/|Vocabulary: Countries|p.41',
+      '/lessons/lesson-1/vocab-4/|Vocabulary: Majors|p.41',
+      '/lessons/lesson-1/vocab-5/|Vocabulary: Occupations|p.41',
+      '/lessons/lesson-1/vocab-6/|Vocabulary: Family|p.41',
+      '/lessons/lesson-1/culture-1/|Culture Note: Japanese Names|p.45',
+      '/lessons/lesson-1/numbers-1/|Numbers: 0-10|p.46-47',
+      '/lessons/lesson-1/numbers-2/|Numbers: 11-20, 30, 40...|p.48',
+      '/lessons/lesson-1/numbers-3/|Practice: Numbers|p.48; I-A, B & C',
+      '/lessons/lesson-1/time-1/|Time|p.49',
+      '/lessons/lesson-1/time-2/|Practice: Time|p.49-50; II-A & B',
+      '/lessons/lesson-1/phone-1/|Practice: Telephone Numbers|p.50; III-A',
+      '/lessons/lesson-1/grammar-1/|Practice: の|p.51; IV',
+      '/lessons/lesson-1/grammar-2/|Practice: Describing People|p.51-52; V-A',
+      '/lessons/lesson-1/grammar-3/|Practice: Q&A|p.52-53; V-B',
+      '/lessons/lesson-1/grammar-4/|Practice: Describing People 2|p.53-54; VI-A',
+      '/lessons/lesson-1/grammar-5/|Practice: Q&A 2|p.54; VI-B',
+      '/lessons/lesson-1/time-3/|Time: Minutes|p.57',
+      '/lessons/lesson-1/age-1/|Age|p.57',
+      '/lessons/lesson-2/vocab-1/|Vocabulary: Words that Point|p.60',
+      '/lessons/lesson-2/vocab-2/|Vocabulary: Food|p.60',
+      '/lessons/lesson-2/vocab-3/|Vocabulary: Things|p.60-61',
+      '/lessons/lesson-2/vocab-4/|Vocabulary: Places|p.61',
+      '/lessons/lesson-2/vocab-5/|Vocabulary: Money and Expressions|p.61',
+      '/lessons/lesson-2/culture-1/|Culture Note: Japanese Currency|p.68',
+      '/lessons/lesson-2/numbers-1/|Numbers: Hundreds|p.69',
+      '/lessons/lesson-2/numbers-2/|Numbers: Thousands|p.69',
+      '/lessons/lesson-2/numbers-3/|Numbers: Ten Thousands|p.69',
+      '/lessons/lesson-2/numbers-4/|Practice: Numbers|p.69; I-A',
+      '/lessons/lesson-2/numbers-5/|Practice: Prices|p.69-70; I-B',
+      '/lessons/lesson-2/grammar-1/|Practice: これ, それ, and あれ|p.71-72; II-A & B',
+      '/lessons/lesson-2/grammar-2/|Practice: この, その, and あの|p.72-73; III-A',
+      '/lessons/lesson-2/grammar-3/|Practice: Asking for Directions|p.74; IV',
+      '/lessons/lesson-2/grammar-4/|Practice: Giving Directions|p.74; IV'
     ],
     i = 0,
     j = exercises.length,
@@ -442,19 +441,22 @@ window.Genki = {
     
     
     // Create the exercise list
-    var list = '<div id="exercise-list"><h2 class="main-title">Exercise List</h2><h3 class="lesson-title" onclick="Genki.toggleList(this);">Pre-Lesson</h3><ul id="lesson-0" style="display:none;">',
+    var list = '<div id="exercise-list"><h2 class="main-title">Exercise List</h2><h3 class="lesson-title" onclick="Genki.toggleList(this);">Pre-Lesson</h3><ul id="lesson-0">',
         lesson = 'lesson-0',
         linkData;
     
+    // loop over all the exercises and place them into their respectice lesson group
     for (i = 0, j = exercises.length; i < j; i++) {
       linkData = exercises[i].split('|');
       
+      // if the lesson group is different create a new group
       if (!new RegExp(lesson).test(linkData[0])) {
         lesson = linkData[0].replace(/.*?\/(lesson-\d+)\/.*/, '$1');
-        list += '</ul><h3 class="lesson-title" onclick="Genki.toggleList(this);">' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h3><ul id="' + lesson + '" style="display:none;">'
+        list += '</ul><h3 class="lesson-title" onclick="Genki.toggleList(this);">' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h3><ul id="' + lesson + '">'
       }
       
-      list += '<li><a href="../../..' + linkData[0] + (fileSys ? 'index.html' : '') + '">' + linkData[1] + '</a></li>';
+      // add the exercise link to the group
+      list += '<li><a href="../../..' + linkData[0] + (fileSys ? 'index.html' : '') + '" data-page="' + linkData[2] + '">' + linkData[1] + '</a></li>';
     }
     
     // add the exercise list to the document
