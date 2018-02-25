@@ -334,7 +334,10 @@ footer li:first-child:before { content:""; }
 #exercise-list .lesson-title[data-open="true"] + ul { display:block; }
 
 #exercise-list a {
+  white-space:nowrap;
   text-decoration:none;
+  text-overflow:ellipsis;
+  overflow:hidden;
   display:block;
   position:relative;
 }
