@@ -6,9 +6,10 @@ window.Genki = {
   
   // frequently used strings
   lang : {
-    std_drag : 'Read the Japanese on the left and match the correct meaning by dragging an answer from the right.',
+    std_drag : 'Read the Japanese on the left and drag the word with the same meaning to it.',
     std_kana : 'Drag the Kana to the matching Romaji.',
     std_num : 'Drag the Numbers to the matching Kana.',
+    std_kanji : 'Drag the Kana to the matching Kanji.',
     std_multi : 'Solve the problems by choosing the correct answers.',
     mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong before finding the correct answer. Review these problems before trying again.',
     multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red">red</span>. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.'
@@ -357,7 +358,8 @@ window.Genki = {
     
     fileSys = true;
   }
-
+  
+  Genki.local = fileSys; // for use on other pages
 
   // show prev/next exercise if currently viewing one
   if (/\/lessons\//.test(window.location.pathname)) {
@@ -415,11 +417,15 @@ window.Genki = {
       'lesson-2/vocab-8|Useful Expressions: In the Classroom|p.83',
       'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.86',
       'lesson-3/vocab-2|Vocabulary: Food and Drinks|p.86',
+      'lesson-3/kanji-1|Kanji: Entertainment and Food|p.86',
       'lesson-3/vocab-3|Vocabulary: Places and Time|p.86-87',
+      'lesson-3/kanji-2|Kanji: Places and Time|p.86-87',
       'lesson-3/vocab-4|Vocabulary: U-verbs|p.87',
+      'lesson-3/kanji-3|Kanji: U-verbs|p.87',
       'lesson-3/vocab-5|Vocabulary: Ru-verbs and Irregular verbs|p.87',
       'lesson-3/vocab-6|Vocabulary: Adverbs|p.87',
-      'lesson-3/vocab-7|Vocabulary: Adjectives and Expressions|p.87'
+      'lesson-3/vocab-7|Vocabulary: Adjectives and Expressions|p.87',
+      'lesson-3/kanji-4|Kanji: Verbs and Adjectives|p.87'
     ],
     i = 0,
     j = exercises.length,
