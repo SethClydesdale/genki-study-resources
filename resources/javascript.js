@@ -455,6 +455,9 @@ window.Genki = {
       }
     }
     
+    // add exercise title to the document
+    document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h1 id="page-title" class="center">' + activeLesson[1] + '</h1>');
+    
     // add the "more exercises" buttons to the document
     document.getElementById('quiz-timer').insertAdjacentHTML('afterend', more + '</div>');
     
