@@ -458,7 +458,7 @@ window.Genki = {
     }
     
     // add exercise title to the document
-    document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center">' + activeLesson[1] + '</h2>');
+    document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center">' + (activeLesson ? activeLesson[1] : document.querySelector('TITLE').innerText.replace(/\s\|.*/, '')) + '</h2>');
     
     // add the "more exercises" buttons to the document
     document.getElementById('quiz-timer').insertAdjacentHTML('afterend', more + '</div>');
