@@ -27,6 +27,7 @@ window.Genki = {
   
   // To generate a quiz simply pass an object with the necessary data (see vocab-1/index.html and other quiz files for examples)
   generateQuiz : function (o) {
+    var zone = document.getElementById('quiz-zone');
 
     // create a drag and drop quiz
     if (o.type == 'drag') {
@@ -63,7 +64,7 @@ window.Genki = {
       quiz += '</div>'; // close the answer list
 
       // add the quiz to the document
-      document.getElementById('quiz-zone').innerHTML = quiz;
+      zone.innerHTML = quiz;
 
       // setup drag and drop
       var drake = dragula([document.querySelector('#answer-list')], {
@@ -100,8 +101,7 @@ window.Genki = {
 
     // create a kana drag and drop quiz
     if (o.type == 'kana') {
-      var zone = document.getElementById('quiz-zone'),
-          quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list" class="clear">',
+      var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list" class="clear">',
           answers = '<div id="answer-list">',
           kanaList = [],
           kana = o.quizlet,
@@ -174,8 +174,7 @@ window.Genki = {
 
     // create a multiple choice quiz
     if (o.type == 'multi') {
-      var zone = document.getElementById('quiz-zone'),
-          quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
+      var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
           answers = '<div id="answer-list">',
           option = ['A', 'B', 'C', 'D'], oid = 0, // used for tagging answers as A, B, C..
           isAnswer = false,
@@ -230,6 +229,9 @@ window.Genki = {
 
     Genki.timer = timer;
     Genki.drake = drake;
+    
+    // indicate the exercise has been loaded in
+    document.getElementById('exercise').className += ' content-loaded';
 
     // jump to the quiz info
     Genki.scrollTo(document.getElementById('quiz-info'));
@@ -456,14 +458,14 @@ window.Genki = {
     }
     
     // add exercise title to the document
-    document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h1 id="page-title" class="center">' + activeLesson[1] + '</h1>');
+    document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center">' + activeLesson[1] + '</h2>');
     
     // add the "more exercises" buttons to the document
     document.getElementById('quiz-timer').insertAdjacentHTML('afterend', more + '</div>');
     
     
     // Create the exercise list
-    var list = '<div id="exercise-list"><h2 class="main-title">Exercise List</h2><h3 class="lesson-title" onclick="Genki.toggleList(this);">Pre-Lesson</h3><ul id="lesson-0">',
+    var list = '<nav id="exercise-list"><h3 class="main-title">Exercise List</h3><h4 class="lesson-title" onclick="Genki.toggleList(this);">Pre-Lesson</h4><ul id="lesson-0">',
         lesson = 'lesson-0',
         linkData;
     
@@ -474,7 +476,7 @@ window.Genki = {
       // if the lesson group is different create a new group
       if (!new RegExp(lesson).test(linkData[0])) {
         lesson = linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
-        list += '</ul><h3 class="lesson-title" onclick="Genki.toggleList(this);">' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h3><ul id="' + lesson + '">'
+        list += '</ul><h4 class="lesson-title" onclick="Genki.toggleList(this);">' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">'
       }
       
       // add the exercise link to the group
@@ -482,7 +484,7 @@ window.Genki = {
     }
     
     // add the exercise list to the document
-    document.getElementById('content').insertAdjacentHTML('afterbegin', list + '</ul></div><div id="toggle-exercises" onclick="Genki.toggleExercises();" title="Toggle exercise list"></div>');
+    document.getElementById('content').insertAdjacentHTML('afterbegin', list + '</ul></nav><div id="toggle-exercises" onclick="Genki.toggleExercises();" title="Toggle exercise list"></div>');
     
     if (activeLesson) { // open the current lesson
       Genki.toggleList(document.getElementById(activeLesson[0].replace(/(lesson-\d+)\/.*/, '$1')).previousSibling);
