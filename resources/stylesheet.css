@@ -48,6 +48,35 @@
   }
 }
 
+/* text-selection */
+::selection { color:#FFF; background-color:#F60; }
+::-moz-selection { color:#FFF; background-color:#F60; }
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width:17px;
+  height:17px;
+}
+::-webkit-scrollbar-track { background:#DDD; }
+::-webkit-scrollbar-thumb {
+  background-color:#F60;
+  border:2px solid #DDD;
+}
+
+/* scrollbar buttons */
+::-webkit-scrollbar-button:single-button {
+  background:url(images/arrows.gif) no-repeat 0 0 #F60;
+  height:17px;
+  width:17px;
+}
+::-webkit-scrollbar-button:single-button:vertical:increment { background-position:-17px 0 }
+::-webkit-scrollbar-button:single-button:horizontal:decrement { background-position:-34px 0 }
+::-webkit-scrollbar-button:single-button:horizontal:increment { background-position:-51px 0 }
+
+/* hover / active scrollbar colors */
+::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-button:hover { background-color:#E50; }
+::-webkit-scrollbar-thumb:active, ::-webkit-scrollbar-button:active { background-color:#D40; }
+
 
 /* body styles */
 body {
@@ -319,9 +348,6 @@ footer li:first-child:before { content:""; }
   left:-301px;
   bottom:0;
   width:300px;
-  white-space:nowrap;
-  overflow-y:auto;
-  overflow-x:hidden;
   z-index:10;
 }
 #exercise-list.list-open { left:0; }
@@ -358,6 +384,14 @@ footer li:first-child:before { content:""; }
 #exercise-list.list-open + #toggle-exercises { left:268px; }
 #exercise-list.list-open + #toggle-exercises:after { opacity:0; }
 #exercise-list.list-open + #toggle-exercises:before { opacity:1; }
+
+/* lesson list */
+#lessons-list {
+  overflow-y:auto;
+  overflow-x:hidden;
+  height:95%;
+  height:calc(100% - 32px);
+}
 
 /* titles */
 #exercise-list .main-title {

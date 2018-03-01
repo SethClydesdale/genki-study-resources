@@ -465,7 +465,7 @@ window.Genki = {
     
     
     // Create the exercise list
-    var list = '<nav id="exercise-list"><h3 class="main-title">Exercise List</h3><h4 class="lesson-title" onclick="Genki.toggleList(this);">Pre-Lesson</h4><ul id="lesson-0">',
+    var list = '<nav id="exercise-list"><h3 class="main-title">Exercise List</h3><div id="lessons-list"><h4 class="lesson-title" onclick="Genki.toggleList(this);">Pre-Lesson</h4><ul id="lesson-0">',
         lesson = 'lesson-0',
         linkData;
     
@@ -476,7 +476,7 @@ window.Genki = {
       // if the lesson group is different create a new group
       if (!new RegExp(lesson).test(linkData[0])) {
         lesson = linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
-        list += '</ul><h4 class="lesson-title" onclick="Genki.toggleList(this);">' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">'
+        list += '</ul><h4 class="lesson-title" onclick="Genki.toggleList(this);">' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">';
       }
       
       // add the exercise link to the group
@@ -484,7 +484,7 @@ window.Genki = {
     }
     
     // add the exercise list to the document
-    document.getElementById('content').insertAdjacentHTML('afterbegin', list + '</ul></nav><div id="toggle-exercises" onclick="Genki.toggleExercises();" title="Toggle exercise list"></div>');
+    document.getElementById('content').insertAdjacentHTML('afterbegin', list + '</ul></div></nav><div id="toggle-exercises" onclick="Genki.toggleExercises();" title="Toggle exercise list"></div>');
     
     if (activeLesson) { // open the current lesson
       Genki.toggleList(document.getElementById(activeLesson[0].replace(/(lesson-\d+)\/.*/, '$1')).previousSibling);
