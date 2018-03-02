@@ -427,7 +427,9 @@ window.Genki = {
       'lesson-3/vocab-5|Vocabulary: Ru-verbs and Irregular verbs|p.87',
       'lesson-3/vocab-6|Vocabulary: Adverbs|p.87',
       'lesson-3/vocab-7|Vocabulary: Adjectives and Expressions|p.87',
-      'lesson-3/kanji-4|Kanji: Verbs and Adjectives|p.87'
+      'lesson-3/kanji-4|Kanji: Verbs and Adjectives|p.87',
+      'lesson-3/grammar-1|Practice: Verb Conjugation|p.95; I-A',
+      'lesson-3/grammar-2|Practice: を and で|p.95-96; I-B'
     ],
     i = 0,
     j = exercises.length,
