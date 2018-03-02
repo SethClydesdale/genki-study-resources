@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice: を and で - Lesson 3 | Genki Study Resources</title>
+    <meta name="title" content="Practice: を and で - Lesson 3 | Genki Study Resources">
+    <meta name="twitter:title" content="Practice: を and で - Lesson 3 | Genki Study Resources">
+    <meta property="og:title" content="Practice: を and で - Lesson 3 | Genki Study Resources">
+    <meta name="description" content="A collection of resources for practicing what is taught in the Genki Japanese textbooks.">
+    <meta property="og:description" content="A collection of resources for practicing what is taught in the Genki Japanese textbooks.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="genki, japanese, study, quizzes, exercises" lang="en">
+    <meta name="language" content="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lesson-1/vocab-1">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/stylesheet.min.css">
+    <script src="../../../resources/ga.js"></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../../" id="home-link">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="exercise" class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">Github Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/dragula.min.js"></script>
+    <script src="../../../resources/easytimer.min.js"></script>
+    <script src="../../../resources/javascript.min.js"></script>
+    <script>(function () {
+      var wo = 'Create a sentence with the object/verb: ',
+          de1 = 'Finish the sentence「',
+          de2 = '」by adding the place: ';
+        
+      Genki.generateQuiz({
+        type : 'multi',
+        info : 'Create sentences with the given cues.<br>NOTE: In this exercise you will practice using the particles を and で.',
+
+        quizlet : [
+          // (a) add the appropriate verbs to the following direct objects.
+          {
+            question : wo + '雑誌／読む', // object/verb
+            answers : [
+              'A雑誌を読みます。',
+              '雑誌を読むます。',
+              '読みますを雑誌。'
+            ]
+          },
+
+          {
+            question : wo + '音楽／聞く',
+            answers : [
+              'A音楽を聞きます。',
+              '音楽を聞くます。',
+              '聞きますを音楽。'
+            ]
+          },
+
+          {
+            question : wo + 'テニス／する',
+            answers : [
+              'Aテニスをします。',
+              'テニスをするます。',
+              'しますをテニス。'
+            ]
+          },
+
+          {
+            question : wo + 'ハンバーガー／食べる',
+            answers : [
+              'Aハンバーガーを食べます。',
+              'ハンバーガーを食べるます。',
+              '食べますをハンバーガー。'
+            ]
+          },
+
+          {
+            question : wo + 'コーヒー／飲む',
+            answers : [
+              'Aコーヒーを飲みます。',
+              'コーヒーを飲むます。',
+              '飲みますをコーヒー。'
+            ]
+          },
+
+          {
+            question : wo + 'テレビ／見る',
+            answers : [
+              'Aテレビを見ます。',
+              'テレビを見るます。',
+              '見ますをテレビ。'
+            ]
+          },
+
+          {
+            question : wo + '日本語／話す',
+            answers : [
+              'A日本語を話します。',
+              '日本語を話すます。',
+              '話しますを日本語。'
+            ]
+          },
+
+
+          // (b) add the place to the above sentences.
+          {
+            question : de1 + '雑誌を読みます' + de2 + '図書館（としょかん）',
+            answers : [
+              'A図書館で雑誌を読みます。',
+              '雑誌を読みますで図書館。',
+              '図書館雑誌を読みます。'
+            ]
+          },
+
+          {
+            question : de1 + '音楽を聞きます' + de2 + 'うち',
+            answers : [
+              'Aうちで音楽を聞きます。',
+              '音楽を聞きますでうち。',
+              'うち音楽を聞きます。'
+            ]
+          },
+
+          {
+            question : de1 + 'テニスをします' + de2 + '学校',
+            answers : [
+              'A学校でテニスをします。',
+              'テニスをしますで学校。',
+              '学校テニスをします。'
+            ]
+          },
+
+          {
+            question : de1 + 'ハンバーガーを食べます' + de2 + 'マクドナルド（McDonald\'s）',
+            answers : [
+              'Aマクドナルドでハンバーガーを食べます。',
+              'ハンバーガーを食べますでマクドナルド。',
+              'マクドナルドハンバーガーを食べます。'
+            ]
+          },
+
+          {
+            question : de1 + 'コーヒーを飲みます' + de2 + '喫茶店（きっさてん）',
+            answers : [
+              'A喫茶店でコーヒーを飲みます。',
+              'コーヒーを飲みますで喫茶店。',
+              '喫茶店コーヒーを飲みます。'
+            ]
+          },
+
+          {
+            question : de1 + 'テレビを見ます' + de2 + 'うち',
+            answers : [
+              'Aうちでテレビを見ます。',
+              'テレビを見ますでうち。',
+              'うちテレビを見ます。'
+            ]
+          },
+
+          {
+            question : de1 + '日本語を話します' + de2 + '大学（だいがく）',
+            answers : [
+              'A大学で日本語を話します。',
+              '日本語を話しますで大学。',
+              '大学日本語を話します。'
+            ]
+          }
+        ]
+      });
+    }());</script>
+  </body>
+</html>
