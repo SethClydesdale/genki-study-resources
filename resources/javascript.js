@@ -433,7 +433,9 @@ window.Genki = {
       'lesson-3/vocab-7|Vocabulary: Adjectives and Expressions|p.87',
       'lesson-3/kanji-4|Kanji: Verbs and Adjectives|p.87',
       'lesson-3/grammar-1|Practice: Verb Conjugation|p.95; I-A',
-      'lesson-3/grammar-2|Practice: を and で|p.95-96; I-B'
+      'lesson-3/grammar-2|Practice: を and で|p.95-96; I-B',
+      'lesson-3/grammar-3|Practice: Indicating the Goal of Movement|p.96; I-C',
+      'lesson-3/grammar-4|Practice: Numerical Time Expressions|p.98; II-A'
     ],
     i = 0,
     j = exercises.length,
