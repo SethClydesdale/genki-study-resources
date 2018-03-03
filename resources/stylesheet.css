@@ -421,7 +421,7 @@ footer li:first-child:before { content:""; }
   font-family:FontAwesome;
   margin-right:3px;
 }
-#exercise-list .lesson-title[data-open="true"]:before { content:"\f078"; }
+#exercise-list .lesson-title.lesson-open:before { content:"\f078"; }
 
 
 /* list and links */
@@ -432,7 +432,7 @@ footer li:first-child:before { content:""; }
   list-style-type:none;
   display:none;
 }
-#exercise-list .lesson-title[data-open="true"] + ul { display:block; }
+#exercise-list .lesson-title.lesson-open + ul { display:block; }
 
 #exercise-list a {
   white-space:nowrap;

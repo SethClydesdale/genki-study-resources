@@ -2,7 +2,7 @@ window.Genki = {
   problems : 0, // number of problems to solve in the lesson
     solved : 0, // number of problems solved
   mistakes : 0, // number of mistakes made in the lesson
-  score : 0, // the student's score
+     score : 0, // the student's score
   
   // frequently used strings
   lang : {
@@ -79,7 +79,7 @@ window.Genki = {
 
           // if the answer is wrong we'll send the item back to the answer list
           if (el.dataset.answer != target.dataset.text) {
-            document.getElementById('answer-list').append(el);
+            document.getElementById('answer-list').appendChild(el);
 
             // global mistakes are incremented along with mistakes specific to problems
             target.dataset.mistakes = ++target.dataset.mistakes;
@@ -152,7 +152,7 @@ window.Genki = {
 
           // if the answer is wrong we'll send the kana back
           if (el.dataset.answer != target.dataset.text) {
-            document.getElementById('answer-list').append(el);
+            document.getElementById('answer-list').appendChild(el);
 
             // global mistakes are incremented along with mistakes specific to problems
             target.dataset.mistakes = ++target.dataset.mistakes;
@@ -258,21 +258,22 @@ window.Genki = {
       // mark the selected answer for reviews
       answer.className += ' selected-answer';
 
-      // hide the prior question
-      document.getElementById('quiz-q' + Genki.solved++).style.display = 'none';
-
       // increment mistakes if the chosen answer was wrong and add a class to the parent
       if (answer.dataset.answer == 'false') {
         answer.parentNode.parentNode.className += ' wrong-answer';
         ++Genki.mistakes;
       }
 
-      // if there's another question, show it
-      var next = document.getElementById('quiz-q' + Genki.solved);
+      // if there's another question, show it and hide the last one
+      var last = document.getElementById('quiz-q' + Genki.solved++),
+          next = document.getElementById('quiz-q' + Genki.solved);
+      
       if (next) {
-        next.style.display = '';
+        next.style.display = ''; // show the next question
+        last.style.display = 'none'; // hide the prior question
         Genki.incProgressBar();
-      } else {
+        
+      } else { // end the quiz if there's no new question
         Genki.endQuiz(true);
 
         // show all questions and answers
@@ -312,7 +313,7 @@ window.Genki = {
           'Keep studying! ' + Genki.lang[multi ? 'multi_mistakes' : 'mistakes']
         )+
         '<div class="center">'+
-          '<a href="' + window.location.pathname + '" class="button">Try Again</a>'+
+          '<a href="..' + window.location.pathname.replace(/.*?\/lesson-\d+(\/.*)/, '$1') + '" class="button">Try Again</a>'+
           '<a href="' + document.getElementById('home-link').href + '" class="button">Back to Index</a>'+
         '</div>'+
       '</div>'+
@@ -333,12 +334,15 @@ window.Genki = {
   
   // toggles the display of lists
   toggleList : function (el) {
-    el.dataset.open = el.dataset.open == 'true' ? false : true;
+    var closed = 'lesson-title',
+        opened = closed + ' lesson-open';
+    
+    el.className = el.className == opened ? closed : opened;
     
     // close any open lists
     for (var a = el.parentNode.querySelectorAll('.lesson-title'), i = 0, j = a.length; i < j; i++) {
       if (a[i] != el) {
-        a[i].dataset.open = false;
+        a[i].className = closed;
       }
     }
   }
@@ -482,7 +486,7 @@ window.Genki = {
       }
       
       // add the exercise link to the group
-      list += '<li><a href="../../../lessons/' + linkData[0] + (fileSys ? '/index.html' : '/') + '" data-page="' + linkData[2] + '">' + linkData[1] + '</a></li>';
+      list += '<li><a href="../../../lessons/' + linkData[0] + (fileSys ? '/index.html' : '/') + '" data-page="' + linkData[2] + '" title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
     }
     
     // add the exercise list to the document
