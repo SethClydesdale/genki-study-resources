@@ -435,7 +435,10 @@ window.Genki = {
       'lesson-3/grammar-1|Practice: Verb Conjugation|p.95; I-A',
       'lesson-3/grammar-2|Practice: を and で|p.95-96; I-B',
       'lesson-3/grammar-3|Practice: Indicating the Goal of Movement|p.96; I-C',
-      'lesson-3/grammar-4|Practice: Numerical Time Expressions|p.98; II-A'
+      'lesson-3/grammar-4|Practice: Time Expressions|p.98; II-A',
+      'lesson-3/grammar-5|Practice: Time Expressions 2|p.98; II-C',
+      'lesson-3/grammar-6|Practice: Making Suggestions|p.99; III-A',
+      'lesson-3/culture-1|Culture Note: Japanese Houses|p.101'
     ],
     i = 0,
     j = exercises.length,
