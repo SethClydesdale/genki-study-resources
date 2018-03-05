@@ -349,13 +349,16 @@ window.Genki = {
 };
 
 
-// page specific functions
+// # PAGE MODIFICATIONS #
 (function () {
   var fileSys = false; // tells if GSR is being used on the local filesystem
   
-  // append index.html to links if this project is hosted on the local file system
-  // it makes browsing easier offline, since otherwise links will just open the directory and not the file
+  // # OFFLINE VERSION FUNCTIONS #
   if (window.location.protocol == 'file:') {
+    
+    // # LINK MODIFICATIONS #
+    // append index.html to links if this project is hosted on the local file system
+    // it makes browsing easier offline, since otherwise links will just open the directory and not the file
     for (var a = document.querySelectorAll('a[href$="/"]'), i = 0, j = a.length; i < j; i++) {
       if (!/http/.test(a[i].href)) {
         a[i].href += 'index.html';
@@ -367,8 +370,12 @@ window.Genki = {
   
   Genki.local = fileSys; // for use on other pages
 
-  // show prev/next exercise if currently viewing one
+  
+  // # LESSON SPECIFIC FUNCTIONS #
   if (/\/lessons\//.test(window.location.pathname)) {
+    
+    // # PREV/NEXT EXERCISE BUTTONS #
+    // show prev/next exercise if currently viewing one
     var exercises = [ // exercise list
       'lesson-0/hiragana-1|Hiragana|p.24-25',
       'lesson-0/hiragana-2|Hiragana: Diacritical Marks|p.25',
@@ -438,7 +445,18 @@ window.Genki = {
       'lesson-3/grammar-4|Practice: Time Expressions|p.98; II-A',
       'lesson-3/grammar-5|Practice: Time Expressions 2|p.98; II-C',
       'lesson-3/grammar-6|Practice: Making Suggestions|p.99; III-A',
-      'lesson-3/culture-1|Culture Note: Japanese Houses|p.101'
+      'lesson-3/culture-1|Culture Note: Japanese Houses|p.101',
+      'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
+      'lesson-4/kanji-1|Kanji: People and Things|p.104',
+      'lesson-4/vocab-2|Vocabulary: Activities and Places|p.104',
+      'lesson-4/kanji-2|Kanji: Activities and Places|p.104',
+      'lesson-4/vocab-3|Vocabulary: Time|p.105',
+      'lesson-4/kanji-3|Kanji: Time|p.105',
+      'lesson-4/vocab-4|Vocabulary: U-verbs and Ru-verbs|p.105',
+      'lesson-4/vocab-5|Vocabulary: Adverbs and Expressions|p.105',
+      'lesson-4/kanji-4|Kanji: Verbs|p.105',
+      'lesson-4/vocab-6|Vocabulary: Location Words|p.106',
+      'lesson-4/kanji-5|Kanji: Location Words|p.106'
     ],
     i = 0,
     j = exercises.length,
@@ -475,6 +493,7 @@ window.Genki = {
     document.getElementById('quiz-timer').insertAdjacentHTML('afterend', more + '</div>');
     
     
+    // # EXERCISE LIST #
     // Create the exercise list
     var list = '<nav id="exercise-list"><h3 class="main-title">Exercise List</h3><div id="lessons-list"><h4 class="lesson-title" onclick="Genki.toggleList(this);">Pre-Lesson</h4><ul id="lesson-0">',
         lesson = 'lesson-0',
