@@ -92,6 +92,8 @@ body {
   flex-direction:column;
 }
 
+p { font-size:14px; }
+
 a {
   color:#039;
   text-decoration:none;
@@ -216,6 +218,7 @@ a#fork-me:hover {
 .title {
   color:#F60;
   font-size:28px;
+  margin:20px 0;
 }
 
 .title-desc {
@@ -257,9 +260,15 @@ footer ul {
   padding:0;
 }
 
-footer li { display:inline-block; }
-footer li:before { content:"| "; }
-footer li:first-child:before { content:""; }
+footer li { float:left; }
+footer li:before {
+  content:"\f111";
+  font-family:FontAwesome;
+  font-size:6px;
+  margin:0 5px;
+  vertical-align:middle;
+}
+footer li:first-child:before { display:none; }
 
 .footer-left { float:left; }
 .footer-right { float:right; }
