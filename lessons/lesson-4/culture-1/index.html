@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Culture Note: Japanese National Holidays - Lesson 4 | Genki Study Resources</title>
+    <meta name="title" content="Culture Note: Japanese National Holidays - Lesson 4 | Genki Study Resources">
+    <meta name="twitter:title" content="Culture Note: Japanese National Holidays - Lesson 4 | Genki Study Resources">
+    <meta property="og:title" content="Culture Note: Japanese National Holidays - Lesson 4 | Genki Study Resources">
+    <meta name="description" content="A collection of resources for practicing what is taught in the Genki Japanese textbooks.">
+    <meta property="og:description" content="A collection of resources for practicing what is taught in the Genki Japanese textbooks.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="genki, japanese, study, quizzes, exercises" lang="en">
+    <meta name="language" content="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lesson-1/vocab-1">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/stylesheet.min.css">
+    <script src="../../../resources/ga.js"></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../../" id="home-link">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="exercise" class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">Github Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/dragula.min.js"></script>
+    <script src="../../../resources/easytimer.min.js"></script>
+    <script src="../../../resources/javascript.min.js"></script>
+    <script>(function () {
+      var s = 'What holiday is celebrated on ',
+          h = [ // holidays
+            '元日（がんじつ；New Year\'s Day）', // 0
+            '成人の日（せいじんのひ；Coming-of-Age Day）', // 1
+            '建国記念の日（けんこくきねんのひ；National Foundation Day）', // 2
+            '春分の日（しゅんぶんのひ；Vernal Equinox Day）', // 3
+            '昭和の日（しょうわのひ；Showa Day）', // 4
+            '憲法記念日（けんぽうきねんび；Constitution Day）', // 5
+            'みどりの日（Greenery Day）', // 6
+            'こどもの日（Children\'s Day）', // 7
+            '海の日（うみのひ；Marine Day）', // 8
+            '敬老の日（けいろうのひ；Respect-for-the-Aged Day）', // 9
+            '秋分の日（しゅうぶんのひ；Autumnal Equinox）', // 10
+            '体育の日（たいいくのひ；Health and Sports Day）', // 11
+            '文化の日（ぶんかのひ；Culture Day）', // 12
+            '勤労感謝の日（きんろうかんしゃ；Labor Thanksgiving Day）', // 13
+            '天皇誕生日（てんのうたんじょうび；Emperor\'s Birthday）' // 14
+          ];
+        
+      Genki.generateQuiz({
+        type : 'multi',
+        info : Genki.lang.std_multi,
+
+        quizlet : [
+          {
+            question : s + '1月1日？',
+            answers : [
+              'A' + h[0],
+              h[14],
+              h[2]
+            ]
+          },
+
+          {
+            question : s + '1月第2月曜日？',
+            answers : [
+              'A' + h[1],
+              h[9],
+              h[5]
+            ]
+          },
+
+          {
+            question : s + '2月11日？',
+            answers : [
+              'A' + h[2],
+              h[11],
+              h[4]
+            ]
+          },
+
+          {
+            question : s + '3月20日ごろ？',
+            answers : [
+              'A' + h[3],
+              h[10],
+              h[1]
+            ]
+          },
+
+          {
+            question : s + '4月29日？',
+            answers : [
+              'A' + h[4],
+              h[13],
+              h[6]
+            ]
+          },
+
+          {
+            question : s + '5月3日？',
+            answers : [
+              'A' + h[5],
+              h[2],
+              h[7]
+            ]
+          },
+
+          {
+            question : s + '5月4日？',
+            answers : [
+              'A' + h[6],
+              h[8],
+              h[9]
+            ]
+          },
+
+          {
+            question : s + '5月5日？',
+            answers : [
+              'A' + h[7],
+              h[1],
+              h[14]
+            ]
+          },
+
+          {
+            question : s + '7月第3月曜日？',
+            answers : [
+              'A' + h[8],
+              h[2],
+              h[11]
+            ]
+          },
+
+          {
+            question : s + '9月第3月曜日？',
+            answers : [
+              'A' + h[9],
+              h[7],
+              h[4]
+            ]
+          },
+
+          {
+            question : s + '9月23日ごろ？',
+            answers : [
+              'A' + h[10],
+              h[3],
+              h[12]
+            ]
+          },
+
+          {
+            question : s + '10月第2月曜日？',
+            answers : [
+              'A' + h[11],
+              h[6],
+              h[9]
+            ]
+          },
+
+          {
+            question : s + '11月3日？',
+            answers : [
+              'A' + h[12],
+              h[8],
+              h[5]
+            ]
+          },
+
+          {
+            question : s + '11月23日？',
+            answers : [
+              'A' + h[13],
+              h[14],
+              h[1]
+            ]
+          },
+
+          {
+            question : s + '12月23日？',
+            answers : [
+              'A' + h[14],
+              h[4],
+              h[12]
+            ]
+          },
+
+          {
+            question : 'The period around April 29 to May 5 encompasses several holidays and is called _____.',
+            answers : [
+              'Aゴールデンウィーク',
+              'シルバーウィーク',
+              'ブロンズウィーク'
+            ]
+          }
+        ]
+      });
+    }());</script>
+  </body>
+</html>
