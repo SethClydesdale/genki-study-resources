@@ -456,7 +456,8 @@ window.Genki = {
       'lesson-4/vocab-5|Vocabulary: Adverbs and Expressions|p.105',
       'lesson-4/kanji-4|Kanji: Verbs|p.105',
       'lesson-4/vocab-6|Vocabulary: Location Words|p.106',
-      'lesson-4/kanji-5|Kanji: Location Words|p.106'
+      'lesson-4/kanji-5|Kanji: Location Words|p.106',
+      'lesson-4/culture-1|Culture Note: Japanese National Holidays|p.114'
     ],
     i = 0,
     j = exercises.length,
