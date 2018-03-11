@@ -4,6 +4,9 @@ window.Genki = {
   mistakes : 0, // number of mistakes made in the lesson
      score : 0, // the student's score
   
+  // the current exercise path
+  path : '..' + window.location.pathname.replace(/.*?\/lesson-\d+(\/.*)/, '$1'),
+  
   // frequently used strings
   lang : {
     std_drag : 'Read the Japanese on the left and drag the word with the same meaning to it.',
@@ -137,7 +140,6 @@ window.Genki = {
 
       // add the kana list to the document
       zone.innerHTML = quiz + '</div>' + answers + '</div>';
-      zone.className += ' kana-quiz'; // change the quiz styles
 
       // setup drag and drop
       var drake = dragula([document.querySelector('#answer-list')], {
@@ -210,7 +212,6 @@ window.Genki = {
 
       // add the multi-choice quiz to the quiz zone
       zone.innerHTML = quiz + '</div><div id="quiz-progress"><div id="quiz-progress-bar"></div></div>';
-      zone.className += ' multi-quiz'; // change the quiz styles
 
       // begin the quiz
       Genki.progressQuiz('init');
@@ -231,7 +232,7 @@ window.Genki = {
     Genki.drake = drake;
     
     // indicate the exercise has been loaded in
-    document.getElementById('exercise').className += ' content-loaded';
+    document.getElementById('exercise').className += ' content-loaded ' + o.type + '-quiz';
 
     // jump to the quiz info
     Genki.scrollTo(document.getElementById('quiz-info'));
@@ -313,15 +314,42 @@ window.Genki = {
           'Keep studying! ' + Genki.lang[multi ? 'multi_mistakes' : 'mistakes']
         )+
         '<div class="center">'+
-          '<a href="..' + window.location.pathname.replace(/.*?\/lesson-\d+(\/.*)/, '$1') + '" class="button">Try Again</a>'+
+          '<a href="' + Genki.path + '" class="button">Try Again</a>'+
           '<a href="' + document.getElementById('home-link').href + '" class="button">Back to Index</a>'+
         '</div>'+
       '</div>'+
     '</div>';
 
     // this class will indicate the quiz is over so post-test styles can be applied
-    document.getElementById('quiz-zone').className += ' quiz-over';
+    document.getElementById('exercise').className += ' quiz-over';
     Genki.scrollTo(document.getElementById('complete-banner')); // jump to the quiz results
+  },
+  
+  
+  // places draggable items into their correct places
+  // allows the student to review meanings without having to consult their textbook
+  review : function () {
+    // ask for confirmation, just in case the button was clicked by accident
+    if (confirm('Are you sure you want to review? Your current progress will be lost.')) {
+      var a = document.querySelectorAll('[data-answer]'),
+          i = 0,
+          j = a.length;
+
+      for (; i < j; i++) {
+        document.querySelector('[data-text="' + a[i].dataset.answer + '"]').appendChild(a[i]);
+      }
+
+      // stop and hide timer + drag/drop
+      Genki.timer.stop();
+      Genki.drake.destroy();
+      document.getElementById('quiz-timer').style.display = 'none';
+      
+      // show restart button
+      document.getElementById('review-exercise').innerHTML = '<a href="' + Genki.path + '" class="button">Restart</a>';
+      
+      // change the quiz info
+      document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';
+    }
   },
   
   
@@ -466,6 +494,7 @@ window.Genki = {
     i = 0,
     j = exercises.length,
     k, a,
+    timer = document.getElementById('quiz-timer'),
     current = window.location.pathname.replace(/.*?\/lessons\/(.*?\/.*?)\/.*/g, '$1'),
     more = '<div id="more-exercises" class="clear">',
     activeLesson;
@@ -495,7 +524,10 @@ window.Genki = {
     document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center">' + (activeLesson ? activeLesson[1] : document.querySelector('TITLE').innerText.replace(/\s\|.*/, '')) + '</h2>');
     
     // add the "more exercises" buttons to the document
-    document.getElementById('quiz-timer').insertAdjacentHTML('afterend', more + '</div>');
+    timer.insertAdjacentHTML('afterend', more + '</div>');
+    
+    // add review button for drag+drop quizzes
+    timer.insertAdjacentHTML('beforebegin', '<div id="review-exercise" class="center"><button class="button" onclick="Genki.review();">Review</button></div>');
     
     
     // # EXERCISE LIST #

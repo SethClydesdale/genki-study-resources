@@ -103,11 +103,16 @@ a:hover { text-decoration:underline; }
 .button, a.button {
   color:#FFF;
   background:#F60;
+  font-size:13px;
+  font-family:Meiryo, Osaka, Arial, sans-serif;
   text-decoration:none;
+  border:none;
   font-weight:bold;
   display:inline-block;
   padding:6px 12px;
   margin:3px;
+  cursor:pointer;
+  outline:none;
 }
 
 .button:hover, a.button:hover { background:#F50; }
@@ -320,6 +325,13 @@ footer li:first-child:before { display:none; }
   border:1px solid #CCC;
   margin:3px;
   padding:3px;
+}
+
+
+/* review exercise button styles */
+#review-exercise { margin-top:10px; }
+.multi-quiz #review-exercise, .quiz-over #review-exercise {
+  display:none;
 }
 
 
