@@ -489,7 +489,9 @@ window.Genki = {
       'lesson-4/grammar-1|Practice: Ｘがあります|p.116; I-C',
       'lesson-4/grammar-2|Practice: Describing Locations|p.117; II-A & B',
       'lesson-4/grammar-3|Practice: Past Tense of です|p.118; III-A',
-      'lesson-4/grammar-4|Practice: Past Tense of Verbs|p.120; IV-A'
+      'lesson-4/grammar-4|Practice: Past Tense of Verbs|p.120; IV-A',
+      'lesson-4/grammar-5|Practice: Past Tense|p.120; IV-B',
+      'lesson-4/grammar-6|Practice: Past Tense 2|p.121; IV-C & D'
     ],
     i = 0,
     j = exercises.length,
