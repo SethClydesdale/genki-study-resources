@@ -415,6 +415,7 @@ window.Genki = {
       'lesson-0/greetings|Greetings|p.34-35',
       'lesson-0/greetings-practice|Practice: Greetings|p.37',
       'lesson-0/culture-1|Culture Note: Greetings and Bowing|p.37',
+      'lesson-0/workbook-1|Workbook: Greetings|p.11-12',
       'lesson-1/vocab-1|Vocabulary: Part 1|p.40',
       'lesson-1/vocab-2|Vocabulary: Part 2|p.40',
       'lesson-1/vocab-3|Vocabulary: Countries|p.41',
@@ -436,6 +437,11 @@ window.Genki = {
       'lesson-1/time-3|Time: Minutes|p.57',
       'lesson-1/age-1|Age|p.57',
       'lesson-1/vocab-7|Bonus Vocabulary: Words in Genki|p.24-57',
+      'lesson-1/workbook-1|Workbook: Numbers|p.13',
+      'lesson-1/workbook-2|Workbook: Time|p.14; I',
+      'lesson-1/workbook-3|Workbook: Telephone Numbers|p.14; II',
+      'lesson-1/workbook-4|Workbook: NounのNoun|p.15; I',
+      'lesson-1/workbook-5|Workbook: XはYです|p.15; II',
       'lesson-2/vocab-1|Vocabulary: Words that Point|p.60',
       'lesson-2/vocab-2|Vocabulary: Food|p.60',
       'lesson-2/vocab-3|Vocabulary: Things|p.60-61',
@@ -523,7 +529,7 @@ window.Genki = {
     }
     
     // add exercise title to the document
-    document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center">' + (activeLesson ? activeLesson[1] : document.querySelector('TITLE').innerText.replace(/\s\|.*/, '')) + '</h2>');
+    document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center">' + (activeLesson ? ('第' + activeLesson[0].replace(/lesson-(\d+).*/, '$1') + '課 - ' + activeLesson[1]) : document.querySelector('TITLE').innerText.replace(/\s\|.*/, '')) + '</h2>');
     
     // add the "more exercises" buttons to the document
     timer.insertAdjacentHTML('afterend', more + '</div>');
