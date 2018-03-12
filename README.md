@@ -20,6 +20,7 @@ This is currently a work in progress. I will be expanding it as I continue study
 - [Tae Kim's Guide to Learning Japanese](http://www.guidetojapanese.org/learn/)
 - [Imabi](http://www.imabi.net/)
 - [Jisho - Japanese Dictionary](http://jisho.org/)
+- [/r/LearnJapanese](https://www.reddit.com/r/LearnJapanese/wiki/index)
 
 
 ### Made possible thanks to...

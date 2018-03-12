@@ -220,6 +220,22 @@ a#fork-me:hover {
   margin:0 0 25px 0;
 }
 
+#quick-nav {
+  font-size:20px;
+}
+
+.lesson-title {
+  color:#F60;
+  font-size:20px;
+  border-bottom:2px solid #F60;
+  padding-bottom:3px;
+}
+
+.workbook-title {
+  font-size:15px;
+  margin:0;
+}
+
 .title {
   color:#F60;
   font-size:28px;
@@ -237,8 +253,8 @@ a#fork-me:hover {
 
 .section-title {
   color:#F60;
-  border-bottom:2px solid #F60;
   font-size:24px;
+  border-bottom:2px solid #F60;
   margin:0;
   padding-bottom:6px;
 }
@@ -425,6 +441,7 @@ footer li:first-child:before { display:none; }
 }
 
 #exercise-list .lesson-title {
+  color:#333;
   font-size:13px;
   border-bottom:1px solid #CCC;
   margin:0;
