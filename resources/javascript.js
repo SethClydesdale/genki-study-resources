@@ -542,6 +542,7 @@ window.Genki = {
     // Create the exercise list
     var list = '<nav id="exercise-list"><h3 class="main-title">Exercise List</h3><div id="lessons-list"><h4 class="lesson-title" onclick="Genki.toggleList(this);">Pre-Lesson</h4><ul id="lesson-0">',
         lesson = 'lesson-0',
+        workbook = false,
         linkData;
     
     // loop over all the exercises and place them into their respectice lesson group
@@ -552,6 +553,13 @@ window.Genki = {
       if (!new RegExp(lesson).test(linkData[0])) {
         lesson = linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
         list += '</ul><h4 class="lesson-title" onclick="Genki.toggleList(this);">' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">';
+        workbook = false;
+      }
+      
+      // add a header to separate the workbook from the textbook exercises
+      if (!workbook && /workbook-\d+/.test(linkData[0])) {
+        list += '<li><h4 class="workbook-title">Workbook Exercises</h4></li>';
+        workbook = true;
       }
       
       // add the exercise link to the group
