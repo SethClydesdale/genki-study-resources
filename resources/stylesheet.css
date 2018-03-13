@@ -93,6 +93,7 @@ body {
 }
 
 p { font-size:14px; }
+ul { padding-left:40px; }
 
 a {
   color:#039;
@@ -233,6 +234,7 @@ a#fork-me:hover {
 
 .workbook-title {
   font-size:15px;
+  padding-left:20px;
   margin:0;
 }
 
@@ -460,6 +462,11 @@ footer li:first-child:before { display:none; }
   margin-right:3px;
 }
 #exercise-list .lesson-title.lesson-open:before { content:"\f078"; }
+
+#exercise-list .workbook-title {
+  font-size:13px;
+  padding-left:12px;
+}
 
 
 /* list and links */
