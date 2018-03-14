@@ -78,7 +78,7 @@
 ::-webkit-scrollbar-thumb:active, ::-webkit-scrollbar-button:active { background-color:#D40; }
 
 
-/* body styles */
+/* body/general styles */
 body {
   color:#333;
   background:#FFF;
@@ -118,7 +118,10 @@ a:hover { text-decoration:underline; }
 
 .button:hover, a.button:hover { background:#F50; }
 
+/* aesthetic styles */
 .center { text-align:center; }
+
+.ul { text-decoration:underline; }
 
 .t-red { color:#F00; }
 .t-orange { color:#F60; }
