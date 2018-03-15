@@ -68,37 +68,6 @@ window.Genki = {
 
       // add the quiz to the document
       zone.innerHTML = quiz;
-
-      // setup drag and drop
-      var drake = dragula([document.querySelector('#answer-list')], {
-        isContainer : function (el) {
-          return el.classList.contains('quiz-answer-zone');
-        }
-      });
-
-      // check if the answer is correct before dropping the element
-      drake.on('drop', function (el, target, source) {
-        if (target.parentNode.id == 'drop-list'){
-
-          // if the answer is wrong we'll send the item back to the answer list
-          if (el.dataset.answer != target.dataset.text) {
-            document.getElementById('answer-list').appendChild(el);
-
-            // global mistakes are incremented along with mistakes specific to problems
-            target.dataset.mistakes = ++target.dataset.mistakes;
-            ++Genki.mistakes;
-
-          } else {
-            target.className += ' answer-correct';
-
-            // when all problems have been solved..
-            // stop the timer, show the score, and congratulate the student
-            if (++Genki.solved == Genki.problems) {
-              Genki.endQuiz();
-            }
-          }
-        }
-      });
     }
 
 
@@ -140,37 +109,73 @@ window.Genki = {
 
       // add the kana list to the document
       zone.innerHTML = quiz + '</div>' + answers + '</div>';
+    }
+    
+    
+    // create a verb conjugation drag and drop quiz
+    if (o.type == 'verb') {
+      var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list"><div class="quiz-column-title"></div>',
+          dropList = '<div id="drop-list">',
+          answers = [],
+          keysQ = [],
+          keysA,
+          columns = -1, i, j;
 
-      // setup drag and drop
-      var drake = dragula([document.querySelector('#answer-list')], {
-        isContainer : function (el) {
-          return el.classList.contains('quiz-answer-zone');
+      // generate a key list for the quizlet so we can randomly sort questions and answers
+      for (i in o.quizlet) {
+        keysQ.push(i);
+      }
+      keysA = keysQ.slice(0);
+      
+      // generate the column titles
+      dropList += '<div class="quiz-title-row">';
+      while (++columns < o.columns.length) {
+        dropList += '<div class="quiz-column-title">' + o.columns[columns] + '</div>';
+      }
+      dropList += '</div>';
+
+      
+      // generate the questions
+      while (keysQ.length) {
+        columns = -1;
+        i = Math.floor(Math.random() * keysQ.length);
+        quiz += '<div class="quiz-item">' + keysQ[i] + '</div>';
+        
+        // create the answer row and contents
+        dropList += '<div class="quiz-answer-row">';
+        while (++columns < o.columns.length) {
+          dropList += '<div class="quiz-answer-zone" data-text="' + keysQ[i] + '-' + columns + '" data-mistakes="0"></div>';
+          ++Genki.problems;
         }
-      });
+        dropList += '</div>';
+        
+        keysQ.splice(i, 1);
+      }
+      quiz += '</div>' + dropList + '</div>'; // close the question list and add the drop list
 
-      // check if the answer is correct before dropping the element
-      drake.on('drop', function (el, target, source) {
-        if (target.parentNode.className == 'quiz-item-row'){
 
-          // if the answer is wrong we'll send the kana back
-          if (el.dataset.answer != target.dataset.text) {
-            document.getElementById('answer-list').appendChild(el);
-
-            // global mistakes are incremented along with mistakes specific to problems
-            target.dataset.mistakes = ++target.dataset.mistakes;
-            ++Genki.mistakes;
-
-          } else {
-            target.className += ' answer-correct';
-
-            // when all problems have been solved..
-            // stop the timer, show the score, and congratulate the student
-            if (++Genki.solved == Genki.problems) {
-              Genki.endQuiz();
-            }
-          }
+      // generate the answers
+      for (i = 0, j = keysA.length; i < j; i++) {
+        columns = -1;
+        
+        while (++columns < o.columns.length) {
+          answers.push('<div class="quiz-item" data-answer="' + keysA[i] + '-' + columns + '">' + o.quizlet[keysA[i]][columns] + '</div>');
         }
-      });
+      }
+      
+      // randomize the answer list
+      quiz += '<div id="answer-list">';
+      while (answers.length) {
+        i = Math.floor(Math.random() * answers.length);
+        
+        quiz += answers[i];
+        
+        answers.splice(i, 1);
+      }
+      quiz += '</div>'; // close the answer list
+
+      // add the quiz to the document
+      zone.innerHTML = quiz;
     }
 
 
@@ -216,6 +221,43 @@ window.Genki = {
       // begin the quiz
       Genki.progressQuiz('init');
     }
+    
+    
+    // setup drag and drop if needed
+    if (o.type == 'drag' || o.type == 'kana' || o.type == 'verb') {
+      // setup drag and drop
+      var drake = dragula([document.querySelector('#answer-list')], {
+        isContainer : function (el) {
+          return el.classList.contains('quiz-answer-zone');
+        }
+      });
+
+      // check if the answer is correct before dropping the element
+      drake.on('drop', function (el, target, source) {
+        if (target.parentNode.id == 'drop-list' || target.parentNode.className == 'quiz-answer-row'){
+
+          // if the answer is wrong we'll send the item back to the answer list
+          if (el.dataset.answer != target.dataset.text) {
+            document.getElementById('answer-list').appendChild(el);
+
+            // global mistakes are incremented along with mistakes specific to problems
+            target.dataset.mistakes = ++target.dataset.mistakes;
+            ++Genki.mistakes;
+
+          } else {
+            target.className += ' answer-correct';
+
+            // when all problems have been solved..
+            // stop the timer, show the score, and congratulate the student
+            if (++Genki.solved == Genki.problems) {
+              Genki.endQuiz();
+            }
+          }
+        }
+      });
+      
+      Genki.drake = drake;
+    }
 
 
     // setup timer
@@ -229,7 +271,6 @@ window.Genki = {
     });
 
     Genki.timer = timer;
-    Genki.drake = drake;
     
     // indicate the exercise has been loaded in
     document.getElementById('exercise').className += ' content-loaded ' + o.type + '-quiz';
@@ -470,6 +511,7 @@ window.Genki = {
       'lesson-2/workbook-4|Workbook: ここ, そこ, and あそこ・だれの|p.23; I & II',
       'lesson-2/workbook-5|Workbook: Noun も|p.24; I',
       'lesson-2/workbook-6|Workbook: Noun じゃないです|p.24; II',
+      'lesson-2/workbook-7|Workbook: Questions|p.26',
       'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.86',
       'lesson-3/vocab-2|Vocabulary: Food and Drinks|p.86',
       'lesson-3/kanji-1|Kanji: Entertainment and Food|p.86',
@@ -488,6 +530,8 @@ window.Genki = {
       'lesson-3/grammar-5|Practice: Time Expressions 2|p.98; II-C',
       'lesson-3/grammar-6|Practice: Making Suggestions|p.99; III-A',
       'lesson-3/culture-1|Culture Note: Japanese Houses|p.101',
+      'lesson-3/workbook-1|Workbook: Verb Conjugation|p.27',
+      'lesson-3/workbook-1|Workbook: Noun を Verb|p.28',
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
       'lesson-4/kanji-1|Kanji: People and Things|p.104',
       'lesson-4/vocab-2|Vocabulary: Activities and Places|p.104',
