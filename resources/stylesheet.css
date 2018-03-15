@@ -592,6 +592,73 @@ footer li:first-child:before { display:none; }
 .kana-quiz.quiz-over [data-mistakes="0"]:after { display:none; }
 
 
+/* verb conjugation quiz */
+.verb-quiz #answer-list {
+  float:none;
+  clear:both;
+}
+
+.verb-quiz #question-list { width:20%; }
+.verb-quiz #drop-list { width:80%; }
+.verb-quiz #question-list, .verb-quiz #drop-list { margin-bottom:30px; }
+
+.verb-quiz #answer-list .quiz-item { display:inline-block; }
+
+.quiz-column-title {
+  background:#EEE;
+  border:1px solid #CCC;
+  justify-content:center;
+  margin:2px 3px;
+  padding:3px;
+}
+.quiz-column-title:last-child { margin-right:0; }
+
+#question-list .quiz-column-title:after {
+  content:"\A0";
+  display:block;
+}
+
+.verb-quiz #question-list > div { margin:3px 3px 3px 0 }
+.verb-quiz #question-list .quiz-column-title { margin-top:2px; }
+
+.verb-quiz #drop-list > div, .verb-quiz #drop-list > div > div {
+  white-space:nowrap;
+  display:flex;
+  flex:1;
+}
+
+.verb-quiz .quiz-answer-zone .quiz-item {
+  margin:0;
+  padding:0;
+  border:none;
+  background:none;
+}
+
+.verb-quiz .quiz-answer-zone { margin:1px 3px 2px 3px !important; }
+.verb-quiz .quiz-answer-zone:last-child { margin-right:0 !important; }
+.verb-quiz .quiz-answer-zone:not(:empty) {
+  background:#EEE;
+  border:1px solid #CCC;
+  padding:3px;
+  margin:3px;
+}
+
+.verb-quiz.quiz-over [data-mistakes] { border-color:red; }
+.verb-quiz.quiz-over [data-mistakes]:after {
+  content:"x" attr(data-mistakes);
+  font-size:10px;
+  line-height:8px;
+  font-weight:bold;
+  right:auto;
+  top:auto;
+  bottom:3px;
+  right:4px;
+}
+
+.verb-quiz.quiz-over [data-mistakes="0"] { border-color:#CCC; }
+.verb-quiz.quiz-over [data-mistakes="0"]:after { display:none; }
+
+
 /* multi-choice quiz style */
 .multi-quiz #question-list { float:none; }
 .quiz-multi-row { margin:10px 0; }
