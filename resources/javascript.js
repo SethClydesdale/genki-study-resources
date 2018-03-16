@@ -234,7 +234,7 @@ window.Genki = {
 
       // check if the answer is correct before dropping the element
       drake.on('drop', function (el, target, source) {
-        if (target.parentNode.id == 'drop-list' || target.parentNode.className == 'quiz-answer-row'){
+        if (target.dataset.text) { // makes sure the element is a drop zone (data-text == data-answer)
 
           // if the answer is wrong we'll send the item back to the answer list
           if (el.dataset.answer != target.dataset.text) {
