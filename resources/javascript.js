@@ -14,6 +14,7 @@ window.Genki = {
     std_num : 'Drag the Numbers to the matching Kana.',
     std_kanji : 'Drag the Kana to the matching Kanji.',
     std_multi : 'Solve the problems by choosing the correct answers.',
+    std_questions : 'Answer the questions as best as you can.',
     mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong before finding the correct answer. Review these problems before trying again.',
     multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red">red</span>. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.'
   },
@@ -536,6 +537,8 @@ window.Genki = {
       'lesson-3/workbook-4|Workbook: Time Expressions|p.30; I',
       'lesson-3/workbook-5|Workbook: Time References|p.30; II & III',
       'lesson-3/workbook-6|Workbook: Suggestion Using ～ませんか|p.31; I & II',
+      'lesson-3/workbook-7|Workbook: Frequency Adverbs|p.32',
+      'lesson-3/workbook-8|Workbook: Questions|p.35',
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
       'lesson-4/kanji-1|Kanji: People and Things|p.104',
       'lesson-4/vocab-2|Vocabulary: Activities and Places|p.104',
@@ -553,7 +556,8 @@ window.Genki = {
       'lesson-4/grammar-3|Practice: Past Tense of です|p.118; III-A',
       'lesson-4/grammar-4|Practice: Past Tense of Verbs|p.120; IV-A',
       'lesson-4/grammar-5|Practice: Past Tense|p.120; IV-B',
-      'lesson-4/grammar-6|Practice: Past Tense 2|p.121; IV-C & D'
+      'lesson-4/grammar-6|Practice: Past Tense 2|p.121; IV-C & D',
+      'lesson-4/grammar-7|Practice: も|p.122; V-A'
     ],
     i = 0,
     j = exercises.length,
