@@ -3,12 +3,12 @@
 if (window.location.hostname == 'sethclydesdale.github.io') {
   (function () {
     var tid = 'UA-114289226-1',
-        gtag = document.createElement('SCRIPT');
+        ga = document.createElement('SCRIPT');
 
-    gtag.src = 'https://www.googletagmanager.com/gtag/js?id=' + tid;
-    gtag.type = 'text/javascript';
-    gtag.async = true;
-    document.getElementsByTagName('HEAD')[0].appendChild(gtag);
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=' + tid;
+    ga.type = 'text/javascript';
+    ga.async = true;
+    document.getElementsByTagName('HEAD')[0].appendChild(ga);
 
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
