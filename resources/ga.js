@@ -17,5 +17,3 @@ if (window.location.hostname == 'sethclydesdale.github.io') {
     gtag('config', tid);
   }());
 }
-
-
