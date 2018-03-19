@@ -566,7 +566,9 @@ window.Genki = {
       'lesson-4/vocab-9|Bonus Vocabulary: Months|p.127',
       'lesson-4/kanji-6|Bonus Kanji: Months|p.127',
       'lesson-4/vocab-10|Useful Expressions: Time Words|p.127',
-      'lesson-4/kanji-7|Useful Expressions: Time Words Kanji|p.127'
+      'lesson-4/kanji-7|Useful Expressions: Time Words Kanji|p.127',
+      'lesson-4/workbook-1|Workbook: Ｘがあります／います|p.36; I & II',
+      'lesson-4/workbook-2|Workbook: Describing Where Things Are|p.37; I & II'
     ],
     i = 0,
     j = exercises.length,
