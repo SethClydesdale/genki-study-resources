@@ -569,7 +569,10 @@ window.Genki = {
       'lesson-4/kanji-7|Useful Expressions: Time Words Kanji|p.127',
       'lesson-4/workbook-1|Workbook: Ｘがあります／います|p.36; I & II',
       'lesson-4/workbook-2|Workbook: Describing Where Things Are|p.37; I & II',
-      'lesson-4/workbook-3|Workbook: Past Tense (Nouns)|p.38; I & II'
+      'lesson-4/workbook-3|Workbook: Past Tense (Nouns)|p.38; I & II',
+      'lesson-4/workbook-4|Workbook: Verb Conjugation (Past Tense)|p.39',
+      'lesson-4/workbook-5|Workbook: Past Tense (Verbs)|p.40; I & II',
+      'lesson-4/workbook-6|Workbook: も|p.41'
     ],
     i = 0,
     j = exercises.length,
