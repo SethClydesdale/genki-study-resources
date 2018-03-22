@@ -572,7 +572,9 @@ window.Genki = {
       'lesson-4/workbook-3|Workbook: Past Tense (Nouns)|p.38; I & II',
       'lesson-4/workbook-4|Workbook: Verb Conjugation (Past Tense)|p.39',
       'lesson-4/workbook-5|Workbook: Past Tense (Verbs)|p.40; I & II',
-      'lesson-4/workbook-6|Workbook: も|p.41'
+      'lesson-4/workbook-6|Workbook: も|p.41',
+      'lesson-4/workbook-7|Workbook: ～時間・Particles|p.42; I & II',
+      'lesson-4/workbook-8|Workbook: Questions|p.44'
     ],
     i = 0,
     j = exercises.length,
