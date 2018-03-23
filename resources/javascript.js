@@ -574,7 +574,15 @@ window.Genki = {
       'lesson-4/workbook-5|Workbook: Past Tense (Verbs)|p.40; I & II',
       'lesson-4/workbook-6|Workbook: も|p.41',
       'lesson-4/workbook-7|Workbook: ～時間・Particles|p.42; I & II',
-      'lesson-4/workbook-8|Workbook: Questions|p.44'
+      'lesson-4/workbook-8|Workbook: Questions|p.44',
+      'lesson-5/vocab-1|Vocabulary: Nouns|p.130',
+      'lesson-5/kanji-1|Kanji: Nouns|p.130',
+      'lesson-5/vocab-2|Vocabulary: い-adjectives|p.130-131',
+      'lesson-5/kanji-2|Kanji: い-adjectives|p.130-131',
+      'lesson-5/vocab-3|Vocabulary: な-adjectives|p.131',
+      'lesson-5/kanji-3|Kanji: な-adjectives|p.131',
+      'lesson-5/vocab-4|Vocabulary: Verbs and Expressions|p.131',
+      'lesson-5/kanji-4|Kanji: Verbs and Expressions|p.131'
     ],
     i = 0,
     j = exercises.length,
