@@ -21,11 +21,20 @@ window.Genki = {
   
   
   // scroll to the specified element
-  scrollTo : function (el) {
-    window.setTimeout(function () {
+  scrollTo : function (el, noDelay) {
+    var scroll = function () {
       document.body.scrollTop = el.offsetTop;
       document.documentElement.scrollTop = el.offsetTop;
-    }, 100);
+    };
+    
+    // scroll immediately or wait 100ms
+    // the latter is for exercises, where there's a slight delay before content is available
+    if (noDelay) {
+      scroll();
+    } else {
+      window.setTimeout(scroll, 100);
+    }
+    
   },
   
   
