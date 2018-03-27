@@ -15,6 +15,7 @@ window.Genki = {
     std_kanji : 'Drag the Kana to the matching Kanji.',
     std_multi : 'Solve the problems by choosing the correct answers.',
     std_questions : 'Answer the questions as best as you can.',
+    std_culture : 'Answer the questions about Japanese culture as best as you can.',
     mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong before finding the correct answer. Review these problems before trying again.',
     multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red">red</span>. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.'
   },
