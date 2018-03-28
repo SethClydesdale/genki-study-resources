@@ -594,7 +594,8 @@ window.Genki = {
       'lesson-5/vocab-4|Vocabulary: Verbs and Expressions|p.131',
       'lesson-5/kanji-4|Kanji: Verbs and Expressions|p.131',
       'lesson-5/grammar-1|Practice: Affirmative Adjective Conjugation|p.137; I-A',
-      'lesson-5/grammar-2|Practice: Negative Adjective Conjugation|p.137; I-B'
+      'lesson-5/grammar-2|Practice: Negative Adjective Conjugation|p.137; I-B',
+      'lesson-5/grammar-3|Practice: Adjective Conjugation|p.137-138; I-C'
     ],
     i = 0,
     j = exercises.length,
