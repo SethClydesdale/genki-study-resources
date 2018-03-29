@@ -7,7 +7,7 @@ window.Genki = {
   // the current exercise path
   path : '..' + window.location.pathname.replace(/.*?\/lesson-\d+(\/.*)/, '$1'),
   
-  // frequently used strings
+  // frequently used/generic strings
   lang : {
     std_drag : 'Read the Japanese on the left and drag the word with the same meaning to it.',
     std_kana : 'Drag the Kana to the matching Romaji.',
@@ -21,8 +21,15 @@ window.Genki = {
   },
   
   
-  // scroll to the specified element
-  scrollTo : function (el, noDelay) {
+  // scroll to the specified element: Genki.scrollTo('#lesson-3')
+  // scrolling can be delayed by passing a value that evaluates to true (true; 1; '.') to the second param; delay
+  // the second param is mostly for script generated content, i.e. the exercises, since there's a small delay before the content is visible
+  scrollTo : function (el, delay) {
+    // check if el is a selector
+    if (typeof el == 'string') {
+      el = document.querySelector(el);
+    }
+    
     var scroll = function () {
       document.body.scrollTop = el.offsetTop;
       document.documentElement.scrollTop = el.offsetTop;
@@ -30,10 +37,10 @@ window.Genki = {
     
     // scroll immediately or wait 100ms
     // the latter is for exercises, where there's a slight delay before content is available
-    if (noDelay) {
-      scroll();
-    } else {
+    if (delay) {
       window.setTimeout(scroll, 100);
+    } else {
+      scroll();
     }
     
   },
@@ -287,7 +294,7 @@ window.Genki = {
     document.getElementById('exercise').className += ' content-loaded ' + o.type + '-quiz';
 
     // jump to the quiz info
-    Genki.scrollTo(document.getElementById('quiz-info'));
+    Genki.scrollTo('#quiz-info', true);
   },
   
   
@@ -374,7 +381,7 @@ window.Genki = {
 
     // this class will indicate the quiz is over so post-test styles can be applied
     document.getElementById('exercise').className += ' quiz-over';
-    Genki.scrollTo(document.getElementById('complete-banner')); // jump to the quiz results
+    Genki.scrollTo('#complete-banner', true); // jump to the quiz results
   },
   
   
@@ -593,9 +600,12 @@ window.Genki = {
       'lesson-5/kanji-3|Kanji: な-adjectives|p.131',
       'lesson-5/vocab-4|Vocabulary: Verbs and Expressions|p.131',
       'lesson-5/kanji-4|Kanji: Verbs and Expressions|p.131',
-      'lesson-5/grammar-1|Practice: Affirmative Adjective Conjugation|p.137; I-A',
-      'lesson-5/grammar-2|Practice: Negative Adjective Conjugation|p.137; I-B',
-      'lesson-5/grammar-3|Practice: Adjective Conjugation|p.137-138; I-C'
+      'lesson-5/grammar-1|Practice: Present Affirmative Adjectives|p.137; I-A',
+      'lesson-5/grammar-2|Practice: Present Negative Adjectives|p.137; I-B',
+      'lesson-5/grammar-3|Practice: Present Adjectives|p.137-138; I-C',
+      'lesson-5/grammar-4|Practice: Present Adjectives Q&A|p.138; I-D',
+      'lesson-5/grammar-5|Practice: Past Affirmative Adjectives|p.139; II-A',
+      'lesson-5/grammar-6|Practice: Past Negative Adjectives|p.139; II-B',
     ],
     i = 0,
     j = exercises.length,
