@@ -148,6 +148,16 @@ header {
   overflow:hidden;
 }
 
+#home-link:before { /* makes the above background image clickable */
+  content:"";
+  position:absolute;
+  height:100px;
+  width:110px;
+  left:14px;
+  top:50%;
+  margin-top:-50px;
+}
+
 header h1 { font-size:32px; }
 header h1 a { color:#FFF; }
 
