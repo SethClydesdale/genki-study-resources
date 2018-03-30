@@ -794,3 +794,25 @@ footer li:first-child:before { display:none; }
 
 /* DRAGULA CSS */
 .gu-mirror{position:fixed!important;margin:0!important;z-index:9999!important;opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80)}.gu-hide{display:none!important}.gu-unselectable{-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.gu-transit{opacity:.2;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";filter:alpha(opacity=20)}
+
+
+/* RESPONSIVENESS */
+@media (max-width:820px) {
+  header {
+    padding:100px 0px 0px 0px;
+    text-align:center;
+    background-position:50% 00px;
+  }
+
+  header h1 { font-size:24px }
+
+  #home-link:before {
+    content:"";
+    position:absolute;
+    height:100px;
+    width:120px;
+    top:60px;
+    left:50%;
+    margin-left:-60px;
+  }
+}
