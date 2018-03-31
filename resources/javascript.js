@@ -606,6 +606,7 @@ window.Genki = {
       'lesson-5/grammar-4|Practice: Present Adjectives Q&A|p.138; I-D',
       'lesson-5/grammar-5|Practice: Past Affirmative Adjectives|p.139; II-A',
       'lesson-5/grammar-6|Practice: Past Negative Adjectives|p.139; II-B',
+      'lesson-5/grammar-7|Practice: Past Adjectives|p.139; II-C'
     ],
     i = 0,
     j = exercises.length,
