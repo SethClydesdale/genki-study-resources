@@ -608,7 +608,8 @@ window.Genki = {
       'lesson-5/grammar-6|Practice: Past Negative Adjectives|p.139; II-B',
       'lesson-5/grammar-7|Practice: Past Adjectives|p.139; II-C',
       'lesson-5/grammar-8|Practice: Past Adjectives 2|p.140; II-D',
-      'lesson-5/grammar-9|Practice: Modifying Nouns with Adjectives|p.140; III-A'
+      'lesson-5/grammar-9|Practice: Modifying Nouns with Adjectives|p.140; III-A',
+      'lesson-5/grammar-10|Practice: Describing People with Adjectives|p.141; III-B'
     ],
     i = 0,
     j = exercises.length,
