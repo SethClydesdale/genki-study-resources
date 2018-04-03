@@ -142,7 +142,7 @@ a:hover { text-decoration:underline; }
 /* header */
 header {
   color:#FFF;
-  background:url('images/genki.png') no-repeat 10px 0px #F60;
+  background:url('images/genki.png') no-repeat 10px 50% #F60;
   padding:15px 15px 15px 140px;
   position:relative;
   overflow:hidden;

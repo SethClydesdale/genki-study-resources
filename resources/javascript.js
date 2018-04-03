@@ -201,7 +201,7 @@ window.Genki = {
     if (o.type == 'multi') {
       var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
           answers = '<div id="answer-list">',
-          option = ['A', 'B', 'C', 'D'], oid = 0, // used for tagging answers as A, B, C..
+          option = 65, // used for tagging answers as A(65), B(66), C(67)..
           isAnswer = false,
           q = o.quizlet,
           i = 0,
@@ -222,14 +222,14 @@ window.Genki = {
             isAnswer = true;
           }
 
-          quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + option[oid++] + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</button></div>';
+          quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</button></div>';
           isAnswer = false;
 
           q[i].answers.splice(n, 1);
         }
 
         quiz += '</div>'; // ends the question block
-        oid = 0; // resets the option id so the next answers begin with A, B, C..
+        option = 65; // resets the option id so the next answers begin with A, B, C..
         ++Genki.problems;
       }
 
@@ -609,7 +609,8 @@ window.Genki = {
       'lesson-5/grammar-7|Practice: Past Adjectives|p.139; II-C',
       'lesson-5/grammar-8|Practice: Past Adjectives 2|p.140; II-D',
       'lesson-5/grammar-9|Practice: Modifying Nouns with Adjectives|p.140; III-A',
-      'lesson-5/grammar-10|Practice: Describing People with Adjectives|p.141; III-B'
+      'lesson-5/grammar-10|Practice: Describing People with Adjectives|p.141; III-B',
+      'lesson-5/grammar-11|Practice: 好き(な)／きらい(な)|p.141; IV-A'
     ],
     i = 0,
     j = exercises.length,
