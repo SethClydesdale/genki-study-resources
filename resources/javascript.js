@@ -610,7 +610,8 @@ window.Genki = {
       'lesson-5/grammar-8|Practice: Past Adjectives 2|p.140; II-D',
       'lesson-5/grammar-9|Practice: Modifying Nouns with Adjectives|p.140; III-A',
       'lesson-5/grammar-10|Practice: Describing People with Adjectives|p.141; III-B',
-      'lesson-5/grammar-11|Practice: 好き(な)／きらい(な)|p.141; IV-A'
+      'lesson-5/grammar-11|Practice: 好き(な)／きらい(な)|p.141; IV-A',
+      'lesson-5/grammar-12|Practice: 好き(な)／きらい(な) 2|p.141; IV-B'
     ],
     i = 0,
     j = exercises.length,
