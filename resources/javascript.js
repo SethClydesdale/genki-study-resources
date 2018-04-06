@@ -216,10 +216,16 @@ window.Genki = {
         while (q[i].answers.length) {
           n = Math.floor(Math.random() * q[i].answers.length);
 
-          // answers that begin with "A" are the correct answer
-          if (/^A/.test(q[i].answers[n])) {
+          // answers that begin with "A" are the correct answer. 'ATrue';
+          // "!" is for answers that begin with "A", but aren't correct. '!Aomori Nebuta Festival'; lit. ! == NOT(correct)
+          if (/^A|^\!/.test(q[i].answers[n])) {
+            
+            // marks the option as the correct answer if it begins with "A"
+            if (q[i].answers[n].charAt(0) == 'A') {
+              isAnswer = true;
+            }
+            
             q[i].answers[n] = q[i].answers[n].slice(1);
-            isAnswer = true;
           }
 
           quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</button></div>';
@@ -612,7 +618,8 @@ window.Genki = {
       'lesson-5/grammar-10|Practice: Describing People with Adjectives|p.141; III-B',
       'lesson-5/grammar-11|Practice: 好き(な)／きらい(な)|p.141; IV-A',
       'lesson-5/grammar-12|Practice: 好き(な)／きらい(な) 2|p.141; IV-B',
-      'lesson-5/grammar-13|Practice: ～ましょう|p.142; V-A'
+      'lesson-5/grammar-13|Practice: ～ましょう|p.142; V-A',
+      'lesson-5/culture-1|Culture Note: Japanese Festivals|p.144'
     ],
     i = 0,
     j = exercises.length,
