@@ -492,7 +492,7 @@ footer li:first-child:before { display:none; }
 #exercise-list ul {
   border-bottom:1px solid #CCC;
   margin:0;
-  padding:3px 3px 10px 3px;
+  padding:3px 3px 12px 3px;
   list-style-type:none;
   display:none;
 }
@@ -624,6 +624,7 @@ footer li:first-child:before { display:none; }
   background:#EEE;
   border:1px solid #CCC;
   justify-content:center;
+  text-align:center;
   margin:2px 3px;
   padding:3px;
 }
