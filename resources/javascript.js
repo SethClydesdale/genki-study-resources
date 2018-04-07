@@ -619,7 +619,11 @@ window.Genki = {
       'lesson-5/grammar-11|Practice: 好き(な)／きらい(な)|p.141; IV-A',
       'lesson-5/grammar-12|Practice: 好き(な)／きらい(な) 2|p.141; IV-B',
       'lesson-5/grammar-13|Practice: ～ましょう|p.142; V-A',
-      'lesson-5/culture-1|Culture Note: Japanese Festivals|p.144'
+      'lesson-5/culture-1|Culture Note: Japanese Festivals|p.144',
+      'lesson-5/vocab-5|Bonus Vocabulary: At the Post Office|p.145',
+      'lesson-5/kanji-5|Bonus Kanji: At the Post Office|p.145',
+      'lesson-5/vocab-6|Useful Expressions: At the Post Office|p.145',
+      'lesson-5/workbook-1|Workbook: Adjective Conjugation (Present Tense)|p.45'
     ],
     i = 0,
     j = exercises.length,
