@@ -623,7 +623,8 @@ window.Genki = {
       'lesson-5/vocab-5|Bonus Vocabulary: At the Post Office|p.145',
       'lesson-5/kanji-5|Bonus Kanji: At the Post Office|p.145',
       'lesson-5/vocab-6|Useful Expressions: At the Post Office|p.145',
-      'lesson-5/workbook-1|Workbook: Adjective Conjugation (Present Tense)|p.45'
+      'lesson-5/workbook-1|Workbook: Adjective Conjugation (Present Tense)|p.45',
+      'lesson-5/workbook-2|Workbook: Adjectives (Present Tense)|p.46; I & II'
     ],
     i = 0,
     j = exercises.length,
