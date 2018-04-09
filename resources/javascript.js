@@ -624,7 +624,10 @@ window.Genki = {
       'lesson-5/kanji-5|Bonus Kanji: At the Post Office|p.145',
       'lesson-5/vocab-6|Useful Expressions: At the Post Office|p.145',
       'lesson-5/workbook-1|Workbook: Adjective Conjugation (Present Tense)|p.45',
-      'lesson-5/workbook-2|Workbook: Adjectives (Present Tense)|p.46; I & II'
+      'lesson-5/workbook-2|Workbook: Adjectives (Present Tense)|p.46; I & II',
+      'lesson-5/workbook-3|Workbook: Adjective Conjugation (Present and Past Tenses)|p.47',
+      'lesson-5/workbook-4|Workbook: Adjectives (Past Tense)|p.48; I & II',
+      'lesson-5/workbook-5|Workbook: Adjective + Noun|p.49; I & II'
     ],
     i = 0,
     j = exercises.length,
@@ -699,8 +702,12 @@ window.Genki = {
     if (activeLesson) { // open the current lesson
       Genki.toggleList(document.getElementById(activeLesson[0].replace(/(lesson-\d+)\/.*/, '$1')).previousSibling);
 
-      // highlight the active exercise
-      document.querySelector('a[href*="' + activeLesson[0] + '"]').className += ' active-lesson';
+      // highlight the active exercise and scoll to it
+      var active = document.querySelector('a[href*="' + activeLesson[0] + '"]');
+      active.className += ' active-lesson';
+      
+      // jump to the active exercise
+      document.getElementById('lessons-list').scrollTop = active.offsetTop - (active.getBoundingClientRect().height + (window.matchMedia && matchMedia('(pointer:coarse)').matches ? 0 : 6));
     }
   }
   
