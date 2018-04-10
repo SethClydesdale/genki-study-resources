@@ -627,7 +627,9 @@ window.Genki = {
       'lesson-5/workbook-2|Workbook: Adjectives (Present Tense)|p.46; I & II',
       'lesson-5/workbook-3|Workbook: Adjective Conjugation (Present and Past Tenses)|p.47',
       'lesson-5/workbook-4|Workbook: Adjectives (Past Tense)|p.48; I & II',
-      'lesson-5/workbook-5|Workbook: Adjective + Noun|p.49; I & II'
+      'lesson-5/workbook-5|Workbook: Adjective + Noun|p.49; I & II',
+      'lesson-5/workbook-6|Workbook: 好き(な)／きらい(な)|p.50',
+      'lesson-5/workbook-7|Workbook: ～ましょう|p.51; I & II'
     ],
     i = 0,
     j = exercises.length,
