@@ -249,11 +249,12 @@ a#fork-me:hover {
   padding-bottom:3px;
 }
 
-.workbook-title {
-  font-size:15px;
+.sub-lesson-title, .workbook-title {
+  font-size:16px;
   padding-left:20px;
   margin:0;
 }
+.workbook-title { font-size:14px; }
 
 .title {
   color:#F60;
@@ -480,7 +481,7 @@ footer li:first-child:before { display:none; }
 }
 #exercise-list .lesson-title.lesson-open:before { content:"\f078"; }
 
-#exercise-list .workbook-title {
+#exercise-list .sub-lesson-title {
   font-size:13px;
   margin-top:12px;
   padding-left:12px;
@@ -736,6 +737,16 @@ footer li:first-child:before { display:none; }
 .multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"] { border-color:#F60; }
 .multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"]:before { color:#F60; }
 
+/* next buttons for read-only questions */
+.quiz-multi-answer.next-question:before {
+  content:"\f061";
+  font-family:FontAwesome;
+  left:auto;
+  right:6px;
+  margin-top:-9px;
+}
+.hidden-answer { display:none; }
+
 
 /* progress bar */
 #quiz-progress {
@@ -856,7 +867,7 @@ footer li:first-child:before { display:none; }
 
 /* improve clickability of list links for touch screens */
 @media (pointer:coarse) {
-  #exercise-list .lesson-title, #exercise-list .workbook-title, #lessons li a, #exercise-list li a { font-size:14px; }
+  #exercise-list .lesson-title, #exercise-list .sub-lesson-title, #lessons li a, #exercise-list li a { font-size:14px; }
   #lessons li a, #exercise-list li a { padding:6px 0; }
   #exercise-list .lesson-title { padding:6px; }
 }

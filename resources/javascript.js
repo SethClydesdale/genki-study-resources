@@ -3,6 +3,7 @@ window.Genki = {
     solved : 0, // number of problems solved
   mistakes : 0, // number of mistakes made in the lesson
      score : 0, // the student's score
+   exclude : 0, // answers to exclude
   
   // the current exercise path
   path : '..' + window.location.pathname.replace(/.*?\/lesson-\d+(\/.*)/, '$1'),
@@ -210,33 +211,42 @@ window.Genki = {
 
       // create individual blocks for each question and hide them until later
       for (; i < j; i++) {
-        quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + q[i].question + '</div>';
+        quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + (q[i].question ? q[i].question : q[i].text) + '</div>';
 
-        // add answers A-B to the question block
-        while (q[i].answers.length) {
-          n = Math.floor(Math.random() * q[i].answers.length);
+        // ready-only questions contain text only, no answers
+        if (q[i].text) {
+          quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, true);">NEXT</button></div>';
+          ++Genki.exclude; // exclude this block from the overall score
+          
+        } else { // standard question block construction
+          
+          // add answers to the question block
+          while (q[i].answers.length) {
+            n = Math.floor(Math.random() * q[i].answers.length);
 
-          // answers that begin with "A" are the correct answer. 'ATrue';
-          // "!" is for answers that begin with "A", but aren't correct. '!Aomori Nebuta Festival'; lit. ! == NOT(correct)
-          if (/^A|^\!/.test(q[i].answers[n])) {
-            
-            // marks the option as the correct answer if it begins with "A"
-            if (q[i].answers[n].charAt(0) == 'A') {
-              isAnswer = true;
+            // answers that begin with "A" are the correct answer. 'ATrue';
+            // "!" is for answers that begin with "A", but aren't correct. '!Aomori Nebuta Festival'; lit. ! == NOT(correct)
+            if (/^A|^\!/.test(q[i].answers[n])) {
+
+              // marks the option as the correct answer if it begins with "A"
+              if (q[i].answers[n].charAt(0) == 'A') {
+                isAnswer = true;
+              }
+
+              q[i].answers[n] = q[i].answers[n].slice(1);
             }
-            
-            q[i].answers[n] = q[i].answers[n].slice(1);
+
+            quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</button></div>';
+            isAnswer = false;
+
+            q[i].answers.splice(n, 1);
           }
-
-          quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</button></div>';
-          isAnswer = false;
-
-          q[i].answers.splice(n, 1);
+          
         }
 
         quiz += '</div>'; // ends the question block
         option = 65; // resets the option id so the next answers begin with A, B, C..
-        ++Genki.problems;
+        ++Genki.problems; // increment problems number
       }
 
       // add the multi-choice quiz to the quiz zone
@@ -315,7 +325,7 @@ window.Genki = {
   
   
   // show the next question in a multi-choice quiz
-  progressQuiz : function (answer) {
+  progressQuiz : function (answer, exclude) {
     if (answer == 'init') {
       document.getElementById('quiz-q' + Genki.solved).style.display = '';
       Genki.incProgressBar();
@@ -323,6 +333,11 @@ window.Genki = {
     } else {
       // mark the selected answer for reviews
       answer.className += ' selected-answer';
+      
+      // hide NEXT button for read-only questions
+      if (exclude) {
+        answer.parentNode.className += ' hidden-answer';
+      }
 
       // increment mistakes if the chosen answer was wrong and add a class to the parent
       if (answer.dataset.answer == 'false') {
@@ -357,7 +372,10 @@ window.Genki = {
   // ends the quiz
   endQuiz : function (multi) {
     // calculate the total score based on problems solved and mistakes made
-    Genki.score = Math.floor((Genki.solved - Genki.mistakes) * 100 / Genki.problems);
+    var solved = Genki.solved - Genki.exclude,
+        problems = Genki.problems - Genki.exclude;
+    
+    Genki.score = Math.floor((solved - Genki.mistakes) * 100 / problems);
     Genki.timer.stop();
 
     // hide the timer and store it so we can show the completion time in the results
@@ -368,7 +386,7 @@ window.Genki = {
     document.getElementById('quiz-result').innerHTML = 
     '<div id="complete-banner" class="center">Quiz Complete!</div>'+
     '<div id="result-list">'+
-      '<div class="result-row"><span class="result-label">Problems Solved:</span>' + Genki.problems + '</div>'+
+      '<div class="result-row"><span class="result-label">Problems Solved:</span>' + problems + '</div>'+
       '<div class="result-row"><span class="result-label">Answers Wrong:</span>' + Genki.mistakes + '</div>'+
       '<div class="result-row"><span class="result-label">Score:</span>' + Genki.score + '%</div>'+
       '<div class="result-row"><span class="result-label">Completion Time:</span>' + timer.innerHTML + '</div>'+
@@ -469,7 +487,12 @@ window.Genki = {
     
     // # PREV/NEXT EXERCISE BUTTONS #
     // show prev/next exercise if currently viewing one
-    var exercises = [ // exercise list
+    var title = { // title list
+      workbook : 'title|Workbook',
+      literacy : 'title|Reading and Writing'
+    },
+    
+    exercises = [ // exercise list
       'lesson-0/hiragana-1|Hiragana|p.24-25',
       'lesson-0/hiragana-2|Hiragana: Diacritical Marks|p.25',
       'lesson-0/hiragana-3|Hiragana: Combos|p.25-26',
@@ -481,7 +504,9 @@ window.Genki = {
       'lesson-0/greetings|Greetings|p.34-35',
       'lesson-0/greetings-practice|Practice: Greetings|p.37',
       'lesson-0/culture-1|Culture Note: Greetings and Bowing|p.37',
+      title.workbook,
       'lesson-0/workbook-1|Workbook: Greetings|p.11-12',
+      
       'lesson-1/vocab-1|Vocabulary: Part 1|p.40',
       'lesson-1/vocab-2|Vocabulary: Part 2|p.40',
       'lesson-1/vocab-3|Vocabulary: Countries|p.41',
@@ -503,6 +528,7 @@ window.Genki = {
       'lesson-1/time-3|Time: Minutes|p.57',
       'lesson-1/age-1|Age|p.57',
       'lesson-1/vocab-7|Bonus Vocabulary: Words in Genki|p.24-57',
+      title.workbook,
       'lesson-1/workbook-1|Workbook: Numbers|p.13',
       'lesson-1/workbook-2|Workbook: Time|p.14; I',
       'lesson-1/workbook-3|Workbook: Telephone Numbers|p.14; II',
@@ -510,6 +536,14 @@ window.Genki = {
       'lesson-1/workbook-5|Workbook: XはYです|p.15; II',
       'lesson-1/workbook-6|Workbook: Question Sentences|p.16; I & II',
       'lesson-1/workbook-7|Workbook: Questions|p.19',
+      title.literacy,
+      'lesson-1/literacy-1|Hiragana Practice: Identifying Hiragana|p.290; I-A',
+      'lesson-1/literacy-2|Hiragana Practice: Word Match|p.290; I-B',
+      'lesson-1/literacy-3|Hiragana Practice: Diacritical Marks|p.290; I-E',
+      'lesson-1/literacy-4|Hiragana Practice: Combos|p.290; I-F',
+      'lesson-1/literacy-5|Hiragana Practice: Rearrange|p.291; I-H',
+      'lesson-1/literacy-6|Reading Practice|p.292-293; II',
+      
       'lesson-2/vocab-1|Vocabulary: Words that Point|p.60',
       'lesson-2/vocab-2|Vocabulary: Food|p.60',
       'lesson-2/vocab-3|Vocabulary: Things|p.60-61',
@@ -530,6 +564,7 @@ window.Genki = {
       'lesson-2/vocab-6|Bonus Vocabulary: Food|p.79',
       'lesson-2/vocab-7|Bonus Vocabulary: Classroom Objects|p.83',
       'lesson-2/vocab-8|Useful Expressions: In the Classroom|p.83',
+      title.workbook,
       'lesson-2/workbook-1|Workbook: Numbers|p.20; I, II, & III',
       'lesson-2/workbook-2|Workbook: これ, それ, and あれ|p.21; I & II',
       'lesson-2/workbook-3|Workbook: この, その, and あの|p.22',
@@ -537,6 +572,7 @@ window.Genki = {
       'lesson-2/workbook-5|Workbook: Noun も|p.24; I',
       'lesson-2/workbook-6|Workbook: Noun じゃないです|p.24; II',
       'lesson-2/workbook-7|Workbook: Questions|p.26',
+      
       'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.86',
       'lesson-3/vocab-2|Vocabulary: Food and Drinks|p.86',
       'lesson-3/kanji-1|Kanji: Entertainment and Food|p.86',
@@ -555,6 +591,7 @@ window.Genki = {
       'lesson-3/grammar-5|Practice: Time Expressions 2|p.98; II-C',
       'lesson-3/grammar-6|Practice: Making Suggestions|p.99; III-A',
       'lesson-3/culture-1|Culture Note: Japanese Houses|p.101',
+      title.workbook,
       'lesson-3/workbook-1|Workbook: Verb Conjugation|p.27',
       'lesson-3/workbook-2|Workbook: Noun を Verb|p.28',
       'lesson-3/workbook-3|Workbook: Verbs with Places|p.29; I & II',
@@ -563,6 +600,7 @@ window.Genki = {
       'lesson-3/workbook-6|Workbook: Suggestion Using ～ませんか|p.31; I & II',
       'lesson-3/workbook-7|Workbook: Frequency Adverbs|p.32',
       'lesson-3/workbook-8|Workbook: Questions|p.35',
+      
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
       'lesson-4/kanji-1|Kanji: People and Things|p.104',
       'lesson-4/vocab-2|Vocabulary: Activities and Places|p.104',
@@ -590,6 +628,7 @@ window.Genki = {
       'lesson-4/kanji-6|Bonus Kanji: Months|p.127',
       'lesson-4/vocab-10|Useful Expressions: Time Words|p.127',
       'lesson-4/kanji-7|Useful Expressions: Time Words Kanji|p.127',
+      title.workbook,
       'lesson-4/workbook-1|Workbook: Ｘがあります／います|p.36; I & II',
       'lesson-4/workbook-2|Workbook: Describing Where Things Are|p.37; I & II',
       'lesson-4/workbook-3|Workbook: Past Tense (Nouns)|p.38; I & II',
@@ -598,6 +637,7 @@ window.Genki = {
       'lesson-4/workbook-6|Workbook: も|p.41',
       'lesson-4/workbook-7|Workbook: ～時間・Particles|p.42; I & II',
       'lesson-4/workbook-8|Workbook: Questions|p.44',
+      
       'lesson-5/vocab-1|Vocabulary: Nouns|p.130',
       'lesson-5/kanji-1|Kanji: Nouns|p.130',
       'lesson-5/vocab-2|Vocabulary: い-adjectives|p.130-131',
@@ -623,6 +663,7 @@ window.Genki = {
       'lesson-5/vocab-5|Bonus Vocabulary: At the Post Office|p.145',
       'lesson-5/kanji-5|Bonus Kanji: At the Post Office|p.145',
       'lesson-5/vocab-6|Useful Expressions: At the Post Office|p.145',
+      title.workbook,
       'lesson-5/workbook-1|Workbook: Adjective Conjugation (Present Tense)|p.45',
       'lesson-5/workbook-2|Workbook: Adjectives (Present Tense)|p.46; I & II',
       'lesson-5/workbook-3|Workbook: Adjective Conjugation (Present and Past Tenses)|p.47',
@@ -683,20 +724,20 @@ window.Genki = {
       linkData = exercises[i].split('|');
       
       // if the lesson group is different create a new group
-      if (!new RegExp(lesson).test(linkData[0])) {
+      if (linkData[0] != 'title' && !new RegExp(lesson).test(linkData[0])) {
         lesson = linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
         list += '</ul><h4 class="lesson-title" onclick="Genki.toggleList(this);">' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">';
-        workbook = false;
       }
       
       // add a header to separate the workbook from the textbook exercises
-      if (!workbook && /workbook-\d+/.test(linkData[0])) {
-        list += '<li><h4 class="workbook-title">Workbook Exercises</h4></li>';
-        workbook = true;
+      if (linkData[0] == 'title') {
+        list += '<li><h4 class="sub-lesson-title">' + linkData[1] + '</h4></li>';
+        
+      } else {
+        // add the exercise link to the group
+        list += '<li><a href="../../../lessons/' + linkData[0] + (fileSys ? '/index.html' : '/') + '" data-page="' + linkData[2] + '" title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
       }
       
-      // add the exercise link to the group
-      list += '<li><a href="../../../lessons/' + linkData[0] + (fileSys ? '/index.html' : '/') + '" data-page="' + linkData[2] + '" title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
     }
     
     // add the exercise list to the document
