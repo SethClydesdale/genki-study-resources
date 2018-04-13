@@ -766,8 +766,16 @@ window.Genki = {
     while (j --> 0) {
       a = exercises[j == 1 ? i - 1 : i + 1]; // the prev/next exercise; j=1 is prev, j=0 is next
       
-      if (a) { // if there's a prev/next exercise we'll add the link to more
+      // if there's a prev/next exercise we'll add the link to more
+      if (a) {
         a = a.split('|');
+        
+        // correct the next/prev exercise if it was a title
+        if (a[0] == 'title') {
+          a = exercises[j == 1 ? i - 2 : i + 2].split('|');
+        }
+        
+        // create the next/prev link
         more += '<a href="../../../lessons/' + a[0] + (fileSys ? '/index.html' : '/') + '" class="button ' + (j == 1 ? 'prev' : 'next') + '-ex" title="' + (j == 1 ? 'Previous' : 'Next') + ' exercise">' + a[1] + '</a>';
       }
     }
