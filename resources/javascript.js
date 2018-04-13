@@ -49,7 +49,10 @@ window.Genki = {
   
   // To generate a quiz simply pass an object with the necessary data (see vocab-1/index.html and other quiz files for examples)
   generateQuiz : function (o) {
-    var zone = document.getElementById('quiz-zone');
+    var zone = document.getElementById('quiz-zone'), // area where quizzes are inserted
+        
+        // review button for drag and drop quizzes
+        review = '<div id="review-exercise" class="center clearfix"><button class="button" onclick="Genki.review();">Review</button></div>'; 
 
     // create a drag and drop quiz
     if (o.type == 'drag') {
@@ -86,12 +89,12 @@ window.Genki = {
       quiz += '</div>'; // close the answer list
 
       // add the quiz to the document
-      zone.innerHTML = quiz;
+      zone.innerHTML = quiz + review;
     }
 
 
     // create a kana drag and drop quiz
-    if (o.type == 'kana') {
+    else if (o.type == 'kana') {
       var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list" class="clear">',
           answers = '<div id="answer-list">',
           kanaList = [],
@@ -127,12 +130,12 @@ window.Genki = {
       }
 
       // add the kana list to the document
-      zone.innerHTML = quiz + '</div>' + answers + '</div>';
+      zone.innerHTML = quiz + '</div>' + answers + '</div>' + review;
     }
     
     
     // create a verb conjugation drag and drop quiz
-    if (o.type == 'verb') {
+    else if (o.type == 'verb') {
       var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list"><div class="quiz-column-title"></div>',
           dropList = '<div id="drop-list">',
           answers = [],
@@ -194,12 +197,36 @@ window.Genki = {
       quiz += '</div>'; // close the answer list
 
       // add the quiz to the document
-      zone.innerHTML = quiz;
+      zone.innerHTML = quiz + review;
+    }
+    
+    
+    // create a writing practice exercise
+    else if (o.type == 'writing') {
+      var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
+          columns = o.columns, i;
+      
+      for (i in o.quizlet) {
+        // create a new row
+        quiz += '<div class="quiz-answer-row"><div class="quiz-item" data-helper="' + o.quizlet[i] + '">' + i + '</div>';
+        
+        // insert the writing zones
+        while (columns --> 0) {
+          quiz += '<div class="writing-zone"><input class="writing-zone-input" type="text" data-answer="' + i + '" data-mistakes="0" tabindex="0"></div>';
+          ++Genki.problems;
+        }
+        
+        quiz += '</div>'; // close the row
+        columns = o.columns; // reset column value for next iteration
+      }
+
+      // add the quiz to the document
+      zone.innerHTML = quiz + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.checkAnswers();">Check Answers</button></div>';
     }
 
 
     // create a multiple choice quiz
-    if (o.type == 'multi') {
+    else if (o.type == 'multi') {
       var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
           answers = '<div id="answer-list">',
           option = 65, // used for tagging answers as A(65), B(66), C(67)..
@@ -409,6 +436,40 @@ window.Genki = {
   },
   
   
+  // check the answers for writing exercises
+  checkAnswers : function () {
+    // ask for confirmation, just in case the button was clicked by accident
+    if (confirm('Checking your answers will end the quiz. Do you want to continue?')) {
+      
+      // hide check answers button
+      document.getElementById('check-answers').style.display = 'none';
+
+      // loop over the inputs and check to see if the answers are correct
+      var input = document.querySelectorAll('.writing-zone-input'),
+          i = 0, j = input.length;
+
+      for (; i < j; i++) {
+        
+        // increment mistakes if the answer is incorrect
+        if (input[i].value != input[i].dataset.answer) {
+          input[i].dataset.mistakes = ++input[i].dataset.mistakes;
+          ++Genki.mistakes;
+        }
+        
+        // add classname to correct answers
+        else {
+          input[i].parentNode.className += ' answer-correct';  
+        }
+        
+        // increment problems solved
+        ++Genki.solved;
+      }
+      
+      Genki.endQuiz(); // show quiz results
+    }
+  },
+  
+  
   // places draggable items into their correct places
   // allows the student to review meanings without having to consult their textbook
   review : function () {
@@ -493,6 +554,8 @@ window.Genki = {
     },
     
     exercises = [ // exercise list
+      
+      // Pre-Lesson
       'lesson-0/hiragana-1|Hiragana|p.24-25',
       'lesson-0/hiragana-2|Hiragana: Diacritical Marks|p.25',
       'lesson-0/hiragana-3|Hiragana: Combos|p.25-26',
@@ -507,6 +570,7 @@ window.Genki = {
       title.workbook,
       'lesson-0/workbook-1|Workbook: Greetings|p.11-12',
       
+      // Lesson 1
       'lesson-1/vocab-1|Vocabulary: Part 1|p.40',
       'lesson-1/vocab-2|Vocabulary: Part 2|p.40',
       'lesson-1/vocab-3|Vocabulary: Countries|p.41',
@@ -543,7 +607,10 @@ window.Genki = {
       'lesson-1/literacy-4|Hiragana Practice: Combos|p.290; I-F',
       'lesson-1/literacy-5|Hiragana Practice: Rearrange|p.291; I-H',
       'lesson-1/literacy-6|Reading Practice|p.292-293; II',
+      title.workbook,
+      'lesson-1/workbook-8|Workbook: Hiragana Writing Practice (あ-こ)|p.117; I',
       
+      // Lesson 2
       'lesson-2/vocab-1|Vocabulary: Words that Point|p.60',
       'lesson-2/vocab-2|Vocabulary: Food|p.60',
       'lesson-2/vocab-3|Vocabulary: Things|p.60-61',
@@ -573,6 +640,7 @@ window.Genki = {
       'lesson-2/workbook-6|Workbook: Noun じゃないです|p.24; II',
       'lesson-2/workbook-7|Workbook: Questions|p.26',
       
+      // Lesson 3
       'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.86',
       'lesson-3/vocab-2|Vocabulary: Food and Drinks|p.86',
       'lesson-3/kanji-1|Kanji: Entertainment and Food|p.86',
@@ -601,6 +669,7 @@ window.Genki = {
       'lesson-3/workbook-7|Workbook: Frequency Adverbs|p.32',
       'lesson-3/workbook-8|Workbook: Questions|p.35',
       
+      // Lesson 4
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
       'lesson-4/kanji-1|Kanji: People and Things|p.104',
       'lesson-4/vocab-2|Vocabulary: Activities and Places|p.104',
@@ -638,6 +707,7 @@ window.Genki = {
       'lesson-4/workbook-7|Workbook: ～時間・Particles|p.42; I & II',
       'lesson-4/workbook-8|Workbook: Questions|p.44',
       
+      // Lesson 5
       'lesson-5/vocab-1|Vocabulary: Nouns|p.130',
       'lesson-5/kanji-1|Kanji: Nouns|p.130',
       'lesson-5/vocab-2|Vocabulary: い-adjectives|p.130-131',
@@ -707,9 +777,6 @@ window.Genki = {
     
     // add the "more exercises" buttons to the document
     timer.insertAdjacentHTML('afterend', more + '</div>');
-    
-    // add review button for drag+drop quizzes
-    timer.insertAdjacentHTML('beforebegin', '<div id="review-exercise" class="center"><button class="button" onclick="Genki.review();">Review</button></div>');
     
     
     // # EXERCISE LIST #
