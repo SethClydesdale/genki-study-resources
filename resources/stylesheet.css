@@ -121,6 +121,7 @@ a:hover { text-decoration:underline; }
 .t-red { color:#F00; }
 .t-orange { color:#F60; }
 
+.clearfix { clear:both; }
 .clear:after {
   content:"";
   display:table;
@@ -366,9 +367,7 @@ footer li:first-child:before { display:none; }
 
 /* review exercise button styles */
 #review-exercise { margin-top:10px; }
-.multi-quiz #review-exercise, .quiz-over #review-exercise {
-  display:none;
-}
+.quiz-over #review-exercise { display:none; }
 
 
 /* more exercises style */
@@ -674,6 +673,80 @@ footer li:first-child:before { display:none; }
 
 .verb-quiz.quiz-over [data-mistakes="0"] { border-color:#CCC; }
 .verb-quiz.quiz-over [data-mistakes="0"]:after { display:none; }
+
+
+/* writing quiz */
+.writing-quiz #question-list { float:none; }
+
+.writing-quiz .quiz-answer-row {
+  white-space:nowrap;
+  display:flex;
+  flex:1;
+  margin:10px 3px;
+}
+
+.writing-quiz .quiz-item {
+  position:relative;
+  pointer-events:none; /* prevent text copying; we want the student to type the kana */
+}
+
+.writing-quiz .quiz-item, .writing-zone {
+  width:10%;
+  text-align:center;
+}
+
+.writing-zone {
+  background:#EEE;
+  margin:3px;
+  min-width:25px;
+}
+
+.writing-zone-input {
+  font-size:13px;
+  font-family:Meiryo, Osaka, Arial, sans-serif;
+  text-align:center;
+  border:1px solid #CCC;
+  box-sizing:border-box;
+  width:100%;
+  padding:3px 0;
+  outline:none;
+}
+.writing-zone-input:hover { border-color:#999; }
+.writing-zone-input:focus { border-color:#F60; }
+
+/* mark incorrect answer */
+.writing-quiz.quiz-over .writing-zone-input { pointer-events:none; }
+.writing-quiz.quiz-over [data-mistakes] { border-color:#F00; }
+
+/* mark correct answers */
+.writing-quiz.quiz-over [data-mistakes="0"] { border-color:#CCC; }
+
+.writing-zone.answer-correct { position:relative; }
+.writing-zone.answer-correct:after {
+  content:"\f005";
+  font-family:FontAwesome;
+  color:#F60;
+  position:absolute;
+  right:-4px;
+  top:-4px;
+}
+
+
+/* helper text, similar to furigana */
+.writing-quiz .quiz-item:before {
+  content:attr(data-helper);
+  font-size:11px;
+  line-height:13px;
+  color:#666;
+  background:#CCC;
+  position:absolute;
+  left:-1px;
+  right:-1px;
+  bottom:-13px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
 
 
 /* multi-choice quiz style */
