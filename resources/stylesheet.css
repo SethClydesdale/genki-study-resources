@@ -87,6 +87,10 @@ body {
   flex-direction:column;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  position:relative;
+}
+
 p { font-size:14px; }
 ul { padding-left:40px; }
 
@@ -196,6 +200,32 @@ a#fork-me:hover {
   padding:30px;
 }
 
+/* section anchors */
+a.anchor {
+  color:#666;
+  font-family:FontAwesome;
+  font-size:16px;
+  font-weight:normal;
+  text-decoration:none;
+  position:absolute;
+  left:-25px;
+  top:50%;
+  padding:5px;
+  margin-top:-13px;
+}
+
+.anchor-icon {
+  display:inline-block;
+  transform:rotate(-45deg);
+  visibility:hidden;
+}
+
+h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .anchor-icon, h5:hover .anchor-icon, h6:hover .anchor-icon {
+  visibility:visible;
+}
+
+
+/* exercise styles */
 #exercise * { visibility:hidden; }
 
 #exercise:before, #exercise:after {
@@ -252,8 +282,7 @@ a#fork-me:hover {
 
 .sub-lesson-title, .workbook-title {
   font-size:16px;
-  padding-left:20px;
-  margin:0;
+  margin:0 0 0 20px;
 }
 .workbook-title { font-size:14px; }
 
@@ -482,8 +511,7 @@ footer li:first-child:before { display:none; }
 
 #exercise-list .sub-lesson-title {
   font-size:13px;
-  margin-top:12px;
-  padding-left:12px;
+  margin:12px 0 0 12px;
 }
 
 
@@ -893,6 +921,18 @@ footer li:first-child:before { display:none; }
   /* add a bit of padding to other elements, specifically for the index and other such pages */
   p, h2, h3, h4 {
     padding:0 6px;
+  }
+  
+  /* adjust anchor position */
+  a.anchor {
+    position:static;
+    padding:0 5px 0 0;
+  }
+  
+  .sub-lesson-title a.anchor, .workbook-title a.anchor {
+    position:absolute;
+    padding:5px;
+    left:-20px;
   }
 
   /* remove margin in kana columns to reduce wrapping */

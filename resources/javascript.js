@@ -543,6 +543,14 @@ window.Genki = {
   Genki.local = fileSys; // for use on other pages
 
   
+  // # SECTION ANCHORS #
+  for (var h = document.querySelectorAll('#content h1, #content h2, #content h3, #content h4, #content h5, #content h6'), i = 0, j = h.length; i < j; i++) {
+    if (h[i].id) {
+      h[i].insertAdjacentHTML('afterbegin', '<a href="#' + h[i].id + '" class="anchor"><span class="anchor-icon">&#xf0c1;</span></a>');
+    }
+  }
+  
+  
   // # LESSON SPECIFIC FUNCTIONS #
   if (/\/lessons\//.test(window.location.pathname)) {
     
