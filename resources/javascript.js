@@ -203,16 +203,19 @@ window.Genki = {
     
     // create a writing practice exercise
     else if (o.type == 'writing') {
-      var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
-          columns = o.columns, i;
+      var quiz = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + (Genki.local ? 'index.html' : '') + '">clicking here</a>.</div><div id="question-list">',
+          columns = o.columns,
+          width = 'style="width:' + (100 / (columns + 1)) + '%;"',
+          i, j;
       
       for (i in o.quizlet) {
         // create a new row
-        quiz += '<div class="quiz-answer-row"><div class="quiz-item" data-helper="' + o.quizlet[i] + '">' + i + '</div>';
+        quiz += '<div class="quiz-answer-row"><div class="quiz-item" data-helper="' + o.quizlet[i] + '" ' + width + '>' + i + '</div>';
+        j = 0;
         
         // insert the writing zones
         while (columns --> 0) {
-          quiz += '<div class="writing-zone"><input class="writing-zone-input" type="text" data-answer="' + i + '" data-mistakes="0" tabindex="0"></div>';
+          quiz += '<div class="writing-zone" ' + width + '><input class="writing-zone-input" type="text" ' + (j++ < 3 ? 'placeholder="' + i + '"' : '') + ' data-answer="' + i + '" data-mistakes="0" tabindex="0"></div>';
           ++Genki.problems;
         }
         
@@ -616,7 +619,16 @@ window.Genki = {
       'lesson-1/literacy-5|Hiragana Practice: Rearrange|p.291; I-H',
       'lesson-1/literacy-6|Reading Practice|p.292-293; II',
       title.workbook,
-      'lesson-1/workbook-8|Workbook: Hiragana Writing Practice (あ-こ)|p.117; I',
+      'lesson-1/literacy-wb-1|Workbook: Hiragana Writing Practice (あ-こ)|p.117; I',
+      'lesson-1/literacy-wb-2|Workbook: Spelling Practice (あ-こ)|p.117; II & III',
+      'lesson-1/literacy-wb-3|Workbook: Hiragana Writing Practice (さ-と)|p.118; I',
+      'lesson-1/literacy-wb-4|Workbook: Spelling Practice (さ-と)|p.118; II & III',
+      'lesson-1/literacy-wb-5|Workbook: Hiragana Writing Practice (な-ほ)|p.119; I',
+      'lesson-1/literacy-wb-6|Workbook: Spelling Practice (な-ほ)|p.119; II & III',
+      'lesson-1/literacy-wb-7|Workbook: Hiragana Writing Practice (ま-よ)|p.120; I',
+      'lesson-1/literacy-wb-8|Workbook: Spelling Practice (ま-よ)|p.120; II & III',
+      'lesson-1/literacy-wb-9|Workbook: Hiragana Writing Practice (ら-ん)|p.121; I',
+      'lesson-1/literacy-wb-10|Workbook: Spelling Practice (ら-ん)|p.121; II & III',
       
       // Lesson 2
       'lesson-2/vocab-1|Vocabulary: Words that Point|p.60',
