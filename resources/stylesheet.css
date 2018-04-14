@@ -226,7 +226,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 
 
 /* exercise styles */
-#exercise * { visibility:hidden; }
+#exercise > * { visibility:hidden; }
 
 #exercise:before, #exercise:after {
   color:#F60;
@@ -256,7 +256,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   animation:fa-spin 2s infinite linear
 }
 
-#exercise.content-loaded * { visibility:visible; }
+#exercise.content-loaded > * { visibility:visible; }
 #exercise.content-loaded:before, #exercise.content-loaded:after {
   content:"";
   display:none;
@@ -718,10 +718,7 @@ footer li:first-child:before { display:none; }
   pointer-events:none; /* prevent text copying; we want the student to type the kana */
 }
 
-.writing-quiz .quiz-item, .writing-zone {
-  width:10%;
-  text-align:center;
-}
+.writing-quiz .quiz-item, .writing-zone { text-align:center; }
 
 .writing-zone {
   background:#EEE;
@@ -733,14 +730,17 @@ footer li:first-child:before { display:none; }
   font-size:13px;
   font-family:Meiryo, Osaka, Arial, sans-serif;
   text-align:center;
+  background:#FFF;
   border:1px solid #CCC;
   box-sizing:border-box;
   width:100%;
   padding:3px 0;
   outline:none;
 }
+.writing-zone-input::placeholder { color:#BBB; }
 .writing-zone-input:hover { border-color:#999; }
 .writing-zone-input:focus { border-color:#F60; }
+
 
 /* mark incorrect answer */
 .writing-quiz.quiz-over .writing-zone-input { pointer-events:none; }
