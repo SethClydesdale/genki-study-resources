@@ -544,7 +544,7 @@ window.Genki = {
 
   
   // # SECTION ANCHORS #
-  for (var h = document.querySelectorAll('#content h1, #content h2, #content h3, #content h4, #content h5, #content h6'), i = 0, j = h.length; i < j; i++) {
+  for (var h = document.getElementById('content').querySelectorAll('h1, h2, h3, h4, h5, h6'), i = 0, j = h.length; i < j; i++) {
     if (h[i].id) {
       h[i].insertAdjacentHTML('afterbegin', '<a href="#' + h[i].id + '" class="anchor"><span class="anchor-icon">&#xf0c1;</span></a>');
     }
