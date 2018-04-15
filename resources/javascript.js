@@ -561,7 +561,8 @@ window.Genki = {
     // show prev/next exercise if currently viewing one
     var title = { // title list
       workbook : 'title|Workbook',
-      literacy : 'title|Reading and Writing'
+      literacy : 'title|Reading and Writing',
+      literacyWB : 'title|Workbook: Reading and Writing'
     },
     
     exercises = [ // exercise list
@@ -618,7 +619,7 @@ window.Genki = {
       'lesson-1/literacy-4|Hiragana Practice: Combos|p.290; I-F',
       'lesson-1/literacy-5|Hiragana Practice: Rearrange|p.291; I-H',
       'lesson-1/literacy-6|Reading Practice|p.292-293; II',
-      title.workbook,
+      title.literacyWB,
       'lesson-1/literacy-wb-1|Workbook: Hiragana Writing Practice (あ-こ)|p.117; I',
       'lesson-1/literacy-wb-2|Workbook: Spelling Practice (あ-こ)|p.117; II & III',
       'lesson-1/literacy-wb-3|Workbook: Hiragana Writing Practice (さ-と)|p.118; I',
