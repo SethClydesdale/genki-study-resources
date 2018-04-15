@@ -630,6 +630,10 @@ window.Genki = {
       'lesson-1/literacy-wb-8|Workbook: Spelling Practice (ま-よ)|p.120; II & III',
       'lesson-1/literacy-wb-9|Workbook: Hiragana Writing Practice (ら-ん)|p.121; I',
       'lesson-1/literacy-wb-10|Workbook: Spelling Practice (ら-ん)|p.121; II & III',
+      'lesson-1/literacy-wb-11|Workbook: Diacritical Marks|p.122; I & II',
+      'lesson-1/literacy-wb-12|Workbook: Small や, ゆ, よ|p.122; III & IV',
+      'lesson-1/literacy-wb-13|Workbook: Double Consonants|p.123; I & II',
+      'lesson-1/literacy-wb-14|Workbook: Long Vowels|p.123; III & IV',
       
       // Lesson 2
       'lesson-2/vocab-1|Vocabulary: Words that Point|p.60',
