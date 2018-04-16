@@ -626,7 +626,7 @@ window.Genki = {
       'lesson-1/literacy-3|Hiragana Practice: Diacritical Marks|p.290; I-E',
       'lesson-1/literacy-4|Hiragana Practice: Combos|p.290; I-F',
       'lesson-1/literacy-5|Hiragana Practice: Rearrange|p.291; I-H',
-      'lesson-1/literacy-6|Reading Practice|p.292-293; II',
+      'lesson-1/literacy-6|Hiragana Reading Practice|p.292-293; II',
       title.literacyWB,
       'lesson-1/literacy-wb-1|Workbook: Hiragana Writing Practice (あ-こ)|p.117; I',
       'lesson-1/literacy-wb-2|Workbook: Spelling Practice (あ-こ)|p.117; II & III',
@@ -672,6 +672,12 @@ window.Genki = {
       'lesson-2/workbook-5|Workbook: Noun も|p.24; I',
       'lesson-2/workbook-6|Workbook: Noun じゃないです|p.24; II',
       'lesson-2/workbook-7|Workbook: Questions|p.26',
+      title.literacy,
+      'lesson-2/literacy-1|Katakana Practice: Identifying Katakana|p.294; I-A',
+      'lesson-2/literacy-2|Katakana Practice: Word Match|p.294; I-B',
+      'lesson-2/literacy-3|Katakana Practice: Countries and Capitals|p.295; I-C',
+      'lesson-2/literacy-4|Katakana Practice: Rearrange|p.296; I-E',
+      'lesson-2/literacy-5|Katakana Reading Practice|p.297; III',
       
       // Lesson 3
       'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.86',
