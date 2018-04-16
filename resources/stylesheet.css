@@ -355,7 +355,7 @@ footer li:first-child:before { display:none; }
   padding:3px;
   min-width:25px;
 }
-#answer-list .quiz-item { cursor:move; }
+#answer-list .quiz-item, .quiz-item.gu-mirror { cursor:move; }
 
 #quiz-info {
   color:#FFF;
