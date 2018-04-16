@@ -10,7 +10,7 @@ window.Genki = {
   
   // frequently used/generic strings
   lang : {
-    std_drag : 'Read the Japanese on the left and drag the word with the same meaning to it.',
+    std_drag : 'Drag the English expression to the Japanese expression that has the same meaning.',
     std_kana : 'Drag the Kana to the matching Romaji.',
     std_num : 'Drag the Numbers to the matching Kana.',
     std_kanji : 'Drag the Kana to the matching Kanji.',
@@ -54,7 +54,17 @@ window.Genki = {
         // review button for drag and drop quizzes
         review = '<div id="review-exercise" class="center clearfix"><button class="button" onclick="Genki.review();">Review</button></div>'; 
 
-    // create a drag and drop quiz
+    /****************************
+    ======# EXERCISE TYPES #=====
+    *****************************
+    ** 1. DRAG AND DROP        **
+    ** 2. KANA DRAG AND DROP   **
+    ** 3. VERB CONJUGATION     **
+    ** 4. WRITING PRACTICE     **
+    ** 5. MULTIPLE CHOICE      **
+    *****************************/
+    
+    // # 1. DRAG AND DROP #
     if (o.type == 'drag') {
       var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
           dropList = '<div id="drop-list">',
@@ -93,7 +103,7 @@ window.Genki = {
     }
 
 
-    // create a kana drag and drop quiz
+    // # 2. KANA DRAG AND DROP #
     else if (o.type == 'kana') {
       var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list" class="clear">',
           answers = '<div id="answer-list">',
@@ -134,7 +144,7 @@ window.Genki = {
     }
     
     
-    // create a verb conjugation drag and drop quiz
+    // # 3. VERB CONJUGATION #
     else if (o.type == 'verb') {
       var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list"><div class="quiz-column-title"></div>',
           dropList = '<div id="drop-list">',
@@ -201,7 +211,7 @@ window.Genki = {
     }
     
     
-    // create a writing practice exercise
+    // # 4. WRITING PRACTICE #
     else if (o.type == 'writing') {
       var quiz = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + (Genki.local ? 'index.html' : '') + '">clicking here</a>.</div><div id="question-list">',
           columns = o.columns,
@@ -228,7 +238,7 @@ window.Genki = {
     }
 
 
-    // create a multiple choice quiz
+    // # 5. MULTIPLE CHOICE #
     else if (o.type == 'multi') {
       var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
           answers = '<div id="answer-list">',
@@ -287,7 +297,7 @@ window.Genki = {
     }
     
     
-    // setup drag and drop if needed
+    // # DRAG AND DROP FUNCTIONALITY #
     if (o.type == 'drag' || o.type == 'kana' || o.type == 'verb') {
       // setup drag and drop
       var drake = dragula([document.querySelector('#answer-list')], {
@@ -324,7 +334,7 @@ window.Genki = {
     }
 
 
-    // setup timer
+    // exercise timer
     var timer = new Timer(),
         clock = document.getElementById('quiz-timer');
 
@@ -557,8 +567,6 @@ window.Genki = {
   // # LESSON SPECIFIC FUNCTIONS #
   if (/\/lessons\//.test(window.location.pathname)) {
     
-    // # PREV/NEXT EXERCISE BUTTONS #
-    // show prev/next exercise if currently viewing one
     var title = { // title list
       workbook : 'title|Workbook',
       literacy : 'title|Reading and Writing',
@@ -786,7 +794,8 @@ window.Genki = {
     // update the active lesson
     activeLesson = exercises[i] ? exercises[i].split('|') : null;
     
-    // create the prev/next exercise links
+    
+    // # PREV/NEXT EXERCISE BUTTONS #
     j = 2;
     while (j --> 0) {
       a = exercises[j == 1 ? i - 1 : i + 1]; // the prev/next exercise; j=1 is prev, j=0 is next
