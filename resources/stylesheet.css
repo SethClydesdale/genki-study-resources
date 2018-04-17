@@ -87,10 +87,6 @@ body {
   flex-direction:column;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  position:relative;
-}
-
 p { font-size:14px; }
 ul { padding-left:40px; }
 
@@ -207,11 +203,11 @@ a.anchor {
   font-size:16px;
   font-weight:normal;
   text-decoration:none;
-  position:absolute;
-  left:-25px;
-  top:50%;
-  padding:5px;
-  margin-top:-13px;
+  text-align:center;
+  vertical-align:middle;
+  display:inline-block;
+  width:25px;
+  margin:0 0 0 -25px;
 }
 
 .anchor-icon {
@@ -222,16 +218,6 @@ a.anchor {
 
 h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .anchor-icon, h5:hover .anchor-icon, h6:hover .anchor-icon {
   visibility:visible;
-}
-
-/* position in centered elements */
-.center a.anchor {
-  position:static;
-  vertical-align:middle;
-  display:inline-block;
-  width:25px;
-  padding:0;
-  margin:0 0 0 -25px;
 }
 
 
@@ -935,14 +921,11 @@ footer li:first-child:before { display:none; }
   
   /* adjust anchor position */
   a.anchor {
-    position:static;
-    padding:0 5px 0 0;
+    margin:0 0 0 -5px;
   }
   
-  .sub-lesson-title a.anchor, .workbook-title a.anchor {
-    position:absolute;
-    padding:5px;
-    left:-20px;
+  .sub-lesson-title a.anchor, .workbook-title a.anchor, .center a.anchor {
+    margin:0 0 0 -25px;
   }
 
   /* remove margin in kana columns to reduce wrapping */
