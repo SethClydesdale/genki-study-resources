@@ -224,6 +224,16 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   visibility:visible;
 }
 
+/* position in centered elements */
+.center a.anchor {
+  position:static;
+  vertical-align:middle;
+  display:inline-block;
+  width:25px;
+  padding:0;
+  margin:0 0 0 -25px;
+}
+
 
 /* exercise styles */
 #exercise > * { visibility:hidden; }
