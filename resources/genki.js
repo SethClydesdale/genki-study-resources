@@ -9,9 +9,6 @@ window.Genki = {
      score : 0, // the student's score
    exclude : 0, // answers to exclude
   
-  // the current exercise path
-  path : '..' + window.location.pathname.replace(/.*?\/lesson-\d+(\/.*)/, '$1'),
-  
   // tells us if Genki is being used on a local file system so we can append index.html to URLs
   local : window.location.protocol == 'file:' ? 'index.html' : '',
   
@@ -657,6 +654,9 @@ window.Genki = {
     'lesson-2/literacy-5|Katakana Reading Practice|p.297; III',
     title.literacyWB,
     'lesson-2/literacy-wb-1|Workbook: Katakana Writing Practice (ア-コ)|p.124; I',
+    'lesson-2/literacy-wb-2|Workbook: Spelling Practice (ア-コ)|p.124; II',
+    'lesson-2/literacy-wb-3|Workbook: Katakana Writing Practice (サ-ト)|p.125; I',
+    'lesson-2/literacy-wb-4|Workbook: Spelling Practice (サ-ト)|p.125; II',
 
     // Lesson 3
     'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.86',
@@ -767,7 +767,7 @@ window.Genki = {
   timer = document.getElementById('quiz-timer'),
   current = window.location.pathname.replace(/.*?\/lessons\/(.*?\/.*?)\/.*/g, '$1'),
   more = '<div id="more-exercises" class="clear">',
-  activeLesson;
+  activeLesson, active;
 
   // find the current exercise
   for (; i < j; i++) {
@@ -841,7 +841,7 @@ window.Genki = {
     Genki.toggleList(document.getElementById(activeLesson[0].replace(/(lesson-\d+)\/.*/, '$1')).previousSibling);
 
     // highlight the active exercise and scoll to it
-    var active = document.querySelector('a[href*="' + activeLesson[0] + '"]');
+    active = document.querySelector('a[href*="' + activeLesson[0] + '"]');
     active.className += ' active-lesson';
 
     // jump to the active exercise
