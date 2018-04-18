@@ -259,12 +259,6 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 }
 
 /* titles */
-#exercise-title {
-  color:#F60;
-  font-size:24px;
-  margin:0 0 25px 0;
-}
-
 #quick-nav {
   font-size:20px;
 }
@@ -308,6 +302,23 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 .sub-title {
   font-size:18px;
   margin:16px 0;
+}
+
+/* title for exercises */
+#exercise-title {
+  color:#F60;
+  font-size:24px;
+  margin:0 0 25px 0;
+}
+
+/* displays volume and page number of exercise */
+#exercise-title:after {
+  content:attr(data-page);
+  color:#666;
+  font-size:12px;
+  font-style:italic;
+  font-weight:normal;
+  display:block;
 }
 
 
