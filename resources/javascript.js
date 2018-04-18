@@ -1,10 +1,9 @@
 // # MODIFICATIONS FOR ALL PAGES #
 (function () {
   
-  // # LINK MODIFICATIONS #
+  // # OFFLINE LINK MODIFICATIONS #
+  // appends index.html to links if this project is hosted on the local file system
   if (window.location.protocol == 'file:') {
-    // append index.html to links if this project is hosted on the local file system
-    // it makes browsing easier offline, since otherwise links will just open the directory and not the file
     for (var a = document.querySelectorAll('a[href$="/"]'), i = 0, j = a.length; i < j; i++) {
       if (!/http/.test(a[i].href)) {
         a[i].href += 'index.html';
