@@ -1,5 +1,6 @@
 // # MODIFICATIONS FOR ALL PAGES #
-(function () {
+(function (window, document) {
+  'use strict';
   
   // # OFFLINE LINK MODIFICATIONS #
   // appends index.html to links if this project is hosted on the local file system
@@ -20,4 +21,4 @@
     }
   }
   
-}());
+}(window, document));
