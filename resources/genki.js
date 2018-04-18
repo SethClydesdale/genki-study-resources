@@ -1,6 +1,5 @@
-// # EXERCISE ONLY FUNCTIONALITY #
-// For pages under /lessons/
-(function (_) {
+// # FUNCTIONALITY FOR EXERCISES #
+(function (window, document) {
   'use strict';
   
   // temp object to apply reusable titles to the exercise list
@@ -36,16 +35,15 @@
       multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red">red</span>. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.'
     },
 
-    // info about the current active exercise
+    // info about the currently active exercise
     active : {
-      exercise : null, // placeholder for one of the exercises below
-      index : 0, // index where activeExercise is located
+      exercise : null, // placeholder for the active exercise's data
+      index : 0, // index where active.exercise is located
       path : window.location.pathname.replace(/.*?\/lessons\/(.*?\/.*?)\/.*/g, '$1'), // current exercise path
     },
     
     // exercise list
     exercises : [
-
       // Pre-Lesson
       'lesson-0/hiragana-1|Hiragana|p.24-25',
       'lesson-0/hiragana-2|Hiragana: Diacritical Marks|p.25',
@@ -154,7 +152,8 @@
       'lesson-2/literacy-wb-2|Workbook: Spelling Practice (ア-コ)|p.124; II',
       'lesson-2/literacy-wb-3|Workbook: Katakana Writing Practice (サ-ト)|p.125; I',
       'lesson-2/literacy-wb-4|Workbook: Spelling Practice (サ-ト)|p.125; II',
-
+      'lesson-2/literacy-wb-5|Workbook: Katakana Writing Practice (ナ-ホ)|p.126; I',
+      'lesson-2/literacy-wb-6|Workbook: Spelling Practice (ナ-ホ)|p.126; II',
 
       // Lesson 3
       'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.86',
@@ -278,11 +277,10 @@
       // scroll immediately or wait 100ms
       // the latter is for exercises, where there's a slight delay before content is available
       if (delay) {
-        window.setTimeout(scroll, 100);
+        setTimeout(scroll, 100);
       } else {
         scroll();
       }
-
     },
 
 
@@ -455,6 +453,7 @@
         var quiz = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '">clicking here</a>.</div><div id="question-list">',
             columns = o.columns,
             width = 'style="width:' + (100 / (columns + 1)) + '%;"',
+            index = 0,
             i, j;
 
         for (i in o.quizlet) {
@@ -464,7 +463,7 @@
 
           // insert the writing zones
           while (columns --> 0) {
-            quiz += '<div class="writing-zone" ' + width + '><input class="writing-zone-input" type="text" ' + (j++ < 3 ? 'placeholder="' + i + '"' : '') + ' data-answer="' + i + '" data-mistakes="0" tabindex="0"></div>';
+            quiz += '<div class="writing-zone" ' + width + '><input class="writing-zone-input" type="text" ' + (j++ < 3 ? 'placeholder="' + i + '"' : '') + ' data-answer="' + i + '" data-mistakes="0" tabindex="0" oninput="Genki.check.value(this);" onfocus="Genki.input.index = ' + index++ + '"></div>';
             ++Genki.stats.problems;
           }
 
@@ -473,7 +472,13 @@
         }
 
         // add the quiz to the document
-        zone.innerHTML = quiz + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.checkAnswers();">Check Answers</button></div>';
+        zone.innerHTML = quiz + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();">Check Answers</button></div>';
+        
+        // input field data
+        Genki.input = {
+          map : document.querySelectorAll('.writing-zone-input'),
+          index : 0
+        };
       }
 
 
@@ -686,41 +691,7 @@
       document.getElementById('exercise').className += ' quiz-over';
       Genki.scrollTo('#complete-banner', true); // jump to the quiz results
     },
-
-
-    // check the answers for writing exercises
-    checkAnswers : function () {
-      // ask for confirmation, just in case the button was clicked by accident
-      if (confirm('Checking your answers will end the quiz. Do you want to continue?')) {
-
-        // hide check answers button
-        document.getElementById('check-answers').style.display = 'none';
-
-        // loop over the inputs and check to see if the answers are correct
-        var input = document.querySelectorAll('.writing-zone-input'),
-            i = 0, j = input.length;
-
-        for (; i < j; i++) {
-
-          // increment mistakes if the answer is incorrect
-          if (input[i].value != input[i].dataset.answer) {
-            input[i].dataset.mistakes = ++input[i].dataset.mistakes;
-            ++Genki.stats.mistakes;
-          }
-
-          // add classname to correct answers
-          else {
-            input[i].parentNode.className += ' answer-correct';  
-          }
-
-          // increment problems solved
-          ++Genki.stats.solved;
-        }
-
-        Genki.endQuiz(); // show quiz results
-      }
-    },
-
+    
 
     // places draggable items into their correct places
     // allows the student to review meanings without having to consult their textbook
@@ -745,6 +716,63 @@
 
         // change the quiz info
         document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';
+      }
+    },
+    
+    
+    // functions that check the value of input fields
+    check : {
+      
+      // checks the value of the current input and automatically moves onto the next input if the value is correct
+      // speeds things up, so the student doesn't need to click or tab into the next input field
+      value : function (input) {
+        if (input.value == input.dataset.answer) {
+          var next = Genki.input.map[Genki.input.index + 1];
+          
+          // focuses the next input if available, otherwise it asks if the student wants to check their answers
+          if (next) {
+            next.focus();
+          } else {
+            input.blur();
+            Genki.check.answers(true);
+          }
+        }
+      },
+      
+      
+      // check the answers for writing exercises
+      // mapEnded means the end of Genki.input.map was reached via Genki.check.value()
+      answers : function (mapEnded) {
+        // ask for confirmation, just in case the button was clicked by accident
+        if (!Genki.exerciseComplete && confirm(mapEnded ? 'The last input field has been filled in. Are you ready to check your answers?' : 'Checking your answers will end the quiz. Do you want to continue?')) {
+          Genki.exerciseComplete = true;
+
+          // hide check answers button
+          document.getElementById('check-answers').style.display = 'none';
+
+          // loop over the inputs and check to see if the answers are correct
+          var input = document.querySelectorAll('.writing-zone-input'),
+              i = 0, j = input.length;
+
+          for (; i < j; i++) {
+
+            // increment mistakes if the answer is incorrect
+            if (input[i].value != input[i].dataset.answer) {
+              input[i].dataset.mistakes = ++input[i].dataset.mistakes;
+              ++Genki.stats.mistakes;
+            }
+
+            // add classname to correct answers
+            else {
+              input[i].parentNode.className += ' answer-correct';  
+            }
+
+            // increment problems solved
+            ++Genki.stats.solved;
+          }
+
+          Genki.endQuiz(); // show quiz results
+        }
       }
     },
 
@@ -833,7 +861,7 @@
 
           } else {
             // add the exercise link to the group
-            list += '<li><a href="../../../lessons/' + linkData[0] + '/' + Genki.local + '" data-page="' + linkData[2] + '" title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
+            list += '<li><a href="../../../lessons/' + linkData[0] + '/' + Genki.local + '" data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '" title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
           }
         }
 
@@ -874,18 +902,18 @@
       // add exercise title to the document
       lesson = +Genki.active.exercise[0].replace(/lesson-(\d+).*/, '$1'); // current lesson
       
-      document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center" data-page="Genki ' + (lesson > 12 ? 'II' : 'I') + (/workbook-|wb-/.test(Genki.active.exercise[0]) ? ' Workbook' : '') + ': ' + Genki.active.exercise[2] + '">' + (Genki.active.exercise ? ('第' + lesson + '課 - ' + Genki.active.exercise[1]) : document.querySelector('TITLE').innerText.replace(/\s\|.*/, '')) + '</h2>');
+      document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center" data-page="Genki ' + (lesson < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(Genki.active.exercise[0]) ? ' Workbook' : '') + ': ' + Genki.active.exercise[2] + '">' + (Genki.active.exercise ? ('第' + lesson + '課 - ' + Genki.active.exercise[1]) : document.querySelector('TITLE').innerText.replace(/\s\|.*/, '')) + '</h2>');
 
       // setup navigational objects
       Genki.create.exerciseButtons();
       Genki.create.exerciseList();
       
       // define Genki in the global namespace
-      _.Genki = this;
+      window.Genki = this;
     }
   };
 
   // initial setup
   Genki.init();
-}(window));
+}(window, document));
 
