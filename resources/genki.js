@@ -11,12 +11,14 @@
   
   // primary object for functionality of Genki exercises
   var Genki = {
+    
+    // exercise statistics
     stats : {
       problems : 0, // number of problems to solve in the lesson
         solved : 0, // number of problems solved
       mistakes : 0, // number of mistakes made in the lesson
          score : 0, // the student's score
-       exclude : 0  // answers to exclude
+       exclude : 0  // answers to exclude, mostly for text-only segments in multi-choice quizzes
     },
 
     // tells us if Genki is being used on a local file system so we can append index.html to URLs
@@ -154,6 +156,8 @@
       'lesson-2/literacy-wb-4|Workbook: Spelling Practice (サ-ト)|p.125; II',
       'lesson-2/literacy-wb-5|Workbook: Katakana Writing Practice (ナ-ホ)|p.126; I',
       'lesson-2/literacy-wb-6|Workbook: Spelling Practice (ナ-ホ)|p.126; II',
+      'lesson-2/literacy-wb-7|Workbook: Katakana Writing Practice (マ-ヨ)|p.127; I',
+      'lesson-2/literacy-wb-8|Workbook: Spelling Practice (マ-ヨ)|p.127; II',
 
       // Lesson 3
       'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.86',
