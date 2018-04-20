@@ -158,6 +158,8 @@
       'lesson-2/literacy-wb-6|Workbook: Spelling Practice (ナ-ホ)|p.126; II',
       'lesson-2/literacy-wb-7|Workbook: Katakana Writing Practice (マ-ヨ)|p.127; I',
       'lesson-2/literacy-wb-8|Workbook: Spelling Practice (マ-ヨ)|p.127; II',
+      'lesson-2/literacy-wb-9|Workbook: Katakana Writing Practice (ラ-ン)|p.128; I',
+      'lesson-2/literacy-wb-10|Workbook: Spelling Practice (ラ-ン)|p.128; II',
 
       // Lesson 3
       'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.86',
