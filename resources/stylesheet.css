@@ -600,6 +600,23 @@ footer li:first-child:before { display:none; }
 .quiz-over [data-mistakes="0"]:after { content:""; }
 
 
+/* drag and drop furigana */
+.helper-present #question-list .quiz-item {
+  position:relative;
+  text-align:center;
+}
+
+.helper-present #question-list .quiz-item, .helper-present #drop-list .quiz-answer-zone {
+  margin-bottom:18px;
+}
+
+.helper-present .hidden-text {
+  visibility:hidden;
+  display:block;
+  margin-top:-20px;
+}
+
+
 /* kana quiz styles */
 .kana-quiz #question-list, .kana-quiz #answer-list {
   float:none;
@@ -717,7 +734,7 @@ footer li:first-child:before { display:none; }
   white-space:nowrap;
   display:flex;
   flex:1;
-  margin:10px 3px;
+  margin:12px 3px;
 }
 
 .writing-quiz .quiz-item {
@@ -768,16 +785,16 @@ footer li:first-child:before { display:none; }
 
 
 /* helper text, similar to furigana */
-.writing-quiz .quiz-item:before {
+.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before {
   content:attr(data-helper);
   font-size:11px;
-  line-height:13px;
+  line-height:15px;
   color:#666;
   background:#CCC;
   position:absolute;
   left:-1px;
   right:-1px;
-  bottom:-13px;
+  bottom:-15px;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
