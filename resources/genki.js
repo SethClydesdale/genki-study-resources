@@ -189,6 +189,8 @@
       'lesson-3/workbook-6|Workbook: Suggestion Using ～ませんか|p.31; I & II',
       'lesson-3/workbook-7|Workbook: Frequency Adverbs|p.32',
       'lesson-3/workbook-8|Workbook: Questions|p.35',
+      title.literacy,
+      'lesson-3/literacy-1|Kanji Practice: 一 and 二|p.298',
 
       // Lesson 4
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
@@ -313,6 +315,7 @@
             dropList = '<div id="drop-list">',
             keysQ = [],
             keysA,
+            helper,
             i;
 
         // generate a key list for the quizlet so we can randomly sort questions and answers
@@ -324,14 +327,23 @@
         // generate the questions
         while (keysQ.length) {
           i = Math.floor(Math.random() * keysQ.length);
-          quiz += '<div class="quiz-item">' + keysQ[i] + '</div>';
+          
+          // | is used to separate a word from a helper
+          helper = /\|/.test(keysQ[i]) ? 'data-helper="' + keysQ[i].split('|').pop() + '"' : null;
+          
+          // add the quiz items and drop zones
+          quiz += '<div class="quiz-item" ' + (helper || '') + '>' + (helper ? keysQ[i].replace(/(.*?)\|(.*)/, '$1<span class="hidden-text">$2</span>') : keysQ[i]) + '</div>';
           dropList += '<div class="quiz-answer-zone" data-text="' + keysQ[i] + '" data-mistakes="0"></div>';
           keysQ.splice(i, 1);
           ++Genki.stats.problems;
         }
         quiz += '</div>' + dropList + '</div>'; // close the question list and add the drop list
 
-
+        // add a class for the helper styles
+        if (helper) {
+          zone.className += ' helper-present';
+        }
+        
         // generate the answers
         quiz += '<div id="answer-list">';
         while (keysA.length) {
