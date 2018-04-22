@@ -191,6 +191,7 @@
       'lesson-3/workbook-8|Workbook: Questions|p.35',
       title.literacy,
       'lesson-3/literacy-1|Kanji Practice: 一 and 二|p.298',
+      'lesson-3/literacy-2|Kanji Practice: 三 and 四|p.298',
 
       // Lesson 4
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
