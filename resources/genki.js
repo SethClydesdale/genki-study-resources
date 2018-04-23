@@ -192,6 +192,11 @@
       title.literacy,
       'lesson-3/literacy-1|Kanji Practice: 一 and 二|p.298',
       'lesson-3/literacy-2|Kanji Practice: 三 and 四|p.298',
+      'lesson-3/literacy-3|Kanji Practice: 五 and 六|p.298',
+      'lesson-3/literacy-4|Kanji Practice: 七 and 八|p.298',
+      'lesson-3/literacy-5|Kanji Practice: 九 and 十|p.299',
+      'lesson-3/literacy-6|Kanji Practice: 百, 千, and 万|p.299',
+      'lesson-3/literacy-7|Kanji Practice: 円 and 時|p.299',
 
       // Lesson 4
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
