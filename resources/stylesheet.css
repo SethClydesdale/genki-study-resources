@@ -862,7 +862,14 @@ footer li:first-child:before { display:none; }
 .multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"] { border-color:#F60; }
 .multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"]:before { color:#F60; }
 
-/* next buttons for read-only questions */
+/* read-only questions */
+.text-passage {
+  font-size:16px;
+  text-align:left;
+  width:80%;
+  margin:15px auto;
+}
+
 .quiz-multi-answer.next-question:before {
   content:"\f061";
   font-family:FontAwesome;
@@ -958,7 +965,10 @@ footer li:first-child:before { display:none; }
 
   /* remove margin in kana columns to reduce wrapping */
   .kana-quiz .quiz-column { margin:0; }
-
+  
+  /* increase the size of text passages in multi-choice quizzes */
+  .text-passage { width:90%; }
+  
   /* increase the size of multiple choice answers */
   .quiz-multi-answer { width:80%; }
 

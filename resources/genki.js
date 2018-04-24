@@ -197,6 +197,8 @@
       'lesson-3/literacy-5|Kanji Practice: 九 and 十|p.299',
       'lesson-3/literacy-6|Kanji Practice: 百, 千, and 万|p.299',
       'lesson-3/literacy-7|Kanji Practice: 円 and 時|p.299',
+      'lesson-3/literacy-8|Kanji Practice: Prices|p.300; I-A & B',
+      'lesson-3/literacy-9|Reading Practice: まいにちのせいかつ|p.301; II',
 
       // Lesson 4
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
@@ -519,7 +521,7 @@
 
         // create individual blocks for each question and hide them until later
         for (; i < j; i++) {
-          quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + (q[i].question ? q[i].question : q[i].text) + '</div>';
+          quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + (typeof q[i].question != 'undefined' ? q[i].question : '<p class="text-passage" ' + (q[i].text.replace(/<br>/g, '').length < 50 ? 'style="text-align:center;"' : '') + '>' + q[i].text + '</p>') + '</div>';
 
           // ready-only questions contain text only, no answers
           if (q[i].text) {
