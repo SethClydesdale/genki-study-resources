@@ -591,13 +591,14 @@
         // add the quiz to the document
         zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
           
-          // split the answer from the placeholder, syntax is {ANSWER|PLACEHOLDER}
+          // Split the answer from the hint.
+          // Syntax is {ANSWER|HINT} HINT is optional
           var value = match.slice(1, match.length - 1).split('|');
           
           ++Genki.stats.problems; // increment problems number
           
           // parse and return the input field
-          return '<span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="' + value[0] + '" placeholder="' + value[1] + '" data-mistakes="0" tabindex="0" style="width:' + (((value[1] ? value[1] : value[0]).length * 14) + 10) + 'px;"></span>';
+          return '<span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="' + value[0] + '" data-mistakes="0" tabindex="0" style="width:' + (((value[1] ? value[1] : value[0]).length * 14) + 10) + 'px;">' + (value[1] ? '<span class="problem-hint">' + value[1] + '</span>' : '') + '</span>';
           
         }) + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers(false, \'fill\');">Check Answers</button></div>';
         
