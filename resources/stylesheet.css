@@ -800,6 +800,10 @@ footer li:first-child:before { display:none; }
   text-overflow:ellipsis;
 }
 
+/* non-practice writing exercises; removes helpers */
+.writing-quiz .no-helper [data-helper]:before { display:none; }
+.writing-quiz.quiz-over .no-helper [data-helper]:before { display:block; }
+
 
 /* multi-choice quiz style */
 .multi-quiz #question-list { float:none; }
@@ -905,6 +909,57 @@ footer li:first-child:before { display:none; }
   bottom:0;
   line-height:26px;
 }
+
+
+/* FILL IN THE BLANK QUIZZES */
+.text-block {
+  background:#EEE;
+  border:1px solid #CCC;
+  margin:30px auto;
+  padding:15px;
+}
+
+.text-block p { margin:15px 0; }
+
+/* input style */
+.fill-quiz .writing-zone {
+  background:none;
+  display:inline-block;
+  vertical-align:bottom;
+  margin:0;
+  min-width:0;
+}
+
+.fill-quiz .writing-zone-input {
+  background:none;
+  border:none;
+  border-bottom:2px solid #999;
+  width:auto;
+  padding:0;
+}
+
+.fill-quiz .writing-zone-input::placeholder { color:#999; }
+.fill-quiz .writing-zone-input:hover { border-color:#666; }
+.fill-quiz .writing-zone-input:focus { border-color:#F60; }
+
+
+/* mark incorrect answer */
+.fill-quiz.quiz-over .writing-zone-input { pointer-events:none; }
+.fill-quiz.quiz-over [data-mistakes] { border-color:#F00; }
+
+/* correct answer (shown underneath the input) */
+.problem-answer {
+  color:#F00;
+  font-size:12px;
+  display:block;
+  height:18px;
+  line-height:18px;
+  margin-bottom:-18px;
+}
+
+/* mark correct answers */
+.fill-quiz.quiz-over [data-mistakes="0"] { border-color:#090; }
+.fill-quiz .writing-zone.answer-correct:after { display:none; }
 
 
 /* RESULT LIST */
