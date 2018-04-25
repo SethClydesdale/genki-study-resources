@@ -34,7 +34,9 @@
       std_questions : 'Answer the questions as best as you can.',
       std_culture : 'Answer the questions about Japanese culture as best as you can.',
       mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong before finding the correct answer. Review these problems before trying again.',
-      multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red">red</span>. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.'
+      writing_mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong. Review these problems before trying again.',
+      multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red">red</span>. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.',
+      fill_mistakes : 'The items underlined in <span class="t-red">red</span> were answered wrong, the correct answers are listed underneath. Review these problems before trying again.',
     },
 
     // info about the currently active exercise
@@ -199,6 +201,15 @@
       'lesson-3/literacy-7|Kanji Practice: 円 and 時|p.299',
       'lesson-3/literacy-8|Kanji Practice: Prices|p.300; I-A & B',
       'lesson-3/literacy-9|Reading Practice: まいにちのせいかつ|p.301; II',
+      title.literacyWB,
+      'lesson-3/literacy-wb-1|Workbook: Kanji Writing Practice (Numbers)|p.129',
+      'lesson-3/literacy-wb-2|Workbook: Spelling Practice (一, 二, and 三)|p.129; bonus',
+      'lesson-3/literacy-wb-3|Workbook: Spelling Practice (四, 五, and 六)|p.129; bonus',
+      'lesson-3/literacy-wb-4|Workbook: Spelling Practice (七, 八, and 九)|p.129; bonus',
+      'lesson-3/literacy-wb-5|Workbook: Spelling Practice (十, 百, and 千)|p.129; bonus',
+      'lesson-3/literacy-wb-6|Workbook: Spelling Practice (万, 円, and 時)|p.129; bonus',
+      'lesson-3/literacy-wb-7|Workbook: Using Kanji (Numbers)|p.130; I',
+      'lesson-3/literacy-wb-8|Workbook: Fill in the Kanji|p.130; II',
 
       // Lesson 4
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
@@ -315,6 +326,7 @@
       ** 3. VERB CONJUGATION     **
       ** 4. WRITING PRACTICE     **
       ** 5. MULTIPLE CHOICE      **
+      ** 6. FILL IN THE BLANKS   **
       *****************************/
 
       // # 1. DRAG AND DROP #
@@ -489,7 +501,7 @@
 
           // insert the writing zones
           while (columns --> 0) {
-            quiz += '<div class="writing-zone" ' + width + '><input class="writing-zone-input" type="text" ' + (j++ < 3 ? 'placeholder="' + i + '"' : '') + ' data-answer="' + i + '" data-mistakes="0" tabindex="0" oninput="Genki.check.value(this);" onfocus="Genki.input.index = ' + index++ + '"></div>';
+            quiz += '<div class="writing-zone" ' + width + '><input class="writing-zone-input" type="text" ' + ((!o.quiz && j++ < 3) ? 'placeholder="' + i + '"' : '') + ' data-answer="' + (o.quiz ? o.quizlet[i] : i) + '" data-mistakes="0" tabindex="0" ' + (o.quiz ? '' : 'oninput="Genki.check.value(this);"') + ' onfocus="Genki.input.index = ' + index++ + '"></div>';
             ++Genki.stats.problems;
           }
 
@@ -499,6 +511,12 @@
 
         // add the quiz to the document
         zone.innerHTML = quiz + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();">Check Answers</button></div>';
+        
+        // add a class for non-practice writing exercises
+        // this will remove helpers, forcing the student to recall what they learned
+        if (o.quiz) {
+          zone.className += ' no-helper';
+        }
         
         // input field data
         Genki.input = {
@@ -564,6 +582,25 @@
 
         // begin the quiz
         Genki.progressQuiz('init');
+      }
+      
+      
+      // # 6. FILL IN THE BLANKS #
+      else if (o.type == 'fill') {
+        
+        // add the quiz to the document
+        zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
+          
+          // split the answer from the placeholder, syntax is {ANSWER|PLACEHOLDER}
+          var value = match.slice(1, match.length - 1).split('|');
+          
+          ++Genki.stats.problems; // increment problems number
+          
+          // parse and return the input field
+          return '<span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="' + value[0] + '" placeholder="' + value[1] + '" data-mistakes="0" tabindex="0" style="width:' + (((value[1] ? value[1] : value[0]).length * 14) + 10) + 'px;"></span>';
+          
+        }) + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers(false, \'fill\');">Check Answers</button></div>';
+        
       }
 
 
@@ -665,7 +702,7 @@
           Genki.incrementProgressBar();
 
         } else { // end the quiz if there's no new question
-          Genki.endQuiz(true);
+          Genki.endQuiz('multi');
 
           // show all questions and answers
           for (var q = document.querySelectorAll('[id^="quiz-q"]'), i = 0, j = q.length; i < j; i++) {
@@ -680,7 +717,7 @@
 
 
     // ends the quiz
-    endQuiz : function (multi) {
+    endQuiz : function (type) {
       // calculate the total score based on problems solved and mistakes made
       var solved = Genki.stats.solved - Genki.stats.exclude,
           problems = Genki.stats.problems - Genki.stats.exclude;
@@ -703,8 +740,8 @@
         '<div class="result-row center">'+
           ( // depending on the score, a specific message will show
             Genki.stats.score == 100 ? 'PERFECT! Great Job, you have mastered this quiz! Feel free to move on or challenge yourself by trying to beat your completion time.' :
-            Genki.stats.score > 70 ? 'Nice work! ' + Genki.lang[multi ? 'multi_mistakes' : 'mistakes'] :
-            'Keep studying! ' + Genki.lang[multi ? 'multi_mistakes' : 'mistakes']
+            Genki.stats.score > 70 ? 'Nice work! ' + Genki.lang[type ? type + '_mistakes' : 'mistakes'] :
+            'Keep studying! ' + Genki.lang[type ? type + '_mistakes' : 'mistakes']
           )+
           '<div class="center">'+
             '<a href="./' + Genki.local + '" class="button">Try Again</a>'+
@@ -768,7 +805,7 @@
       
       // check the answers for writing exercises
       // mapEnded means the end of Genki.input.map was reached via Genki.check.value()
-      answers : function (mapEnded) {
+      answers : function (mapEnded, type) {
         // ask for confirmation, just in case the button was clicked by accident
         if (!Genki.exerciseComplete && confirm(mapEnded ? 'The last input field has been filled in. Are you ready to check your answers?' : 'Checking your answers will end the quiz. Do you want to continue?')) {
           Genki.exerciseComplete = true;
@@ -786,6 +823,10 @@
             if (input[i].value != input[i].dataset.answer) {
               input[i].dataset.mistakes = ++input[i].dataset.mistakes;
               ++Genki.stats.mistakes;
+              
+              if (type == 'fill') {
+                input[i].parentNode.insertAdjacentHTML('beforeend', '<span class="problem-answer">' + input[i].dataset.answer + '</span>');
+              }
             }
 
             // add classname to correct answers
@@ -797,7 +838,7 @@
             ++Genki.stats.solved;
           }
 
-          Genki.endQuiz(); // show quiz results
+          Genki.endQuiz(type ? type : 'writing'); // show quiz results
         }
       }
     },
