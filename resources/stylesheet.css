@@ -919,7 +919,7 @@ footer li:first-child:before { display:none; }
   padding:15px;
 }
 
-.text-block p { margin:15px 0; }
+.text-block p { margin:0 0 25px 0; }
 
 /* input style */
 .fill-quiz .writing-zone {
@@ -942,20 +942,20 @@ footer li:first-child:before { display:none; }
 .fill-quiz .writing-zone-input:hover { border-color:#666; }
 .fill-quiz .writing-zone-input:focus { border-color:#F60; }
 
+/* hint/correct answer under input */
+.problem-hint, .problem-answer {
+  font-size:14px;
+  display:block;
+  height:20px;
+  line-height:20px;
+  margin-bottom:-20px;
+}
+.problem-answer { color:#F00; }
+.quiz-over .problem-hint { display:none; }
 
 /* mark incorrect answer */
 .fill-quiz.quiz-over .writing-zone-input { pointer-events:none; }
 .fill-quiz.quiz-over [data-mistakes] { border-color:#F00; }
-
-/* correct answer (shown underneath the input) */
-.problem-answer {
-  color:#F00;
-  font-size:12px;
-  display:block;
-  height:18px;
-  line-height:18px;
-  margin-bottom:-18px;
-}
 
 /* mark correct answers */
 .fill-quiz.quiz-over [data-mistakes="0"] { border-color:#090; }
