@@ -210,6 +210,7 @@
       'lesson-3/literacy-wb-6|Workbook: Spelling Practice (万, 円, and 時)|p.129; bonus',
       'lesson-3/literacy-wb-7|Workbook: Using Kanji (Numbers)|p.130; I',
       'lesson-3/literacy-wb-8|Workbook: Fill in the Kanji|p.130; II',
+      'lesson-3/literacy-wb-9|Workbook: Translate the Sentences|p.130; III',
 
       // Lesson 4
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
@@ -248,6 +249,10 @@
       'lesson-4/workbook-6|Workbook: も|p.41',
       'lesson-4/workbook-7|Workbook: ～時間・Particles|p.42; I & II',
       'lesson-4/workbook-8|Workbook: Questions|p.44',
+      title.literacy,
+      'lesson-4/literacy-1|Kanji Practice: 日 and 本|p.302',
+      'lesson-4/literacy-2|Kanji Practice: 人 and 月|p.302',
+      'lesson-4/literacy-3|Kanji Practice: 火 and 水|p.302',
 
       // Lesson 5
       'lesson-5/vocab-1|Vocabulary: Nouns|p.130',
@@ -965,6 +970,7 @@
       // finds the currently active exercise in the exercise list and sets up essential data for following statements
       var i = 0,
           j = Genki.exercises.length,
+          result = document.getElementById('quiz-result'),
           lesson;
 
       for (; i < j; i++) {
@@ -976,9 +982,15 @@
       }
 
       // add exercise title to the document
-      lesson = +Genki.active.exercise[0].replace(/lesson-(\d+).*/, '$1'); // current lesson
+      if (Genki.active.exercise) {
+        lesson = +Genki.active.exercise[0].replace(/lesson-(\d+).*/, '$1'); // current lesson
       
-      document.getElementById('quiz-result').insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center" data-page="Genki ' + (lesson < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(Genki.active.exercise[0]) ? ' Workbook' : '') + ': ' + Genki.active.exercise[2] + '">' + (Genki.active.exercise ? ('第' + lesson + '課 - ' + Genki.active.exercise[1]) : document.querySelector('TITLE').innerText.replace(/\s\|.*/, '')) + '</h2>');
+        result.insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center" data-page="Genki ' + (lesson < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(Genki.active.exercise[0]) ? ' Workbook' : '') + ': ' + Genki.active.exercise[2] + '">第' + lesson + '課 - ' + Genki.active.exercise[1] + '</h2>');
+        
+      } else {
+        result.insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center">' + document.querySelector('TITLE').innerText.replace(/\s\|.*/, '') + '</h2>');
+      }
+      
 
       // setup navigational objects
       Genki.create.exerciseButtons();
