@@ -93,8 +93,9 @@ ul { padding-left:40px; }
 a {
   color:#039;
   text-decoration:none;
+  outline:none;
 }
-a:hover { text-decoration:underline; }
+a:hover, a:focus { text-decoration:underline; }
 
 .button, a.button {
   color:#FFF;
@@ -111,7 +112,8 @@ a:hover { text-decoration:underline; }
   outline:none;
 }
 
-.button:hover, a.button:hover { background:#F50; }
+.button:hover, a.button:hover { background:#E50; }
+.button:focus, a.button:focus { background:#D40; }
 
 /* aesthetic styles */
 .center { text-align:center; }
@@ -182,7 +184,7 @@ a#fork-me {
   transition-duration:300ms;
 }
 
-a#fork-me:hover {
+a#fork-me:hover, a#fork-me:focus {
   color:#333;
   background:#FFF;
 }
@@ -216,7 +218,7 @@ a.anchor {
   visibility:hidden;
 }
 
-h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .anchor-icon, h5:hover .anchor-icon, h6:hover .anchor-icon {
+h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .anchor-icon, h5:hover .anchor-icon, h6:hover .anchor-icon, .anchor:focus .anchor-icon {
   visibility:visible;
 }
 
@@ -431,7 +433,7 @@ footer li:first-child:before { display:none; }
 
 
 /* EXERCISE LIST */
-#exercise-list, #toggle-exercises, #toggle-exercises:after, #toggle-exercises:before { transition:300ms; } /* list transition */
+#exercise-list, #toggle-exercises, #toggle-exercises:after, #toggle-exercises:before { transition-duration:300ms; } /* list transition */
 #exercise-list {
   background:#EEE;
   border-right:1px solid #CCC;
@@ -440,13 +442,18 @@ footer li:first-child:before { display:none; }
   left:-301px;
   bottom:0;
   width:300px;
+  visibility:hidden;
   z-index:10;
 }
-#exercise-list.list-open { left:0; }
+
+.list-open + #exercise-list {
+  left:0;
+  visibility:visible;
+}
 
 /* toggle button */
 #toggle-exercises {
-  background:#C50;
+  background:#C30;
   text-align:center;
   line-height:32px;
   height:32px;
@@ -456,7 +463,10 @@ footer li:first-child:before { display:none; }
   left:0;
   z-index:11;
   cursor:pointer;
+  transition-property:left;
 }
+#toggle-exercises:hover { background:#D40; }
+#toggle-exercises:focus { background:#E50; }
 
 #toggle-exercises:after, #toggle-exercises:before {
   color:#FFF;
@@ -465,6 +475,7 @@ footer li:first-child:before { display:none; }
   position:absolute;
   left:0;
   right:0;
+  transition-property:opacity;
 }
 
 #toggle-exercises:after { content:"\f0c9"; }
@@ -473,9 +484,9 @@ footer li:first-child:before { display:none; }
   opacity:0;
 }
 
-#exercise-list.list-open + #toggle-exercises { left:268px; }
-#exercise-list.list-open + #toggle-exercises:after { opacity:0; }
-#exercise-list.list-open + #toggle-exercises:before { opacity:1; }
+#toggle-exercises.list-open { left:268px; }
+#toggle-exercises.list-open:after { opacity:0; }
+#toggle-exercises.list-open:before { opacity:1; }
 
 /* lesson list */
 #lessons-list {
@@ -502,12 +513,13 @@ footer li:first-child:before { display:none; }
   margin:0;
   padding:3px;
   cursor:pointer;
+  outline:none;
   -webkit-user-select:none;
      -moz-user-select:none;
-      -ms-user-select: none;
+      -ms-user-select:none;
           user-select:none;
 }
-#exercise-list .lesson-title:hover { color:#F60; }
+#exercise-list .lesson-title:hover, #exercise-list .lesson-title:focus { color:#F60; }
 
 #exercise-list .lesson-title:before {
   content:"\f054";
@@ -553,11 +565,11 @@ footer li:first-child:before { display:none; }
   margin-right:3px;
 }
 
-#exercise-list a:hover { color:#F60; }
-#exercise-list a:hover:before { color:#F60; }
+#exercise-list a:hover, #exercise-list a:focus { color:#F60; }
+#exercise-list a:hover:before, #exercise-list a:focus:before { color:#F60; }
 
 /* show page num. on hover */
-#exercise-list a:hover:after {
+#exercise-list a:hover:after, #exercise-list a:focus:after {
   content:attr(data-page);
   color:#FFF;
   font-size:12px;
@@ -761,6 +773,7 @@ footer li:first-child:before { display:none; }
   padding:3px 0;
   outline:none;
 }
+.writing-zone-input:disabled { color:#333; }
 .writing-zone-input::placeholder { color:#BBB; }
 .writing-zone-input:hover { border-color:#999; }
 .writing-zone-input:focus { border-color:#F60; }

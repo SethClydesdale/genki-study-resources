@@ -842,6 +842,9 @@
 
             // increment problems solved
             ++Genki.stats.solved;
+            
+            // disable the input
+            input[i].disabled = true;
           }
 
           Genki.endQuiz(type ? type : 'writing'); // show quiz results
@@ -854,9 +857,8 @@
     toggle : {
       
       // toggle the exercise list
-      exerciseList : function () {
-        var list = document.getElementById('exercise-list');
-        list.className = list.className == 'list-open' ? '' : 'list-open';
+      exerciseList : function (button) {
+        button.className = button.className == 'list-open' ? '' : 'list-open';
       },
       
       
@@ -911,7 +913,8 @@
 
       // creates the exercise list
       exerciseList : function () {
-        var list = '<nav id="exercise-list"><h3 class="main-title">Exercise List</h3><div id="lessons-list"><h4 class="lesson-title" onclick="Genki.toggle.list(this);">Pre-Lesson</h4><ul id="lesson-0">',
+        var attrs = 'class="lesson-title" onclick="Genki.toggle.list(this);" onkeydown="event.key == \'Enter\' && Genki.toggle.list(this);" tabindex="0"', // lesson-title attrs
+            list = '<nav id="exercise-list"><h3 class="main-title">Exercise List</h3><div id="lessons-list"><h4 ' + attrs + '>Pre-Lesson</h4><ul id="lesson-0">',
             lesson = 'lesson-0',
             i = 0,
             j = Genki.exercises.length,
@@ -925,7 +928,7 @@
           // if the lesson group is different create a new group
           if (linkData[0] != 'title' && !new RegExp(lesson).test(linkData[0])) {
             lesson = linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
-            list += '</ul><h4 class="lesson-title" onclick="Genki.toggle.list(this);">' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">';
+            list += '</ul><h4 ' + attrs + '>' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">';
           }
 
           // add a header to separate the workbook from the textbook exercises and grammar from reading and writing
@@ -939,7 +942,7 @@
         }
 
         // add the exercise list to the document
-        document.getElementById('content').insertAdjacentHTML('afterbegin', list + '</ul></div></nav><div id="toggle-exercises" onclick="Genki.toggle.exerciseList();" title="Toggle exercise list"></div>');
+        document.getElementById('content').insertAdjacentHTML('afterbegin', '<a href="#toggle-exercises" id="toggle-exercises" onclick="Genki.toggle.exerciseList(this); return false;" title="Toggle exercise list"></a>' + list + '</ul></div></nav>');
 
         // open the current lesson and scroll to the active exercise
         if (Genki.active.exercise) {
