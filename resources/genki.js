@@ -523,6 +523,9 @@
           map : document.querySelectorAll('.writing-zone-input'),
           index : 0
         };
+        
+        // auto-focus the first input field
+        Genki.input.map[0].autofocus = true;
       }
 
 
@@ -602,6 +605,8 @@
           
         }) + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers(false, \'fill\');">Check Answers</button></div>';
         
+        // auto-focus the first input field
+        document.querySelector('.writing-zone-input').autofocus = true;
       }
 
 
