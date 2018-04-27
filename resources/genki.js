@@ -253,6 +253,9 @@
       'lesson-4/literacy-1|Kanji Practice: 日 and 本|p.302',
       'lesson-4/literacy-2|Kanji Practice: 人 and 月|p.302',
       'lesson-4/literacy-3|Kanji Practice: 火 and 水|p.302',
+      'lesson-4/literacy-4|Kanji Practice: 木, 金, and 土|p.302-303',
+      'lesson-4/literacy-5|Kanji Practice: 曜, 上, and 下|p.303',
+      'lesson-4/literacy-6|Kanji Practice: 中 and 半|p.303',
 
       // Lesson 5
       'lesson-5/vocab-1|Vocabulary: Nouns|p.130',
