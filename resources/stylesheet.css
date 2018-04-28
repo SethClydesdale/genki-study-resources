@@ -137,7 +137,6 @@ a:hover, a:focus { text-decoration:underline; }
   font-style:normal;
   font-weight:bold;
   vertical-align:super;
-  margin-right:6px;
 }
 
 
@@ -930,6 +929,12 @@ footer li:first-child:before { display:none; }
   border:1px solid #CCC;
   margin:30px auto;
   padding:15px;
+}
+
+.text-block .sub-section {
+  background-color:#FFF;
+  border:1px solid #DDD;
+  padding:6px;
 }
 
 .text-block p { margin:0 0 25px 0; }
