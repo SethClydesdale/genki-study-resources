@@ -256,6 +256,10 @@
       'lesson-4/literacy-4|Kanji Practice: 木, 金, and 土|p.302-303',
       'lesson-4/literacy-5|Kanji Practice: 曜, 上, and 下|p.303',
       'lesson-4/literacy-6|Kanji Practice: 中 and 半|p.303',
+      'lesson-4/literacy-7|Kanji Practice: Days of the Week|p.304; I-A',
+      'lesson-4/literacy-8|Kanji Practice: Location Words|p.304; I-B',
+      'lesson-4/literacy-9|Reading Practice: おかあさんへのメモ|p.304; II',
+      'lesson-4/literacy-10|Reading Practice: メアリーさんのしゅうまつ|p.305; III',
 
       // Lesson 5
       'lesson-5/vocab-1|Vocabulary: Nouns|p.130',
@@ -603,13 +607,13 @@
         zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
           
           // Split the answer from the hint.
-          // Syntax is {ANSWER|HINT} HINT is optional
+          // Syntax is {ANSWER|HINT|HIDE_HINT} HINT and HIDE_HINT is optional
           var value = match.slice(1, match.length - 1).split('|');
           
           ++Genki.stats.problems; // increment problems number
           
           // parse and return the input field
-          return '<span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="' + value[0] + '" data-mistakes="0" tabindex="0" style="width:' + (((value[1] ? value[1] : value[0]).length * 14) + 10) + 'px;">' + (value[1] ? '<span class="problem-hint">' + value[1] + '</span>' : '') + '</span>';
+          return '<span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="' + value[0] + '" data-mistakes="0" tabindex="0" style="width:' + (((value[1] ? value[1] : value[0]).length * 14) + 10) + 'px;">' + ((value[1] && !value[2]) ? '<span class="problem-hint">' + value[1] + '</span>' : '') + '</span>';
           
         }) + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers(false, \'fill\');">Check Answers</button></div>';
         
@@ -834,7 +838,7 @@
           for (; i < j; i++) {
 
             // increment mistakes if the answer is incorrect
-            if (input[i].value != input[i].dataset.answer) {
+            if (input[i].value.toLowerCase() != input[i].dataset.answer.toLowerCase()) {
               input[i].dataset.mistakes = ++input[i].dataset.mistakes;
               ++Genki.stats.mistakes;
               
