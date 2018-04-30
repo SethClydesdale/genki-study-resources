@@ -304,7 +304,14 @@
       'lesson-5/workbook-5|Workbook: Adjective + Noun|p.49; I & II',
       'lesson-5/workbook-6|Workbook: 好き(な)／きらい(な)|p.50',
       'lesson-5/workbook-7|Workbook: ～ましょう|p.51; I & II',
-      'lesson-5/workbook-8|Workbook: Questions|p.53; I & II'
+      'lesson-5/workbook-8|Workbook: Questions|p.53; I & II',
+      title.literacy,
+      'lesson-5/literacy-1|Kanji Practice: 山, 川, and 元|p.306',
+      'lesson-5/literacy-2|Kanji Practice: 気, 天, and 私|p.306',
+      'lesson-5/literacy-3|Kanji Practice: 今 and 田|p.306',
+      'lesson-5/literacy-4|Kanji Practice: 女 and 男|p.307',
+      'lesson-5/literacy-5|Kanji Practice: 見 and 行|p.307',
+      'lesson-5/literacy-6|Kanji Practice: 食 and 飲|p.307'
     ],
 
 
