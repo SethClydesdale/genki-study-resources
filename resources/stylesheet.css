@@ -925,6 +925,7 @@ footer li:first-child:before { display:none; }
 
 /* FILL IN THE BLANK QUIZZES */
 .text-block {
+  font-size:14px;
   background:#EEE;
   border:1px solid #CCC;
   margin:30px auto;
@@ -938,6 +939,12 @@ footer li:first-child:before { display:none; }
 }
 
 .text-block p { margin:0 0 25px 0; }
+
+.columns-2 > * {
+  width:50%;
+  margin:0 0 25px 0;
+  float:left;
+}
 
 /* input style */
 .fill-quiz .writing-zone {

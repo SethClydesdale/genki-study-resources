@@ -311,7 +311,11 @@
       'lesson-5/literacy-3|Kanji Practice: 今 and 田|p.306',
       'lesson-5/literacy-4|Kanji Practice: 女 and 男|p.307',
       'lesson-5/literacy-5|Kanji Practice: 見 and 行|p.307',
-      'lesson-5/literacy-6|Kanji Practice: 食 and 飲|p.307'
+      'lesson-5/literacy-6|Kanji Practice: 食 and 飲|p.307',
+      'lesson-5/literacy-7|Kanji Practice: Match the Sentences|p.308; I-B',
+      'lesson-5/literacy-8|Kanji Practice: Match the Readings|p.308; I-C',
+      'lesson-5/literacy-9|Katakana Practice: Match the Words|p.309; II-A',
+      'lesson-5/literacy-10|Reading Practice: Yoko\'s Postcard|p.309; II-B'
     ],
 
 
