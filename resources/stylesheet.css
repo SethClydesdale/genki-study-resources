@@ -130,6 +130,14 @@ a:hover, a:focus { text-decoration:underline; }
   clear:both;
 }
 
+.vertical-text {
+        -ms-writing-mode:tb-rl;
+	-webkit-writing-mode:vertical-rl;
+	        writing-mode:vertical-rl;
+  text-align:left !important;
+  max-height:300px;
+}
+
 /* used for definitions, ex: 兄弟[きょうだい：siblings; ...]
    the bracketed portion should be wrapped with tags of this class */
 .define {

@@ -315,7 +315,10 @@
       'lesson-5/literacy-7|Kanji Practice: Match the Sentences|p.308; I-B',
       'lesson-5/literacy-8|Kanji Practice: Match the Readings|p.308; I-C',
       'lesson-5/literacy-9|Katakana Practice: Match the Words|p.309; II-A',
-      'lesson-5/literacy-10|Reading Practice: Yoko\'s Postcard|p.309; II-B'
+      'lesson-5/literacy-10|Reading Practice: Yoko\'s Postcard|p.309; II-B',
+      'lesson-5/literacy-11|Reading Practice: Robert\'s Postcard|p.310; II-C',
+      title.literacyWB,
+      'lesson-5/literacy-wb-1|Workbook: Kanji Writing Practice|p.133',
     ],
 
 
@@ -574,7 +577,7 @@
 
         // create individual blocks for each question and hide them until later
         for (; i < j; i++) {
-          quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + (typeof q[i].question != 'undefined' ? q[i].question : '<p class="text-passage" ' + (q[i].text.replace(/<br>/g, '').length < 50 ? 'style="text-align:center;"' : '') + '>' + q[i].text + '</p>') + '</div>';
+          quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + (typeof q[i].question != 'undefined' ? q[i].question : '<div class="text-passage' + (q[i].vertical ? ' vertical-text' : '') + '" ' + (q[i].text.replace(/<br>/g, '').length < 50 ? 'style="text-align:center;"' : '') + '>' + q[i].text + '</div>' + (q[i].helper || '')) + '</div>';
 
           // ready-only questions contain text only, no answers
           if (q[i].text) {
