@@ -947,6 +947,7 @@ footer li:first-child:before { display:none; }
 }
 
 .text-block p { margin:0 0 25px 0; }
+.fill-quiz .text-block p { margin:0 0 40px 0; }
 
 .columns-2 > * {
   width:50%;
@@ -984,7 +985,7 @@ footer li:first-child:before { display:none; }
   margin-bottom:-20px;
 }
 .problem-answer { color:#F00; }
-.quiz-over .problem-hint { display:none; }
+[data-mistakes="1"] + .problem-hint { display:none; }
 
 /* mark incorrect answer */
 .fill-quiz.quiz-over .writing-zone-input { pointer-events:none; }

@@ -319,6 +319,12 @@
       'lesson-5/literacy-11|Reading Practice: Robert\'s Postcard|p.310; II-C',
       title.literacyWB,
       'lesson-5/literacy-wb-1|Workbook: Kanji Writing Practice|p.133',
+      'lesson-5/literacy-wb-2|Workbook: Spelling Practice (山, 川, 元, and 気)|p.133; bonus',
+      'lesson-5/literacy-wb-3|Workbook: Spelling Practice (天, 私, 今, and 田)|p.133; bonus',
+      'lesson-5/literacy-wb-4|Workbook: Spelling Practice (女, 男, and 見)|p.133; bonus',
+      'lesson-5/literacy-wb-5|Workbook: Spelling Practice (行, 食, and 飲)|p.133; bonus',
+      'lesson-5/literacy-wb-6|Workbook: Fill in the Kanji|p.134; I',
+      'lesson-5/literacy-wb-7|Workbook: Translate the Sentences|p.134; II'
     ],
 
 
