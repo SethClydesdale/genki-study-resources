@@ -324,7 +324,17 @@
       'lesson-5/literacy-wb-4|Workbook: Spelling Practice (女, 男, and 見)|p.133; bonus',
       'lesson-5/literacy-wb-5|Workbook: Spelling Practice (行, 食, and 飲)|p.133; bonus',
       'lesson-5/literacy-wb-6|Workbook: Fill in the Kanji|p.134; I',
-      'lesson-5/literacy-wb-7|Workbook: Translate the Sentences|p.134; II'
+      'lesson-5/literacy-wb-7|Workbook: Translate the Sentences|p.134; II',
+      
+      // Lesson 6
+      'lesson-6/vocab-1|Vocabulary: Nouns|p.148',
+      'lesson-6/kanji-1|Kanji: Nouns|p.148',
+      'lesson-6/vocab-2|Vocabulary: な-adjective and U-verbs|p.148-149',
+      'lesson-6/kanji-2|Kanji: な-adjective and U-verbs|p.148-149',
+      'lesson-6/vocab-3|Vocabulary: Ru-verbs and Irregular Verbs|p.149',
+      'lesson-6/kanji-3|Kanji: Ru-verbs and Irregular Verbs|p.149',
+      'lesson-6/vocab-4|Vocabulary: Adverbs and Other Expressions|p.149',
+      'lesson-6/kanji-4|Kanji: Adverbs and Other Expressions|p.149'
     ],
 
 
@@ -1040,4 +1050,3 @@
   // initial setup
   Genki.init();
 }(window, document));
-
