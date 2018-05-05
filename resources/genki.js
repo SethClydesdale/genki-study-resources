@@ -334,7 +334,8 @@
       'lesson-6/vocab-3|Vocabulary: Ru-verbs and Irregular Verbs|p.149',
       'lesson-6/kanji-3|Kanji: Ru-verbs and Irregular Verbs|p.149',
       'lesson-6/vocab-4|Vocabulary: Adverbs and Other Expressions|p.149',
-      'lesson-6/kanji-4|Kanji: Adverbs and Other Expressions|p.149'
+      'lesson-6/kanji-4|Kanji: Adverbs and Other Expressions|p.149',
+      'lesson-6/culture-1|Culture Note: Japan\'s Educational System (1)|p.154'
     ],
 
 
