@@ -340,7 +340,8 @@
       'lesson-6/grammar-2|Practice: Te-form Conjugation|p.156; I-A',
       'lesson-6/grammar-3|Practice: ～てください|p.156-157; I-C & D',
       'lesson-6/grammar-4|Practice: ～てもいいですか|p.158; II-A & B',
-      'lesson-6/grammar-5|Practice: ～てはいけません|p.159; III-A'
+      'lesson-6/grammar-5|Practice: ～てはいけません|p.159; III-A',
+      'lesson-6/grammar-6|Practice: ～てもいいです／～てはいけません|p.159; III-C'
     ],
 
 
