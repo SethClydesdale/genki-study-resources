@@ -342,7 +342,8 @@
       'lesson-6/grammar-4|Practice: ～てもいいですか|p.158; II-A & B',
       'lesson-6/grammar-5|Practice: ～てはいけません|p.159; III-A',
       'lesson-6/grammar-6|Practice: ～てもいいです／～てはいけません|p.159; III-C',
-      'lesson-6/grammar-7|Practice: Describing Two Activites|p.159-160; IV-A'
+      'lesson-6/grammar-7|Practice: Describing Two Activites|p.159-160; IV-A & B',
+      'lesson-6/grammar-8|Practice: ～から|p.161; V-A'
     ],
 
 
