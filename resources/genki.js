@@ -345,7 +345,11 @@
       'lesson-6/grammar-7|Practice: Describing Two Activites|p.159-160; IV-A & B',
       'lesson-6/grammar-8|Practice: ～から|p.161; V-A',
       'lesson-6/grammar-9|Practice: ～ましょうか|p.162-163; VI-A & B',
-      'lesson-6/vocab-5|Useful Expressions: Directions|p.165'
+      'lesson-6/vocab-5|Useful Expressions: Directions|p.165',
+      title.workbook,
+      'lesson-6/workbook-1|Workbook: Te-form Conjugation 1|p.54',
+      'lesson-6/workbook-2|Workbook: Te-form Conjugation 2|p.55-56',
+      'lesson-6/workbook-3|Workbook: ～てください|p.57; I'
     ],
 
 
@@ -658,12 +662,13 @@
           
           // Split the answer from the hint.
           // Syntax is {ANSWER|HINT|HIDE_HINT} HINT and HIDE_HINT is optional
+          // passing "isAnswer" to HIDE_HINT will hide HINT and make it a secondary answer
           var value = match.slice(1, match.length - 1).split('|');
           
           ++Genki.stats.problems; // increment problems number
           
           // parse and return the input field
-          return '<span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="' + value[0] + '" data-mistakes="0" tabindex="0" style="width:' + (((value[1] ? value[1] : value[0]).length * 14) + 10) + 'px;">' + ((value[1] && !value[2]) ? '<span class="problem-hint">' + value[1] + '</span>' : '') + '</span>';
+          return '<span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="' + value[0] + '" ' + (value[2] && value[2] == 'isAnswer' ? 'data-answer2="' + value[1] + '"' : '') + ' data-mistakes="0" tabindex="0" style="width:' + (((value[1] ? value[1] : value[0]).length * 14) + 10) + 'px;">' + ((value[1] && !value[2]) ? '<span class="problem-hint">' + value[1] + '</span>' : '') + '</span>';
           
         }) + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers(false, \'fill\');">Check Answers</button></div>';
         
@@ -883,17 +888,23 @@
 
           // loop over the inputs and check to see if the answers are correct
           var input = document.querySelectorAll('.writing-zone-input'),
-              i = 0, j = input.length;
+              i = 0, j = input.length, val, answer;
 
           for (; i < j; i++) {
+            val = input[i].value.toLowerCase();
+            answer = input[i].dataset.answer.toLowerCase();
 
             // increment mistakes if the answer is incorrect
-            if (input[i].value.toLowerCase() != input[i].dataset.answer.toLowerCase()) {
+            if (
+              (!input[i].dataset.answer2 && val != answer)
+              || 
+              (input[i].dataset.answer2 && val != answer && val != input[i].dataset.answer2.toLowerCase())
+            ) {
               input[i].dataset.mistakes = ++input[i].dataset.mistakes;
               ++Genki.stats.mistakes;
               
               if (type == 'fill') {
-                input[i].parentNode.insertAdjacentHTML('beforeend', '<span class="problem-answer">' + input[i].dataset.answer + '</span>');
+                input[i].parentNode.insertAdjacentHTML('beforeend', '<span class="problem-answer">' + input[i].dataset.answer + (input[i].dataset.answer2 ? '<span class="secondary-answer">' + input[i].dataset.answer2 + '</span>' : '') + '</span>');
               }
             }
 
