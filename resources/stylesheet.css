@@ -985,6 +985,13 @@ footer li:first-child:before { display:none; }
   margin-bottom:-20px;
 }
 .problem-answer { color:#F00; }
+.secondary-answer {
+  font-size:11px;
+  line-height:10px;
+  display:block;
+  opacity:0.7;
+}
+
 [data-mistakes="1"] + .problem-hint { display:none; }
 
 /* mark incorrect answer */
