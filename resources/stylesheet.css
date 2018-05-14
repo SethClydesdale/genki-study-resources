@@ -947,12 +947,21 @@ footer li:first-child:before { display:none; }
 }
 
 .text-block p { margin:0 0 25px 0; }
-.fill-quiz .text-block p { margin:0 0 40px 0; }
+.fill-quiz .problem { margin:0 0 40px 0; }
+.fill-quiz .small-margin .problem { margin:0 0 25px 0; }
 
 .columns-2 > * {
   width:50%;
   margin:0 0 25px 0;
   float:left;
+}
+
+/* counter for problems */
+.count-problems { counter-reset:problems; }
+.count-problems .problem:before {
+  counter-increment:problems;
+  content:counter(problems) ".";
+  margin-right:6px;
 }
 
 /* input style */
@@ -965,6 +974,7 @@ footer li:first-child:before { display:none; }
 }
 
 .fill-quiz .writing-zone-input {
+  font-size:14px;
   background:none;
   border:none;
   border-bottom:2px solid #999;
