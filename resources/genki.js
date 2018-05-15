@@ -350,7 +350,9 @@
       'lesson-6/workbook-1|Workbook: Te-form Conjugation 1|p.54',
       'lesson-6/workbook-2|Workbook: Te-form Conjugation 2|p.55-56',
       'lesson-6/workbook-3|Workbook: ～てください|p.57; I & II',
-      'lesson-6/workbook-4|Workbook: ～てもいいです|p.58'
+      'lesson-6/workbook-4|Workbook: ～てもいいです|p.58',
+      'lesson-6/workbook-5|Workbook: ～てはいけません|p.59; I & II',
+      'lesson-6/workbook-6|Workbook: Describing Two Activities|p.60; I & II'
     ],
 
 
