@@ -949,6 +949,10 @@ footer li:first-child:before { display:none; }
 .text-block p { margin:0 0 25px 0; }
 .fill-quiz .problem { margin:0 0 40px 0; }
 .fill-quiz .small-margin .problem { margin:0 0 25px 0; }
+.fill-quiz span.problem {
+  display:inline-block;
+  margin:0;
+}
 
 /* columns */
 .columns-2 > * {
@@ -1001,14 +1005,35 @@ p.section-desc {
   line-height:20px;
   margin-bottom:-20px;
 }
+
 .problem-answer { color:#F00; }
 .secondary-answer {
   font-size:11px;
   line-height:10px;
   display:block;
-  opacity:0.7;
 }
 
+/* optional parent class to add a background to answers for contrast */
+.show-bg .problem-answer, .show-bg .secondary-answer {
+  background:#FFF;
+  background:rgba(255, 255, 255, 0.5);
+  border:1px solid #CCC;
+  border-color:rgba(204, 204, 204, 0.7);
+  border-top:none;
+}
+
+.show-bg .problem-answer {
+  border-bottom:none;
+  position:relative;
+  z-index:1;
+}
+
+.show-bg .secondary-answer {
+  line-height:14px;
+  margin:0 -1px 0 -1px;
+}
+
+/* hide hints */
 [data-mistakes="1"] + .problem-hint { display:none; }
 
 /* mark incorrect answer */

@@ -352,7 +352,9 @@
       'lesson-6/workbook-3|Workbook: ～てください|p.57; I & II',
       'lesson-6/workbook-4|Workbook: ～てもいいです|p.58',
       'lesson-6/workbook-5|Workbook: ～てはいけません|p.59; I & II',
-      'lesson-6/workbook-6|Workbook: Describing Two Activities|p.60; I & II'
+      'lesson-6/workbook-6|Workbook: Describing Two Activities|p.60; I & II',
+      'lesson-6/workbook-7|Workbook: ～から|p.61; I & II',
+      'lesson-6/workbook-8|Workbook: Questions|p.63'
     ],
 
 
