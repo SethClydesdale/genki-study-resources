@@ -354,7 +354,15 @@
       'lesson-6/workbook-5|Workbook: ～てはいけません|p.59; I & II',
       'lesson-6/workbook-6|Workbook: Describing Two Activities|p.60; I & II',
       'lesson-6/workbook-7|Workbook: ～から|p.61; I & II',
-      'lesson-6/workbook-8|Workbook: Questions|p.63'
+      'lesson-6/workbook-8|Workbook: Questions|p.63',
+      title.literacy,
+      'lesson-6/literacy-1|Kanji Practice: 東 and 西|p.312',
+      'lesson-6/literacy-2|Kanji Practice: 南 and 北|p.312',
+      'lesson-6/literacy-3|Kanji Practice: 口 and 出|p.312',
+      'lesson-6/literacy-4|Kanji Practice: 右 and 左|p.312',
+      'lesson-6/literacy-5|Kanji Practice: 分, 先, and 生|p.313',
+      'lesson-6/literacy-6|Kanji Practice: 大 and 学|p.313',
+      'lesson-6/literacy-7|Kanji Practice: 外 and 国|p.313'
     ],
 
 
