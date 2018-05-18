@@ -36,7 +36,7 @@
       mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong before finding the correct answer. Review these problems before trying again.',
       writing_mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong. Review these problems before trying again.',
       multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red">red</span>. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.',
-      fill_mistakes : 'The items underlined in <span class="t-red">red</span> were answered wrong, the correct answers are listed underneath. Review these problems before trying again.',
+      fill_mistakes : 'The items underlined in <span class="t-red">red</span> were answered wrong, the correct answers are listed underneath in <span class="t-red">red</span>. Review these problems before trying again.',
     },
 
     // info about the currently active exercise
@@ -362,7 +362,8 @@
       'lesson-6/literacy-4|Kanji Practice: 右 and 左|p.312',
       'lesson-6/literacy-5|Kanji Practice: 分, 先, and 生|p.313',
       'lesson-6/literacy-6|Kanji Practice: 大 and 学|p.313',
-      'lesson-6/literacy-7|Kanji Practice: 外 and 国|p.313'
+      'lesson-6/literacy-7|Kanji Practice: 外 and 国|p.313',
+      'lesson-6/literacy-8|Kanji Practice: Combine the Kanji|p.314; I-A'
     ],
 
 
@@ -672,16 +673,37 @@
         
         // add the quiz to the document
         zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
+          var value = match.slice(1, match.length - 1).split('|'), hint, flag;
           
-          // Split the answer from the hint.
-          // Syntax is {ANSWER|HINT|HIDE_HINT} HINT and HIDE_HINT is optional
-          // passing "isAnswer" to HIDE_HINT will hide HINT and make it a secondary answer
-          var value = match.slice(1, match.length - 1).split('|');
-          
-          ++Genki.stats.problems; // increment problems number
-          
-          // parse and return the input field
-          return '<span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="' + value[0] + '" ' + (value[2] && value[2] == 'isAnswer' ? 'data-answer2="' + value[1] + '"' : '') + ' data-mistakes="0" tabindex="0" style="width:' + (((value[1] ? value[1] : value[0]).length * 14) + 14) + 'px;">' + ((value[1] && !value[2]) ? '<span class="problem-hint">' + value[1] + '</span>' : '') + '</span>';
+          // create a jisho link, syntax is {!J|SEARCH_QUERY|HASHTAGS}
+          if (value[0] == '!J') {
+            return '<a href="https://jisho.org/search/' + encodeURIComponent(value[1] + (value[2] ? ' ' + value[2] : '')) + '" target="_blank" class="jisho-link">' + value[1] + '</a>';
+            
+          } else {
+            // Split the answer from the hint.
+            // Syntax is {ANSWER|HINT|HIDE_HINT} HINT and HIDE_HINT is optional
+            // passing "isAnswer" to HIDE_HINT will hide HINT and make it a secondary answer
+            // passing "furigana" to HIDE_HINT will hide HINT and make it furigana only to aid with reading
+            hint = value[1] ? value[1] : '';
+            flag = value[2] ? value[2] : '';
+
+            ++Genki.stats.problems; // increment problems number
+
+            // parse and return the input field
+            return '<span class="writing-zone">'+
+              '<input '+
+                'class="writing-zone-input" '+
+                'type="text" '+
+                'data-answer="' + value[0] + '" '+
+                (flag == 'isAnswer' ? 'data-answer2="' + hint + '" ' : '')+
+                (flag == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
+                'data-mistakes="0" '+
+                'tabindex="0" '+
+                'style="width:' + (((hint || value[0]).length * 14) + 14) + 'px;"'+
+              '>'+
+              ((hint && !flag) ? '<span class="problem-hint">' + hint + '</span>' : '')+
+            '</span>';
+          }
           
         }) + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers(false, \'fill\');">Check Answers</button></div>';
         
@@ -901,23 +923,24 @@
 
           // loop over the inputs and check to see if the answers are correct
           var input = document.querySelectorAll('.writing-zone-input'),
-              i = 0, j = input.length, val, answer;
+              i = 0, j = input.length, val, answer, data;
 
           for (; i < j; i++) {
+            data = input[i].dataset;
             val = input[i].value.toLowerCase();
-            answer = input[i].dataset.answer.toLowerCase();
+            answer = data.answer.toLowerCase();
 
             // increment mistakes if the answer is incorrect
             if (
-              (!input[i].dataset.answer2 && val != answer)
+              (!data.answer2 && val != answer)
               || 
-              (input[i].dataset.answer2 && val != answer && val != input[i].dataset.answer2.toLowerCase())
+              (data.answer2 && val != answer && val != data.answer2.toLowerCase())
             ) {
-              input[i].dataset.mistakes = ++input[i].dataset.mistakes;
+              data.mistakes = ++data.mistakes;
               ++Genki.stats.mistakes;
               
               if (type == 'fill') {
-                input[i].parentNode.insertAdjacentHTML('beforeend', '<span class="problem-answer">' + input[i].dataset.answer + (input[i].dataset.answer2 ? '<span class="secondary-answer">' + input[i].dataset.answer2 + '</span>' : '') + '</span>');
+                input[i].parentNode.insertAdjacentHTML('beforeend', '<span class="problem-answer">' + data.answer + (data.answer2 || data.furigana ? '<span class="secondary-answer' + (data.furigana ? ' furigana-only' : '') + '">' + (data.answer2 || data.furigana) + '</span>' : '') + '</span>');
               }
             }
 
