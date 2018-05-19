@@ -147,23 +147,12 @@ a:hover, a:focus { text-decoration:underline; }
   vertical-align:super;
 }
 
-/* style for jisho links */
-.jisho-link {
-  position:relative;
-  padding-right:12px;
+/* lesson number for kanji or words */
+.lesson-num {
+  font-size:12px;
+  font-style:normal;
+  vertical-align:top;
 }
-
-.jisho-link:before {
-  content:"";
-  height:10px;
-  width:10px;
-  position:absolute;
-  top:0;
-  right:0;
-  background:url(images/jisho.gif) no-repeat;
-  background-size:100%;
-}
-
 
 /* header */
 header {
