@@ -791,6 +791,12 @@ footer li:first-child:before { display:none; }
 .writing-zone-input:hover { border-color:#999; }
 .writing-zone-input:focus { border-color:#F60; }
 
+/* custom width */
+.even-width .writing-zone, .even-width .writing-zone-input {
+  text-align:left;
+  width:100% !important;
+}
+
 
 /* mark incorrect answer */
 .writing-quiz.quiz-over .writing-zone-input { pointer-events:none; }
