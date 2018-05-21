@@ -154,6 +154,9 @@ a:hover, a:focus { text-decoration:underline; }
   vertical-align:top;
 }
 
+/* resize large images */
+.lesson-image img { max-width:100%; }
+
 /* header */
 header {
   color:#FFF;
