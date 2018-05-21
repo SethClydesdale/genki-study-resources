@@ -675,31 +675,40 @@
         
         // add the quiz to the document
         zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
+          var value = match.slice(1, match.length - 1).split('|'), hint, flag, url;
           
-          // Split the answer from the hint.
-          // Syntax is {ANSWER|HINT|HIDE_HINT} HINT and HIDE_HINT is optional
-          // passing "isAnswer" to HIDE_HINT will hide HINT and make it a secondary answer
-          // passing "furigana" to HIDE_HINT will hide HINT and make it furigana only to aid with reading
-          var value = match.slice(1, match.length - 1).split('|'),
-               hint = value[1] ? value[1] : '',
-               flag = value[2] ? value[2] : '';
+          if (value[0] == '!IMG') {
+            // parse images
+            // Syntax is {!IMG|FILE_NAME|ALT_TEXT} ALT_TEXT is optional
+            url = '../../../resources/images/lesson-images/' + value[1];
+            
+            return '<a href="' + url + '" target="blank" title="View full image" class="lesson-image"><img src="' + url + '" alt="' + (value[2] || value[1]) + '" /></a>';
+            
+          } else {
+            // Split the answer from the hint.
+            // Syntax is {ANSWER|HINT|HIDE_HINT} HINT and HIDE_HINT is optional
+            // passing "isAnswer" to HIDE_HINT will hide HINT and make it a secondary answer
+            // passing "furigana" to HIDE_HINT will hide HINT and make it furigana only to aid with reading
+            hint = value[1] ? value[1] : '',
+            flag = value[2] ? value[2] : '';
 
-          ++Genki.stats.problems; // increment problems number
+            ++Genki.stats.problems; // increment problems number
 
-          // parse and return the input field
-          return '<span class="writing-zone">'+
-            '<input '+
-              'class="writing-zone-input" '+
-              'type="text" '+
-              'data-answer="' + value[0] + '" '+
-              (flag == 'isAnswer' ? 'data-answer2="' + hint + '" ' : '')+
-              (flag == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
-              'data-mistakes="0" '+
-              'tabindex="0" '+
-              'style="width:' + (((hint || value[0]).length * 14) + 14) + 'px;"'+
-            '>'+
-            ((hint && !flag) ? '<span class="problem-hint">' + hint + '</span>' : '')+
-          '</span>';
+            // parse and return the input field
+            return '<span class="writing-zone">'+
+              '<input '+
+                'class="writing-zone-input" '+
+                'type="text" '+
+                'data-answer="' + value[0] + '" '+
+                (flag == 'isAnswer' ? 'data-answer2="' + hint + '" ' : '')+
+                (flag == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
+                'data-mistakes="0" '+
+                'tabindex="0" '+
+                'style="width:' + (((hint || value[0]).length * 14) + 14) + 'px;"'+
+              '>'+
+              ((hint && !flag) ? '<span class="problem-hint">' + hint + '</span>' : '')+
+            '</span>';
+          }
           
         }) + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers(false, \'fill\');">Check Answers</button></div>';
         

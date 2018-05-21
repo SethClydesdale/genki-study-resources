@@ -71,40 +71,7 @@
           '<div class="problem">({C})　コンビニ：南口をまっすぐ三分ぐらい行ってください。</div>'+
         '</div>'+
         
-        // map
-        '<div id="station-map">'+
-          // horizontal roads
-          '<div class="road-h-1" style="top:30px;"></div>'+
-          '<div class="road-h-2" style="top:30px;"></div>'+
-          '<div class="road-h-1" style="top:100px;"></div>'+
-          '<div class="road-h-2" style="top:100px;"></div>'+
-        
-          // vertical roads
-          '<div class="road-v-1" style="top:0px;left:280px;height:31px;"></div>'+
-          '<div class="road-v-1" style="top:49px;left:280px;height:52px;"></div>'+
-          '<div class="road-v-1" style="top:119px;left:280px;height:101px;"></div>'+
-        
-          // intersection
-          '<div class="intersection" style="top:31px;left:280px;"></div>'+
-        
-          // tracks
-          '<div class="tracks" style="top:150px"></div>'+
-          '<div class="tracks-2" style="top:145px"></div>'+
-        
-          // station
-          '<div class="station" style="top:90px;left:240px;">えき</div>'+
-        
-          // compass
-          '<div class="compass" style="top:170px;left:160px;">N<br><i class="fa">&#xf176;</i></div>'+
-        
-          // location markers
-          '<div class="location-marker" style="top:76px;left:15px;">A</div>'+
-          '<div class="location-marker" style="top:49px;left:100px;">B</div>'+
-          '<div class="location-marker" style="top:185px;left:299px;">C</div>'+
-          '<div class="location-marker" style="top:132px;left:277px;">D</div>'+
-          '<div class="location-marker" style="top:6px;left:461px;">E</div>'+
-          '<div class="location-marker" style="top:76px;left:390px;">F</div>'+
-        '</div>'+
+        '{!IMG|l6-l9.png|Station Map}'+
         
         '<p style="vertical-align:top;display:inline-block;padding-left:30px;">'+
           'えき station<br>'+
@@ -113,86 +80,5 @@
         '</p>'
         
     });</script>
-    
-    <style type="text/css">
-      #station-map {
-        background:#FFF;
-        border:1px solid #CCC;
-        position:relative;
-        display:inline-block;
-        height:220px;
-        width:500px;
-        overflow:hidden;
-      }
-      
-      #station-map > * {
-        position:absolute;
-        box-sizing:border-box;
-      }
-      
-      .station {
-        background:#FFF;
-        border:1px solid #333;
-        font-size:24px;
-        line-height:50px;
-        text-align:center;
-        width:100px;
-        height:75px;
-      }
-      
-      .tracks, .tracks-2 {
-        width:100%;
-        border-bottom:1px solid #333;
-      }
-      
-      .tracks-2 {
-        height:12px;
-        border:none;
-        background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI5MCI+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iOTAiIGZpbGw9IiMzMzMiPjwvcmVjdD48L3N2Zz4=") 4px 0 repeat; /* https://philiprogers.com/svgpatterns/ */
-      }
-      
-      .road-h-1, .road-h-2 {
-        height:20px;
-        background:#EEE;
-        border-top:1px solid #333;
-        border-bottom:1px solid #333;
-      }
-      
-      .road-h-1 { width:280px; }
-      .road-h-2 {
-        right:0;
-        width:200px;
-      }
-      
-      .road-v-1 {
-        width:20px;
-        background:#EEE;
-        border-right:1px solid #333;
-        border-left:1px solid #333;
-      }
-      
-      .intersection {
-        background:#EEE;
-        height:18px;
-        width:20px;
-      }
-      
-      .location-marker {
-        background:#FFF;
-        font-size:18px;
-        text-align:center;
-        border:1px solid #333;
-        height:25px;
-        width:25px;
-        line-height:25px;
-      }
-      
-      .compass {
-        font-size:18px;
-        text-align:center;
-        line-height:18px;
-      }
-      .compass i { font-size:24px; }
-    </style>
   </body>
 </html>
