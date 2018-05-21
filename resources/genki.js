@@ -365,7 +365,8 @@
       'lesson-6/literacy-7|Kanji Practice: 外 and 国|p.313',
       'lesson-6/literacy-8|Kanji Practice: Combine the Kanji|p.314; I-A',
       'lesson-6/literacy-9|Reading Practice: Find the Location|p.314; I-B',
-      'lesson-6/literacy-10|Reading Practice: Bulletin Board|p.314-315; II'
+      'lesson-6/literacy-10|Reading Practice: Bulletin Board|p.314-315; II',
+      'lesson-6/literacy-11|Reading Practice: Chiaki\'s Favorite Restaurant|p.316-317; III-A, B, & C'
     ],
 
 
