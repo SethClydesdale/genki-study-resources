@@ -766,6 +766,7 @@ footer li:first-child:before { display:none; }
 }
 
 .writing-quiz .quiz-item {
+  font-size:14px;
   position:relative;
   pointer-events:none; /* prevent text copying; we want the student to type the kana */
 }
@@ -779,7 +780,7 @@ footer li:first-child:before { display:none; }
 }
 
 .writing-zone-input {
-  font-size:13px;
+  font-size:14px;
   font-family:Meiryo, Osaka, Arial, sans-serif;
   text-align:center;
   background:#FFF;
