@@ -366,7 +366,16 @@
       'lesson-6/literacy-8|Kanji Practice: Combine the Kanji|p.314; I-A',
       'lesson-6/literacy-9|Reading Practice: Find the Location|p.314; I-B',
       'lesson-6/literacy-10|Reading Practice: Bulletin Board|p.314-315; II',
-      'lesson-6/literacy-11|Reading Practice: Chiaki\'s Favorite Restaurant|p.316-317; III-A, B, & C'
+      'lesson-6/literacy-11|Reading Practice: Chiaki\'s Favorite Restaurant|p.316-317; III-A, B, & C',
+      title.literacyWB,
+      'lesson-6/literacy-wb-1|Workbook: Kanji Writing Practice|p.135',
+      'lesson-6/literacy-wb-2|Workbook: Spelling Practice (東, 西, and 南)|p.135; bonus',
+      'lesson-6/literacy-wb-3|Workbook: Spelling Practice (北, 口, and 出)|p.135; bonus',
+      'lesson-6/literacy-wb-4|Workbook: Spelling Practice (右, 左, and 分)|p.135; bonus',
+      'lesson-6/literacy-wb-5|Workbook: Spelling Practice (先, 生, and 大)|p.135; bonus',
+      'lesson-6/literacy-wb-6|Workbook: Spelling Practice (学, 外, and 国)|p.135; bonus',
+      'lesson-6/literacy-wb-7|Workbook: Fill in the Kanji|p.136; I',
+      'lesson-6/literacy-wb-8|Workbook: Translate the Sentences|p.136; II'
     ],
 
 
