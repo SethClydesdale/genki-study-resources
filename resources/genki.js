@@ -355,7 +355,11 @@
       'lesson-6/literacy-wb-5|Workbook: Spelling Practice (先, 生, and 大)|p.135; bonus',
       'lesson-6/literacy-wb-6|Workbook: Spelling Practice (学, 外, and 国)|p.135; bonus',
       'lesson-6/literacy-wb-7|Workbook: Fill in the Kanji|p.136; I',
-      'lesson-6/literacy-wb-8|Workbook: Translate the Sentences|p.136; II'
+      'lesson-6/literacy-wb-8|Workbook: Translate the Sentences|p.136; II',
+      
+      // Lesson 7
+      'lesson-7/vocab-1|Vocabulary: Nouns 1|p.168',
+      'lesson-7/vocab-2|Vocabulary: Nouns 2|p.168'
     ],
 
 
