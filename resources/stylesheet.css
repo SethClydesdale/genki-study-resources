@@ -634,7 +634,7 @@ footer li:first-child:before { display:none; }
   text-align:center;
 }
 
-.helper-present #question-list .quiz-item, .helper-present #drop-list .quiz-answer-zone {
+.helper-present #question-list .quiz-item[data-helper], .helper-present #drop-list .quiz-answer-zone[data-text*="|"] {
   margin-bottom:18px;
 }
 

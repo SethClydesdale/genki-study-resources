@@ -166,15 +166,11 @@
       // Lesson 3
       'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.86',
       'lesson-3/vocab-2|Vocabulary: Food and Drinks|p.86',
-      'lesson-3/kanji-1|Kanji: Entertainment and Food|p.86',
       'lesson-3/vocab-3|Vocabulary: Places and Time|p.86-87',
-      'lesson-3/kanji-2|Kanji: Places and Time|p.86-87',
       'lesson-3/vocab-4|Vocabulary: U-verbs|p.87',
-      'lesson-3/kanji-3|Kanji: U-verbs|p.87',
       'lesson-3/vocab-5|Vocabulary: Ru-verbs and Irregular verbs|p.87',
       'lesson-3/vocab-6|Vocabulary: Adverbs|p.87',
       'lesson-3/vocab-7|Vocabulary: Adjectives and Expressions|p.87',
-      'lesson-3/kanji-4|Kanji: Verbs and Adjectives|p.87',
       'lesson-3/grammar-1|Practice: Verb Conjugation|p.95; I-A',
       'lesson-3/grammar-2|Practice: を and で|p.95-96; I-B',
       'lesson-3/grammar-3|Practice: Indicating the Goal of Movement|p.96; I-C',
@@ -214,16 +210,11 @@
 
       // Lesson 4
       'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
-      'lesson-4/kanji-1|Kanji: People and Things|p.104',
       'lesson-4/vocab-2|Vocabulary: Activities and Places|p.104',
-      'lesson-4/kanji-2|Kanji: Activities and Places|p.104',
       'lesson-4/vocab-3|Vocabulary: Time|p.105',
-      'lesson-4/kanji-3|Kanji: Time|p.105',
       'lesson-4/vocab-4|Vocabulary: U-verbs and Ru-verbs|p.105',
       'lesson-4/vocab-5|Vocabulary: Adverbs and Expressions|p.105',
-      'lesson-4/kanji-4|Kanji: Verbs|p.105',
       'lesson-4/vocab-6|Vocabulary: Location Words|p.106',
-      'lesson-4/kanji-5|Kanji: Location Words|p.106',
       'lesson-4/culture-1|Culture Note: Japanese National Holidays|p.114',
       'lesson-4/grammar-1|Practice: Ｘがあります|p.116; I-C',
       'lesson-4/grammar-2|Practice: Describing Locations|p.117; II-A & B',
@@ -237,9 +228,7 @@
       'lesson-4/vocab-7|Bonus Vocabulary: Days 1-15|p.127',
       'lesson-4/vocab-8|Bonus Vocabulary: Days 16-31|p.127',
       'lesson-4/vocab-9|Bonus Vocabulary: Months|p.127',
-      'lesson-4/kanji-6|Bonus Kanji: Months|p.127',
       'lesson-4/vocab-10|Useful Expressions: Time Words|p.127',
-      'lesson-4/kanji-7|Useful Expressions: Time Words Kanji|p.127',
       title.workbook,
       'lesson-4/workbook-1|Workbook: Ｘがあります／います|p.36; I & II',
       'lesson-4/workbook-2|Workbook: Describing Where Things Are|p.37; I & II',
@@ -272,13 +261,9 @@
 
       // Lesson 5
       'lesson-5/vocab-1|Vocabulary: Nouns|p.130',
-      'lesson-5/kanji-1|Kanji: Nouns|p.130',
       'lesson-5/vocab-2|Vocabulary: い-adjectives|p.130-131',
-      'lesson-5/kanji-2|Kanji: い-adjectives|p.130-131',
       'lesson-5/vocab-3|Vocabulary: な-adjectives|p.131',
-      'lesson-5/kanji-3|Kanji: な-adjectives|p.131',
       'lesson-5/vocab-4|Vocabulary: Verbs and Expressions|p.131',
-      'lesson-5/kanji-4|Kanji: Verbs and Expressions|p.131',
       'lesson-5/grammar-1|Practice: Present Affirmative Adjectives|p.137; I-A',
       'lesson-5/grammar-2|Practice: Present Negative Adjectives|p.137; I-B',
       'lesson-5/grammar-3|Practice: Present Adjectives|p.137-138; I-C',
@@ -294,7 +279,6 @@
       'lesson-5/grammar-13|Practice: ～ましょう|p.142; V-A',
       'lesson-5/culture-1|Culture Note: Japanese Festivals|p.144',
       'lesson-5/vocab-5|Bonus Vocabulary: At the Post Office|p.145',
-      'lesson-5/kanji-5|Bonus Kanji: At the Post Office|p.145',
       'lesson-5/vocab-6|Useful Expressions: At the Post Office|p.145',
       title.workbook,
       'lesson-5/workbook-1|Workbook: Adjective Conjugation (Present Tense)|p.45',
@@ -328,13 +312,9 @@
       
       // Lesson 6
       'lesson-6/vocab-1|Vocabulary: Nouns|p.148',
-      'lesson-6/kanji-1|Kanji: Nouns|p.148',
       'lesson-6/vocab-2|Vocabulary: な-adjective and U-verbs|p.148-149',
-      'lesson-6/kanji-2|Kanji: な-adjective and U-verbs|p.148-149',
       'lesson-6/vocab-3|Vocabulary: Ru-verbs and Irregular Verbs|p.149',
-      'lesson-6/kanji-3|Kanji: Ru-verbs and Irregular Verbs|p.149',
       'lesson-6/vocab-4|Vocabulary: Adverbs and Other Expressions|p.149',
-      'lesson-6/kanji-4|Kanji: Adverbs and Other Expressions|p.149',
       'lesson-6/grammar-1|Review: Te-form Conjugation Rules|p.150-151',
       'lesson-6/culture-1|Culture Note: Japan\'s Educational System (1)|p.154',
       'lesson-6/grammar-2|Practice: Te-form Conjugation|p.156; I-A',
@@ -428,6 +408,7 @@
             keysQ = [],
             keysA,
             helper,
+            helperPresent,
             i;
 
         // generate a key list for the quizlet so we can randomly sort questions and answers
@@ -447,12 +428,18 @@
           quiz += '<div class="quiz-item" ' + (helper || '') + '>' + (helper ? keysQ[i].replace(/(.*?)\|(.*)/, '$1<span class="hidden-text">$2</span>') : keysQ[i]) + '</div>';
           dropList += '<div class="quiz-answer-zone" data-text="' + keysQ[i] + '" data-mistakes="0"></div>';
           keysQ.splice(i, 1);
+          
           ++Genki.stats.problems;
+          
+          // indicate that a helper, such as furigana, is present
+          if (!helperPresent && helper) {
+            helperPresent = true;
+          }
         }
         quiz += '</div>' + dropList + '</div>'; // close the question list and add the drop list
 
         // add a class for the helper styles
-        if (helper) {
+        if (helperPresent) {
           zone.className += ' helper-present';
         }
         
