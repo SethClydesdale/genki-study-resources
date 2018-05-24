@@ -29,7 +29,6 @@
       std_drag : 'Drag the English expression to the Japanese expression that has the same meaning.',
       std_kana : 'Drag the Kana to the matching Romaji.',
       std_num : 'Drag the Numbers to the matching Kana.',
-      std_kanji : 'Drag the Kana to the matching Kanji.',
       std_multi : 'Solve the problems by choosing the correct answers.',
       std_questions : 'Answer the questions as best as you can.',
       std_culture : 'Answer the questions about Japanese culture as best as you can.',
@@ -359,7 +358,10 @@
       
       // Lesson 7
       'lesson-7/vocab-1|Vocabulary: Nouns 1|p.168',
-      'lesson-7/vocab-2|Vocabulary: Nouns 2|p.168'
+      'lesson-7/vocab-2|Vocabulary: Nouns 2|p.168',
+      'lesson-7/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.168-169',
+      'lesson-7/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.169',
+      'lesson-7/vocab-5|Vocabulary: Adverbs and Other Expressions|p.169'
     ],
 
 
