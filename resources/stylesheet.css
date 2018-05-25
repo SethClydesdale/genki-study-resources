@@ -115,6 +115,20 @@ a:hover, a:focus { text-decoration:underline; }
 .button:hover, a.button:hover { background:#E50; }
 .button:focus, a.button:focus { background:#D40; }
 
+/* input fields */
+input[type="text"] {
+  font-size:14px;
+  font-family:Meiryo, Osaka, Arial, sans-serif;
+  background:#FFF;
+  border:1px solid #CCC;
+  padding:6px;
+  outline:none;
+}
+input[type="text"]:disabled { color:#333; }
+input[type="text"]::placeholder { color:#BBB; }
+input[type="text"]:hover { border-color:#999; }
+input[type="text"]:focus { border-color:#F60; }
+
 /* aesthetic styles */
 .center { text-align:center; }
 
@@ -123,6 +137,7 @@ a:hover, a:focus { text-decoration:underline; }
 .t-red { color:#F00; }
 .t-orange { color:#F60; }
 
+.nomargin { margin:0 !important; }
 .clearfix { clear:both; }
 .clear:after {
   content:"";
@@ -238,6 +253,44 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   visibility:visible;
 }
 
+/* quick navigation and quick search */
+#quick-actions > div { margin:0; }
+#quick-actions h2 {
+  font-size:20px;
+  margin-top:15px;
+}
+
+#quick-search {
+  width:100%;
+  box-sizing:border-box;
+  margin-top:1em;
+}
+
+#quick-search-results:empty { border-color:transparent; }
+#quick-search-results {
+  border:1px solid #CCC;
+  height:200px;
+  padding:3px;
+  overflow:auto;
+}
+
+#quick-search-results li {
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+/* lesson numbers */
+#quick-search-results li[data-lesson]:before {
+  content:attr(data-lesson);
+  color:#FFF;
+  font-size:11px;
+  background:#F60;
+  border:1px solid #E50;;
+  border-radius:3px;
+  padding:0px 2px;
+  margin-right:3px;
+}
+
 
 /* exercise styles */
 #exercise > * { visibility:hidden; }
@@ -277,10 +330,6 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 }
 
 /* titles */
-#quick-nav {
-  font-size:20px;
-}
-
 .lesson-title {
   color:#F60;
   font-size:20px;
@@ -779,7 +828,7 @@ footer li:first-child:before { display:none; }
   min-width:25px;
 }
 
-.writing-zone-input {
+input.writing-zone-input {
   font-size:14px;
   font-family:Meiryo, Osaka, Arial, sans-serif;
   text-align:center;
@@ -790,10 +839,10 @@ footer li:first-child:before { display:none; }
   padding:3px 0;
   outline:none;
 }
-.writing-zone-input:disabled { color:#333; }
-.writing-zone-input::placeholder { color:#BBB; }
-.writing-zone-input:hover { border-color:#999; }
-.writing-zone-input:focus { border-color:#F60; }
+input.writing-zone-input:disabled { color:#333; }
+input.writing-zone-input::placeholder { color:#BBB; }
+input.writing-zone-input:hover { border-color:#999; }
+input.writing-zone-input:focus { border-color:#F60; }
 
 /* custom width */
 .even-width .writing-zone, .even-width .writing-zone-input {
@@ -1110,7 +1159,7 @@ p.section-desc {
   .content-block { padding:30px 0; }
 
   /* add a bit of padding to other elements, specifically for the index and other such pages */
-  p, h2, h3, h4 {
+  p, h2, h3, h4, #quick-search-wrapper {
     padding:0 6px;
   }
   
@@ -1157,6 +1206,12 @@ p.section-desc {
     top:60px;
     left:50%;
     margin-left:-60px;
+  }
+  
+  /* display columns below one another */
+  .columns-2 > * {
+    float:none;
+    width:100%;
   }
 
   /* prevent vocab quizzes from wrapping */
