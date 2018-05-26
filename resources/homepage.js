@@ -56,6 +56,7 @@
         'class="fa" '+
         'style="color:#F60;" '+
         'href="#copy-search-link" '+
+        'title="Copy the search link" '+
         'onclick="'+
           'window.prompt('+
             '\'You can copy the direct search link from the box below.\', '+
@@ -77,7 +78,7 @@
     for (; i < j; i++) {
       keyVal = query[i].split('=');
       
-      if (/search/i.test(keyVal[0])) {
+      if (/^search$/i.test(keyVal[0])) {
         search.value = decodeURIComponent(keyVal[1]);
         break;
       }
