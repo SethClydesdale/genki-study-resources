@@ -361,7 +361,8 @@
       'lesson-7/vocab-2|Vocabulary: Nouns 2|p.168',
       'lesson-7/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.168-169',
       'lesson-7/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.169',
-      'lesson-7/vocab-5|Vocabulary: Adverbs and Other Expressions|p.169'
+      'lesson-7/vocab-5|Vocabulary: Adverbs and Other Expressions|p.169',
+      'lesson-7/grammar-1|Practice: Describing Activities with ～ている|p.176; I-A'
     ],
 
 
