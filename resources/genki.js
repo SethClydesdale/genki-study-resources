@@ -362,7 +362,8 @@
       'lesson-7/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.168-169',
       'lesson-7/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.169',
       'lesson-7/vocab-5|Vocabulary: Adverbs and Other Expressions|p.169',
-      'lesson-7/grammar-1|Practice: Describing Activities with ～ている|p.176; I-A'
+      'lesson-7/grammar-1|Practice: ～ている (Actions in Progress)|p.176; I-A',
+      'lesson-7/grammar-2|Practice: ～ている (Result of a Change)|p.177; II-A'
     ],
 
 
