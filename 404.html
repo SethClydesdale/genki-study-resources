@@ -36,7 +36,44 @@
         <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">Github Community</a></li>
       </ul>
     </footer>
-  
+    
     <script src="https://sethclydesdale.github.io/genki-study-resources/resources/javascript.min.js"></script>
+    <script>(function (window, document) {
+      // makes corrections to the page if used on the local file system
+      if (window.location.protocol == 'file:') {
+        var domain = 'https://sethclydesdale.github.io/genki-study-resources/',
+            a = document.querySelectorAll('a[href*="' + domain + '"], script[src*="' + domain + '"], link[href*="' + domain + '"]'),
+            i = 0,
+            j = a.length, script;
+        
+        for (; i < j; i++) {
+          switch (a[i].tagName) {
+            // change the anchor values to their offline files
+            case 'A' :
+              a[i].href = a[i].href.replace(domain, '');
+              /404\.html$/.test(a[i].href) ? a[i].href = './index.html' : a[i].href += 'index.html';
+              break;
+            
+            // change link sources to their offline resources
+            case 'LINK' :
+              a[i].href = a[i].href.replace(domain, '');
+              break;
+              
+            // change the js source to the offline version
+            case 'SCRIPT' :
+              // since we cannot stop js execution, check if the user actually has no internet connection before appending the script
+              if (!/ga\.js$/.test(a[i].src) && !navigator.onLine) {
+                script = document.createElement('SCRIPT');
+                script.src = a[i].src.replace(domain, '');
+                script.type = 'text/javascript';
+                
+                document.body.removeChild(a[i]);
+                document.body.appendChild(script);
+              }
+              break;
+          }
+        }
+      }
+    }(window, document));</script>
   </body>
 </html>
