@@ -363,7 +363,8 @@
       'lesson-7/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.169',
       'lesson-7/vocab-5|Vocabulary: Adverbs and Other Expressions|p.169',
       'lesson-7/grammar-1|Practice: ～ている (Actions in Progress)|p.176; I-A',
-      'lesson-7/grammar-2|Practice: ～ている (Result of a Change)|p.177; II-A'
+      'lesson-7/grammar-2|Practice: ～ている (Result of a Change)|p.177; II-A',
+      'lesson-7/grammar-3|Practice: Describing People 1|p.178; III-A'
     ],
 
 
