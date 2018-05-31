@@ -153,6 +153,18 @@ input[type="text"]:focus { border-color:#F60; }
   max-height:300px;
 }
 
+/* tables */
+.table {
+  width:100%;  
+  border-collapse:collapse;
+}
+
+.table td {
+  background:#FFF;
+  border:1px solid #DDD;
+  padding:3px;
+}
+
 /* used for definitions, ex: 兄弟[きょうだい：siblings; ...]
    the bracketed portion should be wrapped with tags of this class */
 .define {
@@ -1131,6 +1143,9 @@ p.section-desc {
 /* mark correct answers */
 .fill-quiz.quiz-over [data-mistakes="0"] { border-color:#090; }
 .fill-quiz .writing-zone.answer-correct:after { display:none; }
+
+/* add margin for fields inside a table */
+.fill-quiz.quiz-over td .writing-zone { margin-bottom:30px; }
 
 
 /* RESULT LIST */

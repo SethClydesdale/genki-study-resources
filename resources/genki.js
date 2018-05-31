@@ -368,7 +368,10 @@
       'lesson-7/grammar-4|Practice: Describing People 2|p.178; III-B',
       'lesson-7/grammar-5|Practice: Te-forms for Joining Sentences 1|p.179; IV-A',
       'lesson-7/grammar-6|Practice: Te-forms for Joining Sentences 2|p.180; IV-B',
-      'lesson-7/grammar-7|Practice: Verb Stem + に行く／来る／帰る|p.181; V-A'
+      'lesson-7/grammar-7|Practice: Verb Stem + に行く／来る／帰る|p.181; V-A',
+      'lesson-7/culture-1|Culture Note: Kinship Terms 1|p.184',
+      'lesson-7/culture-2|Culutre Note: Kinship Terms 2|p.184',
+      'lesson-7/vocab-6|Useful Expressions: Parts of the Body|p.185'
     ],
 
 
