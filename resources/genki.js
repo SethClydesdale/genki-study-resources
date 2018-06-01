@@ -371,7 +371,9 @@
       'lesson-7/grammar-7|Practice: Verb Stem + に行く／来る／帰る|p.181; V-A',
       'lesson-7/culture-1|Culture Note: Kinship Terms 1|p.184',
       'lesson-7/culture-2|Culutre Note: Kinship Terms 2|p.184',
-      'lesson-7/vocab-6|Useful Expressions: Parts of the Body|p.185'
+      'lesson-7/vocab-6|Useful Expressions: Parts of the Body|p.185',
+      title.workbook,
+      'lesson-7/workbook-1|Workbook: Te-form Conjugation Practice|p.64'
     ],
 
 
