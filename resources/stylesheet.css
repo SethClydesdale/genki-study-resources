@@ -879,6 +879,10 @@ input.writing-zone-input:focus { border-color:#F60; }
   width:100% !important;
 }
 
+.large-width .writing-zone, .large-width .writing-zone-input {
+  width:90% !important;
+}
+
 
 /* mark incorrect answer */
 .writing-quiz.quiz-over .writing-zone-input { pointer-events:none; }
@@ -1145,6 +1149,7 @@ p.section-desc {
 .fill-quiz .writing-zone.answer-correct:after { display:none; }
 
 /* add margin for fields inside a table */
+.fill-quiz td .writing-zone { margin-bottom:5px; }
 .fill-quiz.quiz-over td .writing-zone { margin-bottom:30px; }
 
 
