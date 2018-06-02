@@ -170,6 +170,7 @@
       'lesson-3/vocab-5|Vocabulary: Ru-verbs and Irregular verbs|p.87',
       'lesson-3/vocab-6|Vocabulary: Adverbs|p.87',
       'lesson-3/vocab-7|Vocabulary: Adjectives and Expressions|p.87',
+      'lesson-3/grammar-7|Review: Identifying Verbs|p.89',
       'lesson-3/grammar-1|Practice: Verb Conjugation|p.95; I-A',
       'lesson-3/grammar-2|Practice: を and で|p.95-96; I-B',
       'lesson-3/grammar-3|Practice: Indicating the Goal of Movement|p.96; I-C',
@@ -373,7 +374,9 @@
       'lesson-7/culture-2|Culutre Note: Kinship Terms 2|p.184',
       'lesson-7/vocab-6|Useful Expressions: Parts of the Body|p.185',
       title.workbook,
-      'lesson-7/workbook-1|Workbook: Te-form Conjugation Practice|p.64'
+      'lesson-7/workbook-1|Workbook: Te-form Conjugation Practice|p.64',
+      'lesson-7/workbook-2|Workbook: ～ている (Actions in Progress)|p.65; I, II, & III',
+      'lesson-7/workbook-3|Workbook: ～ている (Result of a Change)|p.66; I'
     ],
 
 
