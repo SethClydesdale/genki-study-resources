@@ -466,20 +466,16 @@ footer li:first-child:before { display:none; }
 #quiz-info a { color:#FF0; }
 
 #quiz-info table {
-  font-weight:normal;
   width:100%;
-  border:1px solid #E50;
-  border-spacing:0;
+  background:#E50;
+  border-collapse:collapse;
+  font-weight:normal;
 }
 
 #quiz-info table td {
   padding:3px;
-  border-bottom:1px solid #E50;
-  border-right:1px solid #E50;
+  border:1px solid #D40;
 }
-
-#quiz-info table td:last-child { border-right:none; }
-#quiz-info table tr:last-child td { border-bottom:none; }
 
 
 /* timer styles */
