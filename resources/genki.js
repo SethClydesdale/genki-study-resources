@@ -376,7 +376,9 @@
       title.workbook,
       'lesson-7/workbook-1|Workbook: Te-form Conjugation Practice|p.64',
       'lesson-7/workbook-2|Workbook: ～ている (Actions in Progress)|p.65; I, II, & III',
-      'lesson-7/workbook-3|Workbook: ～ている (Result of a Change)|p.66; I'
+      'lesson-7/workbook-3|Workbook: ～ている (Result of a Change)|p.66; I',
+      'lesson-7/workbook-4|Workbook: Describing People|p.67; I & II',
+      'lesson-7/workbook-5|Workbook: Te-forms for Joining Sentences|p.68; I & II'
     ],
 
 
