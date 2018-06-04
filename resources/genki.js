@@ -378,7 +378,10 @@
       'lesson-7/workbook-2|Workbook: ～ている (Actions in Progress)|p.65; I, II, & III',
       'lesson-7/workbook-3|Workbook: ～ている (Result of a Change)|p.66; I',
       'lesson-7/workbook-4|Workbook: Describing People|p.67; I & II',
-      'lesson-7/workbook-5|Workbook: Te-forms for Joining Sentences|p.68; I & II'
+      'lesson-7/workbook-5|Workbook: Te-forms for Joining Sentences|p.68; I & II',
+      'lesson-7/workbook-6|Workbook: Verb Stem + に行く／来る／帰る|p.69; I',
+      'lesson-7/workbook-7|Workbook: Counting People|p.70',
+      'lesson-7/workbook-8|Workbook: Questions|p.72'
     ],
 
 
@@ -707,7 +710,7 @@
           } else {
             // Split the answer from the hint.
             // Syntax is {ANSWER|HINT|HIDE_HINT} HINT and HIDE_HINT is optional
-            // passing "isAnswer" to HIDE_HINT will hide HINT and make it a secondary answer
+            // passing "answer" to HIDE_HINT will hide HINT and make it a secondary answer
             // passing "furigana" to HIDE_HINT will hide HINT and make it furigana only to aid with reading
             hint = value[1] ? value[1] : '',
             flag = value[2] ? value[2] : '';
@@ -720,7 +723,7 @@
                 'class="writing-zone-input" '+
                 'type="text" '+
                 'data-answer="' + value[0] + '" '+
-                (flag == 'isAnswer' ? 'data-answer2="' + hint + '" ' : '')+
+                (flag == 'answer' ? 'data-answer2="' + hint + '" ' : '')+
                 (flag == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
