@@ -363,6 +363,7 @@
       'lesson-7/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.168-169',
       'lesson-7/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.169',
       'lesson-7/vocab-5|Vocabulary: Adverbs and Other Expressions|p.169',
+      'lesson-7/vocab-7|Bonus Vocabulary: Counting People|p.174',
       'lesson-7/grammar-1|Practice: ～ている (Actions in Progress)|p.176; I-A',
       'lesson-7/grammar-2|Practice: ～ている (Result of a Change)|p.177; II-A',
       'lesson-7/grammar-3|Practice: Describing People 1|p.178; III-A',
@@ -381,7 +382,14 @@
       'lesson-7/workbook-5|Workbook: Te-forms for Joining Sentences|p.68; I & II',
       'lesson-7/workbook-6|Workbook: Verb Stem + に行く／来る／帰る|p.69; I',
       'lesson-7/workbook-7|Workbook: Counting People|p.70',
-      'lesson-7/workbook-8|Workbook: Questions|p.72'
+      'lesson-7/workbook-8|Workbook: Questions|p.72',
+      title.literacy,
+      'lesson-7/literacy-1|Kanji Practice: 京, 子, and 小|p.318',
+      'lesson-7/literacy-2|Kanji Practice: 会 and 社|p.318',
+      'lesson-7/literacy-3|Kanji Practice: 父 and 母|p.318',
+      'lesson-7/literacy-4|Kanji Practice: 高, 校, and 毎|p.318-319',
+      'lesson-7/literacy-5|Kanji Practice: 語 and 文|p.319',
+      'lesson-7/literacy-6|Kanji Practice: 帰 and 入|p.319'
     ],
 
 
