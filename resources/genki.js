@@ -390,7 +390,8 @@
       'lesson-7/literacy-4|Kanji Practice: 高, 校, and 毎|p.318-319',
       'lesson-7/literacy-5|Kanji Practice: 語 and 文|p.319',
       'lesson-7/literacy-6|Kanji Practice: 帰 and 入|p.319',
-      'lesson-7/literacy-7|Kanji Practice: Fill in the Blanks|p.320'
+      'lesson-7/literacy-7|Kanji Practice: Fill in the Blanks|p.320; I-A',
+      'lesson-7/literacy-8|Reading Practice: Mary\'s Letter|p.321-322; II'
     ],
 
 
