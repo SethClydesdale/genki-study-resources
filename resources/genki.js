@@ -391,7 +391,13 @@
       'lesson-7/literacy-5|Kanji Practice: 語 and 文|p.319',
       'lesson-7/literacy-6|Kanji Practice: 帰 and 入|p.319',
       'lesson-7/literacy-7|Kanji Practice: Fill in the Blanks|p.320; I-A',
-      'lesson-7/literacy-8|Reading Practice: Mary\'s Letter|p.321-322; II'
+      'lesson-7/literacy-8|Reading Practice: Mary\'s Letter|p.321-322; II',
+      title.literacyWB,
+      'lesson-7/literacy-wb-1|Workbook: Kanji Writing Practice|p.137',
+      'lesson-7/literacy-wb-2|Workbook: Spelling Practice (京, 子, 小, and 会)|p.137; bonus',
+      'lesson-7/literacy-wb-3|Workbook: Spelling Practice (社, 父, and 母)|p.137; bonus',
+      'lesson-7/literacy-wb-4|Workbook: Spelling Practice (高, 校, 毎, and 語)|p.137; bonus',
+      'lesson-7/literacy-wb-5|Workbook: Spelling Practice (文, 帰, and 入)|p.137; bonus'
     ],
 
 
