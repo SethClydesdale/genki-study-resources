@@ -397,7 +397,16 @@
       'lesson-7/literacy-wb-2|Workbook: Spelling Practice (京, 子, 小, and 会)|p.137; bonus',
       'lesson-7/literacy-wb-3|Workbook: Spelling Practice (社, 父, and 母)|p.137; bonus',
       'lesson-7/literacy-wb-4|Workbook: Spelling Practice (高, 校, 毎, and 語)|p.137; bonus',
-      'lesson-7/literacy-wb-5|Workbook: Spelling Practice (文, 帰, and 入)|p.137; bonus'
+      'lesson-7/literacy-wb-5|Workbook: Spelling Practice (文, 帰, and 入)|p.137; bonus',
+      'lesson-7/literacy-wb-6|Workbook: Fill in the Kanji|p.138; I',
+      'lesson-7/literacy-wb-7|Workbook: Translate the Sentences|p.138; II',
+      
+      // Lesson 8
+      'lesson-8/vocab-1|Vocabulary: Nouns 1|p.188',
+      'lesson-8/vocab-2|Vocabulary: Nouns 2|p.188',
+      'lesson-8/vocab-3|Vocabulary: な-adjectives and U-verbs|p.188-189',
+      'lesson-8/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.189',
+      'lesson-8/vocab-5|Vocabulary: Adverbs and Other Expressions|p.189'
     ],
 
 
