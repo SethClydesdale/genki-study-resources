@@ -406,7 +406,8 @@
       'lesson-8/vocab-2|Vocabulary: Nouns 2|p.188',
       'lesson-8/vocab-3|Vocabulary: な-adjectives and U-verbs|p.188-189',
       'lesson-8/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.189',
-      'lesson-8/vocab-5|Vocabulary: Adverbs and Other Expressions|p.189'
+      'lesson-8/vocab-5|Vocabulary: Adverbs and Other Expressions|p.189',
+      'lesson-8/grammar-1|Review: Short Form Conjugation Rules|p.190-191'
     ],
 
 
