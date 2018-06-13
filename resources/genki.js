@@ -411,7 +411,8 @@
       'lesson-8/grammar-2|Practice: Short Form Conjugation (Verbs)|p.198; I-A',
       'lesson-8/grammar-3|Practice: Short Form Conjugation (Adjectives/Nouns)|p.198; I-B',
       'lesson-8/grammar-4|Practice: Informal Speech (Verbs)|p.198-199; II-A',
-      'lesson-8/grammar-5|Practice: Informal Speech (Adjectives/Nouns)|p.199; II-B'
+      'lesson-8/grammar-5|Practice: Informal Speech (Adjectives/Nouns)|p.199; II-B',
+      'lesson-8/grammar-6|Practice: Quotations (～と思います)|p.199; III-A'
     ],
 
 
