@@ -414,7 +414,9 @@
       'lesson-8/grammar-5|Practice: Informal Speech (Adjectives/Nouns)|p.199; II-B',
       'lesson-8/grammar-6|Practice: Quotations (～と思います)|p.199; III-A',
       'lesson-8/grammar-7|Practice: Quotations (～と思います) 2|p.199-200; III-B',
-      'lesson-8/grammar-8|Practice: Quotations (～と言っていました)|p.201; IV-A'
+      'lesson-8/grammar-8|Practice: Quotations (～と言っていました)|p.201; IV-A',
+      'lesson-8/grammar-9|Practice: ～ないでください|p.202; V-A',
+      'lesson-8/grammar-10|Practice: Verb のが好きです|p.202; VI-A'
     ],
 
 
