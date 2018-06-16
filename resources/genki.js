@@ -416,7 +416,9 @@
       'lesson-8/grammar-7|Practice: Quotations (～と思います) 2|p.199-200; III-B',
       'lesson-8/grammar-8|Practice: Quotations (～と言っていました)|p.201; IV-A',
       'lesson-8/grammar-9|Practice: ～ないでください|p.202; V-A',
-      'lesson-8/grammar-10|Practice: Verb のが好きです|p.202; VI-A'
+      'lesson-8/grammar-10|Practice: Verb のが好きです|p.202; VI-A',
+      'lesson-8/grammar-11|Practice: が|p.203; VII-A',
+      'lesson-8/grammar-12|Practice: 何もしませんでした|p.204; VIII-A'
     ],
 
 
