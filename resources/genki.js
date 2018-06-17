@@ -418,7 +418,9 @@
       'lesson-8/grammar-9|Practice: ～ないでください|p.202; V-A',
       'lesson-8/grammar-10|Practice: Verb のが好きです|p.202; VI-A',
       'lesson-8/grammar-11|Practice: が|p.203; VII-A',
-      'lesson-8/grammar-12|Practice: 何もしませんでした|p.204; VIII-A'
+      'lesson-8/grammar-12|Practice: 何もしませんでした|p.204; VIII-A',
+      'lesson-8/vocab-6|Bonus Vocabulary: 日本の食べ物|p.207',
+      'lesson-8/culture-1|Culture Note: Foods in Japan|p.207'
     ],
 
 
