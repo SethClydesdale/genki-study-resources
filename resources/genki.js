@@ -420,7 +420,10 @@
       'lesson-8/grammar-11|Practice: が|p.203; VII-A',
       'lesson-8/grammar-12|Practice: 何もしませんでした|p.204; VIII-A',
       'lesson-8/vocab-6|Bonus Vocabulary: 日本の食べ物|p.207',
-      'lesson-8/culture-1|Culture Note: Foods in Japan|p.207'
+      'lesson-8/culture-1|Culture Note: Foods in Japan|p.207',
+      title.workbook,
+      'lesson-8/workbook-1|Workbook: Short Forms (Present Tense)|p.73',
+      'lesson-8/workbook-2|Workbook: Short Forms (Informal Speech)|p.74; I & II'
     ],
 
 
