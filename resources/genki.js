@@ -423,7 +423,9 @@
       'lesson-8/culture-1|Culture Note: Foods in Japan|p.207',
       title.workbook,
       'lesson-8/workbook-1|Workbook: Short Forms (Present Tense)|p.73',
-      'lesson-8/workbook-2|Workbook: Short Forms (Informal Speech)|p.74; I & II'
+      'lesson-8/workbook-2|Workbook: Short Forms (Informal Speech)|p.74; I & II',
+      'lesson-8/workbook-3|Workbook: Quotations (～と思います)|p.75; I & II',
+      'lesson-8/workbook-4|Workbook: Quotations (～と言っていました)|p.76'
     ],
 
 
