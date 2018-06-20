@@ -425,7 +425,9 @@
       'lesson-8/workbook-1|Workbook: Short Forms (Present Tense)|p.73',
       'lesson-8/workbook-2|Workbook: Short Forms (Informal Speech)|p.74; I & II',
       'lesson-8/workbook-3|Workbook: Quotations (～と思います)|p.75; I & II',
-      'lesson-8/workbook-4|Workbook: Quotations (～と言っていました)|p.76'
+      'lesson-8/workbook-4|Workbook: Quotations (～と言っていました)|p.76',
+      'lesson-8/workbook-5|Workbook: ～ないでください|p.77; I & II',
+      'lesson-8/workbook-6|Workbook: Verb のが好きです|p.78; I & II'
     ],
 
 
