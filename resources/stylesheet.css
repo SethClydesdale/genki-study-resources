@@ -153,6 +153,14 @@ input[type="text"]:focus { border-color:#F60; }
   max-height:300px;
 }
 
+/* spoilers */
+.spoiler {
+  color:#000;
+  background:#000;
+}
+
+.spoiler:hover { color:#FFF; }
+
 /* tables */
 .table {
   width:100%;  
@@ -1058,7 +1066,7 @@ input.writing-zone-input:focus { border-color:#F60; }
 }
 
 /* indentation */
-.indent-block { margin-left:20px; }
+.indent-block { margin-left:21px; }
 
 /* section descriptions */
 p.section-desc {
