@@ -427,7 +427,8 @@
       'lesson-8/workbook-3|Workbook: Quotations (～と思います)|p.75; I & II',
       'lesson-8/workbook-4|Workbook: Quotations (～と言っていました)|p.76',
       'lesson-8/workbook-5|Workbook: ～ないでください|p.77; I & II',
-      'lesson-8/workbook-6|Workbook: Verb のが好きです|p.78; I & II'
+      'lesson-8/workbook-6|Workbook: Verb のが好きです|p.78; I & II',
+      'lesson-8/workbook-7|Workbook: が・何か and 何も|p.79; I & II'
     ],
 
 
