@@ -428,7 +428,11 @@
       'lesson-8/workbook-4|Workbook: Quotations (～と言っていました)|p.76',
       'lesson-8/workbook-5|Workbook: ～ないでください|p.77; I & II',
       'lesson-8/workbook-6|Workbook: Verb のが好きです|p.78; I & II',
-      'lesson-8/workbook-7|Workbook: が・何か and 何も|p.79; I & II'
+      'lesson-8/workbook-7|Workbook: が・何か and 何も|p.79; I & II',
+      'lesson-8/workbook-8|Workbook: Questions|p.81; I & II',
+      title.literacy,
+      'lesson-8/literacy-1|Kanji Practice: 員, 新, and 聞|p.323',
+      'lesson-8/literacy-2|Kanji Practice: 作, 仕, and 事|p.323'
     ],
 
 
