@@ -432,7 +432,11 @@
       'lesson-8/workbook-8|Workbook: Questions|p.81; I & II',
       title.literacy,
       'lesson-8/literacy-1|Kanji Practice: 員, 新, and 聞|p.323',
-      'lesson-8/literacy-2|Kanji Practice: 作, 仕, and 事|p.323'
+      'lesson-8/literacy-2|Kanji Practice: 作, 仕, and 事|p.323',
+      'lesson-8/literacy-3|Kanji Practice: 電 and 車|p.323',
+      'lesson-8/literacy-4|Kanji Practice: 休, 言, and 読|p.324',
+      'lesson-8/literacy-5|Kanji Practice: 思, 次, and 何|p.324',
+      'lesson-8/literacy-6|Kanji Practice: Match the Verbs|p.325; I-B'
     ],
 
 
