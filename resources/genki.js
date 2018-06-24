@@ -436,7 +436,8 @@
       'lesson-8/literacy-3|Kanji Practice: 電 and 車|p.323',
       'lesson-8/literacy-4|Kanji Practice: 休, 言, and 読|p.324',
       'lesson-8/literacy-5|Kanji Practice: 思, 次, and 何|p.324',
-      'lesson-8/literacy-6|Kanji Practice: Match the Verbs|p.325; I-B'
+      'lesson-8/literacy-6|Kanji Practice: Match the Verbs|p.325; I-B',
+      'lesson-8/literacy-7|Reading Practice: 日本の会社員|p.326-327; II-C'
     ],
 
 
