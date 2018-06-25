@@ -437,7 +437,15 @@
       'lesson-8/literacy-4|Kanji Practice: 休, 言, and 読|p.324',
       'lesson-8/literacy-5|Kanji Practice: 思, 次, and 何|p.324',
       'lesson-8/literacy-6|Kanji Practice: Match the Verbs|p.325; I-B',
-      'lesson-8/literacy-7|Reading Practice: 日本の会社員|p.326-327; II-C'
+      'lesson-8/literacy-7|Reading Practice: 日本の会社員|p.326-327; II-C',
+      title.literacyWB,
+      'lesson-8/literacy-wb-1|Workbook: Kanji Writing Practice|p.139',
+      'lesson-8/literacy-wb-2|Workbook: Spelling Practice (員, 新, 聞, and 作)|p.139; bonus',
+      'lesson-8/literacy-wb-3|Workbook: Spelling Practice (仕, 事, 電, and 車)|p.139; bonus',
+      'lesson-8/literacy-wb-4|Workbook: Spelling Practice (休, 言, and 読)|p.139; bonus',
+      'lesson-8/literacy-wb-5|Workbook: Spelling Practice (思, 次, and 何)|p.139; bonus',
+      'lesson-8/literacy-wb-6|Workbook: Fill in the Kanji|p.140; I',
+      'lesson-8/literacy-wb-7|Workbook: Translate the Sentences|p.140; II'
     ],
 
 
