@@ -445,7 +445,14 @@
       'lesson-8/literacy-wb-4|Workbook: Spelling Practice (休, 言, and 読)|p.139; bonus',
       'lesson-8/literacy-wb-5|Workbook: Spelling Practice (思, 次, and 何)|p.139; bonus',
       'lesson-8/literacy-wb-6|Workbook: Fill in the Kanji|p.140; I',
-      'lesson-8/literacy-wb-7|Workbook: Translate the Sentences|p.140; II'
+      'lesson-8/literacy-wb-7|Workbook: Translate the Sentences|p.140; II',
+      
+      // Lesson 9
+      'lesson-9/vocab-1|Vocabulary: Nouns|p.210',
+      'lesson-9/vocab-2|Vocabulary: い-adjectives and な-adjectives|p.210',
+      'lesson-9/vocab-3|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.210-211',
+      'lesson-9/vocab-4|Vocabulary: Adverbs and Other Expressions|p.211',
+      'lesson-9/vocab-5|Vocabulary: Numbers (to count small items)|p.211'
     ],
 
 
