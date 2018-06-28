@@ -454,7 +454,8 @@
       'lesson-9/vocab-4|Vocabulary: Adverbs and Other Expressions|p.211',
       'lesson-9/vocab-5|Vocabulary: Numbers (to count small items)|p.211',
       'lesson-9/grammar-1|Review: Short Form Conjugation Rules (Past Tense)|p.212',
-      'lesson-9/grammar-2|Practice: Short Form Past Conjugation (Verbs)|p.217; I-A'
+      'lesson-9/grammar-2|Practice: Short Form Past Conjugation (Verbs)|p.217; I-A',
+      'lesson-9/grammar-3|Practice: Short Form Past Conjugation (Adjectives/Nouns)|p.217-218; I-B'
     ],
 
 
