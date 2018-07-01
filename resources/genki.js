@@ -459,7 +459,10 @@
       'lesson-9/grammar-4|Practice: Informal Speech (Verbs)|p.218; II-A',
       'lesson-9/grammar-5|Practice: Informal Speech (Adjectives/Nouns)|p.219; II-B',
       'lesson-9/grammar-6|Practice: Quotations (～と思います)|p.219; III-A',
-      'lesson-9/grammar-7|Practice: Quotations (～と言っていました)|p.220; IV-A'
+      'lesson-9/grammar-7|Practice: Quotations (～と言っていました)|p.220; IV-A',
+      'lesson-9/grammar-8|Practice: Qualifying Nouns with Verbs|p.221; V-A',
+      'lesson-9/grammar-9|Practice: まだ～ていません|p.222; VI-A',
+      'lesson-9/grammar-10|Practice: ～から|p.223; VII-A'
     ],
 
 
