@@ -462,7 +462,10 @@
       'lesson-9/grammar-7|Practice: Quotations (～と言っていました)|p.220; IV-A',
       'lesson-9/grammar-8|Practice: Qualifying Nouns with Verbs|p.221; V-A',
       'lesson-9/grammar-9|Practice: まだ～ていません|p.222; VI-A',
-      'lesson-9/grammar-10|Practice: ～から|p.223; VII-A'
+      'lesson-9/grammar-10|Practice: ～から|p.223; VII-A',
+      'lesson-9/culture-1|Culture Note: Japanese Traditional Culture|p.226',
+      'lesson-9/vocab-6|Bonus Vocabulary: Colors|p.227',
+      'lesson-9/vocab-7|Useful Expressions: Colors|p.227'
     ],
 
 
