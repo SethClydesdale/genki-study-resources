@@ -465,7 +465,10 @@
       'lesson-9/grammar-10|Practice: ～から|p.223; VII-A',
       'lesson-9/culture-1|Culture Note: Japanese Traditional Culture|p.226',
       'lesson-9/vocab-6|Bonus Vocabulary: Colors|p.227',
-      'lesson-9/vocab-7|Useful Expressions: Colors|p.227'
+      'lesson-9/vocab-7|Useful Expressions: Colors|p.227',
+      title.workbook,
+      'lesson-9/workbook-1|Workbook: Past Tense Short Forms|p.82',
+      'lesson-9/workbook-2|Workbook: Past Tense Short Forms (Informal Speech)|p.83; I & II'
     ],
 
 
