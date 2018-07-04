@@ -468,7 +468,9 @@
       'lesson-9/vocab-7|Useful Expressions: Colors|p.227',
       title.workbook,
       'lesson-9/workbook-1|Workbook: Past Tense Short Forms|p.82',
-      'lesson-9/workbook-2|Workbook: Past Tense Short Forms (Informal Speech)|p.83; I & II'
+      'lesson-9/workbook-2|Workbook: Past Tense Short Forms (Informal Speech)|p.83; I & II',
+      'lesson-9/workbook-3|Workbook: Past Tense Short Forms (～と思います)|p.84; I & II',
+      'lesson-9/workbook-4|Workbook: Past Tense Short Forms (～と言っていました)|p.85'
     ],
 
 
