@@ -470,7 +470,10 @@
       'lesson-9/workbook-1|Workbook: Past Tense Short Forms|p.82',
       'lesson-9/workbook-2|Workbook: Past Tense Short Forms (Informal Speech)|p.83; I & II',
       'lesson-9/workbook-3|Workbook: Past Tense Short Forms (～と思います)|p.84; I & II',
-      'lesson-9/workbook-4|Workbook: Past Tense Short Forms (～と言っていました)|p.85'
+      'lesson-9/workbook-4|Workbook: Past Tense Short Forms (～と言っていました)|p.85',
+      'lesson-9/workbook-5|Workbook: Qualifying Nouns with Verbs|p.86',
+      'lesson-9/workbook-6|Workbook: まだ～ていません|p.87',
+      'lesson-9/workbook-7|Workbook: ～から|p.88; I & II'
     ],
 
 
@@ -682,7 +685,7 @@
 
       // # 4. WRITING PRACTICE #
       else if (o.type == 'writing') {
-        var quiz = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '">clicking here</a>.</div><div id="question-list">',
+        var quiz = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '" target="_blank">clicking here</a>.</div><div id="question-list">',
             columns = o.columns,
             width = 'style="width:' + (100 / (columns + 1)) + '%;"',
             index = 0,
@@ -786,7 +789,7 @@
       else if (o.type == 'fill') {
         
         // add the quiz to the document
-        zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
+        zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '" target="_blank">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
           var value = match.slice(1, match.length - 1).split('|'), hint, flag, url;
           
           if (value[0] == '!IMG') {
