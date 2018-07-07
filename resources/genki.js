@@ -476,7 +476,12 @@
       'lesson-9/workbook-7|Workbook: ～から|p.88; I & II',
       'lesson-9/workbook-8|Workbook: Questions|p.90',
       title.literacy,
-      'lesson-9/literacy-1|Kanji Practice: 午, 後, and 前|p.328'
+      'lesson-9/literacy-1|Kanji Practice: 午, 後, and 前|p.328',
+      'lesson-9/literacy-2|Kanji Practice: 名 and 白|p.328',
+      'lesson-9/literacy-3|Kanji Practice: 雨, 書, and 友|p.328',
+      'lesson-9/literacy-4|Kanji Practice: 間 and 家|p.329',
+      'lesson-9/literacy-5|Kanji Practice: 話 and 少|p.329',
+      'lesson-9/literacy-6|Kanji Practice: 古, 知, and 来|p.329'
     ],
 
 
