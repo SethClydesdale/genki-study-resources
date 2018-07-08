@@ -481,7 +481,10 @@
       'lesson-9/literacy-3|Kanji Practice: 雨, 書, and 友|p.328',
       'lesson-9/literacy-4|Kanji Practice: 間 and 家|p.329',
       'lesson-9/literacy-5|Kanji Practice: 話 and 少|p.329',
-      'lesson-9/literacy-6|Kanji Practice: 古, 知, and 来|p.329'
+      'lesson-9/literacy-6|Kanji Practice: 古, 知, and 来|p.329',
+      'lesson-9/literacy-7|Kanji Practice: Fill in the Blanks|p.330; I-A & B',
+      'lesson-9/literacy-8|Reading Practice: スーさんの日記|p.330-332; II-A, B, & C',
+      'lesson-9/literacy-9|Useful Expressions for Letters|p.333'
     ],
 
 
