@@ -484,7 +484,15 @@
       'lesson-9/literacy-6|Kanji Practice: 古, 知, and 来|p.329',
       'lesson-9/literacy-7|Kanji Practice: Fill in the Blanks|p.330; I-A & B',
       'lesson-9/literacy-8|Reading Practice: スーさんの日記|p.330-332; II-A, B, & C',
-      'lesson-9/literacy-9|Useful Expressions for Letters|p.333'
+      'lesson-9/literacy-9|Useful Expressions for Letters|p.333',
+      title.literacyWB,
+      'lesson-9/literacy-wb-1|Workbook: Kanji Writing Practice|p.141',
+      'lesson-9/literacy-wb-2|Workbook: Spelling Practice (午, 後, 前, and 名)|p.141; bonus',
+      'lesson-9/literacy-wb-3|Workbook: Spelling Practice (白, 雨, 書, and 友)|p.141; bonus',
+      'lesson-9/literacy-wb-4|Workbook: Spelling Practice (間, 家, and 話)|p.141; bonus',
+      'lesson-9/literacy-wb-5|Workbook: Spelling Practice (少, 古, 知, and 来)|p.141; bonus',
+      'lesson-9/literacy-wb-6|Workbook: Fill in the Kanji|p.142; I',
+      'lesson-9/literacy-wb-7|Workbook: Translate the Sentences|p.142; II'
     ],
 
 
