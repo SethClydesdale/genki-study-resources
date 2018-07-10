@@ -492,7 +492,14 @@
       'lesson-9/literacy-wb-4|Workbook: Spelling Practice (間, 家, and 話)|p.141; bonus',
       'lesson-9/literacy-wb-5|Workbook: Spelling Practice (少, 古, 知, and 来)|p.141; bonus',
       'lesson-9/literacy-wb-6|Workbook: Fill in the Kanji|p.142; I',
-      'lesson-9/literacy-wb-7|Workbook: Translate the Sentences|p.142; II'
+      'lesson-9/literacy-wb-7|Workbook: Translate the Sentences|p.142; II',
+      
+      // Lesson 10
+      'lesson-10/vocab-1|Vocabulary: Nouns 1|p.230',
+      'lesson-10/vocab-2|Vocabulary: Nouns 2|p.230',
+      'lesson-10/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.230-231',
+      'lesson-10/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.231',
+      'lesson-10/vocab-5|Vocabulary: Adverbs and Other Expressions|p.231'
     ],
 
 
