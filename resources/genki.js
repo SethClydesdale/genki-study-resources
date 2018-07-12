@@ -500,7 +500,10 @@
       'lesson-10/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.230-231',
       'lesson-10/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.231',
       'lesson-10/vocab-5|Vocabulary: Adverbs and Other Expressions|p.231',
-      'lesson-10/grammar-1|Practice: Comparison between Two Items|p.237; I-A'
+      'lesson-10/grammar-1|Practice: Comparison between Two Items|p.237; I-A',
+      'lesson-10/grammar-2|Practice: Comparison among Three or More Items|p.238-239; II-A',
+      'lesson-10/grammar-3|Practice: Adjective/Noun + の|p.240; III-A',
+      'lesson-10/grammar-4|Practice: ～つもりだ|p.241; IV-A'
     ],
 
 
