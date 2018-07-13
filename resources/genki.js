@@ -503,7 +503,9 @@
       'lesson-10/grammar-1|Practice: Comparison between Two Items|p.237; I-A',
       'lesson-10/grammar-2|Practice: Comparison among Three or More Items|p.238-239; II-A',
       'lesson-10/grammar-3|Practice: Adjective/Noun + の|p.240; III-A',
-      'lesson-10/grammar-4|Practice: ～つもりだ|p.241; IV-A'
+      'lesson-10/grammar-4|Practice: ～つもりだ|p.241; IV-A',
+      'lesson-10/grammar-5|Practice: Adjective + なる|p.242-243; V-A',
+      'lesson-10/grammar-6|Practice: どこかに／どこにも|p.244; VI-A'
     ],
 
 
