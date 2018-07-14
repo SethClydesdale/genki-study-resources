@@ -505,7 +505,9 @@
       'lesson-10/grammar-3|Practice: Adjective/Noun + の|p.240; III-A',
       'lesson-10/grammar-4|Practice: ～つもりだ|p.241; IV-A',
       'lesson-10/grammar-5|Practice: Adjective + なる|p.242-243; V-A',
-      'lesson-10/grammar-6|Practice: どこかに／どこにも|p.244; VI-A'
+      'lesson-10/grammar-6|Practice: どこかに／どこにも|p.244; VI-A',
+      'lesson-10/grammar-7|Practice: で行きます|p.245; VII-A',
+      'lesson-10/grammar-8|Practice: かかります|p.245; VII-B'
     ],
 
 
