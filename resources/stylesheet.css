@@ -496,6 +496,7 @@ footer li:first-child:before { display:none; }
 /* answer styles */
 .quiz-answer-zone:empty {
   border:1px solid #CCC;
+  min-width:100px;
   margin:3px;
   padding:3px;
 }
@@ -716,7 +717,7 @@ footer li:first-child:before { display:none; }
   text-align:center;
 }
 
-.helper-present #question-list .quiz-item[data-helper], .helper-present #drop-list .quiz-answer-zone[data-text*="|"] {
+.helper-present #question-list .quiz-item[data-helper], .helper-present #drop-list .quiz-answer-zone.helper-answer {
   margin-bottom:18px;
 }
 
