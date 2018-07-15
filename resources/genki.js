@@ -507,7 +507,11 @@
       'lesson-10/grammar-5|Practice: Adjective + なる|p.242-243; V-A',
       'lesson-10/grammar-6|Practice: どこかに／どこにも|p.244; VI-A',
       'lesson-10/grammar-7|Practice: で行きます|p.245; VII-A',
-      'lesson-10/grammar-8|Practice: かかります|p.245; VII-B'
+      'lesson-10/grammar-8|Practice: かかります|p.245; VII-B',
+      'lesson-10/culture-1|Culture Note: Public Transportation in Japan|p.247',
+      'lesson-10/vocab-6|Bonus Vocabulary: At the Station 1|p.248',
+      'lesson-10/vocab-7|Bonus Vocabulary: At the Station 2|p.248',
+      'lesson-10/vocab-8|Useful Expressions: At the Station|p.249'
     ],
 
 
@@ -578,7 +582,7 @@
           
           // add the quiz items and drop zones
           quiz += '<div class="quiz-item" ' + (helper || '') + '>' + (helper ? keysQ[i].replace(/(.*?)\|(.*)/, '$1<span class="hidden-text">$2</span>') : keysQ[i]) + '</div>';
-          dropList += '<div class="quiz-answer-zone" data-text="' + keysQ[i] + '" data-mistakes="0"></div>';
+          dropList += '<div class="quiz-answer-zone' + (/\|/.test(keysQ[i]) ? ' helper-answer' : '') + '" data-text="' + keysQ[i].replace(/\|.*?$/, '') + '" data-mistakes="0"></div>';
           keysQ.splice(i, 1);
           
           ++Genki.stats.problems;
@@ -599,7 +603,7 @@
         quiz += '<div id="answer-list">';
         while (keysA.length) {
           i = Math.floor(Math.random() * keysA.length);
-          quiz += '<div class="quiz-item" data-answer="' + keysA[i] + '">' + o.quizlet[keysA[i]] + '</div>';
+          quiz += '<div class="quiz-item" data-answer="' + keysA[i].replace(/\|.*?$/, '') + '">' + o.quizlet[keysA[i]] + '</div>';
           keysA.splice(i, 1);
         }
         quiz += '</div>'; // close the answer list
