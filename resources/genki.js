@@ -511,7 +511,9 @@
       'lesson-10/culture-1|Culture Note: Public Transportation in Japan|p.247',
       'lesson-10/vocab-6|Bonus Vocabulary: At the Station 1|p.248',
       'lesson-10/vocab-7|Bonus Vocabulary: At the Station 2|p.248',
-      'lesson-10/vocab-8|Useful Expressions: At the Station|p.249'
+      'lesson-10/vocab-8|Useful Expressions: At the Station|p.249',
+      title.workbook,
+      'lesson-10/workbook-1|Workbook: Comparison between Two Items|p.91; I & II'
     ],
 
 
