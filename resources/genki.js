@@ -513,7 +513,8 @@
       'lesson-10/vocab-7|Bonus Vocabulary: At the Station 2|p.248',
       'lesson-10/vocab-8|Useful Expressions: At the Station|p.249',
       title.workbook,
-      'lesson-10/workbook-1|Workbook: Comparison between Two Items|p.91; I & II'
+      'lesson-10/workbook-1|Workbook: Comparison between Two Items|p.91; I & II',
+      'lesson-10/workbook-2|Workbook: Comparison among Three or More Items|p.92; I & II'
     ],
 
 
