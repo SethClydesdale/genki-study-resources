@@ -514,7 +514,8 @@
       'lesson-10/vocab-8|Useful Expressions: At the Station|p.249',
       title.workbook,
       'lesson-10/workbook-1|Workbook: Comparison between Two Items|p.91; I & II',
-      'lesson-10/workbook-2|Workbook: Comparison among Three or More Items|p.92; I & II'
+      'lesson-10/workbook-2|Workbook: Comparison among Three or More Items|p.92; I & II',
+      'lesson-10/workbook-3|Workbook: Adjective/Noun + の|p.93; I & II'
     ],
 
 
