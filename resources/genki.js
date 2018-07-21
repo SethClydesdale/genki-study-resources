@@ -517,7 +517,9 @@
       'lesson-10/workbook-2|Workbook: Comparison among Three or More Items|p.92; I & II',
       'lesson-10/workbook-3|Workbook: Adjective/Noun + の|p.93; I & II',
       'lesson-10/workbook-4|Workbook: ～つもりだ|p.94; I & II',
-      'lesson-10/workbook-5|Workbook: Adjective + なる|p.95; I & II'
+      'lesson-10/workbook-5|Workbook: Adjective + なる|p.95; I & II',
+      'lesson-10/workbook-6|Workbook: ～で行きます／かかります・どこかに／どこにも|p.96; I & II',
+      'lesson-10/workbook-7|Workbook: Questions|p.99'
     ],
 
 
