@@ -525,7 +525,10 @@
       'lesson-10/literacy-2|Kanji Practice: 売, 買, and 町|p.334',
       'lesson-10/literacy-3|Kanji Practice: 長, 道, and 雪|p.334-335',
       'lesson-10/literacy-4|Kanji Practice: 立, 自, and 夜|p.335',
-      'lesson-10/literacy-5|Kanji Practice: 朝 and 持|p.335'
+      'lesson-10/literacy-5|Kanji Practice: 朝 and 持|p.335',
+      'lesson-10/literacy-6|Kanji Practice: Antonyms|p.336; I-B',
+      'lesson-10/literacy-7|Kanji Practice: Fill in the Blanks|p.336; I-C',
+      'lesson-10/literacy-8|Reading Practice: かさじぞう|p.337-339; II-C & D'
     ],
 
 
