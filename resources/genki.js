@@ -528,7 +528,15 @@
       'lesson-10/literacy-5|Kanji Practice: 朝 and 持|p.335',
       'lesson-10/literacy-6|Kanji Practice: Antonyms|p.336; I-B',
       'lesson-10/literacy-7|Kanji Practice: Fill in the Blanks|p.336; I-C',
-      'lesson-10/literacy-8|Reading Practice: かさじぞう|p.337-339; II-C & D'
+      'lesson-10/literacy-8|Reading Practice: かさじぞう|p.337-339; II-C & D',
+      title.literacyWB,
+      'lesson-10/literacy-wb-1|Workbook: Kanji Writing Practice|p.143',
+      'lesson-10/literacy-wb-2|Workbook: Spelling Practice (住, 正, 年, and 売)|p.143; bonus',
+      'lesson-10/literacy-wb-3|Workbook: Spelling Practice (買, 町, 長, and 道)|p.143; bonus',
+      'lesson-10/literacy-wb-4|Workbook: Spelling Practice (雪, 立, and 自)|p.143; bonus',
+      'lesson-10/literacy-wb-5|Workbook: Spelling Practice (夜, 朝, and 持)|p.143; bonus',
+      'lesson-10/literacy-wb-6|Workbook: Fill in the Kanji|p.144; I',
+      'lesson-10/literacy-wb-7|Workbook: Translate the Sentences|p.144; II'
     ],
 
 
