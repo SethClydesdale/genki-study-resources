@@ -536,7 +536,11 @@
       'lesson-10/literacy-wb-4|Workbook: Spelling Practice (雪, 立, and 自)|p.143; bonus',
       'lesson-10/literacy-wb-5|Workbook: Spelling Practice (夜, 朝, and 持)|p.143; bonus',
       'lesson-10/literacy-wb-6|Workbook: Fill in the Kanji|p.144; I',
-      'lesson-10/literacy-wb-7|Workbook: Translate the Sentences|p.144; II'
+      'lesson-10/literacy-wb-7|Workbook: Translate the Sentences|p.144; II',
+      
+      // Lesson 11
+      'lesson-11/vocab-1|Vocabulary: Nouns 1|p.252',
+      'lesson-11/vocab-2|Vocabulary: Nouns 2|p.252'
     ],
 
 
