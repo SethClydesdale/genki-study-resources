@@ -543,7 +543,8 @@
       'lesson-11/vocab-2|Vocabulary: Nouns 2|p.252',
       'lesson-11/vocab-3|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.252-253',
       'lesson-11/vocab-4|Vocabulary: Adverbs and Other Expressions|p.253',
-      'lesson-11/vocab-5|Vocabulary: Occupations|p.253'
+      'lesson-11/vocab-5|Vocabulary: Occupations|p.253',
+      'lesson-11/grammar-1|Practice: ～たい|p.259; I-A'
     ],
 
 
