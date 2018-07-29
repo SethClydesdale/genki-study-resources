@@ -545,7 +545,8 @@
       'lesson-11/vocab-4|Vocabulary: Adverbs and Other Expressions|p.253',
       'lesson-11/vocab-5|Vocabulary: Occupations|p.253',
       'lesson-11/grammar-1|Practice: ～たい|p.259; I-A',
-      'lesson-11/grammar-2|Practice: ～たい (Past Tense)|p.259; I-C'
+      'lesson-11/grammar-2|Practice: ～たい (Past Tense)|p.259; I-C',
+      'lesson-11/grammar-3|Practice: ～たり～たりする|p.261; II-A'
     ],
 
 
