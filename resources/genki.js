@@ -550,7 +550,11 @@
       'lesson-11/grammar-4|Practice: ～ことがある|p.262; III-A',
       'lesson-11/grammar-5|Practice: Noun A や Noun B|p.263; IV-A',
       'lesson-11/culture-1|Culture Note: New Year\'s|p.264',
-      'lesson-11/vocab-6|Useful Expressions: In the Japanese Class|p.265'
+      'lesson-11/vocab-6|Useful Expressions: In the Japanese Class|p.265',
+      'lesson-11/vocab-7|Bonus Vocabulary: In the Japanese Class 1|p.265',
+      'lesson-11/vocab-8|Bonus Vocabulary: In the Japanese Class 2|p.265',
+      title.workbook,
+      'lesson-11/workbook-1|Workbook: ～たい|p.100; I & II'
     ],
 
 
