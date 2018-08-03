@@ -555,7 +555,8 @@
       'lesson-11/vocab-8|Bonus Vocabulary: In the Japanese Class 2|p.265',
       title.workbook,
       'lesson-11/workbook-1|Workbook: ～たい|p.100; I & II',
-      'lesson-11/workbook-2|Workbook: ～たり～たりする|p.101; I & II'
+      'lesson-11/workbook-2|Workbook: ～たり～たりする|p.101; I & II',
+      'lesson-11/workbook-3|Workbook: ～ことがある|p.102; I & II'
     ],
 
 
