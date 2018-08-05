@@ -557,7 +557,8 @@
       'lesson-11/workbook-1|Workbook: ～たい|p.100; I & II',
       'lesson-11/workbook-2|Workbook: ～たり～たりする|p.101; I & II',
       'lesson-11/workbook-3|Workbook: ～ことがある|p.102; I & II',
-      'lesson-11/workbook-4|Workbook: Noun A や Noun B|p.103'
+      'lesson-11/workbook-4|Workbook: Noun A や Noun B|p.103',
+      'lesson-11/workbook-5|Workbook: Questions|p.105; I & II'
     ],
 
 
