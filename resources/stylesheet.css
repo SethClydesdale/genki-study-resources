@@ -702,6 +702,8 @@ footer li:first-child:before { display:none; }
   margin-top:-20px;
 }
 
+/* hide helpers */
+.helper-hidden .hidden-text { display:none; }
 
 /* kana quiz styles */
 .kana-quiz #question-list, .kana-quiz #answer-list {

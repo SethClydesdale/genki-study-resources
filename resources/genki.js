@@ -558,7 +558,10 @@
       'lesson-11/workbook-2|Workbook: ～たり～たりする|p.101; I & II',
       'lesson-11/workbook-3|Workbook: ～ことがある|p.102; I & II',
       'lesson-11/workbook-4|Workbook: Noun A や Noun B|p.103',
-      'lesson-11/workbook-5|Workbook: Questions|p.105; I & II'
+      'lesson-11/workbook-5|Workbook: Questions|p.105; I & II',
+      title.literacy,
+      'lesson-11/literacy-1|Kanji Practice: 手, 紙, and 好|p.340',
+      'lesson-11/literacy-2|Kanji Practice: 近, 明, 病, and 院|p.340'
     ],
 
 
@@ -591,7 +594,8 @@
       var zone = document.getElementById('quiz-zone'), // area where quizzes are inserted
 
           // review button for drag and drop quizzes
-          review = '<div id="review-exercise" class="center clearfix"><button class="button" onclick="Genki.review();">Review</button></div>'; 
+          review = '<div id="review-exercise" class="center clearfix"><button class="button" onclick="Genki.review();">Review</button></div>',
+          tFurigana = '<button class="button" onclick="Genki.toggle.furigana(this);">' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>'; 
 
       /****************************
       ======# EXERCISE TYPES #=====
@@ -643,7 +647,7 @@
 
         // add a class for the helper styles
         if (helperPresent) {
-          zone.className += ' helper-present';
+          zone.className += ' helper-' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
         
         // generate the answers
@@ -656,7 +660,7 @@
         quiz += '</div>'; // close the answer list
 
         // add the quiz to the document
-        zone.innerHTML = quiz + review;
+        zone.innerHTML = quiz + review.replace('</div>', tFurigana + '</div>');
       }
 
 
@@ -1188,6 +1192,36 @@
           if (a[i] != el) {
             a[i].className = closed;
           }
+        }
+      },
+      
+      
+      // toggles furigana in drag and drop quizzes
+      furigana : function (button) {
+        var state = (window.localStorage && localStorage.furiganaVisible) || 'true',
+            zone = document.getElementById('quiz-zone');
+        
+        // hide or show the textual aids
+        switch (state) {
+          case 'true' :
+            state = 'false';
+            zone.className = zone.className.replace('helper-present', 'helper-hidden');
+            button.innerHTML = button.innerHTML.replace('Hide', 'Show');
+            break;
+            
+          case 'false' :
+            state = 'true';
+            zone.className = zone.className.replace('helper-hidden', 'helper-present');
+            button.innerHTML = button.innerHTML.replace('Show', 'Hide');
+            break;
+            
+          default :
+            break;
+        }
+        
+        // save settings if supported
+        if (window.localStorage) {
+          localStorage.furiganaVisible = state;
         }
       }
     },
