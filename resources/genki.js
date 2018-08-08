@@ -564,7 +564,9 @@
       'lesson-11/literacy-2|Kanji Practice: 近, 明, 病, and 院|p.340',
       'lesson-11/literacy-3|Kanji Practice: 映, 画, and 歌|p.340-341',
       'lesson-11/literacy-4|Kanji Practice: 市, 所, and 勉|p.341',
-      'lesson-11/literacy-5|Kanji Practice: 強, 有, and 旅|p.341'
+      'lesson-11/literacy-5|Kanji Practice: 強, 有, and 旅|p.341',
+      'lesson-11/literacy-6|Kanji Practice: Compounds|p.342; I-B',
+      'lesson-11/literacy-7|Reading Practice: 友だち募集|p.342-344; II-C, D, & E'
     ],
 
 
