@@ -566,7 +566,15 @@
       'lesson-11/literacy-4|Kanji Practice: 市, 所, and 勉|p.341',
       'lesson-11/literacy-5|Kanji Practice: 強, 有, and 旅|p.341',
       'lesson-11/literacy-6|Kanji Practice: Compounds|p.342; I-B',
-      'lesson-11/literacy-7|Reading Practice: 友だち募集|p.342-344; II-C, D, & E'
+      'lesson-11/literacy-7|Reading Practice: 友だち募集|p.342-344; II-C, D, & E',
+      title.literacyWB,
+      'lesson-11/literacy-wb-1|Workbook: Kanji Writing Practice|p.145',
+      'lesson-11/literacy-wb-2|Workbook: Spelling Practice (手, 紙, 好, and 近)|p.145; bonus',
+      'lesson-11/literacy-wb-3|Workbook: Spelling Practice (明, 病, 院, and 映)|p.145; bonus',
+      'lesson-11/literacy-wb-4|Workbook: Spelling Practice (画, 歌, 市, and 所)|p.145; bonus',
+      'lesson-11/literacy-wb-5|Workbook: Spelling Practice (勉, 強, 有, and 旅)|p.145; bonus',
+      'lesson-11/literacy-wb-6|Workbook: Fill in the Kanji|p.146; I',
+      'lesson-11/literacy-wb-7|Workbook: Translate the Sentences|p.146; II'
     ],
 
 
