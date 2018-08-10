@@ -2,13 +2,6 @@
 (function (window, document) {
   'use strict';
   
-  // temp object to apply reusable titles to the exercise list
-  var title = {
-    workbook : 'title|Workbook',
-    literacy : 'title|Reading and Writing',
-    literacyWB : 'title|Workbook: Reading and Writing'
-  };
-  
   // primary object for functionality of Genki exercises
   var Genki = {
     
@@ -59,7 +52,6 @@
       'lesson-0/greetings|Greetings|p.34-35',
       'lesson-0/greetings-practice|Practice: Greetings|p.37',
       'lesson-0/culture-1|Culture Note: Greetings and Bowing|p.37',
-      title.workbook,
       'lesson-0/workbook-1|Workbook: Greetings|p.11-12',
 
       // Lesson 1
@@ -84,7 +76,6 @@
       'lesson-1/time-3|Time: Minutes|p.57',
       'lesson-1/age-1|Age|p.57',
       'lesson-1/vocab-7|Bonus Vocabulary: Words in Genki|p.24-57',
-      title.workbook,
       'lesson-1/workbook-1|Workbook: Numbers|p.13',
       'lesson-1/workbook-2|Workbook: Time|p.14; I',
       'lesson-1/workbook-3|Workbook: Telephone Numbers|p.14; II',
@@ -92,14 +83,12 @@
       'lesson-1/workbook-5|Workbook: XはYです|p.15; II',
       'lesson-1/workbook-6|Workbook: Question Sentences|p.16; I & II',
       'lesson-1/workbook-7|Workbook: Questions|p.19',
-      title.literacy,
       'lesson-1/literacy-1|Hiragana Practice: Identifying Hiragana|p.290; I-A',
       'lesson-1/literacy-2|Hiragana Practice: Word Match|p.290; I-B',
       'lesson-1/literacy-3|Hiragana Practice: Diacritical Marks|p.290; I-E',
       'lesson-1/literacy-4|Hiragana Practice: Combos|p.290; I-F',
       'lesson-1/literacy-5|Hiragana Practice: Rearrange|p.291; I-H',
       'lesson-1/literacy-6|Hiragana Reading Practice|p.292-293; II',
-      title.literacyWB,
       'lesson-1/literacy-wb-1|Workbook: Hiragana Writing Practice (あ-こ)|p.117; I',
       'lesson-1/literacy-wb-2|Workbook: Spelling Practice (あ-こ)|p.117; II & III',
       'lesson-1/literacy-wb-3|Workbook: Hiragana Writing Practice (さ-と)|p.118; I',
@@ -136,7 +125,6 @@
       'lesson-2/vocab-6|Bonus Vocabulary: Food|p.79',
       'lesson-2/vocab-7|Bonus Vocabulary: Classroom Objects|p.83',
       'lesson-2/vocab-8|Useful Expressions: In the Classroom|p.83',
-      title.workbook,
       'lesson-2/workbook-1|Workbook: Numbers|p.20; I, II, & III',
       'lesson-2/workbook-2|Workbook: これ, それ, and あれ|p.21; I & II',
       'lesson-2/workbook-3|Workbook: この, その, and あの|p.22',
@@ -144,13 +132,11 @@
       'lesson-2/workbook-5|Workbook: Noun も|p.24; I',
       'lesson-2/workbook-6|Workbook: Noun じゃないです|p.24; II',
       'lesson-2/workbook-7|Workbook: Questions|p.26',
-      title.literacy,
       'lesson-2/literacy-1|Katakana Practice: Identifying Katakana|p.294; I-A',
       'lesson-2/literacy-2|Katakana Practice: Word Match|p.294; I-B',
       'lesson-2/literacy-3|Katakana Practice: Countries and Capitals|p.295; I-C',
       'lesson-2/literacy-4|Katakana Practice: Rearrange|p.296; I-E',
       'lesson-2/literacy-5|Katakana Reading Practice|p.297; III',
-      title.literacyWB,
       'lesson-2/literacy-wb-1|Workbook: Katakana Writing Practice (ア-コ)|p.124; I',
       'lesson-2/literacy-wb-2|Workbook: Spelling Practice (ア-コ)|p.124; II',
       'lesson-2/literacy-wb-3|Workbook: Katakana Writing Practice (サ-ト)|p.125; I',
@@ -178,7 +164,6 @@
       'lesson-3/grammar-5|Practice: Time Expressions 2|p.98; II-C',
       'lesson-3/grammar-6|Practice: Making Suggestions|p.99; III-A',
       'lesson-3/culture-1|Culture Note: Japanese Houses|p.101',
-      title.workbook,
       'lesson-3/workbook-1|Workbook: Verb Conjugation|p.27',
       'lesson-3/workbook-2|Workbook: Noun を Verb|p.28',
       'lesson-3/workbook-3|Workbook: Verbs with Places|p.29; I & II',
@@ -187,7 +172,6 @@
       'lesson-3/workbook-6|Workbook: Suggestion Using ～ませんか|p.31; I & II',
       'lesson-3/workbook-7|Workbook: Frequency Adverbs|p.32',
       'lesson-3/workbook-8|Workbook: Questions|p.35',
-      title.literacy,
       'lesson-3/literacy-1|Kanji Practice: 一 and 二|p.298',
       'lesson-3/literacy-2|Kanji Practice: 三 and 四|p.298',
       'lesson-3/literacy-3|Kanji Practice: 五 and 六|p.298',
@@ -197,7 +181,6 @@
       'lesson-3/literacy-7|Kanji Practice: 円 and 時|p.299',
       'lesson-3/literacy-8|Kanji Practice: Prices|p.300; I-A & B',
       'lesson-3/literacy-9|Reading Practice: まいにちのせいかつ|p.301; II',
-      title.literacyWB,
       'lesson-3/literacy-wb-1|Workbook: Kanji Writing Practice|p.129',
       'lesson-3/literacy-wb-2|Workbook: Spelling Practice (一, 二, and 三)|p.129; bonus',
       'lesson-3/literacy-wb-3|Workbook: Spelling Practice (四, 五, and 六)|p.129; bonus',
@@ -229,7 +212,6 @@
       'lesson-4/vocab-8|Bonus Vocabulary: Days 16-31|p.127',
       'lesson-4/vocab-9|Bonus Vocabulary: Months|p.127',
       'lesson-4/vocab-10|Useful Expressions: Time Words|p.127',
-      title.workbook,
       'lesson-4/workbook-1|Workbook: Ｘがあります／います|p.36; I & II',
       'lesson-4/workbook-2|Workbook: Describing Where Things Are|p.37; I & II',
       'lesson-4/workbook-3|Workbook: Past Tense (Nouns)|p.38; I & II',
@@ -238,7 +220,6 @@
       'lesson-4/workbook-6|Workbook: も|p.41',
       'lesson-4/workbook-7|Workbook: ～時間・Particles|p.42; I & II',
       'lesson-4/workbook-8|Workbook: Questions|p.44',
-      title.literacy,
       'lesson-4/literacy-1|Kanji Practice: 日 and 本|p.302',
       'lesson-4/literacy-2|Kanji Practice: 人 and 月|p.302',
       'lesson-4/literacy-3|Kanji Practice: 火 and 水|p.302',
@@ -249,7 +230,6 @@
       'lesson-4/literacy-8|Kanji Practice: Location Words|p.304; I-B',
       'lesson-4/literacy-9|Reading Practice: おかあさんへのメモ|p.304; II',
       'lesson-4/literacy-10|Reading Practice: メアリーさんのしゅうまつ|p.305; III',
-      title.literacyWB,
       'lesson-4/literacy-wb-1|Workbook: Kanji Writing Practice|p.131',
       'lesson-4/literacy-wb-2|Workbook: Spelling Practice (日, 本, and 人)|p.131; bonus',
       'lesson-4/literacy-wb-3|Workbook: Spelling Practice (月, 火, and 水)|p.131; bonus',
@@ -280,7 +260,6 @@
       'lesson-5/culture-1|Culture Note: Japanese Festivals|p.144',
       'lesson-5/vocab-5|Bonus Vocabulary: At the Post Office|p.145',
       'lesson-5/vocab-6|Useful Expressions: At the Post Office|p.145',
-      title.workbook,
       'lesson-5/workbook-1|Workbook: Adjective Conjugation (Present Tense)|p.45',
       'lesson-5/workbook-2|Workbook: Adjectives (Present Tense)|p.46; I & II',
       'lesson-5/workbook-3|Workbook: Adjective Conjugation (Present and Past Tenses)|p.47',
@@ -289,7 +268,6 @@
       'lesson-5/workbook-6|Workbook: 好き(な)／きらい(な)|p.50',
       'lesson-5/workbook-7|Workbook: ～ましょう|p.51; I & II',
       'lesson-5/workbook-8|Workbook: Questions|p.53; I & II',
-      title.literacy,
       'lesson-5/literacy-1|Kanji Practice: 山, 川, and 元|p.306',
       'lesson-5/literacy-2|Kanji Practice: 気, 天, and 私|p.306',
       'lesson-5/literacy-3|Kanji Practice: 今 and 田|p.306',
@@ -301,7 +279,6 @@
       'lesson-5/literacy-9|Katakana Practice: Match the Words|p.309; II-A',
       'lesson-5/literacy-10|Reading Practice: Yoko\'s Postcard|p.309; II-B',
       'lesson-5/literacy-11|Reading Practice: Robert\'s Postcard|p.310; II-C',
-      title.literacyWB,
       'lesson-5/literacy-wb-1|Workbook: Kanji Writing Practice|p.133',
       'lesson-5/literacy-wb-2|Workbook: Spelling Practice (山, 川, 元, and 気)|p.133; bonus',
       'lesson-5/literacy-wb-3|Workbook: Spelling Practice (天, 私, 今, and 田)|p.133; bonus',
@@ -326,7 +303,6 @@
       'lesson-6/grammar-8|Practice: ～から|p.161; V-A',
       'lesson-6/grammar-9|Practice: ～ましょうか|p.162-163; VI-A & B',
       'lesson-6/vocab-5|Useful Expressions: Directions|p.165',
-      title.workbook,
       'lesson-6/workbook-1|Workbook: Te-form Conjugation 1|p.54',
       'lesson-6/workbook-2|Workbook: Te-form Conjugation 2|p.55-56',
       'lesson-6/workbook-3|Workbook: ～てください|p.57; I & II',
@@ -335,7 +311,6 @@
       'lesson-6/workbook-6|Workbook: Describing Two Activities|p.60; I & II',
       'lesson-6/workbook-7|Workbook: ～から|p.61; I & II',
       'lesson-6/workbook-8|Workbook: Questions|p.63',
-      title.literacy,
       'lesson-6/literacy-1|Kanji Practice: 東 and 西|p.312',
       'lesson-6/literacy-2|Kanji Practice: 南 and 北|p.312',
       'lesson-6/literacy-3|Kanji Practice: 口 and 出|p.312',
@@ -347,7 +322,6 @@
       'lesson-6/literacy-9|Reading Practice: Find the Location|p.314; I-B',
       'lesson-6/literacy-10|Reading Practice: Bulletin Board|p.314-315; II',
       'lesson-6/literacy-11|Reading Practice: Chiaki\'s Favorite Restaurant|p.316-317; III-A, B, & C',
-      title.literacyWB,
       'lesson-6/literacy-wb-1|Workbook: Kanji Writing Practice|p.135',
       'lesson-6/literacy-wb-2|Workbook: Spelling Practice (東, 西, and 南)|p.135; bonus',
       'lesson-6/literacy-wb-3|Workbook: Spelling Practice (北, 口, and 出)|p.135; bonus',
@@ -374,7 +348,6 @@
       'lesson-7/culture-1|Culture Note: Kinship Terms 1|p.184',
       'lesson-7/culture-2|Culutre Note: Kinship Terms 2|p.184',
       'lesson-7/vocab-6|Useful Expressions: Parts of the Body|p.185',
-      title.workbook,
       'lesson-7/workbook-1|Workbook: Te-form Conjugation Practice|p.64',
       'lesson-7/workbook-2|Workbook: ～ている (Actions in Progress)|p.65; I, II, & III',
       'lesson-7/workbook-3|Workbook: ～ている (Result of a Change)|p.66; I',
@@ -383,7 +356,6 @@
       'lesson-7/workbook-6|Workbook: Verb Stem + に行く／来る／帰る|p.69; I',
       'lesson-7/workbook-7|Workbook: Counting People|p.70',
       'lesson-7/workbook-8|Workbook: Questions|p.72',
-      title.literacy,
       'lesson-7/literacy-1|Kanji Practice: 京, 子, and 小|p.318',
       'lesson-7/literacy-2|Kanji Practice: 会 and 社|p.318',
       'lesson-7/literacy-3|Kanji Practice: 父 and 母|p.318',
@@ -392,7 +364,6 @@
       'lesson-7/literacy-6|Kanji Practice: 帰 and 入|p.319',
       'lesson-7/literacy-7|Kanji Practice: Fill in the Blanks|p.320; I-A',
       'lesson-7/literacy-8|Reading Practice: Mary\'s Letter|p.321-322; II',
-      title.literacyWB,
       'lesson-7/literacy-wb-1|Workbook: Kanji Writing Practice|p.137',
       'lesson-7/literacy-wb-2|Workbook: Spelling Practice (京, 子, 小, and 会)|p.137; bonus',
       'lesson-7/literacy-wb-3|Workbook: Spelling Practice (社, 父, and 母)|p.137; bonus',
@@ -421,7 +392,6 @@
       'lesson-8/grammar-12|Practice: 何もしませんでした|p.204; VIII-A',
       'lesson-8/vocab-6|Bonus Vocabulary: 日本の食べ物|p.207',
       'lesson-8/culture-1|Culture Note: Foods in Japan|p.207',
-      title.workbook,
       'lesson-8/workbook-1|Workbook: Short Forms (Present Tense)|p.73',
       'lesson-8/workbook-2|Workbook: Short Forms (Informal Speech)|p.74; I & II',
       'lesson-8/workbook-3|Workbook: Quotations (～と思います)|p.75; I & II',
@@ -430,7 +400,6 @@
       'lesson-8/workbook-6|Workbook: Verb のが好きです|p.78; I & II',
       'lesson-8/workbook-7|Workbook: が・何か and 何も|p.79; I & II',
       'lesson-8/workbook-8|Workbook: Questions|p.81; I & II',
-      title.literacy,
       'lesson-8/literacy-1|Kanji Practice: 員, 新, and 聞|p.323',
       'lesson-8/literacy-2|Kanji Practice: 作, 仕, and 事|p.323',
       'lesson-8/literacy-3|Kanji Practice: 電 and 車|p.323',
@@ -438,7 +407,6 @@
       'lesson-8/literacy-5|Kanji Practice: 思, 次, and 何|p.324',
       'lesson-8/literacy-6|Kanji Practice: Match the Verbs|p.325; I-B',
       'lesson-8/literacy-7|Reading Practice: 日本の会社員|p.326-327; II-C',
-      title.literacyWB,
       'lesson-8/literacy-wb-1|Workbook: Kanji Writing Practice|p.139',
       'lesson-8/literacy-wb-2|Workbook: Spelling Practice (員, 新, 聞, and 作)|p.139; bonus',
       'lesson-8/literacy-wb-3|Workbook: Spelling Practice (仕, 事, 電, and 車)|p.139; bonus',
@@ -466,7 +434,6 @@
       'lesson-9/culture-1|Culture Note: Japanese Traditional Culture|p.226',
       'lesson-9/vocab-6|Bonus Vocabulary: Colors|p.227',
       'lesson-9/vocab-7|Useful Expressions: Colors|p.227',
-      title.workbook,
       'lesson-9/workbook-1|Workbook: Past Tense Short Forms|p.82',
       'lesson-9/workbook-2|Workbook: Past Tense Short Forms (Informal Speech)|p.83; I & II',
       'lesson-9/workbook-3|Workbook: Past Tense Short Forms (～と思います)|p.84; I & II',
@@ -475,7 +442,6 @@
       'lesson-9/workbook-6|Workbook: まだ～ていません|p.87',
       'lesson-9/workbook-7|Workbook: ～から|p.88; I & II',
       'lesson-9/workbook-8|Workbook: Questions|p.90',
-      title.literacy,
       'lesson-9/literacy-1|Kanji Practice: 午, 後, and 前|p.328',
       'lesson-9/literacy-2|Kanji Practice: 名 and 白|p.328',
       'lesson-9/literacy-3|Kanji Practice: 雨, 書, and 友|p.328',
@@ -485,7 +451,6 @@
       'lesson-9/literacy-7|Kanji Practice: Fill in the Blanks|p.330; I-A & B',
       'lesson-9/literacy-8|Reading Practice: スーさんの日記|p.330-332; II-A, B, & C',
       'lesson-9/literacy-9|Useful Expressions for Letters|p.333',
-      title.literacyWB,
       'lesson-9/literacy-wb-1|Workbook: Kanji Writing Practice|p.141',
       'lesson-9/literacy-wb-2|Workbook: Spelling Practice (午, 後, 前, and 名)|p.141; bonus',
       'lesson-9/literacy-wb-3|Workbook: Spelling Practice (白, 雨, 書, and 友)|p.141; bonus',
@@ -512,7 +477,6 @@
       'lesson-10/vocab-6|Bonus Vocabulary: At the Station 1|p.248',
       'lesson-10/vocab-7|Bonus Vocabulary: At the Station 2|p.248',
       'lesson-10/vocab-8|Useful Expressions: At the Station|p.249',
-      title.workbook,
       'lesson-10/workbook-1|Workbook: Comparison between Two Items|p.91; I & II',
       'lesson-10/workbook-2|Workbook: Comparison among Three or More Items|p.92; I & II',
       'lesson-10/workbook-3|Workbook: Adjective/Noun + の|p.93; I & II',
@@ -520,7 +484,6 @@
       'lesson-10/workbook-5|Workbook: Adjective + なる|p.95; I & II',
       'lesson-10/workbook-6|Workbook: ～で行きます／かかります・どこかに／どこにも|p.96; I & II',
       'lesson-10/workbook-7|Workbook: Questions|p.99',
-      title.literacy,
       'lesson-10/literacy-1|Kanji Practice: 住, 正, and 年|p.334',
       'lesson-10/literacy-2|Kanji Practice: 売, 買, and 町|p.334',
       'lesson-10/literacy-3|Kanji Practice: 長, 道, and 雪|p.334-335',
@@ -529,7 +492,6 @@
       'lesson-10/literacy-6|Kanji Practice: Antonyms|p.336; I-B',
       'lesson-10/literacy-7|Kanji Practice: Fill in the Blanks|p.336; I-C',
       'lesson-10/literacy-8|Reading Practice: かさじぞう|p.337-339; II-C & D',
-      title.literacyWB,
       'lesson-10/literacy-wb-1|Workbook: Kanji Writing Practice|p.143',
       'lesson-10/literacy-wb-2|Workbook: Spelling Practice (住, 正, 年, and 売)|p.143; bonus',
       'lesson-10/literacy-wb-3|Workbook: Spelling Practice (買, 町, 長, and 道)|p.143; bonus',
@@ -553,13 +515,11 @@
       'lesson-11/vocab-6|Useful Expressions: In the Japanese Class|p.265',
       'lesson-11/vocab-7|Bonus Vocabulary: In the Japanese Class 1|p.265',
       'lesson-11/vocab-8|Bonus Vocabulary: In the Japanese Class 2|p.265',
-      title.workbook,
       'lesson-11/workbook-1|Workbook: ～たい|p.100; I & II',
       'lesson-11/workbook-2|Workbook: ～たり～たりする|p.101; I & II',
       'lesson-11/workbook-3|Workbook: ～ことがある|p.102; I & II',
       'lesson-11/workbook-4|Workbook: Noun A や Noun B|p.103',
       'lesson-11/workbook-5|Workbook: Questions|p.105; I & II',
-      title.literacy,
       'lesson-11/literacy-1|Kanji Practice: 手, 紙, and 好|p.340',
       'lesson-11/literacy-2|Kanji Practice: 近, 明, 病, and 院|p.340',
       'lesson-11/literacy-3|Kanji Practice: 映, 画, and 歌|p.340-341',
@@ -567,14 +527,20 @@
       'lesson-11/literacy-5|Kanji Practice: 強, 有, and 旅|p.341',
       'lesson-11/literacy-6|Kanji Practice: Compounds|p.342; I-B',
       'lesson-11/literacy-7|Reading Practice: 友だち募集|p.342-344; II-C, D, & E',
-      title.literacyWB,
       'lesson-11/literacy-wb-1|Workbook: Kanji Writing Practice|p.145',
       'lesson-11/literacy-wb-2|Workbook: Spelling Practice (手, 紙, 好, and 近)|p.145; bonus',
       'lesson-11/literacy-wb-3|Workbook: Spelling Practice (明, 病, 院, and 映)|p.145; bonus',
       'lesson-11/literacy-wb-4|Workbook: Spelling Practice (画, 歌, 市, and 所)|p.145; bonus',
       'lesson-11/literacy-wb-5|Workbook: Spelling Practice (勉, 強, 有, and 旅)|p.145; bonus',
       'lesson-11/literacy-wb-6|Workbook: Fill in the Kanji|p.146; I',
-      'lesson-11/literacy-wb-7|Workbook: Translate the Sentences|p.146; II'
+      'lesson-11/literacy-wb-7|Workbook: Translate the Sentences|p.146; II',
+      
+      // Lesson 12
+      'lesson-12/vocab-1|Vocabulary: Nouns 1|p.268',
+      'lesson-12/vocab-2|Vocabulary: Nouns 2|p.268',
+      'lesson-12/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.268-269',
+      'lesson-12/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.269',
+      'lesson-12/vocab-5|Vocabulary: Adverbs and Other Expressions|p.269'
     ],
 
 
@@ -1257,11 +1223,6 @@
           if (a) {
             a = a.split('|');
 
-            // correct the next/prev exercise if it was a title
-            if (a[0] == 'title') {
-              a = Genki.exercises[i == 1 ? Genki.active.index - 2 : Genki.active.index + 2].split('|');
-            }
-
             // create the next/prev link
             more += '<a href="../../../lessons/' + a[0] + '/' + Genki.local + '" class="button ' + (i == 1 ? 'prev' : 'next') + '-ex" title="' + (i == 1 ? 'Previous' : 'Next') + ' exercise">' + a[1] + '</a>';
           }
@@ -1280,26 +1241,39 @@
             i = 0,
             j = Genki.exercises.length,
             linkData,
-            active;
+            active,
+            
+            // vars for grouping sub-sections
+            currentGroup,
+            group = '',
+            groups = /workbook-\d+|literacy-\d+|literacy-wb-\d+/,
+            groupTitles = {
+              workbook : 'Workbook',
+              literacy : 'Reading and Writing',
+              'literacy-wb' : 'Workbook: Reading and Writing'
+            };
 
         // loop over all the exercises and place them into their respectice lesson group
         for (; i < j; i++) {
           linkData = Genki.exercises[i].split('|');
+          currentGroup = linkData[0].replace(/^lesson-\d+\/|-\d+$/g, '');
 
           // if the lesson group is different create a new group
-          if (linkData[0] != 'title' && !new RegExp(lesson).test(linkData[0])) {
+          if (!new RegExp(lesson).test(linkData[0])) {
             lesson = linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
             list += '</ul><h4 ' + attrs + '>' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">';
+            group = '';
           }
 
           // add a header to separate the workbook from the textbook exercises and grammar from reading and writing
-          if (linkData[0] == 'title') {
-            list += '<li><h4 class="sub-lesson-title">' + linkData[1] + '</h4></li>';
-
-          } else {
-            // add the exercise link to the group
-            list += '<li><a href="../../../lessons/' + linkData[0] + '/' + Genki.local + '" data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '" title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
+          if (groups.test(linkData[0]) && group != currentGroup) {
+            group = currentGroup;
+            list += '<li><h4 class="sub-lesson-title">' + groupTitles[group] + '</h4></li>';
           }
+          
+          // add the exercise link to the group
+          list += '<li><a href="../../../lessons/' + linkData[0] + '/' + Genki.local + '" data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '" title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
+          
         }
 
         // add the exercise list to the document
