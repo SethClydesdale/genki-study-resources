@@ -540,7 +540,8 @@
       'lesson-12/vocab-2|Vocabulary: Nouns 2|p.268',
       'lesson-12/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.268-269',
       'lesson-12/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.269',
-      'lesson-12/vocab-5|Vocabulary: Adverbs and Other Expressions|p.269'
+      'lesson-12/vocab-5|Vocabulary: Adverbs and Other Expressions|p.269',
+      'lesson-12/grammar-1|Practice: ～んです|p.276; I-A'
     ],
 
 
