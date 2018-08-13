@@ -543,7 +543,8 @@
       'lesson-12/vocab-5|Vocabulary: Adverbs and Other Expressions|p.269',
       'lesson-12/grammar-1|Practice: ～んです|p.276; I-A',
       'lesson-12/grammar-2|Practice: ～んです 2|p.277; I-B',
-      'lesson-12/grammar-3|Practice: ～すぎる|p.278-279; II-A'
+      'lesson-12/grammar-3|Practice: ～すぎる|p.278-279; II-A',
+      'lesson-12/grammar-4|Practice: ～ほうがいいです|p.280; III-A'
     ],
 
 
