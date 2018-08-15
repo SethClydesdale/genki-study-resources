@@ -546,7 +546,9 @@
       'lesson-12/grammar-3|Practice: ～すぎる|p.278-279; II-A',
       'lesson-12/grammar-4|Practice: ～ほうがいいです|p.280; III-A',
       'lesson-12/grammar-5|Practice: ～ので|p.281; IV-A',
-      'lesson-12/grammar-6|Practice: ～なければいけません／なきゃいけません|p.282; V-A'
+      'lesson-12/grammar-6|Practice: ～なければいけません／なきゃいけません|p.282; V-A',
+      'lesson-12/grammar-7|Practice: ～なければいけません／なきゃいけません (Informal)|p.282; V-C',
+      'lesson-12/grammar-8|Practice: ～でしょう|p.283; VI-A'
     ],
 
 
