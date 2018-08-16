@@ -28,9 +28,10 @@ If you have any suggestions, feedback, or bugs to report, feel free to [open a n
 
 
 ### Made possible thanks to...
-- [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
-- [dragula](https://github.com/bevacqua/dragula)
-- [easytimer.js](https://github.com/albert-gonzalez/easytimer.js)
+- [The Japan Times](https://bookclub.japantimes.co.jp/en/) for Genki: An Integrated Course in Elementary Japanese.
+- [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) for the awesome icons.
+- [dragula](https://github.com/bevacqua/dragula) for the simple drag and drop.
+- [easytimer.js](https://github.com/albert-gonzalez/easytimer.js) for the super easy timer.
 
 
 These resources were used in this project. Check them out !
