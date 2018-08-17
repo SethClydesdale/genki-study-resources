@@ -550,7 +550,9 @@
       'lesson-12/grammar-7|Practice: ～なければいけません／なきゃいけません (Informal)|p.282; V-C',
       'lesson-12/grammar-8|Practice: ～でしょう|p.283; VI-A',
       'lesson-12/culture-1|Culture Note: The Japanese Climate|p.286',
-      'lesson-12/workbook-1|Workbook: ～んです|p.106; I & II'
+      'lesson-12/vocab-6|Useful Expressions: Health and Illness|p.287-288',
+      'lesson-12/vocab-7|Bonus Vocabulary: Health and Illness|p.288',
+      'lesson-12/workbook-1|Workbook: ～んです|p.106; I & II',
     ],
 
 
