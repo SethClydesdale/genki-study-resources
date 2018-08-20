@@ -554,7 +554,8 @@
       'lesson-12/vocab-7|Bonus Vocabulary: Health and Illness|p.288',
       'lesson-12/workbook-1|Workbook: ～んです|p.106; I & II',
       'lesson-12/workbook-2|Workbook: ～すぎる|p.107; I & II',
-      'lesson-12/workbook-3|Workbook: ～ほうがいいです|p.108; I & II'
+      'lesson-12/workbook-3|Workbook: ～ほうがいいです|p.108; I & II',
+      'lesson-12/workbook-4|Workbook: ～ので|p.109; I & II'
     ],
 
 
