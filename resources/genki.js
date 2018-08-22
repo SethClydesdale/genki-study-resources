@@ -556,7 +556,8 @@
       'lesson-12/workbook-2|Workbook: ～すぎる|p.107; I & II',
       'lesson-12/workbook-3|Workbook: ～ほうがいいです|p.108; I & II',
       'lesson-12/workbook-4|Workbook: ～ので|p.109; I & II',
-      'lesson-12/workbook-5|Workbook: ～なければいけません／なきゃいけません|p.110; I & II'
+      'lesson-12/workbook-5|Workbook: ～なければいけません／なきゃいけません|p.110; I & II',
+      'lesson-12/workbook-6|Workbook: ～でしょう|p.111; I & II'
     ],
 
 
