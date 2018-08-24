@@ -558,7 +558,12 @@
       'lesson-12/workbook-4|Workbook: ～ので|p.109; I & II',
       'lesson-12/workbook-5|Workbook: ～なければいけません／なきゃいけません|p.110; I & II',
       'lesson-12/workbook-6|Workbook: ～でしょう|p.111; I & II',
-      'lesson-12/workbook-7|Workbook: Questions|p.113'
+      'lesson-12/workbook-7|Workbook: Questions|p.113',
+      'lesson-12/literacy-1|Kanji Practice: 昔, 々, and 神|p.346',
+      'lesson-12/literacy-2|Kanji Practice: 早, 起, and 牛|p.346',
+      'lesson-12/literacy-3|Kanji Practice: 使, 働, and 連|p.346-347',
+      'lesson-12/literacy-4|Kanji Practice: 別 and 度|p.347',
+      'lesson-12/literacy-5|Kanji Practice: 赤, 青, and 色|p.347'
     ],
 
 
