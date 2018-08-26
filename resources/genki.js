@@ -565,7 +565,14 @@
       'lesson-12/literacy-4|Kanji Practice: 別 and 度|p.347',
       'lesson-12/literacy-5|Kanji Practice: 赤, 青, and 色|p.347',
       'lesson-12/literacy-6|Kanji Practice: Match the Readings|p.348; I-A',
-      'lesson-12/literacy-7|Reading Practice: 七夕|p.349-350; II-B & C'
+      'lesson-12/literacy-7|Reading Practice: 七夕|p.349-350; II-B & C',
+      'lesson-12/literacy-wb-1|Workbook: Kanji Writing Practice|p.147',
+      'lesson-12/literacy-wb-2|Workbook: Spelling Practice (昔, 々, 神, and 早)|p.147; bonus',
+      'lesson-12/literacy-wb-3|Workbook: Spelling Practice (起, 牛, 使, and 働)|p.147; bonus',
+      'lesson-12/literacy-wb-4|Workbook: Spelling Practice (連, 別, and 度)|p.147; bonus',
+      'lesson-12/literacy-wb-5|Workbook: Spelling Practice (赤, 青, and 色)|p.147; bonus',
+      'lesson-12/literacy-wb-6|Workbook: Fill in the Kanji|p.148; I',
+      'lesson-12/literacy-wb-7|Workbook: Translate the Sentences|p.148; II',
     ],
 
 
