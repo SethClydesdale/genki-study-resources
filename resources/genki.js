@@ -573,6 +573,14 @@
       'lesson-12/literacy-wb-5|Workbook: Spelling Practice (赤, 青, and 色)|p.147; bonus',
       'lesson-12/literacy-wb-6|Workbook: Fill in the Kanji|p.148; I',
       'lesson-12/literacy-wb-7|Workbook: Translate the Sentences|p.148; II',
+      
+      // Lesson 13
+      'lesson-13/vocab-1|Vocabulary: Nouns 1|p.28',
+      'lesson-13/vocab-2|Vocabulary: Nouns 2|p.28',
+      'lesson-13/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.28-29',
+      'lesson-13/vocab-4|Vocabulary: U-verbs and Irregular Verbs|p.29',
+      'lesson-13/vocab-5|Vocabulary: Adverbs and Other Expressions|p.29',
+      'lesson-13/vocab-6|Vocabulary: Numbers Used to Count Days|p.29'
     ],
 
 
