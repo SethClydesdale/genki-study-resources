@@ -580,7 +580,8 @@
       'lesson-13/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.28-29',
       'lesson-13/vocab-4|Vocabulary: U-verbs and Irregular Verbs|p.29',
       'lesson-13/vocab-5|Vocabulary: Adverbs and Other Expressions|p.29',
-      'lesson-13/vocab-6|Vocabulary: Numbers Used to Count Days|p.29'
+      'lesson-13/vocab-6|Vocabulary: Numbers Used to Count Days|p.29',
+      'lesson-13/grammar-1|Practice: Potential Verbs 1|p.37; I-A'
     ],
 
 
