@@ -582,7 +582,8 @@
       'lesson-13/vocab-5|Vocabulary: Adverbs and Other Expressions|p.29',
       'lesson-13/vocab-6|Vocabulary: Numbers Used to Count Days|p.29',
       'lesson-13/grammar-1|Practice: Potential Verbs 1|p.37; I-A',
-      'lesson-13/grammar-2|Practice: Potential Verbs 2|p.37; I-B'
+      'lesson-13/grammar-2|Practice: Potential Verbs 2|p.37; I-B',
+      'lesson-13/grammar-3|Practice: Potential Verbs 3|p.39; I-F'
     ],
 
 
