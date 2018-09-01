@@ -584,7 +584,9 @@
       'lesson-13/grammar-1|Practice: Potential Verbs 1|p.37; I-A',
       'lesson-13/grammar-2|Practice: Potential Verbs 2|p.37; I-B',
       'lesson-13/grammar-3|Practice: Potential Verbs 3|p.39; I-F',
-      'lesson-13/grammar-4|Practice: ～し|p.39-40; II-A'
+      'lesson-13/grammar-4|Practice: ～し|p.39-40; II-A',
+      'lesson-13/grammar-5|Practice: ～そうです 1|p.41; III-A',
+      'lesson-13/grammar-6|Practice: ～そうです 2|p.42; III-B'
     ],
 
 
