@@ -588,7 +588,8 @@
       'lesson-13/grammar-5|Practice: ～そうです 1|p.41; III-A',
       'lesson-13/grammar-6|Practice: ～そうです 2|p.42; III-B',
       'lesson-13/grammar-7|Practice: ～てみる|p.43; IV-A',
-      'lesson-13/grammar-8|Practice: なら|p.44; V-A'
+      'lesson-13/grammar-8|Practice: なら|p.44; V-A',
+      'lesson-13/grammar-9|Practice: 一週間に三回|p.45-46; VI-A'
     ],
 
 
