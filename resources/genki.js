@@ -589,7 +589,11 @@
       'lesson-13/grammar-6|Practice: ～そうです 2|p.42; III-B',
       'lesson-13/grammar-7|Practice: ～てみる|p.43; IV-A',
       'lesson-13/grammar-8|Practice: なら|p.44; V-A',
-      'lesson-13/grammar-9|Practice: 一週間に三回|p.45-46; VI-A'
+      'lesson-13/grammar-9|Practice: 一週間に三回|p.45-46; VI-A',
+      'lesson-13/culture-1|Culture Note: Names of Years|p.48',
+      'lesson-13/culture-2|Culture Note: East Asian Zodiacs|p.48',
+      'lesson-13/vocab-7|Bonus Vocabulary: At the Bank|p.49',
+      'lesson-13/vocab-8|Useful Expressions: At the Bank|p.49'
     ],
 
 
