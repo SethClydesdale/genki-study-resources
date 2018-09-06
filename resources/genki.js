@@ -593,7 +593,9 @@
       'lesson-13/culture-1|Culture Note: Names of Years|p.48',
       'lesson-13/culture-2|Culture Note: East Asian Zodiacs|p.48',
       'lesson-13/vocab-7|Bonus Vocabulary: At the Bank|p.49',
-      'lesson-13/vocab-8|Useful Expressions: At the Bank|p.49'
+      'lesson-13/vocab-8|Useful Expressions: At the Bank|p.49',
+      'lesson-13/workbook-1|Workbook: Potential Verbs Conjugation Practice|p.11; I',
+      'lesson-13/workbook-2|Workbook: Potential Verbs 1|p.12; II'
     ],
 
 
