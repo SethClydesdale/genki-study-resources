@@ -595,7 +595,8 @@
       'lesson-13/vocab-7|Bonus Vocabulary: At the Bank|p.49',
       'lesson-13/vocab-8|Useful Expressions: At the Bank|p.49',
       'lesson-13/workbook-1|Workbook: Potential Verbs Conjugation Practice|p.11; I',
-      'lesson-13/workbook-2|Workbook: Potential Verbs 1|p.12; II'
+      'lesson-13/workbook-2|Workbook: Potential Verbs 1|p.12; II',
+      'lesson-13/workbook-3|Workbook: Potential Verbs 2|p.13; I & II'
     ],
 
 
