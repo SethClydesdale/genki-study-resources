@@ -596,7 +596,8 @@
       'lesson-13/vocab-8|Useful Expressions: At the Bank|p.49',
       'lesson-13/workbook-1|Workbook: Potential Verbs Conjugation Practice|p.11; I',
       'lesson-13/workbook-2|Workbook: Potential Verbs 1|p.12; II',
-      'lesson-13/workbook-3|Workbook: Potential Verbs 2|p.13; I & II'
+      'lesson-13/workbook-3|Workbook: Potential Verbs 2|p.13; I & II',
+      'lesson-13/workbook-4|Workbook: ～し|p.14; I & II'
     ],
 
 
@@ -925,9 +926,10 @@
             
           } else {
             // Split the answer from the hint.
-            // Syntax is {ANSWER|HINT|HIDE_HINT} HINT and HIDE_HINT is optional
-            // passing "answer" to HIDE_HINT will hide HINT and make it a secondary answer
-            // passing "furigana" to HIDE_HINT will hide HINT and make it furigana only to aid with reading
+            // Syntax is {ANSWER|HINT|HIDE_HINT} HINT and HIDE_HINT is optional.
+            // passing "answer" to HIDE_HINT will hide HINT and make it a secondary answer.
+            // passing "furigana" to HIDE_HINT will hide HINT and make it furigana only to aid with reading.
+            // passing "width:N" to HIDE_HINT will set the width of the field to N, manually. The hint will remain visible.
             hint = value[1] ? value[1] : '',
             flag = value[2] ? value[2] : '';
 
@@ -943,9 +945,9 @@
                 (flag == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
-                'style="width:' + (((hint || value[0]).length * 14) + 14) + 'px;"'+
+                'style="width:' + (/width/.test(flag) ? flag.split(':')[1] : (((hint || value[0]).length * (14 / (/[a-z]/i.test(hint || value[0]) ? 2 : 1))) + 14))+ 'px;"'+
               '>'+
-              ((hint && !flag) ? '<span class="problem-hint">' + hint + '</span>' : '')+
+              ((hint && !/answer|furigana/.test(flag)) ? '<span class="problem-hint">' + hint + '</span>' : '')+
             '</span>';
           }
           
