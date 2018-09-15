@@ -607,7 +607,9 @@
       'lesson-13/literacy-2|Kanji Practice: 理, 特, and 安|p.276',
       'lesson-13/literacy-3|Kanji Practice: 販, 肉, and 悪|p.276-277',
       'lesson-13/literacy-4|Kanji Practice: 体, 空, and 港|p.277',
-      'lesson-13/literacy-5|Kanji Practice: 着, 同, 海, and 昼|p.277'
+      'lesson-13/literacy-5|Kanji Practice: 着, 同, 海, and 昼|p.277',
+      'lesson-13/literacy-6|Kanji Practice: Write the Readings|p.278; I-A & B',
+      'lesson-13/literacy-7|Reading Practice: Identify the Food|p.279; II-A'
     ],
 
 
