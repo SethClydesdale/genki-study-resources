@@ -1099,6 +1099,43 @@ p.section-desc {
 }
 .secondary-answer.furigana-only { color:#666; }
 
+/* vocab key style */
+.vocab-key {
+  padding-top:30px;
+  margin:15px auto;
+  position:relative;
+  border:1px solid #999;
+}
+
+.vocab-key > * {
+  padding:6px;
+  box-sizing:border-box;
+  margin-bottom:0;
+}
+
+.vocab-key > *:last-child {
+  border-left:1px solid #999;
+  margin-left:-1px;
+}
+.vocab-key > *:first-child {
+  border-right:1px solid #999;
+  border-left:none;
+}
+
+.vocab-key:before {
+  content:"単　語";
+  font-size:20px;
+  text-align:center;
+  border-bottom:1px solid #999;
+  height:30px;
+  line-height:34px;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+}
+
+
 /* optional parent class to add a background to answers for contrast */
 .show-bg .problem-answer, .show-bg .secondary-answer {
   background:#FFF;
@@ -1232,6 +1269,10 @@ p.section-desc {
     float:none;
     width:100%;
   }
+  
+  /* change vocab key border to a horizontal one */
+  .vocab-key > *:first-child, .vocab-key > *:last-child { border:none; }
+  .vocab-key > *:first-child { border-bottom:1px solid #999; }
 
   /* prevent vocab quizzes from wrapping */
   .drag-quiz #quiz-zone > div:not(#quiz-info) {
