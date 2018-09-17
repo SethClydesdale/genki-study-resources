@@ -610,7 +610,8 @@
       'lesson-13/literacy-5|Kanji Practice: 着, 同, 海, and 昼|p.277',
       'lesson-13/literacy-6|Kanji Practice: Write the Readings|p.278; I-A & B',
       'lesson-13/literacy-7|Reading Practice: Identify the Food|p.279; II-A',
-      'lesson-13/literacy-8|Reading Practice: 日本のおもしろい経験|p.279-280; II-B & C'
+      'lesson-13/literacy-8|Reading Practice: 日本のおもしろい経験|p.279-280; II-B & C',
+      'lesson-13/literacy-9|Reading Practice: 満員電車|p.281-282; III-B & C'
     ],
 
 
