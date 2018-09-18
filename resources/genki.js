@@ -611,7 +611,13 @@
       'lesson-13/literacy-6|Kanji Practice: Write the Readings|p.278; I-A & B',
       'lesson-13/literacy-7|Reading Practice: Identify the Food|p.279; II-A',
       'lesson-13/literacy-8|Reading Practice: 日本のおもしろい経験|p.279-280; II-B & C',
-      'lesson-13/literacy-9|Reading Practice: 満員電車|p.281-282; III-B & C'
+      'lesson-13/literacy-9|Reading Practice: 満員電車|p.281-282; III-B & C',
+      'lesson-13/literacy-wb-1|Workbook: Kanji Writing Practice|p.109',
+      'lesson-13/literacy-wb-2|Workbook: Spelling Practice (物, 鳥, 料, and 理)|p.109; bonus',
+      'lesson-13/literacy-wb-3|Workbook: Spelling Practice (特, 安, 飯, and 肉)|p.109; bonus',
+      'lesson-13/literacy-wb-4|Workbook: Spelling Practice (悪, 体, 空, and 港)|p.109; bonus',
+      'lesson-13/literacy-wb-5|Workbook: Spelling Practice (着, 同, 海, and 昼)|p.109; bonus',
+      'lesson-13/literacy-wb-6|Workbook: Fill in the Blanks|p.110'
     ],
 
 
