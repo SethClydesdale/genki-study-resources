@@ -617,7 +617,14 @@
       'lesson-13/literacy-wb-3|Workbook: Spelling Practice (特, 安, 飯, and 肉)|p.109; bonus',
       'lesson-13/literacy-wb-4|Workbook: Spelling Practice (悪, 体, 空, and 港)|p.109; bonus',
       'lesson-13/literacy-wb-5|Workbook: Spelling Practice (着, 同, 海, and 昼)|p.109; bonus',
-      'lesson-13/literacy-wb-6|Workbook: Fill in the Blanks|p.110'
+      'lesson-13/literacy-wb-6|Workbook: Fill in the Blanks|p.110',
+      
+      // Lesson 14
+      'lesson-14/vocab-1|Vocabulary: Nouns 1|p.52',
+      'lesson-14/vocab-2|Vocabulary: Nouns 2|p.52',
+      'lesson-14/vocab-3|Vocabulary: Adjectives and Verbs|p.53',
+      'lesson-14/vocab-4|Vocabulary: Adverbs and Other Expressions|p.53',
+      'lesson-14/vocab-5|Vocabulary: Counters|p.53'
     ],
 
 
