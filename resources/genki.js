@@ -625,8 +625,9 @@
       'lesson-14/vocab-3|Vocabulary: Adjectives and Verbs|p.53',
       'lesson-14/vocab-4|Vocabulary: Adverbs and Other Expressions|p.53',
       'lesson-14/vocab-5|Vocabulary: Counters|p.53',
-      'lesson-14/grammar-1|Vocabulary: ほしい (Present)|p.61; I-A',
-      'lesson-14/grammar-2|Vocabulary: ほしい (Past)|p.61; I-B'
+      'lesson-14/grammar-1|Practice: ほしい (Present)|p.61; I-A',
+      'lesson-14/grammar-2|Practice: ほしい (Past)|p.61; I-B',
+      'lesson-14/grammar-3|Practice: ～かもしれません|p.63; II-A'
     ],
 
 
