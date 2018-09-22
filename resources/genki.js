@@ -627,7 +627,10 @@
       'lesson-14/vocab-5|Vocabulary: Counters|p.53',
       'lesson-14/grammar-1|Practice: ほしい (Present)|p.61; I-A',
       'lesson-14/grammar-2|Practice: ほしい (Past)|p.61; I-B',
-      'lesson-14/grammar-3|Practice: ～かもしれません|p.63; II-A'
+      'lesson-14/grammar-3|Practice: ～かもしれません|p.63; II-A',
+      'lesson-14/grammar-4|Practice: あげる|p.65; III-A',
+      'lesson-14/grammar-5|Practice: くれる／もらう|p.66; III-C',
+      'lesson-14/grammar-6|Practice: あげる／くれる／もらう|p.66; III-D'
     ],
 
 
