@@ -631,7 +631,9 @@
       'lesson-14/grammar-4|Practice: あげる|p.65; III-A',
       'lesson-14/grammar-5|Practice: くれる／もらう|p.66; III-C',
       'lesson-14/grammar-6|Practice: あげる／くれる／もらう|p.66; III-D',
-      'lesson-14/grammar-7|Practice: ～たらどうですか|p.68; IV-A'
+      'lesson-14/grammar-7|Practice: ～たらどうですか|p.68; IV-A',
+      'lesson-14/grammar-8|Practice: Counters|p.69; V-A',
+      'lesson-14/grammar-9|Practice: Number+も／Number+しか+Negative|p.69; V-B'
     ],
 
 
