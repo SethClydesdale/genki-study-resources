@@ -636,7 +636,8 @@
       'lesson-14/grammar-9|Practice: Number+も／Number+しか+Negative|p.69; V-B',
       'lesson-14/culture-1|Culture Note: Annual Events in Japan|p.72',
       'lesson-14/vocab-6|Useful Expressions: Counters|p.73',
-      'lesson-14/workbook-1|Workbook: ほしい|p.21; I, II, & III'
+      'lesson-14/workbook-1|Workbook: ほしい|p.21; I, II, & III',
+      'lesson-14/workbook-2|Workbook: ～かもしれません|p.22; I & II'
     ],
 
 
