@@ -638,7 +638,8 @@
       'lesson-14/vocab-6|Useful Expressions: Counters|p.73',
       'lesson-14/workbook-1|Workbook: ほしい|p.21; I, II, & III',
       'lesson-14/workbook-2|Workbook: ～かもしれません|p.22; I & II',
-      'lesson-14/workbook-3|Workbook: あげる／くれる／もらう|p.23; I & II'
+      'lesson-14/workbook-3|Workbook: あげる／くれる／もらう|p.23; I & II',
+      'lesson-14/workbook-4|Workbook: ～たらどうですか|p.24; I & II'
     ],
 
 
