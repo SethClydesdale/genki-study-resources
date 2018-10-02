@@ -641,7 +641,12 @@
       'lesson-14/workbook-3|Workbook: あげる／くれる／もらう|p.23; I & II',
       'lesson-14/workbook-4|Workbook: ～たらどうですか|p.24; I & II',
       'lesson-14/workbook-5|Workbook: Number+も／Number+しか+Negative|p.25; I & II',
-      'lesson-14/workbook-6|Workbook: Questions|p.27; I'
+      'lesson-14/workbook-6|Workbook: Questions|p.27; I',
+      'lesson-14/literacy-1|Kanji Practice: 彼, 代, and 留|p.283',
+      'lesson-14/literacy-2|Kanji Practice: 族, 親, and 切|p.283',
+      'lesson-14/literacy-3|Kanji Practice: 英, 店, and 去|p.283-284',
+      'lesson-14/literacy-4|Kanji Practice: 急, 乗, and 当|p.284',
+      'lesson-14/literacy-5|Kanji Practice: 音, 楽, 医, and 者|p.284'
     ],
 
 
