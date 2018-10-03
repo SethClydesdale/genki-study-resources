@@ -646,7 +646,9 @@
       'lesson-14/literacy-2|Kanji Practice: 族, 親, and 切|p.283',
       'lesson-14/literacy-3|Kanji Practice: 英, 店, and 去|p.283-284',
       'lesson-14/literacy-4|Kanji Practice: 急, 乗, and 当|p.284',
-      'lesson-14/literacy-5|Kanji Practice: 音, 楽, 医, and 者|p.284'
+      'lesson-14/literacy-5|Kanji Practice: 音, 楽, 医, and 者|p.284',
+      'lesson-14/literacy-6|Kanji Practice: Write the Readings|p.285; I-A & B',
+      'lesson-14/literacy-7|Reading Practice: 悩みの相談|p.286-287; II-B & C'
     ],
 
 
