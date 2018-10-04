@@ -648,7 +648,13 @@
       'lesson-14/literacy-4|Kanji Practice: 急, 乗, and 当|p.284',
       'lesson-14/literacy-5|Kanji Practice: 音, 楽, 医, and 者|p.284',
       'lesson-14/literacy-6|Kanji Practice: Write the Readings|p.285; I-A & B',
-      'lesson-14/literacy-7|Reading Practice: 悩みの相談|p.286-287; II-B & C'
+      'lesson-14/literacy-7|Reading Practice: 悩みの相談|p.286-287; II-B & C',
+      'lesson-14/literacy-wb-1|Workbook: Kanji Writing Practice|p.111',
+      'lesson-14/literacy-wb-2|Workbook: Spelling Practice (彼, 代, 留, and 族)|p.111; bonus',
+      'lesson-14/literacy-wb-3|Workbook: Spelling Practice (親, 切, 英, and 店)|p.111; bonus',
+      'lesson-14/literacy-wb-4|Workbook: Spelling Practice (去, 急, 乗, and 当)|p.111; bonus',
+      'lesson-14/literacy-wb-5|Workbook: Spelling Practice (音, 楽, 医, and 者)|p.111; bonus',
+      'lesson-14/literacy-wb-6|Workbook: Fill in the Blanks|p.112'
     ],
 
 
