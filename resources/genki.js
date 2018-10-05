@@ -654,7 +654,11 @@
       'lesson-14/literacy-wb-3|Workbook: Spelling Practice (親, 切, 英, and 店)|p.111; bonus',
       'lesson-14/literacy-wb-4|Workbook: Spelling Practice (去, 急, 乗, and 当)|p.111; bonus',
       'lesson-14/literacy-wb-5|Workbook: Spelling Practice (音, 楽, 医, and 者)|p.111; bonus',
-      'lesson-14/literacy-wb-6|Workbook: Fill in the Blanks|p.112'
+      'lesson-14/literacy-wb-6|Workbook: Fill in the Blanks|p.112',
+      
+      // Lesson 15
+      'lesson-15/vocab-1|Vocabulary: Nouns 1|p.76',
+      'lesson-15/vocab-2|Vocabulary: Nouns 2|p.76'
     ],
 
 
