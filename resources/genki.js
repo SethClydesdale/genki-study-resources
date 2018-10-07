@@ -660,7 +660,8 @@
       'lesson-15/vocab-1|Vocabulary: Nouns 1|p.76',
       'lesson-15/vocab-2|Vocabulary: Nouns 2|p.76',
       'lesson-15/vocab-3|Vocabulary: い-adjectives, U-verbs, and Ru-Verbs|p.76-77',
-      'lesson-15/vocab-4|Vocabulary: Irregular Verbs, Adverbs, and Other Expressions|p.77'
+      'lesson-15/vocab-4|Vocabulary: Irregular Verbs, Adverbs, and Other Expressions|p.77',
+      'lesson-15/grammar-1|Practice: Volitional Form 1|p.84; I-A'
     ],
 
 
