@@ -661,7 +661,9 @@
       'lesson-15/vocab-2|Vocabulary: Nouns 2|p.76',
       'lesson-15/vocab-3|Vocabulary: い-adjectives, U-verbs, and Ru-Verbs|p.76-77',
       'lesson-15/vocab-4|Vocabulary: Irregular Verbs, Adverbs, and Other Expressions|p.77',
-      'lesson-15/grammar-1|Practice: Volitional Form 1|p.84; I-A'
+      'lesson-15/culture-1|Culture Note: Japanese Accommodations|p.81',
+      'lesson-15/grammar-1|Practice: Volitional Form 1|p.84; I-A',
+      'lesson-15/grammar-2|Practice: Volitional Form 2|p.84-85; I-B'
     ],
 
 
