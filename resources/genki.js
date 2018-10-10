@@ -664,7 +664,8 @@
       'lesson-15/culture-1|Culture Note: Japanese Accommodations|p.81',
       'lesson-15/grammar-1|Practice: Volitional Form 1|p.84; I-A',
       'lesson-15/grammar-2|Practice: Volitional Form 2|p.84-85; I-B',
-      'lesson-15/grammar-3|Practice: Volitional Form + と思っています|p.86; II-A'
+      'lesson-15/grammar-3|Practice: Volitional Form + と思っています|p.86; II-A',
+      'lesson-15/grammar-4|Practice: ～ておく|p.87; III-A'
     ],
 
 
