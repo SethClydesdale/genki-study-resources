@@ -667,7 +667,8 @@
       'lesson-15/grammar-3|Practice: Volitional Form + と思っています|p.86; II-A',
       'lesson-15/grammar-4|Practice: ～ておく|p.87; III-A',
       'lesson-15/grammar-5|Practice: Using Sentences to Qualify Nouns 1|p.88-89; IV-A',
-      'lesson-15/grammar-6|Practice: Using Sentences to Qualify Nouns 2|p.89; IV-B'
+      'lesson-15/grammar-6|Practice: Using Sentences to Qualify Nouns 2|p.89; IV-B',
+      'lesson-15/grammar-7|Practice: Using Sentences to Qualify Nouns 3|p.90-91; IV-D'
     ],
 
 
