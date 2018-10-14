@@ -669,7 +669,10 @@
       'lesson-15/grammar-5|Practice: Using Sentences to Qualify Nouns 1|p.88-89; IV-A',
       'lesson-15/grammar-6|Practice: Using Sentences to Qualify Nouns 2|p.89; IV-B',
       'lesson-15/grammar-7|Practice: Using Sentences to Qualify Nouns 3|p.90-91; IV-D',
-      'lesson-15/vocab-5|Useful Expressions: At the Hotel|p.95'
+      'lesson-15/vocab-5|Useful Expressions: At the Hotel|p.95',
+      'lesson-15/workbook-1|Workbook: Volitional Form Conjugation Practice|p.28; I',
+      'lesson-15/workbook-2|Workbook: Volitional Form|p.28; II',
+      'lesson-15/workbook-3|Workbook: Volitional Form + と思っています|p.29; I & II'
     ],
 
 
