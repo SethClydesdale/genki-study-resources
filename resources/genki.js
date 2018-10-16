@@ -673,7 +673,8 @@
       'lesson-15/workbook-1|Workbook: Volitional Form Conjugation Practice|p.28; I',
       'lesson-15/workbook-2|Workbook: Volitional Form|p.28; II',
       'lesson-15/workbook-3|Workbook: Volitional Form + と思っています|p.29; I & II',
-      'lesson-15/workbook-4|Workbook: ～ておく|p.30; I & II'
+      'lesson-15/workbook-4|Workbook: ～ておく|p.30; I & II',
+      'lesson-15/workbook-5|Workbook: Using Sentences to Qualify Nouns 1|p.31; I & II'
     ],
 
 
