@@ -681,7 +681,8 @@
       'lesson-15/literacy-2|Kanji Practice: 注, 夏, 魚, and 寺|p.288',
       'lesson-15/literacy-3|Kanji Practice: 広, 転, and 借|p.288-289',
       'lesson-15/literacy-4|Kanji Practice: 走, 建, and 地|p.289',
-      'lesson-15/literacy-5|Kanji Practice: 場, 足, and 通|p.289'
+      'lesson-15/literacy-5|Kanji Practice: 場, 足, and 通|p.289',
+      'lesson-15/literacy-6|Kanji Practice: Write the Readings|p.290; I-A & B'
     ],
 
 
