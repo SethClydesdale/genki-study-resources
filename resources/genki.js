@@ -683,7 +683,13 @@
       'lesson-15/literacy-4|Kanji Practice: 走, 建, and 地|p.289',
       'lesson-15/literacy-5|Kanji Practice: 場, 足, and 通|p.289',
       'lesson-15/literacy-6|Kanji Practice: Write the Readings|p.290; I-A & B',
-      'lesson-15/literacy-7|Reading Practice: 私が好きな所|p.291-294; II-B, C, & B'
+      'lesson-15/literacy-7|Reading Practice: 私が好きな所|p.291-294; II-B, C, & B',
+      'lesson-15/literacy-wb-1|Workbook: Kanji Writing Practice|p.113',
+      'lesson-15/literacy-wb-2|Workbook: Spelling Practice (死, 意, 味, and 注)|p.113; bonus',
+      'lesson-15/literacy-wb-3|Workbook: Spelling Practice (夏, 魚, 寺, and 広)|p.113; bonus',
+      'lesson-15/literacy-wb-4|Workbook: Spelling Practice (転, 借, 走, and 建)|p.113; bonus',
+      'lesson-15/literacy-wb-5|Workbook: Spelling Practice (地, 場, 足, and 通)|p.113; bonus',
+      'lesson-15/literacy-wb-6|Workbook: Fill in the Blanks|p.114'
     ],
 
 
