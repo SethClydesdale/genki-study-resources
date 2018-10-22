@@ -689,7 +689,13 @@
       'lesson-15/literacy-wb-3|Workbook: Spelling Practice (夏, 魚, 寺, and 広)|p.113; bonus',
       'lesson-15/literacy-wb-4|Workbook: Spelling Practice (転, 借, 走, and 建)|p.113; bonus',
       'lesson-15/literacy-wb-5|Workbook: Spelling Practice (地, 場, 足, and 通)|p.113; bonus',
-      'lesson-15/literacy-wb-6|Workbook: Fill in the Blanks|p.114'
+      'lesson-15/literacy-wb-6|Workbook: Fill in the Blanks|p.114',
+      
+      // Lesson 16
+      'lesson-16/vocab-1|Vocabulary: Nouns|p.98',
+      'lesson-16/vocab-2|Vocabulary: い-adjectives and U-verbs|p.98-99',
+      'lesson-16/vocab-3|Vocabulary: Ru-verbs and Irregular Verbs|p.99',
+      'lesson-16/vocab-4|Vocabulary: Adverbs and Other Expressions|p.99'
     ],
 
 
