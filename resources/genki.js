@@ -695,7 +695,8 @@
       'lesson-16/vocab-1|Vocabulary: Nouns|p.98',
       'lesson-16/vocab-2|Vocabulary: い-adjectives and U-verbs|p.98-99',
       'lesson-16/vocab-3|Vocabulary: Ru-verbs and Irregular Verbs|p.99',
-      'lesson-16/vocab-4|Vocabulary: Adverbs and Other Expressions|p.99'
+      'lesson-16/vocab-4|Vocabulary: Adverbs and Other Expressions|p.99',
+      'lesson-16/grammar-1|Practice: ～てあげる|p.108; I-A'
     ],
 
 
