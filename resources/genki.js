@@ -697,7 +697,8 @@
       'lesson-16/vocab-3|Vocabulary: Ru-verbs and Irregular Verbs|p.99',
       'lesson-16/vocab-4|Vocabulary: Adverbs and Other Expressions|p.99',
       'lesson-16/grammar-1|Practice: ～てあげる|p.108; I-A',
-      'lesson-16/grammar-2|Practice: ～てくれる／～てもらう|p.109; I-C'
+      'lesson-16/grammar-2|Practice: ～てくれる／～てもらう|p.109; I-C',
+      'lesson-16/grammar-3|Practice: ～てあげる／～てくれる／～てもらう|p.110; I-E'
     ],
 
 
