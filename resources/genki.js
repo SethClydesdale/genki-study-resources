@@ -699,7 +699,8 @@
       'lesson-16/grammar-1|Practice: ～てあげる|p.108; I-A',
       'lesson-16/grammar-2|Practice: ～てくれる／～てもらう|p.109; I-C',
       'lesson-16/grammar-3|Practice: ～てあげる／～てくれる／～てもらう|p.110; I-E',
-      'lesson-16/grammar-4|Practice: ～ていただけませんか|p.112; II-A'
+      'lesson-16/grammar-4|Practice: ～ていただけませんか|p.112; II-A',
+      'lesson-16/grammar-5|Practice: ～といいですね|p.113; III-A'
     ],
 
 
