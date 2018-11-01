@@ -705,8 +705,10 @@
       'lesson-16/grammar-7|Practice: ～時 2|p.115; IV-B',
       'lesson-16/grammar-8|Practice: ～てすみませんでした 1|p.116; V-A',
       'lesson-16/grammar-9|Practice: ～てすみませんでした 2|p.116; V-B',
-      'lesson-16/workbook-1|Workbook: ～てあげる／～てくれる／～てもらう 1|p.35; I &amp; II',
-      'lesson-16/workbook-2|Workbook: ～てあげる／～てくれる／～てもらう 2|p.36; I &amp; II'
+      'lesson-16/workbook-1|Workbook: ～てあげる／～てくれる／～てもらう 1|p.35; I & II',
+      'lesson-16/workbook-2|Workbook: ～てあげる／～てくれる／～てもらう 2|p.36; I & II',
+      'lesson-16/workbook-3|Workbook: ～ていただけませんか|p.37; I & II',
+      'lesson-16/workbook-4|Workbook: ～といいですね／～といいんですが|p.38; I & II'
     ],
 
 
