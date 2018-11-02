@@ -708,7 +708,9 @@
       'lesson-16/workbook-1|Workbook: ～てあげる／～てくれる／～てもらう 1|p.35; I & II',
       'lesson-16/workbook-2|Workbook: ～てあげる／～てくれる／～てもらう 2|p.36; I & II',
       'lesson-16/workbook-3|Workbook: ～ていただけませんか|p.37; I & II',
-      'lesson-16/workbook-4|Workbook: ～といいですね／～といいんですが|p.38; I & II'
+      'lesson-16/workbook-4|Workbook: ～といいですね／～といいんですが|p.38; I & II',
+      'lesson-16/workbook-5|Workbook: ～時 1|p.39; I & II',
+      'lesson-16/workbook-6|Workbook: ～時 2|p.40; I & II'
     ],
 
 
