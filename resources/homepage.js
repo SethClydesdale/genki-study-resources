@@ -33,11 +33,11 @@
           // add tooltip in case the text gets cut off
           clone.title = li[i].innerText;
           
-          // add the clone to the fragment
-          frag.appendChild(clone);
-          
-          // increment hits
-          hits++;
+          // add the clone to the fragment if it's valid
+          if (!/^file/.test(clone.dataset.lesson)) {
+            frag.appendChild(clone);
+            hits++; // increment hits
+          }
         }
       }
     }
