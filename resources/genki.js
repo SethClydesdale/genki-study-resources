@@ -712,7 +712,15 @@
       'lesson-16/workbook-5|Workbook: ～時 1|p.39; I & II',
       'lesson-16/workbook-6|Workbook: ～時 2|p.40; I & II',
       'lesson-16/workbook-7|Workbook: ～てすみませんでした|p.41; I & II',
-      'lesson-16/workbook-8|Workbook: Questions|p.43; I'
+      'lesson-16/workbook-8|Workbook: Questions|p.43; I',
+      'lesson-16/literacy-1|Kanji Practice: 供, 世, and 界|p.295',
+      'lesson-16/literacy-2|Kanji Practice: 全, 部, and 始|p.295',
+      'lesson-16/literacy-3|Kanji Practice: 週, 以, and 考|p.295-296',
+      'lesson-16/literacy-4|Kanji Practice: 開, 屋, and 方|p.296',
+      'lesson-16/literacy-5|Kanji Practice: 運, 動, 教, and 室|p.296',
+      
+      // Study Tools
+      'study-tools/vocab-practice|Custom Vocabulary Practice'
     ],
 
 
@@ -1433,7 +1441,7 @@
 
           // if the lesson group is different create a new group
           if (!new RegExp(lesson).test(linkData[0])) {
-            lesson = linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
+            lesson = /^study-tools/.test(linkData[0]) ? 'study-tools' : linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
             list += '</ul><h4 ' + attrs + '>' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">';
             group = '';
           }
@@ -1445,7 +1453,7 @@
           }
           
           // add the exercise link to the group
-          list += '<li><a href="../../../lessons/' + linkData[0] + '/' + Genki.local + '" data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '" title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
+          list += '<li><a href="../../../lessons/' + linkData[0] + '/' + Genki.local + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '"' : '') + ' title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
           
         }
 
@@ -1455,7 +1463,7 @@
         // open the current lesson and scroll to the active exercise
         if (Genki.active.exercise) {
           // open the active lesson
-          Genki.toggle.list(document.getElementById(Genki.active.exercise[0].replace(/(lesson-\d+)\/.*/, '$1')).previousSibling);
+          Genki.toggle.list(document.getElementById(/^study-tools/.test(Genki.active.exercise[0]) ? 'study-tools' : Genki.active.exercise[0].replace(/(lesson-\d+)\/.*/, '$1')).previousSibling);
 
           // highlight the active exercise and scoll to it
           active = document.querySelector('a[href*="' + Genki.active.exercise[0] + '"]');
@@ -1486,9 +1494,9 @@
 
       // add exercise title to the document
       if (Genki.active.exercise) {
-        lesson = +Genki.active.exercise[0].replace(/lesson-(\d+).*/, '$1'); // current lesson
-      
-        result.insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center" data-page="Genki ' + (lesson < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(Genki.active.exercise[0]) ? ' Workbook' : '') + ': ' + Genki.active.exercise[2] + '">第' + lesson + '課 - ' + Genki.active.exercise[1] + '</h2>');
+        lesson = /^study-tools/.test(Genki.active.exercise[0]) ? 'study-tools' : +Genki.active.exercise[0].replace(/lesson-(\d+).*/, '$1'); // current lesson
+        
+        result.insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center" ' + (Genki.active.exercise[2] ? 'data-page="Genki ' + (lesson < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(Genki.active.exercise[0]) ? ' Workbook' : '') + ': ' + Genki.active.exercise[2] + '"' : '') + '>' + (lesson == 'study-tools' ? 'ツール' : '第' + lesson + '課') + ' - ' + Genki.active.exercise[1] + '</h2>');
         
       } else {
         result.insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center">' + document.querySelector('TITLE').innerText.replace(/\s\|.*/, '') + '</h2>');
@@ -1502,6 +1510,7 @@
       // define Genki in the global namespace
       window.Genki = this;
     }
+    
   };
 
   // initial setup

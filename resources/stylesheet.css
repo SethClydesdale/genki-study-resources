@@ -91,7 +91,7 @@ a:hover, a:focus { text-decoration:underline; }
 .button:focus, a.button:focus { background:#D40; }
 
 /* input fields */
-input[type="text"] {
+input[type="text"], textarea {
   font-size:14px;
   font-family:Meiryo, Osaka, Arial, sans-serif;
   background:#FFF;
@@ -99,10 +99,10 @@ input[type="text"] {
   padding:6px;
   outline:none;
 }
-input[type="text"]:disabled { color:#333; }
-input[type="text"]::placeholder { color:#BBB; }
-input[type="text"]:hover { border-color:#999; }
-input[type="text"]:focus { border-color:#F60; }
+input[type="text"]:disabled, textarea:disabled { color:#333; }
+input[type="text"]::placeholder, textarea::placeholder { color:#BBB; }
+input[type="text"]:hover, textarea:hover { border-color:#999; }
+input[type="text"]:focus, textarea:focus { border-color:#F60; }
 
 /* aesthetic styles */
 .center { text-align:center; }
@@ -643,7 +643,7 @@ footer li:first-child:before { display:none; }
 #exercise-list a:hover:before, #exercise-list a:focus:before { color:#F60; }
 
 /* show page num. on hover */
-#exercise-list a:hover:after, #exercise-list a:focus:after {
+#exercise-list a[data-page]:hover:after, #exercise-list a[data-page]:focus:after {
   content:attr(data-page);
   color:#FFF;
   font-size:12px;
