@@ -718,6 +718,7 @@
       'lesson-16/literacy-3|Kanji Practice: 週, 以, and 考|p.295-296',
       'lesson-16/literacy-4|Kanji Practice: 開, 屋, and 方|p.296',
       'lesson-16/literacy-5|Kanji Practice: 運, 動, 教, and 室|p.296',
+      'lesson-16/literacy-6|Kanji Practice: Write the Readings|p.297; I-A & B',
       
       // Study Tools
       'study-tools/vocab-practice|Custom Vocabulary Practice'

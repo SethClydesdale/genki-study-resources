@@ -1,145 +1,177 @@
-// tools used for custom exercises and other tools used for studying
+// tools used for creating custom exercises and other tools used for studying
+// TODO: Custom Spelling Practice
+// TODO: Custom Quiz
+// TODO: Custom Fill in the Blanks
 Genki.tools = {
+  type : '', // tool type defined by the document (e.g. vocab, spelling, quiz..)
 
-  // custom vocab tools
-  vocab : {
+  
+  // adds a new row
+  addRow : function (caller) {
+    var newRow = caller.parentNode.cloneNode(true),
+        list = document.getElementById('study-tool-ui'),
+        input = newRow.getElementsByTagName('INPUT'),
+        i = input.length;
 
-    // adds a new word row
-    addWord : function (caller) {
-      var newWord = caller.parentNode.cloneNode(true),
-          list = document.getElementById('vocab-list-box'),
-          input = newWord.getElementsByTagName('INPUT'),
-          i = 3;
+    while (i --> 0) {
+      input[i].value = '';
+    }
 
-      while (i --> 0) {
-        input[i].value = '';
-      }
+    list.appendChild(newRow);
+    list.scrollTop = 9999;
 
-      list.appendChild(newWord);
-      list.scrollTop = 9999;
+    this.updateJSON();
+  },
+  
+  
+  // removes the selected row
+  removeRow : function (caller) {
+    document.getElementById('study-tool-ui').removeChild(caller.parentNode);
+    this.updateJSON();
+  },
+  
+  
+  // updates the list when the JSON is edited
+  updateUI : function () {
+    var code = document.getElementById('study-tool-json');
 
-      this.updateJSON();
-    },
+    if (!code.value) {
+      code.value = '{"":""}';
+    }
 
-    
-    // removes the selected word
-    removeWord : function (caller) {
-      document.getElementById('vocab-list-box').removeChild(caller.parentNode);
+    var data = JSON.parse(code.value),
+        str = '',
+        i;
 
-      this.updateJSON();
-    },
-
-    
-    // updates the list when the JSON is edited
-    updateList : function () {
-      var code = document.getElementById('vocab-json');
-
-      if (!code.value) {
-        code.value = '{"":""}';
-      }
-
-      var words = JSON.parse(code.value),
-          str = '',
-          i, word, furigana, definition;
-
-      for (i in words) {
+    // fromatting for vocab rows
+    if (this.type == 'vocab') {
+      var word, furigana, definition;
+      
+      for (i in data) {
         word = /\|/.test(i) ? i.split('|')[0] : i;
         furigana = /\|/.test(i) ? i.split('|')[1] : '';
-        definition = words[i];
+        definition = data[i];
 
         str += 
-          '<li class="word-row">'+
-          '<input type="text" placeholder="word/kanji" oninput="Genki.tools.vocab.updateJSON();" value="' + word + '">&nbsp;'+
-          '<input type="text" placeholder="furigana (optional)" oninput="Genki.tools.vocab.updateJSON();" value="' + furigana + '">&nbsp;'+
-          '<input type="text" placeholder="definition/kana" oninput="Genki.tools.vocab.updateJSON();" value="' + definition + '">&nbsp;'+
-          '<button class="button" title="add another word" onclick="Genki.tools.vocab.addWord(this);"><i class="fa">&#xf067;</i></button>'+
-          '<button class="button" title="remove word" onclick="Genki.tools.vocab.removeWord(this);"><i class="fa">&#xf068;</i></button>'+
+          '<li class="item-row">'+
+          '<input type="text" placeholder="word/kanji" oninput="Genki.tools.updateJSON();" value="' + word + '">&nbsp;'+
+          '<input type="text" placeholder="furigana (optional)" oninput="Genki.tools.updateJSON();" value="' + furigana + '">&nbsp;'+
+          '<input type="text" placeholder="definition/kana" oninput="Genki.tools.updateJSON();" value="' + definition + '">&nbsp;'+
+          '<button class="button" title="add another word" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>'+
+          '<button class="button" title="remove word" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>'+
         '</li>';
       }
+    }
 
-      document.getElementById('vocab-list-box').innerHTML = str;
-    },
+    document.getElementById('study-tool-ui').innerHTML = str;
+  },
+  
+  
+  // updates the custom vocabulary code when the list is edited
+  updateJSON : function () {
+    var row = document.getElementById('study-tool-ui').getElementsByTagName('LI'),
+        i = 0,
+        j = row.length,
+        code = {},
+        input, json;
 
-    
-    // updates the custom vocabulary code when the list is edited
-    updateJSON : function () {
-      var word = document.getElementById('vocab-list-box').getElementsByTagName('LI'),
-          i = 0,
-          j = word.length,
-          code = {},
-          input, json;
-
-      // loop over the words
+    // code formatting for custom vocab
+    if (this.type == 'vocab') {
       for (; i < j; i++) {
-        input = word[i].getElementsByTagName('INPUT');
+        input = row[i].getElementsByTagName('INPUT');
 
         // 0 = word/kanji
         // 1 = furigana
         // 2 = definition/kana
         code[input[0].value + (input[1].value ? '|' + input[1].value : '')] =  input[2].value;
       }
+    }
 
-      json = JSON.stringify(code);
-      document.getElementById('vocab-json').value = json;
-      window.localStorage.customVocab = json;
-    },
-
+    json = document.getElementById('prettyCode').checked ? JSON.stringify(code, '', '  ') : JSON.stringify(code);
+    document.getElementById('study-tool-json').value = json;
     
-    // restores a vocab list saved to localStorage
-    restore : function () {
-      if (window.localStorage.customVocab) {
-        document.getElementById('vocab-json').value = window.localStorage.customVocab;
-        this.updateList();
-        
-      } else {
-        Genki.tools.vocab.updateJSON();
-      }
-    },
-
+    // save JSON to localStorage
+    window.localStorage[{
+      vocab : 'customVocab'
+    }[this.type]] = json;
+  },
+  
+  
+  // restores data saved to localStorage
+  restore : function () {
+    var type = {
+      vocab : 'customVocab'
+    }[this.type];
     
-    // begin studying the custom vocab
-    study : function () {
-      if (document.getElementById('noStudyWarning').checked || confirm('Are you sure you\'re ready to study? Your custom vocabulary list will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", then copy the code and save it to a text document. (click "do not warn me" to disable this message)')) {
+    if (window.localStorage[type]) {
+      document.getElementById('study-tool-json').value = window.localStorage[type];
+      this.updateUI();
 
-        document.getElementById('vocab-maker').style.display = 'none';
-        document.getElementById('exercise').style.display = '';
+    } else {
+      this.updateJSON();
+    }
+  },
+  
 
-        Genki.generateQuiz({
+  // begin studying a custom exercise
+  study : function () {
+    if (document.getElementById('noStudyWarning').checked || confirm('Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", then copy the code and save it to a text document. (click "do not warn me" to disable this message)')) {
+
+      document.getElementById('study-tool-editor').style.display = 'none';
+      document.getElementById('exercise').style.display = '';
+      
+      // generate a quiz based on the tool type
+      Genki.generateQuiz({
+        // generate a vocab exercise
+        vocab : {
           type : 'drag',
           info : 'Match the definition/kana to the word/kanji.',
 
-          quizlet : JSON.parse(document.getElementById('vocab-json').value)
-        });
-      }
+          quizlet : JSON.parse(document.getElementById('study-tool-json').value)
+        }
+      }[this.type]);
+
     }
-    
   },
   
   
   // general settings shared across tools
   settings : {
     
-    // updates and saves the study warning preferences
-    updateStudyWarning : function (caller, state) {
+    // prettify the JSON code
+    prettify : function (caller) {
+      this.handleCheckbox(caller);
+      Genki.tools.updateJSON();
+    },
+    
+    
+    // handle checkbox input
+    handleCheckbox : function (caller, state) {
       if (state) {
         caller.checked = state == 'true' ? true : false;
       } else {
-        window.localStorage.noStudyWarning = caller.checked;
+        window.localStorage[caller.id] = caller.checked;
       }
     },
     
     
     // function for restoring settings shared over various tools
     restore : function () {
-      // restores cached study warning settings
-      if (window.localStorage.noStudyWarning) {
-        Genki.tools.settings.updateStudyWarning(document.getElementById('noStudyWarning'), window.localStorage.noStudyWarning);
+      var settings = [
+        'noStudyWarning', 
+        'prettyCode'
+      ],
+      
+      i = 0,
+      j = settings.length;
+      
+      for (; i < j; i++) {
+        if (window.localStorage[settings[i]]) {
+          this.handleCheckbox(document.getElementById(settings[i]), window.localStorage[settings[i]]);
+        }
       }
     }
     
   }
   
 };
-
-// restore general settings
-Genki.tools.settings.restore();
