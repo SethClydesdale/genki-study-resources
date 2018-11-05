@@ -2,12 +2,12 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8">
-    <title>Custom Vocabulary Practice - Study Tools | Genki Study Resources</title>
-    <meta name="title" content="Custom Vocabulary Practice - Study Tools | Genki Study Resources">
-    <meta name="twitter:title" content="Custom Vocabulary Practice - Study Tools | Genki Study Resources">
-    <meta property="og:title" content="Custom Vocabulary Practice - Study Tools | Genki Study Resources">
-    <meta name="description" content="Setup your own custom vocabulary to practice.">
-    <meta property="og:description" content="Setup your own custom vocabulary to practice.">
+    <title>Custom Spelling Practice - Study Tools | Genki Study Resources</title>
+    <meta name="title" content="Custom Spelling Practice - Study Tools | Genki Study Resources">
+    <meta name="twitter:title" content="Custom Spelling Practice - Study Tools | Genki Study Resources">
+    <meta property="og:title" content="Custom Spelling Practice - Study Tools | Genki Study Resources">
+    <meta name="description" content="Setup a list of words that you can practice spelling.">
+    <meta property="og:description" content="Setup a list of words that you can practice spelling.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki, japanese, quizzes, exercises" lang="en">
@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="sethclydesdale.github.io">
-    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons/study-tools/vocab-practice/">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons/study-tools/custom-spelling/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
@@ -34,23 +34,23 @@
     
     <div id="content">
       <div id="study-tool-editor" class="content-block">
-        <h2 id="custom-vocab-practice" class="title center">Custom Vocabulary Practice</h2>
-        <p>Welcome to the custom vocabulary practice tool! Here you will be able to setup your own set of words to practice. First insert a couple of words you want to practice. Once you've got your word list setup, click the "Study" button to begin practicing your custom vocabulary.</p>
+        <h2 id="custom-vocab-practice" class="title center">Custom Spelling Practice</h2>
+        <p>Welcome to the custom spelling practice tool! Here you will be able to setup a list of words that you can practice spelling. First insert a couple of words you want to practice spelling. Once you've got your word list setup, click the "Study" button to begin practicing.</p>
         
-        <h2 id="vocab-list" class="section-title">Vocabulary list</h2>
+        <h2 id="spelling-list" class="section-title">Spelling Practice Settings</h2>
         <br>
         <ol id="study-tool-ui">
           <li class="item-row">
             <input type="text" placeholder="word/kanji" oninput="Genki.tools.updateJSON();">
             <input type="text" placeholder="furigana (optional)" oninput="Genki.tools.updateJSON();">
-            <input type="text" placeholder="definition/kana" oninput="Genki.tools.updateJSON();">
             <button class="button" title="add another word" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>
             <button class="button" title="remove word" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>
           </li>
         </ol>
+        <div><label for="spellingColumns"><strong>Columns:</strong></label> <input id="spellingColumns" type="number" value="6" min="1" max="10" style="width:50px;"></div>
         
-        <h3 id="vocab-code" class="sub-title">Custom Vocabulary Code (JSON)</h3>
-        <p>The Custom Vocabulary Code is used to save your created vocabulary list. You can copy this code and save it to a text file for later, so you don't have to recreate your custom vocab. When you're ready to study your vocab again, just paste the code into this textarea and click "study" to continue where you left off.</p>
+        <h3 id="vocab-code" class="sub-title">Custom Spelling Code (JSON)</h3>
+        <p>The custom spelling code is used to save your spelling practice list. You can copy this code and save it to a text file for later, so you don't have to setup your list again. When you're ready to study once more, just paste the code into this textarea and click "study" to continue where you left off.</p>
         
         <div id="study-tool-code">
           <textarea id="study-tool-json" oninput="Genki.tools.updateUI();Genki.tools.updateJSON();"></textarea>
@@ -67,17 +67,16 @@
         
         <h3 class="section-title">Help, Notes, and Tips</h3>
         <p>
-          <strong>word/kanji</strong>: a Japanese word or kanji; the word to be matched to.<br>
+          <strong>word/kanji</strong>: the word or kanji you want to practice spelling.<br>
           <strong>furigana</strong>: a textual aid for kanji; write the kana for a kanji or romaji for kana here, if necessary.<br>
-          <strong>definition/kana</strong>: an equivalent definition in another language (i.e. English) or the kana reading for a kanji; the draggable word to be matched to the word/kanji.<br>
+          <strong>columns</strong>: a number that defines the amount of columns for each word; how many times each word should be written.<br>
           <strong>+</strong>: add a word<br>
           <strong>-</strong>: remove a word<br><br>
           
-          <strong>Custom Vocabulary Code</strong>: If you're familar with JSON, you can edit the vocabulary code, too. Here's a few tips:<br>
-          1. The syntax for a vocabulary item is "{WORD/KANJI}|{FURIGANA}" : "{DEFINITION/KANA}", with furigana being optional.<br>
-          2. If using no furigana, simply remove the horizontal bar. It should be removed automatically if using the textarea above.<br>
-          3. Please note that trailing commas will throw a syntax error, so simply delete the trailing comma and the vocabulary list will be updated.<br>
-          4. Don't worry about the position of vocabulary items; they're randomly shuffled each time you study to help with memorization of the word and NOT the position. However, if you have OCD you can change their positions easily by copying, cutting, and pasting a vocab item into a new position.
+          <strong>Custom Spelling Code</strong>: If you're familar with JSON, you can edit the code, too. Here's a few tips:<br>
+          1. The syntax for a spelling item is "{WORD/KANJI}":"{FURIGANA}", with furigana being optional.<br>
+          2. If using no furigana, simply leave the string blank.<br>
+          3. Please note that trailing commas will throw a syntax error, so simply delete the trailing comma and the list will be updated.
         </p>
       </div>
       
@@ -107,7 +106,7 @@
     <script src="../../../resources/study-tools.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>
-      Genki.tools.type = 'vocab';
+      Genki.tools.type = 'spelling';
       Genki.tools.settings.restore();
       Genki.tools.restore();
     </script>

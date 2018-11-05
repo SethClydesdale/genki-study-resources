@@ -721,7 +721,8 @@
       'lesson-16/literacy-6|Kanji Practice: Write the Readings|p.297; I-A & B',
       
       // Study Tools
-      'study-tools/vocab-practice|Custom Vocabulary Practice'
+      'study-tools/custom-vocab|Custom Vocabulary Practice',
+      'study-tools/custom-spelling|Custom Spelling Practice'
     ],
 
 

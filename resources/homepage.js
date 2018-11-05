@@ -34,7 +34,7 @@
           clone.title = li[i].innerText;
           
           // add the clone to the fragment if it's valid
-          if (!/^file/.test(clone.dataset.lesson)) {
+          if (!/^file|^http/.test(clone.dataset.lesson)) {
             frag.appendChild(clone);
             hits++; // increment hits
           }
