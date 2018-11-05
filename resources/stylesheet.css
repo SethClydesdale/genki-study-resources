@@ -1205,6 +1205,48 @@ p.section-desc {
 #lessons li a { display:inline-block; }
 #lessons li a, #exercise-list li a { padding:3px 0; }
 
+
+/* STUDY TOOLS */
+/* friendly user interface styles */
+#study-tool-ui {
+  overflow:auto;
+  max-height:300px;
+}
+
+#study-tool-ui li {
+  margin:5px 0;
+}
+
+/* hide remove button on only-child */
+#study-tool-ui li:only-child .button:last-child {
+  display:none;
+}
+
+/* textarea size for the JSON code */
+#study-tool-code textarea {
+  height:100px;
+  width:80%;
+}
+
+/* study tool settings */
+#study-tool-settings {
+  margin:5px 0;
+  padding:0;
+}
+
+#study-tool-settings li {
+  list-style-type:none;
+  float:left;
+  margin-right:10px;
+}
+
+#study-tool-settings label {
+  cursor:pointer;
+  vertical-align:top;
+  font-weight:bold;
+}
+
+
 /* DRAGULA CSS */
 .gu-mirror{position:fixed!important;margin:0!important;z-index:9999!important;opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80)}.gu-hide{display:none!important}.gu-unselectable{-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.gu-transit{opacity:.2;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";filter:alpha(opacity=20)}
 
