@@ -719,6 +719,7 @@
       'lesson-16/literacy-4|Kanji Practice: 開, 屋, and 方|p.296',
       'lesson-16/literacy-5|Kanji Practice: 運, 動, 教, and 室|p.296',
       'lesson-16/literacy-6|Kanji Practice: Write the Readings|p.297; I-A & B',
+      'lesson-16/literacy-7|Reading Practice: まんが「ドラえもん」|p.298-300; II-B, C, & D',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
