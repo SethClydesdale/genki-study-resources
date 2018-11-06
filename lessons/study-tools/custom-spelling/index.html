@@ -34,10 +34,10 @@
     
     <div id="content">
       <div id="study-tool-editor" class="content-block">
-        <h2 id="custom-vocab-practice" class="title center">Custom Spelling Practice</h2>
+        <h2 id="custom-spelling-practice" class="title center">Custom Spelling Practice</h2>
         <p>Welcome to the custom spelling practice tool! Here you will be able to setup a list of words that you can practice spelling. First insert a couple of words you want to practice spelling. Once you've got your word list setup, click the "Study" button to begin practicing.</p>
         
-        <h2 id="spelling-list" class="section-title">Spelling Practice Settings</h2>
+        <h2 id="spelling-practice-settings" class="section-title">Spelling Practice Settings</h2>
         <br>
         <ol id="study-tool-ui">
           <li class="item-row">
@@ -49,7 +49,7 @@
         </ol>
         <div><label for="spellingColumns"><strong>Columns:</strong></label> <input id="spellingColumns" type="number" value="6" min="1" max="10" style="width:50px;"></div>
         
-        <h3 id="vocab-code" class="sub-title">Custom Spelling Code (JSON)</h3>
+        <h3 id="spelling-code" class="sub-title">Custom Spelling Code (JSON)</h3>
         <p>The custom spelling code is used to save your spelling practice list. You can copy this code and save it to a text file for later, so you don't have to setup your list again. When you're ready to study once more, just paste the code into this textarea and click "study" to continue where you left off.</p>
         
         <div id="study-tool-code">
@@ -65,7 +65,7 @@
           <button class="button" onclick="Genki.tools.study();">Study</button>
         </div><br>
         
-        <h3 class="section-title">Help, Notes, and Tips</h3>
+        <h3 id="help-notes-and-tricks" class="section-title">Help, Notes, and Tips</h3>
         <p>
           <strong>word/kanji</strong>: the word or kanji you want to practice spelling.<br>
           <strong>furigana</strong>: a textual aid for kanji; write the kana for a kanji or romaji for kana here, if necessary.<br>
