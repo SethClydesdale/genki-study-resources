@@ -720,6 +720,12 @@
       'lesson-16/literacy-5|Kanji Practice: 運, 動, 教, and 室|p.296',
       'lesson-16/literacy-6|Kanji Practice: Write the Readings|p.297; I-A & B',
       'lesson-16/literacy-7|Reading Practice: まんが「ドラえもん」|p.298-300; II-B, C, & D',
+      'lesson-16/literacy-wb-1|Workbook: Kanji Writing Practice|p.113',
+      'lesson-16/literacy-wb-2|Workbook: Spelling Practice (供, 世, 界, and 全)|p.115; bonus',
+      'lesson-16/literacy-wb-3|Workbook: Spelling Practice (部, 始, 週, and 以)|p.115; bonus',
+      'lesson-16/literacy-wb-4|Workbook: Spelling Practice (考, 開, 屋, and 方)|p.115; bonus',
+      'lesson-16/literacy-wb-5|Workbook: Spelling Practice (運, 動, 教, and 室)|p.115; bonus',
+      'lesson-16/literacy-wb-6|Workbook: Fill in the Blanks|p.116',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
