@@ -43,8 +43,8 @@
           <li class="item-row">
             <input type="text" placeholder="word/kanji" oninput="Genki.tools.updateJSON();">
             <input type="text" placeholder="furigana (optional)" oninput="Genki.tools.updateJSON();">
-            <button class="button" title="add another word" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>
-            <button class="button" title="remove word" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>
+            <button class="button row-add" title="add" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>
+            <button class="button row-remove" title="remove" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>
           </li>
         </ol>
         <div><label for="spellingColumns"><strong>Columns:</strong></label> <input id="spellingColumns" type="number" value="6" min="1" max="10" style="width:50px;"></div>
@@ -57,8 +57,9 @@
         </div>
         
         <ul id="study-tool-settings" class="clear">
-          <li><input id="noStudyWarning" type="checkbox" onchange="Genki.tools.settings.handleCheckbox(this);"><label for="noStudyWarning">Do not warn me</label></li>
+          <li><a id="downloadCode" title="Save to text file" download="Custom Spelling Code">Save code</a></li>
           <li><input id="prettyCode" type="checkbox" onchange="Genki.tools.settings.prettify(this);"><label for="prettyCode">Prettify code</label></li>
+          <li><input id="noStudyWarning" type="checkbox" onchange="Genki.tools.settings.handleCheckbox(this);"><label for="noStudyWarning">Do not warn me</label></li>
         </ul>
         
         <div class="center">
@@ -73,7 +74,7 @@
           <strong>+</strong>: add a word<br>
           <strong>-</strong>: remove a word<br><br>
           
-          <strong>Custom Spelling Code</strong>: If you're familar with JSON, you can edit the code, too. Here's a few tips:<br>
+          <strong>Custom Spelling Code</strong>: If you're familar with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">JSON</a>, you can edit the code, too. Here's a few tips:<br>
           1. The syntax for a spelling item is "{WORD/KANJI}":"{FURIGANA}", with furigana being optional.<br>
           2. If using no furigana, simply leave the string blank.<br>
           3. Please note that trailing commas will throw a syntax error, so simply delete the trailing comma and the list will be updated.

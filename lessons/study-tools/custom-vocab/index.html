@@ -44,8 +44,8 @@
             <input type="text" placeholder="word/kanji" oninput="Genki.tools.updateJSON();">
             <input type="text" placeholder="furigana (optional)" oninput="Genki.tools.updateJSON();">
             <input type="text" placeholder="definition/kana" oninput="Genki.tools.updateJSON();">
-            <button class="button" title="add another word" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>
-            <button class="button" title="remove word" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>
+            <button class="button row-add" title="add" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>
+            <button class="button row-remove" title="remove" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>
           </li>
         </ol>
         
@@ -57,8 +57,9 @@
         </div>
         
         <ul id="study-tool-settings" class="clear">
-          <li><input id="noStudyWarning" type="checkbox" onchange="Genki.tools.settings.handleCheckbox(this);"><label for="noStudyWarning">Do not warn me</label></li>
+          <li><a id="downloadCode" title="Save to text file" download="Custom Vocabulary Code">Save code</a></li>
           <li><input id="prettyCode" type="checkbox" onchange="Genki.tools.settings.prettify(this);"><label for="prettyCode">Prettify code</label></li>
+          <li><input id="noStudyWarning" type="checkbox" onchange="Genki.tools.settings.handleCheckbox(this);"><label for="noStudyWarning">Do not warn me</label></li>
         </ul>
         
         <div class="center">
@@ -73,7 +74,7 @@
           <strong>+</strong>: add a word<br>
           <strong>-</strong>: remove a word<br><br>
           
-          <strong>Custom Vocabulary Code</strong>: If you're familar with JSON, you can edit the vocabulary code, too. Here's a few tips:<br>
+          <strong>Custom Vocabulary Code</strong>: If you're familar with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">JSON</a>, you can edit the vocabulary code, too. Here's a few tips:<br>
           1. The syntax for a vocabulary item is "{WORD/KANJI}|{FURIGANA}":"{DEFINITION/KANA}", with furigana being optional.<br>
           2. If using no furigana, simply remove the horizontal bar. It should be removed automatically if using the textarea above.<br>
           3. Please note that trailing commas will throw a syntax error, so simply delete the trailing comma and the vocabulary list will be updated.

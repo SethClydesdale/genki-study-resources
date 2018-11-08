@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Custom Quiz - Study Tools | Genki Study Resources</title>
+    <meta name="title" content="Custom Quiz - Study Tools | Genki Study Resources">
+    <meta name="twitter:title" content="Custom Quiz - Study Tools | Genki Study Resources">
+    <meta property="og:title" content="Custom Quiz - Study Tools | Genki Study Resources">
+    <meta name="description" content="Setup a custom quiz to help test yourself.">
+    <meta property="og:description" content="Setup a custom quiz to help test yourself.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki, japanese, quizzes, exercises" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons/study-tools/custom-quiz/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/stylesheet.min.css">
+    <script src="../../../resources/ga.js" async></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../../" id="home-link">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="study-tool-editor" class="content-block">
+        <h2 id="custom-quiz" class="title center">Custom Quiz</h2>
+        <p>Welcome to the custom quiz tool! Here you will be able to setup your own custom quiz for testing yourself on points you want to memorize or improve. Start setting up your quiz using the tools below, then once you're ready to test yourself, click the "Study" button to begin your quiz.</p>
+        
+        <h2 id="quiz-settings" class="section-title">Quiz Settings</h2>
+        <br>
+        <ol id="study-tool-ui">
+          <li class="item-row question-row">
+            <textarea placeholder="question" oninput="Genki.tools.updateJSON();"></textarea>
+            <button class="button row-add" title="add" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>
+            <button class="button row-remove" title="remove" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>
+            <ol>
+              <li class="quiz-answer">
+                <input type="checkbox" title="Correct answer" onchange="Genki.tools.updateJSON();">
+                <input type="text" placeholder="answer" oninput="Genki.tools.updateJSON();">
+                <button class="button row-add" title="add" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>
+                <button class="button row-remove" title="remove" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>
+              </li>
+            </ol>
+          </li>
+        </ol>
+        
+        <h3 id="quiz-code" class="sub-title">Custom Quiz Code (JSON)</h3>
+        <p>The custom quiz code is used to save your quiz. You can copy this code and save it to a text file for later, so you don't have to setup your quiz again. When you're ready to study once more, just paste the code into this textarea and click "study" to continue where you left off.</p>
+        
+        <div id="study-tool-code">
+          <textarea id="study-tool-json" oninput="Genki.tools.updateUI();Genki.tools.updateJSON();"></textarea>
+        </div>
+        
+        <ul id="study-tool-settings" class="clear">
+          <li><a id="downloadCode" title="Save to text file" download="Custom Quiz Code">Save code</a></li>
+          <li><input id="prettyCode" type="checkbox" onchange="Genki.tools.settings.prettify(this);"><label for="prettyCode">Prettify code</label></li>
+          <li><input id="noStudyWarning" type="checkbox" onchange="Genki.tools.settings.handleCheckbox(this);"><label for="noStudyWarning">Do not warn me</label></li>
+        </ul>
+        
+        <div class="center">
+          <button class="button" onclick="Genki.tools.study();">Study</button>
+        </div><br>
+        
+        <h3 id="help-notes-and-tricks" class="section-title">Help, Notes, and Tips</h3>
+        <p>
+          <strong>question</strong>: the question to be answered. If required, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a> can be used for formatting questions.<br>
+          <strong>answer</strong>: the correct or incorrect answers to the question. Use the checkbox to mark an answer as the correct answer (multiple correct answers are allowed); leave incorrect answers unchecked.<br>
+          <strong>+</strong>: add question/answer<br>
+          <strong>-</strong>: remove a question/answer<br><br>
+          
+          <strong>Custom Quiz Code</strong>: If you're familar with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">JSON</a>, you can edit the code, too. Here's a few tips:<br>
+          1. The syntax for a question is {"question":"{QUESTION}","answers":["{ANSWER1}","{ANSWER2}","{ETC..}"]}<br>
+          2. Correct answers should be prefixed with "A" (ex. "answers":["Aありがとう"]), incorrect answers are left as is.<br>
+          3. If an incorrect answer begins with "A", you can exclude it from being mistaken as a correct answer by prefixing it with "!" (ex. "answers":["!Arigatou"]).<br>
+          4. Please note that trailing commas will throw a syntax error, so simply delete the trailing comma and the list will be updated.
+        </p>
+      </div>
+      
+      <div id="exercise" class="content-block" style="display:none;">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">Github Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/dragula.min.js"></script>
+    <script src="../../../resources/easytimer.min.js"></script>
+    <script src="../../../resources/genki.min.js"></script>
+    <script src="../../../resources/study-tools.min.js"></script>
+    <script src="../../../resources/javascript.min.js"></script>
+    <script>
+      Genki.tools.type = 'quiz';
+      Genki.tools.settings.restore();
+      Genki.tools.restore();
+    </script>
+  </body>
+</html>

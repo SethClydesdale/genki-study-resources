@@ -479,7 +479,7 @@ footer li:first-child:before { display:none; }
 
 /* review exercise button styles */
 #review-exercise { margin-top:10px; }
-.quiz-over #review-exercise { display:none; }
+.quiz-over #review-button { display:none; }
 
 
 /* more exercises style */
@@ -1213,13 +1213,13 @@ p.section-desc {
   max-height:300px;
 }
 
-#study-tool-ui li {
-  margin:5px 0;
+/* hide remove button on only-child */
+#study-tool-editor ol > li:only-child > .button.row-remove, #study-tool-editor ul > li:only-child > .button.row-remove {
+  display:none;
 }
 
-/* hide remove button on only-child */
-#study-tool-ui li:only-child .button:last-child {
-  display:none;
+#study-tool-ui li {
+  margin:5px 0;
 }
 
 /* textarea size for the JSON code */
@@ -1245,6 +1245,37 @@ p.section-desc {
   vertical-align:top;
   font-weight:bold;
 }
+
+#downloadCode { font-weight:bold; }
+#downloadCode:before {
+  content:"\f019";
+  font-family:FontAwesome;
+  font-weight:normal;
+  font-size:16px;
+  margin-right:4px;
+  vertical-align:middle;
+}
+
+/* custom quiz styles */
+#study-tool-ui .item-row.question-row {
+  border:1px solid #CCC;
+  padding:6px;
+  margin:10px;
+}
+
+.item-row.question-row { position:relative; }
+.item-row.question-row > .button {
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+.item-row.question-row > .button.row-add { right:40px; }
+.item-row.question-row:only-child > .button.row-add { right:0; }
+
+.item-row.question-row textarea { width:80%; }
+.item-row.question-row input[type="text"] { width:50%; }
+
 
 
 /* DRAGULA CSS */
