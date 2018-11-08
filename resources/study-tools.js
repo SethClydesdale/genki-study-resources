@@ -1,5 +1,4 @@
 // tools used for creating custom exercises and other tools used for studying
-// TODO: Custom Quiz
 // TODO: Custom Fill in the Blanks
 Genki.tools = {
   type : '', // tool type defined by the document (e.g. vocab, spelling, quiz..)
@@ -8,12 +7,17 @@ Genki.tools = {
   // adds a new row
   addRow : function (caller) {
     var newRow = caller.parentNode.cloneNode(true),
-        list = document.getElementById('study-tool-ui'),
-        input = newRow.getElementsByTagName('INPUT'),
+        list = caller.parentNode.parentNode,
+        input = newRow.querySelectorAll('input, textarea'),
         i = input.length;
 
+    // clear values
     while (i --> 0) {
-      input[i].value = '';
+      if (input[i].type == 'checkbox') {
+        input[i].checked = false;
+      } else {
+        input[i].value = '';
+      }
     }
 
     list.appendChild(newRow);
@@ -25,7 +29,7 @@ Genki.tools = {
   
   // removes the selected row
   removeRow : function (caller) {
-    document.getElementById('study-tool-ui').removeChild(caller.parentNode);
+    caller.parentNode.parentNode.removeChild(caller.parentNode);
     this.updateJSON();
   },
   
@@ -35,15 +39,15 @@ Genki.tools = {
     var code = document.getElementById('study-tool-json');
 
     if (!code.value) {
-      code.value = '{"":""}';
+      code.value = this.type == 'quiz' ? '[{"question":"","answers":[""]}]' : '{"":""}';
     }
 
     var data = JSON.parse(code.value),
         buttons = 
-        '<button class="button" title="add another word" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>'+
-        '<button class="button" title="remove word" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>',
+        '<button class="button row-add" title="add" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>'+
+        '<button class="button row-remove" title="remove" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>',
         str = '',
-        i;
+        i, j, k, l, answers;
 
     // formatting for vocab rows
     if (this.type == 'vocab') {
@@ -69,6 +73,29 @@ Genki.tools = {
         '</li>';
       }
     }
+    
+    // formatting for quiz rows
+    else if (this.type == 'quiz') {
+      for (i = 0, j = data.length; i < j; i++) {
+        
+        // formatting answers for insertion into the string below
+        for (answers = '', k = 0, l = data[i].answers.length; k < l; k++) {
+          answers +=
+          '<li class="quiz-answer">'+
+            '<input type="checkbox" title="Correct answer" onchange="Genki.tools.updateJSON();"' + (/^A/.test(data[i].answers[k]) ? ' checked' : '') + '>'+
+            '<input type="text" placeholder="answer" oninput="Genki.tools.updateJSON();" value="' + (/^A|!/.test(data[i].answers[k]) ? data[i].answers[k].slice(1) : data[i].answers[k]) + '">'+
+            buttons+
+          '</li>';
+        }
+        
+        str += 
+        '<li class="item-row question-row">'+
+          '<textarea placeholder="question" oninput="Genki.tools.updateJSON();">' + data[i].question + '</textarea>'+
+          buttons+
+          '<ol>' + answers + '</ol>'+
+        '</li>';
+      }
+    }
 
     document.getElementById('study-tool-ui').innerHTML = str;
   },
@@ -76,11 +103,11 @@ Genki.tools = {
   
   // updates the custom vocabulary code when the list is edited
   updateJSON : function () {
-    var row = document.getElementById('study-tool-ui').getElementsByTagName('LI'),
+    var row = document.getElementById('study-tool-ui').querySelectorAll('.item-row'),
         i = 0,
-        j = row.length,
+        j = row.length, k, l,
         code = {},
-        input, json;
+        input, json, answers, answerRow;
 
     // code formatting for custom vocab
     if (this.type == 'vocab') {
@@ -104,14 +131,41 @@ Genki.tools = {
         code[input[0].value] = input[1].value;
       }
     }
+    
+    // code formatting for quizzes
+    else if (this.type == 'quiz') {
+      code = [];
+      
+      for (; i < j; i++) {
+        
+        // compile answers
+        for (answers = [], answerRow = row[i].querySelectorAll('.quiz-answer'), k = 0, l = answerRow.length; k < l; k++) {
+          input = answerRow[k].getElementsByTagName('INPUT');
+          
+          // 0 = checkbox (defines the correct answer)
+          // 1 = answer texts
+          answers[k] = (input[0].checked ? 'A' : '') + (!input[0].checked && /^A/.test(input[1].value) ? '!' : '') + input[1].value;
+        }
+        
+        // add the formatted question to the question list
+        code[i] = {
+          question : row[i].getElementsByTagName('TEXTAREA')[0].value,
+          answers : answers
+        }
+      }
+    }
 
     json = document.getElementById('prettyCode').checked ? JSON.stringify(code, '', '  ') : JSON.stringify(code);
     document.getElementById('study-tool-json').value = json;
     
+    // update download link
+    document.getElementById('downloadCode').href = 'data:,' + encodeURIComponent(json.replace(/\n/g, '\r\n'));
+    
     // save JSON to localStorage
     window.localStorage[{
       vocab : 'customVocab',
-      spelling : 'customSpelling'
+      spelling : 'customSpelling',
+      quiz : 'customQuiz'
     }[this.type]] = json;
   },
   
@@ -120,7 +174,8 @@ Genki.tools = {
   restore : function () {
     var type = {
       vocab : 'customVocab',
-      spelling : 'customSpelling'
+      spelling : 'customSpelling',
+      quiz : 'customQuiz'
     }[this.type];
     
     if (window.localStorage[type]) {
@@ -137,7 +192,11 @@ Genki.tools = {
   // begin studying a custom exercise
   study : function () {
     if (document.getElementById('noStudyWarning').checked || confirm('Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", then copy the code and save it to a text document. (click "do not warn me" to disable this message)')) {
-      var quizlet = document.getElementById('study-tool-json').value;
+      var quizlet = document.getElementById('study-tool-json').value
+      // sanitization
+      .replace(/<script.*?>/g, '<span>')
+      .replace(/<\/script>/g, '</span>')
+      .replace(/ on.*?=\\".*?\\"/g, '');
       
       document.getElementById('study-tool-editor').style.display = 'none';
       document.getElementById('exercise').style.display = '';
@@ -159,6 +218,16 @@ Genki.tools = {
           info : 'Practice spelling the following words.',
 
           columns : +document.getElementById('spellingColumns').value,
+          quizlet : JSON.parse(quizlet)
+        });
+      }
+      
+      // generate a multi-choice quiz
+      else if (this.type == 'quiz') {
+        Genki.generateQuiz({
+          type : 'multi',
+          info : 'Answer the following questions.',
+          
           quizlet : JSON.parse(quizlet)
         });
       }

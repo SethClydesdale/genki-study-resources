@@ -29,6 +29,12 @@
       writing_mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong. Review these problems before trying again.',
       multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red">red</span>. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.',
       fill_mistakes : 'The items underlined in <span class="t-red">red</span> were answered wrong, the correct answers are listed underneath in <span class="t-red">red</span>. Review these problems before trying again.',
+      
+      // buttons
+      // review button for drag/drop exercises
+      review : '<div id="review-exercise" class="center clearfix"><button id="review-button" class="button" onclick="Genki.review();">Review</button></div>', 
+      // furigana toggle for vocab exercises
+      toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);">' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>'
     },
 
     // info about the currently active exercise
@@ -662,6 +668,7 @@
       'lesson-15/vocab-3|Vocabulary: い-adjectives, U-verbs, and Ru-Verbs|p.76-77',
       'lesson-15/vocab-4|Vocabulary: Irregular Verbs, Adverbs, and Other Expressions|p.77',
       'lesson-15/culture-1|Culture Note: Japanese Accommodations|p.81',
+      'lesson-15/vocab-6|Bonus Vocabulary: ～目|p.83',
       'lesson-15/grammar-1|Practice: Volitional Form 1|p.84; I-A',
       'lesson-15/grammar-2|Practice: Volitional Form 2|p.84-85; I-B',
       'lesson-15/grammar-3|Practice: Volitional Form + と思っています|p.86; II-A',
@@ -729,7 +736,8 @@
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
-      'study-tools/custom-spelling|Custom Spelling Practice'
+      'study-tools/custom-spelling|Custom Spelling Practice',
+      'study-tools/custom-quiz|Custom Quiz'
     ],
 
 
@@ -759,11 +767,7 @@
 
     // To generate a quiz simply pass an object with the necessary data (see vocab-1/index.html and other quiz files for examples)
     generateQuiz : function (o) {
-      var zone = document.getElementById('quiz-zone'), // area where quizzes are inserted
-
-          // review button for drag and drop quizzes
-          review = '<div id="review-exercise" class="center clearfix"><button class="button" onclick="Genki.review();">Review</button></div>',
-          tFurigana = '<button class="button" onclick="Genki.toggle.furigana(this);">' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>'; 
+      var zone = document.getElementById('quiz-zone'); // area where quizzes are inserted
 
       /****************************
       ======# EXERCISE TYPES #=====
@@ -828,7 +832,7 @@
         quiz += '</div>'; // close the answer list
 
         // add the quiz to the document
-        zone.innerHTML = quiz + review.replace('</div>', tFurigana + '</div>');
+        zone.innerHTML = quiz + Genki.lang.review.replace('</div>', Genki.lang.toggle_furigana + '</div>');
       }
 
 
@@ -869,7 +873,7 @@
         }
 
         // add the kana list to the document
-        zone.innerHTML = quiz + '</div>' + answers + '</div>' + review;
+        zone.innerHTML = quiz + '</div>' + answers + '</div>' + Genki.lang.review;
       }
 
 
@@ -936,7 +940,7 @@
         quiz += '</div>'; // close the answer list
 
         // add the quiz to the document
-        zone.innerHTML = quiz + review;
+        zone.innerHTML = quiz + Genki.lang.review;
       }
 
 
@@ -1261,7 +1265,7 @@
         document.getElementById('quiz-timer').style.display = 'none';
 
         // show restart button
-        document.getElementById('review-exercise').innerHTML = '<a href="./' + Genki.local + '" class="button">Restart</a>';
+        document.getElementById('review-exercise').innerHTML = '<a href="./' + Genki.local + '" class="button">Restart</a>' + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
 
         // change the quiz info
         document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';
@@ -1387,6 +1391,9 @@
           default :
             break;
         }
+        
+        // update button html
+        Genki.lang.toggle_furigana = button.outerHTML;
         
         // save settings if supported
         if (window.localStorage) {
