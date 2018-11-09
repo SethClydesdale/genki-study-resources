@@ -712,6 +712,7 @@
       'lesson-16/grammar-7|Practice: ～時 2|p.115; IV-B',
       'lesson-16/grammar-8|Practice: ～てすみませんでした 1|p.116; V-A',
       'lesson-16/grammar-9|Practice: ～てすみませんでした 2|p.116; V-B',
+      'lesson-16/culture-1|Culture Note: Gift-giving in Japan|p.117',
       'lesson-16/workbook-1|Workbook: ～てあげる／～てくれる／～てもらう 1|p.35; I & II',
       'lesson-16/workbook-2|Workbook: ～てあげる／～てくれる／～てもらう 2|p.36; I & II',
       'lesson-16/workbook-3|Workbook: ～ていただけませんか|p.37; I & II',
@@ -737,7 +738,8 @@
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
       'study-tools/custom-spelling|Custom Spelling Practice',
-      'study-tools/custom-quiz|Custom Quiz'
+      'study-tools/custom-quiz|Custom Quiz',
+      'study-tools/custom-written-quiz|Custom Written Quiz'
     ],
 
 

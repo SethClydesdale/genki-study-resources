@@ -72,6 +72,13 @@ a {
 }
 a:hover, a:focus { text-decoration:underline; }
 
+code {
+  color:#00F;
+  background:#EEE;
+  border:1px solid #CCC;
+  padding:3px;
+}
+
 .button, a.button {
   color:#FFF;
   background:#F60;
@@ -1247,14 +1254,14 @@ p.section-desc {
 }
 
 #downloadCode { font-weight:bold; }
-#downloadCode:before {
-  content:"\f019";
+#downloadCode:before{
   font-family:FontAwesome;
   font-weight:normal;
   font-size:16px;
   margin-right:4px;
   vertical-align:middle;
 }
+#downloadCode:before { content:"\f019"; }
 
 /* custom quiz styles */
 #study-tool-ui .item-row.question-row {
@@ -1275,6 +1282,18 @@ p.section-desc {
 
 .item-row.question-row textarea { width:80%; }
 .item-row.question-row input[type="text"] { width:50%; }
+
+/* custom written quiz styles */
+#study-tool-ui.written-quiz {
+  list-style-type:none;
+  padding:0;
+  overflow:visible;
+}
+
+#study-tool-ui.written-quiz textarea {
+  width:80%;
+  height:150px;
+}
 
 
 
