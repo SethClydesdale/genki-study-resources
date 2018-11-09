@@ -1,5 +1,4 @@
 // tools used for creating custom exercises and other tools used for studying
-// TODO: Custom Fill in the Blanks
 Genki.tools = {
   type : '', // tool type defined by the document (e.g. vocab, spelling, quiz..)
 
@@ -39,7 +38,7 @@ Genki.tools = {
     var code = document.getElementById('study-tool-json');
 
     if (!code.value) {
-      code.value = this.type == 'quiz' ? '[{"question":"","answers":[""]}]' : '{"":""}';
+      code.value = this.type == 'quiz' ? '[{"question":"","answers":[""]}]' : this.type == 'fill' ? '{"quiz":""}' : '{"":""}';
     }
 
     var data = JSON.parse(code.value),
@@ -95,6 +94,14 @@ Genki.tools = {
           '<ol>' + answers + '</ol>'+
         '</li>';
       }
+    }
+    
+    // formatting for written quiz
+    else if (this.type == 'fill') {
+      str =
+      '<li class="item-row">'+
+        '<textarea oninput="Genki.tools.updateJSON();">' + data.quiz + '</textarea>'+
+      '</li>'
     }
 
     document.getElementById('study-tool-ui').innerHTML = str;
@@ -154,6 +161,11 @@ Genki.tools = {
         }
       }
     }
+    
+    // code formatting for written quizzes
+    else if (this.type == 'fill') {
+      code.quiz = row[i].getElementsByTagName('TEXTAREA')[0].value;
+    }
 
     json = document.getElementById('prettyCode').checked ? JSON.stringify(code, '', '  ') : JSON.stringify(code);
     document.getElementById('study-tool-json').value = json;
@@ -165,17 +177,19 @@ Genki.tools = {
     window.localStorage[{
       vocab : 'customVocab',
       spelling : 'customSpelling',
-      quiz : 'customQuiz'
+      quiz : 'customQuiz',
+      fill : 'customWrittenQuiz'
     }[this.type]] = json;
   },
   
   
-  // restores data saved to localStorage
+  // restores data saved to localStorage or the URL
   restore : function () {
     var type = {
       vocab : 'customVocab',
       spelling : 'customSpelling',
-      quiz : 'customQuiz'
+      quiz : 'customQuiz',
+      fill : 'customWrittenQuiz'
     }[this.type];
     
     if (window.localStorage[type]) {
@@ -191,7 +205,7 @@ Genki.tools = {
 
   // begin studying a custom exercise
   study : function () {
-    if (document.getElementById('noStudyWarning').checked || confirm('Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", then copy the code and save it to a text document. (click "do not warn me" to disable this message)')) {
+    if (document.getElementById('noStudyWarning').checked || confirm('Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save code" to save it to a text document. (click "do not warn me" to disable this message)')) {
       var quizlet = document.getElementById('study-tool-json').value
       // sanitization
       .replace(/<script.*?>/g, '<span>')
@@ -229,6 +243,16 @@ Genki.tools = {
           info : 'Answer the following questions.',
           
           quizlet : JSON.parse(quizlet)
+        });
+      }
+      
+      // generate a written quiz
+      else if (this.type == 'fill') {
+        Genki.generateQuiz({
+          type : 'fill',
+          info : 'Answer the following questions.',
+          
+          quizlet : JSON.parse(quizlet).quiz
         });
       }
     }
