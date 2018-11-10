@@ -259,6 +259,17 @@ Genki.tools = {
   },
   
   
+  // imports snippets for custom written quizzes
+  importSnippet : function (id) {
+    if (confirm('Are you sure you want to import this snippet? It will overwrite your current quiz settings.')) {
+      document.querySelector('#study-tool-ui textarea').value = document.getElementById(id).value;
+      this.updateJSON();
+      
+      Genki.scrollTo('#quiz-settings');
+    }
+  },
+  
+  
   // general settings shared across tools
   settings : {
     

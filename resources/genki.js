@@ -735,6 +735,13 @@
       'lesson-16/literacy-wb-5|Workbook: Spelling Practice (運, 動, 教, and 室)|p.115; bonus',
       'lesson-16/literacy-wb-6|Workbook: Fill in the Blanks|p.116',
       
+      // Lesson 17
+      'lesson-17/vocab-1|Vocabulary: Nouns 1|p.120',
+      'lesson-17/vocab-2|Vocabulary: Nouns 2|p.120',
+      'lesson-17/vocab-3|Vocabulary: い-adjectives and U-verbs|p.120-121',
+      'lesson-17/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.121',
+      'lesson-17/vocab-5|Vocabulary: Adverbs and Other Expressions|p.121',
+      
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
       'study-tools/custom-spelling|Custom Spelling Practice',
@@ -1306,7 +1313,7 @@
           document.getElementById('check-answers').style.display = 'none';
 
           // loop over the inputs and check to see if the answers are correct
-          var input = document.querySelectorAll('.writing-zone-input'),
+          var input = document.querySelectorAll('#exercise .writing-zone-input'),
               i = 0, j = input.length, val, answer, data;
 
           for (; i < j; i++) {
