@@ -58,118 +58,74 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'Choose the appropriate expression for each situation.',
+      type : 'fill',
+      info : 'Write in Japanese (hiragana) the appropriate expression for each situation.',
       
-      quizlet : [
-        {
-          question : 'In the morning, a girl greets her friend on the way to school. How does she greet him?',
-          answers : [
-            'Aおはよう。',
-            'こんにちは。',
-            'おはようございます。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'In the morning, a girl greets her friend on the way to school. How does she greet him?<br>'+
+          '{おはよう}。'+
+        '</div>'+
         
-        {
-          question : 'A man helps carry his friend\'s bags. What does the friend say in return?',
-          answers : [
-            'Aありがとう。',
-            'すみません。',
-            'いいえ。'
-          ]
-        },
+        '<div class="problem">'+
+          'A man helps carry his friend\'s bags. What does the friend say in return?<br>'+
+          '{ありがとう}。'+
+        '</div>'+
         
-        {
-          question : 'Two friends run into each other at night. What do they say?',
-          answers : [
-            'Aこんばんは。',
-            'こんにちは。',
-            'おはよう。'
-          ]
-        },
+        '<div class="problem">'+
+          'Two friends run into each other at night. What do they say?<br>'+
+          '{こんばんは}。'+
+        '</div>'+
         
-        {
-          question : 'The customer calls to the waiter. What does he say?',
-          answers : [
-            'Aすみません。',
-            'おはようございます。',
-            'ごちそうさま（でした）。'
-          ]
-        },
+        '<div class="problem">'+
+          'The customer calls to the waiter. What does he say?<br>'+
+          '{すみません}。'+
+        '</div>'+
         
-        {
-          question : 'A girl is about to eat. What does she say?',
-          answers : [
-            'Aいただきます。',
-            'ごちそうさま（でした）。',
-            'ありがとうございます。'
-          ]
-        },
+        '<div class="problem">'+
+          'A girl is about to eat. What does she say?<br>'+
+          '{いただきます}。'+
+        '</div>'+
         
-        {
-          question : 'The girl has finished eating. What does she say?',
-          answers : [
-            'Aごちそうさま（でした）。',
-            'いただきます。',
-            'ありがとうございます。'
-          ]
-        },
+        '<div class="problem">'+
+          'The girl has finished eating. What does she say?<br>'+
+          '{ごちそうさま|ごちそうさまでした|answer}。'+
+        '</div>'+
         
-        {
-          question : 'The girl is about to leave for school. Her mother sees her off. What do they say to each other?',
-          answers : [
-            'Aいってきます。／いってらっしゃい。',
-            'ただいま。／おかえり（なさい）。',
-            'さようなら。'
-          ]
-        },
+        '<div class="problem">'+
+          'The girl is about to leave for school. Her mother sees her off. What do they say to each other?<br>'+
+          'Girl: {いってきます}。<br><br>'+
+          'Mother: {いってらっしゃい}。<br>'+
+        '</div>'+
         
-        {
-          question : 'The girl has returned home. Her mother welcomes her back. What do they say to each other.',
-          answers : [
-            'Aただいま。／おかえり（なさい）。',
-            'いってきます。／いってらっしゃい。',
-            'こんにちは。'
-          ]
-        },
+        '<div class="problem">'+
+          'The girl has returned home. Her mother welcomes her back. What do they say to each other?<br>'+
+          'Girl: {ただいま}。<br><br>'+
+          'Mother: {おかえり|おかえりなさい|answer}。<br>'+
+        '</div>'+
         
-        {
-          question : 'An exchange student introduces herself. What does she say?',
-          answers : [
-            'Aはじめまして。よろしくおねがいします。',
-            'はじめまして。',
-            'よろしくおねがいします。'
-          ]
-        },
+        '<div class="problem">'+
+          'An exchange student introduces herself. What does she say?<br>'+
+          '{はじめまして。よろしくおねがいします。}'+
+        '</div>'+
         
-        {
-          question : 'The woman bids her friend farewell. What does she say?',
-          answers : [
-            'Aさようなら。',
-            'いってきます。',
-            'おやすみ（なさい）。'
-          ]
-        },
+        '<div class="problem">'+
+          'The woman bids her friend farewell. What does she say?<br>'+
+          '{さようなら}。'+
+        '</div>'+
         
-        {
-          question : 'A mother wishes her son a good night. What does she say?',
-          answers : [
-            'Aおやすみ（なさい）。',
-            'おかえり（なさい）。',
-            'こんばんは。'
-          ]
-        },
+        '<div class="problem">'+
+          'A mother wishes her son a good night. What does she say?<br>'+
+          '{おやすみ|おやすみなさい|answer}。'+
+        '</div>'+
         
-        {
-          question : 'Two friends greet each other at the supermarket.',
-          answers : [
-            'Aこんにちは。',
-            'おはよう。',
-            'はじめまして。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'Two friends greet each other at the supermarket. How do they greet each other?<br>'+
+          '{こんにちは}。'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>

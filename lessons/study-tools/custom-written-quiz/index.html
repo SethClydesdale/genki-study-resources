@@ -38,12 +38,13 @@
         <p>Welcome to the custom written quiz tool! Here you will be able to setup your own custom quiz that requires input via keyboard. These quizzes are a bit more advanced and require some <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="blank">HTML</a> to set things up properly. Please read over the <a href="#help-notes-and-tricks">help section</a> for more information.</p>
         
         <h2 id="quiz-settings" class="section-title">Written Quiz HTML</h2>
-        <br>
+        <p>Use the textarea below to setup your custom written quiz.</p>
         <ol id="study-tool-ui" class="written-quiz">
           <li class="item-row">
             <textarea oninput="Genki.tools.updateJSON();"></textarea>
           </li>
         </ol>
+        <p><strong>Tip</strong>: You can remix existing exercises using <a href="#snippets">snippets</a>.</p>
         
         <h3 id="quiz-code" class="sub-title">Custom Written Quiz Code (JSON)</h3>
         <p>The custom written quiz code is used to save your quiz. You can copy this code and save it to a text file for later, so you don't have to setup your quiz again. When you're ready to study once more, just paste the code into this textarea and click "study" to continue where you left off.</p>
@@ -201,11 +202,11 @@
         </div>
         
         <h4 id="snippets" class="sub-title">Snippets</h4>
-        <p>Below is the source code for existing exercises that you can remix. Copy and paste the exercise you want to remix into the Written Quiz HTML textarea to see how it works!</p>
+        <p>Below is the source code for existing exercises that you can remix. Click "Import" or copy and paste the exercise you want to remix into the Written Quiz HTML textarea to see how it works!</p>
         <div class="text-block fill-quiz">
           <div class="problem">
-            <strong>Workbook: Volitional Form Conjugation Practice - Lesson 15</strong>
-            <textarea style="width:80%;height:100px;" onclick="this.select();" readonly><table class="table large-width center">
+            <button class="button" onclick="Genki.tools.importSnippet('snippet-01');">Import</button> <strong>Workbook: Volitional Form Conjugation Practice - Lesson 15</strong>
+            <textarea id="snippet-01" style="width:80%;height:100px;" onclick="this.select();" readonly><table class="table large-width center">
   <tr>
     <td>dictionary form</td>
     <td>potential form</td>
@@ -275,8 +276,8 @@
           </div>
           
           <div class="problem">
-            <strong>Workbook: ～てください - Lesson 6</strong>
-            <textarea style="width:80%;height:100px;" onclick="this.select();" readonly><div class="count-problems">
+            <button class="button" onclick="Genki.tools.importSnippet('snippet-02');">Import</button> <strong>Workbook: ～てください - Lesson 6</strong>
+            <textarea id="snippet-02" style="width:80%;height:100px;" onclick="this.select();" readonly><div class="count-problems">
   <div class="problem">
     Please take a picture.<br>
     {写真を撮ってください|しゃしんをとってください|answer}。
@@ -325,8 +326,8 @@
           </div>
           
           <div class="problem">
-            <strong>Workbook: Fill in the Blanks - Lesson 13</strong>
-            <textarea style="width:80%;height:100px;" onclick="this.select();" readonly><div class="count-problems">
+            <button class="button" onclick="Genki.tools.importSnippet('snippet-03');">Import</button> <strong>Workbook: Fill in the Blanks - Lesson 13</strong>
+            <textarea id="snippet-03" style="width:80%;height:100px;" onclick="this.select();" readonly><div class="count-problems">
   <div class="problem">私の{くに|国|width:42}で、日本の{食べ物|たべもの}と{飲み物|のみもの}は高いです。</div>
   <div class="problem">私は{特に|とくに}{鳥|とり}の{肉|にく}が好きです。</div>
   <div class="problem">{昼|ひる}に{空港|くうこう}に{着きました|つきました}。</div>
@@ -342,8 +343,8 @@
           </div>
           
           <div class="problem">
-            <strong>Reading Practice: スーさんの日記 - Lesson 9</strong>
-            <textarea style="width:80%;height:100px;" onclick="this.select();" readonly> <p class="section-desc">スーさんは日記を書きました。</p>  
+            <button class="button" onclick="Genki.tools.importSnippet('snippet-04');">Import</button> <strong>Reading Practice: スーさんの日記 - Lesson 9</strong>
+            <textarea id="snippet-04" style="width:80%;height:100px;" onclick="this.select();" readonly> <p class="section-desc">スーさんは日記を書きました。</p>  
  <div class="sub-section text-passage">  
    <p>  
      十一月二十五日（土）　雨<br>  
@@ -422,8 +423,8 @@
           </div>
           
           <div class="problem">
-            <strong>Kanji Practice: Write the Readings - Lesson 15</strong>
-            <textarea style="width:80%;height:100px;" onclick="this.select();" readonly><div class="columns-2 count-problems small-margin clear">  
+            <button class="button" onclick="Genki.tools.importSnippet('snippet-05');">Import</button> <strong>Kanji Practice: Write the Readings - Lesson 15</strong>
+            <textarea id="snippet-05" style="width:80%;height:100px;" onclick="this.select();" readonly><div class="columns-2 count-problems small-margin clear">  
  <div>  
    <div class="problem">生まれる　{うまれる}</div>  
    <div class="problem">一年中　　{いちねんじゅう}</div>  
