@@ -741,6 +741,7 @@
       'lesson-17/vocab-3|Vocabulary: い-adjectives and U-verbs|p.120-121',
       'lesson-17/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.121',
       'lesson-17/vocab-5|Vocabulary: Adverbs and Other Expressions|p.121',
+      'lesson-17/culture-1|Culture Note: Japanese Gestures|p.128',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1009,7 +1010,13 @@
 
         // create individual blocks for each question and hide them until later
         for (; i < j; i++) {
-          quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + (typeof q[i].question != 'undefined' ? q[i].question : '<div class="text-passage' + (q[i].vertical ? ' vertical-text' : '') + '" ' + (q[i].text.replace(/<br>/g, '').length < 50 ? 'style="text-align:center;"' : '') + '>' + q[i].text + '</div>' + (q[i].helper || '')) + '</div>';
+          quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + (typeof q[i].question != 'undefined' ? q[i].question.replace(/\{.*?\}/g, function (match) {
+            var data = match.slice(1, match.length - 1).split('|');
+          
+            if (data[0] == '!IMG') {
+              return Genki.parse.image(data);
+            }
+          }) : '<div class="text-passage' + (q[i].vertical ? ' vertical-text' : '') + '" ' + (q[i].text.replace(/<br>/g, '').length < 50 ? 'style="text-align:center;"' : '') + '>' + q[i].text + '</div>' + (q[i].helper || '')) + '</div>';
 
           // ready-only questions contain text only, no answers
           if (q[i].text) {
@@ -1060,14 +1067,10 @@
         
         // add the quiz to the document
         zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '" target="_blank">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
-          var value = match.slice(1, match.length - 1).split('|'), hint, flag, url;
+          var data = match.slice(1, match.length - 1).split('|'), hint, flag;
           
-          if (value[0] == '!IMG') {
-            // parse images
-            // Syntax is {!IMG|FILE_NAME|ALT_TEXT} ALT_TEXT is optional
-            url = '../../../resources/images/lesson-images/' + value[1];
-            
-            return '<a href="' + url + '" target="blank" title="View full image" class="lesson-image"><img src="' + url + '" alt="' + (value[2] || value[1]) + '" /></a>';
+          if (data[0] == '!IMG') {
+            return Genki.parse.image(data);
             
           } else {
             // Split the answer from the hint.
@@ -1075,8 +1078,8 @@
             // passing "answer" to HIDE_HINT will hide HINT and make it a secondary answer.
             // passing "furigana" to HIDE_HINT will hide HINT and make it furigana only to aid with reading.
             // passing "width:N" to HIDE_HINT will set the width of the field to N, manually. The hint will remain visible.
-            hint = value[1] ? value[1] : '',
-            flag = value[2] ? value[2] : '';
+            hint = data[1] ? data[1] : '',
+            flag = data[2] ? data[2] : '';
 
             ++Genki.stats.problems; // increment problems number
 
@@ -1085,12 +1088,12 @@
               '<input '+
                 'class="writing-zone-input" '+
                 'type="text" '+
-                'data-answer="' + value[0] + '" '+
+                'data-answer="' + data[0] + '" '+
                 (flag == 'answer' ? 'data-answer2="' + hint + '" ' : '')+
                 (flag == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
-                'style="width:' + (/width/.test(flag) ? flag.split(':')[1] : (((hint || value[0]).length * (14 / (/[a-z]/i.test(hint || value[0]) ? 2 : 1))) + 14))+ 'px;"'+
+                'style="width:' + (/width/.test(flag) ? flag.split(':')[1] : (((hint || data[0]).length * (14 / (/[a-z]/i.test(hint || data[0]) ? 2 : 1))) + 14))+ 'px;"'+
               '>'+
               ((hint && !/answer|furigana/.test(flag)) ? '<span class="problem-hint">' + hint + '</span>' : '')+
             '</span>';
@@ -1499,7 +1502,23 @@
         }
       }
     },
+    
+    
+    // parsing functions
+    parse : {
+      
+      // parse images
+      image : function (data) {
+        // data[n] (n = 0, 1, 2..)
+        // 0 = flag (ex. !IMG)
+        // 1 = file name
+        // 2 = alt text (optional)
+        var url = /^http/.test(data[1]) ? data[1] : '../../../resources/images/lesson-images/' + data[1];
 
+        return '<a href="' + url + '" target="blank" title="View full image" class="lesson-image"><img src="' + url + '" alt="' + (data[2] || data[1]) + '" /></a>';
+      }
+      
+    },
 
     // initial setup for exercise functionality
     init : function () {
