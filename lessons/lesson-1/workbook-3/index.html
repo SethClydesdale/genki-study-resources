@@ -57,70 +57,45 @@
     <script src="../../../resources/easytimer.min.js"></script>
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
-    <script>(function() {
-      var q1 = 'Write this phone number in Japanese: ',
-          q2 = 'Write this phone number in Arabic numerals: ';
-        
-      Genki.generateQuiz({
-        type : 'multi',
-        info : Genki.lang.std_multi,
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Write the following phone numbers in Japanese and Arabic numerals.',
 
-        quizlet : [
-          {
-            question : q1 + '030-3564-1782',
-            answers : [
-              'Aぜろさんぜろのさんごろくよんのいちななはちに',
-              'ぜろよんぜろのさんごろくさんのいちななはちに',
-              'ぜろさんぜろのよんにろくよんのはちなないちご'
-            ]
-          },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="section-desc">Write the following phone numbers in Japanese.</p>'+
+        '<div class="problem">'+
+          '030-3564-1782<br>'+
+          '{ぜろさんぜろさんごろくよんいちななはちに|ぜろさんぜろのさんごろくよんのいちななはちに|answer}'+
+        '</div>'+
 
-          {
-            question : q1 + '244-1095',
-            answers : [
-              'Aによんよんのいちぜろきゅうご',
-              'にさんよんのはちぜろきゅうご',
-              'ごよんさんのいちぜろきゅうに'
-            ]
-          },
+        '<div class="problem">'+
+          '244-1095<br>'+
+          '{によんよんいちぜろきゅうご|によんよんのいちぜろきゅうご|answer}'+
+        '</div>'+
 
-          {
-            question : q1 + '368-7120',
-            answers : [
-              'Aさんろくはちのなないちにぜろ',
-              'よんろくはちのななはちにぜろ',
-              'さんろくいちのなないちごぜろ'
-            ]
-          },
+        '<div class="problem">'+
+          '368-7120<br>'+
+          '{さんろくはちなないちにぜろ|さんろくはちのなないちにぜろ|answer}'+
+        '</div>'+
 
-          {
-            question : q2 + 'ぜろさんぜろのさんごろくよんのいちななはちに',
-            answers : [
-              'A030-3564-1782',
-              '040-3563-1782',
-              '030-4264-8715'
-            ]
-          },
+        '<p class="section-desc">Write the following phone numbers in Arabic numerals.</p>'+
+        '<div class="problem">'+
+          'ぜろさんぜろのさんごろくよんのいちななはちに<br>'+
+          '{03035641782|030-3564-1782|answer}'+
+        '</div>'+
 
-          {
-            question : q2 + 'によんよんのいちぜろきゅうご',
-            answers : [
-              'A244-1095',
-              '234-8095',
-              '543-1092'
-            ]
-          },
+        '<div class="problem">'+
+          'によんよんのいちぜろきゅうご<br>'+
+          '{2441095|244-1095|answer}'+
+        '</div>'+
 
-          {
-            question : q2 + 'さんろくはちのなないちにぜろ',
-            answers : [
-              'A368-7120',
-              '468-7820',
-              '361-7150'
-            ]
-          }
-        ]
-      });
-    }());</script>
+        '<div class="problem">'+
+          'さんろくはちのなないちにぜろ<br>'+
+          '{3687120|368-7120|answer}'+
+        '</div>'+
+      '</div>'
+
+    });</script>
   </body>
 </html>

@@ -937,6 +937,11 @@ input.writing-zone-input:focus { border-color:#F60; }
   padding:5px;
 }
 
+.quiz-multi-question .lesson-image img {
+  border: 1px solid #ccc;
+  margin:3px;
+}
+
 .quiz-multi-answer {
   color:#333;
   background:#FFF;

@@ -58,31 +58,38 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'drag',
-      info : 'Drag the numbers to the correct Japanese expression.',
+      type : 'fill',
+      info : 'Write the following numbers in Arabic numerals (e.g. 3, 12, 20..).',
       
-      quizlet : {
-        'ご' : '5',
-        'ぜろ' : '0',
-        'きゅう' : '9',
-        'さん' : '3',
-        'なな' : '7',
-        'に' : '2',
-        'ろく' : '6',
-        'いち' : '1',
-        'はち' : '8',
-        'よん' : '4',
-        'じゅうろく' : '16',
-        'よんじゅう' : '40',
-        'にじゅういち' : '21',
-        'ひゃくろくじゅうよん' : '164',
-        'きゅうじゅうに' : '92',
-        'さんじゅうご' : '35',
-        'ななじゅうろく' : '76',
-        'じゅうはち' : '18',
-        'ひゃくごじゅうなな' : '157',
-        'ひゃくいち' : '101'
-      }
+      quizlet : 
+      '<div class="columns-2 count-problems small-margin clear">'+
+        '<div>'+
+          '<div class="problem">ご　　　{5}</div>'+
+          '<div class="problem">ぜろ　　{0}</div>'+
+          '<div class="problem">きゅう　{9}</div>'+
+          '<div class="problem">さん　　{3}</div>'+
+          '<div class="problem">なな　　{7}</div>'+
+          '<div class="problem">に　　　{2}</div>'+
+          '<div class="problem">ろく　　{6}</div>'+
+          '<div class="problem">いち　　{1}</div>'+
+          '<div class="problem">はち　　{8}</div>'+
+          '<div class="problem">よん　　{4}</div>'+
+        '</div>'+
+        
+        '<div>'+
+          '<div class="problem">じゅうろく　　　　　　{16}</div>'+
+          '<div class="problem">よんじゅう　　　　　　{40}</div>'+
+          '<div class="problem">にじゅういち　　　　　{21}</div>'+
+          '<div class="problem">ひゃくろくじゅうよん　{164}</div>'+
+          '<div class="problem">きゅうじゅうに　　　　{92}</div>'+
+          '<div class="problem">さんじゅうご　　　　　{35}</div>'+
+          '<div class="problem">ななじゅうろく　　　　{76}</div>'+
+          '<div class="problem">じゅうはち　　　　　　{18}</div>'+
+          '<div class="problem">ひゃくごじゅうなな　　{157}</div>'+
+          '<div class="problem">ひゃくいち　　　　　　{101}</div>'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>

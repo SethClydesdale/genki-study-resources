@@ -6,8 +6,8 @@
     <meta name="title" content="Workbook: Question Sentences - Lesson 1 | Genki Study Resources">
     <meta name="twitter:title" content="Workbook: Question Sentences - Lesson 1 | Genki Study Resources">
     <meta property="og:title" content="Workbook: Question Sentences - Lesson 1 | Genki Study Resources">
-    <meta name="description" content="Problems 1-5: Ask the right questions in each exchange. Problems 6-7: Translate the sentences into Japanese.">
-    <meta property="og:description" content="Problems 1-5: Ask the right questions in each exchange. Problems 6-7: Translate the sentences into Japanese.">
+    <meta name="description" content="Practice making question sentences in Japanese.">
+    <meta property="og:description" content="Practice making question sentences in Japanese.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki I Workbook, page 16, problem I, problem II, japanese, quizzes, exercises" lang="en">
@@ -57,79 +57,60 @@
     <script src="../../../resources/easytimer.min.js"></script>
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
-    <script>(function() {
-      var s = 'You: __________<br>Kimura: ',
-          t = '<strong>Translate</strong><br>';
-        
-      Genki.generateQuiz({
-        type : 'multi',
-        info : 'Problems 1-5: Ask the right questions in each exchange.<br>Problems 6-7: Translate the sentences into Japanese.',
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Practice making question sentences in Japanese.',
 
-        quizlet : [
-          {
-            question : s + 'よねんせいです。',
-            answers : [
-              'Aなんねんせいですか。',
-              'ねんせいですか。',
-              'なにねんせいですか。'
-            ]
-          },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="section-desc">Ask the right questions in each of the following exchanges.</p>'+
+        '<div class="problem">'+
+          'You：{なんねんせいですか}。<br><br>'+
+          'Kimura：よねんせいです。'+
+        '</div>'+
 
-          {
-            question : s + 'れきしです。',
-            answers : [
-              'Aせんこうはなんですか。',
-              'せんこうですか。',
-              'なんはせんこうですか。'
-            ]
-          },
+        '<div class="problem">'+
+          'You：{せんこうはなんですか}。<br><br>'+
+          'Kimura：れきしです。'+
+        '</div>'+
 
-          {
-            question : s + 'じゅうきゅうさいです。',
-            answers : [
-              'Aなんさいですか。',
-              'なにさいですか。',
-              'さいですか。'
-            ]
-          },
+        '<div class="problem">'+
+          'You：{なんさいですか}。<br><br>'+
+          'Kimura：じゅうきゅうさいです。'+
+        '</div>'+
 
-          {
-            question : s + 'よんさんのろくきゅういちななです。',
-            answers : [
-              'Aでんわばんごうはなんですか。',
-              'でんわばんごうですか。',
-              'なんはでんわばんごうですか。'
-            ]
-          },
+        '<div class="problem">'+
+          'You：{でんわばんごうはなんですか}。<br><br>'+
+          'Kimura：よんさんのろくきゅういちななです。'+
+        '</div>'+
 
-          {
-            question : s.replace('_____', 'すみません。いま') + 'いまくじはんです。',
-            answers : [
-              'Aなんじですか。',
-              'なにじですか。',
-              'じですか。'
-            ]
-          },
+        '<div class="problem">'+
+          'You：すみません。いま{なんじですか}。<br><br>'+
+          'Kimura：いまくじはんです。'+
+        '</div>'+
 
-          {
-            question : t + 'Are you a student?<br>Yes, I am a student at Nihon University.',
-            answers : [
-              'Aがくせいですか。<br>はい、わたしはにほんがいがくのがくせいです。',
-              'がくせいですか。<br>はい、にほんがいがくのがくせいです。',
-              'がくせいですか。<br>はい、わたしはがくせいのにほんがいがくです。'
-            ]
-          },
+        '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
+        '<div class="problem">'+
+          'Are you a student?<br>'+
+          '{がくせいですか}。'+
+        '</div>'+
 
-          {
-            question : t + 'Is Michiko a fourth-year student?<br>No, Michiko is a third-year student.',
-            answers : [
-              'Aみちこさんはよねんせいですか。<br>いいえ、みちこさんはさんねんせいです。',
-              'みちこさんはよんねんせいですか。<br>いいえ、みちこさんはさんねんせいです。',
-              'みちこさんはよねんせいです。<br>いいえ、みちこさんはさんねんせいですか。'
-            ]
-          }
-        ]
-      });
-    }());</script>
+        '<div class="problem">'+
+          'Yes, I am a student at Nihon University.<br>'+
+          '{はい、わたしはにほんだいがくのがくせいです}。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'Is Michiko a fourth-year student?<br>'+
+          '{みちこさんはよねんせいですか}。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'No, Michiko is a third-year student.<br>'+
+          '{いいえ、みちこさんはさんねんせいです}。'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

@@ -58,64 +58,42 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'Help Mary answer questions about herself. (info on Mary will be given in parentheses)',
+      type : 'fill',
+      info : 'Help Mary answer questions about herself.',
 
-      quizlet : [
-        {
-          question : 'おなまえは？(Name: Mary Hart)',
-          answers : [
-            'Aメアリー・ハートです。',
-            'メアリー・ハート',
-            'メアリーです。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'おなまえは？<br>'+
+          '{メアリー・ハートです}。(Mary Hart)'+
+        '</div>'+
         
-        {
-          question : 'しごとはなんですか。(Occupation: Student)',
-          answers : [
-            'Aがくせいです。',
-            'べんごしです。',
-            'いしゃです。'
-          ]
-        },
+        '<div class="problem">'+
+          'しごとはなんですか。<br>'+
+          '{がくせいです}。(Student)'+
+        '</div>'+
         
-        {
-          question : 'なんねんせいですか。(Year: 2nd year)',
-          answers : [
-            'Aにねんせいです。',
-            'いちねんせいです。',
-            'よねんせいです。'
-          ]
-        },
+        '<div class="problem">'+
+          'なんねんせいですか。<br>'+
+          '{にねんせいです}。(2nd year)'+
+        '</div>'+
         
-        {
-          question : 'なんさいですか。(Age: 19)',
-          answers : [
-            'Aじゅうきゅうさいです。',
-            'きゅうじゅうさいです。',
-            'にじゅうきゅうさいです。'
-          ]
-        },
+        '<div class="problem">'+
+          'なんさいですか。<br>'+
+          '{じゅうきゅうさいです}。(19 years old)'+
+        '</div>'+
         
-        {
-          question : 'せんこうはなんですか。(Major: Japanese)',
-          answers : [
-            'A（せんこうは）にほんごです。',
-            '（せんこうは）ちゅうごくごです。',
-            '（せんこうは）かんこくごです。'
-          ]
-        },
+        '<div class="problem">'+
+          'せんこうはなんですか。<br>'+
+          '{にほんごです|せんこうはにほんごです|answer}。(Major is Japanese)'+
+        '</div>'+
         
-        {
-          question : 'でんわばんごうはなんですか。(Phone Number: 020-6921-4236)',
-          answers : [
-            'A（でんわばんごうは）ぜろにぜろのろくきゅうにいちのよんにさんろくです。',
-            '（でんわばんごうは）ぜろごぜろのろくきゅうにはちのよんにさんろくです。',
-            '（でんわばんごうは）ぜろにぜろのろくきゅうごいちのさんによんろくです。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'でんわばんごうはなんですか。<br>'+
+          '{ぜろにぜろろくきゅうにいちよんにさんろくです|ぜろにぜろのろくきゅうにいちのよんにさんろくです|answer}。(020-6921-4236)'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>

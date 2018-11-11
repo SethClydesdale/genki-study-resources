@@ -57,60 +57,38 @@
     <script src="../../../resources/easytimer.min.js"></script>
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
-    <script>(function() {
-      var n = 'いまなんじですか。';
-        
-      Genki.generateQuiz({
-        type : 'multi',
-        info : 'Read the question and answer what time it is. (time will be given in parentheses)',
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Read the question and answer what time it is in Japanese.',
 
-        quizlet : [
-          {
-            question : n + '(05:00pm)',
-            answers : [
-              'Aごごごじです。',
-              'ごぜんごじです。',
-              'ごごにじです。'
-            ]
-          },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'いまなんじですか。（Current Time: 05:00pm）<br>'+
+          '{ごごごじです}。'+
+        '</div>'+
 
-          {
-            question : n + '(09:00am)',
-            answers : [
-              'Aごぜんくじです。',
-              'ごごくじです。',
-              'ごぜんきゅうじです。'
-            ]
-          },
+        '<div class="problem">'+
+          'いまなんじですか。（Current Time: 09:00am）<br>'+
+          '{ごぜんくじです}。'+
+        '</div>'+
 
-          {
-            question : n + '(12:30pm)',
-            answers : [
-              'Aごごじゅうにじはんです。',
-              'ごぜんじゅうにじはんです。',
-              'ごごじゅうにじです。'
-            ]
-          },
+        '<div class="problem">'+
+          'いまなんじですか。（Current Time: 12:30pm）<br>'+
+          '{ごごじゅうにじはんです}。'+
+        '</div>'+
 
-          {
-            question : n + '(04:30am)',
-            answers : [
-              'Aごぜんよじはんです。',
-              'ごごよじはんです。',
-              'ごぜんよんじはんです。'
-            ]
-          },
-          
-          {
-            question : n + '(07:30pm)',
-            answers : [
-              'Aごごしちじはんです。',
-              'ごごしちじです。',
-              'ごごななじはんです。'
-            ]
-          }
-        ]
-      });
-    }());</script>
+        '<div class="problem">'+
+          'いまなんじですか。（Current Time: 04:30am）<br>'+
+          '{ごぜんよじはんです}。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'いまなんじですか。（Current Time: 07:30pm）<br>'+
+          '{ごごしちじはんです}。'+
+        '</div>'+
+      '</div>'
+
+    });</script>
   </body>
 </html>

@@ -58,64 +58,42 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'Translate the phrases into Japanese using the framework "XはYです."',
 
-      quizlet : [
-        {
-          question : 'Ms. Ogawa is Japanese.',
-          answers : [
-            'Aおがわさんはにほんじんです。',
-            'にほんじんはおがわさんです。',
-            'おがわさんはかんこくじんです。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'Ms. Ogawa is Japanese.<br>'+
+          '{おがわさん}は{にほんじん}です。'+
+        '</div>'+
         
-        {
-          question : 'Mr. Takeda is a teacher.',
-          answers : [
-            'Aたけださんはせんせいです。',
-            'せんせいはたけださんです。',
-            'たけださんはがくせいです。'
-          ]
-        },
+        '<div class="problem">'+
+          'Mr. Takeda is a teacher.<br>'+
+          '{たけださんはせんせいです}。'+
+        '</div>'+
         
-        {
-          question : 'I am an international student.',
-          answers : [
-            'Aわたしはりゅうがくせいです。',
-            'りゅうがくせいはわたしです。',
-            'わたしはがくせいです。'
-          ]
-        },
+        '<div class="problem">'+
+          'I am an international student.<br>'+
+          '{わたしはりゅうがくせいです}。'+
+        '</div>'+
         
-        {
-          question : 'Haruna is a first-year student.',
-          answers : [
-            'Aはるなさんはいちねんせいです。',
-            'はるなさんはにねんせいです。',
-            'はるなさんはさんねんせいです。'
-          ]
-        },
+        '<div class="problem">'+
+          'Haruna is a first-year student.<br>'+
+          '{はるなさんはいちねんせいです}。'+
+        '</div>'+
         
-        {
-          question : 'Ms. Yamamoto is 25 years old.',
-          answers : [
-            'Aやまもとさんはにじゅうごさいです。',
-            'やまもとさんはじゅうごさいです。',
-            'やまもとさんはにじゅうさいです。'
-          ]
-        },
+        '<div class="problem">'+
+          'Ms. Yamamoto is 25 years old.<br>'+
+          '{やまもとさんはにじゅうごさいです}。'+
+        '</div>'+
         
-        {
-          question : 'My major is Japanese.',
-          answers : [
-            'Aわたしのせんこうはにほんごです。',
-            'わたしはせんこうのにほんごです。',
-            'わたしのにほんごはせんこうです。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'My major is Japanese.<br>'+
+          '{わたしのせんこうはにほんごです}。'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>

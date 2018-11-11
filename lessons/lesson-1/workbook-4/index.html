@@ -58,55 +58,36 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'Translate the phrases into Japanese using the framework "AのB."<br>NOTE: The order in which the two nouns appear may be different in English and Japanese. (Read Grammar 3; p.44-45)',
 
-      quizlet : [
-        {
-          question : 'Japanese student',
-          answers : [
-            'Aにほんじんのがくせい',
-            'がくせいのにほんじん',
-            'にほんじんのせんせい'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'Japanese student<br>'+
+          '{にほんじんのがくせい}'+
+        '</div>'+
         
-        {
-          question : 'Takeshi\'s telephone number',
-          answers : [
-            'Aたけしさんのでんわばんごう',
-            'でんわばんごうのたけしさん',
-            'たけしさんのでんわ'
-          ]
-        },
+        '<div class="problem">'+
+          'Takeshi\'s telephone number<br>'+
+          '{たけしさんのでんわばんごう}'+
+        '</div>'+
         
-        {
-          question : 'my friend',
-          answers : [
-            'Aわたしのともだち',
-            'ともだちのわたし',
-            'たけしさんのともだち'
-          ]
-        },
+        '<div class="problem">'+
+          'My friend<br>'+
+          '{わたしのともだち}'+
+        '</div>'+
         
-        {
-          question : 'English-language teacher',
-          answers : [
-            'Aえいごのせんせい',
-            'せんせいのにほんご',
-            'えいごのがくせい'
-          ]
-        },
+        '<div class="problem">'+
+          'English-language teacher<br>'+
+          '{えいごのせんせい}'+
+        '</div>'+
         
-        {
-          question : 'Michiko\'s major',
-          answers : [
-            'Aみちこさんのせんこう',
-            'せんこうのみちこさん',
-            'わたしのせんこう'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'Michiko\'s major<br>'+
+          '{みちこさんのせんこう}'+
+        '</div>'+
+      '</div>'
     });</script>
   </body>
 </html>
