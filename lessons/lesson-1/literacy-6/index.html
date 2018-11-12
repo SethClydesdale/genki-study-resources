@@ -58,80 +58,88 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'Read the following people\'s self-introduction and answer the questions. Refer to the vocabulary list on page 41 of Genki I, if necessary.',
 
-      quizlet : [
-        {
-          text : 'たなかゆうこです。<br>かいしゃいんです。'
-        },
+      quizlet : 
+      '<p class="section-desc">Read the following self-introductions</p>'+
+      '<div class="bubbles">'+
+        '<div class="sub-section">'+
+          '<strong class="bubble-number">1.</strong>'+
+          '<div>たなかゆうこです。<br>かいしゃいんです。</div>'+
+        '</div>'+
+
+        '<div class="sub-section">'+
+          '<strong class="bubble-number">2.</strong>'+
+          '<div>はらだりょうです。<br>だいがくせいです。<br>せんこうはれきしです。</div>'+
+        '</div>'+
+
+        '<div class="sub-section">'+
+          '<strong class="bubble-number">3.</strong>'+
+          '<div>かとうやすおです。<br>だいがくいんせいです。<br>せんこうはけいざいです。</div>'+
+        '</div>'+
+
+        '<div class="sub-section">'+
+          '<strong class="bubble-number">4.</strong>'+
+          '<div>わたしのなまえはきたのひろみです。<br>こうこうのさんねんせいです。</div>'+
+        '</div>'+
+
+        '<div class="sub-section">'+
+          '<strong class="bubble-number">5.</strong>'+
+          '<div>やまだまことです。<br>だいがくせいです。<br>せんこうはにほんごです。</div>'+
+        '</div>'+
+      '</div>'+
+      
+      '<div class="count-problems">'+
+        '<p class="section-desc">Answer the following questions in Japanese.</p>'+
+        '<div class="problem">'+
+          'Who is an office worker?<br>'+
+          '{たなかゆうこ}。'+
+        '</div>'+
         
-        {
-          text : 'はらだりょうです。<br>だいがくせいです。<br>せんこうはれきしです。'
-        },
+        '<div class="problem">'+
+          'Whose major is Japanese?<br>'+
+          '{やまだまこと}。'+
+        '</div>'+
         
-        {
-          text : 'かとうやすおです。<br>だいがくいんせいです。<br>せんこうはけいざいです。'
-        },
+        '<div class="problem">'+
+          'Who is a high school student?<br>'+
+          '{きたのひろみ}。'+
+        '</div>'+
         
-        {
-          text : 'わたしのなまえはきたのひろみです。<br>こうこうのさんねんせいです。'
-        },
+        '<div class="problem">'+
+          'What is Harada\'s major.<br>'+
+          '{歴史|れきし|answer}。'+
+        '</div>'+
         
-        {
-          text : 'やまだまことです。<br>だいがくせいです。<br>せんこうはにほんごです。'
-        },
-        
-        {
-          question : 'Who is an office worker?',
-          answers : [
-            'Aたなかゆうこ',
-            'かとうやすお',
-            'やまだまこと',
-            'きたのひろみ'
-          ]
-        },
-        
-        {
-          question : 'Whose major is Japanese?',
-          answers : [
-            'Aやまだまこと',
-            'きたのひろみ',
-            'かとうやすお',
-            'はらだりょう'
-          ]
-        },
-        
-        {
-          question : 'Who is a high school student?',
-          answers : [
-            'Aきたのひろみ',
-            'たなかゆうこ',
-            'やまだまこと',
-            'かとうやすお'
-          ]
-        },
-        
-        {
-          question : 'What is Harada\'s major.',
-          answers : [
-            'Aれきし',
-            'けいざい',
-            'かがく',
-            'ぶんがく'
-          ]
-        },
-        
-        {
-          question : 'Whose major is economics?',
-          answers : [
-            'Aかとうやすお',
-            'はらだりょう',
-            'きたのひろみ',
-            'たなかゆうこ'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'Whose major is economics?<br>'+
+          '{かとうやすお}。'+
+        '</div>'+
+      '</div>'
+      
     });</script>
+    <style type="text/css">
+      .bubbles {
+        width:90%;
+        margin:0 auto;
+      }
+      
+      .bubbles .sub-section {
+        font-size:16px;
+        position:relative;
+        display:inline-block;
+        vertical-align:top;
+        margin:6px 20px 6px 6px;
+        border-radius:12px;
+      }
+      
+      .bubbles .bubble-number {
+        font-size:13px;
+        position:absolute;
+        top:-6px;
+        left:-18px;
+      }
+    </style>
   </body>
 </html>
