@@ -743,6 +743,7 @@
       'lesson-17/vocab-5|Vocabulary: Adverbs and Other Expressions|p.121',
       'lesson-17/culture-1|Culture Note: Japanese Gestures|p.128',
       'lesson-17/grammar-1|Practice: ～そうです (I hear)|p.129; I-A',
+      'lesson-17/grammar-2|Practice: ～って|p.130; II-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
