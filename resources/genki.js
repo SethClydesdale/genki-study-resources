@@ -744,6 +744,7 @@
       'lesson-17/culture-1|Culture Note: Japanese Gestures|p.128',
       'lesson-17/grammar-1|Practice: ～そうです (I hear)|p.129; I-A',
       'lesson-17/grammar-2|Practice: ～って|p.130; II-A',
+      'lesson-17/grammar-3|Practice: ～たら 1|p.131; III-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
