@@ -58,64 +58,48 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'Complete the conversation between the attendant and the customer at a watch shop using the info provided below.<br>Watch #1: ￥3,000, in the Customer\'s hand<br>Watch #2: ￥2,800, in the Attendant\'s hand<br>Watch #3: ￥1,500, far from both',
+      type : 'fill',
+      info : 'Complete the conversation between the attendant and the customer at a watch shop.',
 
-      quizlet : [
-        {
-          question : 'Attendant：いらっしゃいませ。<br>Customer (<em>pointing at watch #1</em>)：＿＿＿＿＿。(How much is this watch?)',
-          answers : [
-            'Aこのとけいはいくらですか。',
-            'そのとけいはいくらですか。',
-            'あのとけいはいくらですか。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<table class="table center">'+
+          '<tr style="font-weight:bold;">'+
+            '<td>Watch #1</td>'+
+            '<td>Watch #2</td>'+
+            '<td>Watch #3</td>'+
+          '</tr>'+
         
-        {
-          question : 'Attendant：そのとけいはさんぜんえんです。<br>Customer (<em>pointing at watch #2</em>)：＿＿＿＿＿。(How much is that watch?)',
-          answers : [
-            'Aそのとけいはいくらですか。',
-            'このとけいはいくらですか。',
-            'あのとけいはいくらですか。'
-          ]
-        },
+          '<tr>'+
+            '<td>￥3,000</td>'+
+            '<td>￥2,800</td>'+
+            '<td>￥1,500</td>'+
+          '</tr>'+
         
-        {
-          question : 'Attendant (<em>holding watch #2</em>)：＿＿＿＿＿。(This watch is...)',
-          answers : [
-            'Aこのとけいはにせんはっぴゃくえんです。',
-            'そのとけいはにせんはっぴゃくえんです。',
-            'あのとけいはにせんはっぴゃくえんです。'
-          ]
-        },
+          '<tr>'+
+            '<td>in the Customer\'s hand</td>'+
+            '<td>in the Attendant\'s hand</td>'+
+            '<td>far from both</td>'+
+          '</tr>'+
+        '</table><br>'+
         
-        {
-          question : 'Customer (<em>pointing at watch #3</em>)：＿＿＿＿＿。(How much is that watch?)',
-          answers : [
-            'Aあのとけいはいくらですか。',
-            'このとけいはいくらですか。',
-            'そのとけいはいくらですか。'
-          ]
-        },
+        '<p>Attendant：いらっしゃいませ。</p>'+
         
-        {
-          question : 'Attendant (<em>pointing at watch #3</em>)：＿＿＿＿＿。(That watch is...)',
-          answers : [
-            'Aあのとけいはせんごひゃくえんです。',
-            'このとけいはせんごひゃくえんです。',
-            'そのとけいはせんごひゃくえんです。'
-          ]
-        },
+        '<div class="problem">Customer <small>(<em>pointing at watch #1</em>)</small>：{このとけいはいくらですか|(How much is this watch?)}。</div>'+
         
-        {
-          question : 'Customer (<em>decided on #3</em>)：＿＿＿＿＿。(Then, I\'ll take that watch.)',
-          answers : [
-            'Aじゃあ、あのとけいをください。',
-            'じゃあ、このとけいをください。',
-            'じゃあ、そのとけいをください。'
-          ]
-        }
-      ]
+        '<p>Attendant：そのとけいはさんぜんえんです。</p>'+
+        
+        '<div class="problem">Customer <small>(<em>pointing at watch #2</em>)</small>：{そのとけいはいくらですか|(How much is that watch?)}。</div>'+
+        
+        '<div class="problem">Attendant <small>(<em>holding watch #2</em>)</small>：{このとけいはにせんはっぴゃくえんです|(This watch is...)|width:266}。</div>'+
+        
+        '<div class="problem">Customer <small>(<em>pointing at watch #3</em>)</small>：{あのとけいはいくらですか|(How much is that watch?)}。</div>'+
+        
+        '<div class="problem">Attendant <small>(<em>pointing at watch #3</em>)</small>：{あのとけいはせんごひゃくえんです|(That watch is...)|width:238}。</div>'+
+        
+        '<div class="problem">Customer <small>(<em>decided on #3</em>)</small>：{じゃあ、あのとけいをください|(Then, I\'ll take that watch.)}。</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>

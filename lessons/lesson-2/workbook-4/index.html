@@ -6,8 +6,8 @@
     <meta name="title" content="Workbook: ここ, そこ, and あそこ・だれの - Lesson 2 | Genki Study Resources">
     <meta name="twitter:title" content="Workbook: ここ, そこ, and あそこ・だれの - Lesson 2 | Genki Study Resources">
     <meta property="og:title" content="Workbook: ここ, そこ, and あそこ・だれの - Lesson 2 | Genki Study Resources">
-    <meta name="description" content="Problems 1-4: You are B. Answer A's questions with ここ, そこ, or あそこ. Problems 5-7: Your friends left their belongings in your room. Ask Michiko whose item's these are.">
-    <meta property="og:description" content="Problems 1-4: You are B. Answer A's questions with ここ, そこ, or あそこ. Problems 5-7: Your friends left their belongings in your room. Ask Michiko whose item's these are.">
+    <meta name="description" content="Complete the following problems using ここ, そこ, あそこ, and だれの.">
+    <meta property="og:description" content="Complete the following problems using ここ, そこ, あそこ, and だれの.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki I Workbook, page 23, problem I, problem II, japanese, quizzes, exercises" lang="en">
@@ -57,81 +57,82 @@
     <script src="../../../resources/easytimer.min.js"></script>
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
-    <script>(function() {
-      var b = '<br>B：＿＿＿＿＿。',
-          y = 'You：＿＿＿＿＿。<br>';
-        
-      Genki.generateQuiz({
-        type : 'multi',
-        info : 'Problems 1-4: You are B. Answer A\'s questions with ここ, そこ, or あそこ.<br>Problems 5-7: Your friends left their belongings in your room. Ask Michiko whose item\'s these are.',
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using ここ, そこ, あそこ, and だれの.',
 
-        quizlet : [
-          // I
-          {
-            question : 'A：たけしさんはどこですか。' + b + '(far from A and B)',
-            answers : [
-              'Aあそこです。',
-              'ここです。',
-              'そこです。'
-            ]
-          },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="section-desc">You are B. Answer A\'s questions with ここ, そこ, or あそこ.</p>'+
+        '<table class="table center">'+
+          '<tr style="font-weight:bold;">'+
+            '<td>Person:</td>'+
+            '<td>たけし</td>'+
+            '<td>スー</td>'+
+            '<td>ロバート</td>'+
+            '<td>トイレ</td>'+
+          '</tr>'+
 
-          {
-            question : 'A：スーさんはどこですか。' + b + '(next to A)',
-            answers : [
-              'Aそこです。',
-              'ここです。',
-              'あそこです。'
-            ]
-          },
+          '<tr>'+
+            '<td>Location:</td>'+
+            '<td>far from A and B</td>'+
+            '<td>next to A</td>'+
+            '<td>next to B</td>'+
+            '<td>far from A and B</td>'+
+          '</tr>'+
+        '</table><br>'+
 
-          {
-            question : 'A：ロバートさんはどこですか。' + b + '(next to B)',
-            answers : [
-              'Aここです。',
-              'そこです。',
-              'あそこです。'
-            ]
-          },
+        '<div class="problem">'+
+          'A：たけしさんはどこですか。<br>'+
+          'B：{あそこです|たけしさんはあそこです|answer}。'+
+        '</div>'+
 
-          {
-            question : 'A：トイレはどこですか。' + b + '(far from A and B)',
-            answers : [
-              'Aあそこです。',
-              'ここです。',
-              'そこです。'
-            ]
-          },
+        '<div class="problem">'+
+          'A：スーさんはどこですか。<br>'+
+          'B：{そこです|スーさんはそこです|answer}。'+
+        '</div>'+
 
-          // II
-          {
-            question : y + 'みちこ：それはたけしさんのぼうしです。',
-            answers : [
-              'Aこれはだれのぼうしですか。',
-              'それはだれのぼうしですか。',
-              'あれはだれのぼうしですか。'
-            ]
-          },
+        '<div class="problem">'+
+          'A：ロバートさんはどこですか。<br>'+
+          'B：{ここです|ロバートさんはここです|answer}。'+
+        '</div>'+
 
-          {
-            question : y + 'みちこ：それはわたしのさいふです。',
-            answers : [
-              'Aこれはだれのさいふですか。',
-              'それはだれのさいふですか。',
-              'あれはだれのさいふですか。'
-            ]
-          },
+        '<div class="problem">'+
+          'A：トイレはどこですか。<br>'+
+          'B：{あそこです|トイレはあそこです|answer}。'+
+        '</div>'+
 
-          {
-            question : y + 'みちこ：あれはメアリーさんのかさです。',
-            answers : [
-              'Aあれはだれのかさですか。',
-              'それはだれのかさですか。',
-              'これはだれのかさですか。'
-            ]
-          }
-        ]
-      });
-    }());</script>
+        '<p class="section-desc">Your friends left their belongings in your room. Ask Michiko whose item\'s these are.</p>'+
+        '<table class="table center">'+
+          '<tr style="font-weight:bold;">'+
+            '<td>ぼうし</td>'+
+            '<td>さいふ</td>'+
+            '<td>かさ</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>in your hand</td>'+
+            '<td>in your hand</td>'+
+            '<td>far from both</td>'+
+          '</tr>'+
+        '</table><br>'+
+
+        '<div class="problem">'+
+          'You：{これはだれのぼうしですか}。<br><br>'+
+          'みちこ：それはたけしさんのぼうしです。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'You：{これはだれのさいふですか}。<br><br>'+
+          'みちこ：それはわたしのさいふです。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'You：{あれはだれのかさですか}。<br><br>'+
+          'みちこ：あれはメアリーさんのかさです。'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>
