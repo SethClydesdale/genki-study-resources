@@ -58,58 +58,37 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'Translate the sentences into Japanese. Use も after the underlined phrases.',
 
-      quizlet : [
-        {
-          question : 'Ms. Tanaka is Japanese. <span class="ul">Mr. Yoshida</span> is Japanese, too.',
-          answers : [
-            'Aたなかさんはにほんじんです。よしださんもにほんじんです。',
-            'たなかさんはにほんじんです。よしださんはにほんじんです。',
-            'たなかさんもにほんじんです。よしださんもにほんじんです。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'Ms. Tanaka is Japanese. <span class="ul">Mr. Yoshida</span> is Japanese, too.<br>'+
+          '{たなかさんはにほんじんです。よしださんもにほんじんです。}'+
+        '</div>'+
         
-        {
-          question : 'Ms. Tanaka is 20 years old. <span class="ul">Mr. Yoshida</span> is 20 years old, too.',
-          answers : [
-            'Aたなかさんははたちです。よしださんもはたちです。',
-            'たなかさんははたちです。よしださんははたちです。',
-            'たなかさんもはたちです。よしださんもはたちです。'
-          ]
-        },
+        '<div class="problem">'+
+          'Ms. Tanaka is 20 years old. <span class="ul">Mr. Yoshida</span> is 20 years old, too.<br>'+
+          '{たなかさんははたちです。よしださんもはたちです。}'+
+        '</div>'+
         
-        {
-          question : 'This dictionary is 2,000 yen. <span class="ul">That dictionary</span> is 2,000 yen, too.',
-          answers : [
-            'Aこのじしょはにせんえんです。その／あのじしょもにせんえんです。',
-            'このじしょはにせんえんです。その／あのじしょはにせんえんです。',
-            'その／あのじしょはにせんえんです。このじしょもにせんえんです。',
-            'その／あのじしょはにせんえんです。このじしょはにせんえんです。'
-          ]
-        },
+        '<div class="problem">'+
+          'This dictionary is 2,000 yen. <span class="ul">That dictionary</span> is 2,000 yen, too.<br>'+
+          '{このじしょはにせんえんです。そのじしょもにせんえんです。|このじしょはにせんえんです。あのじしょもにせんえんです。|answer}'+
+        '</div>'+
         
-        {
-          question : 'This is my bicycle. <span class="ul">That</span> is my bicycle, too.',
-          answers : [
-            'Aこれはわたしのじてんしゃです。それ／あれもわたしのじてんしゃです。',
-            'これはわたしのじてんしゃです。それ／あれはわたしのじてんしゃです。',
-            'それ／あれはわたしのじてんしゃです。これもわたしのじてんしゃです。',
-            'それ／あれはわたしのじてんしゃです。これはわたしのじてんしゃです。'
-          ]
-        },
+        '<div class="problem">'+
+          'This is my bicycle. <span class="ul">That</span> is my bicycle, too.<br>'+
+          '{これはわたしのじてんしゃです。それもわたしのじてんしゃです。|これはわたしのじてんしゃです。あれもわたしのじてんしゃです。|answer}'+
+        '</div>'+
         
-        {
-          question : 'Takeshi\'s major is history. <span class="ul">My major</span> is history, too.',
-          answers : [
-            'Aたけしさんのせんこうはれきしです。わたしのせんこうもれきしです。',
-            'たけしさんのせんこうはれきしです。わたしのせんこうはれきしです。',
-            'たけしさんはせんこうのれきしです。わたしもせんこうのれきしです。',
-            'たけしさんはせんこうのれきしです。わたしはせんこうのれきしです。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'Takeshi\'s major is history. <span class="ul">My major</span> is history, too.<br>'+
+          '{たけしさんのせんこうはれきしです。わたしのせんこうもれきしです。}'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>

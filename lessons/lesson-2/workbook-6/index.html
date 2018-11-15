@@ -58,55 +58,37 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'Answer the questions negatively. These are all personal questions. "○○" (read まるまる) stands for your name. It will be replaced with わたし in your answers.',
 
-      quizlet : [
-        {
-          question : '○○さんはかいしゃいんですか。',
-          answers : [
-            'Aいいえ、（わたしは）かいしゃいんじゃないです。',
-            'いいえ、（わたしは）かいしゃいんです。',
-            'いいえ、（わたしは）かいしゃいんしゃないです。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          '○○さんはかいしゃいんですか。<br>'+
+          '{いいえ、かいしゃいんじゃないです。|いいえ、わたしはかいしゃいんじゃないです。|answer}。'+
+        '</div>'+
         
-        {
-          question : '○○さんはにほんじんですか。',
-          answers : [
-            'Aいいえ、（わたしは）にほんじんじゃないです。',
-            'いいえ、（わたしは）にほんじんです。',
-            'いいえ、（わたしは）にほんじんしゃないです。'
-          ]
-        },
+        '<div class="problem">'+
+          '○○さんはにほんじんですか。<br>'+
+          '{いいえ、にほんじんじゃないです。|いいえ、わたしはにほんじんじゃないです。|answer}。'+
+        '</div>'+
         
-        {
-          question : '○○さんのせんこうはれきしですか。',
-          answers : [
-            'Aいいえ、（わたしのせんこうは）れきしじゃないです。',
-            'いいえ、（わたしのせんこうは）れきしです。',
-            'いいえ、（わたしのせんこうは）れきししゃないです。'
-          ]
-        },
+        '<div class="problem">'+
+          '○○さんのせんこうはれきしですか。<br>'+
+          '{いいえ、れきしじゃないです。|いいえ、わたしのせんこうはれきしじゃないです。|answer}。'+
+        '</div>'+
         
-        {
-          question : 'あれは○○さんのじてんしゃですか。',
-          answers : [
-            'Aいいえ、（あれは）わたしのじてんしゃじゃないです。',
-            'いいえ、（これは）わたしのじてんしゃじゃないです。',
-            'いいえ、（それは）わたしのじてんしゃじゃないです。'
-          ]
-        },
+        '<div class="problem">'+
+          'あれは○○さんのじてんしゃですか。<br>'+
+          '{いいえ、わたしのじてんしゃじゃないです。|いいえ、あれはわたしのじてんしゃじゃないです。|answer}。'+
+        '</div>'+
         
-        {
-          question : 'それは○○さんのかさですか。',
-          answers : [
-            'Aいいえ、（これは）わたしのかさじゃないです。',
-            'いいえ、（それは）わたしのかさじゃないです。',
-            'いいえ、（あれは）わたしのかさじゃないです。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'それは○○さんのかさですか。<br>'+
+          '{いいえ、わたしのかさじゃないです。|いいえ、これはわたしのかさじゃないです。|answer}。'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>

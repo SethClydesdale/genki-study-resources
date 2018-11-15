@@ -6,8 +6,8 @@
     <meta name="title" content="Workbook: Questions - Lesson 2 | Genki Study Resources">
     <meta name="twitter:title" content="Workbook: Questions - Lesson 2 | Genki Study Resources">
     <meta property="og:title" content="Workbook: Questions - Lesson 2 | Genki Study Resources">
-    <meta name="description" content="Answer the questions as best as you can.">
-    <meta property="og:description" content="Answer the questions as best as you can.">
+    <meta name="description" content="Answer the following questions in Japanese by translating the given cues.">
+    <meta property="og:description" content="Answer the following questions in Japanese by translating the given cues.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki I Workbook, page 26, japanese, quizzes, exercises" lang="en">
@@ -58,64 +58,48 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : Genki.lang.std_questions,
+      type : 'fill',
+      info : 'Answer the following questions in Japanese by translating the given cues.',
 
-      quizlet : [
-        {
-          question : 'にほんじんですか。(Nationality: Chinese)',
-          answers : [
-            'Aいいえ、にほんじんじゃないです。ちゅうごくじんです。',
-            'いいえ、にほんじんじゃないです。かんこくじんです。',
-            'いいえ、にほんじんじゃないです。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'にほんじんですか。<br>'+
+          '(No, I\'m not Japanese. I\'m Chinese.)<br>'+
+          '{いいえ、にほんじんじゃないです。ちゅうごくじんです。}'+
+        '</div>'+
         
-        {
-          question : 'にねんせいですか。(Year: 2nd year)',
-          answers : [
-            'Aはい、にねんせいです。',
-            'いいえ、にねんせいじゃないです。いちねんせいです。',
-            'いいえ、にねんせいじゃないです。さんねんせいです。'
-          ]
-        },
+        '<div class="problem">'+
+          'にねんせいですか。<br>'+
+          '(Yes, I\'m a second year.)<br>'+
+          '{はい、にねんせいです}。'+
+        '</div>'+
         
-        {
-          question : 'せんこうはけいざいですか。(Major: History)',
-          answers : [
-            'Aいいえ、けいざいじゃないです。れきしです。',
-            'いいえ、けいざいじゃないです。いしゃです。',
-            'はい、けいざいです。'
-          ]
-        },
+        '<div class="problem">'+
+          'せんこうはけいざいですか。<br>'+
+          '(No, my major is not econmics. It is history.)<br>'+
+          '{いいえ、けいざいじゃないです。れきしです。|いいえ、せんこうはけいざいじゃないです。れきしです。|answer}'+
+        '</div>'+
         
-        {
-          question : 'おかあさんはにほんじんですか。(Nationality: American)',
-          answers : [
-            'Aいいえ、にほんじんじゃないです。アメリカじんです。',
-            'いいえ、にほんじんじゃないです。イギリスじんです。',
-            'はい、にほんじんです。'
-          ]
-        },
+        '<div class="problem">'+
+          'おかあさんはにほんじんですか。<br>'+
+          '(No, my mother is not Japanese. She is American.)<br>'+
+          '{いいえ、にほんじんじゃないです。アメリカじんです。|いいえ、おかあさんはにほんじんじゃないです。アメリカじんです。|answer}'+
+        '</div>'+
         
-        {
-          question : 'おとうさんはなんさいですか。(Age: 45)',
-          answers : [
-            'Aよんじゅうごさいです。',
-            'さんじゅうごさいです。',
-            'よんじゅうにさいです。'
-          ]
-        },
+        '<div class="problem">'+
+          'おとうさんはなんさいですか。<br>'+
+          '(My father is 45 years old.)<br>'+
+          '{よんじゅうごさいです。|おとうさんはよんじゅうごさいです。|answer}'+
+        '</div>'+
         
-        {
-          question : 'にほんごのほんはいくらですか。(Price: ￥3,000)',
-          answers : [
-            'Aさんぜんえんです。',
-            'さんせんえんです。',
-            'さんまんえんです。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'にほんごのほんはいくらですか。<br>'+
+          '(The Japanese book is 3,000 yen.)<br>'+
+          '{さんぜんえんです。|にほんごのほんはさんぜんえんです。|answer}'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>
