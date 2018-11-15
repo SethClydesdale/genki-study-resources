@@ -2,6 +2,7 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://sethclydesdale.github.io/genki-study-resources/</loc></url>
+  <url><loc>https://sethclydesdale.github.io/genki-study-resources/download/</loc></url>
   <url><loc>https://sethclydesdale.github.io/genki-study-resources/privacy/</loc></url>
   <url><loc>https://sethclydesdale.github.io/genki-study-resources/report/</loc></url>
   <url><loc>https://sethclydesdale.github.io/genki-study-resources/help/</loc></url>
@@ -706,6 +707,7 @@
   <url><loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-17/grammmar-1/</loc></url>
   <url><loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-17/grammmar-2/</loc></url>
   <url><loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-17/grammmar-3/</loc></url>
+  <url><loc>https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-17/grammmar-4/</loc></url>
   
   <!-- Study Tools -->
   <url><loc>https://sethclydesdale.github.io/genki-study-resources/lessons/study-tools/custom-vocab/</loc></url>

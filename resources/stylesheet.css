@@ -271,7 +271,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 #quick-search-results:empty { border-color:transparent; }
 #quick-search-results {
   border:1px solid #CCC;
-  height:200px;
+  height:400px;
   padding:3px;
   overflow:auto;
 }
