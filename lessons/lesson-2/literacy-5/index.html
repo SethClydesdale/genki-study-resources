@@ -6,8 +6,8 @@
     <meta name="title" content="Katakana Reading Practice - Lesson 2 | Genki Study Resources">
     <meta name="twitter:title" content="Katakana Reading Practice - Lesson 2 | Genki Study Resources">
     <meta property="og:title" content="Katakana Reading Practice - Lesson 2 | Genki Study Resources">
-    <meta name="description" content="Mary wrote about a few items. Find out which item she wrote about.">
-    <meta property="og:description" content="Mary wrote about a few items. Find out which item she wrote about.">
+    <meta name="description" content="Mary wrote about the things below. Find out which item she wrote about.">
+    <meta property="og:description" content="Mary wrote about the things below. Find out which item she wrote about.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki I, Reading and Writing, page 297, problem III, japanese, quizzes, exercises" lang="en">
@@ -58,50 +58,83 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'Mary wrote about a few items. Find out which item she wrote about.',
+      type : 'fill',
+      info : 'Mary wrote about the things below. Find out which item she wrote about.',
 
-      quizlet : [
-        {
-          question : 'これはわたしのぼうしじゃないです。<br>キャシーさんのぼうしです。<br>ニューヨークヤンキースのぼうしです。',
-          answers : [
-            'ANew York Yankees Hat',
-            'OSBS Hat',
-            '!American Shoes',
-            'Italian Shoes'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          '<div>({C})</div>'+
+          '<div>'+
+            'これはわたしのぼうしじゃないです。<br>'+
+            'キャシーさんのぼうしです。<br>'+
+            'ニューヨークヤンキースのぼうしです。'+
+          '</div>'+
+        '</div>'+
         
-        {
-          question : 'これはわたしのじてんしゃです。<br>オーストラリアのじてんしゃです。<br>たかいです。',
-          answers : [
-            'A￥50,000 Bike',
-            '￥8,000 Bike',
-            'French Dictionary',
-            'Spanish Dictionary'
-          ]
-        },
+        '<div class="problem">'+
+          '<div>({E})</div>'+
+          '<div>'+
+            'これはわたしのじてんしゃです。<br>'+
+            'オーストラリアのじてんしゃです。<br>'+
+            'たかいです。'+
+          '</div>'+
+        '</div>'+
         
-        {
-          question : 'これはミシェルさんのじしょです。<br>スパインごのじしょじゃないです。<br>フランスごのじしょです。',
-          answers : [
-            'AFrench Dictionary',
-            'Spanish Dictionary',
-            'New York Yankees Hat',
-            'OSBS Hat'
-          ]
-        },
+        '<div class="problem">'+
+          '<div>({A})</div>'+
+          '<div>'+
+            'これはミシェルさんのじしょです。<br>'+
+            'スパインごのじしょじゃないです。<br>'+
+            'フランスごのじしょです。'+
+          '</div>'+
+        '</div>'+
         
-        {
-          question : 'これはジャクソンさんのくつです。<br>イタリアのくつじゃないです。<br>アメリカのくつです。',
-          answers : [
-            'AAmerican Shoes',
-            'Italian Shoes',
-            '￥50,000 Bike',
-            '￥8,000 Bike'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          '<div>({G})</div>'+
+          '<div>'+
+            'これはジャクソンさんのくつです。<br>'+
+            'イタリアのくつじゃないです。<br>'+
+            'アメリカのくつです。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="sub-section">'+
+          '<ul class="mary-items clear">'+
+            '<li><small>(a)</small> French Dictionary</li>'+
+            '<li><small>(b)</small> Spanish Dictionary</li>'+
+            '<li><small>(c)</small> New York Yankees Hat</li>'+
+            '<li><small>(d)</small> OSBS Hat</li>'+
+            '<li><small>(e)</small> Bike (￥50,000)</li>'+
+            '<li><small>(f)</small> Bike (￥8,000)</li>'+
+            '<li><small>(g)</small> American Shoes</li>'+
+            '<li><small>(h)</small> Italian Shoes</li>'+
+          '</ul>'+
+        '</div>'+
+      '</div>'
+      
     });</script>
+    <style type="text/css">
+      .problem > div {
+        vertical-align:top;
+        padding:0 6px;
+        display:inline-block;
+      }
+      
+      ul.mary-items li {
+        float:left;
+        margin:5px;
+        padding:3px;
+        list-style-type:none;
+        background:#EEE;
+        border:1px solid #CCC;
+        border-radius:6px;
+      }
+
+      ul.mary-items small {
+        vertical-align:2px;
+        font-weight:bold;
+      }
+    </style>
   </body>
 </html>

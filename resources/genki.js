@@ -746,6 +746,7 @@
       'lesson-17/grammar-2|Practice: ～って|p.130; II-A',
       'lesson-17/grammar-3|Practice: ～たら 1|p.131; III-A',
       'lesson-17/grammar-4|Practice: ～たら 2|p.131; III-B',
+      'lesson-17/grammar-5|Practice: ～なくてもいいです|p.132; IV-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
