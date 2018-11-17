@@ -58,30 +58,131 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'verb',
+      type : 'fill',
       info : 'Memorize the 13 verbs introduced in Lesson 3. (<a href="../vocab-4/' + Genki.local + '">U-verbs</a>, <a href="../vocab-5/' + Genki.local + '">Ru-verbs, and Irregular verbs</a>)<br>Read the explanation about verb conjugation (Genki I: p.88-89) and complete the following table.',
       
-      columns : ['dictionary form', 'present affirmative', 'present negative'],
-      quizlet : {
-        // ru-verbs
-        'get up' : ['おきる', 'おきます', 'おきません'],
-        'see' : ['みる', 'みます', 'みません'],
-        'eat' : ['たべる', 'たべます', 'たべません'],
-        'sleep' : ['ねる', 'ねます', 'ねません'],
+      quizlet : 
+      '<p class="section-desc">Ru-verbs</p>'+
+      '<table class="table large-width center">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td>dictionary form</td>'+
+          '<td>present affirmative</td>'+
+          '<td>present negative</td>'+
+        '</tr>'+
         
-        // u-verbs
-        'speak' : ['はなす', 'はなします', 'はなしません'],
-        'listen' : ['きく', 'ききます', 'ききません'],
-        'go' : ['いく', 'いきます', 'いきません'],
-        'read' : ['よむ', 'よみます', 'よみません'],
-        'drink' : ['のむ', 'のみます', 'のみません'],
-        'return' : ['かえる', 'かえります', 'かえりません'],
+        '<tr>'+
+          '<td>get up</td>'+
+          '<td>{おきる}</td>'+
+          '<td>{おきます}</td>'+
+          '<td>{おきません}</td>'+
+        '</tr>'+
         
-        // irregular verbs
-        'come' : ['くる', 'きます', 'きません'],
-        'do' : ['する', 'します', 'しません'],
-        'study' : ['べんきょうする', 'べんきょうします', 'べんきょうしません']
-      }
+        '<tr>'+
+          '<td>see</td>'+
+          '<td>{みる}</td>'+
+          '<td>{みます}</td>'+
+          '<td>{みません}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>eat</td>'+
+          '<td>{たべる}</td>'+
+          '<td>{たべます}</td>'+
+          '<td>{たべません}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>sleep</td>'+
+          '<td>{ねる}</td>'+
+          '<td>{ねます}</td>'+
+          '<td>{ねません}</td>'+
+        '</tr>'+
+      '</table><br>'+
+      
+      '<p class="section-desc">U-verbs</p>'+
+      '<table class="table large-width center">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td>dictionary form</td>'+
+          '<td>present affirmative</td>'+
+          '<td>present negative</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>speak</td>'+
+          '<td>{はなす}</td>'+
+          '<td>{はなします}</td>'+
+          '<td>{はなしません}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>listen</td>'+
+          '<td>{きく}</td>'+
+          '<td>{ききます}</td>'+
+          '<td>{ききません}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>go</td>'+
+          '<td>{いく}</td>'+
+          '<td>{いきます}</td>'+
+          '<td>{いきません}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>read</td>'+
+          '<td>{よむ}</td>'+
+          '<td>{よみます}</td>'+
+          '<td>{よみません}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>drink</td>'+
+          '<td>{のむ}</td>'+
+          '<td>{のみます}</td>'+
+          '<td>{のみません}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>return</td>'+
+          '<td>{かえる}</td>'+
+          '<td>{かえります}</td>'+
+          '<td>{かえりません}</td>'+
+        '</tr>'+
+      '</table><br>'+
+        
+      '<p class="section-desc">Irregular Verbs</p>'+
+      '<table class="table large-width center">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td>dictionary form</td>'+
+          '<td>present affirmative</td>'+
+          '<td>present negative</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>come</td>'+
+          '<td>{くる}</td>'+
+          '<td>{きます}</td>'+
+          '<td>{きません}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>do</td>'+
+          '<td>{する}</td>'+
+          '<td>{します}</td>'+
+          '<td>{しません}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>study</td>'+
+          '<td>{べんきょうする}</td>'+
+          '<td>{べんきょうします}</td>'+
+          '<td>{べんきょうしません}</td>'+
+        '</tr>'+
+      '</table>'
+      
     });</script>
   </body>
 </html>

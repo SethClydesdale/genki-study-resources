@@ -6,8 +6,8 @@
     <meta name="title" content="Workbook: Verbs with Places - Lesson 3 | Genki Study Resources">
     <meta name="twitter:title" content="Workbook: Verbs with Places - Lesson 3 | Genki Study Resources">
     <meta property="og:title" content="Workbook: Verbs with Places - Lesson 3 | Genki Study Resources">
-    <meta name="description" content="Problems 1-6: Where do the activities take place? Add the places and appropriate particles to the sentences. Problems 7-11: Translate the sentences into Japanese.">
-    <meta property="og:description" content="Problems 1-6: Where do the activities take place? Add the places and appropriate particles to the sentences. Problems 7-11: Translate the sentences into Japanese.">
+    <meta name="description" content="Complete the following problems using the particles に／で.">
+    <meta property="og:description" content="Complete the following problems using the particles に／で.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki I Workbook, page 29, problem I, problem II, japanese, quizzes, exercises" lang="en">
@@ -57,116 +57,52 @@
     <script src="../../../resources/easytimer.min.js"></script>
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
-    <script>(function() {
-      var b = '＿＿＿＿＿';
-        
-      Genki.generateQuiz({
-        type : 'multi',
-        info : 'Problems 1-6: Where do the activities take place? Add the places and appropriate particles to the sentences.<br>Problems 7-11: Translate the sentences into Japanese.',
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using the particles に／で.',
 
-        quizlet : [
-          // I
-          {
-            question : b + 'ほんをよみます。',
-            answers : [
-              'Aとしょかんで',
-              'としょかんに',
-              'としょかんは'
-            ]
-          },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="section-desc">Where do the following activities take place? Add the places and appropriate particles to the following sentences.</p>'+
+        '<div class="problem">{としょかんで|library|width:98}ほんをよみます。</div>'+
 
-          {
-            question : b + 'べんきょうします。',
-            answers : [
-              'Aがっこうで',
-              'がっこうに',
-              'がっこうは'
-            ]
-          },
+        '<div class="problem">{がっこうで|school|width:84}べんきょうします。</div>'+
 
-          {
-            question : b + 'テレビをみます。',
-            answers : [
-              'Aいえで',
-              'いえに',
-              'いえは'
-            ]
-          },
+        '<div class="problem">{いえで|home|width:56}テレビをみます。</div>'+
 
-          {
-            question : b + 'コーヒーをのみます。',
-            answers : [
-              'Aきっさてんで',
-              'きっさてんに',
-              'きっさてんは'
-            ]
-          },
+        '<div class="problem">{きっさてんで|cafe|width:98}コーヒーをのみます。</div>'+
 
-          {
-            question : b + 'いきます。',
-            answers : [
-              'Aがっこうに',
-              'がっこうで',
-              'がっこうは'
-            ]
-          },
+        '<div class="problem">{がっこうに|school|width:84}いきます。</div>'+
 
-          {
-            question : b + 'かえります。',
-            answers : [
-              'Aいえに',
-              'いえで',
-              'いえは'
-            ]
-          },
-          
-          // II
-          {
-            question : 'Mr. Tanaka will go to the library.',
-            answers : [
-              'Aたなかさんはとしょかんにいきます。',
-              'たなかさんはとしょかんでいきます。',
-              'たなかさんにとしょかんにいきます。'
-            ]
-          },
+        '<div class="problem">{いえに|home|width:56}かえります。</div>'+
 
-          {
-            question : 'My friend will come to Japan.',
-            answers : [
-              'Aわたしのともだちはにほんにきます。',
-              'わたしのともだちはにほんできます。',
-              'わたしのともだちににほんにきます。'
-            ]
-          },
+        '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
+        '<div class="problem">'+
+          'Mr. Tanaka will go to the library.<br>'+
+          '{たなかさんはとしょかんにいきます}。'+
+        '</div>'+
 
-          {
-            question : 'Mr. Suzuki listens to music at home.',
-            answers : [
-              'Aすずきさんはうちでおんがくをききます。',
-              'すずきさんはうちにおんがくをききます。',
-              'すずきさんはうちでおんがくをきます。'
-            ]
-          },
+        '<div class="problem">'+
+          'My friend will come to Japan.<br>'+
+          '{わたしのともだちはにほんにきます}。'+
+        '</div>'+
 
-          {
-            question : 'I speak Japanese at home.',
-            answers : [
-              'Aわたしはいえでにほんごをはなします。',
-              'わたしはいえににほんごをはなします。',
-              'わたしはいえでにほんごをはなます。'
-            ]
-          },
+        '<div class="problem">'+
+          'Mr. Suzuki listens to music at home.<br>'+
+          '{すずきさんはうちでおんがくをききます|すずきさんはいえでおんがくをききます|answer}。'+
+        '</div>'+
 
-          {
-            question : 'I don\'t eat lunch at school.',
-            answers : [
-              'Aわたしはがっこうでひるごはんをたべません。',
-              'わたしはがっこうでひるごはんをたべます。',
-              'わたしはがっこうにひるごはんをたべません。'
-            ]
-          }
-        ]
-      });
-    }());</script>
+        '<div class="problem">'+
+          'I speak Japanese at home.<br>'+
+          '{わたしはうちでにほんごをはなします|わたしはいえでにほんごをはなします|answer}。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'I don\'t eat lunch at school.<br>'+
+          '{わたしはがっこうでひるごはんをたべません}。'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

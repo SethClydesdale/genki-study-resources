@@ -58,64 +58,72 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'Create a ます and ません sentence using the provided nouns and verb.',
+      type : 'fill',
+      info : 'Create a ます and ません sentence by translating the following sentences.',
       
-      quizlet : [
-        {
-          question : 'やさい／にく／たべる',
-          answers : [
-            'Aわたしはやさいをたべます。<br>わたしはにくをたべません。',
-            'わたしはやさいをたべます。<br>わたしもにくをたべます。',
-            'わたしをやさいはたべます。<br>わたしをにくはたべません。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'I eat vegetables.<br>'+
+          '{わたしはやさいをたべます}。'+
+        '</div>'+
         
-        {
-          question : 'コーヒー／おちゃ／のむ',
-          answers : [
-            'Aわたしはコーヒーをのみます。<br>わたしはおちゃをのみません。',
-            'わたしはコーヒーをのみますせん。<br>わたしもおちゃをのみません。',
-            'わたしはのみますをコーヒー。<br>わたしはのみませんをおちゃ。'
-          ]
-        },
+        '<div class="problem">'+
+          'I don\'t eat meat.<br>'+
+          '{わたしはにくをたべません}。'+
+        '</div>'+
         
-        {
-          question : 'にほんのえいが／インドのえいが／みる',
-          answers : [
-            'Aわたしはにほんのえいがをみます。<br>わたしはインドのえいがをみません。',
-            'わたしはにほんのえいがをよみます。<br>わたしはインドのえいがをよみません。',
-            'わたしはにほんのえいがをのみます。<br>わたしはインドのえいがをのみません。'
-          ]
-        },
+        '<div class="problem">'+
+          'I drink coffee.<br>'+
+          '{わたしはコーヒーをのみます}。'+
+        '</div>'+
         
-        {
-          question : 'サッカー／バスケットボール／する',
-          answers : [
-            'Aわたしはサッカーをします。<br>わたしはバスケットボールをしません。',
-            'わたしはサッカーをすります。<br>わたしはバスケットボールをすりません。',
-            'わたしはサッカーをすます。<br>わたしはバスケットボールをすません。'
-          ]
-        },
+        '<div class="problem">'+
+          'I don\'t drink tea.<br>'+
+          '{わたしはおちゃをのみません}。'+
+        '</div>'+
         
-        {
-          question : 'ほん／スポーツのざっし／よむ',
-          answers : [
-            'Aわたしのともだちはスポーツのざっしをよみます。<br>わたしのともだちはほんをよみません。',
-            'わたしのともだちはスポーツのざっしをのみます。<br>わたしのともだちはほんをのみません。',
-            'わたしのともだちはスポーツのざっしをよます。<br>わたしのともだちはほんをよません'
-          ]
-        },
+        '<div class="problem">'+
+          'I watch Japanese movies.<br>'+
+          '{わたしはにほんのえいがをみます}。'+
+        '</div>'+
         
-        {
-          question : 'にほんのおんがく／ロック／きく',
-          answers : [
-            'Aわたしはロックをききます。<br>わたしはにほんのおんがくをききません。',
-            'わたしはロックをきます。<br>わたしはにほんのおんがくをきません。',
-            'わたしはロックをきくます。<br>わたしはにほんのおんがくをきくません。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'I don\'t watch Indian (インド) movies.<br>'+
+          '{わたしはインドのえいがをみません}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I play soccer (サッカー).<br>'+
+          '{わたしはサッカーをします}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I don\'t play basket ball (バスケットボール).<br>'+
+          '{わたしはバスケットボールをしません}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'My friend reads sports magazines.<br>'+
+          '{わたしのともだちはスポーツのざっしをよみます}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'My friend doesn\'t read books.<br>'+
+          '{わたしのともだちはほんをよみません}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I listen to rock (ロック).<br>'+
+          '{わたしはロックをききます}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I don\'t listen to Japanese music.<br>'+
+          '{わたしはにほんのおんがくをききません}。'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>
