@@ -748,6 +748,7 @@
       'lesson-17/grammar-4|Practice: ～たら 2|p.131; III-B',
       'lesson-17/grammar-5|Practice: ～なくてもいいです|p.132; IV-A',
       'lesson-17/grammar-6|Practice: ～みたいです|p.134; V-A',
+      'lesson-17/grammar-7|Practice: ～てから|p.136; VI-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
