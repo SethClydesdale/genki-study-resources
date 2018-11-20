@@ -750,6 +750,8 @@
       'lesson-17/grammar-6|Practice: ～みたいです|p.134; V-A',
       'lesson-17/grammar-7|Practice: ～てから|p.136; VI-A',
       'lesson-17/grammar-8|Practice: ～前に|p.137; VI-B',
+      'lesson-17/vocab-6|Useful Expressions: At the Barber/Beauty Salon|p.139',
+      'lesson-17/vocab-7|Bonus Vocabulary: At the Barber/Beauty Salon|p.139',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
