@@ -752,6 +752,7 @@
       'lesson-17/grammar-8|Practice: ～前に|p.137; VI-B',
       'lesson-17/vocab-6|Useful Expressions: At the Barber/Beauty Salon|p.139',
       'lesson-17/vocab-7|Bonus Vocabulary: At the Barber/Beauty Salon|p.139',
+      'lesson-17/workbook-1|Workbook: ～そうです／～って|p.44; I, II, & III',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
