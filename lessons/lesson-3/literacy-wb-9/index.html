@@ -58,64 +58,42 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'Using the kanji you learned in lesson 3, translate the sentences into Japanese.',
         
-      quizlet : [
-        {
-          question : 'This watch is 49,000 yen.',
-          answers : [
-            'Aこのとけいは四万九千円です。',
-            'このとけいは四九万千円です。',
-            'このとけいは四千九万円です。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'This watch is 49,000 yen.<br>'+
+          '{このとけいは四万九千円です|このとけいはよんまんきゅうせんえんです|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'That bag is 5,300 yen.',
-          answers : [
-            'Aそのかばんは五千三百円です。',
-            'そのかばんは五千二百円です。',
-            'そのかばんは五万三百円です。'
-          ]
-        },
+        '<div class="problem">'+
+          'That bag is 5,300 yen.<br>'+
+          '{そのかばんは五千三百円です|そのかばんはごせんさんびゃくえんです|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'Ms. Yamanaka gets up at six.',
-          answers : [
-            'Aやまなかさんは六時におきます。',
-            'やまなかさんは八時におきます。',
-            'やまなかさんは六時半におきます。'
-          ]
-        },
+        '<div class="problem">'+
+          'Ms. Yamanaka gets up at six.<br>'+
+          '{やまなかさんは六時におきます|やまなかさんはろくじにおきます|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'Ms. Kawaguchi goes to college at seven.',
-          answers : [
-            'Aかわぐちさんは七時にだいがくにいきます。',
-            'かわぐちさんは五時にだいがくにいきます。',
-            'かわぐちさんは万時にだいがくにいきます。'
-          ]
-        },
+        '<div class="problem">'+
+          'Ms. Kawaguchi goes to college at seven.<br>'+
+          '{かわぐちさんは七時にだいがくにいきます|かわぐちさんはしちじにだいがくにいきます|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'Mr. Suzuki usually goes to bed at about twelve.',
-          answers : [
-            'Aすずきさんはたいてい十二時ごろねます。',
-            'すずきさんはたいてい十一時ごろねます。',
-            'すずきさんはたいてい十三時ごろねます。'
-          ]
-        },
+        '<div class="problem">'+
+          'Mr. Suzuki usually goes to bed at about twelve.<br>'+
+          '{すずきさんはたいてい十二時ごろねます|すずきさんはたいていじゅうにじごろねます|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'I sometimes drink coffee at a cafe. The coffee is 180 yen.',
-          answers : [
-            'Aわたしはときどききっさてんでコーヒーをのみます。コーヒーは百八十円です。',
-            'わたしはときどききっさてんでコーヒーをのみます。コーヒーは百六十円です。',
-            'わたしはときどききっさてんでコーヒーをのみます。コーヒーは百八千円です。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'I sometimes drink coffee at a cafe. The coffee is 180 yen.<br>'+
+          '{わたしはときどききっさてんでコーヒーをのみます。コーヒーは百八十円です。|わたしはときどききっさてんでコーヒーをのみます。コーヒーはひゃくはちじゅうえんです。|furigana}'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>

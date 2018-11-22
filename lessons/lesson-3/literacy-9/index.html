@@ -58,86 +58,26 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'A student writes about his daily routine. Read the passage and find out about his schedule, and then fill in the blanks.',
       
-      quizlet : [
-        {
-          text : 'わたしはまいにち七時におきます。うちであさごはんをたべます。八時にだいがくへいきます。九時ににほんごをべんきょうします。十二時半にだいがくでひるごはんをたべます。ときどきコーヒーをのみます。四時にとしょかんでほんをよみます。六時ごろうちへかえります。十時にテレビをみます。十二時ごろねます。'
-        },
+      quizlet : 
+      '<p class="sub-section text-passage">'+
+        'わたしはまいにち七時におきます。うちであさごはんをたべます。八時にだいがくへいきます。九時ににほんごをべんきょうします。十二時半にだいがくでひるごはんをたべます。ときどきコーヒーをのみます。四時にとしょかんでほんをよみます。六時ごろうちへかえります。十時にテレビをみます。十二時ごろねます。'+
+      '</p><br>'+
+      
+      '<div class="count-problems small-margin">'+
+        '<div class="problem">7:00　{get up}</div>'+
+        '<div class="problem">({8:00})　go to the university</div>'+
+        '<div class="problem">9:00　{study Japanese}</div>'+
+        '<div class="problem">({12:30})　eat lunch</div>'+
+        '<div class="problem">4:00　{read books at the library}</div>'+
+        '<div class="problem">6:00　{get back home}</div>'+
+        '<div class="problem">({10:00})　watch TV</div>'+
+        '<div class="problem">({12:00})　{go to bed}</div>'+
+      '</div><br>'+
+      '<p><small><strong>Note:</strong> Your answers do not have to be the same as the provided answers. As long as the meaning of the sentence is the same or similar, you may mark it off as correct. Simply use the answers provided as a reference for checking your answers.</small></p>'
         
-        {
-          question : '07:00 _____',
-          answers : [
-            'Aget up',
-            'eat breakfast',
-            'go to university'
-          ]
-        },
-        
-        {
-          question : '__:__ go to university',
-          answers : [
-            'A08:00',
-            '07:00',
-            '09:00'
-          ]
-        },
-        
-        {
-          question : '09:00 _____',
-          answers : [
-            'Astudy Japanese',
-            'study history',
-            'study math'
-          ]
-        },
-        
-        {
-          question : '__:__ eat lunch',
-          answers : [
-            'A12:30',
-            '12:00',
-            '11:30'
-          ]
-        },
-        
-        {
-          question : '04:00 _____',
-          answers : [
-            'Aread books at the library',
-            'drink coffee',
-            'get back home'
-          ]
-        },
-        
-        {
-          question : '06:00 _____',
-          answers : [
-            'Aget back home',
-            'watch TV',
-            'eat dinner'
-          ]
-        },
-        
-        {
-          question : '__:__ watch TV',
-          answers : [
-            'A10:00',
-            '11:00',
-            '09:00'
-          ]
-        },
-        
-        {
-          question : '__:__ _____',
-          answers : [
-            'A12:00 go to bed',
-            '12:00 study',
-            '12:00 get a snack'
-          ]
-        }
-      ]
     });</script>
   </body>
 </html>
