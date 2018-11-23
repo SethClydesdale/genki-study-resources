@@ -754,6 +754,7 @@
       'lesson-17/vocab-7|Bonus Vocabulary: At the Barber/Beauty Salon|p.139',
       'lesson-17/workbook-1|Workbook: ～そうです／～って|p.44; I, II, & III',
       'lesson-17/workbook-2|Workbook: ～たら|p.45; I & II',
+      'lesson-17/workbook-3|Workbook: ～なくてもいいです|p.46; I, II, & III',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
