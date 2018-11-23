@@ -6,8 +6,8 @@
     <meta name="title" content="Workbook: Ｘがあります／います - Lesson 4 | Genki Study Resources">
     <meta name="twitter:title" content="Workbook: Ｘがあります／います - Lesson 4 | Genki Study Resources">
     <meta property="og:title" content="Workbook: Ｘがあります／います - Lesson 4 | Genki Study Resources">
-    <meta name="description" content="Problems 1-5: Translate the sentences into Japanese. Problems 6-9: Answer the questions as best as you can.">
-    <meta property="og:description" content="Problems 1-5: Translate the sentences into Japanese. Problems 6-9: Answer the questions as best as you can.">
+    <meta name="description" content="Complete the following problems using あります／います.">
+    <meta property="og:description" content="Complete the following problems using あります／います.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki I Workbook, page 36, problem I, problem II, japanese, quizzes, exercises" lang="en">
@@ -58,93 +58,70 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'Problems 1-5: Translate the sentences into Japanese.<br>Problems 6-9: Answer the questions as best as you can.',
+      type : 'fill',
+      info : 'Complete the following problems using あります／います.',
       
-      quizlet : [
-        // I
-        {
-          question : 'There is a bus stop over there.',
-          answers : [
-            'Aあそこにバス停があります。',
-            'あそこバス停があります。',
-            'そこにバス停があります。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
+        '<div class="problem">'+
+          'There is a bus stop over there.<br>'+
+          '{あそこにバス停があります|あそこにバスていがあります|answer}。'+
+        '</div>'+
         
-        {
-          question : 'There will be no class on Thursday.',
-          answers : [
-            'A木曜日にクラスがありません。',
-            '木曜日クラスがありません。',
-            '木曜日にクラスがあります。'
-          ]
-        },
+        '<div class="problem">'+
+          'There will be no class on Thursday.<br>'+
+          '{木曜日にクラスがありません|もくようびにクラスがありません|answer}。'+
+        '</div>'+
         
-        {
-          question : 'I do not have a dictionary. (lit., There is not a dictionary.)',
-          answers : [
-            'A私は辞書がありません。',
-            '私の辞書がありません。',
-            '私は辞書があります。'
-          ]
-        },
+        '<div class="problem">'+
+          'I do not have a dictionary. (lit., There is not a dictionary.)<br>'+
+          '{私は辞書がありません|わたしはじしょがありません|answer}。'+
+        '</div>'+
         
-        {
-          question : 'There is Professor Yamashita over there.',
-          answers : [
-            'Aあそこに山下先生があります。',
-            'そこに山下先生があります。',
-            'あそこに山下先生がありません。'
-          ]
-        },
+        '<div class="problem">'+
+          'There is Professor Yamashita over there.<br>'+
+          '{あそこに山下先生があります|あそこにやましたせんせいがあります|answer}。'+
+        '</div>'+
         
-        {
-          question : 'I have a child. (lit., There is a child.)',
-          answers : [
-            'A私は子供があります。',
-            '私の子供があります。',
-            '私は子供がありません。'
-          ]
-        },
+        '<div class="problem">'+
+          'I have a child. (lit., There is a child.)<br>'+
+          '{私は子供があります|わたしはこどもがあります|answer}。'+
+        '</div>'+
         
-        // II
-        {
-          question : 'あした、アルバイトがありますか。(Work tomorrow: none)',
-          answers : [
-            'Aいいえ、ありません。',
-            'はい、あります。',
-            'ありません。'
-          ]
-        },
+        '<p class="section-desc">Answer the following questions in Japanese using the given cues.</p>'+
+        '<div class="problem">'+
+          'あした、アルバイトがありますか。<br>'+
+          '(No, there is not.)<br>'+
+          '{いいえ、ありません}。'+
+        '</div>'+
         
-        {
-          question : 'いつ日本語のクラスがありますか。(Japanese class is on: Monday, Wednesday, and Friday)',
-          answers : [
-            'A月曜日と水曜日と金曜日に日本語のクラスがあります。',
-            '月曜日と水曜日と金曜日に日本語のクラスがありません。',
-            '月曜日と木曜日と金曜日に日本語のクラスがあります。'
-          ]
-        },
+        '<div class="problem">'+
+          'いつ日本語のクラスがありますか。<br>'+
+          '(There is Japanese class on Monday, Wednesday, and Friday.)<br>'+
+          '{月曜日と水曜日と金曜日に日本語のクラスがあります|げつようびとすいようびときんようびににほんごのクラスがあります|answer}。'+
+        '</div>'+
         
-        {
-          question : '日本に友だちがいますか。(Friends: a lot)',
-          answers : [
-            'Aはい、たくさんいます。',
-            'はい、たくさんがいます。',
-            'はい、たくさん。'
-          ]
-        },
+        '<div class="problem">'+
+          '日本に友だちがいますか。<br>'+
+          '(Yes, I have a lot.)<br>'+
+          '{はい、たくさんいます}。'+
+        '</div>'+
         
-        {
-          question : '兄弟<i class="define">[きょうだい：siblings; brothers and sisters]</i>がいますか。(Siblings: older sister and younger brother)',
-          answers : [
-            'Aはい、お姉さんと弟がいます。',
-            'はい、お姉さんと弟います。',
-            'はい、お姉さんと妹がいます。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          '兄弟<i class="define">[きょうだい：siblings; brothers and sisters]</i>がいますか。<br>'+
+          '(Yes, I have an older sister and little brother.)<br>'+
+          '{はい、お姉さんと弟がいます|はい、おねえさんとおとうとがいます|answer}。'+
+        '</div>'+
+        
+        '<div class="sub-section"><small>'+
+          'おねえさん：older sister<br>'+
+          'いもうと　：younger sister<br>'+
+          'おにいさん：older brother<br>'+
+          'おとうと　：younger brother'+
+        '</small></div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>
