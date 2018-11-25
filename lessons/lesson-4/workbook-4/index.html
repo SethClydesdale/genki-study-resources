@@ -58,27 +58,114 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'verb',
+      type : 'fill',
       info : 'Complete the conjugation table below.<br>If you are unclear about the u-verb/ru-verb distinction, read Grammar 1 in Lesson 3 (Genki I: p.88-89) once again.<br>If you are unclear about the past tense conjugation, refer to the table on page 110 of Genki I.',
       
-      columns : ['dictionary form', 'past affirmative', 'past negative'],
-      quizlet : {
-        // u-verbs
-        'drink' : ['のむ', 'のみました', 'のみませんでした'],
-        'speak' : ['はなす', 'はなしました', 'はなしませんでした'],
-        'listen' : ['きく', 'ききました', 'ききませんでした'],
-        'buy' : ['かう', 'かいました', 'かいませんでした'],
-        'take' : ['とる', 'とりました', 'とりませんでした'],
-        'write' : ['かく', 'かきました', 'かきませんでした'],
-        'wait' : ['まつ', 'まちました', 'まちませんでした'],
-        'there is' : ['ある', 'ありました', 'ありませんでした'],
+      quizlet : 
+      '<p class="section-desc">U-verbs</p>'+
+      '<table class="table large-width center">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td>dictionary form</td>'+
+          '<td>past affirmative</td>'+
+          '<td>past negative</td>'+
+        '</tr>'+
         
-        // ru-verbs and irregular verbs
-        'eat' : ['たべる', 'たべました', 'たべませんでした'],
-        'get up' : ['おきる', 'おきました', 'おきませんでした'],
-        'do' : ['する', 'しました', 'しませんでした'],
-        'come' : ['くる', 'きました', 'きませんでした']
-      }
+        '<tr>'+
+          '<td>drink</td>'+
+          '<td>{のむ}</td>'+
+          '<td>{のみました}</td>'+
+          '<td>{のみませんでした}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>speak</td>'+
+          '<td>{はなす}</td>'+
+          '<td>{はなしました}</td>'+
+          '<td>{はなしませんでした}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>listen</td>'+
+          '<td>{きく}</td>'+
+          '<td>{ききました}</td>'+
+          '<td>{ききませんでした}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>buy</td>'+
+          '<td>{かう}</td>'+
+          '<td>{かいました}</td>'+
+          '<td>{かいませんでした}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>take</td>'+
+          '<td>{とる}</td>'+
+          '<td>{とりました}</td>'+
+          '<td>{とりませんでした}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>write</td>'+
+          '<td>{かく}</td>'+
+          '<td>{かきました}</td>'+
+          '<td>{かきませんでした}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>wait</td>'+
+          '<td>{まつ}</td>'+
+          '<td>{まちました}</td>'+
+          '<td>{まちませんでした}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>there is</td>'+
+          '<td>{ある}</td>'+
+          '<td>{ありました}</td>'+
+          '<td>{ありませんでした}</td>'+
+        '</tr>'+
+      '</table><br>'+
+        
+      '<p class="section-desc">Ru-verbs and Irregular Verbs</p>'+
+      '<table class="table large-width center">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td>dictionary form</td>'+
+          '<td>past affirmative</td>'+
+          '<td>past negative</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>eat</td>'+
+          '<td>{たべる}</td>'+
+          '<td>{たべました}</td>'+
+          '<td>{たべませんでした}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>get up</td>'+
+          '<td>{おきる}</td>'+
+          '<td>{おきました}</td>'+
+          '<td>{おきませんでした}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>do</td>'+
+          '<td>{する}</td>'+
+          '<td>{しました}</td>'+
+          '<td>{しませんでした}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>come</td>'+
+          '<td>{くる}</td>'+
+          '<td>{きました}</td>'+
+          '<td>{きませんでした}</td>'+
+        '</tr>'+
+      '</table>'
+      
     });</script>
   </body>
 </html>
