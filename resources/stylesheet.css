@@ -1077,7 +1077,7 @@ p.section-desc {
   background:none;
   display:inline-block;
   vertical-align:bottom;
-  margin:0;
+  margin:0 1px;
   min-width:0;
 }
 

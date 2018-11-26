@@ -757,6 +757,7 @@
       'lesson-17/workbook-3|Workbook: ～なくてもいいです|p.46; I, II, & III',
       'lesson-17/workbook-4|Workbook: ～みたいです|p.47; I & II',
       'lesson-17/workbook-5|Workbook: ～前に／～てから|p.48; I & II',
+      'lesson-17/workbook-6|Workbook: Questions|p.50; I',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
