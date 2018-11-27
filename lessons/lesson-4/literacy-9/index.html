@@ -58,40 +58,37 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'Read the memo and answer the questions.',
       
-      quizlet : [
-        {
-          text : 'おかあさんへ<br><br>きょうはともだちとだいがくでべんきょうします。<br>うちでばんごはんをたべません。<br>九時半ごろかえります。<br><br>十月二十一日<br>メアリー'
-        },
+      quizlet : 
+      '<p class="section-desc">メアリーさんはおかあさんにメモをかきました。メモをよみましょう。</p>'+
+      '<p class="sub-section text-passage">'+
+        'おかあさんへ<br><br>'+
+        'きょうはともだちとだいがくでべんきょうします。<br>'+
+        'うちでばんごはんをたべません。<br>'+
+        '九時半ごろかえります。<br><br>'+
+        '十月二十一日<br>'+
+        'メアリー'+
+      '</p><br>'+
+      
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'メアリーさんはきょうなにをしますか。<br>'+
+          '{友だちと大学で勉強します|ともだちとだいがくでべんきょうします|answer}。'+
+        '</div>'+
         
-        {
-          question : 'メアリーさんはきょうなにをしますか。',
-          answers : [
-            'Aともだちとだいがくでべんきょうします。',
-            'ともだちはだいがくをべんきょうします。',
-            'だいがくでべんきょうします。'
-          ]
-        },
+        '<div class="problem">'+
+          'うちでばんごはんをたべますか。<br>'+
+          '{いいえ、食べません|いいえ、たべません|answer}。'+
+        '</div>'+
         
-        {
-          question : 'うちでばんごはんをたべますか。',
-          answers : [
-            'Aいいえ、たべません。',
-            'はい、たべます。'
-          ]
-        },
-        
-        {
-          question : '何時ごろかえりますか。',
-          answers : [
-            'A九時半ごろかえります。',
-            '九時ごろかえります。',
-            '九時半にかえります。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          '何時ごろかえりますか。<br>'+
+          '{九時半ごろかえります|きゅうじはんごろかえります|answer}。'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>

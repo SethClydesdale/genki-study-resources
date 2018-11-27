@@ -58,46 +58,32 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'Using the kanji you know, translate the sentences into Japanese.',
       
-      quizlet : [
-        {
-          question : 'I went to a restaurant with a Japanese friend on Friday.',
-          answers : [
-            'Aわたしは金曜日に日本人のともだちとレストランにいきました。',
-            'わたしは金曜日にともだちの日本人とレストランにいきました。',
-            'わたしは金曜日に日本のともだちとレストランにいきました。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'I went to a restaurant with a Japanese friend on Friday.<br>'+
+          '{わたしは金曜日に日本人のともだちとレストランにいきました|わたしはきんようびににほんじんのともだちとレストランにいきました|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'I got up at about ten thirty on Saturday.',
-          answers : [
-            'Aわたしは土曜日に十時半ごろおきました。',
-            'わたしは土曜日に十時ごろおきました。',
-            'わたしは土曜日に十時半におきました。'
-          ]
-        },
+        '<div class="problem">'+
+          'I got up at about ten thirty on Saturday.<br>'+
+          '{わたしは土曜日に十時半ごろおきました|わたしはどようびにじゅうじはんごろおきました|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'I went to a temple alone on Monday.',
-          answers : [
-            'Aわたしは月曜日に一人でおてらにいきました。',
-            'わたしは日曜日に一人でおてらにいきました。',
-            'わたしは月曜日に人おてらにいきました。'
-          ]
-        },
+        '<div class="problem">'+
+          'I went to a temple alone on Monday.<br>'+
+          '{わたしは月曜日に一人でおてらにいきました|わたしはげつようびにひとりでおてらにいきました|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'The book is on the desk. The newspaper is under the book.',
-          answers : [
-            'A本はつくえの上です。しんぶんは本の下です。',
-            '本はつくえの下です。しんぶんは本の上です。',
-            'つくえは本の上です。本はしんぶんの下です。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'The book is on the desk. The newspaper is under the book.<br>'+
+          '{本はつくえの上です。しんぶんは本の下です。|ほんはつくえのうえです。しんぶんはほんのしたです。|furigana}'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>
