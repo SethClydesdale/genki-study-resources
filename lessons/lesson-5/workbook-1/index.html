@@ -58,27 +58,114 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'verb',
+      type : 'fill',
       info : 'Complete the conjugation table below.<br>If you are unclear about the conjugation of い-adjectives/な-adjectives, read Grammar 1 in Lesson 5 (Genki I: p.132-133) once again.',
       
-      columns : ['dictionary form', 'present affirmative', 'present negative'],
-      quizlet : {
-        // い-adjectives
-        'large' : ['おおきい', 'おおきいです', 'おおきくないです'],
-        'expensive' : ['たかい', 'たかいです', 'たかくないです'],
-        'frightening' : ['こわい', 'こわいです', 'こわくないです'],
-        'interesting' : ['おもしろい', 'おもしろいです', 'おもしろくないです'],
-        'old' : ['ふるい', 'ふるいです', 'ふるくないです'],
-        'good' : ['いい', 'いいです', 'よくないです'],
+      quizlet : 
+      '<p class="section-desc">い-adjectives</p>'+
+      '<table class="table large-width center">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td>dictionary form</td>'+
+          '<td>present affirmative</td>'+
+          '<td>present negative</td>'+
+        '</tr>'+
         
-        // な-adjectives
-        'quiet' : ['しずか（な）', 'しずかです', 'しずかじゃないです'],
-        'beautiful' : ['きれい（な）', 'きれいです', 'きれいじゃないです'],
-        'healthy' : ['げんき（な）', 'げんきです', 'げんきじゃないです'],
-        'fond of' : ['すき（な）', 'すきです', 'すきじゃないです'],
-        'disgusted' : ['きらい（な）', 'きらいです', 'きらいじゃないです'],
-        'lively' : ['にぎやか（な）', 'にぎやかです', 'にぎやかじゃないです']
-      }
+        '<tr>'+
+          '<td>large</td>'+
+          '<td>{おおきい}</td>'+
+          '<td>{おおきいです}</td>'+
+          '<td>{おおきくないです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>expensive</td>'+
+          '<td>{たかい}</td>'+
+          '<td>{たかいです}</td>'+
+          '<td>{たかくないです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>frightening</td>'+
+          '<td>{こわい}</td>'+
+          '<td>{こわいです}</td>'+
+          '<td>{こわくないです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>interesting</td>'+
+          '<td>{おもしろい}</td>'+
+          '<td>{おもしろいです}</td>'+
+          '<td>{おもしろくないです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>old</td>'+
+          '<td>{ふるい}</td>'+
+          '<td>{ふるいです}</td>'+
+          '<td>{ふるくないです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>good</td>'+
+          '<td>{いい}</td>'+
+          '<td>{いいです}</td>'+
+          '<td>{よくないです}</td>'+
+        '</tr>'+
+      '</table><br>'+
+        
+      '<p class="section-desc">な-adjectives</p>'+
+      '<table class="table large-width center">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td>dictionary form</td>'+
+          '<td>present affirmative</td>'+
+          '<td>present negative</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>quiet</td>'+
+          '<td>{しずか|しずかな|answer}</td>'+
+          '<td>{しずかです}</td>'+
+          '<td>{しずかじゃないです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>beautiful</td>'+
+          '<td>{きれい|きれいな|answer}</td>'+
+          '<td>{きれいです}</td>'+
+          '<td>{きれいじゃないです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>healthy</td>'+
+          '<td>{げんき|げんきな|answer}</td>'+
+          '<td>{げんきです}</td>'+
+          '<td>{げんきじゃないです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>fond of</td>'+
+          '<td>{すき|すきな|answer}</td>'+
+          '<td>{すきです}</td>'+
+          '<td>{すきじゃないです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>disgusted</td>'+
+          '<td>{きらい|きらいな|answer}</td>'+
+          '<td>{きらいです}</td>'+
+          '<td>{きらいじゃないです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>lively</td>'+
+          '<td>{にぎやか|にぎやかな|answer}</td>'+
+          '<td>{にぎやかです}</td>'+
+          '<td>{にぎやかじゃないです}</td>'+
+        '</tr>'+
+      '</table>'
+      
     });</script>
   </body>
 </html>
