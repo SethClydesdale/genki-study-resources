@@ -760,6 +760,9 @@
       'lesson-17/workbook-6|Workbook: Questions|p.50; I',
       'lesson-17/literacy-1|Kanji Practice: 歳, 習, and 主|p.301',
       'lesson-17/literacy-2|Kanji Practice: 結, 婚, and 集|p.301',
+      'lesson-17/literacy-3|Kanji Practice: 発, 表, and 品|p.301-302',
+      'lesson-17/literacy-4|Kanji Practice: 字, 活, and 写|p.302',
+      'lesson-17/literacy-5|Kanji Practice: 真, 歩, and 野|p.302',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
