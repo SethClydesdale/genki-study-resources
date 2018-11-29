@@ -763,6 +763,7 @@
       'lesson-17/literacy-3|Kanji Practice: 発, 表, and 品|p.301-302',
       'lesson-17/literacy-4|Kanji Practice: 字, 活, and 写|p.302',
       'lesson-17/literacy-5|Kanji Practice: 真, 歩, and 野|p.302',
+      'lesson-17/literacy-6|Kanji Practice: Write the Readings|p.303; I-A & B',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
