@@ -58,25 +58,112 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'verb',
+      type : 'fill',
       info : 'Complete the conjugation table below.<br>If you are unclear about the conjugation of い-adjectives/な-adjectives, read Grammar 1 in Lesson 5 (Genki I: p.132-133) once again.',
       
-      columns : ['present affirmative', 'present negative', 'past affirmative', 'past negative'],
-      quizlet : {
-        // い-adjectives
-        'あたらしい' : ['あたらしいです', 'あたらしくないです', 'あたらしかったです', 'あたらしくなかったです'],
-        'いそがしい' : ['いそがしいです', 'いそがしくないです', 'いそがしかったです', 'いそがしくなかったです'],
-        'さむい' : ['すむいです', 'すむくないです', 'すむかったです', 'すむくなかったです'],
-        'むずかしい' : ['むずかしいです', 'むずかしくないです', 'むずかしかったです', 'むずかしくなかったです'],
-        'ちいさい' : ['ちいさいです', 'ちいさくないです', 'ちいさかったです', 'ちいさくなかったです'],
-        'いい' : ['いいです', 'よくないです', 'よかったです', 'よくなかったです'],
+      quizlet : 
+      '<p class="section-desc">い-adjectives</p>'+
+      '<table class="table large-width center">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td>present affirmative</td>'+
+          '<td>present negative</td>'+
+          '<td>past affirmative</td>'+
+          '<td>past negative</td>'+
+        '</tr>'+
         
-        // な-adjectives
-        'ひま（な）' : ['ひまです', 'ひまじゃないです', 'ひまでした', 'ひまじゃなかったです'],
-        'にぎやか（な）' : ['にぎやかです', 'にぎやかじゃないです', 'にぎやかでした', 'にぎやかじゃなかったです'],
-        'すき（な）' : ['すきです', 'すきじゃないです', 'すきでした', 'すきじゃなかったです'],
-        'きれい（な）' : ['きれいです', 'きれいじゃないです', 'きれいでした', 'きれいじゃなかったです']
-      }
+        '<tr>'+
+          '<td>あたらしい</td>'+
+          '<td>{あたらしいです}</td>'+
+          '<td>{あたらしくないです}</td>'+
+          '<td>{あたらしかったです}</td>'+
+          '<td>{あたらしくなかったです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>いそがしい</td>'+
+          '<td>{いそがしいです}</td>'+
+          '<td>{いそがしくないです}</td>'+
+          '<td>{いそがしかったです}</td>'+
+          '<td>{いそがしくなかったです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>さむい</td>'+
+          '<td>{さむいです}</td>'+
+          '<td>{さむくないです}</td>'+
+          '<td>{さむかったです}</td>'+
+          '<td>{さむくなかったです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>むずかしい</td>'+
+          '<td>{むずかしいです}</td>'+
+          '<td>{むずかしくないです}</td>'+
+          '<td>{むずかしかったです}</td>'+
+          '<td>{むずかしくなかったです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>ちいさい</td>'+
+          '<td>{ちいさいです}</td>'+
+          '<td>{ちいさくないです}</td>'+
+          '<td>{ちいさかったです}</td>'+
+          '<td>{ちいさくなかったです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>いい</td>'+
+          '<td>{いいです}</td>'+
+          '<td>{よくないです}</td>'+
+          '<td>{よかったです}</td>'+
+          '<td>{よくなかったです}</td>'+
+        '</tr>'+
+      '</table><br>'+
+        
+      '<p class="section-desc">な-adjectives</p>'+
+      '<table class="table large-width center">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td>present affirmative</td>'+
+          '<td>present negative</td>'+
+          '<td>past affirmative</td>'+
+          '<td>past negative</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>ひま（な）</td>'+
+          '<td>{ひまです}</td>'+
+          '<td>{ひまじゃないです}</td>'+
+          '<td>{ひまでした}</td>'+
+          '<td>{ひまじゃなかったです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>にぎやか（な）</td>'+
+          '<td>{にぎやかです}</td>'+
+          '<td>{にぎやかじゃないです}</td>'+
+          '<td>{にぎやかでした}</td>'+
+          '<td>{にぎやかじゃなかったです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>すき（な）</td>'+
+          '<td>{すきです}</td>'+
+          '<td>{すきじゃないです}</td>'+
+          '<td>{すきでした}</td>'+
+          '<td>{すきじゃなかったです}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>きれい（な）</td>'+
+          '<td>{きれいです}</td>'+
+          '<td>{きれいじゃないです}</td>'+
+          '<td>{きれいでした}</td>'+
+          '<td>{きれいじゃなかったです}</td>'+
+        '</tr>'+
+      '</table>'
+      
     });</script>
   </body>
 </html>
