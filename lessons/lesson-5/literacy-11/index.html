@@ -58,59 +58,47 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'Read the postcard and answer the questions in Japanese.',
       
-      quizlet : [
-        {
-          text : 'かおりさん、お元気ですか。今、私はおきなわにいます。ここはあついですが、いい天気です。きのうはともだちといっしょにうみでおよぎました。今日は日本人の男の人とメキシコ人の女の人と山に行きました。<br>たいへんでしたが、とてもきれいでした。まいにちたのしです。おきなわの食べものもだいすきです。では、お元気で。<br>　　九月九日<br>　　　　　　ロバート・スミス',
-          vertical : true,
-          
-          helper : 
-            '<div style="text-align:right;">'+
-              'メキシコ Mexico<br>'+
-              '山 mountain<br>'+
-              'たいへん(な) tough<br>'+
-              'では、お元気で Take care.'+
-            '</div>'
-        },
-        
-        {
-          question : 'ロバートさんは今どこにいますか。',
-          answers : [
-            'Aおきなわにいます。',
-            'おきなわにあります。',
-            'おきなわに行きます。'
-          ]
-        },
-        
-        {
-          question : 'どんな天気ですか。',
-          answers : [
-            'Aあついですが、いい天気です。',
-            'あついです、いい天気です。',
-            'いい天気です。'
-          ]
-        },
-        
-        {
-          question : 'きのうはなにをしましたか。',
-          answers : [
-            'Aともだちといっしょにうみでおよぎました。',
-            'ともだちとうみでおよぎました。',
-            'ともだちといっしょにうみ。'
-          ]
-        },
-        
-        {
-          question : '今日はなにをしましたか。だれとしましたか。',
-          answers : [
-            'A山に行きました。日本人の男の人とメキシコ人の女の人と行きました。',
-            '日本人の男の人とメキシコ人の女の人と山に行きました。',
-            '山に行きました。日本人の女の人とメキシコ人の男の人と行きました。'
-          ]
-        }
-      ]
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'ロバートさんは今どこにいますか。<br>'+
+          '{おきなわにいます}。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'どんな天気ですか。<br>'+
+          '{あついですが、いい天気です|あついですが、いいてんきです|answer}。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'きのうはなにをしましたか。<br>'+
+          '{友だちと一緒に海で泳ぎました|ともだちといっしょにうみでおよぎました|answer}。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          '今日はなにをしましたか。だれとしましたか。<br>'+
+          '{山に行きました。日本人の男の人とメキシコ人の女の人と行きました。|やまにいきました。にほんじんのおとこのひととメキシコじんのおんなのひとといきました。|answer}'+
+        '</div>'+
+      '</div><br>'+
+
+      '<div style="width:80%; margin:0 auto;">'+
+        '<p class="sub-section text-passage vertical-text">'+
+          'かおりさん、お元気ですか。今、私はおきなわにいます。ここはあついですが、いい天気です。きのうはともだちといっしょにうみでおよぎました。今日は日本人の男の人とメキシコ人の女の人と山に行きました。たいへんでしたが、とてもきれいでした。まいにちたのしです。おきなわの食べものもだいすきです。では、お元気で。<br>'+
+          '　　九月九日<br>'+
+          '　　　　　　ロバート・スミス'+
+        '</p>'+
+
+        '<p style="text-align:right;">'+
+          'メキシコ Mexico<br>'+
+          '山（やま） mountain<br>'+
+          'たいへん(な) tough<br>'+
+          'では、お元気で Take care.<br>'+
+        '</p>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>
