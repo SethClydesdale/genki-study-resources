@@ -58,55 +58,37 @@
     <script src="../../../resources/genki.min.js"></script>
     <script src="../../../resources/javascript.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      type : 'fill',
       info : 'Using the kanji you know, translate the sentences into Japanese.',
       
-      quizlet : [
-        {
-          question : 'I am now in Japan.',
-          answers : [
-            'A私は今日本にいます。',
-            '私今は日本にいます。',
-            '私は日本にいます。'
-          ]
-        },
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'I am now in Japan.<br>'+
+          '{私は今日本にいます|わたしはいまにほんにいます|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'Ms. Tanaka is fine. Mr. Yamakawa is not fine.',
-          answers : [
-            'A田中さんは元気です。山川さんは元気じゃないです。',
-            '山川さんは元気です。田中さんは元気じゃないです。',
-            '田中さんは元気なです。山川さんは元気ないです。'
-          ]
-        },
+        '<div class="problem">'+
+          'Ms. Tanaka is fine. Mr. Yamakawa is not fine.<br>'+
+          '{田中さんは元気です。山川さんは元気じゃないです。|たなかさんはげんきです。やまかわさんはげんきじゃないです。|furigana}'+
+        '</div>'+
         
-        {
-          question : 'I went to the mountain with a Japanese man and woman.',
-          answers : [
-            'A私は日本人の男の人と女の人と山に行きました。',
-            '私は日本人の男の人と女の人と山に行きます。',
-            '私は日本人の男の人と女の人と川に行きました。'
-          ]
-        },
+        '<div class="problem">'+
+          'I went to the mountain with a Japanese man and woman.<br>'+
+          '{私は日本人の男の人と女の人と山に行きました|わたしはにほんじんのおとこのひととおんなのひととやまにいきました|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'I drank coffee with my friend on Tuesday.',
-          answers : [
-            'A私は火曜日にともだちとコーヒーを飲みました。',
-            '私は火曜日にともだちとコーヒーを食べました。',
-            '私は金曜日にともだちとコーヒーを飲みました。'
-          ]
-        },
+        '<div class="problem">'+
+          'I drank coffee with my friend on Tuesday.<br>'+
+          '{私は火曜日にともだちとコーヒーを飲みました|わたしはかようびにともだちとコーヒーをのみました|furigana}。'+
+        '</div>'+
         
-        {
-          question : 'On Wednesday, I ate dinner at home. And then I watched TV.',
-          answers : [
-            'A私は水曜日にいえでばんごはんを食べました。それから、テレビを見ました。',
-            '私は木曜日にいえでばんごはんを食べました。それから、テレビを見ました。',
-            '私は水曜日にいえでばんごはんを飲みました。それから、テレビを見ました。'
-          ]
-        }
-      ]
+        '<div class="problem">'+
+          'On Wednesday, I ate dinner at home. And then I watched TV.<br>'+
+          '{私は水曜日にいえでばんごはんを食べました。それから、テレビを見ました。|わたしはすいようびにいえでばんごはんをたべました。それから、テレビをみました。|furigana}'+
+        '</div>'+
+      '</div>'
+      
     });</script>
   </body>
 </html>
