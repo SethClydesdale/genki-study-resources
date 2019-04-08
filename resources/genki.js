@@ -764,6 +764,7 @@
       'lesson-17/literacy-4|Kanji Practice: 字, 活, and 写|p.302',
       'lesson-17/literacy-5|Kanji Practice: 真, 歩, and 野|p.302',
       'lesson-17/literacy-6|Kanji Practice: Write the Readings|p.303; I-A & B',
+      'lesson-17/literacy-7|Reading Practice: オノ・ヨーコ|p.304-306; II-A, B, & C',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
