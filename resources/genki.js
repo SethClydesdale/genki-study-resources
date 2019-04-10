@@ -728,7 +728,7 @@
       'lesson-16/literacy-5|Kanji Practice: 運, 動, 教, and 室|p.296',
       'lesson-16/literacy-6|Kanji Practice: Write the Readings|p.297; I-A & B',
       'lesson-16/literacy-7|Reading Practice: まんが「ドラえもん」|p.298-300; II-B, C, & D',
-      'lesson-16/literacy-wb-1|Workbook: Kanji Writing Practice|p.113',
+      'lesson-16/literacy-wb-1|Workbook: Kanji Writing Practice|p.115',
       'lesson-16/literacy-wb-2|Workbook: Spelling Practice (供, 世, 界, and 全)|p.115; bonus',
       'lesson-16/literacy-wb-3|Workbook: Spelling Practice (部, 始, 週, and 以)|p.115; bonus',
       'lesson-16/literacy-wb-4|Workbook: Spelling Practice (考, 開, 屋, and 方)|p.115; bonus',
@@ -765,6 +765,12 @@
       'lesson-17/literacy-5|Kanji Practice: 真, 歩, and 野|p.302',
       'lesson-17/literacy-6|Kanji Practice: Write the Readings|p.303; I-A & B',
       'lesson-17/literacy-7|Reading Practice: オノ・ヨーコ|p.304-306; II-A, B, & C',
+      'lesson-17/literacy-wb-1|Workbook: Kanji Writing Practice|p.117',
+      'lesson-17/literacy-wb-2|Workbook: Spelling Practice (歳, 習, 主, and 結)|p.117; bonus',
+      'lesson-17/literacy-wb-3|Workbook: Spelling Practice (婚, 集, 発, and 表)|p.117; bonus',
+      'lesson-17/literacy-wb-4|Workbook: Spelling Practice (品, 字, and 活)|p.117; bonus',
+      'lesson-17/literacy-wb-5|Workbook: Spelling Practice (写, 真, 歩, and 野)|p.117; bonus',
+      'lesson-17/literacy-wb-6|Workbook: Fill in the Blanks|p.118',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1319,7 +1325,9 @@
           
           // focuses the next input if available, otherwise it asks if the student wants to check their answers
           if (next) {
-            next.focus();
+            setTimeout(function () {
+              next.focus(); 
+            }, 1);
           } else {
             input.blur();
             Genki.check.answers(true);
