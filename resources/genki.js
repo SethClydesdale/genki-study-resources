@@ -772,6 +772,10 @@
       'lesson-17/literacy-wb-5|Workbook: Spelling Practice (写, 真, 歩, and 野)|p.117; bonus',
       'lesson-17/literacy-wb-6|Workbook: Fill in the Blanks|p.118',
       
+      // Lesson 18
+      'lesson-18/vocab-1|Vocabulary: Nouns 1|p.142',
+      'lesson-18/vocab-2|Vocabulary: Nouns 2|p.142',
+      
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
       'study-tools/custom-spelling|Custom Spelling Practice',
