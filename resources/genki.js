@@ -775,6 +775,9 @@
       // Lesson 18
       'lesson-18/vocab-1|Vocabulary: Nouns 1|p.142',
       'lesson-18/vocab-2|Vocabulary: Nouns 2|p.142',
+      'lesson-18/vocab-3|Vocabulary: い-adjectives and U-verbs|p.142-143',
+      'lesson-18/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.143',
+      'lesson-18/vocab-5|Vocabulary: Adverbs and Other Expressions|p.143',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
