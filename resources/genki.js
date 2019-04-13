@@ -778,6 +778,8 @@
       'lesson-18/vocab-3|Vocabulary: い-adjectives and U-verbs|p.142-143',
       'lesson-18/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.143',
       'lesson-18/vocab-5|Vocabulary: Adverbs and Other Expressions|p.143',
+      'lesson-18/vocab-6|Review: Transitivity Pairs|p.144',
+      'lesson-18/grammar-1|Practice: Transitivity Pairs|p.150; I-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
