@@ -781,6 +781,7 @@
       'lesson-18/vocab-6|Review: Transitivity Pairs|p.144',
       'lesson-18/grammar-1|Practice: Transitivity Pairs|p.150; I-A',
       'lesson-18/grammar-2|Practice: Transitivity Pairs + ている|p.151-152; I-C',
+      'lesson-18/grammar-3|Practice: ～てしまう 1|p.153; II-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
