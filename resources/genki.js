@@ -783,6 +783,7 @@
       'lesson-18/grammar-2|Practice: Transitivity Pairs + ている|p.151-152; I-C',
       'lesson-18/grammar-3|Practice: ～てしまう 1|p.153; II-A',
       'lesson-18/grammar-4|Practice: ～てしまう 2|p.153; II-B',
+      'lesson-18/grammar-5|Practice: ～ちゃう／～じゃう|p.154; II-C',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
