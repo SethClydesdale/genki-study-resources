@@ -785,6 +785,7 @@
       'lesson-18/grammar-4|Practice: ～てしまう 2|p.153; II-B',
       'lesson-18/grammar-5|Practice: ～ちゃう／～じゃう|p.154; II-C',
       'lesson-18/grammar-6|Practice: ～と|p.155; III-A',
+      'lesson-18/grammar-7|Practice: ～ながら|p.157; IV-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
