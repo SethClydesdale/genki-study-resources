@@ -786,6 +786,7 @@
       'lesson-18/grammar-5|Practice: ～ちゃう／～じゃう|p.154; II-C',
       'lesson-18/grammar-6|Practice: ～と|p.155; III-A',
       'lesson-18/grammar-7|Practice: ～ながら|p.157; IV-A',
+      'lesson-18/grammar-8|Practice: ～ばよかったです Conjugation|p.158; V-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
