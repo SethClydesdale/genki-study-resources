@@ -788,6 +788,8 @@
       'lesson-18/grammar-7|Practice: ～ながら|p.157; IV-A',
       'lesson-18/grammar-8|Practice: ～ばよかったです Conjugation|p.158; V-A',
       'lesson-18/grammar-9|Practice: ～ばよかったです|p.158-159; V-B',
+      'lesson-18/culture-1|Culture Note: Sushi|p.163',
+      'lesson-18/culture-2|Culture Note: Popular Sushi Toppings|p.163',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
