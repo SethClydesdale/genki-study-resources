@@ -792,6 +792,7 @@
       'lesson-18/culture-2|Culture Note: Popular Sushi Toppings|p.163',
       'lesson-18/workbook-1|Workbook: Transitivity Pairs 1|p.51; I & II',
       'lesson-18/workbook-2|Workbook: Transitivity Pairs 2|p.52; I',
+      'lesson-18/workbook-3|Workbook: ～てしまう|p.53; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
