@@ -794,6 +794,7 @@
       'lesson-18/workbook-1|Workbook: Transitivity Pairs 1|p.51; I & II',
       'lesson-18/workbook-2|Workbook: Transitivity Pairs 2|p.52; I',
       'lesson-18/workbook-3|Workbook: ～てしまう|p.53; I & II',
+      'lesson-18/workbook-4|Workbook: ～と|p.54; I, II, & III',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
