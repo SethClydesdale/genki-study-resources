@@ -797,6 +797,7 @@
       'lesson-18/workbook-4|Workbook: ～と|p.54; I, II, & III',
       'lesson-18/workbook-5|Workbook: ～ながら|p.55; I, II, & III',
       'lesson-18/workbook-6|Workbook: ～ばよかったです|p.56; I, II, & III',
+      'lesson-18/workbook-7|Workbook: Questions|p.58; I',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
