@@ -800,6 +800,10 @@
       'lesson-18/workbook-7|Workbook: Questions|p.58; I',
       'lesson-18/literacy-1|Kanji Practice: 目, 的, and 力|p.308',
       'lesson-18/literacy-2|Kanji Practice: 洋, 服, 堂, and 授|p.308',
+      'lesson-18/literacy-3|Kanji Practice: 業, 試, and 験|p.308-309',
+      'lesson-18/literacy-4|Kanji Practice: 貸, 図, and 館|p.309',
+      'lesson-18/literacy-5|Kanji Practice: 終, 宿, and 題|p.309',
+      'lesson-18/literacy-6|Kanji Practice: Write the Readings|p.310; I-A & B',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
