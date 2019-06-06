@@ -804,6 +804,7 @@
       'lesson-18/literacy-4|Kanji Practice: 貸, 図, and 館|p.309',
       'lesson-18/literacy-5|Kanji Practice: 終, 宿, and 題|p.309',
       'lesson-18/literacy-6|Kanji Practice: Write the Readings|p.310; I-A & B',
+      'lesson-18/literacy-7|Reading Practice: 大学生のアルバイト|p.310-311; II-B',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
