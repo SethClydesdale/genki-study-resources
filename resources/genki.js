@@ -806,6 +806,7 @@
       'lesson-18/literacy-6|Kanji Practice: Write the Readings|p.310; I-A & B',
       'lesson-18/literacy-7|Reading Practice: 大学生のアルバイト|p.310-311; II-B',
       'lesson-18/literacy-8|Reading Practice: 橋本くんの大学生活|p.312-313; III-A & B',
+      'lesson-18/literacy-wb-1|Workbook: Kanji Writing Practice|p.119',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
