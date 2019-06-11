@@ -807,6 +807,11 @@
       'lesson-18/literacy-7|Reading Practice: 大学生のアルバイト|p.310-311; II-B',
       'lesson-18/literacy-8|Reading Practice: 橋本くんの大学生活|p.312-313; III-A & B',
       'lesson-18/literacy-wb-1|Workbook: Kanji Writing Practice|p.119',
+      'lesson-18/literacy-wb-2|Workbook: Spelling Practice (目, 的, 力, and 洋)|p.119; bonus',
+      'lesson-18/literacy-wb-3|Workbook: Spelling Practice (服, 堂, 授, and 業)|p.119; bonus',
+      'lesson-18/literacy-wb-4|Workbook: Spelling Practice (試, 験, 貸, and 図)|p.119; bonus',
+      'lesson-18/literacy-wb-5|Workbook: Spelling Practice (館, 終, 宿, and 題)|p.119; bonus',
+      'lesson-18/literacy-wb-6|Workbook: Fill in the Blanks|p.120',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
