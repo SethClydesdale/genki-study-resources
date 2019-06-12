@@ -813,6 +813,13 @@
       'lesson-18/literacy-wb-5|Workbook: Spelling Practice (館, 終, 宿, and 題)|p.119; bonus',
       'lesson-18/literacy-wb-6|Workbook: Fill in the Blanks|p.120',
       
+      // Lesson 19
+      'lesson-19/vocab-1|Vocabulary: Nouns 1|p.166',
+      'lesson-19/vocab-2|Vocabulary: Nouns 2 and Adjectives|p.166',
+      'lesson-19/vocab-3|Vocabulary: U-verbs|p.166-167',
+      'lesson-19/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.167',
+      'lesson-19/vocab-5|Vocabulary: Adverbs and Other Expressions|p.167',
+      
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
       'study-tools/custom-spelling|Custom Spelling Practice',
