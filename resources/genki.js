@@ -819,6 +819,7 @@
       'lesson-19/vocab-3|Vocabulary: U-verbs|p.166-167',
       'lesson-19/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.167',
       'lesson-19/vocab-5|Vocabulary: Adverbs and Other Expressions|p.167',
+      'lesson-19/grammar-1|Practice: Honorific Verbs 1|p.174; I-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
