@@ -1070,6 +1070,7 @@ p.section-desc {
   counter-increment:problems;
   content:counter(problems) ".";
   margin-right:6px;
+  vertical-align:top;
 }
 
 /* input style */
