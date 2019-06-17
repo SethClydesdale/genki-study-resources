@@ -823,6 +823,7 @@
       'lesson-19/grammar-2|Practice: Honorific Verbs 2|p.174-175; I-B',
       'lesson-19/grammar-3|Practice: Honorific Verbs 3|p.175; I-C',
       'lesson-19/grammar-4|Practice: Giving Respectful Advice|p.176; II',
+      'lesson-19/grammar-5|Practice: ～てくれてありがとう|p.177; III-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
