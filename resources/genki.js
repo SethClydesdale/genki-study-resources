@@ -825,6 +825,7 @@
       'lesson-19/grammar-4|Practice: Giving Respectful Advice|p.176; II',
       'lesson-19/grammar-5|Practice: ～てくれてありがとう|p.177; III-A',
       'lesson-19/grammar-6|Practice: ～てよかったです|p.178; IV-A',
+      'lesson-19/grammar-7|Practice: ～はずです 1|p.179; V-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
