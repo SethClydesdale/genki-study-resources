@@ -829,6 +829,7 @@
       'lesson-19/grammar-8|Practice: ～はずです 2|p.180-181; V-D',
       'lesson-19/culture-1|Culture Note: Visiting Someone\'s House|p.183',
       'lesson-19/workbook-1|Workbook: Honorific Verbs 1|p.59',
+      'lesson-19/workbook-2|Workbook: Honorific Verbs 2|p.60; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
