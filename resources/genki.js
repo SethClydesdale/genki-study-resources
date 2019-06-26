@@ -833,6 +833,8 @@
       'lesson-19/workbook-3|Workbook: Honorific Verbs 3・Giving Respectful Advice|p.61; I & II',
       'lesson-19/workbook-4|Workbook: ～てくれてありがとう|p.62; I & II',
       'lesson-19/workbook-5|Workbook: ～てよかったです|p.63; I & II',
+      'lesson-19/workbook-6|Workbook: ～はずです|p.64; I, II, & III',
+      'lesson-19/workbook-7|Workbook: Questions|p.67; I',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
