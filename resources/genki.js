@@ -835,6 +835,11 @@
       'lesson-19/workbook-5|Workbook: ～てよかったです|p.63; I & II',
       'lesson-19/workbook-6|Workbook: ～はずです|p.64; I, II, & III',
       'lesson-19/workbook-7|Workbook: Questions|p.67; I',
+      'lesson-19/literacy-1|Kanji Practice: 春, 秋, and 冬|p.315',
+      'lesson-19/literacy-2|Kanji Practice: 花, 様, and 不|p.315',
+      'lesson-19/literacy-3|Kanji Practice: 姉, 兄, 漢, and 卒|p.315-316',
+      'lesson-19/literacy-4|Kanji Practice: 工, 研, and 究|p.316',
+      'lesson-19/literacy-5|Kanji Practice: 質, 問, and 多|p.316',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
