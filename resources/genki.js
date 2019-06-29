@@ -841,6 +841,7 @@
       'lesson-19/literacy-4|Kanji Practice: 工, 研, and 究|p.316',
       'lesson-19/literacy-5|Kanji Practice: 質, 問, and 多|p.316',
       'lesson-19/literacy-6|Kanji Practice: Write the Readings|p.317; I-A & B',
+      'lesson-19/literacy-7|Reading Practice: お礼の手紙|p.318-319; II-A, B, & C',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
