@@ -843,6 +843,13 @@
       'lesson-19/literacy-6|Kanji Practice: Write the Readings|p.317; I-A & B',
       'lesson-19/literacy-7|Reading Practice: お礼の手紙|p.318-319; II-A, B, & C',
       'lesson-19/literacy-8|Reading Practice: マリアさんのメール|p.320-321; II-A & B',
+      'lesson-19/literacy-9|Useful Expressions for Greeting Cards|p.322',
+      'lesson-19/literacy-wb-1|Workbook: Kanji Writing Practice|p.121',
+      'lesson-19/literacy-wb-2|Workbook: Spelling Practice (春, 秋, 冬, and 花)|p.121; bonus',
+      'lesson-19/literacy-wb-3|Workbook: Spelling Practice (様, 不, 姉, and 兄)|p.121; bonus',
+      'lesson-19/literacy-wb-4|Workbook: Spelling Practice (漢, 卒, 工, and 研)|p.121; bonus',
+      'lesson-19/literacy-wb-5|Workbook: Spelling Practice (究, 質, 問, and 多)|p.121; bonus',
+      'lesson-19/literacy-wb-6|Workbook: Fill in the Blanks|p.122',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1391,15 +1398,21 @@
       
       // checks the value of the current input and automatically moves onto the next input if the value is correct
       // speeds things up, so the student doesn't need to click or tab into the next input field
+      busy : false, // prevents IMEs from triggering multiple input events when a value is correct
       value : function (input) {
-        if (input.value == input.dataset.answer) {
+        if (!Genki.check.busy && input.value == input.dataset.answer) {
           var next = Genki.input.map[Genki.input.index + 1];
           
           // focuses the next input if available, otherwise it asks if the student wants to check their answers
           if (next) {
+            Genki.check.busy = true;
+          
+            next.focus();
+              
             setTimeout(function () {
-              next.focus(); 
-            }, 1);
+              Genki.check.busy = false;
+            }, 100);
+            
           } else {
             input.blur();
             Genki.check.answers(true);
