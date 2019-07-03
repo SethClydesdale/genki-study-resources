@@ -857,6 +857,7 @@
       'lesson-20/vocab-3|Vocabulary: U-verbs|p.186-187',
       'lesson-20/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.187',
       'lesson-20/vocab-5|Vocabulary: Adverbs and Other Expressions|p.187',
+      'lesson-20/grammar-1|Practice: Extra-modest Expressions 1|p.195; I-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
