@@ -859,6 +859,7 @@
       'lesson-20/vocab-5|Vocabulary: Adverbs and Other Expressions|p.187',
       'lesson-20/grammar-1|Practice: Extra-modest Expressions 1|p.195; I-A',
       'lesson-20/grammar-2|Practice: Extra-modest Expressions 2|p.195; I-B',
+      'lesson-20/grammar-3|Practice: Extra-modest Expressions 3|p.196; I-D',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
