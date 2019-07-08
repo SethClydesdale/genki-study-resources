@@ -862,6 +862,8 @@
       'lesson-20/grammar-3|Practice: Extra-modest Expressions 3|p.196; I-D',
       'lesson-20/grammar-4|Practice: Humble Expressions 1|p.197; II-A',
       'lesson-20/grammar-5|Practice: Humble Expressions 2|p.197-198; II-B',
+      'lesson-20/grammar-6|Practice: ～ないで|p.199-200; III-A',
+      'lesson-20/grammar-7|Practice: Questions within Larger Sentences 1|p.200-201; IV-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
