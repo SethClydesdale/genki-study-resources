@@ -864,6 +864,9 @@
       'lesson-20/grammar-5|Practice: Humble Expressions 2|p.197-198; II-B',
       'lesson-20/grammar-6|Practice: ～ないで|p.199-200; III-A',
       'lesson-20/grammar-7|Practice: Questions within Larger Sentences 1|p.200-201; IV-A',
+      'lesson-20/grammar-8|Practice: Questions within Larger Sentences 2|p.201; IV-B',
+      'lesson-20/grammar-9|Practice: name という item|p.202; V-A',
+      'lesson-20/grammar-10|Practice: ～やすい／にくい|p.203; VI-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
