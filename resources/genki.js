@@ -867,6 +867,8 @@
       'lesson-20/grammar-8|Practice: Questions within Larger Sentences 2|p.201; IV-B',
       'lesson-20/grammar-9|Practice: name という item|p.202; V-A',
       'lesson-20/grammar-10|Practice: ～やすい／にくい|p.203; VI-A',
+      'lesson-20/culture-1|Culture Note: Japanese Pop Culture|p.207',
+      'lesson-20/workbook-1|Workbook: Extra-modest Expressions|p.68',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
