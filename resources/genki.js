@@ -869,6 +869,8 @@
       'lesson-20/grammar-10|Practice: ～やすい／にくい|p.203; VI-A',
       'lesson-20/culture-1|Culture Note: Japanese Pop Culture|p.207',
       'lesson-20/workbook-1|Workbook: Extra-modest Expressions|p.68',
+      'lesson-20/workbook-2|Workbook: Humble Expressions 1|p.69',
+      'lesson-20/workbook-3|Workbook: Humble Expressions 2|p.70; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
