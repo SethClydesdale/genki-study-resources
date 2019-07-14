@@ -873,6 +873,7 @@
       'lesson-20/workbook-3|Workbook: Humble Expressions 2|p.70; I & II',
       'lesson-20/workbook-4|Workbook: Three Types of Respect Language|p.71; I & II',
       'lesson-20/workbook-5|Workbook: ～ないで|p.72; I & II',
+      'lesson-20/workbook-6|Workbook: Questions Within Larger Sentences|p.73; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
