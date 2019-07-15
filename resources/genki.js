@@ -874,6 +874,8 @@
       'lesson-20/workbook-4|Workbook: Three Types of Respect Language|p.71; I & II',
       'lesson-20/workbook-5|Workbook: ～ないで|p.72; I & II',
       'lesson-20/workbook-6|Workbook: Questions Within Larger Sentences|p.73; I & II',
+      'lesson-20/workbook-7|Workbook: Name という Item・～やすい／～にくい|p.74; I & II',
+      'lesson-20/workbook-8|Workbook: Questions|p.76; I',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
