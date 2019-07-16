@@ -876,6 +876,7 @@
       'lesson-20/workbook-6|Workbook: Questions Within Larger Sentences|p.73; I & II',
       'lesson-20/workbook-7|Workbook: Name という Item・～やすい／～にくい|p.74; I & II',
       'lesson-20/workbook-8|Workbook: Questions|p.76; I',
+      'lesson-20/literacy-1|Kanji Practice: 皿, 声, and 茶|p.323',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
