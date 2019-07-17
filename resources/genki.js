@@ -877,6 +877,10 @@
       'lesson-20/workbook-7|Workbook: Name という Item・～やすい／～にくい|p.74; I & II',
       'lesson-20/workbook-8|Workbook: Questions|p.76; I',
       'lesson-20/literacy-1|Kanji Practice: 皿, 声, and 茶|p.323',
+      'lesson-20/literacy-2|Kanji Practice: 止, 枚, and 両|p.323',
+      'lesson-20/literacy-3|Kanji Practice: 無, 払, and 心|p.323-324',
+      'lesson-20/literacy-4|Kanji Practice: 笑, 絶, and 対|p.324',
+      'lesson-20/literacy-5|Kanji Practice: 痛, 最, and 続|p.324',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
