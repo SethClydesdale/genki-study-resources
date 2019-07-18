@@ -881,6 +881,7 @@
       'lesson-20/literacy-3|Kanji Practice: 無, 払, and 心|p.323-324',
       'lesson-20/literacy-4|Kanji Practice: 笑, 絶, and 対|p.324',
       'lesson-20/literacy-5|Kanji Practice: 痛, 最, and 続|p.324',
+      'lesson-20/literacy-6|Kanji Practice: Write the Readings|p.325; I-A & B',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
