@@ -882,6 +882,7 @@
       'lesson-20/literacy-4|Kanji Practice: 笑, 絶, and 対|p.324',
       'lesson-20/literacy-5|Kanji Practice: 痛, 最, and 続|p.324',
       'lesson-20/literacy-6|Kanji Practice: Write the Readings|p.325; I-A & B',
+      'lesson-20/literacy-7|Reading Practice: 猫の皿|p.327-328; II-B & C',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
