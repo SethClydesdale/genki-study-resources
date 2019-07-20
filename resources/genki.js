@@ -883,6 +883,12 @@
       'lesson-20/literacy-5|Kanji Practice: 痛, 最, and 続|p.324',
       'lesson-20/literacy-6|Kanji Practice: Write the Readings|p.325; I-A & B',
       'lesson-20/literacy-7|Reading Practice: 猫の皿|p.327-328; II-B & C',
+      'lesson-20/literacy-wb-1|Workbook: Kanji Writing Practice|p.123',
+      'lesson-20/literacy-wb-2|Workbook: Spelling Practice (皿, 声, 茶, and 止)|p.123; bonus',
+      'lesson-20/literacy-wb-3|Workbook: Spelling Practice (枚, 両, 無, and 払)|p.123; bonus',
+      'lesson-20/literacy-wb-4|Workbook: Spelling Practice (心, 笑, 絶, and 対)|p.123; bonus',
+      'lesson-20/literacy-wb-5|Workbook: Spelling Practice (痛, 最, and 続)|p.123; bonus',
+      'lesson-20/literacy-wb-6|Workbook: Fill in the Blanks|p.124',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
