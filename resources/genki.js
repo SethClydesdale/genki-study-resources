@@ -666,7 +666,7 @@
       'lesson-15/vocab-1|Vocabulary: Nouns 1|p.76',
       'lesson-15/vocab-2|Vocabulary: Nouns 2|p.76',
       'lesson-15/vocab-3|Vocabulary: い-adjectives, U-verbs, and Ru-Verbs|p.76-77',
-      'lesson-15/vocab-4|Vocabulary: Irregular Verbs, Adverbs, and Other Expressions|p.77',
+      'lesson-15/vocab-4|Vocabulary: Irregular Verbs, Adverbs and Other Expressions|p.77',
       'lesson-15/culture-1|Culture Note: Japanese Accommodations|p.81',
       'lesson-15/vocab-6|Bonus Vocabulary: ～目|p.83',
       'lesson-15/grammar-1|Practice: Volitional Form 1|p.84; I-A',
@@ -889,6 +889,13 @@
       'lesson-20/literacy-wb-4|Workbook: Spelling Practice (心, 笑, 絶, and 対)|p.123; bonus',
       'lesson-20/literacy-wb-5|Workbook: Spelling Practice (痛, 最, and 続)|p.123; bonus',
       'lesson-20/literacy-wb-6|Workbook: Fill in the Blanks|p.124',
+      
+      // Lesson 21
+      'lesson-21/vocab-1|Vocabulary: Nouns 1|p.210',
+      'lesson-21/vocab-2|Vocabulary: Nouns 2|p.210',
+      'lesson-21/vocab-3|Vocabulary: U-verbs|p.210-211',
+      'lesson-21/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.211',
+      'lesson-21/vocab-5|Vocabulary: Adjectives, Adverbs and Other Expressions|p.210-211',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
