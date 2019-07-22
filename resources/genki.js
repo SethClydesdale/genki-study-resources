@@ -896,6 +896,7 @@
       'lesson-21/vocab-3|Vocabulary: U-verbs|p.210-211',
       'lesson-21/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.211',
       'lesson-21/vocab-5|Vocabulary: Adjectives, Adverbs and Other Expressions|p.210-211',
+      'lesson-21/grammar-1|Practice: Passive Sentences 1|p.219; I-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
