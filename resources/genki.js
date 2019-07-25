@@ -899,6 +899,7 @@
       'lesson-21/grammar-1|Practice: Passive Sentences 1|p.219; I-A',
       'lesson-21/grammar-2|Practice: Passive Sentences 2|p.219-220; I-B',
       'lesson-21/grammar-3|Practice: ～てある|p.221; II-A',
+      'lesson-21/grammar-4|Practice: ～間に|p.223; III-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
