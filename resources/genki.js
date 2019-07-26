@@ -900,6 +900,8 @@
       'lesson-21/grammar-2|Practice: Passive Sentences 2|p.219-220; I-B',
       'lesson-21/grammar-3|Practice: ～てある|p.221; II-A',
       'lesson-21/grammar-4|Practice: ～間に|p.223; III-A',
+      'lesson-21/grammar-5|Practice: Adjective + する|p.223; IV-A',
+      'lesson-21/grammar-6|Practice: ～てほしい|p.224; V-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
