@@ -902,6 +902,7 @@
       'lesson-21/grammar-4|Practice: ～間に|p.223; III-A',
       'lesson-21/grammar-5|Practice: Adjective + する|p.223; IV-A',
       'lesson-21/grammar-6|Practice: ～てほしい|p.224; V-A',
+      'lesson-21/workbook-1|Workbook: Passive Sentences 1|p.77; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
