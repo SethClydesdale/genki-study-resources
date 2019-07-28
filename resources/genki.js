@@ -903,6 +903,7 @@
       'lesson-21/grammar-5|Practice: Adjective + する|p.223; IV-A',
       'lesson-21/grammar-6|Practice: ～てほしい|p.224; V-A',
       'lesson-21/workbook-1|Workbook: Passive Sentences 1|p.77; I & II',
+      'lesson-21/workbook-2|Workbook: Passive Sentences 2|p.78; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
