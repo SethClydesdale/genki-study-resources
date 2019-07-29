@@ -904,6 +904,8 @@
       'lesson-21/grammar-6|Practice: ～てほしい|p.224; V-A',
       'lesson-21/workbook-1|Workbook: Passive Sentences 1|p.77; I & II',
       'lesson-21/workbook-2|Workbook: Passive Sentences 2|p.78; I & II',
+      'lesson-21/workbook-3|Workbook: Passive and ～てもらう|p.79; I',
+      'lesson-21/workbook-4|Workbook: ～てある|p.80; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
