@@ -907,6 +907,7 @@
       'lesson-21/workbook-3|Workbook: Passive and ～てもらう|p.79; I',
       'lesson-21/workbook-4|Workbook: ～てある|p.80; I & II',
       'lesson-21/workbook-5|Workbook: ～間に|p.81; I & II',
+      'lesson-21/workbook-6|Workbook: Adjective + する|p.82; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
