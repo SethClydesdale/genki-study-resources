@@ -904,10 +904,12 @@
       'lesson-21/grammar-6|Practice: ～てほしい|p.224; V-A',
       'lesson-21/workbook-1|Workbook: Passive Sentences 1|p.77; I & II',
       'lesson-21/workbook-2|Workbook: Passive Sentences 2|p.78; I & II',
-      'lesson-21/workbook-3|Workbook: Passive and ～てもらう|p.79; I',
+      'lesson-21/workbook-3|Workbook: Passive and ～てもらう|p.79',
       'lesson-21/workbook-4|Workbook: ～てある|p.80; I & II',
       'lesson-21/workbook-5|Workbook: ～間に|p.81; I & II',
       'lesson-21/workbook-6|Workbook: Adjective + する|p.82; I & II',
+      'lesson-21/workbook-7|Workbook: ～てほしい|p.83',
+      'lesson-21/workbook-8|Workbook: Questions|p.85; I',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
