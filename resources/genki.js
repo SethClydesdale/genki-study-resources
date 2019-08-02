@@ -910,6 +910,11 @@
       'lesson-21/workbook-6|Workbook: Adjective + する|p.82; I & II',
       'lesson-21/workbook-7|Workbook: ～てほしい|p.83',
       'lesson-21/workbook-8|Workbook: Questions|p.85; I',
+      'lesson-21/literacy-1|Kanji Practice: 信, 経, and 台|p.330',
+      'lesson-21/literacy-2|Kanji Practice: 風, 犬, and 重|p.330',
+      'lesson-21/literacy-3|Kanji Practice: 初, 若, and 送|p.330-331',
+      'lesson-21/literacy-4|Kanji Practice: 幸, 計, and 遅|p.331',
+      'lesson-21/literacy-5|Kanji Practice: 配, 弟, and 妹|p.331',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
