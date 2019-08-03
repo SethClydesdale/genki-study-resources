@@ -915,6 +915,7 @@
       'lesson-21/literacy-3|Kanji Practice: 初, 若, and 送|p.330-331',
       'lesson-21/literacy-4|Kanji Practice: 幸, 計, and 遅|p.331',
       'lesson-21/literacy-5|Kanji Practice: 配, 弟, and 妹|p.331',
+      'lesson-21/literacy-6|Kanji Practice: Write the Readings|p.332; I-A & B',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
