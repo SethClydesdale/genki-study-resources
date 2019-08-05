@@ -902,6 +902,7 @@
       'lesson-21/grammar-4|Practice: ～間に|p.223; III-A',
       'lesson-21/grammar-5|Practice: Adjective + する|p.223; IV-A',
       'lesson-21/grammar-6|Practice: ～てほしい|p.224; V-A',
+      'lesson-21/culture-1|Culture Note: Religion in Japan|p.229',
       'lesson-21/workbook-1|Workbook: Passive Sentences 1|p.77; I & II',
       'lesson-21/workbook-2|Workbook: Passive Sentences 2|p.78; I & II',
       'lesson-21/workbook-3|Workbook: Passive and ～てもらう|p.79',
@@ -917,6 +918,12 @@
       'lesson-21/literacy-5|Kanji Practice: 配, 弟, and 妹|p.331',
       'lesson-21/literacy-6|Kanji Practice: Write the Readings|p.332; I-A & B',
       'lesson-21/literacy-7|Reading Practice: 厄年|p.333-335; II-B & C',
+      'lesson-21/literacy-wb-1|Workbook: Kanji Writing Practice|p.125',
+      'lesson-21/literacy-wb-2|Workbook: Spelling Practice (信, 経, 台, and 風)|p.125; bonus',
+      'lesson-21/literacy-wb-3|Workbook: Spelling Practice (犬, 重, 初, and 若)|p.125; bonus',
+      'lesson-21/literacy-wb-4|Workbook: Spelling Practice (送, 幸, and 計)|p.125; bonus',
+      'lesson-21/literacy-wb-5|Workbook: Spelling Practice (遅, 配, 第, and 妹)|p.125; bonus',
+      'lesson-21/literacy-wb-6|Workbook: Fill in the Blanks|p.126',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
