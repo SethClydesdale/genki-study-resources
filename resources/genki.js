@@ -903,6 +903,7 @@
       'lesson-21/grammar-5|Practice: Adjective + する|p.223; IV-A',
       'lesson-21/grammar-6|Practice: ～てほしい|p.224; V-A',
       'lesson-21/culture-1|Culture Note: Religion in Japan|p.229',
+      'lesson-21/culture-2|Culture Note: Shrine and Temple Words|p.229',
       'lesson-21/workbook-1|Workbook: Passive Sentences 1|p.77; I & II',
       'lesson-21/workbook-2|Workbook: Passive Sentences 2|p.78; I & II',
       'lesson-21/workbook-3|Workbook: Passive and ～てもらう|p.79',
@@ -924,6 +925,13 @@
       'lesson-21/literacy-wb-4|Workbook: Spelling Practice (送, 幸, and 計)|p.125; bonus',
       'lesson-21/literacy-wb-5|Workbook: Spelling Practice (遅, 配, 第, and 妹)|p.125; bonus',
       'lesson-21/literacy-wb-6|Workbook: Fill in the Blanks|p.126',
+      
+      // Lesson 22
+      'lesson-22/vocab-1|Vocabulary: Nouns 1|p.232',
+      'lesson-22/vocab-2|Vocabulary: Nouns 2|p.232',
+      'lesson-22/vocab-3|Vocabulary: Adjectives and U-verbs|p.232-233',
+      'lesson-22/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.233',
+      'lesson-22/vocab-5|Vocabulary: Adverbs and Other Expressions|p.233',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
