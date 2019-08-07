@@ -97,6 +97,13 @@ code {
 .button:hover, a.button:hover { background:#E50; }
 .button:focus, a.button:focus { background:#D40; }
 
+/* button icons */
+.button .fa {
+  font-size:18px;
+  vertical-align:middle;
+  margin-right:6px;
+}
+
 /* input fields */
 input[type="text"], input[type="number"], textarea {
   font-size:14px;
@@ -1226,6 +1233,9 @@ p.section-desc {
   max-height:300px;
 }
 
+/* remove margin on icon only buttons */
+#study-tool-ui .button .fa { margin:0; }
+
 /* hide remove button on only-child */
 #study-tool-editor ol > li:only-child > .button.row-remove, #study-tool-editor ul > li:only-child > .button.row-remove {
   display:none;
@@ -1302,6 +1312,95 @@ p.section-desc {
 }
 
 
+/* GENKI MODAL */
+#genki-modal-overlay {
+  background:#000 no-repeat center;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  opacity:0.5;
+  z-index:9999;
+}
+
+#genki-modal-body {
+  background:#FFF;
+  border:1px solid #F60;
+  position:fixed;
+  top:10%;
+  left:25%;
+  right:25%;
+  bottom:40%;
+  z-index:99999;
+}
+
+#genki-modal-header {
+  color:#FFF;
+  background:#F60;
+  margin:0;
+  padding:0 6px;
+  height:40px;
+  line-height:40px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+#genki-modal-content {
+  font-size:15px;
+  padding:6px;
+  position:absolute;
+  top:40px;
+  left:0;
+  right:0;
+  bottom:40px;
+}
+
+#genki-modal-buttons {
+  height:40px;
+  line-height:40px;
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+#genki-modal-buttons .button {
+  margin:0 6px 0 6px;
+}
+
+
+/* BREAK TIME */
+#break-timer {
+  font-weight:bold;
+  font-size:24px;
+  position:absolute;
+  top:25%;
+  left:0;
+  right:0;
+}
+
+.taking-a-break #genki-modal-header, .taking-a-break #genki-modal-body, .taking-a-break #genki-modal-overlay {
+  transition:1s;
+}
+
+.taking-a-break #genki-modal-buttons button { display:none }
+.taking-a-break #genki-modal-header {
+  text-align:center;
+  background-color:rgba(255, 102, 0, 0.7);
+}
+
+.taking-a-break #genki-modal-body {
+  background-color:rgba(255, 255, 255, 0.7);
+  border-color:rgba(255, 102, 0, 0.7);
+}
+
+.taking-a-break #genki-modal-overlay {
+  background-size:cover;
+  opacity:1;
+}
+
 
 /* DRAGULA CSS */
 .gu-mirror{position:fixed!important;margin:0!important;z-index:9999!important;opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80)}.gu-hide{display:none!important}.gu-unselectable{-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.gu-transit{opacity:.2;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";filter:alpha(opacity=20)}
@@ -1341,6 +1440,15 @@ p.section-desc {
     float:none;
     margin:3px;
   }
+  
+  /* modal */
+  #genki-modal-header { font-size:16px; }
+  #genki-modal-content { font-size:14px; }
+  #genki-modal-body {
+    left:10%;
+    right:10%;
+    bottom:20%;
+  }
 }
 
 @media (max-width:820px) {
@@ -1373,7 +1481,7 @@ p.section-desc {
   .vocab-key > *:first-child { border-bottom:1px solid #999; }
 
   /* prevent vocab quizzes from wrapping */
-  .drag-quiz #quiz-zone > div:not(#quiz-info) {
+  .drag-quiz #question-list, .drag-quiz #drop-list, .drag-quiz #answer-list {
     float:left;
     width:33.33%;
   }
