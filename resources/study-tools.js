@@ -203,70 +203,88 @@ Genki.tools = {
   },
   
 
-  // begin studying a custom exercise
+  // initialize the study session after asking for confirmation
   study : function () {
-    if (document.getElementById('noStudyWarning').checked || confirm('Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save code" to save it to a text document. (click "do not warn me" to disable this message)')) {
-      var quizlet = document.getElementById('study-tool-json').value
-      // sanitization
-      .replace(/<script.*?>/g, '<span>')
-      .replace(/<\/script>/g, '</span>')
-      .replace(/ on.*?=\\".*?\\"/g, '');
-      
-      document.getElementById('study-tool-editor').style.display = 'none';
-      document.getElementById('exercise').style.display = '';
-      
-      // generate a vocab exercise
-      if (this.type == 'vocab') {
-        Genki.generateQuiz({
-          type : 'drag',
-          info : 'Match the definition/kana to the word/kanji.',
+    if (document.getElementById('noStudyWarning').checked) {
+      this.begin();
+    } else {
+      Genki.modal.open({
+        title : 'Ready to Study?',
+        content : 'Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save code" to save it to a text document. (click "do not warn me" to disable this message)',
 
-          quizlet : JSON.parse(quizlet)
-        });
-      }
-      
-      // generate a spelling exercise
-      else if (this.type == 'spelling') {
-        Genki.generateQuiz({
-          type : 'writing',
-          info : 'Practice spelling the following words.',
+        callback : Genki.tools.begin
+      });
+    }
+  },
+  
+  // begin studying a custom exercise
+  begin : function () {
+    var type = Genki.tools.type,
+    quizlet = document.getElementById('study-tool-json').value
+    // sanitization
+    .replace(/<script.*?>/g, '<span>')
+    .replace(/<\/script>/g, '</span>')
+    .replace(/ on.*?=\\".*?\\"/g, '');
 
-          columns : +document.getElementById('spellingColumns').value,
-          quizlet : JSON.parse(quizlet)
-        });
-      }
-      
-      // generate a multi-choice quiz
-      else if (this.type == 'quiz') {
-        Genki.generateQuiz({
-          type : 'multi',
-          info : 'Answer the following questions.',
-          
-          quizlet : JSON.parse(quizlet)
-        });
-      }
-      
-      // generate a written quiz
-      else if (this.type == 'fill') {
-        Genki.generateQuiz({
-          type : 'fill',
-          info : 'Answer the following questions.',
-          
-          quizlet : JSON.parse(quizlet).quiz
-        });
-      }
+    document.getElementById('study-tool-editor').style.display = 'none';
+    document.getElementById('exercise').style.display = '';
+
+    // generate a vocab exercise
+    if (type == 'vocab') {
+      Genki.generateQuiz({
+        type : 'drag',
+        info : 'Match the definition/kana to the word/kanji.',
+
+        quizlet : JSON.parse(quizlet)
+      });
+    }
+
+    // generate a spelling exercise
+    else if (type == 'spelling') {
+      Genki.generateQuiz({
+        type : 'writing',
+        info : 'Practice spelling the following words.',
+
+        columns : +document.getElementById('spellingColumns').value,
+        quizlet : JSON.parse(quizlet)
+      });
+    }
+
+    // generate a multi-choice quiz
+    else if (type == 'quiz') {
+      Genki.generateQuiz({
+        type : 'multi',
+        info : 'Answer the following questions.',
+
+        quizlet : JSON.parse(quizlet)
+      });
+    }
+
+    // generate a written quiz
+    else if (type == 'fill') {
+      Genki.generateQuiz({
+        type : 'fill',
+        info : 'Answer the following questions.',
+
+        quizlet : JSON.parse(quizlet).quiz
+      });
     }
   },
   
   
   // imports snippets for custom written quizzes
   importSnippet : function (id) {
-    if (confirm('Are you sure you want to import this snippet? It will overwrite your current quiz settings.')) {
-      document.querySelector('#study-tool-ui textarea').value = document.getElementById(id).value;
-      this.updateJSON();
+    Genki.modal.open({
+      title : 'Import Snippet?',
+      content : 'Are you sure you want to import this snippet? It will overwrite your current quiz settings.',
       
-      Genki.scrollTo('#quiz-settings');
-    }
+      callback : function () {
+        document.querySelector('#study-tool-ui textarea').value = document.getElementById(id).value;
+        Genki.tools.updateJSON();
+
+        Genki.scrollTo('#quiz-settings');
+      }
+    });
   },
   
   

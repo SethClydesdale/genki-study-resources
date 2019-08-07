@@ -32,9 +32,11 @@
       
       // buttons
       // review button for drag/drop exercises
-      review : '<div id="review-exercise" class="center clearfix"><button id="review-button" class="button" onclick="Genki.review();">Review</button></div>', 
+      review : '<div id="review-exercise" class="center clearfix"><button id="review-button" class="button" onclick="Genki.review();"><i class="fa">&#xf02d;</i>Review</button></div>',
       // furigana toggle for vocab exercises
-      toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);">' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>'
+      toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);"><i class="fa">&#xf2a8;</i>' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>',
+      // check answers button for written exercises
+      check_answers : '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();"><i class="fa">&#xf00c;</i>Check Answers</button></div>'
     },
 
     // info about the currently active exercise
@@ -932,6 +934,7 @@
       'lesson-22/vocab-3|Vocabulary: Adjectives and U-verbs|p.232-233',
       'lesson-22/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.233',
       'lesson-22/vocab-5|Vocabulary: Adverbs and Other Expressions|p.233',
+      'lesson-22/grammar-1|Practice: Causative Sentences 1|p.240; I-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1168,7 +1171,7 @@
         }
 
         // add the quiz to the document
-        zone.innerHTML = quiz + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();">Check Answers</button></div>';
+        zone.innerHTML = quiz + '</div>' + Genki.lang.check_answers;
         
         // add a class for non-practice writing exercises
         // this will remove helpers, forcing the student to recall what they learned
@@ -1289,7 +1292,7 @@
             '</span>';
           }
           
-        }) + '</div>' + '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers(false, \'fill\');">Check Answers</button></div>';
+        }) + '</div>' + Genki.lang.check_answers.replace('()', '(false, \'fill\')');
         
         // auto-focus the first input field
         document.querySelector('.writing-zone-input').autofocus = true;
@@ -1436,8 +1439,9 @@
             'Keep studying! ' + Genki.lang[type ? type + '_mistakes' : 'mistakes']
           )+
           '<div class="center">'+
-            '<a href="./' + Genki.local + '" class="button">Try Again</a>'+
-            '<a href="' + document.getElementById('home-link').href + '" class="button">Back to Index</a>'+
+            '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Try Again</a>'+
+            '<button class="button" onclick="Genki.breakTime();"><i class="fa">&#xf0f4;</i>Take a Break</button>'+
+            '<a href="' + document.getElementById('home-link').href + '" class="button"><i class="fa">&#xf015;</i>Back to Index</a>'+
           '</div>'+
         '</div>'+
       '</div>';
@@ -1447,30 +1451,178 @@
       Genki.scrollTo('#complete-banner', true); // jump to the quiz results
     },
     
+    
+    // allows the student to take a break before trying again
+    breakTime : function () {
+      Genki.modal.open({
+        title : 'Take a Break?',
+        content : 'Taking a break and waiting before trying again can greatly help with building your memory. When you try to recall something as it fades away, you\'re telling your brain that you shouldn\'t forget that item. However, if you keep bringing up the same item over and over again in a short period of time, you\'re less likely to remember, because that item will be kept in your brain\'s short-term memory.<br><br>5 to 10 minute breaks are recommended before trying again, but you\'re free to adjust the time to your liking.<br><br>'+
+        '<div class="center">Wait <input id="break-minutes" type="number" value="5" min="1" max="60"> Minutes</div>',
+        buttonText : 'Wait',
+        keepOpen : true,
+        
+        // initializes the break timer
+        callback : function () {
+          var time = +document.getElementById('break-minutes').value, n;
+          
+          // corrects time
+          if (time > 60) {
+            time = 60;
+          } else if (time <= 0) {
+            time = 1;
+          }
+          
+          // opens the break modal
+          Genki.modal.open({
+            title : 'Taking a Break',
+            content : '<div id="break-timer" class="center">00:' + (time < 10 ? '0' : '') + time + ':00</div>',
+            buttonText : 'End Break Time',
+            keepOpen : true,
+            
+            // reloads the current exercise
+            callback : function () {
+              location.reload();
+            }
+          });
+          
+          document.body.className += ' taking-a-break'; // adjusts the style and functionality of the modal
+          
+          // turns the overlay into a soothing backround
+          n = Math.floor(Math.random() * 10) + 1;
+          document.getElementById('genki-modal-overlay').style.backgroundImage = 'url(../../../resources/images/backgrounds/bg-' + (n < 10 ? '0' : '') + n + '.jpg)';
+          
+          // initialize timer
+          var timer = new Timer(),
+              clock = document.getElementById('break-timer');
+
+          timer.start({
+            startValues : { minutes : time },
+            target : { seconds : 0 },
+            countdown : true
+          });
+          
+          // update the timer
+          timer.addEventListener('secondsUpdated', function (e) {
+            var timeString = timer.getTimeValues().toString();
+            clock.innerHTML = timeString;
+            
+            // break time ends
+            if (timeString == '00:00:00') {
+              clock.innerHTML = 'Break time is up!<div style="font-size:15px;">Click the button below to resume your studies.</div>';
+              document.getElementById('genki-modal-ok').style.display = 'inline-block';
+            }
+          });
+        }
+      });
+    },
+    
 
     // places draggable items into their correct places
     // allows the student to review meanings without having to consult their textbook
     review : function () {
       // ask for confirmation, just in case the button was clicked by accident
-      if (confirm('Are you sure you want to review? Your current progress will be lost.')) {
-        var a = document.querySelectorAll('[data-answer]'),
-            i = 0,
-            j = a.length;
+      Genki.modal.open({
+        title : 'Activate Review Mode?',
+        content : 'Are you sure you want to review? Your current progress will be lost.',
+        
+        callback : function () {
+          var a = document.querySelectorAll('[data-answer]'),
+              i = 0,
+              j = a.length;
 
-        for (; i < j; i++) {
-          document.querySelector('[data-text="' + a[i].dataset.answer + '"]').appendChild(a[i]);
+          for (; i < j; i++) {
+            document.querySelector('[data-text="' + a[i].dataset.answer + '"]').appendChild(a[i]);
+          }
+
+          // stop and hide timer + drag/drop
+          Genki.timer.stop();
+          Genki.drake.destroy();
+          document.getElementById('quiz-timer').style.display = 'none';
+
+          // show restart button
+          document.getElementById('review-exercise').innerHTML = '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Restart</a>' + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
+
+          // change the quiz info
+          document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';
         }
+      });
+    },
+    
+    
+    // creates a modal or closes one
+    modal : {
+      
+      // opens a new modal
+      // params: object (optional)
+      // {
+      //      title : string,
+      //    content : string,
+      // buttonText : string,
+      //   keepOpen : bool, (keeps the modal open when clicking the callback button; useful for opening another modal afterwards)
+      //   callback : function
+      // } // all values are optional
+      open : function (o) {
+        o = o ? o : {};
+        
+        Genki.modal.close();
+        
+        // create the modal and set its params
+        var modal = document.createElement('DIV'), button, buttons;
+        modal.id = 'genki-modal';
+        modal.innerHTML = 
+        '<div id="genki-modal-overlay"></div>'+
+        '<div id="genki-modal-body">'+
+          '<h2 id="genki-modal-header">' + ( o.title ? o.title : 'Popup' ) + '</h2>'+
+          '<div id="genki-modal-content">' + ( o.content ? o.content : '' ) + '</div>'+
+          '<div id="genki-modal-buttons" class="center">'+
+            '<button id="genki-modal-close" class="button" onclick="Genki.modal.close();">Cancel</button>'+
+          '</div>'+
+        '</div>';
+        
+        // create a button for the callback function
+        if (o.callback) {
+          button = document.createElement('BUTTON');
+          buttons = modal.querySelector('#genki-modal-buttons');
+          
+          // set button params
+          button.innerText = o.buttonText ? o.buttonText : 'OK';
+          button.id = 'genki-modal-ok';
+          button.className = 'button';
+          button.onclick = function () {
+            o.callback();
+            !o.keepOpen && Genki.modal.close();
+          };
+          
+          // insert button into buttons list
+          buttons.insertBefore(button, buttons.firstChild);
+        }
+        
+        // add the modal to the document
+        document.body.style.overflow = 'hidden';
+        document.body.appendChild(modal);
+        
+        // focus confirm/ok button
+        document.getElementById('genki-modal-' + (o.callback ? 'ok' : 'cancel')).focus();
+        
+        // pause the timer when opening the modal
+        if (Genki.timer && Genki.timer.isRunning()) {
+          Genki.timer.pause();
+        }
+      },
+      
+      // close the modal
+      close : function () {
+        var modal = document.getElementById('genki-modal');
 
-        // stop and hide timer + drag/drop
-        Genki.timer.stop();
-        Genki.drake.destroy();
-        document.getElementById('quiz-timer').style.display = 'none';
-
-        // show restart button
-        document.getElementById('review-exercise').innerHTML = '<a href="./' + Genki.local + '" class="button">Restart</a>' + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
-
-        // change the quiz info
-        document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';
+        if (modal) {
+          document.body.style.overflow = '';
+          document.body.removeChild(modal);
+        }
+        
+        // resume the timer when closing the modal
+        if (Genki.timer && Genki.timer.isPaused()) {
+          Genki.timer.start();
+        }
       }
     },
     
@@ -1506,50 +1658,54 @@
       // check the answers for writing exercises
       // mapEnded means the end of Genki.input.map was reached via Genki.check.value()
       answers : function (mapEnded, type) {
-        // ask for confirmation, just in case the button was clicked by accident
-        if (!Genki.exerciseComplete && confirm(mapEnded ? 'The last input field has been filled in. Are you ready to check your answers?' : 'Checking your answers will end the quiz. Do you want to continue?')) {
-          Genki.exerciseComplete = true;
+        !Genki.exerciseComplete && Genki.modal.open({
+          title : 'Check Answers?',
+          content : mapEnded ? 'The last input field has been filled in. Are you ready to check your answers?' : 'Checking your answers will end the quiz. Do you want to continue?',
+          
+          callback : function () {
+            Genki.exerciseComplete = true;
 
-          // hide check answers button
-          document.getElementById('check-answers').style.display = 'none';
+            // hide check answers button
+            document.getElementById('check-answers').style.display = 'none';
 
-          // loop over the inputs and check to see if the answers are correct
-          var input = document.querySelectorAll('#exercise .writing-zone-input'),
-              i = 0, j = input.length, val, answer, data;
+            // loop over the inputs and check to see if the answers are correct
+            var input = document.querySelectorAll('#exercise .writing-zone-input'),
+                i = 0, j = input.length, val, answer, data;
 
-          for (; i < j; i++) {
-            data = input[i].dataset;
-            val = input[i].value.toLowerCase();
-            answer = data.answer.toLowerCase();
+            for (; i < j; i++) {
+              data = input[i].dataset;
+              val = input[i].value.toLowerCase();
+              answer = data.answer.toLowerCase();
 
-            // increment mistakes if the answer is incorrect
-            if (
-              (!data.answer2 && val != answer)
-              || 
-              (data.answer2 && val != answer && val != data.answer2.toLowerCase())
-            ) {
-              data.mistakes = ++data.mistakes;
-              ++Genki.stats.mistakes;
-              
-              if (type == 'fill') {
-                input[i].parentNode.insertAdjacentHTML('beforeend', '<span class="problem-answer">' + data.answer + (data.answer2 || data.furigana ? '<span class="secondary-answer' + (data.furigana ? ' furigana-only' : '') + '">' + (data.answer2 || data.furigana) + '</span>' : '') + '</span>');
+              // increment mistakes if the answer is incorrect
+              if (
+                (!data.answer2 && val != answer)
+                || 
+                (data.answer2 && val != answer && val != data.answer2.toLowerCase())
+              ) {
+                data.mistakes = ++data.mistakes;
+                ++Genki.stats.mistakes;
+
+                if (type == 'fill') {
+                  input[i].parentNode.insertAdjacentHTML('beforeend', '<span class="problem-answer">' + data.answer + (data.answer2 || data.furigana ? '<span class="secondary-answer' + (data.furigana ? ' furigana-only' : '') + '">' + (data.answer2 || data.furigana) + '</span>' : '') + '</span>');
+                }
               }
+
+              // add classname to correct answers
+              else {
+                input[i].parentNode.className += ' answer-correct';  
+              }
+
+              // increment problems solved
+              ++Genki.stats.solved;
+
+              // disable the input
+              input[i].disabled = true;
             }
 
-            // add classname to correct answers
-            else {
-              input[i].parentNode.className += ' answer-correct';  
-            }
-
-            // increment problems solved
-            ++Genki.stats.solved;
-            
-            // disable the input
-            input[i].disabled = true;
+            Genki.endQuiz(type ? type : 'writing'); // show quiz results
           }
-
-          Genki.endQuiz(type ? type : 'writing'); // show quiz results
-        }
+        });
       }
     },
 
@@ -1717,7 +1873,8 @@
       }
       
     },
-
+    
+    
     // initial setup for exercise functionality
     init : function () {
       // finds the currently active exercise in the exercise list and sets up essential data for following statements
