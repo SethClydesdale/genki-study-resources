@@ -935,6 +935,7 @@
       'lesson-22/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.233',
       'lesson-22/vocab-5|Vocabulary: Adverbs and Other Expressions|p.233',
       'lesson-22/grammar-1|Practice: Causative Sentences 1|p.240; I-A',
+      'lesson-22/grammar-2|Practice: Causative Sentences 2|p.240-241; I-B',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1457,7 +1458,7 @@
       Genki.modal.open({
         title : 'Take a Break?',
         content : 'Taking a break and waiting before trying again can greatly help with building your memory. When you try to recall something as it fades away, you\'re telling your brain that you shouldn\'t forget that item. However, if you keep bringing up the same item over and over again in a short period of time, you\'re less likely to remember, because that item will be kept in your brain\'s short-term memory.<br><br>5 to 10 minute breaks are recommended before trying again, but you\'re free to adjust the time to your liking.<br><br>'+
-        '<div class="center">Wait <input id="break-minutes" type="number" value="5" min="1" max="60"> Minutes</div>',
+        '<div class="center">Wait <input id="break-minutes" class="center" type="number" value="5" min="1" max="60"> Minute(s)</div>',
         buttonText : 'Wait',
         keepOpen : true,
         
