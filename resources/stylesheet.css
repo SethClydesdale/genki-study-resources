@@ -1,5 +1,5 @@
 @font-face {
-  font-family:'FontAwesome';
+  font-family:'FontAwesomeWeb';
   src:url('fonts/fontawesome-webfont.eot?v=4.7.0');
   src:url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), 
       url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 
@@ -12,7 +12,7 @@
 
 .fa { 
   display:inline-block;
-  font:normal normal normal 14px/1 FontAwesome;
+  font:normal normal normal 14px/1 FontAwesomeWeb, FontAwesome;
   font-size:inherit;
   text-rendering:auto;
   -webkit-font-smoothing:antialiased;
@@ -71,6 +71,8 @@ a {
   outline:none;
 }
 a:hover, a:focus { text-decoration:underline; }
+
+img { max-width:100%; }
 
 code {
   color:#00F;
@@ -241,7 +243,6 @@ a#fork-me:hover, a#fork-me:focus {
 /* section anchors */
 a.anchor {
   color:#666;
-  font-family:FontAwesome;
   font-size:16px;
   font-weight:normal;
   text-decoration:none;
@@ -324,7 +325,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 #exercise:after {
   content:"\f1ce";
   font-size:64px;
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   left:50%;
   margin-top:-32px;
   margin-left:-32px;
@@ -417,7 +418,7 @@ footer ul {
 footer li { float:left; }
 footer li:before {
   content:"\f111";
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   font-size:6px;
   margin:0 5px;
   vertical-align:middle;
@@ -453,7 +454,7 @@ footer li:first-child:before { display:none; }
 #quiz-info:before {
   content:"\f05a";
   font-size:32px;
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   position:absolute;
   top:50%;
   margin-top:-16px;
@@ -502,7 +503,7 @@ footer li:first-child:before { display:none; }
 #more-exercises a.button { margin:3px 0; }
 #more-exercises a:before, #more-exercises a:after {
   font-size:18px;
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   font-weight:normal;
   vertical-align:middle;
 }
@@ -559,7 +560,7 @@ footer li:first-child:before { display:none; }
 #toggle-exercises:after, #toggle-exercises:before {
   color:#FFF;
   font-size:28px;
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   position:absolute;
   left:0;
   right:0;
@@ -611,7 +612,7 @@ footer li:first-child:before { display:none; }
 
 #exercise-list .lesson-title:before {
   content:"\f054";
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   margin-right:3px;
 }
 #exercise-list .lesson-title.lesson-open:before { content:"\f078"; }
@@ -649,7 +650,7 @@ footer li:first-child:before { display:none; }
 #exercise-list a:before {
   content:"\f054";
   color:#333;
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   margin-right:3px;
 }
 
@@ -681,7 +682,7 @@ footer li:first-child:before { display:none; }
 .answer-correct { pointer-events:none; }
 .answer-correct .quiz-item:before {
   content:"\f005\A0";
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   color:#F60;
 }
 
@@ -890,7 +891,7 @@ input.writing-zone-input:focus { border-color:#F60; }
 .writing-zone.answer-correct { position:relative; }
 .writing-zone.answer-correct:after {
   content:"\f005";
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   color:#F60;
   position:absolute;
   right:-4px;
@@ -997,7 +998,7 @@ input.writing-zone-input:focus { border-color:#F60; }
 
 .quiz-multi-answer.next-question:before {
   content:"\f061";
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   left:auto;
   right:6px;
   margin-top:-9px;
@@ -1271,7 +1272,7 @@ p.section-desc {
 
 #downloadCode { font-weight:bold; }
 #downloadCode:before{
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   font-weight:normal;
   font-size:16px;
   margin-right:4px;
@@ -1355,6 +1356,7 @@ p.section-desc {
   left:0;
   right:0;
   bottom:40px;
+  overflow-y:auto;
 }
 
 #genki-modal-buttons {
@@ -1372,6 +1374,8 @@ p.section-desc {
 
 
 /* BREAK TIME */
+#break-minutes { width:50px; }
+
 #break-timer {
   font-weight:bold;
   font-size:24px;
