@@ -57,13 +57,12 @@
         'style="color:#F60;" '+
         'href="#copy-search-link" '+
         'title="Copy the search link" '+
-        'onclick="'+
-          'window.prompt('+
-            '\'You can copy the direct search link from the box below.\', '+
-            '\'' + (window.location.protocol + '//' + window.location.host + window.location.pathname) + '?search=' + encodeURIComponent(value) + '\''+
-          '); '+
-          'return false;'+
-        '"'+
+        'onclick="GenkiModal.open({'+
+          'title : \'Copy Search Link\','+
+          'content : \'<div class=&quot;center&quot;><p>You can copy the direct search link from the box below.</p>'+
+          '<textarea id=&quot;copied-search-link&quot; onfocus=&quot;this.select();&quot; style=&quot;width:80%;height:100px;&quot;>' + (window.location.protocol + '//' + window.location.host + window.location.pathname) + '?search=' + encodeURIComponent(value) + '</textarea></div>\','+
+          'focus : \'#copied-search-link\''+
+        '}); return false;"'+
       '>&#xf0ea;</a>' : '';
   };
   

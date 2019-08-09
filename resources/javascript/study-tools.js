@@ -208,7 +208,7 @@ Genki.tools = {
     if (document.getElementById('noStudyWarning').checked) {
       this.begin();
     } else {
-      Genki.modal.open({
+      GenkiModal.open({
         title : 'Ready to Study?',
         content : 'Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save code" to save it to a text document. (click "do not warn me" to disable this message)',
 
@@ -274,7 +274,7 @@ Genki.tools = {
   
   // imports snippets for custom written quizzes
   importSnippet : function (id) {
-    Genki.modal.open({
+    GenkiModal.open({
       title : 'Import Snippet?',
       content : 'Are you sure you want to import this snippet? It will overwrite your current quiz settings.',
       
@@ -328,3 +328,6 @@ Genki.tools = {
   }
   
 };
+
+// clone more exercises and add it to the study tools editor
+document.getElementById('study-tool-editor').appendChild(document.querySelector('.more-exercises').cloneNode(true));

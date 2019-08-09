@@ -1,0 +1,108 @@
+/* 
+  # Dark Theme for Genki Study Resources
+  1. FONT COLORS
+  2. BACKGROUND COLORS
+  3. BORDER COLORS
+  4. EXCEPTIONS
+*/
+
+/* 1. FONT COLORS */
+input[type="text"]::placeholder, input[type="number"]::placeholder, textarea::placeholder, input.writing-zone-input::placeholder, .fill-quiz .writing-zone-input::placeholder {
+  color:#444;
+}
+
+input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled, input.writing-zone-input:disabled, .secondary-answer.furigana-only, a.anchor, #exercise-title:after, .quiz-item:before {
+  color:#666;
+}
+
+.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before {
+  color:#777;
+}
+
+body, input[type="text"], input[type="number"], textarea, #exercise-list .lesson-title, #exercise-list a:before, .quiz-multi-answer {
+  color:#AAA;
+}
+
+#quiz-progress-text {
+  color:#FFF;
+}
+
+a, code {
+  color:#69A;
+}
+
+
+/* 2. BACKGROUND COLORS */
+body { background-color:#161616; }
+
+code, input[type="text"], input[type="number"], textarea, .table td, .writing-zone, .quiz-multi-answer, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, input.writing-zone-input {
+  background-color:#1A1A1A;
+}
+
+.quiz-column-title, .verb-quiz .quiz-answer-zone:not(:empty), .quiz-item, #exercise-list, .text-block, #result-list, #genki-modal-body, .question-block {
+  background-color:#222;
+}
+
+.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before {
+  background-color:#333;
+}
+
+
+/* 3. BORDER COLORS */
+code, input[type="text"], input[type="number"], textarea, .table td, .quiz-column-title, .verb-quiz .quiz-answer-zone:not(:empty), .verb-quiz.quiz-over [data-mistakes="0"], #quick-search-results, .quiz-item, .quiz-answer-zone:empty, #exercise-list, #exercise-list .lesson-title, #exercise-list ul, .quiz-over [data-mistakes="0"] .quiz-item, input.writing-zone-input, .writing-quiz.quiz-over [data-mistakes="0"], .question-block, .quiz-multi-question, .quiz-multi-question .lesson-image img, .quiz-multi-answer, .text-block, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, #result-list, .result-row, #study-tool-ui .item-row.question-row {
+  border-color:#333;
+}
+
+.fill-quiz .writing-zone-input, .vocab-key, .vocab-key > *:last-child, .vocab-key > *:first-child, .vocab-key:before {
+  border-color:#444;
+}
+
+input[type="text"]::placeholder, input[type="text"]:hover, input[type="number"]:hover, textarea:hover, input.writing-zone-input:hover {
+  border-color:#555;
+}
+
+.fill-quiz .writing-zone-input:hover {
+  border-color:#666;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus, input.writing-zone-input:focus, .fill-quiz .writing-zone-input:focus {
+  border-color:#F60;
+}
+
+
+/* 4. EXCEPTIONS */
+.taking-a-break #genki-modal-body {
+  background-color:rgba(34, 34, 34, 0.7);
+}
+
+.show-bg .problem-answer, .show-bg .secondary-answer {
+  background-color:rgba(26, 26, 26, 0.5);
+  border-color:rgba(51, 51, 51, 0.7);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width:17px;
+  height:17px;
+}
+
+::-webkit-scrollbar-track { background:#1A1A1A; }
+::-webkit-scrollbar-thumb {
+  background-color:#333;
+  border:2px solid #1A1A1A;
+}
+
+/* scrollbar buttons */
+::-webkit-scrollbar-button:single-button {
+  background:url(../images/general/webkit-arrows.gif) no-repeat 0 0 #333;
+  height:17px;
+  width:17px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment { background-position:-17px 0 }
+::-webkit-scrollbar-button:single-button:horizontal:decrement { background-position:-34px 0 }
+::-webkit-scrollbar-button:single-button:horizontal:increment { background-position:-51px 0 }
+
+/* hover / active scrollbar colors */
+::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-button:hover { background-color:#444; }
+::-webkit-scrollbar-thumb:active, ::-webkit-scrollbar-button:active { background-color:#555; }

@@ -21,8 +21,9 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
-    <link rel="stylesheet" href="../../../resources/stylesheet.min.css">
-    <script src="../../../resources/ga.js" async></script>
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
   </head>
 
   <body>
@@ -53,10 +54,10 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/dragula.min.js"></script>
-    <script src="../../../resources/easytimer.min.js"></script>
-    <script src="../../../resources/genki.min.js"></script>
-    <script src="../../../resources/javascript.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/javascript.min.js"></script>
     <script>Genki.generateQuiz({
       type : 'fill',
       info : 'Look at the bulletin board at the bottom of the page and answer the questions.',
@@ -87,7 +88,7 @@
         '<p style="text-align:right;font-size:12px;">Answers are given in English. Don\'t worry if your answer is marked wrong, so long as the meaning is the same.<br>You may use the provided answers as a reference to self-check your answers.</p>'+
         
         '<div class="sub-section" style="width:800px;">'+
-          '<h2 class="center" style="color:#FFF;background:#F60;border-bottom:1px solid #DDD;margin:-7px -7px 0 -7px;padding-top:3px;">でんごんばん</h2>'+
+          '<h2 id="bulletin-board-title" class="center">でんごんばん</h2>'+
         
           '<div id="bulletin-board" class="columns-2 clear" style="padding:25px 25px 0 25px;">'+
             '<div class="center" style="width:70%;">'+
@@ -140,6 +141,14 @@
         position:relative;
       }
       
+      #bulletin-board-title {
+        color:#FFF;
+        background:#F60;
+        border-bottom:1px solid #DDD;
+        margin:-7px -7px 0 -7px;
+        padding-top:3px;
+      }
+      
       #bulletin-board > div:after, #bulletin-board > div:before {
         content:"";
         background:#CCC;
@@ -153,6 +162,14 @@
 
       #bulletin-board > div:before { left:6px; }
       #bulletin-board > div:after { right:6px; }
+      
+      .dark-mode #bulletin-board { background-color:#1A1A1A; }
+      .dark-mode #bulletin-board > div { background-color:#222; }
+      .dark-mode #bulletin-board-title { border-color:#333; }
+      .dark-mode #bulletin-board > div:after, .dark-mode #bulletin-board > div:before {
+        background-color:#333;
+        box-shadow:2px 2px 0 #111;
+      }
     </style>
   </body>
 </html>
