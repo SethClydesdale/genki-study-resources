@@ -936,6 +936,7 @@
       'lesson-22/vocab-5|Vocabulary: Adverbs and Other Expressions|p.233',
       'lesson-22/grammar-1|Practice: Causative Sentences 1|p.240; I-A',
       'lesson-22/grammar-2|Practice: Causative Sentences 2|p.240-241; I-B',
+      'lesson-22/grammar-3|Practice: Causative + くれる|p.243; II-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1455,7 +1456,7 @@
     
     // allows the student to take a break before trying again
     breakTime : function () {
-      Genki.modal.open({
+      GenkiModal.open({
         title : 'Take a Break?',
         content : 'Taking a break and waiting before trying again can greatly help with building your memory. When you try to recall something as it fades away, you\'re telling your brain that you shouldn\'t forget that item. However, if you keep bringing up the same item over and over again in a short period of time, you\'re less likely to remember, because that item will be kept in your brain\'s short-term memory.<br><br>5 to 10 minute breaks are recommended before trying again, but you\'re free to adjust the time to your liking.<br><br>'+
         '<div class="center">Wait <input id="break-minutes" class="center" type="number" value="5" min="1" max="60"> Minute(s)</div>',
@@ -1474,7 +1475,7 @@
           }
           
           // opens the break modal
-          Genki.modal.open({
+          GenkiModal.open({
             title : 'Taking a Break',
             content : '<div id="break-timer" class="center">00:' + (time < 10 ? '0' : '') + time + ':00</div>',
             buttonText : 'End Break Time',
@@ -1522,7 +1523,7 @@
     // allows the student to review meanings without having to consult their textbook
     review : function () {
       // ask for confirmation, just in case the button was clicked by accident
-      Genki.modal.open({
+      GenkiModal.open({
         title : 'Activate Review Mode?',
         content : 'Are you sure you want to review? Your current progress will be lost.',
         
@@ -1547,84 +1548,6 @@
           document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';
         }
       });
-    },
-    
-    
-    // creates a modal or closes one
-    modal : {
-      
-      // opens a new modal
-      // params: object (optional)
-      // {
-      //      title : string,
-      //    content : string,
-      // buttonText : string,
-      //   keepOpen : bool, (keeps the modal open when clicking the callback button; useful for opening another modal afterwards)
-      //   callback : function
-      // } // all values are optional
-      open : function (o) {
-        o = o ? o : {};
-        
-        Genki.modal.close();
-        
-        // create the modal and set its params
-        var modal = document.createElement('DIV'), button, buttons;
-        modal.id = 'genki-modal';
-        modal.innerHTML = 
-        '<div id="genki-modal-overlay"></div>'+
-        '<div id="genki-modal-body">'+
-          '<h2 id="genki-modal-header">' + ( o.title ? o.title : 'Popup' ) + '</h2>'+
-          '<div id="genki-modal-content">' + ( o.content ? o.content : '' ) + '</div>'+
-          '<div id="genki-modal-buttons" class="center">'+
-            '<button id="genki-modal-close" class="button" onclick="Genki.modal.close();">Cancel</button>'+
-          '</div>'+
-        '</div>';
-        
-        // create a button for the callback function
-        if (o.callback) {
-          button = document.createElement('BUTTON');
-          buttons = modal.querySelector('#genki-modal-buttons');
-          
-          // set button params
-          button.innerText = o.buttonText ? o.buttonText : 'OK';
-          button.id = 'genki-modal-ok';
-          button.className = 'button';
-          button.onclick = function () {
-            o.callback();
-            !o.keepOpen && Genki.modal.close();
-          };
-          
-          // insert button into buttons list
-          buttons.insertBefore(button, buttons.firstChild);
-        }
-        
-        // add the modal to the document
-        document.body.style.overflow = 'hidden';
-        document.body.appendChild(modal);
-        
-        // focus confirm/ok button
-        document.getElementById('genki-modal-' + (o.callback ? 'ok' : 'cancel')).focus();
-        
-        // pause the timer when opening the modal
-        if (Genki.timer && Genki.timer.isRunning()) {
-          Genki.timer.pause();
-        }
-      },
-      
-      // close the modal
-      close : function () {
-        var modal = document.getElementById('genki-modal');
-
-        if (modal) {
-          document.body.style.overflow = '';
-          document.body.removeChild(modal);
-        }
-        
-        // resume the timer when closing the modal
-        if (Genki.timer && Genki.timer.isPaused()) {
-          Genki.timer.start();
-        }
-      }
     },
     
     
@@ -1659,7 +1582,7 @@
       // check the answers for writing exercises
       // mapEnded means the end of Genki.input.map was reached via Genki.check.value()
       answers : function (mapEnded, type) {
-        !Genki.exerciseComplete && Genki.modal.open({
+        !Genki.exerciseComplete && GenkiModal.open({
           title : 'Check Answers?',
           content : mapEnded ? 'The last input field has been filled in. Are you ready to check your answers?' : 'Checking your answers will end the quiz. Do you want to continue?',
           
@@ -1776,7 +1699,7 @@
       
       // creates prev/next exercise buttons
       exerciseButtons : function () {
-        var more = '<div id="more-exercises" class="clear">',
+        var more = '<div class="more-exercises clear">',
             i = 2,
             a;
 

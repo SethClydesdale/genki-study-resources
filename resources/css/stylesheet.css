@@ -1,11 +1,11 @@
 @font-face {
   font-family:'FontAwesomeWeb';
-  src:url('fonts/fontawesome-webfont.eot?v=4.7.0');
-  src:url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), 
-      url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 
-      url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), 
-      url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), 
-      url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  src:url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), 
+      url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 
+      url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), 
+      url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), 
+      url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight:normal;
   font-style:normal;
 }
@@ -186,7 +186,7 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus { border-co
 /* header */
 header {
   color:#FFF;
-  background:url('images/genki.png') no-repeat 10px 50% #F60;
+  background:url('../images/genki.png') no-repeat 10px 50% #F60;
   padding:15px 15px 15px 140px;
   position:relative;
   overflow:hidden;
@@ -406,8 +406,8 @@ footer {
   padding:15px;
 }
 
-footer a { color:#CCC; }
-footer a:hover { color:#FFF; }
+footer a, #light-switch-label { color:#CCC; }
+footer a:hover, #light-switch-label:hover { color:#FFF; }
 
 footer ul {
   list-style-type:none;
@@ -498,24 +498,24 @@ footer li:first-child:before { display:none; }
 
 
 /* more exercises style */
-#more-exercises { margin-top:10px; }
+.more-exercises { margin-top:10px; }
 
-#more-exercises a.button { margin:3px 0; }
-#more-exercises a:before, #more-exercises a:after {
+.more-exercises a.button { margin:3px 0; }
+.more-exercises a:before, .more-exercises a:after {
   font-size:18px;
   font-family:FontAwesomeWeb, FontAwesome;
   font-weight:normal;
   vertical-align:middle;
 }
 
-#more-exercises a.prev-ex { float:left }
-#more-exercises a.prev-ex:before {
+.more-exercises a.prev-ex { float:left }
+.more-exercises a.prev-ex:before {
   content:"\f060";
   margin-right:10px;
 }
 
-#more-exercises a.next-ex { float:right }
-#more-exercises a.next-ex:after {
+.more-exercises a.next-ex { float:right }
+.more-exercises a.next-ex:after {
   content:"\f061";
   margin-left:10px;
 }
@@ -946,7 +946,7 @@ input.writing-zone-input:focus { border-color:#F60; }
 }
 
 .quiz-multi-question .lesson-image img {
-  border: 1px solid #ccc;
+  border:1px solid #CCC;
   margin:3px;
 }
 
@@ -1406,6 +1406,69 @@ p.section-desc {
 }
 
 
+/* DARK MODE */
+#light-switch-container {
+  text-align:center;
+  height:0;
+  margin-top:-3px;
+}
+
+#light-switch-label {
+  vertical-align:middle;
+  cursor:pointer;
+}
+
+#light-switch {
+  background-color:rgba(0, 0, 0, 0.25);
+  vertical-align:middle;
+  display:inline-block;
+  position:relative;
+  height:26px;
+  width:60px;
+  border-radius:20px;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+#light-switch > input { display:none; }
+#light-switch > div {
+  background-color:rgba(255, 255, 255, 0.5);
+  position:absolute;
+  top:3px;
+  left:3px;
+  height:20px;
+  width:20px;
+  border-radius:20px;
+  transition:.4s;
+  font-size:13px;
+  font-weight:700;
+  line-height:22px;
+}
+
+#light-switch > div:before {
+  content:'ON';
+  margin-left:-27px;
+  color:transparent;
+  transition:400ms;
+}
+
+#light-switch > div:after {
+  content:'OFF';
+  margin-left:30px;
+  color:rgba(255, 255, 255, 0.5);
+  transition:400ms;
+}
+
+#light-switch > input:checked + div {
+  background-color:#FFF;
+  left:37px;
+}
+
+#light-switch > input:checked + div:before { color:#FFF; }
+#light-switch > input:checked + div:after { color:transparent; }
+
+
+
 /* DRAGULA CSS */
 .gu-mirror{position:fixed!important;margin:0!important;z-index:9999!important;opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80)}.gu-hide{display:none!important}.gu-unselectable{-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.gu-transit{opacity:.2;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";filter:alpha(opacity=20)}
 
@@ -1414,6 +1477,25 @@ p.section-desc {
 @media (max-width:1000px) {
   /* wrapper's max-width is 1000px, so remove padding so the page takes up the whole screen */
   .content-block { padding:30px 0; }
+  
+  /* footer links */
+  footer li {
+    float:none;
+    display:inline-block;
+  }
+  
+  footer li:before { margin-left:0; }
+  
+  .footer-left, .footer-right {
+    float:none;
+    text-align:center;
+    margin-bottom:10px;
+  }
+  
+  #light-switch-container {
+    height:auto;
+    margin-top:0;
+  }
 
   /* add a bit of padding to other elements, specifically for the index and other such pages */
   p, h2, h3, h4, #quick-search-wrapper {
@@ -1439,8 +1521,8 @@ p.section-desc {
   .quiz-multi-answer { width:80%; }
 
   /* centers the more exercises buttons so they wrap neatly */
-  #more-exercises { text-align:center; }
-  #more-exercises a.button {
+  .more-exercises { text-align:center; }
+  .more-exercises a.button {
     float:none;
     margin:3px;
   }
