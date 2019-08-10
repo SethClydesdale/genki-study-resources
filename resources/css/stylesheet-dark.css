@@ -16,7 +16,7 @@ input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled, i
 }
 
 .writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before {
-  color:#777;
+  color:#888;
 }
 
 body, input[type="text"], input[type="number"], textarea, #exercise-list .lesson-title, #exercise-list a:before, .quiz-multi-answer {

@@ -30,10 +30,10 @@ If you have any suggestions, feedback, or bugs to report, feel free to [open a n
 
 
 ### Made possible thanks to...
-- [The Japan Times](https://bookclub.japantimes.co.jp/en/) for Genki: An Integrated Course in Elementary Japanese.
+- [The Japan Times](https://bookclub.japantimes.co.jp/en/), Eri Banno, Yoko Ikeda, Yutaka Ohno, Chikako Shinagawa, and Kyoko Tokashiki for Genki: An Integrated Course in Elementary Japanese.
+- Noriko Udagawa and Reiko Maruyama for some Illustrations that were used.
+
+The following resources were used in this project. Check them out!
 - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) for the awesome icons.
 - [dragula](https://github.com/bevacqua/dragula) for the simple drag and drop.
 - [easytimer.js](https://github.com/albert-gonzalez/easytimer.js) for the super easy timer.
-
-
-These resources were used in this project. Check them out !
