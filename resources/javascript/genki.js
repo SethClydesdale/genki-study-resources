@@ -938,6 +938,7 @@
       'lesson-22/grammar-2|Practice: Causative Sentences 2|p.240-241; I-B',
       'lesson-22/grammar-3|Practice: Causative + くれる|p.243; II-A',
       'lesson-22/grammar-4|Practice: Causative + てください|p.244; II-D',
+      'lesson-22/grammar-5|Practice: Verb Stem + なさい|p.245; III-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
