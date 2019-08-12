@@ -289,6 +289,15 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   overflow:hidden;
 }
 
+/* quick nav jump buttons */
+a.jump-arrow {
+  color:#F60;
+  text-decoration:none;
+  float:right;
+  margin:6px 3px 0 0;
+}
+a.jump-arrow:hover { color:#C30; }
+
 /* lesson numbers */
 #quick-search-results li[data-lesson]:before {
   content:attr(data-lesson);

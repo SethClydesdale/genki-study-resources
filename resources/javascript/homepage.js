@@ -94,4 +94,10 @@
     quickSearch(search.value);
   }
   
+  
+  // # JUMP ARROWS #
+  // Add arrows to each lesson title that will take the student back to the quick navigation
+  for (var title = document.querySelectorAll('.lesson-title'), i = 0, j = title.length; i < j; i++) {
+    title[i].insertAdjacentHTML('beforeEnd', '<a href="#quick-nav" class="jump-arrow fa" title="Jump to Quick Navigation">&#xf062;</a>');
+  }
 }(window, document));
