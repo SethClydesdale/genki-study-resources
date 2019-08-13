@@ -941,6 +941,7 @@
       'lesson-22/grammar-5|Practice: Verb Stem + なさい|p.245; III-A',
       'lesson-22/grammar-6|Practice: ～ば|p.245; IV-A',
       'lesson-22/grammar-7|Practice: ～ば大丈夫です|p.246; IV-B',
+      'lesson-22/grammar-8|Practice: ～のに|p.247; V-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
