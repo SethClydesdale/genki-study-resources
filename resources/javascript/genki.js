@@ -942,6 +942,8 @@
       'lesson-22/grammar-6|Practice: ～ば|p.245; IV-A',
       'lesson-22/grammar-7|Practice: ～ば大丈夫です|p.246; IV-B',
       'lesson-22/grammar-8|Practice: ～のに|p.247; V-A',
+      'lesson-22/culture-1|Culture Note: Japan\'s Educational System (2)|p.251',
+      'lesson-22/culture-2|Culture Note: Words for University and College Life|p.251',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
