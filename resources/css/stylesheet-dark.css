@@ -11,7 +11,7 @@ input[type="text"]::placeholder, input[type="number"]::placeholder, textarea::pl
   color:#444;
 }
 
-input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled, input.writing-zone-input:disabled, .secondary-answer.furigana-only, a.anchor, #exercise-title:after, .quiz-item:before {
+.secondary-answer.furigana-only, a.anchor, #exercise-title:after, .quiz-item:before {
   color:#666;
 }
 
@@ -19,7 +19,7 @@ input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled, i
   color:#888;
 }
 
-body, input[type="text"], input[type="number"], textarea, #exercise-list .lesson-title, #exercise-list a:before, .quiz-multi-answer {
+body, input[type="text"], input[type="number"], textarea, input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled, input.writing-zone-input:disabled, #exercise-list .lesson-title, #exercise-list a:before, .quiz-multi-answer  {
   color:#AAA;
 }
 
