@@ -1049,6 +1049,7 @@ input.writing-zone-input:focus { border-color:#F60; }
   border:1px solid #CCC;
   margin:30px auto;
   padding:15px;
+  overflow-x:auto;
 }
 
 .text-block .sub-section {
