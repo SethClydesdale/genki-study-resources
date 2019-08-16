@@ -945,6 +945,7 @@
       'lesson-22/culture-1|Culture Note: Japan\'s Educational System (2)|p.251',
       'lesson-22/culture-2|Culture Note: Words for University and College Life|p.251',
       'lesson-22/workbook-1|Workbook: Causative Sentences 1|p.86; I & II',
+      'lesson-22/workbook-2|Workbook: Causative Sentences 2|p.87',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
