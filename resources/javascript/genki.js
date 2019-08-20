@@ -949,6 +949,7 @@
       'lesson-22/workbook-3|Workbook: Causative + あげる／くれる|p.88; I & II',
       'lesson-22/workbook-4|Workbook: Verb Stem + なさい|p.89; I & II',
       'lesson-22/workbook-5|Workbook: ～ば|p.90; I, II, & III',
+      'lesson-22/workbook-6|Workbook: ～のに|p.91; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',

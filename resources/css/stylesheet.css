@@ -1059,7 +1059,7 @@ input.writing-zone-input:focus { border-color:#F60; }
 }
 
 .text-block p { margin:0 0 25px 0; }
-.fill-quiz .problem { margin:0 0 40px 0; }
+.fill-quiz .problem, .fill-quiz .big-margin { margin:0 0 40px 0; }
 .fill-quiz .small-margin .problem { margin:0 0 25px 0; }
 .fill-quiz span.problem {
   display:inline-block;
