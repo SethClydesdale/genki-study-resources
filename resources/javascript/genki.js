@@ -952,6 +952,11 @@
       'lesson-22/workbook-6|Workbook: ～のに|p.91; I & II',
       'lesson-22/workbook-7|Workbook: ～のような／～のように|p.92; I, II, & III',
       'lesson-22/workbook-8|Workbook: Questions|p.94; I',
+      'lesson-22/literacy-1|Kanji Practice: 記, 銀, and 回|p.336',
+      'lesson-22/literacy-2|Kanji Practice: 夕, 黒, and 用|p.336',
+      'lesson-22/literacy-3|Kanji Practice: 守, 末, and 待|p.336-337',
+      'lesson-22/literacy-4|Kanji Practice: 残, 番, and 駅|p.337',
+      'lesson-22/literacy-5|Kanji Practice: 説, 案, 内, and 忘|p.337',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
