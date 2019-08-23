@@ -957,6 +957,7 @@
       'lesson-22/literacy-3|Kanji Practice: 守, 末, and 待|p.336-337',
       'lesson-22/literacy-4|Kanji Practice: 残, 番, and 駅|p.337',
       'lesson-22/literacy-5|Kanji Practice: 説, 案, 内, and 忘|p.337',
+      'lesson-22/literacy-6|Kanji Practice: Write the Readings|p.338; I-A & B',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
