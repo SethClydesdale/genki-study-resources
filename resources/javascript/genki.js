@@ -25,10 +25,10 @@
       std_multi : 'Solve the problems by choosing the correct answers.',
       std_questions : 'Answer the questions as best as you can.',
       std_culture : 'Answer the questions about Japanese culture as best as you can.',
-      mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong before finding the correct answer. Review these problems before trying again.',
-      writing_mistakes : 'The items outlined in <span class="t-red">red</span> were answered wrong. Review these problems before trying again.',
-      multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red">red</span>. The correct answers are outlined in <span class="t-orange">orange</span>. Review these problems before trying again.',
-      fill_mistakes : 'The items underlined in <span class="t-red">red</span> were answered wrong, the correct answers are listed underneath in <span class="t-red">red</span>. Review these problems before trying again.',
+      mistakes : 'The items outlined in <span class="t-red t-bold">red</span> were answered wrong before finding the correct answer. Review these problems before trying again.',
+      writing_mistakes : 'The items outlined in <span class="t-red t-bold">red</span> were answered wrong. Review these problems before trying again.',
+      multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red t-bold">red</span>. The correct answers are outlined in <span class="t-blue t-bold">blue</span>. Review these problems before trying again.',
+      fill_mistakes : 'The items underlined in <span class="t-red t-bold">red</span> were answered wrong, the correct answers are listed underneath in <span class="t-green t-bold">green</span>. Review these problems before trying again.',
       
       // buttons
       // review button for drag/drop exercises
@@ -958,6 +958,7 @@
       'lesson-22/literacy-4|Kanji Practice: 残, 番, and 駅|p.337',
       'lesson-22/literacy-5|Kanji Practice: 説, 案, 内, and 忘|p.337',
       'lesson-22/literacy-6|Kanji Practice: Write the Readings|p.338; I-A & B',
+      'lesson-22/literacy-7|Reading Practice: 友美さんの日記|p.339-341; II-B, C, & D',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',

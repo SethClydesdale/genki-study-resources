@@ -80,6 +80,11 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, input.writ
   border-color:rgba(51, 51, 51, 0.7);
 }
 
+.text-block　.sub-section .sub-section {
+  background-color:rgba(255, 255, 255, 0.02);
+  border-color:rgba(255, 255, 255, 0.05);
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
   width:17px;

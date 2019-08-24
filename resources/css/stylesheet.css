@@ -125,9 +125,14 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus { border-co
 
 .ul { text-decoration:underline; }
 
+/* text styles */
 .t-red { color:#F00; }
+.t-green { color:#080; }
+.t-blue { color:#09F; }
 .t-orange { color:#F60; }
+.t-bold { font-weight:bold; }
 
+/* margin */
 .nomargin { margin:0 !important; }
 .clearfix { clear:both; }
 .clear:after {
@@ -823,7 +828,7 @@ footer li:first-child:before { display:none; }
   margin:3px;
 }
 
-.verb-quiz.quiz-over [data-mistakes] { border-color:red; }
+.verb-quiz.quiz-over [data-mistakes] { border-color:#F00; }
 .verb-quiz.quiz-over [data-mistakes]:after {
   content:"x" attr(data-mistakes);
   font-size:10px;
@@ -992,8 +997,8 @@ input.writing-zone-input:focus { border-color:#F60; }
 .multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer.selected-answer { border-color:#F00; }
 .multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer.selected-answer:before { color:#F00; }
 
-.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"] { border-color:#F60; }
-.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"]:before { color:#F60; }
+.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"] { border-color:#09F; }
+.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"]:before { color:#09F; }
 
 /* read-only questions */
 #exercise .text-passage {
@@ -1056,6 +1061,11 @@ input.writing-zone-input:focus { border-color:#F60; }
   background-color:#FFF;
   border:1px solid #DDD;
   padding:6px;
+}
+
+.text-block　.sub-section .sub-section {
+  background-color:rgba(0, 0, 0, 0.05);
+  border-color:rgba(0, 0, 0, 0.08);
 }
 
 .text-block p { margin:0 0 25px 0; }
@@ -1122,7 +1132,7 @@ p.section-desc {
   margin-bottom:-20px;
 }
 
-.problem-answer { color:#F00; }
+.problem-answer { color:#080; }
 .secondary-answer {
   font-size:11px;
   line-height:10px;
@@ -1195,7 +1205,7 @@ p.section-desc {
 .fill-quiz.quiz-over [data-mistakes] { border-color:#F00; }
 
 /* mark correct answers */
-.fill-quiz.quiz-over [data-mistakes="0"] { border-color:#090; }
+.fill-quiz.quiz-over [data-mistakes="0"] { border-color:#080; }
 .fill-quiz .writing-zone.answer-correct:after { display:none; }
 
 /* add margin for fields inside a table */
