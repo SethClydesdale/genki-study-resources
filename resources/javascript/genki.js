@@ -959,6 +959,15 @@
       'lesson-22/literacy-5|Kanji Practice: 説, 案, 内, and 忘|p.337',
       'lesson-22/literacy-6|Kanji Practice: Write the Readings|p.338; I-A & B',
       'lesson-22/literacy-7|Reading Practice: 友美さんの日記|p.339-341; II-B, C, & D',
+      'lesson-22/literacy-wb-1|Workbook: Kanji Writing Practice|p.127',
+      'lesson-22/literacy-wb-2|Workbook: Spelling Practice (記, 銀, 回, and 夕)|p.127; bonus',
+      'lesson-22/literacy-wb-3|Workbook: Spelling Practice (黒, 用, 守, and 末)|p.127; bonus',
+      'lesson-22/literacy-wb-4|Workbook: Spelling Practice (待, 残, 番, and 駅)|p.127; bonus',
+      'lesson-22/literacy-wb-5|Workbook: Spelling Practice (説, 案, 内, and 忘)|p.127; bonus',
+      'lesson-22/literacy-wb-6|Workbook: Fill in the Blanks|p.128',
+      
+      // Lesson 23
+      
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
