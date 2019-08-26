@@ -967,7 +967,11 @@
       'lesson-22/literacy-wb-6|Workbook: Fill in the Blanks|p.128',
       
       // Lesson 23
-      
+      'lesson-23/vocab-1|Vocabulary: Nouns 1|p.254',
+      'lesson-23/vocab-2|Vocabulary: Nouns 2|p.254',
+      'lesson-23/vocab-3|Vocabulary: い-adjectives and U-verbs|p.254-255',
+      'lesson-23/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.255',
+      'lesson-23/vocab-5|Vocabulary: Adverbs and Other Expressions|p.255',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
