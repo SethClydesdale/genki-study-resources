@@ -972,6 +972,7 @@
       'lesson-23/vocab-3|Vocabulary: い-adjectives and U-verbs|p.254-255',
       'lesson-23/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.255',
       'lesson-23/vocab-5|Vocabulary: Adverbs and Other Expressions|p.255',
+      'lesson-23/grammar-1|Practice: Causative-passive Sentences 1|p.262; I-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
