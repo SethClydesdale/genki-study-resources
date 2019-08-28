@@ -973,6 +973,7 @@
       'lesson-23/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.255',
       'lesson-23/vocab-5|Vocabulary: Adverbs and Other Expressions|p.255',
       'lesson-23/grammar-1|Practice: Causative-passive Sentences 1|p.262; I-A',
+      'lesson-23/grammar-2|Practice: Causative-passive Sentences 2|p.262-263; I-B',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
