@@ -974,6 +974,8 @@
       'lesson-23/vocab-5|Vocabulary: Adverbs and Other Expressions|p.255',
       'lesson-23/grammar-1|Practice: Causative-passive Sentences 1|p.262; I-A',
       'lesson-23/grammar-2|Practice: Causative-passive Sentences 2|p.262-263; I-B',
+      'lesson-23/grammar-3|Practice: Causative-passive Sentences 3|p.263; I-C',
+      'lesson-23/grammar-4|Practice: ～ても 1|p.264-265; II-A',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
