@@ -976,6 +976,7 @@
       'lesson-23/grammar-2|Practice: Causative-passive Sentences 2|p.262-263; I-B',
       'lesson-23/grammar-3|Practice: Causative-passive Sentences 3|p.263; I-C',
       'lesson-23/grammar-4|Practice: ～ても 1|p.264-265; II-A',
+      'lesson-23/grammar-5|Practice: ～ても 2|p.265; II-B',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
