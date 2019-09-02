@@ -26,8 +26,13 @@
           clone = li[i].cloneNode(true); // clone the match for displaying in the results node
           
           // add lesson number to exercise
-          clone.dataset.lesson = clone.getElementsByTagName('A')[0].href.replace(/.*?(lesson-\d+).*/, function (Match, $1) {
-            return $1.charAt(0).toUpperCase() + $1.split('-').pop();
+          clone.dataset.lesson = clone.getElementsByTagName('A')[0].href.replace(/.*?(lesson-\d+).*|.*?(study-tools).*/, function (Match, $1, $2) {
+            if ($1) {
+              return $1.charAt(0).toUpperCase() + $1.split('-').pop();
+              
+            } else if ($2) {
+              return 'tool'
+            }
           });
           
           // add tooltip in case the text gets cut off
