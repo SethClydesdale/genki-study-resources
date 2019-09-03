@@ -981,6 +981,7 @@
       'lesson-23/grammar-7|Practice: ～ことにしている|p.267; IV-A',
       'lesson-23/grammar-8|Practice: ～まで|p.268; V-A',
       'lesson-23/grammar-9|Practice: ～方|p.269; VI-A',
+      'lesson-23/culture-1|Culture Note: Japanese Proverbs|p.273',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
