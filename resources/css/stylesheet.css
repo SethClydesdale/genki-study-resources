@@ -959,6 +959,12 @@ input.writing-zone-input:focus { border-color:#F60; }
   padding:5px;
 }
 
+.quiz-multi-question .furigana {
+  color:#777;
+  font-size:11px;
+  margin-top:-3px;
+}
+
 .quiz-multi-question .lesson-image img {
   border:1px solid #CCC;
   margin:3px;
