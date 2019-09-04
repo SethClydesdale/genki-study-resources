@@ -982,6 +982,7 @@
       'lesson-23/grammar-8|Practice: ～まで|p.268; V-A',
       'lesson-23/grammar-9|Practice: ～方|p.269; VI-A',
       'lesson-23/culture-1|Culture Note: Japanese Proverbs|p.273',
+      'lesson-23/workbook-1|Workbook: Verb Conjugation (Causative-passive)|p.95-96; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
