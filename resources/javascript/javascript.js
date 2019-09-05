@@ -35,7 +35,7 @@
     button.firstChild.onchange = function () {
       var root = document.documentElement, css;
       
-      if (this.checked) { // turn dark mode off
+      if (this.checked) { // turn dark mode on
         window.localStorage.darkMode = 'on';
         
         // add dark mode css to the head
@@ -47,7 +47,7 @@
         document.head.appendChild(css);
         root.className += ' dark-mode';
         
-      } else { // turn dark mode on
+      } else { // turn dark mode off
         window.localStorage.darkMode = 'off';
         
         // remove dark mode css

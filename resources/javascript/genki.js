@@ -983,6 +983,8 @@
       'lesson-23/grammar-9|Practice: ～方|p.269; VI-A',
       'lesson-23/culture-1|Culture Note: Japanese Proverbs|p.273',
       'lesson-23/workbook-1|Workbook: Verb Conjugation (Causative-passive)|p.95-96; I & II',
+      'lesson-23/workbook-2|Workbook: Causative-passive Sentences|p.97; I & II',
+      'lesson-23/workbook-3|Workbook: Passive and Causative-passive|p.98',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
