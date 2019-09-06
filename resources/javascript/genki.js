@@ -29,6 +29,7 @@
       writing_mistakes : 'The items outlined in <span class="t-red t-bold">red</span> were answered wrong. Review these problems before trying again.',
       multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red t-bold">red</span>. The correct answers are outlined in <span class="t-blue t-bold">blue</span>. Review these problems before trying again.',
       fill_mistakes : 'The items underlined in <span class="t-red t-bold">red</span> were answered wrong, the correct answers are listed underneath in <span class="t-green t-bold">green</span>. Review these problems before trying again.',
+      sub_answers : '<b>Note:</b> Answers inside <span class="t-blue t-bold">blue</span> parentheses separated by "<span class="alt-phrase-sep">/</span>" are a list of possible sub-answers; only one can be used.<br>For example.. <span class="t-green"><span class="alt-phrase">(</span>あの<span class="alt-phrase-sep">/</span>その<span class="alt-phrase">)</span>ねこ</span>: そのねこ or あのねこ <span class="t-green">(good)</span> vs あの/そのねこ <span class="t-red">(bad)</span>',
       
       // buttons
       // review button for drag/drop exercises
@@ -985,6 +986,7 @@
       'lesson-23/workbook-1|Workbook: Verb Conjugation (Causative-passive)|p.95-96; I & II',
       'lesson-23/workbook-2|Workbook: Causative-passive Sentences|p.97; I & II',
       'lesson-23/workbook-3|Workbook: Passive and Causative-passive|p.98',
+      'lesson-23/workbook-4|Workbook: ～ても|p.99; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1336,7 +1338,13 @@
                 (flag == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
-                'style="width:' + (/width/.test(flag) ? flag.split(':')[1] : (((hint || data[0]).length * (14 / (/[a-z]/i.test(hint || data[0]) ? 2 : 1))) + 14))+ 'px;"'+
+                'style="width:' + (/width/.test(flag) ? flag.split(':')[1] : (((hint || data[0]).replace(/\%\((.*?)\)/, function (Match, $1) {
+              // returns ONLY the longest string in the alternative answers array to prevent abnormally large inputs
+              return $1.split('/').sort(function (a, b) {
+                return b.length - a.length;
+              })[0];
+              
+            }).length * (14 / (/[a-z]/i.test(hint || data[0]) ? 2 : 1))) + 14))+ 'px;"'+
               '>'+
               ((hint && !/answer|furigana/.test(flag)) ? '<span class="problem-hint">' + hint + '</span>' : '')+
             '</span>';
@@ -1488,6 +1496,7 @@
             Genki.stats.score > 70 ? 'Nice work! ' + Genki.lang[type ? type + '_mistakes' : 'mistakes'] :
             'Keep studying! ' + Genki.lang[type ? type + '_mistakes' : 'mistakes']
           )+
+          (document.querySelector('.alt-phrase') ? '<br><br>' + Genki.lang.sub_answers : '')+
           '<div class="center">'+
             '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Try Again</a>'+
             '<button class="button" onclick="Genki.breakTime();"><i class="fa">&#xf0f4;</i>Take a Break</button>'+
@@ -1642,30 +1651,55 @@
 
             // loop over the inputs and check to see if the answers are correct
             var input = document.querySelectorAll('#exercise .writing-zone-input'),
-                i = 0, j = input.length, val, answer, data;
+                i = 0, j = input.length, k, correct, val, data, answer, alt;
 
             for (; i < j; i++) {
+              correct = false;
               data = input[i].dataset;
               val = input[i].value.toLowerCase();
-              answer = data.answer.toLowerCase();
+              
+              // check for the correct answer
+              for (k in data) {
+                if (/answer/.test(k)) {
+                  answer = data[k].toLowerCase();
+                  
+                  // check if there's alternative answers in the answer
+                  // alternative answers are given as %(alt1/alt2/etc.)
+                  if (/%\(.*?\)/.test(answer)) {
+                    alt = answer.replace(/.*?%\((.*?)\).*/, '$1').split('/');
+                    
+                    // loop through alternatives
+                    while (alt.length) {
+                      if (val == answer.replace(/%\(.*?\)/, alt[0])) {
+                        correct = true;
+                      }
+                      
+                      alt.splice(0, 1);
+                    }
+                  } 
+                  
+                  // otherwise check the answer normally
+                  else if (val == answer) {
+                    correct = true;
+                  }
+                }
+              }
+              
+              // add classname to correct answers
+              if (correct) {
+                input[i].parentNode.className += ' answer-correct';  
+              }
 
               // increment mistakes if the answer is incorrect
-              if (
-                (!data.answer2 && val != answer)
-                || 
-                (data.answer2 && val != answer && val != data.answer2.toLowerCase())
-              ) {
-                data.mistakes = ++data.mistakes;
+              else {
+                ++data.mistakes;
                 ++Genki.stats.mistakes;
 
                 if (type == 'fill') {
-                  input[i].parentNode.insertAdjacentHTML('beforeend', '<span class="problem-answer">' + data.answer + (data.answer2 || data.furigana ? '<span class="secondary-answer' + (data.furigana ? ' furigana-only' : '') + '">' + (data.answer2 || data.furigana) + '</span>' : '') + '</span>');
+                  input[i].parentNode.insertAdjacentHTML('beforeend', ('<span class="problem-answer">' + data.answer + (data.answer2 || data.furigana ? '<span class="secondary-answer' + (data.furigana ? ' furigana-only' : '') + '">' + (data.answer2 || data.furigana) + '</span>' : '') + '</span>').replace(/%\((.*?)\)/g, function (Match, $1) {
+                    return '<span class="alt-phrase">(</span>' + $1.replace(/\//g, '<span class="alt-phrase-sep">/</span>') + '<span class="alt-phrase">)</span>'
+                  }));
                 }
-              }
-
-              // add classname to correct answers
-              else {
-                input[i].parentNode.className += ' answer-correct';  
               }
 
               // increment problems solved

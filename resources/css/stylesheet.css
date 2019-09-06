@@ -1082,6 +1082,12 @@ input.writing-zone-input:focus { border-color:#F60; }
   margin:0;
 }
 
+.fill-quiz .alt-phrase {
+  color:#09F;
+  font-weight:bold;
+}
+.fill-quiz .alt-phrase-sep { color:#06C; }
+
 /* columns */
 .columns-2 > * {
   width:50%;
