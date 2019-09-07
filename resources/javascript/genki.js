@@ -987,6 +987,7 @@
       'lesson-23/workbook-2|Workbook: Causative-passive Sentences|p.97; I & II',
       'lesson-23/workbook-3|Workbook: Passive and Causative-passive|p.98',
       'lesson-23/workbook-4|Workbook: ～ても|p.99; I & II',
+      'lesson-23/workbook-5|Workbook: ～ことにする|p.100; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1672,9 +1673,10 @@
                     while (alt.length) {
                       if (val == answer.replace(/%\(.*?\)/, alt[0])) {
                         correct = true;
+                        break; // break out if correct answer is found
                       }
                       
-                      alt.splice(0, 1);
+                      alt.splice(0, 1); // remove the checked answer
                     }
                   } 
                   
@@ -1682,6 +1684,9 @@
                   else if (val == answer) {
                     correct = true;
                   }
+                  
+                  // break out of the loop when a correct answer is found 
+                  if (correct) break;
                 }
               }
               
