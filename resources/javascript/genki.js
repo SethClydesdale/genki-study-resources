@@ -988,6 +988,7 @@
       'lesson-23/workbook-3|Workbook: Passive and Causative-passive|p.98',
       'lesson-23/workbook-4|Workbook: ～ても|p.99; I & II',
       'lesson-23/workbook-5|Workbook: ～ことにする|p.100; I & II',
+      'lesson-23/workbook-6|Workbook: ～ことにしている|p.101; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
