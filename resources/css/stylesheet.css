@@ -463,6 +463,7 @@ footer li:first-child:before { display:none; }
   padding:15px 15px 15px 50px;
   margin:10px 0;
   position:relative;
+  overflow-y:auto;
 }
 
 #quiz-info:before {
