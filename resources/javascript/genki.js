@@ -120,9 +120,9 @@
       'lesson-2/vocab-4|Vocabulary: Places|p.61',
       'lesson-2/vocab-5|Vocabulary: Money and Expressions|p.61',
       'lesson-2/culture-1|Culture Note: Japanese Currency|p.68',
-      'lesson-2/numbers-1|Numbers: Hundreds|p.69',
-      'lesson-2/numbers-2|Numbers: Thousands|p.69',
-      'lesson-2/numbers-3|Numbers: Ten Thousands|p.69',
+      'lesson-2/numbers-1|Practice: Numbers (Hundreds)|p.69',
+      'lesson-2/numbers-2|Practice: Numbers (Thousands)|p.69',
+      'lesson-2/numbers-3|Practice: Numbers (Ten Thousands)|p.69',
       'lesson-2/numbers-4|Practice: Numbers|p.69; I-A',
       'lesson-2/numbers-5|Practice: Prices|p.69-70; I-B',
       'lesson-2/grammar-1|Practice: これ, それ, and あれ|p.71-72; II-A & B',
@@ -990,6 +990,7 @@
       'lesson-23/workbook-5|Workbook: ～ことにする|p.100; I & II',
       'lesson-23/workbook-6|Workbook: ～ことにしている|p.101; I & II',
       'lesson-23/workbook-7|Workbook: ～まで|p.102; I & II',
+      'lesson-23/workbook-8|Workbook: ～方|p.103; I & II',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',

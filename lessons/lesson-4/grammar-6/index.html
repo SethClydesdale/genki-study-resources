@@ -6,8 +6,8 @@
     <meta name="title" content="Practice: Past Tense 2 - Lesson 4 | Genki Study Resources">
     <meta name="twitter:title" content="Practice: Past Tense 2 - Lesson 4 | Genki Study Resources">
     <meta property="og:title" content="Practice: Past Tense 2 - Lesson 4 | Genki Study Resources">
-    <meta name="description" content="Answer the questions about Mary's schedule last week.">
-    <meta property="og:description" content="Answer the questions about Mary's schedule last week.">
+    <meta name="description" content="Look at Mary's schedule for last week below and answer the questions.">
+    <meta property="og:description" content="Look at Mary's schedule for last week below and answer the questions.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki I, page 121, problem IV-C, problem IV-D, japanese, quizzes, exercises" lang="en">
@@ -58,158 +58,182 @@
     <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/javascript.min.js"></script>
-    <script>(function () {
-      var d = {
-        mon : '(Monday/Studied in the Library)',
-        tue : '(Tuesday/Wrote a Letter at Home)',
-        wed : '(Wednesday/Played Tennis at School)',
-        thu : '(Thursday/Met her Japanese Friend at a Coffee Shop)',
-        fri : '(Friday/Ate Dinner at her Friend\'s House)',
-        sat : '(Saturday/Watched a Movie in Kyoto)',
-        sun : '(Sunday/Did Shopping at a Department Store)'
-      };
-        
-      Genki.generateQuiz({
-        type : 'multi',
-        info : 'Answer the questions about Mary\'s schedule last week. (Mary\'s schedule will be given in parentheses)',
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : 'Look at Mary\'s schedule for last week below and answer the questions.<br><br>'+
+      '<table class="center" style="width:400px">'+
+        '<tr>'+
+          '<td style="font-weight:bold">Monday</td>'+
+          '<td>Studied in the Library</td>'+
+        '</tr>'+
 
-        quizlet : [
-          // IV-C
-          {
-            question : 'メアリーさんは月曜日に図書館で勉強しましたか。' + d.mon,
-            answers : [
-              'Aはい、勉強しました。',
-              'はい、勉強します。',
-              'いいえ、勉強しませんでした。',
-              'いいえ、勉強しません。'
-            ]
-          },
+        '<tr>'+
+          '<td style="font-weight:bold">Tuesday</td>'+
+          '<td>Wrote a Letter at Home</td>'+
+        '</tr>'+
 
-          {
-            question : 'メアリーさんは火曜日に音楽を聞きましたか。' + d.tue,
-            answers : [
-              'Aいいえ、聞きませんでした。',
-              'いいえ、聞きません。',
-              'はい、聞きました。',
-              'はい、聞きます。'
-            ]
-          },
+        '<tr>'+
+          '<td style="font-weight:bold">Wednesday</td>'+
+          '<td>Played Tennis at School</td>'+
+        '</tr>'+
 
-          {
-            question : 'メアリーさんは水曜日に手紙を書きましたか。' + d.wed,
-            answers : [
-              'Aいいえ、書きませんでした。',
-              'いいえ、書きません。',
-              'はい、書きました。',
-              'はい、書きます。'
-            ]
-          },
+        '<tr>'+
+          '<td style="font-weight:bold">Thursday</td>'+
+          '<td>Met her Japanese Friend at a Coffee Shop</td>'+
+        '</tr>'+
 
-          {
-            question : 'メアリーさんは木曜日に日本人の友だちに会いましたか。' + d.thu,
-            answers : [
-              'Aはい、会いました。',
-              'はい、会います。',
-              'いいえ、会いませんでした。',
-              'いいえ、会いません。'
-            ]
-          },
+        '<tr>'+
+          '<td style="font-weight:bold">Friday</td>'+
+          '<td>Ate Dinner at her Friend\'s House</td>'+
+        '</tr>'+
 
-          {
-            question : 'メアリーさんは金曜日にお寺に行きましたか。' + d.fri,
-            answers : [
-              'Aいいえ、行きませんでした。',
-              'いいえ、行きません。',
-              'はい、行きました。',
-              'はい、行きます。'
-            ]
-          },
+        '<tr>'+
+          '<td style="font-weight:bold">Saturday</td>'+
+          '<td>Watched a Movie in Kyoto</td>'+
+        '</tr>'+
 
-          {
-            question : 'メアリーさんは土曜日にテニスをしましたか。' + d.sat,
-            answers : [
-              'Aいいえ、しませんでした。',
-              'いいえ、しません。',
-              'はい、しました。',
-              'はい、します。'
-            ]
-          },
+        '<tr>'+
+          '<td style="font-weight:bold">Sunday</td>'+
+          '<td>Did Shopping at a Department Store</td>'+
+        '</tr>'+
+      '</table>',
 
-          {
-            question : 'メアリーさんは日曜日に買い物をしましたか。' + d.sun,
-            answers : [
-              'Aはい、しました。',
-              'はい、します。',
-              'いいえ、しませんでした。',
-              'いいえ、しません。'
-            ]
-          },
-          
-          // IV-D
-          {
-            question : 'メアリーさんは月曜日に何をしましたか。' + d.mon,
-            answers : [
-              'A図書館で勉強しました。',
-              '図書館で寝ました。',
-              '図書館で本を読みました。'
-            ]
-          },
+      quizlet : [
+        // IV-C
+        {
+          question : 'メアリーさんは月曜日に図書館で勉強しましたか。',
+          answers : [
+            'Aはい、勉強しました。',
+            'はい、勉強します。',
+            'いいえ、勉強しませんでした。',
+            'いいえ、勉強しません。'
+          ]
+        },
 
-          {
-            question : 'メアリーさんは水曜日に何をしましたか。' + d.wed,
-            answers : [
-              'A学校でテニスをしました。',
-              '学校でテニスを見ました。',
-              '学校でテニスをします。'
-            ]
-          },
+        {
+          question : 'メアリーさんは火曜日に音楽を聞きましたか。',
+          answers : [
+            'Aいいえ、聞きませんでした。',
+            'いいえ、聞きません。',
+            'はい、聞きました。',
+            'はい、聞きます。'
+          ]
+        },
 
-          {
-            question : 'メアリーさんは火曜日に何をしましたか。' + d.tue,
-            answers : [
-              'A家で手紙を書きました。',
-              '家で手紙を読みました。',
-              '家で手紙をしました。'
-            ]
-          },
+        {
+          question : 'メアリーさんは水曜日に手紙を書きましたか。',
+          answers : [
+            'Aいいえ、書きませんでした。',
+            'いいえ、書きません。',
+            'はい、書きました。',
+            'はい、書きます。'
+          ]
+        },
 
-          {
-            question : 'メアリーさんはいつ映画を見ましたか。' + d.sat,
-            answers : [
-              'A土曜日に映画を見ました。',
-              '土曜日でした。',
-              '土曜日です。'
-            ]
-          },
+        {
+          question : 'メアリーさんは木曜日に日本人の友だちに会いましたか。',
+          answers : [
+            'Aはい、会いました。',
+            'はい、会います。',
+            'いいえ、会いませんでした。',
+            'いいえ、会いません。'
+          ]
+        },
 
-          {
-            question : 'メアリーさんはいつ買い物をしましたか。' + d.sun,
-            answers : [
-              'A日曜日に買い物をしました。',
-              '日曜日でした。',
-              '日曜日です。'
-            ]
-          },
+        {
+          question : 'メアリーさんは金曜日にお寺に行きましたか。',
+          answers : [
+            'Aいいえ、行きませんでした。',
+            'いいえ、行きません。',
+            'はい、行きました。',
+            'はい、行きます。'
+          ]
+        },
 
-          {
-            question : 'メアリーさんは金曜日にどこで晩ご飯を食べましたか。' + d.fri,
-            answers : [
-              'A友だちのうちで晩ご飯を食べました。',
-              '友だちのうちでした。',
-              '友だちのうちです。'
-            ]
-          },
+        {
+          question : 'メアリーさんは土曜日にテニスをしましたか。',
+          answers : [
+            'Aいいえ、しませんでした。',
+            'いいえ、しません。',
+            'はい、しました。',
+            'はい、します。'
+          ]
+        },
 
-          {
-            question : 'メアリーさんは木曜日にどこで友だちを会いましたか。' + d.thu,
-            answers : [
-              'A喫茶店で友だちを会いました。',
-              '喫茶店でした。',
-              '喫茶店です。'
-            ]
-          }
-        ]
-      });
-    }());</script>
+        {
+          question : 'メアリーさんは日曜日に買い物をしましたか。',
+          answers : [
+            'Aはい、しました。',
+            'はい、します。',
+            'いいえ、しませんでした。',
+            'いいえ、しません。'
+          ]
+        },
+
+        // IV-D
+        {
+          question : 'メアリーさんは月曜日に何をしましたか。',
+          answers : [
+            'A図書館で勉強しました。',
+            '図書館で寝ました。',
+            '図書館で本を読みました。'
+          ]
+        },
+
+        {
+          question : 'メアリーさんは水曜日に何をしましたか。',
+          answers : [
+            'A学校でテニスをしました。',
+            '学校でテニスを見ました。',
+            '学校でテニスをします。'
+          ]
+        },
+
+        {
+          question : 'メアリーさんは火曜日に何をしましたか。',
+          answers : [
+            'A家で手紙を書きました。',
+            '家で手紙を読みました。',
+            '家で手紙をしました。'
+          ]
+        },
+
+        {
+          question : 'メアリーさんはいつ映画を見ましたか。',
+          answers : [
+            'A土曜日に映画を見ました。',
+            '土曜日でした。',
+            '土曜日です。'
+          ]
+        },
+
+        {
+          question : 'メアリーさんはいつ買い物をしましたか。',
+          answers : [
+            'A日曜日に買い物をしました。',
+            '日曜日でした。',
+            '日曜日です。'
+          ]
+        },
+
+        {
+          question : 'メアリーさんは金曜日にどこで晩ご飯を食べましたか。',
+          answers : [
+            'A友だちのうちで晩ご飯を食べました。',
+            '友だちのうちでした。',
+            '友だちのうちです。'
+          ]
+        },
+
+        {
+          question : 'メアリーさんは木曜日にどこで友だちを会いましたか。',
+          answers : [
+            'A喫茶店で友だちを会いました。',
+            '喫茶店でした。',
+            '喫茶店です。'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

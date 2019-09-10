@@ -6,8 +6,8 @@
     <meta name="title" content="Practice: Time References 1 - Lesson 3 | Genki Study Resources">
     <meta name="twitter:title" content="Practice: Time References 1 - Lesson 3 | Genki Study Resources">
     <meta property="og:title" content="Practice: Time References 1 - Lesson 3 | Genki Study Resources">
-    <meta name="description" content="Answer the questions about Mary's schedule.  NOTE: In this exercise you will practice using the particle に to indicate the time at which an event takes place.">
-    <meta property="og:description" content="Answer the questions about Mary's schedule.  NOTE: In this exercise you will practice using the particle に to indicate the time at which an event takes place.">
+    <meta name="description" content="Look at Mary's schedule below and answer the questions. NOTE: In this exercise you will practice using the particle に to indicate the time at which an event takes place.">
+    <meta property="og:description" content="Look at Mary's schedule below and answer the questions. NOTE: In this exercise you will practice using the particle に to indicate the time at which an event takes place.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki I, page 98, problem II-A, japanese, quizzes, exercises" lang="en">
@@ -59,15 +59,71 @@
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/javascript.min.js"></script>
     <script>(function() {
-      var mary = 'メアリさんは何時に';
+      var mary = 'メアリーさんは何時に';
         
       Genki.generateQuiz({
         type : 'multi',
-        info : 'Answer the questions about Mary\'s schedule. (Mary\'s schedule will be given in parentheses)<br>NOTE: In this exercise you will practice using the particle に to indicate the time at which an event takes place.',
+        info : 'Look at Mary\'s schedule below and answer the questions.<br>NOTE: In this exercise you will practice using the particle に to indicate the time at which an event takes place.<br><br>'+
+        '<table style="width:200px;">'+
+          '<tr>'+
+            '<td>07:30 <small>A.M.</small></td>'+
+            '<td>get up</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>08:00</td>'+
+            '<td>eat breakfast</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>08:30</td>'+
+            '<td>go to school</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>12:00</td>'+
+            '<td>eat lunch</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>03:00 <small>P.M.</small></td>'+
+            '<td>drink coffee</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>04:00</td>'+
+            '<td>play tennis</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>05:00</td>'+
+            '<td>go home</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>06:30</td>'+
+            '<td>eat dinner</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>07:00</td>'+
+            '<td>watch TV</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>08:00</td>'+
+            '<td>study</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>11:30</td>'+
+            '<td>go to bed</td>'+
+          '</tr>'+
+        '</table>',
 
         quizlet : [
           {
-            question : mary + '起きますか。(07:30AM get up)',
+            question : mary + '起きますか。',
             answers : [
               'A七時半に起きます。',
               '七時に起きます。',
@@ -76,7 +132,7 @@
           },
 
           {
-            question : mary + '朝ご飯を食べますか。(08:00AM eat breakfast)',
+            question : mary + '朝ご飯を食べますか。',
             answers : [
               'A八時に朝ご飯を食べます。',
               '八時に昼ご飯を食べます。',
@@ -85,7 +141,7 @@
           },
 
           {
-            question : mary + '学校に行きますか。(8:30AM go to school)',
+            question : mary + '学校に行きますか。',
             answers : [
               'A八時半に学校に行きます。',
               '八時に学校に行きます。',
@@ -94,7 +150,7 @@
           },
 
           {
-            question : mary + '昼ご飯を食べますか。(12:00PM eat lunch)',
+            question : mary + '昼ご飯を食べますか。',
             answers : [
               'A十二時に昼ご飯を食べます。',
               '十二時に朝ご飯を食べます。',
@@ -103,7 +159,7 @@
           },
 
           {
-            question : mary + 'コーヒーを飲みますか。(03:00PM drink coffee)',
+            question : mary + 'コーヒーを飲みますか。',
             answers : [
               'A三時にコーヒーを飲みます。',
               '三時半にコーヒーを飲みます。',
@@ -112,7 +168,7 @@
           },
 
           {
-            question : mary + 'テニスをしますか。(04:00PM play tennis)',
+            question : mary + 'テニスをしますか。',
             answers : [
               'A四時にテニスをします。',
               '四時半にテニスをします。',
@@ -121,7 +177,7 @@
           },
 
           {
-            question : mary + 'うちに帰りますか。(05:00PM return home)',
+            question : mary + 'うちに帰りますか。',
             answers : [
               'A五時にうちに帰ります。',
               '五時半にうちに帰ります。',
@@ -130,7 +186,7 @@
           },
 
           {
-            question : mary + '晩ご飯を食べますか。(06:30PM eat dinner)',
+            question : mary + '晩ご飯を食べますか。',
             answers : [
               'A六時半に晩ご飯を食べます。',
               '六時半に朝ご飯を食べます。',
@@ -139,7 +195,7 @@
           },
 
           {
-            question : mary + 'テレビを見ますか。(07:00PM watch TV)',
+            question : mary + 'テレビを見ますか。',
             answers : [
               'A七時にテレビを見ます。',
               '七時半にテレビを見ます。',
@@ -148,7 +204,7 @@
           },
 
           {
-            question : mary + '勉強しますか。(08:00PM study)',
+            question : mary + '勉強しますか。',
             answers : [
               'A八時に勉強します。',
               '八時半に勉強します。',
@@ -157,7 +213,7 @@
           },
 
           {
-            question : mary + '寝ますか。(11:30PM go to bed)',
+            question : mary + '寝ますか。',
             answers : [
               'A十一時半に寝ます。',
               '十一時に寝ます。',

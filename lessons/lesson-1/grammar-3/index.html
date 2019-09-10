@@ -6,8 +6,8 @@
     <meta name="title" content="Practice: Question Sentences 1 - Lesson 1 | Genki Study Resources">
     <meta name="twitter:title" content="Practice: Question Sentences 1 - Lesson 1 | Genki Study Resources">
     <meta property="og:title" content="Practice: Question Sentences 1 - Lesson 1 | Genki Study Resources">
-    <meta name="description" content="Craft Questions and Answers using the given cues.">
-    <meta property="og:description" content="Craft Questions and Answers using the given cues.">
+    <meta name="description" content="Look at the table below, then create answers and questions using the given cues.">
+    <meta property="og:description" content="Look at the table below, then create answers and questions using the given cues.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki I, page 52, page 53, problem V-B, japanese, quizzes, exercises" lang="en">
@@ -59,12 +59,67 @@
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/javascript.min.js"></script>
     <script>(function() {
-      var q = 'Create a Question using the cue: ',
-          a = 'Create an Answer using the cue: ';
+      var q = 'Create a Question:<br>',
+          a = 'Create an Answer:<br>';
 
       Genki.generateQuiz({
         type : 'multi',
-        info : 'Craft Questions and Answers using the given cues. (info on a person will be given in parentheses)',
+        info : 'Look at the table below, then create answers and questions using the given cues.<br><br>'+
+        '<table class="center">'+
+          '<tr style="font-weight:bold">'+
+            '<td></td>'+
+            '<td>Hart, Mary</td>'+
+            '<td>きむら　たけし</td>'+
+            '<td>Kim, Sue</td>'+
+            '<td>Smith, Robert</td>'+
+            '<td>やましたせんせい</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td style="font-weight:bold">Nationality</td>'+
+            '<td>American</td>'+
+            '<td>Japanese</td>'+
+            '<td>かんこくじん (Korean)</td>'+
+            '<td>イギリスじん (British)</td>'+
+            '<td>Japanese</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td style="font-weight:bold">Year</td>'+
+            '<td>2nd year</td>'+
+            '<td>4th year</td>'+
+            '<td>3rd year</td>'+
+            '<td>4th year</td>'+
+            '<td></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td style="font-weight:bold">Age</td>'+
+            '<td>19</td>'+
+            '<td>22</td>'+
+            '<td>20</td>'+
+            '<td>22</td>'+
+            '<td>47</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td style="font-weight:bold">School</td>'+
+            '<td>Arizona University</td>'+
+            '<td>Sakura University</td>'+
+            '<td>Seoul University</td>'+
+            '<td>London University</td>'+
+            '<td>Sakura University</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td style="font-weight:bold">Major</td>'+
+            '<td>Japanese</td>'+
+            '<td>れきし (history)</td>'+
+            '<td>コンピューター (computer)</td>'+
+            '<td>ビジネス (business)</td>'+
+            '<td>(Japanese teacher)</td>'+
+          '</tr>'+
+        '</table>',
 
         quizlet : [
           {
@@ -77,7 +132,7 @@
           },
 
           {
-            question : a + 'メアリーさん／アメリカじん (Nationality: American)',
+            question : a + 'メアリーさん／アメリカじん',
             answers : [
               'Aええ、そうです。',
               'いいえ、にほんじんです。',
@@ -95,7 +150,7 @@
           },
 
           {
-            question : a + 'メアリーさん／アリゾナだいがくのがくせい (School: Arizona University)',
+            question : a + 'メアリーさん／アリゾナだいがくのがくせい',
             answers : [
               'Aええ、そうです。',
               'いいえ、さくらだいがくのがくせいです。',
@@ -113,7 +168,7 @@
           },
 
           {
-            question : a + 'メアリーさん／いちねんせい (Year: 2nd year)',
+            question : a + 'メアリーさん／いちねんせい',
             answers : [
               'Aいいえ、にねんせいです。',
               'ええ、そうです。',
@@ -131,7 +186,7 @@
           },
 
           {
-            question : a + 'たけしさん／にほんじん (Nationality: Japanese)',
+            question : a + 'たけしさん／にほんじん',
             answers : [
               'Aええ、そうです。',
               'いいえ、アメリカじんです。',
@@ -149,7 +204,7 @@
           },
 
           {
-            question : a + 'たけしさん／にほんだいがくのがくせい (School: Sakura University)',
+            question : a + 'たけしさん／にほんだいがくのがくせい',
             answers : [
               'Aいいえ、さくらだいがくのがくせいです。',
               'ええ、そうです。',
@@ -167,7 +222,7 @@
           },
 
           {
-            question : a + 'たけしさん／じゅうきゅうさい (Age: 22)',
+            question : a + 'たけしさん／じゅうきゅうさい',
             answers : [
               'Aいいえ、にじゅうにさいです。',
               'ええ、そうです。',
@@ -185,7 +240,7 @@
           },
 
           {
-            question : a + 'スーさん／スウェーデンじん (Nationality: Korean)',
+            question : a + 'スーさん／スウェーデンじん',
             answers : [
               'Aいいえ、かんこくじんです。',
               'ええ、そうです。',
@@ -203,7 +258,7 @@
           },
 
           {
-            question : a + 'スーさんのせんこう／けいざい (Major: Computer)',
+            question : a + 'スーさんのせんこう／けいざい',
             answers : [
               'Aいいえ、コンピューターです。',
               'ええ、そうです。',
@@ -221,7 +276,7 @@
           },
 
           {
-            question : a + 'ロバートさんのせんこう／ビジネス (Major: Business)',
+            question : a + 'ロバートさんのせんこう／ビジネス',
             answers : [
               'Aええ、そうです。',
               'いいえ、れきしです。',
@@ -239,7 +294,7 @@
           },
 
           {
-            question : a + 'ロバートさん／よねんせい (Year: 4th year)',
+            question : a + 'ロバートさん／よねんせい',
             answers : [
               'Aええ、そうです。',
               'いいえ、にねんせいです。',
@@ -257,7 +312,7 @@
           },
 
           {
-            question : a + 'ロバートさん／にじゅういっさい (Age: 22)',
+            question : a + 'ロバートさん／にじゅういっさい',
             answers : [
               'Aいいえ、にじゅうにさいです。',
               'ええ、そうです。',
@@ -275,7 +330,7 @@
           },
 
           {
-            question : a + 'やましたせんせい／にほんじん (Nationality: Japanese)',
+            question : a + 'やましたせんせい／にほんじん',
             answers : [
               'Aええ、そうです。',
               'いいえ、かんこくじんです。',
@@ -293,7 +348,7 @@
           },
 
           {
-            question : a + 'やましたせんせい／ハワイだいがくのせんせい (School: Sakura University)',
+            question : a + 'やましたせんせい／ハワイだいがくのせんせい',
             answers : [
               'Aいいえ、さくらだいがくのせんせいです。',
               'ええ、そうです。',
