@@ -991,6 +991,7 @@
       'lesson-23/workbook-6|Workbook: ～ことにしている|p.101; I & II',
       'lesson-23/workbook-7|Workbook: ～まで|p.102; I & II',
       'lesson-23/workbook-8|Workbook: ～方|p.103; I & II',
+      'lesson-23/workbook-9|Workbook: Questions|p.105; I',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
