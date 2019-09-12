@@ -992,6 +992,14 @@
       'lesson-23/workbook-7|Workbook: ～まで|p.102; I & II',
       'lesson-23/workbook-8|Workbook: ～方|p.103; I & II',
       'lesson-23/workbook-9|Workbook: Questions|p.105; I',
+      'lesson-23/literacy-1|Kanji Practice: 顔, 情, and 怒|p.342',
+      'lesson-23/literacy-2|Kanji Practice: 変, 相, and 横|p.342',
+      'lesson-23/literacy-3|Kanji Practice: 比, 化, and 違|p.342-343',
+      'lesson-23/literacy-4|Kanji Practice: 悲, 調, and 査|p.343',
+      'lesson-23/literacy-5|Kanji Practice: 果, 感, and 答|p.343',
+      
+      // Appendix
+      //'appendix/dictionary|Dictionary|p.350-379',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1838,7 +1846,10 @@
 
           // if the lesson group is different create a new group
           if (!new RegExp(lesson).test(linkData[0])) {
-            lesson = /^study-tools/.test(linkData[0]) ? 'study-tools' : linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
+            lesson = /^appendix/.test(linkData[0]) ? 'appendix' : 
+                     /^study-tools/.test(linkData[0]) ? 'study-tools' : 
+                     linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
+            
             list += '</ul><h4 ' + attrs + '>' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">';
             group = '';
           }
