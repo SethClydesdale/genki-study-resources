@@ -997,6 +997,8 @@
       'lesson-23/literacy-3|Kanji Practice: 比, 化, and 違|p.342-343',
       'lesson-23/literacy-4|Kanji Practice: 悲, 調, and 査|p.343',
       'lesson-23/literacy-5|Kanji Practice: 果, 感, and 答|p.343',
+      'lesson-23/literacy-6|Kanji Practice: Write the Readings|p.344; I-A & B',
+      'lesson-23/literacy-7|Reading Practice: これはどんな顔?|p.345-347; II-B, C, & D',
       
       // Appendix
       //'appendix/dictionary|Dictionary|p.350-379',
@@ -1357,7 +1359,7 @@
                 return b.length - a.length;
               })[0];
               
-            }).length * (14 / (/[a-z]/i.test(hint || data[0]) ? 2 : 1))) + 14))+ 'px;"'+
+            }).length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1))) + 14)) + 'px;"'+
               '>'+
               ((hint && !/answer|furigana/.test(flag)) ? '<span class="problem-hint">' + hint + '</span>' : '')+
             '</span>';
