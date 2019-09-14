@@ -999,6 +999,12 @@
       'lesson-23/literacy-5|Kanji Practice: 果, 感, and 答|p.343',
       'lesson-23/literacy-6|Kanji Practice: Write the Readings|p.344; I-A & B',
       'lesson-23/literacy-7|Reading Practice: これはどんな顔?|p.345-347; II-B, C, & D',
+      'lesson-23/literacy-wb-1|Workbook: Kanji Writing Practice|p.129',
+      'lesson-23/literacy-wb-2|Workbook: Spelling Practice (顔, 情, 怒, and 変)|p.129; bonus',
+      'lesson-23/literacy-wb-3|Workbook: Spelling Practice (相, 横, 比, and 化)|p.129; bonus',
+      'lesson-23/literacy-wb-4|Workbook: Spelling Practice (遺, 悲, 調, and 査)|p.129; bonus',
+      'lesson-23/literacy-wb-5|Workbook: Spelling Practice (果, 感, and 答)|p.129; bonus',
+      'lesson-23/literacy-wb-6|Workbook: Fill in the Blanks|p.130',
       
       // Appendix
       //'appendix/dictionary|Dictionary|p.350-379',
