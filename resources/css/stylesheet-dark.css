@@ -57,7 +57,7 @@ code, input[type="text"], input[type="number"], textarea, .table td, .quiz-colum
   border-color:#444;
 }
 
-input[type="text"]::placeholder, input[type="text"]:hover, input[type="number"]:hover, textarea:hover, input.writing-zone-input:hover {
+input[type="text"]::placeholder, input[type="text"]:hover, input[type="number"]:hover, textarea:hover, input.writing-zone-input:hover, hr {
   border-color:#555;
 }
 

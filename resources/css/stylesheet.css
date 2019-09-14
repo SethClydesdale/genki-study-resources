@@ -65,6 +65,11 @@ body {
 p { font-size:14px; }
 ul { padding-left:40px; }
 
+hr {
+  border:none;
+  border-bottom:1px solid #999;
+}
+
 a {
   color:#039;
   text-decoration:none;
