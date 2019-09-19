@@ -37,7 +37,8 @@
       // furigana toggle for vocab exercises
       toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);"><i class="fa">&#xf2a8;</i>' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>',
       // check answers button for written exercises
-      check_answers : '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();"><i class="fa">&#xf00c;</i>Check Answers</button></div>'
+      check_answers : '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();"><i class="fa">&#xf00c;</i>Check Answers</button></div>',
+      return_to_dict : '<button class="button" onclick="Genki.appendix.jisho.reset();"><i class="fa">&#xf02d;</i>Back to Dictionary</button>'
     },
 
     // info about the currently active exercise
@@ -1465,7 +1466,10 @@
           )+
           (document.querySelector('.alt-phrase') ? '<br><br>' + Genki.lang.sub_answers : '')+
           '<div class="center">'+
-            '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Try Again</a>'+
+            (
+              /\/dictionary\//.test(window.location) ? Genki.lang.return_to_dict :
+              '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Try Again</a>'
+            )+
             '<button class="button" onclick="Genki.breakTime();"><i class="fa">&#xf0f4;</i>Take a Break</button>'+
             '<a href="' + document.getElementById('home-link').href + '" class="button"><i class="fa">&#xf015;</i>Back to Index</a>'+
           '</div>'+
@@ -1566,7 +1570,10 @@
           document.getElementById('quiz-timer').style.display = 'none';
 
           // show restart button
-          document.getElementById('review-exercise').innerHTML = '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Restart</a>' + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
+          document.getElementById('review-exercise').innerHTML = (
+            /\/dictionary\//.test(window.location) ? Genki.lang.return_to_dict :
+            '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Restart</a>'
+          ) + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
 
           // change the quiz info
           document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';

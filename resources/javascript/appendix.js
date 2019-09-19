@@ -381,6 +381,32 @@
       },
       
       
+      // resets exercise state and returns to the dictionary
+      reset : function () {
+        // reset stats
+        Genki.exerciseComplete = false;
+        Genki.stats = {
+          problems : 0,
+            solved : 0,
+          mistakes : 0,
+             score : 0,
+           exclude : 0
+        };
+        
+        
+        // hide exercise and reset contents
+        var exercise = document.getElementById('exercise');
+        exercise.style.display = 'none';
+        exercise.className = 'content-block';
+        exercise.innerHTML = document.getElementById('exercise-title').outerHTML + '<div id="quiz-result"></div><div id="quiz-zone" class="clear"></div><div id="quiz-timer" class="center"></div>';
+        
+        // show dictionary
+        document.getElementById('appendix-tool').style.display = '';
+        Genki.scrollTo('#pratice-words');
+        Genki.appendix.jisho.launchExercise();
+      },
+      
+      
       // restores preferences for the dictionary
       restoreSettings : function () {
         if (window.localStorage) {
