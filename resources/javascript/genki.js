@@ -1007,7 +1007,7 @@
       'lesson-23/literacy-wb-6|Workbook: Fill in the Blanks|p.130',
       
       // Appendix
-      //'appendix/dictionary|Dictionary|p.350-379',
+      'appendix/dictionary|Dictionary|p.350-379',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1050,10 +1050,9 @@
       *****************************
       ** 1. DRAG AND DROP        **
       ** 2. KANA DRAG AND DROP   **
-      ** 3. VERB CONJUGATION     **
-      ** 4. WRITING PRACTICE     **
-      ** 5. MULTIPLE CHOICE      **
-      ** 6. FILL IN THE BLANKS   **
+      ** 3. WRITING PRACTICE     **
+      ** 4. MULTIPLE CHOICE      **
+      ** 5. FILL IN THE BLANKS   **
       *****************************/
 
       // # 1. DRAG AND DROP #
@@ -1153,84 +1152,18 @@
       }
 
 
-      // # 3. VERB CONJUGATION #
-      else if (o.type == 'verb') {
-        var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list"><div class="quiz-column-title"></div>',
-            dropList = '<div id="drop-list">',
-            answers = [],
-            keysQ = [],
-            keysA,
-            columns = -1, i, j;
-
-        // generate a key list for the quizlet so we can randomly sort questions and answers
-        for (i in o.quizlet) {
-          keysQ.push(i);
-        }
-        keysA = keysQ.slice(0);
-
-        // generate the column titles
-        dropList += '<div class="quiz-title-row">';
-        while (++columns < o.columns.length) {
-          dropList += '<div class="quiz-column-title">' + o.columns[columns] + '</div>';
-        }
-        dropList += '</div>';
-
-
-        // generate the questions
-        while (keysQ.length) {
-          columns = -1;
-          i = Math.floor(Math.random() * keysQ.length);
-          quiz += '<div class="quiz-item">' + keysQ[i] + '</div>';
-
-          // create the answer row and contents
-          dropList += '<div class="quiz-answer-row">';
-          while (++columns < o.columns.length) {
-            dropList += '<div class="quiz-answer-zone" data-text="' + keysQ[i] + '-' + columns + '" data-mistakes="0"></div>';
-            ++Genki.stats.problems;
-          }
-          dropList += '</div>';
-
-          keysQ.splice(i, 1);
-        }
-        quiz += '</div>' + dropList + '</div>'; // close the question list and add the drop list
-
-
-        // generate the answers
-        for (i = 0, j = keysA.length; i < j; i++) {
-          columns = -1;
-
-          while (++columns < o.columns.length) {
-            answers.push('<div class="quiz-item" data-answer="' + keysA[i] + '-' + columns + '">' + o.quizlet[keysA[i]][columns] + '</div>');
-          }
-        }
-
-        // randomize the answer list
-        quiz += '<div id="answer-list">';
-        while (answers.length) {
-          i = Math.floor(Math.random() * answers.length);
-
-          quiz += answers[i];
-
-          answers.splice(i, 1);
-        }
-        quiz += '</div>'; // close the answer list
-
-        // add the quiz to the document
-        zone.innerHTML = quiz + Genki.lang.review;
-      }
-
-
-      // # 4. WRITING PRACTICE #
+      // # 3. WRITING PRACTICE #
       else if (o.type == 'writing') {
         var quiz = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '" target="_blank">clicking here</a>.</div><div id="question-list">',
             columns = o.columns,
             width = 'style="width:' + (100 / (columns + 1)) + '%;"',
             index = 0,
+            helper = false,
             i, j;
 
         for (i in o.quizlet) {
           // create a new row
-          quiz += '<div class="quiz-answer-row"><div class="quiz-item" data-helper="' + o.quizlet[i] + '" ' + width + '>' + i + '</div>';
+          quiz += '<div class="quiz-answer-row' + (o.quizlet[i] ? ' furi-row' : '') + '"><div class="quiz-item" data-helper="' + o.quizlet[i] + '" ' + width + '>' + i + '</div>';
           j = 0;
 
           // insert the writing zones
@@ -1242,9 +1175,15 @@
           quiz += '</div>'; // close the row
           columns = o.columns; // reset column value for next iteration
         }
+        
+        // check if furigana is present and add a toggle button
+        if (/data-helper/.test(quiz)) {
+          helper = true;
+          zone.className += ' helper-' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+        }
 
         // add the quiz to the document
-        zone.innerHTML = quiz + '</div>' + Genki.lang.check_answers;
+        zone.innerHTML = quiz + '</div>' + Genki.lang.check_answers.replace(/<\/div>/, helper ? Genki.lang.toggle_furigana + '</div>' : '</div>');
         
         // add a class for non-practice writing exercises
         // this will remove helpers, forcing the student to recall what they learned
@@ -1263,12 +1202,13 @@
       }
 
 
-      // # 5. MULTIPLE CHOICE #
+      // # 4. MULTIPLE CHOICE #
       else if (o.type == 'multi') {
         var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
             answers = '<div id="answer-list">',
             option = 65, // used for tagging answers as A(65), B(66), C(67)..
             isAnswer = false,
+            helper = false,
             q = o.quizlet,
             i = 0,
             j = q.length,
@@ -1319,16 +1259,22 @@
           option = 65; // resets the option id so the next answers begin with A, B, C..
           ++Genki.stats.problems; // increment problems number
         }
+        
+        // check if furigana is present and add a toggle button
+        if (/class="furigana"/.test(quiz)) {
+          helper = true;
+          zone.className += ' helper-' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+        }
 
         // add the multi-choice quiz to the quiz zone
-        zone.innerHTML = quiz + '</div><div id="quiz-progress"><div id="quiz-progress-bar"></div></div>';
+        zone.innerHTML = quiz + '</div><div id="quiz-progress"><div id="quiz-progress-bar"></div></div>' + (helper ? '<div id="review-exercise" class="center clearfix">' + Genki.lang.toggle_furigana + '</div>' : '');
 
         // begin the quiz
         Genki.progressQuiz('init');
       }
       
       
-      // # 6. FILL IN THE BLANKS #
+      // # 5. FILL IN THE BLANKS #
       else if (o.type == 'fill') {
         
         // add the quiz to the document
@@ -1379,7 +1325,7 @@
 
 
       // # DRAG AND DROP FUNCTIONALITY #
-      if (o.type == 'drag' || o.type == 'kana' || o.type == 'verb') {
+      if (o.type == 'drag' || o.type == 'kana') {
         // setup drag and drop
         var drake = dragula([document.querySelector('#answer-list')], {
           isContainer : function (el) {
@@ -1519,7 +1465,7 @@
           )+
           (document.querySelector('.alt-phrase') ? '<br><br>' + Genki.lang.sub_answers : '')+
           '<div class="center">'+
-            '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Try Again</a>'+
+            '<button class="button" onclick="window.location.reload();"><i class="fa">&#xf021;</i>Try Again</button>'+
             '<button class="button" onclick="Genki.breakTime();"><i class="fa">&#xf0f4;</i>Take a Break</button>'+
             '<a href="' + document.getElementById('home-link').href + '" class="button"><i class="fa">&#xf015;</i>Back to Index</a>'+
           '</div>'+
@@ -1620,7 +1566,7 @@
           document.getElementById('quiz-timer').style.display = 'none';
 
           // show restart button
-          document.getElementById('review-exercise').innerHTML = '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Restart</a>' + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
+          document.getElementById('review-exercise').innerHTML = '<button class="button" onclick="window.location.reload();"><i class="fa">&#xf021;</i>Restart</button>' + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
 
           // change the quiz info
           document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';
@@ -1668,7 +1614,7 @@
             Genki.exerciseComplete = true;
 
             // hide check answers button
-            document.getElementById('check-answers').style.display = 'none';
+            document.querySelector('#check-answers button').style.display = 'none';
 
             // loop over the inputs and check to see if the answers are correct
             var input = document.querySelectorAll('#exercise .writing-zone-input'),
@@ -1879,7 +1825,7 @@
         // open the current lesson and scroll to the active exercise
         if (Genki.active.exercise) {
           // open the active lesson
-          Genki.toggle.list(document.getElementById(/^study-tools/.test(Genki.active.exercise[0]) ? 'study-tools' : Genki.active.exercise[0].replace(/(lesson-\d+)\/.*/, '$1')).previousSibling);
+          Genki.toggle.list(document.getElementById(/^appendix/.test(Genki.active.exercise[0]) ? 'appendix' : /^study-tools/.test(Genki.active.exercise[0]) ? 'study-tools' : Genki.active.exercise[0].replace(/(lesson-\d+)\/.*/, '$1')).previousSibling);
 
           // highlight the active exercise and scoll to it
           active = document.querySelector('a[href*="' + Genki.active.exercise[0] + '"]');
@@ -1927,9 +1873,13 @@
 
       // add exercise title to the document
       if (Genki.active.exercise) {
-        lesson = /^study-tools/.test(Genki.active.exercise[0]) ? 'study-tools' : +Genki.active.exercise[0].replace(/lesson-(\d+).*/, '$1'); // current lesson
+        lesson = /^appendix/.test(Genki.active.exercise[0]) ? 'appendix' : /^study-tools/.test(Genki.active.exercise[0]) ? 'study-tools' : +Genki.active.exercise[0].replace(/lesson-(\d+).*/, '$1'); // current lesson
         
-        result.insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center" ' + (Genki.active.exercise[2] ? 'data-page="Genki ' + (lesson < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(Genki.active.exercise[0]) ? ' Workbook' : '') + ': ' + Genki.active.exercise[2] + '"' : '') + '>' + (lesson == 'study-tools' ? 'ツール' : '第' + lesson + '課') + ' - ' + Genki.active.exercise[1] + '</h2>');
+        result.insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center" ' + (Genki.active.exercise[2] ? 'data-page="Genki ' + (lesson < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(Genki.active.exercise[0]) ? ' Workbook' : '') + ': ' + Genki.active.exercise[2] + '"' : '') + '>' + (
+          lesson == 'appendix' ? '巻末' :
+          lesson == 'study-tools' ? 'ツール' :
+          '第' + lesson + '課'
+        ) + ' - ' + Genki.active.exercise[1] + '</h2>');
         
       } else {
         result.insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center">' + document.querySelector('TITLE').innerText.replace(/\s\|.*/, '') + '</h2>');

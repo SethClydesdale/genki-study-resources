@@ -19,7 +19,7 @@ input[type="text"]::placeholder, input[type="number"]::placeholder, textarea::pl
   color:#888;
 }
 
-body, input[type="text"], input[type="number"], textarea, input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled, input.writing-zone-input:disabled, #exercise-list .lesson-title, #exercise-list a:before, .quiz-multi-answer  {
+body, input[type="text"], input[type="number"], textarea, select, input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled, select:disabled, input.writing-zone-input:disabled, #exercise-list .lesson-title, #exercise-list a:before, .quiz-multi-answer  {
   color:#AAA;
 }
 
@@ -35,7 +35,7 @@ a, code {
 /* 2. BACKGROUND COLORS */
 body { background-color:#161616; }
 
-code, input[type="text"], input[type="number"], textarea, .table td, .writing-zone, .quiz-multi-answer, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, input.writing-zone-input {
+code, input[type="text"], input[type="number"], textarea, select, .table td, .writing-zone, .quiz-multi-answer, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, input.writing-zone-input, .genki_pseudo_checkbox, .genki_pseudo_radio {
   background-color:#1A1A1A;
 }
 
@@ -43,13 +43,13 @@ code, input[type="text"], input[type="number"], textarea, .table td, .writing-zo
   background-color:#222;
 }
 
-.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before {
+.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before, .genki_pseudo_radio:before {
   background-color:#333;
 }
 
 
 /* 3. BORDER COLORS */
-code, input[type="text"], input[type="number"], textarea, .table td, .quiz-column-title, .verb-quiz .quiz-answer-zone:not(:empty), .verb-quiz.quiz-over [data-mistakes="0"], #quick-search-results, .quiz-item, .quiz-answer-zone:empty, #exercise-list, #exercise-list .lesson-title, #exercise-list ul, .quiz-over [data-mistakes="0"] .quiz-item, input.writing-zone-input, .writing-quiz.quiz-over [data-mistakes="0"], .question-block, .quiz-multi-question, .quiz-multi-question .lesson-image img, .quiz-multi-answer, .text-block, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, #result-list, .result-row, #study-tool-ui .item-row.question-row {
+code, input[type="text"], input[type="number"], textarea, select, .table td, .quiz-column-title, .verb-quiz .quiz-answer-zone:not(:empty), .verb-quiz.quiz-over [data-mistakes="0"], #quick-search-results, .dict-search-results, .quiz-item, .quiz-answer-zone:empty, #exercise-list, #exercise-list .lesson-title, #exercise-list ul, .quiz-over [data-mistakes="0"] .quiz-item, input.writing-zone-input, .writing-quiz.quiz-over [data-mistakes="0"], .question-block, .quiz-multi-question, .quiz-multi-question .lesson-image img, .quiz-multi-answer, .text-block, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, #result-list, .result-row, #study-tool-ui .item-row.question-row, .genki_pseudo_checkbox, .genki_pseudo_radio {
   border-color:#333;
 }
 
@@ -57,7 +57,7 @@ code, input[type="text"], input[type="number"], textarea, .table td, .quiz-colum
   border-color:#444;
 }
 
-input[type="text"]::placeholder, input[type="text"]:hover, input[type="number"]:hover, textarea:hover, input.writing-zone-input:hover, hr {
+input[type="text"]::placeholder, input[type="text"]:hover, input[type="number"]:hover, textarea:hover, select:hover, input.writing-zone-input:hover, hr {
   border-color:#555;
 }
 
@@ -65,7 +65,7 @@ input[type="text"]::placeholder, input[type="text"]:hover, input[type="number"]:
   border-color:#666;
 }
 
-input[type="text"]:focus, input[type="number"]:focus, textarea:focus, input.writing-zone-input:focus, .fill-quiz .writing-zone-input:focus {
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:focus, input.writing-zone-input:focus, .fill-quiz .writing-zone-input:focus {
   border-color:#F60;
 }
 

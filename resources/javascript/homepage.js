@@ -26,12 +26,15 @@
           clone = li[i].cloneNode(true); // clone the match for displaying in the results node
           
           // add lesson number to exercise
-          clone.dataset.lesson = clone.getElementsByTagName('A')[0].href.replace(/.*?(lesson-\d+).*|.*?(study-tools).*/, function (Match, $1, $2) {
+          clone.dataset.lesson = clone.getElementsByTagName('A')[0].href.replace(/.*?\/(lesson-\d+).*|.*?\/(study-tools).*|.*?\/(appendix).*/, function (Match, $1, $2, $3) {
             if ($1) {
               return $1.charAt(0).toUpperCase() + $1.split('-').pop();
               
             } else if ($2) {
               return 'tool'
+              
+            } else if ($3) {
+              return 'appendix'
             }
           });
           
@@ -102,7 +105,5 @@
   
   // # JUMP ARROWS #
   // Add arrows to each lesson title that will take the student back to the quick navigation
-  for (var title = document.querySelectorAll('.lesson-title'), i = 0, j = title.length; i < j; i++) {
-    title[i].insertAdjacentHTML('beforeEnd', '<a href="#quick-nav" class="jump-arrow fa" title="Jump to Quick Navigation">&#xf062;</a>');
-  }
+  AddJumpArrowsTo('.lesson-title', 'quick-nav', 'Jump to Quick Navigation');
 }(window, document));
