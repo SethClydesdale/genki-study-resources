@@ -1465,7 +1465,7 @@
           )+
           (document.querySelector('.alt-phrase') ? '<br><br>' + Genki.lang.sub_answers : '')+
           '<div class="center">'+
-            '<button class="button" onclick="window.location.reload();"><i class="fa">&#xf021;</i>Try Again</button>'+
+            '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Try Again</a>'+
             '<button class="button" onclick="Genki.breakTime();"><i class="fa">&#xf0f4;</i>Take a Break</button>'+
             '<a href="' + document.getElementById('home-link').href + '" class="button"><i class="fa">&#xf015;</i>Back to Index</a>'+
           '</div>'+
@@ -1566,7 +1566,7 @@
           document.getElementById('quiz-timer').style.display = 'none';
 
           // show restart button
-          document.getElementById('review-exercise').innerHTML = '<button class="button" onclick="window.location.reload();"><i class="fa">&#xf021;</i>Restart</button>' + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
+          document.getElementById('review-exercise').innerHTML = '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Restart</a>' + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
 
           // change the quiz info
           document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';
