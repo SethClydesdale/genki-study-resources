@@ -89,6 +89,26 @@
   };
   
   
+  // # CUSTOM INPUTS #
+  window.CreateCustomInputs = function () {
+    for (var input = document.querySelectorAll('input[type="checkbox"], input[type="radio"]'), i = 0, j = input.length, type; i < j; i++) {
+      if (!/light-switch-checkbox|genki_input_hidden/g.test(input[i].outerHTML)) { // exclusions
+        input[i].className += ' genki_input_hidden';
+        input[i].insertAdjacentHTML('afterend', '<span class="genki_pseudo_' + input[i].type + '" onclick="this.previousSibling.click(); return false;"/>');
+      }
+    }
+  };
+  
+  
+  // # JUMP ARROWS #
+  // Add arrows to each target that return the student to the specified element
+  window.AddJumpArrowsTo = function (targets, tag, title) {
+    for (var a = document.querySelectorAll(targets), i = 0, j = a.length; i < j; i++) {
+      a[i].insertAdjacentHTML('beforeEnd', '<a href="#' + (tag ? tag : '') + '" class="jump-arrow fa" title="' + (title ? title : '') + '">&#xf062;</a>');
+    }
+  };
+  
+  
   // # getPaths (helper function) #
   // finds out how deep a file is and returns a path that leads to the root
   // example: getPaths() + 'resources/css/stylesheet-dark.min.css'

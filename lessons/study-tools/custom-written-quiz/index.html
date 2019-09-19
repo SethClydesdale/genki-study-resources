@@ -34,8 +34,8 @@
     </header>
     
     <div id="content">
-      <div id="study-tool-editor" class="content-block">
-        <h2 id="custom-quiz" class="title center">Custom Written Quiz</h2>
+      <div id="study-tool-editor" class="content-block loading">
+        <h2 id="custom-quiz" class="title center">ツール - Custom Written Quiz</h2>
         <p>Welcome to the custom written quiz tool! Here you will be able to setup your own custom quiz that requires input via keyboard. These quizzes are a bit more advanced and require some <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="blank">HTML</a> to set things up properly. Please read over the <a href="#help-notes-and-tricks">help section</a> for more information.</p>
         
         <h2 id="quiz-settings" class="section-title">Written Quiz HTML</h2>
@@ -510,6 +510,7 @@
       Genki.tools.type = 'fill';
       Genki.tools.settings.restore();
       Genki.tools.restore();
+      Genki.tools.finishedLoading();
     </script>
   </body>
 </html>

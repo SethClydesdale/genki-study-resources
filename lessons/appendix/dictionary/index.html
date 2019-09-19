@@ -1,0 +1,2703 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dictionary - Appendix | Genki Study Resources</title>
+    <meta name="title" content="Dictionary - Appendix | Genki Study Resources">
+    <meta name="twitter:title" content="Dictionary - Appendix | Genki Study Resources">
+    <meta property="og:title" content="Dictionary - Appendix | Genki Study Resources">
+    <meta name="description" content="Welcome to the dictionary for Genki! This dictionary lists all the words learned in Genki volumes I and II. It also allows you to practice a selected list of words in the exercise of your choice, so you can focus on the vocabulary you're having trouble with.">
+    <meta property="og:description" content="Welcome to the dictionary for Genki! This dictionary lists all the words learned in Genki volumes I and II. It also allows you to practice a selected list of words in the exercise of your choice, so you can focus on the vocabulary you're having trouble with.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki, japanese, dictionary, quizzes, exercises" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons/appendix/dictionary/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../../" id="home-link">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="appendix-tool" class="content-block loading">
+        <h2 id="custom-vocab-practice" class="title center">巻末 - Dictionary</h2>
+        <p>Welcome to the dictionary for Genki! This dictionary lists all the words learned in Genki volumes I and II. It also allows you to practice a selected list of words in the exercise of your choice, so you can focus on the vocabulary you're having trouble with.</p>
+
+        <h2 id="pratice-words">Practice</h2>
+        <p>To begin practicing, <strong>select 5 or more words</strong> by clicking the checkbox next to any word to add it to your study queue. You can also use the select all buttons to select a group of words. Once you have selected all the words you want, click the "Study Selected Words" button below to begin.</p>
+        <div class="center">
+          <button class="button" onclick="Genki.appendix.jisho.launchExercise();"><i class="fa">&#xf040;</i> Study Selected Words</button>
+        </div><br>
+        
+        <div class="columns-2 clear">
+          <div id="dictionary-modes">
+            <h2 id="dictionary-mode">Dictionary Mode</h2>
+            <p class="dict-desc">Use the buttons below to switch between Japanese-English and English-Japanese dictionary modes.</p>
+            <button id="ja-mode" class="button active-mode" onclick="Genki.appendix.jisho.switchMode('ja');">Japanese-English</button>
+            <button id="en-mode" class="button" onclick="Genki.appendix.jisho.switchMode('en');">English-Japanese</button>
+          </div>
+          
+          <div id="dict-legend">
+            <h2 id="legend">Legend</h2>
+            <p class="dict-desc">The legend shows what the meaning of an icon next to a definition is.</p>
+            <div class="text-block">
+              <div>会……会話・文法編 <span class="leg-desc">(Conversation and Grammar section)</span></div>
+              <div>読……読み書き編 <span class="leg-desc">(Reading and Writing section)</span></div>
+              <div>G……あいさつ <span class="leg-desc">(Greetings)</span></div>
+              <div>(e)……Useful Expressions</div>
+              <div>I・II・III……問題番号（読み書き編） <span class="leg-desc">(Number of the exercise in the Reading and Writing section)</span></div>
+              <div>[<i>u</i>] u-verb　[<i>ru</i>] ru-verb　[<i>irr</i>] irregular verb</div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="dictionary-top" style="margin-bottom:-50px;"></div>
+        <div id="japanese-english" class="dict-block clear">
+          <h2 id="ja-main-title" class="section-title">Japanese-English Dictionary</h2>
+          
+          <div class="columns-2 clear">
+            <div id="dict-index-ja">
+              <h2 id="quick-nav-ja">Dictionary Index</h2>
+              <p class="dict-desc">The Dictionary Index lets you quickly jump to a section or select/deselect all words.</p>
+              <div class="dictionary-index text-block clear">
+                <ul>
+                  <li><a href="#section-あ">あ</a></li>
+                  <li><a href="#section-い">い</a></li>
+                  <li><a href="#section-う">う</a></li>
+                  <li><a href="#section-え">え</a></li>
+                  <li><a href="#section-お">お</a></li>
+                </ul>
+                <ul class="dict-index-split">
+                  <li><a href="#section-か">か</a></li>
+                  <li><a href="#section-き">き</a></li>
+                  <li><a href="#section-く">く</a></li>
+                  <li><a href="#section-け">け</a></li>
+                  <li><a href="#section-こ">こ</a></li>
+                </ul>
+                <ul class="dict-index-split">
+                  <li><a href="#section-さ">さ</a></li>
+                  <li><a href="#section-し">し</a></li>
+                  <li><a href="#section-す">す</a></li>
+                  <li><a href="#section-せ">せ</a></li>
+                  <li><a href="#section-そ">そ</a></li>
+                </ul>
+                <ul class="dict-index-split">
+                  <li><a href="#section-た">た</a></li>
+                  <li><a href="#section-ち">ち</a></li>
+                  <li><a href="#section-つ">つ</a></li>
+                  <li><a href="#section-て">て</a></li>
+                  <li><a href="#section-と">と</a></li>
+                </ul>
+                <ul class="dict-index-split">
+                  <li><a href="#section-な">な</a></li>
+                  <li><a href="#section-に">に</a></li>
+                  <li><a href="#section-ぬ">ぬ</a></li>
+                  <li><a href="#section-ね">ね</a></li>
+                  <li><a href="#section-の">の</a></li>
+                </ul>
+                <ul class="dict-index-split">
+                  <li><a href="#section-は">は</a></li>
+                  <li><a href="#section-ひ">ひ</a></li>
+                  <li><a href="#section-ふ">ふ</a></li>
+                  <li><a href="#section-へ">へ</a></li>
+                  <li><a href="#section-ほ">ほ</a></li>
+                </ul>
+                <ul class="dict-index-split">
+                  <li><a href="#section-ま">ま</a></li>
+                  <li><a href="#section-み">み</a></li>
+                  <li><a href="#section-む">む</a></li>
+                  <li><a href="#section-め">め</a></li>
+                  <li><a href="#section-も">も</a></li>
+                </ul>
+                <ul class="dict-index-split">
+                  <li><a href="#section-や">や</a></li>
+                  <li><a href="#section-ゆ">ゆ</a></li>
+                  <li><a href="#section-よ">よ</a></li>
+                </ul>
+                <ul class="dict-index-split">
+                  <li><a href="#section-ら">ら</a></li>
+                  <li><a href="#section-り">り</a></li>
+                  <li><a href="#section-る">る</a></li>
+                  <li><a href="#section-れ">れ</a></li>
+                  <li><a href="#section-ろ">ろ</a></li>
+                </ul>
+                <ul class="dict-index-split">
+                  <li><a href="#section-わ">わ</a></li>
+                  <li><span class="dict-index-disabled">を</span></li>
+                  <li><span class="dict-index-disabled">ん</span></li>
+                </ul>
+              </div>
+              
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true);">Select All Words</button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false);">Deselect All Words</button>
+              </div>
+            </div>
+            
+            <div id="quick-search-ja">
+              <h2 id="dict-search-ja">Quick Search <span id="dict-search-hits-ja"></span></h2>
+              <p class="dict-desc">Quick search helps you quickly find words you're looking for.</p>
+              <div class="dict-search-wrapper">
+                <input class="dict-search" type="text" placeholder="Search..." oninput="Genki.appendix.jisho.search(this.value, 'ja')">
+                <div class="group-selectors center" style="visibility:hidden;">
+                  <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, '#dict-search-results-ja .def-selector', true);" title="Select all search results"></button>
+                  <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, '#dict-search-results-ja .def-selector', true);" title="Deselect all search results"></button>
+                </div>
+                <ul id="dict-search-results-ja" class="dict-search-results"></ul>
+              </div>
+            </div>
+          </div><br><br>
+          
+          <div class="dictionary-group">
+            <h2 id="section-あ" class="section-title">あ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-あ');" title="Select all words in group あ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-あ');" title="Deselect all words in group あ"></button>
+            </div>
+            <ul id="list-あ">
+              <li class="definition clear" data-def="a-1"><span class="def-ja def-furi">相変わらず<i>あいかわらず</i></span>
+                <span class="def-en">as usual</span>
+                <span class="def-label">読L22-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-2"><span class="def-ja def-furi">愛す<i>あいす</i></span>
+                <span class="def-en">to love</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">読L14-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-3"><span class="def-ja">アイスクリーム</span>
+                <span class="def-en">ice cream</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-4"><span class="def-ja def-furi">間<i>あいだ</i></span>
+                <span class="def-en">between</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-5"><span class="def-ja def-furi">～間に<i>～あいだに</i></span>
+                <span class="def-en">while...</span>
+                <span class="def-label">会L21</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-6"><span class="def-ja def-furi">相手<i>あいて</i></span>
+                <span class="def-en">partner</span>
+                <span class="def-label">会L22</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-7"><span class="def-ja">アイロンをかける</span>
+                <span class="def-en">to iron (clothes)</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-8"><span class="def-ja def-furi">会う<i>あう</i></span>
+                <span class="def-en">to meet; to see (a person)</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-9"><span class="def-ja">アウトドア</span>
+                <span class="def-en">outdoor activities</span>
+                <span class="def-label">読L11-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-10"><span class="def-ja def-furi">青い<i>あおい</i></span>
+                <span class="def-en">blue</span>
+                <span class="def-label">会L9, 会L9(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-11"><span class="def-ja def-furi">赤い<i>あかい</i></span>
+                <span class="def-en">red</span>
+                <span class="def-label">会L9, 会L9(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-12"><span class="def-ja def-furi">赤ちゃん<i>あかちゃん</i></span>
+                <span class="def-en">baby</span>
+                <span class="def-label">会L21</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-13"><span class="def-ja def-furi">明るい<i>あかるい</i></span>
+                <span class="def-en">bright; cheerful</span>
+                <span class="def-label">会L18, 読L11-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-14"><span class="def-ja def-furi">秋<i>あき</i></span>
+                <span class="def-en">fall</span>
+                <span class="def-label">会L10</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-15"><span class="def-ja">あきらめる</span>
+                <span class="def-en">to give up</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L14</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-16"><span class="def-ja def-furi">開く<i>あく</i></span>
+                <span class="def-en">(something) opens</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-17"><span class="def-ja def-furi">開ける<i>あける</i></span>
+                <span class="def-en">to open (something)</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L6</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-18"><span class="def-ja">あげる</span>
+                <span class="def-en">to give (to others)</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L14</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-19"><span class="def-ja def-furi">朝<i>あさ</i></span>
+                <span class="def-en">morning</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-20"><span class="def-ja def-furi">朝ご飯<i>あさごはん</i></span>
+                <span class="def-en">breakfast</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-21"><span class="def-ja">あさって</span>
+                <span class="def-en">the day after tomorrow</span>
+                <span class="def-label">会L4(e), 会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-22"><span class="def-ja def-furi">朝寝坊する<i>あさねぼうする</i></span>
+                <span class="def-en">to oversleep</span>
+                <span class="def-vtype">[<i>irr</i>]</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-23"><span class="def-ja def-furi">足<i>あし</i></span>
+                <span class="def-en">leg; foot</span>
+                <span class="def-label">会L7(e), 会L12</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-24"><span class="def-ja def-furi">アジア研究<i>アジアけんきゅう</i></span>
+                <span class="def-en">Asian studies</span>
+                <span class="def-label">会L1</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-25"><span class="def-ja def-furi">明日<i>あした</i></span>
+                <span class="def-en">tomorrow</span>
+                <span class="def-label">会L3, 会L4(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-26"><span class="def-ja">あそこ</span>
+                <span class="def-en">over there</span>
+                <span class="def-label">会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-27"><span class="def-ja def-furi">遊ぶ<i>あそぶ</i></span>
+                <span class="def-en">to play; to spend time pleasantly</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L6</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-28"><span class="def-ja def-furi">暖かい<i>あたたかい</i></span>
+                <span class="def-en">warm</span>
+                <span class="def-label">会L10</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-29"><span class="def-ja def-furi">頭<i>あたま</i></span>
+                <span class="def-en">head</span>
+                <span class="def-label">会L7(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-30"><span class="def-ja def-furi">頭がいい<i>あたまがいい</i></span>
+                <span class="def-en">bright; smart; clever</span>
+                <span class="def-label">会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-31"><span class="def-ja def-furi">新しい<i>あたらしい</i></span>
+                <span class="def-en">new</span>
+                <span class="def-label">会L5</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-32"><span class="def-ja">あちら</span>
+                <span class="def-en">that way (place)</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-33"><span class="def-ja def-furi">熱い<i>あつい</i></span>
+                <span class="def-en">hot (thing)</span>
+                <span class="def-label">会L5</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-34"><span class="def-ja def-furi">暑い<i>あつい</i></span>
+                <span class="def-en">hot (weather)</span>
+                <span class="def-label">会L5</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-35"><span class="def-ja def-furi">集める<i>あつめる</i></span>
+                <span class="def-en">to collect</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-36"><span class="def-ja def-furi">後<i>あと</i></span>
+                <span class="def-en">the rest</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-37"><span class="def-ja def-furi">後<i>あと</i></span>
+                <span class="def-en">after (an event)</span>
+                <span class="def-label">読L8-II, 会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-38"><span class="def-ja def-furi">後で<i>あとで</i></span>
+                <span class="def-en">later on</span>
+                <span class="def-label">会L6</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-39"><span class="def-ja">アドバイス</span>
+                <span class="def-en">advice</span>
+                <span class="def-label">読L14-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-40"><span class="def-ja">あなた</span>
+                <span class="def-en">you</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-41"><span class="def-ja def-furi">兄<i>あに</i></span>
+                <span class="def-en">(my) older brother</span>
+                <span class="def-label">会L14</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-42"><span class="def-ja">アニメ</span>
+                <span class="def-en">animation</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-43"><span class="def-ja def-furi">姉<i>あね</i></span>
+                <span class="def-en">(my) older sister</span>
+                <span class="def-label">会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-44"><span class="def-ja">あの</span>
+                <span class="def-en">that...(over there); um...</span>
+                <span class="def-label">会L1, 会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-45"><span class="def-ja">アパート</span>
+                <span class="def-en">apartment</span>
+                <span class="def-label">会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-46"><span class="def-ja def-furi">危ない<i>あぶない</i></span>
+                <span class="def-en">dangerous</span>
+                <span class="def-label">会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-47"><span class="def-ja def-furi">甘い<i>あまい</i></span>
+                <span class="def-en">sweet</span>
+                <span class="def-label">会L12</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-48"><span class="def-ja def-furi">天の川<i>あまのがわ</i></span>
+                <span class="def-en">the Milky Way</span>
+                <span class="def-label">読L12-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-49"><span class="def-ja">あまり</span>
+                <span class="def-en">not much (with neg. sentence)</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-50"><span class="def-ja def-furi">編む<i>あむ</i></span>
+                <span class="def-en">to knit</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L13</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-51"><span class="def-ja def-furi">雨<i>あめ</i></span>
+                <span class="def-en">rain</span>
+                <span class="def-label">会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-52"><span class="def-ja def-furi">雨が降る<i>あめがふる</i></span>
+                <span class="def-en">it rains</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-53"><span class="def-ja def-furi">雨がやむ<i>あめがやむ</i></span>
+                <span class="def-en">the rain stops</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L23</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-54"><span class="def-ja">アメリカ</span>
+                <span class="def-en">U.S.A.</span>
+                <span class="def-label">会L1, 会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-55"><span class="def-ja def-furi">謝る<i>あやまる</i></span>
+                <span class="def-en">to apologize</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-56"><span class="def-ja def-furi">洗う<i>あらう</i></span>
+                <span class="def-en">to wash</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-57"><span class="def-ja def-furi">表す<i>あらわす</i></span>
+                <span class="def-en">to express; to show</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">読L23-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-58"><span class="def-ja">ありがとう</span>
+                <span class="def-en">Thank you.</span>
+                <span class="def-label">会G</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-59"><span class="def-ja">ありがとうございます</span>
+                <span class="def-en">Thank you. (polite)</span>
+                <span class="def-label">会G</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-60"><span class="def-ja">ある</span>
+                <span class="def-en">there is...</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-61"><span class="def-ja">ある～</span>
+                <span class="def-en">one...</span>
+                <span class="def-label">読L12-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-62"><span class="def-ja def-furi">歩いて<i>あるいて</i></span>
+                <span class="def-en">on foot</span>
+                <span class="def-label">会L10</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-63"><span class="def-ja def-furi">歩く<i>あるく</i></span>
+                <span class="def-en">to walk</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L12</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-64"><span class="def-ja">アルバイト</span>
+                <span class="def-en">part-time job</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-65"><span class="def-ja">あれ</span>
+                <span class="def-en">that one (over there)</span>
+                <span class="def-label">会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-66"><span class="def-ja">アンケート</span>
+                <span class="def-en">questionnaire</span>
+                <span class="def-label">読L8-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-67"><span class="def-ja def-furi">暗証番号<i>あんしょうばんごう</i></span>
+                <span class="def-en">personal identificiation number</span>
+                <span class="def-label">会L13(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-68"><span class="def-ja def-furi">安全<i>あんぜん（な）</i></span>
+                <span class="def-en">safe</span>
+                <span class="def-label">会L21</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-69"><span class="def-ja def-furi">案内する<i>あんないする</i></span>
+                <span class="def-en">to show (someone) around</span>
+                <span class="def-vtype">[<i>irr</i>]</span>
+                <span class="def-label">読L9-II, 会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="a-70"><span class="def-ja">あんなに</span>
+                <span class="def-en">so; such</span>
+                <span class="def-label">読L20-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-い" class="section-title">い</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-い');" title="Select all words in group い"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-い');" title="Deselect all words in group い"></button>
+            </div>
+            <ul id="list-い">
+              <li class="definition clear" data-def="i-1"><span class="def-ja">いい</span>
+                <span class="def-en">good</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-2"><span class="def-ja">いいえ</span>
+                <span class="def-en">No.; Not at all.</span>
+                <span class="def-label">会G</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-3"><span class="def-ja def-furi">いい子<i>いいこ</i></span>
+                <span class="def-en">good child</span>
+                <span class="def-label">会L9</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-4"><span class="def-ja">いいこと</span>
+                <span class="def-en">good deed</span>
+                <span class="def-label">読L10-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-5"><span class="def-ja def-furi">言う<i>いう</i></span>
+                <span class="def-en">to say</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-6"><span class="def-ja def-furi">家<i>いえ</i></span>
+                <span class="def-en">house; home</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-7"><span class="def-ja def-furi">～以外<i>～いがい</i></span>
+                <span class="def-en">other than...</span>
+                <span class="def-label">読L16-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-8"><span class="def-ja">いかが</span>
+                <span class="def-en">how (polite exp. of どう)</span>
+                <span class="def-label">読L19-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-9"><span class="def-ja def-furi">～行き<i>～いき</i></span>
+                <span class="def-en">bound for...</span>
+                <span class="def-label">会L10(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-10"><span class="def-ja">イギリス</span>
+                <span class="def-en">Britain</span>
+                <span class="def-label">会L1, 会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-11"><span class="def-ja def-furi">行く<i>いく</i></span>
+                <span class="def-en">to go</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-12"><span class="def-ja">いくら</span>
+                <span class="def-en">how much</span>
+                <span class="def-label">会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-13"><span class="def-ja">いじめる</span>
+                <span class="def-en">to bully</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L21</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-14"><span class="def-ja def-furi">医者<i>いしゃ</i></span>
+                <span class="def-en">doctor</span>
+                <span class="def-label">会L1, 会L10</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-15"><span class="def-ja def-furi">～以上<i>～いじょう</i></span>
+                <span class="def-en">...or more</span>
+                <span class="def-label">読L18-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-16"><span class="def-ja def-furi">意地悪<i>いじわる（な）</i></span>
+                <span class="def-en">mean-spirited</span>
+                <span class="def-label">会L9</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-17"><span class="def-ja">いす</span>
+                <span class="def-en">chair</span>
+                <span class="def-label">会L2(e), 会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-18"><span class="def-ja def-furi">忙しい<i>いそがしい</i></span>
+                <span class="def-en">busy (people/days)</span>
+                <span class="def-label">会L5</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-19"><span class="def-ja def-furi">急ぐ<i>いそぐ</i></span>
+                <span class="def-en">to hurry</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L6</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-20"><span class="def-ja def-furi">痛い<i>いたい</i></span>
+                <span class="def-en">hurt; painful</span>
+                <span class="def-label">会L12</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-21"><span class="def-ja def-furi">致す<i>いたす</i></span>
+                <span class="def-en">extra-modest exp. for する</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-22"><span class="def-ja">いただきます</span>
+                <span class="def-en">Thank you for the meal. (before eating)</span>
+                <span class="def-label">会G</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-23"><span class="def-ja def-furi">頂く<i>いただく</i></span>
+                <span class="def-en">extra-modest exp. for たべる and のむ; humble exp. for もらう</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-24"><span class="def-ja">イタリア</span>
+                <span class="def-en">Italy</span>
+                <span class="def-label">読L6-III</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-25"><span class="def-ja def-furi">一月<i>いちがつ</i></span>
+                <span class="def-en">January</span>
+                <span class="def-label">会L4(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-26"><span class="def-ja def-furi">一号車<i>いちごうしゃ</i></span>
+                <span class="def-en">Car No. 1</span>
+                <span class="def-label">会L19(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-27"><span class="def-ja def-furi">一時<i>いちじ</i></span>
+                <span class="def-en">one o'clock</span>
+                <span class="def-label">会L1, 会L1(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-28"><span class="def-ja def-furi">一時間<i>いちじかん</i></span>
+                <span class="def-en">one hour</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-29"><span class="def-ja def-furi">一日<i>いちにち</i></span>
+                <span class="def-en">one day</span>
+                <span class="def-label">会L13</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-30"><span class="def-ja def-furi">一日中<i>いちにちじゅう</i></span>
+                <span class="def-en">all day long</span>
+                <span class="def-label">会L15</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-31"><span class="def-ja def-furi">一年中<i>いちねんじゅう</i></span>
+                <span class="def-en">all year</span>
+                <span class="def-label">読L15-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-32"><span class="def-ja def-furi">一年生<i>いちねんせい</i></span>
+                <span class="def-en">first-year student</span>
+                <span class="def-label">会L1</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-33"><span class="def-ja def-furi">一年に一度<i>いちねんにいちど</i></span>
+                <span class="def-en">once a year</span>
+                <span class="def-label">読L12-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-34"><span class="def-ja def-furi">一番<i>いちばん</i></span>
+                <span class="def-en">best</span>
+                <span class="def-label">会L10</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-35"><span class="def-ja def-furi">一番後ろ<i>いちばんうしろ</i></span>
+                <span class="def-en">last car; tail end</span>
+                <span class="def-label">会L10(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-36"><span class="def-ja def-furi">一番前<i>いちばんまえ</i></span>
+                <span class="def-en">first car; front end</span>
+                <span class="def-label">会L10(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-37"><span class="def-ja">いつ</span>
+                <span class="def-en">when</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-38"><span class="def-ja def-furi">五日<i>いつか</i></span>
+                <span class="def-en">the fifth day of a month; five days</span>
+                <span class="def-label">会L4(e), 会L13</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-39"><span class="def-ja def-furi">一歳<i>いっさい</i></span>
+                <span class="def-en">one year old</span>
+                <span class="def-label">会L1(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-40"><span class="def-ja def-furi">一生懸命<i>いっしょうけんめい</i></span>
+                <span class="def-en">very hard</span>
+                <span class="def-label">読L21-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-41"><span class="def-ja def-furi">一生に一度<i>いっしょうにいちど</i></span>
+                <span class="def-en">once in a lifetime</span>
+                <span class="def-label">読L13-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-42"><span class="def-ja def-furi">一緒に<i>いっしょに</i></span>
+                <span class="def-en">together</span>
+                <span class="def-label">会L5</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-43"><span class="def-ja def-furi">五つ<i>いつつ</i></span>
+                <span class="def-en">five</span>
+                <span class="def-label">会L9</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-44"><span class="def-ja">いってきます</span>
+                <span class="def-en">I'll go and come back.</span>
+                <span class="def-label">会G</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-45"><span class="def-ja">いってらっしゃい</span>
+                <span class="def-en">Please go and come back.</span>
+                <span class="def-label">会G</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-46"><span class="def-ja def-furi">一泊二食付<i>いっぱくにしょくつき</i></span>
+                <span class="def-en">one night with two meals</span>
+                <span class="def-label">会L15(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-47"><span class="def-ja def-furi">一分<i>いっぷん</i></span>
+                <span class="def-en">one minute</span>
+                <span class="def-label">会L1(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-48"><span class="def-ja">いつも</span>
+                <span class="def-en">always</span>
+                <span class="def-label">読L6-III, 会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-49"><span class="def-ja">いなか</span>
+                <span class="def-en">countryside</span>
+                <span class="def-label">読L20-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-50"><span class="def-ja">いなくなる</span>
+                <span class="def-en">to disappear; (someone) is gone</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L23</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-51"><span class="def-ja def-furi">犬<i>いぬ</i></span>
+                <span class="def-en">dog</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-52"><span class="def-ja def-furi">今<i>いま</i></span>
+                <span class="def-en">now</span>
+                <span class="def-label">会L1</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-53"><span class="def-ja def-furi">今すぐ<i>いますぐ</i></span>
+                <span class="def-en">right away</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-54"><span class="def-ja def-furi">意味<i>いみ</i></span>
+                <span class="def-en">meaning</span>
+                <span class="def-label">会L11(e), 会L12</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-55"><span class="def-ja def-furi">妹<i>いもうと</i></span>
+                <span class="def-en">younger sister</span>
+                <span class="def-label">会L1, 会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-56"><span class="def-ja">いや</span>
+                <span class="def-en">no</span>
+                <span class="def-label">会L23</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-57"><span class="def-ja">いらっしゃいます</span>
+                <span class="def-en">(someone honorable) is present/home</span>
+                <span class="def-label">会L13</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-58"><span class="def-ja">いらっしゃいませ</span>
+                <span class="def-en">Welcome (to our store).</span>
+                <span class="def-label">会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-59"><span class="def-ja">いらっしゃる</span>
+                <span class="def-en">honorific exp. for いく, くる, and いる</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L19</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-60"><span class="def-ja def-furi">入口<i>いりぐち</i></span>
+                <span class="def-en">entrance</span>
+                <span class="def-label">会L10(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-61"><span class="def-ja">いる</span>
+                <span class="def-en">(a person) is in...; stays at...</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-62"><span class="def-ja def-furi">要る<i>いる</i></span>
+                <span class="def-en">to need</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-63"><span class="def-ja">いれる</span>
+                <span class="def-en">to make tea, coffee, etc.</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-64"><span class="def-ja def-furi">入れる<i>いれる</i></span>
+                <span class="def-en">to put (something) in</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-65"><span class="def-ja def-furi">色<i>いろ</i></span>
+                <span class="def-en">color</span>
+                <span class="def-label">会L9</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-66"><span class="def-ja">いろいろ（な）</span>
+                <span class="def-en">various; different kinds of</span>
+                <span class="def-label">読L9-II, 会L13</span>
+              </li>
+              
+              <li class="definition clear" data-def="i-67"><span class="def-ja">インターネット</span>
+                <span class="def-en">Internet</span>
+                <span class="def-label">会L15</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-う" class="section-title">う</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-う');" title="Select all words in group う"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-う');" title="Deselect all words in group う"></button>
+            </div>
+            <ul id="list-う">
+              <li class="definition clear" data-def="u-1"><span class="def-ja">ううん</span>
+                <span class="def-en">uh-uh; no</span>
+                <span class="def-label">会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-2"><span class="def-ja def-furi">上<i>うえ</i></span>
+                <span class="def-en">above; on</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-3"><span class="def-ja">ウエイター</span>
+                <span class="def-en">waiter</span>
+                <span class="def-label">会L13</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-4"><span class="def-ja def-furi">伺う<i>うかがう</i></span>
+                <span class="def-en">to humbly visit; to humbly ask</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-5"><span class="def-ja def-furi">受付<i>うけつけ</i></span>
+                <span class="def-en">reception desk</span>
+                <span class="def-label">会L22</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-6"><span class="def-ja def-furi">受ける<i>うける</i></span>
+                <span class="def-en">to take (an examination, interview, etc.)</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">読L19-III, 会L23</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-7"><span class="def-ja def-furi">牛<i>うし</i></span>
+                <span class="def-en">cow</span>
+                <span class="def-label">読L12-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-8"><span class="def-ja def-furi">後ろ<i>うしろ</i></span>
+                <span class="def-en">back</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-9"><span class="def-ja">うそをつく</span>
+                <span class="def-en">to tell a lie</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-10"><span class="def-ja def-furi">歌<i>うた</i></span>
+                <span class="def-en">song</span>
+                <span class="def-label">会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-11"><span class="def-ja def-furi">歌う<i>うたう</i></span>
+                <span class="def-en">to sing</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-12"><span class="def-ja">うち</span>
+                <span class="def-en">home; house; my place</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-13"><span class="def-ja def-furi">宇宙人<i>うちゅうじん</i></span>
+                <span class="def-en">space alien</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-14"><span class="def-ja def-furi">宇宙飛行士<i>うちゅうひこうし</i></span>
+                <span class="def-en">astronaut</span>
+                <span class="def-label">会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-15"><span class="def-ja def-furi">写す<i>うつす</i></span>
+                <span class="def-en">to copy</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">読L16-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-16"><span class="def-ja">うまく</span>
+                <span class="def-en">well; successfully; skillfully</span>
+                <span class="def-label">読L22-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-17"><span class="def-ja">うまくいく</span>
+                <span class="def-en">to go well</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">読L22-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-18"><span class="def-ja def-furi">生まれる<i>うまれる</i></span>
+                <span class="def-en">to be born</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">読L15-II, 会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-19"><span class="def-ja def-furi">海<i>うみ</i></span>
+                <span class="def-en">sea</span>
+                <span class="def-label">会L5</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-20"><span class="def-ja def-furi">占い<i>うらない</i></span>
+                <span class="def-en">fortunetelling</span>
+                <span class="def-label">読L21-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-21"><span class="def-ja">うちやましい</span>
+                <span class="def-en">envious</span>
+                <span class="def-label">会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-22"><span class="def-ja">うちやましがる</span>
+                <span class="def-en">(somebody is) envious</span>
+                <span class="def-label">読L22-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-23"><span class="def-ja def-furi">売る<i>うる</i></span>
+                <span class="def-en">to sell</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">読L10-II, 会L15</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-24"><span class="def-ja">うるさい</span>
+                <span class="def-en">noisy; annoying</span>
+                <span class="def-label">会L22</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-25"><span class="def-ja">うれしい</span>
+                <span class="def-en">glad</span>
+                <span class="def-label">会L13</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-26"><span class="def-ja def-furi">売れる<i>うれる</i></span>
+                <span class="def-en">to be sold</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">読L20II</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-27"><span class="def-ja">うん</span>
+                <span class="def-en">uh-huh; yes</span>
+                <span class="def-label">会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-28"><span class="def-ja def-furi">運転する<i>うんてんする</i></span>
+                <span class="def-en">to drive</span>
+                <span class="def-vtype">[<i>irr</i>]</span>
+                <span class="def-label">会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="u-29"><span class="def-ja def-furi">運動する<i>うんどうする</i></span>
+                <span class="def-en">to do physical exercises</span>
+                <span class="def-vtype">[<i>irr</i>]</span>
+                <span class="def-label">会L9</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-え" class="section-title">え</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-え');" title="Select all words in group え"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-え');" title="Deselect all words in group え"></button>
+            </div>
+            <ul id="list-え">
+              <li class="definition clear" data-def="e-1"><span class="def-ja def-furi">絵<i>え</i></span>
+                <span class="def-en">painting; picture; drawing</span>
+                <span class="def-label">会L15</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-2"><span class="def-ja">エアコン</span>
+                <span class="def-en">air conditioner</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-3"><span class="def-ja def-furi">映画<i>えいが</i></span>
+                <span class="def-en">movie</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-4"><span class="def-ja def-furi">英会話<i>えいかいわ</i></span>
+                <span class="def-en">English conversation</span>
+                <span class="def-label">会L22</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-5"><span class="def-ja def-furi">映画館<i>えいがかん</i></span>
+                <span class="def-en">movie theater</span>
+                <span class="def-label">会L15</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-6"><span class="def-ja def-furi">影響を受ける<i>えいきょうをうける</i></span>
+                <span class="def-en">to be affected</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">読L17-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-7"><span class="def-ja def-furi">英語<i>えいご</i></span>
+                <span class="def-en">English language</span>
+                <span class="def-label">会L1</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-8"><span class="def-ja">ええ</span>
+                <span class="def-en">yes</span>
+                <span class="def-label">会L1</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-9"><span class="def-ja">ええと</span>
+                <span class="def-en">well...; let me see...</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-10"><span class="def-ja def-furi">駅<i>えき</i></span>
+                <span class="def-en">station</span>
+                <span class="def-label">読L6-I, 会L10</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-11"><span class="def-ja def-furi">駅員<i>えきいん</i></span>
+                <span class="def-en">station attendant</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-12"><span class="def-ja">えさ</span>
+                <span class="def-en">feed</span>
+                <span class="def-label">読L20-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-13"><span class="def-ja def-furi">江戸<i>えど</i></span>
+                <span class="def-en">former name of Tokyo</span>
+                <span class="def-label">読L20-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-14"><span class="def-ja def-furi">江戸時代<i>えどじだい</i></span>
+                <span class="def-en">Edo period</span>
+                <span class="def-label">読L20-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-15"><span class="def-ja def-furi">選ぶ<i>えらぶ</i></span>
+                <span class="def-en">to choose; to select</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-16"><span class="def-ja def-furi">えん<i>円</i></span>
+                <span class="def-en">yen</span>
+                <span class="def-label">会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-17"><span class="def-ja def-furi">鉛筆<i>えんぴつ</i></span>
+                <span class="def-en">pencil</span>
+                <span class="def-label">会L2, 会L2(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="e-18"><span class="def-ja def-furi">遠慮する<i>えんりょする</i></span>
+                <span class="def-en">to hold back for the time being; to refrain from</span>
+                <span class="def-vtype">[<i>irr</i>]</span>
+                <span class="def-label">会L19</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-お" class="section-title">お</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-お');" title="Select all words in group お"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-お');" title="Deselect all words in group お"></button>
+            </div>
+            <ul id="list-お">
+              <li class="definition clear" data-def="o-1"><span class="def-ja def-furi">お預入れ<i>おあずけいれ</i></span>
+                <span class="def-en">deposit</span>
+                <span class="def-label">会L13(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-2"><span class="def-ja">おいしい</span>
+                <span class="def-en">delicious</span>
+                <span class="def-label">会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-3"><span class="def-ja def-furi">お祈りする<i>おいのりする</i></span>
+                <span class="def-en">to pray</span>
+                <span class="def-vtype">[<i>irr</i>]</span>
+                <span class="def-label">会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-4"><span class="def-ja def-furi">往復<i>おうふく</i></span>
+                <span class="def-en">round trip</span>
+                <span class="def-label">会L10(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-5"><span class="def-ja def-furi">多い<i>おおい</i></span>
+                <span class="def-en">there are many...</span>
+                <span class="def-label">会L12</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-6"><span class="def-ja def-furi">大きい<i>おおきい</i></span>
+                <span class="def-en">large</span>
+                <span class="def-label">会L5</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-7"><span class="def-ja def-furi">大きさ<i>おおきさ</i></span>
+                <span class="def-en">size</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-8"><span class="def-ja def-furi">多くの～<i>おおくの～</i></span>
+                <span class="def-en">many...</span>
+                <span class="def-label">読L21-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-9"><span class="def-ja">オーストラリア</span>
+                <span class="def-en">Australia</span>
+                <span class="def-label">会L1, 会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-10"><span class="def-ja def-furi">大家さん<i>おおやさん</i></span>
+                <span class="def-en">landlord; landlady</span>
+                <span class="def-label">会L14</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-11"><span class="def-ja def-furi">お母さん<i>おかあさん</i></span>
+                <span class="def-en">mother</span>
+                <span class="def-label">会L1, 会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-12"><span class="def-ja def-furi">お返し<i>おかえし</i></span>
+                <span class="def-en">return (as a token of gratitude)</span>
+                <span class="def-label">会L14</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-13"><span class="def-ja">おかえり（なさい）</span>
+                <span class="def-en">Welcome home.</span>
+                <span class="def-label">会G</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-14"><span class="def-ja">おかげで</span>
+                <span class="def-en">thanks to...</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-15"><span class="def-ja def-furi">お菓子<i>おかし</i></span>
+                <span class="def-en">snack; sweets</span>
+                <span class="def-label">会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-16"><span class="def-ja def-furi">お金<i>おかね</i></span>
+                <span class="def-en">money</span>
+                <span class="def-label">会L6</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-17"><span class="def-ja def-furi">お金持ち<i>おかねもち</i></span>
+                <span class="def-en">rich person</span>
+                <span class="def-label">会L10</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-18"><span class="def-ja def-furi">お客さん<i>おきゃくさん</i></span>
+                <span class="def-en">guest; visitor; client; customer</span>
+                <span class="def-label">会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-19"><span class="def-ja def-furi">起きる<i>おきる</i></span>
+                <span class="def-en">to get up</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-20"><span class="def-ja def-furi">置く<i>おく</i></span>
+                <span class="def-en">to put; to lay; to place</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L21</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-21"><span class="def-ja def-furi">奥様<i>おくさま</i></span>
+                <span class="def-en">(your/his) wife (polite)</span>
+                <span class="def-label">会L19</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-22"><span class="def-ja def-furi">奥さん<i>おくさん</i></span>
+                <span class="def-en">(your/his) wife</span>
+                <span class="def-label">会L14</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-23"><span class="def-ja def-furi">送る<i>おくる</i></span>
+                <span class="def-en">to send; to walk/drive (someone)</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L14, 会L19</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-24"><span class="def-ja def-furi">遅れる<i>おくれる</i></span>
+                <span class="def-en">to become late</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L19</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-25"><span class="def-ja def-furi">お子さん<i>おこさん</i></span>
+                <span class="def-en">(you/their) child (polite)</span>
+                <span class="def-label">会L19</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-26"><span class="def-ja def-furi">起こす<i>おこす</i></span>
+                <span class="def-en">to wake (someone) up</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-27"><span class="def-ja def-furi">怒る<i>おこる</i></span>
+                <span class="def-en">to get angry</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">読L12-II, 会L19</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-28"><span class="def-ja def-furi">起こる<i>おこる</i></span>
+                <span class="def-en">to occur; to happen</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">読L21-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-29"><span class="def-ja">おごる</span>
+                <span class="def-en">to treat (someone) to a meal</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-30"><span class="def-ja def-furi">お先に失礼します<i>おさきにしつれいします</i></span>
+                <span class="def-en">See you. (lit. I'm leaving ahead of you.)</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-31"><span class="def-ja def-furi">お酒<i>おさけ</i></span>
+                <span class="def-en">sake; alcohol</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-32"><span class="def-ja">おじいさん</span>
+                <span class="def-en">grandfather; old man</span>
+                <span class="def-label">会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-33"><span class="def-ja def-furi">教える<i>おしえる</i></span>
+                <span class="def-en">to teach; to instruct</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L6</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-34"><span class="def-ja">おじさん</span>
+                <span class="def-en">uncle; middle-aged man</span>
+                <span class="def-label">会L14</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-35"><span class="def-ja">おじぞうさん</span>
+                <span class="def-en">guardian deity of children</span>
+                <span class="def-label">読L10-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-36"><span class="def-ja def-furi">お正月<i>おしょうがつ</i></span>
+                <span class="def-en">New Year's</span>
+                <span class="def-label">読L10-II, 会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-37"><span class="def-ja def-furi">お嬢さん<i>おじょうさん</i></span>
+                <span class="def-en">(someone's daughter) polite</span>
+                <span class="def-label">会L22</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-38"><span class="def-ja">おしり</span>
+                <span class="def-en">buttocks</span>
+                <span class="def-label">会L7(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-39"><span class="def-ja def-furi">お城<i>おしろ</i></span>
+                <span class="def-en">castle</span>
+                <span class="def-label">読L5-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-40"><span class="def-ja def-furi">押す<i>おす</i></span>
+                <span class="def-en">to press; to push</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-41"><span class="def-ja def-furi">お世話になる<i>おせわになる</i></span>
+                <span class="def-en">to be in someone's care</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">読L19-II, 会L23</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-42"><span class="def-ja def-furi">遅い<i>おそい</i></span>
+                <span class="def-en">slow; late</span>
+                <span class="def-label">会L10</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-43"><span class="def-ja def-furi">遅く<i>おそく</i></span>
+                <span class="def-en">(do something) late</span>
+                <span class="def-label">読L4-III, 会L6</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-44"><span class="def-ja def-furi">遅くなる<i>おそくなる</i></span>
+                <span class="def-en">to be late</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-45"><span class="def-ja def-furi">お大事に<i>おだいじに</i></span>
+                <span class="def-en">Get well soon.</span>
+                <span class="def-label">会L12</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-46"><span class="def-ja def-furi">お宅<i>おたく</i></span>
+                <span class="def-en">(someone's) house/home</span>
+                <span class="def-label">会L13</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-47"><span class="def-ja def-furi">落ち込む<i>おちこむ</i></span>
+                <span class="def-en">to get depressed</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-48"><span class="def-ja def-furi">お茶<i>おちゃ</i></span>
+                <span class="def-en">green tea</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-49"><span class="def-ja def-furi">落ちる<i>おちる</i></span>
+                <span class="def-en">(something) drops</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-50"><span class="def-ja def-furi">おつかれさま（でした）<i>お疲れ様（でした）</i></span>
+                <span class="def-en">You must be tired after working so hard. (ritualistic exp.)</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-51"><span class="def-ja">おっしゃる</span>
+                <span class="def-en">honorific exp. for いう</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L19</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-52"><span class="def-ja def-furi">お手洗い<i>おてあらい</i></span>
+                <span class="def-en">restroom</span>
+                <span class="def-label">会L12</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-53"><span class="def-ja def-furi">お寺<i>おてら</i></span>
+                <span class="def-en">temple</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-54"><span class="def-ja def-furi">音<i>おと</i></span>
+                <span class="def-en">sound</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-55"><span class="def-ja def-furi">お父さん<i>おとうさん</i></span>
+                <span class="def-en">father</span>
+                <span class="def-label">会L1, 会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-56"><span class="def-ja def-furi">弟<i>おとうと</i></span>
+                <span class="def-en">younger brother</span>
+                <span class="def-label">会L1, 会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-57"><span class="def-ja def-furi">男<i>おとこ</i></span>
+                <span class="def-en">man</span>
+                <span class="def-label">読L11-II, 会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-58"><span class="def-ja def-furi">男の子<i>おとこのこ</i></span>
+                <span class="def-en">boy</span>
+                <span class="def-label">会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-59"><span class="def-ja def-furi">男の人<i>おとこのひと</i></span>
+                <span class="def-en">man</span>
+                <span class="def-label">会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-60"><span class="def-ja def-furi">落とされる<i>おとされる</i></span>
+                <span class="def-en">to be dropped</span>
+                <span class="def-label">読L15-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-61"><span class="def-ja def-furi">落とす<i>おとす</i></span>
+                <span class="def-en">to drop (something)</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-62"><span class="def-ja">おととい</span>
+                <span class="def-en">the day before yesterday</span>
+                <span class="def-label">会L4(e), 会L19</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-63"><span class="def-ja">おととし</span>
+                <span class="def-en">the year before last</span>
+                <span class="def-label">会L4(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-64"><span class="def-ja def-furi">大人<i>おとな</i></span>
+                <span class="def-en">adult</span>
+                <span class="def-label">読L12-II, 会L13</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-65"><span class="def-ja def-furi">踊る<i>おどる</i></span>
+                <span class="def-en">to dance</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L9</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-66"><span class="def-ja">おなか</span>
+                <span class="def-en">stomach</span>
+                <span class="def-label">会L7(e), 会L12</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-67"><span class="def-ja">おなかがすく</span>
+                <span class="def-en">to become hungry</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-68"><span class="def-ja">おなかをこわす</span>
+                <span class="def-en">to have a stomachache</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L23</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-69"><span class="def-ja def-furi">同じ<i>おなじ</i></span>
+                <span class="def-en">same</span>
+                <span class="def-label">読L13-III, 会L14</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-70"><span class="def-ja def-furi">同じような<i>おなじような</i></span>
+                <span class="def-en">similar</span>
+                <span class="def-label">読L23-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-71"><span class="def-ja def-furi">お兄さん<i>おにいさん</i></span>
+                <span class="def-en">older brother</span>
+                <span class="def-label">会L1, 会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-72"><span class="def-ja">おにぎり</span>
+                <span class="def-en">rice ball</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-73"><span class="def-ja def-furi">お姉さん<i>おねえさん</i></span>
+                <span class="def-en">older sister</span>
+                <span class="def-label">会L1, 会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-74"><span class="def-ja">おねがいします</span>
+                <span class="def-en">...,please.</span>
+                <span class="def-label">会L2</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-75"><span class="def-ja def-furi">お願いする<i>おねがいする</i></span>
+                <span class="def-en">to pray for help</span>
+                <span class="def-vtype">[<i>irr</i>]</span>
+                <span class="def-label">会L22</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-76"><span class="def-ja">おばあさん</span>
+                <span class="def-en">grandmother; old woman</span>
+                <span class="def-label">会L7</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-77"><span class="def-ja">おばさん</span>
+                <span class="def-en">aunt; middle-aged woman</span>
+                <span class="def-label">会L14</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-78"><span class="def-ja">おはよう</span>
+                <span class="def-en">Good morning.</span>
+                <span class="def-label">会G</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-79"><span class="def-ja">おはようございます</span>
+                <span class="def-en">Good morning. (polite)</span>
+                <span class="def-label">会G</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-80"><span class="def-ja def-furi">お引き出し<i>おひきだし</i></span>
+                <span class="def-en">withdrawal</span>
+                <span class="def-label">会L13(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-81"><span class="def-ja def-furi">お振込<i>おふりこみ</i></span>
+                <span class="def-en">bank transfer</span>
+                <span class="def-label">会L13(e)</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-82"><span class="def-ja def-furi">お風呂<i>おふろ</i></span>
+                <span class="def-en">bath</span>
+                <span class="def-label">会L6</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-83"><span class="def-ja def-furi">お風呂に入る<i>おふろにはいる</i></span>
+                <span class="def-en">to take a bath</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L6</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-84"><span class="def-ja def-furi">お返事<i>おへんじ</i></span>
+                <span class="def-en">reply</span>
+                <span class="def-label">読L11-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-85"><span class="def-ja def-furi">お弁当<i>おべんとう</i></span>
+                <span class="def-en">boxed lunch</span>
+                <span class="def-label">会L9</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-86"><span class="def-ja def-furi">覚える<i>おぼえる</i></span>
+                <span class="def-en">to memorize</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L9</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-87"><span class="def-ja def-furi">お祭り<i>おまつり</i></span>
+                <span class="def-en">festival</span>
+                <span class="def-label">会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-88"><span class="def-ja def-furi">お守り<i>おまもり</i></span>
+                <span class="def-en">charm (against evils); amulet</span>
+                <span class="def-label">読L21-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-89"><span class="def-ja">おまんじゅう</span>
+                <span class="def-en">sweet bun</span>
+                <span class="def-label">読L4-III</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-90"><span class="def-ja def-furi">お土産<i>おみやげ</i></span>
+                <span class="def-en">souvenir</span>
+                <span class="def-label">会L4</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-91"><span class="def-ja">おめでとうございます</span>
+                <span class="def-en">Congratulations!</span>
+                <span class="def-label">会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-92"><span class="def-ja def-furi">重い<i>おもい</i></span>
+                <span class="def-en">heavy; serious (illness)</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-93"><span class="def-ja def-furi">思い出す<i>おもいだす</i></span>
+                <span class="def-en">to recall</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">読L19-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-94"><span class="def-ja def-furi">思い出<i>おもいで</i></span>
+                <span class="def-en">memory</span>
+                <span class="def-label">会L23</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-95"><span class="def-ja def-furi">思う<i>おもう</i></span>
+                <span class="def-en">to think</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L8</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-96"><span class="def-ja def-furi">面白い<i>おもしろい</i></span>
+                <span class="def-en">interesting; funny</span>
+                <span class="def-label">会L5</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-97"><span class="def-ja">おもち</span>
+                <span class="def-en">rice cake</span>
+                <span class="def-label">読L10-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-98"><span class="def-ja">おもちゃ</span>
+                <span class="def-en">toy</span>
+                <span class="def-label">会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-99"><span class="def-ja def-furi">主に<i>おもに</i></span>
+                <span class="def-en">mainly</span>
+                <span class="def-label">読L17-II</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-100"><span class="def-ja def-furi">親<i>おや</i></span>
+                <span class="def-en">parent</span>
+                <span class="def-label">会L16</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-101"><span class="def-ja">おや?</span>
+                <span class="def-en">Oh!</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-102"><span class="def-ja">おやすみ（なさい）</span>
+                <span class="def-en">Good night.</span>
+                <span class="def-label">会G</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-103"><span class="def-ja def-furi">お休みになる<i>おやすみになる</i></span>
+                <span class="def-en">honorific exp. for ねる</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L19</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-104"><span class="def-ja def-furi">お湯<i>おゆ</i></span>
+                <span class="def-en">hot water</span>
+                <span class="def-label">会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-105"><span class="def-ja def-furi">お湯が沸く<i>おゆがわく</i></span>
+                <span class="def-en">water boils</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L18</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-106"><span class="def-ja def-furi">お湯を沸かす<i>おゆをわかす</i></span>
+                <span class="def-en">to boil water</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-107"><span class="def-ja def-furi">泳ぐ<i>およぐ</i></span>
+                <span class="def-en">to swim</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L5</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-108"><span class="def-ja def-furi">降りる<i>おりる</i></span>
+                <span class="def-en">to get off</span>
+                <span class="def-vtype">[<i>ru</i>]</span>
+                <span class="def-label">会L6</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-109"><span class="def-ja">おる</span>
+                <span class="def-en">extra-modest exp. for いる</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L20</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-110"><span class="def-ja def-furi">お礼<i>おれい</i></span>
+                <span class="def-en">exp. of gratitude</span>
+                <span class="def-label">会L19</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-111"><span class="def-ja def-furi">下ろす<i>おろす</i></span>
+                <span class="def-en">to withdraw (money)</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L15</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-112"><span class="def-ja def-furi">終わる<i>おわる</i></span>
+                <span class="def-en">(something) ends</span>
+                <span class="def-vtype">[<i>u</i>]</span>
+                <span class="def-label">会L9</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-113"><span class="def-ja def-furi">音楽<i>おんがく</i></span>
+                <span class="def-en">music</span>
+                <span class="def-label">会L3</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-114"><span class="def-ja def-furi">温泉<i>おんせん</i></span>
+                <span class="def-en">spa; hot spring</span>
+                <span class="def-label">会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-115"><span class="def-ja def-furi">女<i>おんな</i></span>
+                <span class="def-en">woman</span>
+                <span class="def-label">読L11-II, 会L17</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-116"><span class="def-ja def-furi">女の子<i>おんなのこ</i></span>
+                <span class="def-en">girl</span>
+                <span class="def-label">会L11</span>
+              </li>
+              
+              <li class="definition clear" data-def="o-117"><span class="def-ja def-furi">女の人<i>おんなのひと</i></span>
+                <span class="def-en">woman</span>
+                <span class="def-label">会L7</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-か" class="section-title">か</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-か');" title="Select all words in group か"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-か');" title="Deselect all words in group か"></button>
+            </div>
+            <ul id="list-か">
+              <li class="definition clear" data-def="ka-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-き" class="section-title">き</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-き');" title="Select all words in group き"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-き');" title="Deselect all words in group き"></button>
+            </div>
+            <ul id="list-き">
+              <li class="definition clear" data-def="ki-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-く" class="section-title">く</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-く');" title="Select all words in group く"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-く');" title="Deselect all words in group く"></button>
+            </div>
+            <ul id="list-く">
+              <li class="definition clear" data-def="ku-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-け" class="section-title">け</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-け');" title="Select all words in group け"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-け');" title="Deselect all words in group け"></button>
+            </div>
+            <ul id="list-け">
+              <li class="definition clear" data-def="ke-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-こ" class="section-title">こ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-こ');" title="Select all words in group こ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-こ');" title="Deselect all words in group こ"></button>
+            </div>
+            <ul id="list-こ">
+              <li class="definition clear" data-def="ko-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-さ" class="section-title">さ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-さ');" title="Select all words in group さ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-さ');" title="Deselect all words in group さ"></button>
+            </div>
+            <ul id="list-さ">
+              <li class="definition clear" data-def="sa-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-し" class="section-title">し</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-し');" title="Select all words in group し"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-し');" title="Deselect all words in group し"></button>
+            </div>
+            <ul id="list-し">
+              <li class="definition clear" data-def="shi-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-す" class="section-title">す</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-す');" title="Select all words in group す"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-す');" title="Deselect all words in group す"></button>
+            </div>
+            <ul id="list-す">
+              <li class="definition clear" data-def="su-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-せ" class="section-title">せ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-せ');" title="Select all words in group せ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-せ');" title="Deselect all words in group せ"></button>
+            </div>
+            <ul id="list-せ">
+              <li class="definition clear" data-def="se-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-そ" class="section-title">そ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-そ');" title="Select all words in group そ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-そ');" title="Deselect all words in group そ"></button>
+            </div>
+            <ul id="list-そ">
+              <li class="definition clear" data-def="so-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-た" class="section-title">た</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-た');" title="Select all words in group た"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-た');" title="Deselect all words in group た"></button>
+            </div>
+            <ul id="list-た">
+              <li class="definition clear" data-def="ta-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-ち" class="section-title">ち</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-ち');" title="Select all words in group ち"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-ち');" title="Deselect all words in group ち"></button>
+            </div>
+            <ul id="list-ち">
+              <li class="definition clear" data-def="chi-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-つ" class="section-title">つ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-つ');" title="Select all words in group つ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-つ');" title="Deselect all words in group つ"></button>
+            </div>
+            <ul id="list-つ">
+              <li class="definition clear" data-def="tsu-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-て" class="section-title">て</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-て');" title="Select all words in group て"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-て');" title="Deselect all words in group て"></button>
+            </div>
+            <ul id="list-て">
+              <li class="definition clear" data-def="te-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-と" class="section-title">と</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-と');" title="Select all words in group と"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-と');" title="Deselect all words in group と"></button>
+            </div>
+            <ul id="list-と">
+              <li class="definition clear" data-def="to-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-な" class="section-title">な</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-な');" title="Select all words in group な"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-な');" title="Deselect all words in group な"></button>
+            </div>
+            <ul id="list-な">
+              <li class="definition clear" data-def="na-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-に" class="section-title">に</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-に');" title="Select all words in group に"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-に');" title="Deselect all words in group に"></button>
+            </div>
+            <ul id="list-に">
+              <li class="definition clear" data-def="ni-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-ぬ" class="section-title">ぬ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-ぬ');" title="Select all words in group ぬ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-ぬ');" title="Deselect all words in group ぬ"></button>
+            </div>
+            <ul id="list-ぬ">
+              <li class="definition clear" data-def="nu-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-ね" class="section-title">ね</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-ね');" title="Select all words in group ね"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-ね');" title="Deselect all words in group ね"></button>
+            </div>
+            <ul id="list-ね">
+              <li class="definition clear" data-def="ne-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-の" class="section-title">の</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-の');" title="Select all words in group の"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-の');" title="Deselect all words in group の"></button>
+            </div>
+            <ul id="list-の">
+              <li class="definition clear" data-def="no-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-は" class="section-title">は</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-は');" title="Select all words in group は"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-は');" title="Deselect all words in group は"></button>
+            </div>
+            <ul id="list-は">
+              <li class="definition clear" data-def="ha-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-ひ" class="section-title">ひ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-ひ');" title="Select all words in group ひ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-ひ');" title="Deselect all words in group ひ"></button>
+            </div>
+            <ul id="list-ひ">
+              <li class="definition clear" data-def="hi-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-ふ" class="section-title">ふ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-ふ');" title="Select all words in group ふ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-ふ');" title="Deselect all words in group ふ"></button>
+            </div>
+            <ul id="list-ふ">
+              <li class="definition clear" data-def="fu-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-へ" class="section-title">へ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-へ');" title="Select all words in group へ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-へ');" title="Deselect all words in group へ"></button>
+            </div>
+            <ul id="list-へ">
+              <li class="definition clear" data-def="he-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-ほ" class="section-title">ほ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-ほ');" title="Select all words in group ほ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-ほ');" title="Deselect all words in group ほ"></button>
+            </div>
+            <ul id="list-ほ">
+              <li class="definition clear" data-def="ho-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-ま" class="section-title">ま</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-ま');" title="Select all words in group ま"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-ま');" title="Deselect all words in group ま"></button>
+            </div>
+            <ul id="list-ま">
+              <li class="definition clear" data-def="ma-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-み" class="section-title">み</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-み');" title="Select all words in group み"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-み');" title="Deselect all words in group み"></button>
+            </div>
+            <ul id="list-み">
+              <li class="definition clear" data-def="mi-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-む" class="section-title">む</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-む');" title="Select all words in group む"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-む');" title="Deselect all words in group む"></button>
+            </div>
+            <ul id="list-む">
+              <li class="definition clear" data-def="mu-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-め" class="section-title">め</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-め');" title="Select all words in group め"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-め');" title="Deselect all words in group め"></button>
+            </div>
+            <ul id="list-め">
+              <li class="definition clear" data-def="me-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-も" class="section-title">も</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-も');" title="Select all words in group も"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-も');" title="Deselect all words in group も"></button>
+            </div>
+            <ul id="list-も">
+              <li class="definition clear" data-def="mo-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-や" class="section-title">や</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-や');" title="Select all words in group や"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-や');" title="Deselect all words in group や"></button>
+            </div>
+            <ul id="list-や">
+              <li class="definition clear" data-def="ya-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-ゆ" class="section-title">ゆ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-ゆ');" title="Select all words in group ゆ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-ゆ');" title="Deselect all words in group ゆ"></button>
+            </div>
+            <ul id="list-ゆ">
+              <li class="definition clear" data-def="yu-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-よ" class="section-title">よ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-よ');" title="Select all words in group よ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-よ');" title="Deselect all words in group よ"></button>
+            </div>
+            <ul id="list-よ">
+              <li class="definition clear" data-def="yo-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-ら" class="section-title">ら</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-ら');" title="Select all words in group ら"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-ら');" title="Deselect all words in group ら"></button>
+            </div>
+            <ul id="list-ら">
+              <li class="definition clear" data-def="ra-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-り" class="section-title">り</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-り');" title="Select all words in group り"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-り');" title="Deselect all words in group り"></button>
+            </div>
+            <ul id="list-り">
+              <li class="definition clear" data-def="ri-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-る" class="section-title">る</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-る');" title="Select all words in group る"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-る');" title="Deselect all words in group る"></button>
+            </div>
+            <ul id="list-る">
+              <li class="definition clear" data-def="ru-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-れ" class="section-title">れ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-れ');" title="Select all words in group れ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-れ');" title="Deselect all words in group れ"></button>
+            </div>
+            <ul id="list-れ">
+              <li class="definition clear" data-def="re-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-ろ" class="section-title">ろ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-ろ');" title="Select all words in group ろ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-ろ');" title="Deselect all words in group ろ"></button>
+            </div>
+            <ul id="list-ろ">
+              <li class="definition clear" data-def="ro-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-わ" class="section-title">わ</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-わ');" title="Select all words in group わ"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-わ');" title="Deselect all words in group わ"></button>
+            </div>
+            <ul id="list-わ">
+              <li class="definition clear" data-def="wa-"><span class="def-ja def-furi"><i></i></span>
+                <span class="def-en"></span>
+                <span class="def-vtype">[<i></i>]</span>
+                <span class="def-label">会L読L-II</span>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        
+        
+        <div id="english-japanese" class="dict-block clear" style="display:none">
+          <h2 id="en-main-title" class="section-title">English-Japanese Dictionary</h2>
+          
+          <div class="columns-2 clear">
+            <div id="dict-index-en">
+              <h2 id="quick-nav-en">Dictionary Index</h2>
+              <p class="dict-desc">The Dictionary Index lets you quickly jump to a section or select/deselect all words.</p>
+              <ul class="dictionary-index dict-alpha text-block clear">
+                <li><a href="#section-A">A</a></li>
+                <li><a href="#section-B">B</a></li>
+                <li><a href="#section-C">C</a></li>
+                <li><a href="#section-D">D</a></li>
+                <li><a href="#section-E">E</a></li>
+                <li><a href="#section-F">F</a></li>
+                <li><a href="#section-G">G</a></li>
+                <li><a href="#section-H">H</a></li>
+                <li><a href="#section-I">I</a></li>
+                <li><a href="#section-J">J</a></li>
+                <li><a href="#section-K">K</a></li>
+                <li><a href="#section-L">L</a></li>
+                <li><a href="#section-M">M</a></li>
+                <li><a href="#section-N">N</a></li>
+                <li><a href="#section-O">O</a></li>
+                <li><a href="#section-P">P</a></li>
+                <li><a href="#section-Q">Q</a></li>
+                <li><a href="#section-R">R</a></li>
+                <li><a href="#section-S">S</a></li>
+                <li><a href="#section-T">T</a></li>
+                <li><a href="#section-U">U</a></li>
+                <li><a href="#section-V">V</a></li>
+                <li><a href="#section-W">W</a></li>
+                <li><a href="#section-X">X</a></li>
+                <li><a href="#section-Y">Y</a></li>
+                <li><a href="#section-Z">Z</a></li>
+              </ul>
+              
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true);">Select All Words</button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false);">Deselect All Words</button>
+              </div>
+            </div>
+            
+            <div id="quick-search-en">
+              <h2 id="dict-search-en">Quick Search <span id="dict-search-hits-en"></span></h2>
+              <p class="dict-desc">Quick search helps you quickly find words you're looking for.</p>
+              <div class="dict-search-wrapper">
+                <input class="dict-search" type="text" placeholder="Search..." oninput="Genki.appendix.jisho.search(this.value, 'en')">
+                <div class="group-selectors center" style="visibility:hidden;">
+                  <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, '#dict-search-results-en .def-selector', true);" title="Select all search results"></button>
+                  <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, '#dict-search-results-en .def-selector', true);" title="Deselect all search results"></button>
+                </div>
+                <ul id="dict-search-results-en" class="dict-search-results"></ul>
+              </div>
+            </div>
+          </div><br><br>
+          
+          <div class="dictionary-group">
+            <h2 id="section-A" class="section-title">A</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-A');" title="Select all words in group A"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-A');" title="Deselect all words in group A"></button>
+            </div>
+            <ul id="list-A"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-B" class="section-title">B</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-B');" title="Select all words in group B"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-B');" title="Deselect all words in group B"></button>
+            </div>
+            <ul id="list-B"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-C" class="section-title">C</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-C');" title="Select all words in group C"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-C');" title="Deselect all words in group C"></button>
+            </div>
+            <ul id="list-C"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-D" class="section-title">D</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-D');" title="Select all words in group D"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-D');" title="Deselect all words in group D"></button>
+            </div>
+            <ul id="list-D"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-E" class="section-title">E</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-E');" title="Select all words in group E"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-E');" title="Deselect all words in group E"></button>
+            </div>
+            <ul id="list-E"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-F" class="section-title">F</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-F');" title="Select all words in group F"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-F');" title="Deselect all words in group F"></button>
+            </div>
+            <ul id="list-F"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-G" class="section-title">G</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-G');" title="Select all words in group G"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-G');" title="Deselect all words in group G"></button>
+            </div>
+            <ul id="list-G"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-H" class="section-title">H</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-H');" title="Select all words in group H"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-H');" title="Deselect all words in group H"></button>
+            </div>
+            <ul id="list-H"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-I" class="section-title">I</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-I');" title="Select all words in group I"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-I');" title="Deselect all words in group I"></button>
+            </div>
+            <ul id="list-I"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-J" class="section-title">J</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-J');" title="Select all words in group J"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-J');" title="Deselect all words in group J"></button>
+            </div>
+            <ul id="list-J"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-K" class="section-title">K</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-K');" title="Select all words in group K"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-K');" title="Deselect all words in group K"></button>
+            </div>
+            <ul id="list-K"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-L" class="section-title">L</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-L');" title="Select all words in group L"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-L');" title="Deselect all words in group L"></button>
+            </div>
+            <ul id="list-L"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-M" class="section-title">M</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-M');" title="Select all words in group M"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-M');" title="Deselect all words in group M"></button>
+            </div>
+            <ul id="list-M"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-N" class="section-title">N</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-N');" title="Select all words in group N"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-N');" title="Deselect all words in group N"></button>
+            </div>
+            <ul id="list-N"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-O" class="section-title">O</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-O');" title="Select all words in group O"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-O');" title="Deselect all words in group O"></button>
+            </div>
+            <ul id="list-O"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-P" class="section-title">P</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-P');" title="Select all words in group P"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-P');" title="Deselect all words in group P"></button>
+            </div>
+            <ul id="list-P"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-Q" class="section-title">Q</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-Q');" title="Select all words in group Q"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-Q');" title="Deselect all words in group Q"></button>
+            </div>
+            <ul id="list-Q"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-R" class="section-title">R</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-R');" title="Select all words in group R"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-R');" title="Deselect all words in group R"></button>
+            </div>
+            <ul id="list-R"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-S" class="section-title">S</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-S');" title="Select all words in group S"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-S');" title="Deselect all words in group S"></button>
+            </div>
+            <ul id="list-S"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-T" class="section-title">T</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-T');" title="Select all words in group T"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-T');" title="Deselect all words in group T"></button>
+            </div>
+            <ul id="list-T"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-U" class="section-title">U</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-U');" title="Select all words in group U"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-U');" title="Deselect all words in group U"></button>
+            </div>
+            <ul id="list-U"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-V" class="section-title">V</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-V');" title="Select all words in group V"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-V');" title="Deselect all words in group V"></button>
+            </div>
+            <ul id="list-V"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-W" class="section-title">W</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-W');" title="Select all words in group W"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-W');" title="Deselect all words in group W"></button>
+            </div>
+            <ul id="list-W"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-X" class="section-title">X</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-X');" title="Select all words in group X"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-X');" title="Deselect all words in group X"></button>
+            </div>
+            <ul id="list-X"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-Y" class="section-title">Y</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-Y');" title="Select all words in group Y"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-Y');" title="Deselect all words in group Y"></button>
+            </div>
+            <ul id="list-Y"></ul>
+          </div>
+
+          <div class="dictionary-group">
+            <h2 id="section-Z" class="section-title">Z</h2>
+            <div class="group-selectors center">
+              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'list-Z');" title="Select all words in group Z"></button>
+              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'list-Z');" title="Deselect all words in group Z"></button>
+            </div>
+            <ul id="list-Z"></ul>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+      <div id="exercise" class="content-block" style="display:none;">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">Github Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/appendix.min.js"></script>
+    <script src="../../../resources/javascript/javascript.min.js"></script>
+    <script>Genki.appendix.jisho.init();</script>
+  </body>
+</html>

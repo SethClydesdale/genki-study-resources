@@ -34,8 +34,8 @@
     </header>
     
     <div id="content">
-      <div id="study-tool-editor" class="content-block">
-        <h2 id="custom-spelling-practice" class="title center">Custom Spelling Practice</h2>
+      <div id="study-tool-editor" class="content-block loading">
+        <h2 id="custom-spelling-practice" class="title center">ツール - Custom Spelling Practice</h2>
         <p>Welcome to the custom spelling practice tool! Here you will be able to setup a list of words that you can practice spelling. First insert a couple of words you want to practice spelling. Once you've got your word list setup, click the "Study" button to begin practicing.</p>
         
         <h2 id="spelling-practice-settings" class="section-title">Spelling Practice Settings</h2>
@@ -111,6 +111,7 @@
       Genki.tools.type = 'spelling';
       Genki.tools.settings.restore();
       Genki.tools.restore();
+      Genki.tools.finishedLoading();
     </script>
   </body>
 </html>

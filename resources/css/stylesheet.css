@@ -112,7 +112,7 @@ code {
 }
 
 /* input fields */
-input[type="text"], input[type="number"], textarea {
+input[type="text"], input[type="number"], textarea, select {
   font-size:14px;
   font-family:Meiryo, Osaka, Arial, sans-serif;
   background:#FFF;
@@ -120,10 +120,11 @@ input[type="text"], input[type="number"], textarea {
   padding:6px;
   outline:none;
 }
-input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled { color:#333; }
+select { cursor:pointer; }
+input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled, select:disabled { color:#333; }
 input[type="text"]::placeholder, input[type="number"]::placeholder, textarea::placeholder { color:#BBB; }
-input[type="text"]:hover, input[type="number"]:hover, textarea:hover { border-color:#999; }
-input[type="text"]:focus, input[type="number"]:focus, textarea:focus { border-color:#F60; }
+input[type="text"]:hover, input[type="number"]:hover, textarea:hover, select:hover { border-color:#999; }
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:focus { border-color:#F60; }
 
 /* aesthetic styles */
 .center { text-align:center; }
@@ -286,10 +287,10 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   margin-top:1em;
 }
 
+#quick-search-results { border:1px solid #CCC; }
 #quick-search-results:empty { border-color:transparent; }
-#quick-search-results {
-  border:1px solid #CCC;
-  height:400px;
+#quick-search-results:not(:empty) {
+  height:300px;
   padding:3px;
   overflow:auto;
 }
@@ -322,16 +323,16 @@ a.jump-arrow:hover { color:#C30; }
 
 
 /* exercise styles */
-#exercise > * { visibility:hidden; }
+#exercise > *, .loading > * { visibility:hidden; }
 
-#exercise:before, #exercise:after {
+#exercise:before, #exercise:after, .loading:before, .loading:after {
   color:#F60;
   position:absolute;
   top:50%;
 }
 
-#exercise:before {
-  content:"Loading exercise...";
+#exercise:before, .loading:before {
+  content:"Now Loading...";
   font-size:16px;
   font-weight:bold;
   font-style:italic;
@@ -341,7 +342,7 @@ a.jump-arrow:hover { color:#C30; }
   margin-top:40px;
 }
 
-#exercise:after {
+#exercise:after, .loading:after {
   content:"\f1ce";
   font-size:64px;
   font-family:FontAwesomeWeb, FontAwesome;
@@ -457,6 +458,7 @@ footer li:first-child:before { display:none; }
   margin:3px;
   padding:3px;
   min-width:25px;
+  white-space:nowrap;
 }
 #answer-list .quiz-item, .quiz-item.gu-mirror { cursor:move; }
 
@@ -506,9 +508,15 @@ footer li:first-child:before { display:none; }
 /* answer styles */
 .quiz-answer-zone:empty {
   border:1px solid #CCC;
-  min-width:100px;
   margin:3px;
   padding:3px;
+}
+
+.drag-quiz .quiz-answer-zone:empty { min-width:100px; }
+.drag-quiz .quiz-item, .drag-quiz .quiz-answer-zone {
+  height:28px;
+  line-height:20px;
+  box-sizing:border-box;
 }
 
 
@@ -722,9 +730,12 @@ footer li:first-child:before { display:none; }
 
 
 /* drag and drop furigana */
+#question-list .quiz-item {
+  text-align:center;
+}
+
 .helper-present #question-list .quiz-item {
   position:relative;
-  text-align:center;
 }
 
 .helper-present #question-list .quiz-item[data-helper], .helper-present #drop-list .quiz-answer-zone.helper-answer {
@@ -752,7 +763,13 @@ footer li:first-child:before { display:none; }
 .kana-quiz .quiz-item, .kana-quiz .quiz-answer-zone {
   text-align:center;
   display:inline-block;
-  min-width:25px;
+}
+
+.kana-quiz .quiz-item, .kana-quiz .quiz-answer-zone:empty {
+  height:30px;
+  width:35px;
+  line-height:22px;
+  box-sizing:border-box;
 }
 
 .kana-quiz .quiz-column {
@@ -857,14 +874,21 @@ footer li:first-child:before { display:none; }
   white-space:nowrap;
   display:flex;
   flex:1;
-  margin:12px 3px;
+  margin:0px 3px;
 }
+
+.writing-quiz .quiz-answer-row.furi-row { margin-bottom:12px; }
 
 .writing-quiz .quiz-item {
   font-size:14px;
   position:relative;
   pointer-events:none; /* prevent text copying; we want the student to type the kana */
 }
+
+/* furigana modifications */
+.writing-quiz .helper-present #question-list .quiz-item[data-helper] { margin:3px; }
+.writing-quiz .helper-hidden .quiz-item[data-helper]:before { display:none; }
+.writing-quiz .helper-hidden .quiz-answer-row.furi-row { margin-bottom:0; }
 
 .writing-quiz .quiz-item, .writing-zone { text-align:center; }
 
@@ -970,6 +994,7 @@ input.writing-zone-input:focus { border-color:#F60; }
   font-size:11px;
   margin-top:-3px;
 }
+.helper-hidden .quiz-multi-question .furigana { display:none; }
 
 .quiz-multi-question .lesson-image img {
   border:1px solid #CCC;
@@ -1407,6 +1432,7 @@ p.section-desc {
 }
 
 #genki-modal-buttons .button {
+  line-height:normal;
   margin:0 6px 0 6px;
 }
 
@@ -1506,6 +1532,225 @@ p.section-desc {
 #light-switch > input:checked + div:after { color:transparent; }
 
 
+/* CUSTOM INPUTS */
+/* checkboxes and raido inputs */
+.genki_pseudo_checkbox, .genki_pseudo_radio {
+  display:inline-block;
+  text-align:center;
+  background:#FFF;
+  border:1px solid #CCC;
+  height:16px;
+  width:16px;
+  vertical-align:middle;
+  margin-right:3px;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.genki_pseudo_checkbox:hover, .genki_pseudo_radio:hover { border-color:#F60; }
+
+/* disabled */
+input[disabled] + .genki_pseudo_checkbox, input[disabled] + .genki_pseudo_radio {
+  opacity:0.5;
+  cursor:not-allowed;
+}
+
+/* radio */
+.genki_pseudo_radio { border-radius:100%; }
+.genki_pseudo_radio:before, .genki_pseudo_radio:after, input:checked + .genki_pseudo_radio:after {
+  content:"";
+  font-size:0;
+  border-radius:100%;
+  position:absolute;
+  top:3px;
+  left:3px;
+  height:10px;
+  width:10px;
+}
+
+.genki_pseudo_radio:before { background:#CCC; }
+.genki_pseudo_radio:after {
+  background:#F60;
+  top:8px;
+  left:8px;
+  height:0;
+  width:0;
+}
+
+/* checkbox */
+.genki_pseudo_checkbox:after {
+  content:"\f00c";
+  color:#F60;
+  font-family:FontAwesome;
+  font-size:0px;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  line-height:16px;
+}
+
+input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
+.genki_input_hidden {
+  visibility:hidden;
+  position:absolute;
+}
+
+
+/* APPENDIX */
+/* dictionary */
+.dict-block {
+  margin-top:50px;
+}
+
+.dict-desc {
+  padding:3px;
+}
+
+.leg-desc {
+  font-size:12px;
+  vertical-align:top;
+}
+
+#dictionary-modes .button {
+  border:2px solid transparent;
+}
+
+#dictionary-modes .button.active-mode {
+  color:#F60;
+  border-color:#F60;
+  background-color:transparent;
+  cursor:default;
+}
+
+#dict-legend .text-block { margin:3px; }
+
+/* index */
+.dictionary-index {
+  margin:3px;
+  padding:3px;
+}
+
+#japanese-english .dictionary-index ul {
+  float:left;
+  padding:3px;
+  margin:0;
+}
+#japanese-english .dictionary-index ul.dict-index-split { margin-left:10px; }
+
+.dictionary-index li {
+  list-style-type:none;
+  margin:0 3px;
+  float:left;
+}
+#japanese-english .dictionary-index li { float:none; }
+
+.dictionary-index li {
+  font-weight:bold;
+  font-size:18px;
+}
+
+.dictionary-index li a { color:#F60; }
+.dictionary-index li a:hover { color:#C30; }
+
+.dict-index-disabled {
+  opacity:0.5;
+  cursor:default;
+}
+
+.dictionary-index.dict-alpha li {
+  margin:0 8px;
+}
+
+/* search */
+.dict-search-wrapper { margin:3px; }
+
+.dict-search {
+  width:100%;
+  box-sizing:border-box;
+}
+
+.dict-search-results { 
+  border:1px solid #CCC;
+  margin:0;
+}
+
+.dict-search-results:empty { border-color:transparent; }
+.dict-search-results:not(:empty) {
+  height:250px;
+  padding:3px;
+  overflow:auto;
+}
+
+/* groups */
+.dictionary-group {
+  float:left;
+  width:48.5%;
+  margin-right:1.5%;
+  padding:0;
+}
+.dictionary-group:nth-of-type(even) { margin-right:3%; }
+.dictionary-group:nth-of-type(odd) { margin-right:0; }
+
+.dictionary-group ul {
+  padding:0;
+}
+
+/* select/deselect buttons */
+.group-selectors .select-all:before, .group-selectors .deselect-all:before {
+  font-size:17px;
+  font-family:FontAwesomeWeb, FontAwesome;
+  font-weight:normal;
+  vertical-align:middle;
+  margin-right:10px;
+}
+
+.group-selectors .select-all:before { content:"\f046"; }
+.group-selectors .deselect-all:before { content:"\f096"; }
+
+.dictionary-group .group-selectors .button, .dict-search-wrapper .group-selectors .button {
+  padding:3px 6px;
+  margin:3px 0;
+  width:30px;
+  height:30px;
+}
+
+.dictionary-group .group-selectors .select-all:before, .dictionary-group .group-selectors .deselect-all:before, 
+.dict-search-wrapper .group-selectors .select-all:before, .dict-search-wrapper .group-selectors .deselect-all:before {
+  margin:0;
+}
+
+/* definitions */
+.definition {
+  font-size:14px;
+  list-style-type:none;
+  margin:6px 0;
+}
+
+.def-ja.def-furi {
+  position:relative;
+  display:inline-block;
+  margin-bottom:15px;
+}
+
+.def-ja.def-furi i {
+  font-size:11px;
+  font-style:normal;
+  color:#777;
+  position:absolute;
+  bottom:-15px;
+  left:0;
+  right:-100px;
+}
+
+#japanese-english .def-ja, #english-japanese .def-en {
+  margin-right:8px;
+}
+
+.def-label { float:right; }
+
+
 
 /* DRAGULA CSS */
 .gu-mirror{position:fixed!important;margin:0!important;z-index:9999!important;opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80)}.gu-hide{display:none!important}.gu-unselectable{-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.gu-transit{opacity:.2;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";filter:alpha(opacity=20)}
@@ -1595,10 +1840,13 @@ p.section-desc {
   }
   
   /* display columns below one another */
-  .columns-2 > * {
+  .columns-2 > *, .dictionary-group {
     float:none;
     width:100%;
   }
+  
+  .dictionary-group { margin:0; }
+  .dictionary-group .definition { padding:0 3px; }
   
   /* change vocab key border to a horizontal one */
   .vocab-key > *:first-child, .vocab-key > *:last-child { border:none; }
