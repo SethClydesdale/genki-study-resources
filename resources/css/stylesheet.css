@@ -989,13 +989,32 @@ input.writing-zone-input:focus { border-color:#F60; }
   padding:5px;
 }
 
-.quiz-multi-question .furigana {
+/* furigana */
+.multi-quiz .furigana {
   color:#777;
   font-size:11px;
   margin-top:-3px;
 }
-.helper-hidden .quiz-multi-question .furigana { display:none; }
+.multi-quiz .helper-hidden .furigana { display:none; }
 
+/* inline furigana */
+.multi-quiz .inline-furi {
+  position:relative;
+  display:inline-block;
+  margin-bottom:15px;
+}
+.multi-quiz .helper-hidden .inline-furi { margin-bottom:0; }
+
+.multi-quiz .inline-furi .furigana {
+  text-align:left;
+  font-style:normal;
+  position:absolute;
+  bottom:-15px;
+  left:0;
+  right:-100px;
+}
+
+/* images */
 .quiz-multi-question .lesson-image img {
   border:1px solid #CCC;
   margin:3px;

@@ -38,7 +38,7 @@
       toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);"><i class="fa">&#xf2a8;</i>' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>',
       // check answers button for written exercises
       check_answers : '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();"><i class="fa">&#xf00c;</i>Check Answers</button></div>',
-      return_to_dict : '<button class="button" onclick="Genki.appendix.jisho.reset();"><i class="fa">&#xf02d;</i>Back to Dictionary</button>'
+      back_to_dict : '<button class="button" onclick="Genki.appendix.jisho.reset();"><i class="fa">&#xf021;</i>Back to Dictionary</button>'
     },
 
     // info about the currently active exercise
@@ -1009,6 +1009,7 @@
       
       // Appendix
       'appendix/dictionary|Dictionary|p.350-379',
+      'appendix/map-of-japan|Map of Japan|p.380-381',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
@@ -1467,7 +1468,7 @@
           (document.querySelector('.alt-phrase') ? '<br><br>' + Genki.lang.sub_answers : '')+
           '<div class="center">'+
             (
-              /\/dictionary\//.test(window.location) ? Genki.lang.return_to_dict :
+              /\/dictionary\//.test(window.location) ? Genki.lang.back_to_dict :
               '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Try Again</a>'
             )+
             '<button class="button" onclick="Genki.breakTime();"><i class="fa">&#xf0f4;</i>Take a Break</button>'+
@@ -1571,7 +1572,7 @@
 
           // show restart button
           document.getElementById('review-exercise').innerHTML = (
-            /\/dictionary\//.test(window.location) ? Genki.lang.return_to_dict :
+            /\/dictionary\//.test(window.location) ? Genki.lang.back_to_dict :
             '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Restart</a>'
           ) + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
 
