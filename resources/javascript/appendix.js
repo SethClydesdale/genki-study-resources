@@ -401,7 +401,7 @@
         var exercise = document.getElementById('exercise');
         exercise.style.display = 'none';
         exercise.className = 'content-block';
-        exercise.innerHTML = document.getElementById('exercise-title').outerHTML + '<div id="quiz-result"></div><div id="quiz-zone" class="clear"></div><div id="quiz-timer" class="center"></div>';
+        exercise.innerHTML = document.getElementById('exercise-title').outerHTML + '<div id="quiz-result"></div><div id="quiz-zone" class="clear"></div><div id="quiz-timer" class="center"></div>' + document.querySelector('.more-exercises').outerHTML;
         
         // show dictionary
         document.getElementById('appendix-tool').style.display = '';
