@@ -181,8 +181,10 @@
         
         // update all checkboxes
         for (; i < j; i++) {
-          a[i].checked = state;
-          Genki.appendix.jisho.updateCheckboxes(a[i], a[i].parentNode.dataset.def, true);
+          if (a[i].checked != state) {
+            a[i].checked = state;
+            Genki.appendix.jisho.updateCheckboxes(a[i], a[i].parentNode.dataset.def, true);
+          }
         }
         
         // save selected
@@ -271,9 +273,8 @@
                 localStorage.genkiJishoExercise = type;
               }
               
-              // hide dictionary and show exercise
-              document.getElementById('appendix-tool').style.display = 'none';
-              document.getElementById('exercise').style.display = '';
+              // show exercise
+              Genki.appendix.showExercise();
 
               // drag and drop
               if (type == 'drag') {
@@ -851,6 +852,9 @@
                 },
               ];
               break;
+              
+            default :
+              break;
           }
 
 
@@ -889,18 +893,436 @@
           title.innerHTML = title.innerHTML.replace(/- .*/, '- ' + name);
 
           // hide map and launch exercise
-          document.getElementById('appendix-tool').style.display = 'none';
-          document.getElementById('exercise').style.display = '';
-
+          Genki.appendix.showExercise();
           Genki.generateQuiz({
             type : 'multi',
-            info : 'Look at the map and answer the questions about each location.</div>',
+            info : 'Look at the map and answer the questions about each location.',
 
             quizlet : randomQuizlet
           });
         }
       });
     },
+    
+    
+    // study the numbers or conjugation charts
+    studyChart : function (chart) {
+      var chartName = Genki.active.exercise[1];
+      
+      GenkiModal.open({
+        title : 'Study ' + chartName + '?',
+        content : 'Are you ready to study the ' + chartName + '?',
+
+        callback : function () {
+          var quizlet, info;
+
+          switch (chart) {
+            // numbers chart
+            case 'numbers' :
+              info = 'Fill in the following chart with the correct numbers and sound changes.';
+              quizlet = 
+              '<h3 class="sub-title">Part 1</h3>'+
+              '<table class="table large-width center">'+
+                '<tr>'+
+                  '<td style="width:25px"></td>'+
+                  '<td style="width:75px">regular</td>'+
+                  '<td style="width:75px"></td>'+
+                  '<td style="width:75px"></td>'+
+                  '<td style="width:75px"></td>'+
+                  '<td style="width:75px">h <i class="fa">&#xf061;</i> p</td>'+
+                  '<td style="width:75px">h <i class="fa">&#xf061;</i> p/b</td>'+
+                  '<td style="width:75px">p</td>'+
+                  '<td style="width:75px">k</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>1</td>'+
+                  '<td>{いち}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{いっｐ|いっp|answer}</td>'+
+                  '<td>{いっｐ|いっp|answer}</td>'+
+                  '<td>{（いっ）|(いっ)|answer}</td>'+
+                  '<td>{いっ}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>2</td>'+
+                  '<td>{に}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>3</td>'+
+                  '<td>{さん}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{ｐ|p|answer}</td>'+
+                  '<td>{ｂ|b|answer}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>4</td>'+
+                  '<td>{よん}</td>'+
+                  '<td>{し}</td>'+
+                  '<td>{よ}</td>'+
+                  '<td>{よ}</td>'+
+                  '<td>{ｐ|p|answer}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>5</td>'+
+                  '<td>{ご}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>6</td>'+
+                  '<td>{ろく}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{ろっｐ|ろっp|answer}</td>'+
+                  '<td>{ろっｐ|ろっp|answer}</td>'+
+                  '<td>{（ろっ）|(ろっ)|answer}</td>'+
+                  '<td>{ろっ}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>7</td>'+
+                  '<td>{なな}</td>'+
+                  '<td>{しち}</td>'+
+                  '<td>{しち}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>8</td>'+
+                  '<td>{はち}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{（はっ%(ｐ/p)）|(はっ%(ｐ/p))|answer}</td>'+
+                  '<td>{はっｐ|はっp|answer}</td>'+
+                  '<td>{（はっ）|(はっ)|answer}</td>'+
+                  '<td>{はっ}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>9</td>'+
+                  '<td>{きゅう}</td>'+
+                  '<td>{く}</td>'+
+                  '<td>{く}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>10</td>'+
+                  '<td>{じゅう}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{じゅっ%(ｐ/p)|じっ%(ｐ/p)|answer}</td>'+
+                  '<td>{じゅっ%(ｐ/p)|じっ%(ｐ/p)|answer}</td>'+
+                  '<td>{じゅっ|じっ|answer}</td>'+
+                  '<td>{じゅっ|じっ|answer}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>how many</td>'+
+                  '<td>{なん}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{ｐ|p|answer}</td>'+
+                  '<td>{ｂ|b|answer}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr class="example-row">'+
+                  '<td></td>'+
+                  '<td>'+
+                    '<div>～ドル<br><i>dollars</i></div>'+
+                    '<div><span class="inline-furi">～円<i>～えん</i></span><br><i>yen</i></div>'+
+                    '<div><span class="inline-furi">～枚<i>～まい</i></span><br><i>sheets</i></div>'+
+                    '<div><span class="inline-furi">～度<i>～ど</i></span><br><i>degrees</i></div>'+
+                    '<div><span class="inline-furi">～十<i>～じゅう</i></span><br><i>ten</i></div>'+
+                    '<div><span class="inline-furi">～万<i>～まん</i></span><br><i>ten thousand</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                    '<div><span class="inline-furi">～月<i>～がつ</i></span><br><i>month</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                    '<div><span class="inline-furi">～時<i>～じ</i></span><br><i>o\'clock</i></div>'+
+                    '<div><span class="inline-furi">～時間<i>～じかん</i></span><br><i>hours</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                    '<div><span class="inline-furi">～年<i>～ねん</i></span><br><i>year</i></div>'+
+                    '<div><span class="inline-furi">～年間<i>～ねんかん</i></span><br><i>years</i></div>'+
+                    '<div><span class="inline-furi">～人<i>～にん</i></span><br><i>people</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                    '<div><span class="inline-furi">～分<i>～ふん</i></span><br><i>minute</i></div>'+
+                    '<div><span class="inline-furi">～分間<i>～ふんかん</i></span><br><i>minutes</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                    '<div><span class="inline-furi">～本<i>～ほん</i></span><br><i>sticks</i></div>'+
+                    '<div><span class="inline-furi">～杯<i>～はい</i></span><br><i>cups</i></div>'+
+                    '<div><span class="inline-furi">～匹<i>～ひき</i></span><br><i>animals</i></div>'+
+                    '<div><span class="inline-furi">～百<i>～ひゃく</i></span><br><i>hundred</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                    '<div>～ページ<br><i>page</i></div>'+
+                    '<div>～ポンド<br><i>pounds</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                    '<div><span class="inline-furi">～か月<i>～かげつ</i></span><br><i>months</i></div>'+
+                    '<div><span class="inline-furi">～課<i>～か</i></span><br><i>lesson</i></div>'+
+                    '<div><span class="inline-furi">～回<i>～かい</i></span><br><i>times</i></div>'+
+                    '<div><span class="inline-furi">～個<i>～こ</i></span><br><i>small items</i></div>'+
+                  '</td>'+
+                '</tr>'+
+              '</table><br>'+
+
+              '<h3 class="sub-title">Part 2</h3>'+
+              '<table class="table large-width center">'+
+                '<tr>'+
+                  '<td style="width:51px"></td>'+
+                  '<td style="width:100px">k <i class="fa">&#xf061;</i> g</td>'+
+                  '<td style="width:100px">s</td>'+
+                  '<td style="width:100px">s <i class="fa">&#xf061;</i> z</td>'+
+                  '<td style="width:100px">t</td>'+
+                  '<td colspan="3">special vocabulary for numbers</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>1</td>'+
+                  '<td>{いっ}</td>'+
+                  '<td>{いっ}</td>'+
+                  '<td>{いっ}</td>'+
+                  '<td>{いっ}</td>'+
+                  '<td style="width:100px">{ひとつ}</td>'+
+                  '<td style="width:100px">{ついたち}</td>'+
+                  '<td style="width:100px">{ひとり}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>2</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{ふたつ}</td>'+
+                  '<td>{ふつか}</td>'+
+                  '<td>{ふたり}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>3</td>'+
+                  '<td>{ｇ|g|answer}</td>'+
+                  '<td></td>'+
+                  '<td>{ｚ|z|answer}</td>'+
+                  '<td></td>'+
+                  '<td>{みっつ}</td>'+
+                  '<td>{みっか}</td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>4</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{よっつ}</td>'+
+                  '<td>{よっか}</td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>5</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{いつつ}</td>'+
+                  '<td>{いつか}</td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>6</td>'+
+                  '<td>{ろっ}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{むっつ}</td>'+
+                  '<td>{むいか}</td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>7</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{ななつ}</td>'+
+                  '<td>{なのか}</td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>8</td>'+
+                  '<td>{はっ}</td>'+
+                  '<td>{はっ}</td>'+
+                  '<td>{はっ}</td>'+
+                  '<td>{はっ}</td>'+
+                  '<td>{やっつ}</td>'+
+                  '<td>{ようか}</td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>9</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{ここのつ}</td>'+
+                  '<td>{ここのか}</td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>10</td>'+
+                  '<td>{じゅっ|じっ|answer}</td>'+
+                  '<td>{じゅっ|じっ|answer}</td>'+
+                  '<td>{じゅっ|じっ|answer}</td>'+
+                  '<td>{じゅっ|じっ|answer}</td>'+
+                  '<td>{とお}</td>'+
+                  '<td>{とおか}</td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>how many</td>'+
+                  '<td>{ｇ|g|answer}</td>'+
+                  '<td></td>'+
+                  '<td>{ｚ|z|answer}</td>'+
+                  '<td></td>'+
+                  '<td>{いくつ}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr class="example-row">'+
+                  '<td></td>'+
+                  '<td>'+
+                   '<div><span class="inline-furi">～階<i>～かい</i></span><br><i>floor</i></div>'+
+                   '<div><span class="inline-furi">～軒<i>～けん</i></span><br><i>houses</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                   '<div>～セント<br><i>cents</i></div>'+
+                   '<div><span class="inline-furi">～週間<i>～しゅうかん</i></span><br><i>weeks</i></div>'+
+                   '<div><span class="inline-furi">～冊<i>～さつ</i></span><br><i>books</i></div>'+
+                   '<div><span class="inline-furi">～歳<i>～さい</i></span><br><i>years of age</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                   '<div><span class="inline-furi">～足<i>～そく</i></span><br><i>shoes</i></div>'+
+                   '<div><span class="inline-furi">～千<i>～せん</i></span><br><i>thousand</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                   '<div><span class="inline-furi">～通<i>～つう</i></span><br><i>letters</i></div>'+
+                   '<div><span class="inline-furi">～丁目<i>～ちょうめ</i></span><br><i>street address</i></div>'+
+                  '</td>'+
+
+                  '<td>'+
+                   '<div><i>small items</i><br><i>years of age</i></div>'+
+                   '<div>cf. はたち<br>(20 years old)</div>'+
+                  '</td>'+
+
+                  '<td>'+
+                   '<div><i>date</i></div>'+
+                   '<div>cf. じゅうよっか<br>(14)<br>はつか<br>(20)<br>にじゅうよっか<br>(24)<br>なんにち<br>(how many)</div>'+
+                  '</td>'+
+
+                  '<td>'+
+                   '<div><i>people</i></div>'+
+                   '<div>cf. <span class="inline-furi">～人<i>～にん</i></span><br>(three or more people)</div>'+
+                  '</td>'+
+                '</tr>'+
+              '</table>';
+              break;
+
+            // conjugation chart
+            case 'conjugation' :
+              info = '';
+              quizlet = '';
+              break;
+              
+            default :
+              break;
+          }
+          
+          // update title and launch exercise
+          document.getElementById('exercise-title').insertAdjacentHTML('beforeend', ' Quiz');
+          Genki.appendix.showExercise();
+          Genki.generateQuiz({
+            type : 'fill',
+            info : info,
+
+            quizlet : quizlet
+          });
+        }
+      });
+    },
+    
+    
+    // hides the appendix page and shows the exercise
+    showExercise : function () {
+      document.getElementById('appendix-tool').style.display = 'none';
+      document.getElementById('exercise').style.display = '';
+    },
+    
     
     // shows page after setup
     finishedLoading : function () {

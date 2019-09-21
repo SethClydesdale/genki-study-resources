@@ -1010,6 +1010,7 @@
       // Appendix
       'appendix/dictionary|Dictionary|p.350-379',
       'appendix/map-of-japan|Map of Japan|p.380-381',
+      'appendix/numbers-chart|Numbers Chart|p.382-383',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
