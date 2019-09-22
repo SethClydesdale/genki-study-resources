@@ -6,44 +6,59 @@
 
     // dictionary functions
     jisho : {
-      mode : 'ja',
-      selected : [],
+      mode : 'ja', // dictionary mode
+      selected : [], // selected definitions
+      boxCache : {}, // checkbox cache used for mirrors
+      groupCache : {}, // group checkbox cache used for selecting groups
       
       
       // Initial setup of the dictionary by adding checkboxes, filling out the English-Japanese dictionary, and more..
       init : function () {
-        var def = document.querySelectorAll('.definition'),
-            i = 0,
-            j = def.length,
+        var def, i, j, k, ja, en, cleaned, list,
             checked = window.localStorage && localStorage.selectedDefinitions ? localStorage.selectedDefinitions.split(',') : [],
             sorted = [],
             defList = {},
-            n = 0,
-            cleaned, en;
+            n = 0;
         
-        // setup checkboxes and sort english definitions
-        for (; i < j; i++) {
-          en = def[i].querySelector('.def-en'); // english definition used as a key
+        for (k in Genki.jisho) {
+          list = document.getElementById('list-' + k);
           
-          if (/.*?-\d+/.test(def[i].dataset.def) && en.innerHTML) {
-            // add checkbox to definition
-            def[i].insertAdjacentHTML('afterbegin', '<input class="def-selector genki_input_hidden" type="checkbox" onchange="Genki.appendix.jisho.updateCheckboxes(this, \'' + def[i].dataset.def + '\');"' + (checked.indexOf(def[i].dataset.def) != -1 ? 'checked' : '') + '><span class="genki_pseudo_checkbox" onclick="this.previousSibling.click(); return false;"/>');
+          for (i = 0, j = Genki.jisho[k].length; i < j; i++) {
+            // parse definition
+            def = document.createElement('LI');
+            def.className = 'definition clear';
+            def.dataset.def = k + '-' + i;
+            
+            ja = Genki.jisho[k][i].ja.split('|');
+            def.innerHTML = 
+              '<input class="def-selector genki_input_hidden" type="checkbox" onchange="Genki.appendix.jisho.updateCheckboxes(this, \'' + def.dataset.def + '\');"' + (checked.indexOf(def.dataset.def) != -1 ? 'checked' : '') + '>'+
+              '<span class="genki_pseudo_checkbox" onclick="this.previousSibling.click(); return false;"></span>'+
+              '<span class="def-ja' + (ja[1] ? ' def-furi' : '') + '">'+
+                ja[0]+
+                (ja[1] ? '<i>' + ja[1] + '</i>' : '')+
+              '</span>'+
+              '<span class="def-en">' + Genki.jisho[k][i].en + '</span>'+
+              (Genki.jisho[k][i].v ? '<span class="def-vtype">[<i>' + Genki.jisho[k][i].v + '</i>]</span>' : '')+
+              '<span class="def-label">' + Genki.jisho[k][i].l + '</span>';
+            
+            // add definition to dictionary
+            list.appendChild(def);
             
             // compile english definitions
             // cleans the english string and converts it to lowercase so words can be sorted more accurately
-            cleaned = en.innerHTML.replace(/^\(.*?\) |^to |^the |^it |^\.\.\.(?:,|)/gi, '').toLowerCase();
+            cleaned = Genki.jisho[k][i].en.replace(/^\(.*?\) |^to |^the |^it |^\.\.\.(?:,|)/gi, '').toLowerCase();
             
-            if (defList[cleaned]) { // if a key already exist, add the key with a random id
+            if (defList[cleaned]) { // if a key already exists, add the key with a random id
               cleaned = cleaned + '-' + ++n;
             }
             
-            defList[cleaned] = def[i].cloneNode(true);
+            defList[cleaned] = def.cloneNode(true);
             sorted.push(cleaned);
-          } 
-          
-          // otherwise the definition is placeholder
-          else {
-            def[i].innerHTML = '<em>Coming soon...</em>';
+            
+            // cache japanese definition
+            Genki.appendix.jisho.boxCache[def.dataset.def] = {
+              ja : def.firstChild
+            };
           }
         }
         
@@ -56,19 +71,12 @@
           en = defList[sorted[i]].innerHTML.match(/<span class="def-en">(.*?)<\/span>/);
           
           if (en[0]) { // only move definition if there's a match
-            
-            /* Debating on keeping this
-            // special string formatting for the english dictionary
-            if (/^the /.test(en[1])) {
-              // add "the" to the end; "the day after tomorrow" --> "day after tomorrow, the"
-              en[0] = en[0].replace(en[1], function (Match) {
-                return Match.replace('the ', '') + ', the';
-              });
-            }*/
-            
             // build the english definition
             defList[sorted[i]].innerHTML = defList[sorted[i]].innerHTML.replace(/<span class="def-en">.*?<\/span>/, '').replace(/(<input.*?<\/span>)/, '$1' + en[0] + ' ');
             document.getElementById('list-' + sorted[i].charAt(0).toUpperCase()).appendChild(defList[sorted[i]]);
+            
+            // cache english definition
+            Genki.appendix.jisho.boxCache[defList[sorted[i]].dataset.def].en = defList[sorted[i]].firstChild;
           }
         }
         
@@ -83,13 +91,22 @@
         
         // cache nodes for searching
         Genki.appendix.cache = {
-          search_ja : def,
+          search_ja : document.querySelectorAll('#japanese-english .definition'),
           search_en : document.querySelectorAll('#english-japanese .definition'),
           search_res_ja : document.getElementById('dict-search-results-ja'),
           search_res_en : document.getElementById('dict-search-results-en'),
           search_hit_ja : document.getElementById('dict-search-hits-ja'),
           search_hit_en : document.getElementById('dict-search-hits-en')
         };
+        
+        // cache checkbox groups
+        var toCache = ['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ', 'さ', 'し', 'す', 'せ', 'そ', 'た', 'ち', 'つ', 'て', 'と', 'な', 'に', 'ぬ', 'ね', 'の', 'は', 'ひ', 'ふ', 'へ', 'ほ', 'ま', 'み', 'む', 'め', 'も', 'や', 'ゆ', 'よ', 'ら', 'り', 'る', 'れ', 'ろ', 'わ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+        i = 0,
+        j = toCache.length;
+        
+        for (; i < j; i++) {
+          Genki.appendix.jisho.groupCache[toCache[i]] = document.querySelectorAll('#list-' + toCache[i] + ' .def-selector');
+        }
         
         // finally show the dictionary
         Genki.appendix.finishedLoading();
@@ -142,14 +159,14 @@
       
       // updates localStorage and checkbox mirrors
       updateCheckboxes : function (caller, id, selectAll) {
-        var box = document.querySelectorAll('[data-def="' + id + '"] .def-selector'),
+        var box = Genki.appendix.jisho.boxCache[id],
             index = Genki.appendix.jisho.selected.indexOf(id),
-            i = 0, j = box.length;
+            k;
 
         if (caller.checked) {
-          for (; i < j; i++) {
-            if (caller != box[i]) {
-              box[i].checked = true;
+          for (k in box) {
+            if (caller != box[k]) {
+              box[k].checked = true;
             }
           }
 
@@ -159,9 +176,9 @@
           }
 
         } else if (!caller.checked) {
-          for (; i < j; i++) {
-            if (caller != box[i]) {
-              box[i].checked = false;
+          for (k in box) {
+            if (caller != box[k]) {
+              box[k].checked = false;
             }
           }
 
@@ -182,18 +199,24 @@
       // state: true||false (checkbox state)
       // target: '#list-{A|B|C|あ|い|う}' (selects the target group; ex: '#list-A')
       // custom: true||false (allows custom target selector if true)
-      selectAll : function (state, target, custom) {
-        var a = document.querySelectorAll(custom ? target :
-          (Genki.appendix.jisho.mode == 'ja' ? '#japanese-english' : '#english-japanese') +
-          (target ? ' #' + target : '') +
-          ' .def-selector'
-        ), i = 0, j = a.length;
+      selectAll : function (state, target) {
+        var a = target ? Genki.appendix.jisho.groupCache[target] : Genki.appendix.jisho.boxCache, i = 0, j = a.length, k;
         
         // update all checkboxes
-        for (; i < j; i++) {
-          if (a[i].checked != state) {
-            a[i].checked = state;
-            Genki.appendix.jisho.updateCheckboxes(a[i], a[i].parentNode.dataset.def, true);
+        if (target) { // target selection
+          for (; i < j; i++) {
+            if (a[i].checked != state) {
+              a[i].checked = state;
+              Genki.appendix.jisho.updateCheckboxes(a[i], a[i].parentNode.dataset.def, true);
+            }
+          }
+          
+        } else { // select all using the node cache
+          for (k in a) {
+            if (a[k].ja.checked != state) {
+              a[k].ja.checked = state;
+              Genki.appendix.jisho.updateCheckboxes(a[k].ja, a[k].ja.parentNode.dataset.def, true);
+            }
           }
         }
         
@@ -212,16 +235,32 @@
             def = Genki.appendix.cache['search_' + mode],
             defLen = def.length,
             hits = 0,
-            i = 0;
+            i = 0,
+            k,
+            clone;
+        
+        // uncache clones
+        for (k in Genki.appendix.jisho.boxCache) {
+          if (Genki.appendix.jisho.boxCache[k]['search_' + mode]) {
+            delete Genki.appendix.jisho.boxCache[k]['search_' + mode]
+          }
+        }
+        Genki.appendix.jisho.groupCache['search_' + mode] = [];
         
         // clear prior searches
         results.innerHTML = '';
         
-        // loop over the dictionary  if a value is present
+        // loop over the dictionary if a value is present
         if (value) {
           for (; i < defLen; i++) {
-            if (/.*?-\d+/.test(def[i].dataset.def) && def[i].innerText.toLowerCase().indexOf(value.toLowerCase()) != -1) {
-              frag.appendChild(def[i].cloneNode(true)); // clone the match for displaying in the results node
+            if (def[i].innerText.toLowerCase().indexOf(value.toLowerCase()) != -1) {
+              clone = def[i].cloneNode(true);
+              frag.appendChild(clone); // clone the match for displaying in the results node
+              
+              // cache search clone
+              Genki.appendix.jisho.boxCache[def[i].dataset.def]['search_' + mode] = clone.firstChild;
+              Genki.appendix.jisho.groupCache['search_' + mode].push(clone.firstChild);
+              
               hits++; // increment hits
             }
           }
@@ -244,6 +283,29 @@
       // launches an exercise based on a selected list of words
       launchExercise : function () {
         var j = Genki.appendix.jisho.selected.length;
+        
+        // verify selected before launching the exercise
+        for (var i = 0, badId = []; i < j; i++) {
+          if (!document.querySelector('#japanese-english [data-def="' + Genki.appendix.jisho.selected[i] + '"]')) {
+            badId.push(Genki.appendix.jisho.selected[i]);
+          }
+        }
+        
+        // purge bad selectors
+        if (badId.length) {
+          while (badId.length) {
+            Genki.appendix.jisho.selected.splice(Genki.appendix.jisho.selected.indexOf(badId[0]), 1);
+            badId.splice(0, 1);
+          }
+          
+          // update storage with correction
+          if (window.localStorage) {
+            localStorage.selectedDefinitions = Genki.appendix.jisho.selected;
+          }
+          
+          // update with new length
+          j = Genki.appendix.jisho.selected.length;
+        }
         
         // initiate an exercise once 5 or more words have been selected
         if (j < 5) {

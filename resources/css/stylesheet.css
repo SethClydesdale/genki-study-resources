@@ -722,11 +722,13 @@ footer li:first-child:before { display:none; }
 .quiz-over [data-mistakes] .quiz-item { border-color:#F00; }
 .quiz-over [data-mistakes]:after {
   color:#F00;
-  content:"<-- wrong " attr(data-mistakes) "x";
+  content:"\f060\A0 wrong " attr(data-mistakes) "x";
+  font-size:14px;
+  font-family:Meiryo, Osaka, Arial, sans-serif, FontAwesomeWeb, FontAwesome;
   display:block;
   position:absolute;
   top:3px;
-  right:-90px;
+  right:-85px;
 }
 
 .quiz-over [data-mistakes="0"] .quiz-item { border-color:#CCC; }
