@@ -413,7 +413,7 @@ a.jump-arrow:hover { color:#C30; }
 }
 
 /* displays volume and page number of exercise */
-#exercise-title:after {
+#exercise-title:after, .title[data-page]:after {
   content:attr(data-page);
   color:#666;
   font-size:12px;
