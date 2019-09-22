@@ -81,6 +81,16 @@
         // update exercise title name
         document.getElementById('exercise-title').insertAdjacentHTML('beforeend', ' Word Practice');
         
+        // cache nodes for searching
+        Genki.appendix.cache = {
+          search_ja : def,
+          search_en : document.querySelectorAll('#english-japanese .definition'),
+          search_res_ja : document.getElementById('dict-search-results-ja'),
+          search_res_en : document.getElementById('dict-search-results-en'),
+          search_hit_ja : document.getElementById('dict-search-hits-ja'),
+          search_hit_en : document.getElementById('dict-search-hits-en')
+        };
+        
         // finally show the dictionary
         Genki.appendix.finishedLoading();
       },
@@ -197,9 +207,9 @@
       // quick search
       search : function (value, mode) {
         var frag = document.createDocumentFragment(),
-            results = document.getElementById('dict-search-results-' + mode),
-            hitsCounter = document.getElementById('dict-search-hits-' + mode),
-            def = document.querySelectorAll((mode == 'ja' ? '#japanese-english' : '#english-japanese') + ' .dictionary-group .definition'),
+            results = Genki.appendix.cache['search_res_' + mode],
+            hitsCounter = Genki.appendix.cache['search_hit_' + mode],
+            def = Genki.appendix.cache['search_' + mode],
             defLen = def.length,
             hits = 0,
             i = 0;
@@ -1295,8 +1305,328 @@
 
             // conjugation chart
             case 'conjugation' :
-              info = '';
-              quizlet = '';
+              info = 'Conjugate all the verbs into the correct forms. If you haven\'t learned a specific form yet, only focus on the ones that you have learned and then check your answers.';
+              quizlet = 
+              '<h3 class="sub-title">Genki I</h3>'+
+              '<table class="table large-width center">'+
+                '<tr>'+
+                  '<td style="width:25px">verb types</td>'+
+                  '<td style="width:25px">dictionary forms</td>'+
+                  '<td style="width:134px">long forms</td>'+
+                  '<td style="width:134px">te-forms</td>'+
+                  '<td style="width:134px">short past</td>'+
+                  '<td style="width:134px">short present neg.</td>'+
+                  '<td style="width:134px">short past neg.</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>irr</td>'+
+                  '<td><u>する</u></td>'+
+                  '<td>{します}</td>'+
+                  '<td>{して}</td>'+
+                  '<td>{した}</td>'+
+                  '<td>{しない}</td>'+
+                  '<td>{しなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>irr</td>'+
+                  '<td><u>くる</u></td>'+
+                  '<td>{きます}</td>'+
+                  '<td>{きて}</td>'+
+                  '<td>{きた}</td>'+
+                  '<td>{こない}</td>'+
+                  '<td>{こなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>ru</td>'+
+                  '<td>たべ<u>る</u></td>'+
+                  '<td>{たべます}</td>'+
+                  '<td>{たべて}</td>'+
+                  '<td>{たべた}</td>'+
+                  '<td>{たべない}</td>'+
+                  '<td>{たべなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>か<u>う</u></td>'+
+                  '<td>{かいます}</td>'+
+                  '<td>{かって}</td>'+
+                  '<td>{かった}</td>'+
+                  '<td>{かわない}</td>'+
+                  '<td>{かわなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>ま<u>つ</u></td>'+
+                  '<td>{まちます}</td>'+
+                  '<td>{まって}</td>'+
+                  '<td>{まった}</td>'+
+                  '<td>{またない}</td>'+
+                  '<td>{またなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>と<u>る</u></td>'+
+                  '<td>{とります}</td>'+
+                  '<td>{とって}</td>'+
+                  '<td>{とった}</td>'+
+                  '<td>{とらない}</td>'+
+                  '<td>{とらなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>あ<u>る</u></td>'+
+                  '<td>{あります}</td>'+
+                  '<td>{あって}</td>'+
+                  '<td>{あった}</td>'+
+                  '<td>{ない}</td>'+
+                  '<td>{なかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>よ<u>む</u></td>'+
+                  '<td>{よみます}</td>'+
+                  '<td>{よんで}</td>'+
+                  '<td>{よんだ}</td>'+
+                  '<td>{よまない}</td>'+
+                  '<td>{よまなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>あそ<u>ぶ</u></td>'+
+                  '<td>{あそびます}</td>'+
+                  '<td>{あそんで}</td>'+
+                  '<td>{あそんだ}</td>'+
+                  '<td>{あそばない}</td>'+
+                  '<td>{あそばなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>し<u>ぬ</u></td>'+
+                  '<td>{しにます}</td>'+
+                  '<td>{しんで}</td>'+
+                  '<td>{しんだ}</td>'+
+                  '<td>{しなない}</td>'+
+                  '<td>{しななかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>か<u>く</u></td>'+
+                  '<td>{かきます}</td>'+
+                  '<td>{かいて}</td>'+
+                  '<td>{かいた}</td>'+
+                  '<td>{かかない}</td>'+
+                  '<td>{かかなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>い<u>く</u></td>'+
+                  '<td>{いきます}</td>'+
+                  '<td>{いって}</td>'+
+                  '<td>{いった}</td>'+
+                  '<td>{いかない}</td>'+
+                  '<td>{いかなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>いそ<u>ぐ</u></td>'+
+                  '<td>{いそぎます}</td>'+
+                  '<td>{いそいで}</td>'+
+                  '<td>{いそいだ}</td>'+
+                  '<td>{いそがない}</td>'+
+                  '<td>{いそがなかった}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>はな<u>す</u></td>'+
+                  '<td>{はなします}</td>'+
+                  '<td>{はなして}</td>'+
+                  '<td>{はなした}</td>'+
+                  '<td>{はなさない}</td>'+
+                  '<td>{はなさなかった}</td>'+
+                '</tr>'+
+              '</table><br>'+
+
+              '<h3 class="sub-title">Genki II</h3>'+
+              '<table class="table large-width center">'+
+                '<tr>'+
+                  '<td style="width:25px">verb types</td>'+
+                  '<td style="width:25px">dictionary forms</td>'+
+                  '<td style="width:110px">potential</td>'+
+                  '<td style="width:110px">volitional</td>'+
+                  '<td style="width:110px">ば-forms</td>'+
+                  '<td style="width:110px">passive</td>'+
+                  '<td style="width:110px">causative</td>'+
+                  '<td style="width:110px">causative-passive</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>irr</td>'+
+                  '<td><u>する</u></td>'+
+                  '<td>{できる}</td>'+
+                  '<td>{しよう}</td>'+
+                  '<td>{すれば}</td>'+
+                  '<td>{される}</td>'+
+                  '<td>{させる}</td>'+
+                  '<td>{させられる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>irr</td>'+
+                  '<td><u>くる</u></td>'+
+                  '<td>{こられる}</td>'+
+                  '<td>{こよう}</td>'+
+                  '<td>{くれば}</td>'+
+                  '<td>{こられる}</td>'+
+                  '<td>{こさせる}</td>'+
+                  '<td>{こさせられる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>ru</td>'+
+                  '<td>たべ<u>る</u></td>'+
+                  '<td>{たべられる}</td>'+
+                  '<td>{たべよう}</td>'+
+                  '<td>{たべれば}</td>'+
+                  '<td>{たべられる}</td>'+
+                  '<td>{たべさせる}</td>'+
+                  '<td>{たべさせられる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>か<u>う</u></td>'+
+                  '<td>{かえる}</td>'+
+                  '<td>{かおう}</td>'+
+                  '<td>{かえば}</td>'+
+                  '<td>{かわれる}</td>'+
+                  '<td>{かわせる}</td>'+
+                  '<td>{かわされる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>ま<u>つ</u></td>'+
+                  '<td>{まてる}</td>'+
+                  '<td>{まとう}</td>'+
+                  '<td>{まてば}</td>'+
+                  '<td>{またれる}</td>'+
+                  '<td>{またせる}</td>'+
+                  '<td>{またされる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>と<u>る</u></td>'+
+                  '<td>{とれる}</td>'+
+                  '<td>{とろう}</td>'+
+                  '<td>{とれば}</td>'+
+                  '<td>{とられる}</td>'+
+                  '<td>{とらせる}</td>'+
+                  '<td>{とらされる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>あ<u>る</u></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td>{あれば}</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>よ<u>む</u></td>'+
+                  '<td>{よめる}</td>'+
+                  '<td>{よもう}</td>'+
+                  '<td>{よめば}</td>'+
+                  '<td>{よまれる}</td>'+
+                  '<td>{よませる}</td>'+
+                  '<td>{よまされる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>あそ<u>ぶ</u></td>'+
+                  '<td>{あそべる}</td>'+
+                  '<td>{あそぼう}</td>'+
+                  '<td>{あそべば}</td>'+
+                  '<td>{あそばれる}</td>'+
+                  '<td>{あそばせる}</td>'+
+                  '<td>{あそばされる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>し<u>ぬ</u></td>'+
+                  '<td>{しねる}</td>'+
+                  '<td>{しのう}</td>'+
+                  '<td>{しれば}</td>'+
+                  '<td>{しなれる}</td>'+
+                  '<td>{しなせる}</td>'+
+                  '<td>{しなされる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>か<u>く</u></td>'+
+                  '<td>{かける}</td>'+
+                  '<td>{かこう}</td>'+
+                  '<td>{かけば}</td>'+
+                  '<td>{かかれる}</td>'+
+                  '<td>{かかせる}</td>'+
+                  '<td>{かかされる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>い<u>く</u></td>'+
+                  '<td>{いける}</td>'+
+                  '<td>{いこう}</td>'+
+                  '<td>{いけば}</td>'+
+                  '<td>{いかれる}</td>'+
+                  '<td>{いかせる}</td>'+
+                  '<td>{いかされる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>いそ<u>ぐ</u></td>'+
+                  '<td>{いそげる}</td>'+
+                  '<td>{いそごう}</td>'+
+                  '<td>{いそげば}</td>'+
+                  '<td>{いそがれる}</td>'+
+                  '<td>{いそがせる}</td>'+
+                  '<td>{いそがされる}</td>'+
+                '</tr>'+
+
+                '<tr>'+
+                  '<td>u</td>'+
+                  '<td>はな<u>す</u></td>'+
+                  '<td>{はなせる}</td>'+
+                  '<td>{はなそう}</td>'+
+                  '<td>{はなせば}</td>'+
+                  '<td>{はなされる}</td>'+
+                  '<td>{はなさせる}</td>'+
+                  '<td>{はなさせられる}</td>'+
+                '</tr>'+
+              '</table>';
               break;
               
             default :

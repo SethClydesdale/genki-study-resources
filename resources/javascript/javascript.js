@@ -5,9 +5,13 @@
   // # OFFLINE LINK MODIFICATIONS #
   // appends index.html to links if this project is hosted on the local file system
   if (window.location.protocol == 'file:') {
-    for (var a = document.querySelectorAll('a[href$="/"]'), i = 0, j = a.length; i < j; i++) {
+    for (var a = document.getElementsByTagName('A'), i = 0, j = a.length; i < j; i++) {
       if (!/http/.test(a[i].href)) {
-        a[i].href += 'index.html';
+        if (/\/$/.test(a[i].href)) {
+          a[i].href += 'index.html';
+        } else if (/\/#(.*?)$/.test(a[i].href)) {
+          a[i].href = a[i].href.replace(/(#.*?)$/, 'index.html$1');
+        }
       }
     }
   }

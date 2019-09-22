@@ -1011,6 +1011,7 @@
       'appendix/dictionary|Dictionary|p.350-379',
       'appendix/map-of-japan|Map of Japan|p.380-381',
       'appendix/numbers-chart|Numbers Chart|p.382-383',
+      'appendix/conjugation-chart|Conjugation Chart|p.384-385',
       
       // Study Tools
       'study-tools/custom-vocab|Custom Vocabulary Practice',
