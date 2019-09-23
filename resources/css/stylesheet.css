@@ -173,7 +173,6 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
   background:#FFF;
   border:1px solid #DDD;
   padding:3px;
-  overflow:hidden;
 }
 
 .example-row td { vertical-align:top; }
@@ -1014,10 +1013,10 @@ input.writing-zone-input:focus { border-color:#F60; }
 .inline-furi .furigana, .inline-furi i {
   text-align:left;
   font-style:normal;
+  white-space:nowrap;
   position:absolute;
   bottom:-15px;
   left:0;
-  right:-100px;
 }
 
 /* images */
@@ -1630,6 +1629,10 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   margin-top:50px;
 }
 
+.dict-hidden {
+  display:none;
+}
+
 .dict-desc {
   padding:3px;
 }
@@ -1651,6 +1654,7 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
 }
 
 #dict-legend .text-block { margin:3px; }
+#dict-legend .text-block div { margin:3px 0; }
 
 /* index */
 .dictionary-index {
@@ -1709,8 +1713,6 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   overflow:auto;
 }
 
-.dict-search-results .definition { overflow:hidden; }
-
 /* groups */
 .dictionary-group {
   float:left;
@@ -1754,6 +1756,7 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   font-size:14px;
   list-style-type:none;
   margin:6px 0;
+  overflow:hidden;
 }
 
 .def-ja.def-furi {
@@ -1763,13 +1766,13 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
 }
 
 .def-ja.def-furi i {
+  color:#777;
   font-size:11px;
   font-style:normal;
-  color:#777;
+  white-space:nowrap;
   position:absolute;
   bottom:-15px;
   left:0;
-  right:-100px;
 }
 
 #japanese-english .def-ja, #english-japanese .def-en {

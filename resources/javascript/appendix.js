@@ -8,8 +8,18 @@
     jisho : {
       mode : 'ja', // dictionary mode
       selected : [], // selected definitions
-      boxCache : {}, // checkbox cache used for mirrors
-      groupCache : {}, // group checkbox cache used for selecting groups
+      
+      // node cache for improving performance
+      cache : {
+        box : {}, // checkbox cache used for mirrors
+        group : {}, // group checkbox cache used for selecting groups
+        
+        // cache used for searches
+        search : {
+          ja : [],
+          en : []
+        }
+      },
       
       
       // Initial setup of the dictionary by adding checkboxes, filling out the English-Japanese dictionary, and more..
@@ -18,65 +28,100 @@
             checked = window.localStorage && localStorage.selectedDefinitions ? localStorage.selectedDefinitions.split(',') : [],
             sorted = [],
             defList = {},
+            frag, group,
             n = 0;
         
         for (k in Genki.jisho) {
           list = document.getElementById('list-' + k);
+          frag = document.createDocumentFragment();
           
           for (i = 0, j = Genki.jisho[k].length; i < j; i++) {
-            // parse definition
-            def = document.createElement('LI');
-            def.className = 'definition clear';
-            def.dataset.def = k + '-' + i;
-            
-            ja = Genki.jisho[k][i].ja.split('|');
-            def.innerHTML = 
-              '<input class="def-selector genki_input_hidden" type="checkbox" onchange="Genki.appendix.jisho.updateCheckboxes(this, \'' + def.dataset.def + '\');"' + (checked.indexOf(def.dataset.def) != -1 ? 'checked' : '') + '>'+
-              '<span class="genki_pseudo_checkbox" onclick="this.previousSibling.click(); return false;"></span>'+
-              '<span class="def-ja' + (ja[1] ? ' def-furi' : '') + '">'+
-                ja[0]+
-                (ja[1] ? '<i>' + ja[1] + '</i>' : '')+
-              '</span>'+
-              '<span class="def-en">' + Genki.jisho[k][i].en + '</span>'+
-              (Genki.jisho[k][i].v ? '<span class="def-vtype">[<i>' + Genki.jisho[k][i].v + '</i>]</span>' : '')+
-              '<span class="def-label">' + Genki.jisho[k][i].l + '</span>';
-            
-            // add definition to dictionary
-            list.appendChild(def);
-            
-            // compile english definitions
-            // cleans the english string and converts it to lowercase so words can be sorted more accurately
-            cleaned = Genki.jisho[k][i].en.replace(/^\(.*?\) |^to |^the |^it |^\.\.\.(?:,|)/gi, '').toLowerCase();
-            
-            if (defList[cleaned]) { // if a key already exists, add the key with a random id
-              cleaned = cleaned + '-' + ++n;
+            if (Genki.jisho[k][i].en) { // ignore empty definitions
+              def = document.createElement('LI');
+              def.className = 'definition clear';
+              def.dataset.def = k + i; // use key and index as unique identifier
+              
+              // parse definition
+              ja = Genki.jisho[k][i].ja.split('|');
+              def.innerHTML = 
+                '<input class="def-selector genki_input_hidden" type="checkbox" onchange="Genki.appendix.jisho.updateCheckboxes(this, \'' + def.dataset.def + '\');"' + (checked.indexOf(def.dataset.def) != -1 ? 'checked' : '') + '>'+
+                '<span class="genki_pseudo_checkbox" onclick="this.previousSibling.click(); return false;"></span>'+
+                '<span class="def-ja' + (ja[1] ? ' def-furi' : '') + '">'+
+                  ja[0]+
+                  (ja[1] ? '<i>' + ja[1] + '</i>' : '')+
+                '</span>'+
+                '<span class="def-en">' + Genki.jisho[k][i].en + '</span>'+
+                (Genki.jisho[k][i].v ? ' <span class="def-vtype">[<i>' + Genki.jisho[k][i].v + '</i>]</span>' : '')+
+                '<span class="def-label">' + Genki.jisho[k][i].l + '</span>';
+
+              // add definition to dictionary
+              frag.appendChild(def);
+
+              // compile english definitions
+              // cleans the english string and converts it to lowercase so words can be sorted more accurately
+              cleaned = Genki.jisho[k][i].en.replace(/^\(.*?\) |^to be |^to |^the |^it |^\.\.\.(?:,|)/i, '').toLowerCase();
+
+              if (defList[cleaned]) { // if a key already exists, add the key with a random id
+                cleaned = cleaned + '-' + ++n;
+              }
+
+              defList[cleaned] = def.cloneNode(true);
+              sorted.push(cleaned);
+
+              // cache japanese definition
+              Genki.appendix.jisho.cache.box[def.dataset.def] = {
+                ja : def.firstChild
+              };
+
+              // cache japanese definition group
+              if (!Genki.appendix.jisho.cache.group[k]) {
+                Genki.appendix.jisho.cache.group[k] = [];
+              }
+              Genki.appendix.jisho.cache.group[k].push(def.firstChild);
+
+              // cache japanese definition for searches
+              Genki.appendix.jisho.cache.search.ja.push(def);
             }
-            
-            defList[cleaned] = def.cloneNode(true);
-            sorted.push(cleaned);
-            
-            // cache japanese definition
-            Genki.appendix.jisho.boxCache[def.dataset.def] = {
-              ja : def.firstChild
-            };
           }
+          
+          list.appendChild(frag);
         }
         
         // sort english definitions
         sorted = sorted.sort();
+        group = 'A';
+        frag = document.createDocumentFragment();
         
         // add english definitions to the English-Japanese dictionary
         for (i = 0, j = sorted.length; i < j; i++) {
+          
+          // append current group and start a new one
+          if (sorted[i].charAt(0) != group) {
+            document.getElementById('list-' + group).appendChild(frag);
+            
+            group = sorted[i].charAt(0).toUpperCase();
+            frag = document.createDocumentFragment();
+          }
+          
           // move the english definition to the front
-          en = defList[sorted[i]].innerHTML.match(/<span class="def-en">(.*?)<\/span>/);
+          en = defList[sorted[i]].innerHTML.match(/<span class="def-en">.*?<\/span>/);
           
           if (en[0]) { // only move definition if there's a match
             // build the english definition
             defList[sorted[i]].innerHTML = defList[sorted[i]].innerHTML.replace(/<span class="def-en">.*?<\/span>/, '').replace(/(<input.*?<\/span>)/, '$1' + en[0] + ' ');
-            document.getElementById('list-' + sorted[i].charAt(0).toUpperCase()).appendChild(defList[sorted[i]]);
+            frag.appendChild(defList[sorted[i]]);
             
             // cache english definition
-            Genki.appendix.jisho.boxCache[defList[sorted[i]].dataset.def].en = defList[sorted[i]].firstChild;
+            Genki.appendix.jisho.cache.box[defList[sorted[i]].dataset.def].en = defList[sorted[i]].firstChild;
+            
+            // cache english definition group
+            if (!Genki.appendix.jisho.cache.group[group]) {
+              Genki.appendix.jisho.cache.group[group] = [];
+            }
+            Genki.appendix.jisho.cache.group[group].push(defList[sorted[i]].firstChild);
+            
+            // cache english definition for searches
+            Genki.appendix.jisho.cache.search.en.push(defList[sorted[i]]);
           }
         }
         
@@ -90,23 +135,10 @@
         document.getElementById('exercise-title').insertAdjacentHTML('beforeend', ' Word Practice');
         
         // cache nodes for searching
-        Genki.appendix.cache = {
-          search_ja : document.querySelectorAll('#japanese-english .definition'),
-          search_en : document.querySelectorAll('#english-japanese .definition'),
-          search_res_ja : document.getElementById('dict-search-results-ja'),
-          search_res_en : document.getElementById('dict-search-results-en'),
-          search_hit_ja : document.getElementById('dict-search-hits-ja'),
-          search_hit_en : document.getElementById('dict-search-hits-en')
-        };
-        
-        // cache checkbox groups
-        var toCache = ['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ', 'さ', 'し', 'す', 'せ', 'そ', 'た', 'ち', 'つ', 'て', 'と', 'な', 'に', 'ぬ', 'ね', 'の', 'は', 'ひ', 'ふ', 'へ', 'ほ', 'ま', 'み', 'む', 'め', 'も', 'や', 'ゆ', 'よ', 'ら', 'り', 'る', 'れ', 'ろ', 'わ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        i = 0,
-        j = toCache.length;
-        
-        for (; i < j; i++) {
-          Genki.appendix.jisho.groupCache[toCache[i]] = document.querySelectorAll('#list-' + toCache[i] + ' .def-selector');
-        }
+        Genki.appendix.jisho.cache.search.res_ja = document.getElementById('dict-search-results-ja');
+        Genki.appendix.jisho.cache.search.res_en = document.getElementById('dict-search-results-en');
+        Genki.appendix.jisho.cache.search.hit_ja = document.getElementById('dict-search-hits-ja');
+        Genki.appendix.jisho.cache.search.hit_en = document.getElementById('dict-search-hits-en');
         
         // finally show the dictionary
         Genki.appendix.finishedLoading();
@@ -116,7 +148,7 @@
       // switches dictionary mode
       // ja = japanese-english
       // en = english-japanese
-      switchMode : function (mode) {
+      switchMode : function (mode, init) {
         var ja = {
           button : document.getElementById('ja-mode'),
             dict : document.getElementById('japanese-english')
@@ -134,8 +166,8 @@
           en.button.className = en.button.className.replace(' active-mode', '');
 
           // show the active dictionary
-          ja.dict.style.display = '';
-          en.dict.style.display = 'none';
+          en.dict.className += ' dict-hidden';
+          ja.dict.className = ja.dict.className.replace(' dict-hidden', '');
         } 
 
         // english-japanese mode
@@ -145,13 +177,14 @@
           ja.button.className = ja.button.className.replace(' active-mode', '');
 
           // show the active dictionary
-          en.dict.style.display = '';
-          ja.dict.style.display = 'none';
+          ja.dict.className += ' dict-hidden';
+          en.dict.className = en.dict.className.replace(' dict-hidden', '');
         }
+        
+        Genki.appendix.jisho.mode = mode;
 
         // save preferences
-        if (window.localStorage) {
-          Genki.appendix.jisho.mode = mode;
+        if (!init && window.localStorage) {
           localStorage.genkiJishoMode = mode;
         }
       },
@@ -159,7 +192,7 @@
       
       // updates localStorage and checkbox mirrors
       updateCheckboxes : function (caller, id, selectAll) {
-        var box = Genki.appendix.jisho.boxCache[id],
+        var box = Genki.appendix.jisho.cache.box[id],
             index = Genki.appendix.jisho.selected.indexOf(id),
             k;
 
@@ -200,11 +233,15 @@
       // target: '#list-{A|B|C|あ|い|う}' (selects the target group; ex: '#list-A')
       // custom: true||false (allows custom target selector if true)
       selectAll : function (state, target) {
-        var a = target ? Genki.appendix.jisho.groupCache[target] : Genki.appendix.jisho.boxCache, i = 0, j = a.length, k;
+        var a = target ? Genki.appendix.jisho.cache.group[target] : Genki.appendix.jisho.cache.box, i, j, k;
+        
+        if (!a) {
+          return;
+        }
         
         // update all checkboxes
         if (target) { // target selection
-          for (; i < j; i++) {
+          for (i = 0, j = a.length; i < j; i++) {
             if (a[i].checked != state) {
               a[i].checked = state;
               Genki.appendix.jisho.updateCheckboxes(a[i], a[i].parentNode.dataset.def, true);
@@ -230,9 +267,9 @@
       // quick search
       search : function (value, mode) {
         var frag = document.createDocumentFragment(),
-            results = Genki.appendix.cache['search_res_' + mode],
-            hitsCounter = Genki.appendix.cache['search_hit_' + mode],
-            def = Genki.appendix.cache['search_' + mode],
+            results = Genki.appendix.jisho.cache.search['res_' + mode],
+            hitsCounter = Genki.appendix.jisho.cache.search['hit_' + mode],
+            def = Genki.appendix.jisho.cache.search[mode],
             defLen = def.length,
             hits = 0,
             i = 0,
@@ -240,12 +277,12 @@
             clone;
         
         // uncache clones
-        for (k in Genki.appendix.jisho.boxCache) {
-          if (Genki.appendix.jisho.boxCache[k]['search_' + mode]) {
-            delete Genki.appendix.jisho.boxCache[k]['search_' + mode]
+        for (k in Genki.appendix.jisho.cache.box) {
+          if (Genki.appendix.jisho.cache.box[k]['search_' + mode]) {
+            delete Genki.appendix.jisho.cache.box[k]['search_' + mode]
           }
         }
-        Genki.appendix.jisho.groupCache['search_' + mode] = [];
+        Genki.appendix.jisho.cache.group['search_' + mode] = [];
         
         // clear prior searches
         results.innerHTML = '';
@@ -258,8 +295,8 @@
               frag.appendChild(clone); // clone the match for displaying in the results node
               
               // cache search clone
-              Genki.appendix.jisho.boxCache[def[i].dataset.def]['search_' + mode] = clone.firstChild;
-              Genki.appendix.jisho.groupCache['search_' + mode].push(clone.firstChild);
+              Genki.appendix.jisho.cache.box[def[i].dataset.def]['search_' + mode] = clone.firstChild;
+              Genki.appendix.jisho.cache.group['search_' + mode].push(clone.firstChild);
               
               hits++; // increment hits
             }
@@ -489,7 +526,7 @@
           
           // dictionary mode pref.
           if (localStorage.genkiJishoMode && localStorage.genkiJishoMode != 'ja') {
-            Genki.appendix.jisho.switchMode(localStorage.genkiJishoMode);
+            Genki.appendix.jisho.switchMode(localStorage.genkiJishoMode, true);
           }
           
           // restore selected definitions

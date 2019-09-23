@@ -54,7 +54,7 @@
           
           <div id="dict-legend">
             <h2 id="legend">Legend</h2>
-            <p class="dict-desc">The legend shows what the meaning of an icon next to a definition is.</p>
+            <p class="dict-desc">The legend shows the meanings of an icon or abbreviation.</p>
             <div class="text-block">
               <div>会……会話・文法編 <span class="leg-desc">(Conversation and Grammar section)</span></div>
               <div>読……読み書き編 <span class="leg-desc">(Reading and Writing section)</span></div>
@@ -62,796 +62,799 @@
               <div>(e)……Useful Expressions</div>
               <div>I・II・III……問題番号（読み書き編） <span class="leg-desc">(Number of the exercise in the Reading and Writing section)</span></div>
               <div>[<i>u</i>] u-verb　[<i>ru</i>] ru-verb　[<i>irr</i>] irregular verb</div>
+              <div>exp. expression　neg. negative　lit. literally　etc. etcetera</div>
             </div>
           </div>
         </div>
         
         <div id="dictionary-top" style="margin-bottom:-50px;"></div>
-        <div id="japanese-english" class="dict-block clear">
-          <h2 id="ja-main-title" class="section-title">Japanese-English Dictionary</h2>
-          
-          <div class="columns-2 clear">
-            <div id="dict-index-ja">
-              <h2 id="quick-nav-ja">Dictionary Index</h2>
-              <p class="dict-desc">The Dictionary Index lets you quickly jump to a section or select/deselect all words.</p>
-              <div class="dictionary-index text-block clear">
-                <ul>
-                  <li><a href="#section-あ">あ</a></li>
-                  <li><a href="#section-い">い</a></li>
-                  <li><a href="#section-う">う</a></li>
-                  <li><a href="#section-え">え</a></li>
-                  <li><a href="#section-お">お</a></li>
-                </ul>
-                <ul class="dict-index-split">
-                  <li><a href="#section-か">か</a></li>
-                  <li><a href="#section-き">き</a></li>
-                  <li><a href="#section-く">く</a></li>
-                  <li><a href="#section-け">け</a></li>
-                  <li><a href="#section-こ">こ</a></li>
-                </ul>
-                <ul class="dict-index-split">
-                  <li><a href="#section-さ">さ</a></li>
-                  <li><a href="#section-し">し</a></li>
-                  <li><a href="#section-す">す</a></li>
-                  <li><a href="#section-せ">せ</a></li>
-                  <li><a href="#section-そ">そ</a></li>
-                </ul>
-                <ul class="dict-index-split">
-                  <li><a href="#section-た">た</a></li>
-                  <li><a href="#section-ち">ち</a></li>
-                  <li><a href="#section-つ">つ</a></li>
-                  <li><a href="#section-て">て</a></li>
-                  <li><a href="#section-と">と</a></li>
-                </ul>
-                <ul class="dict-index-split">
-                  <li><a href="#section-な">な</a></li>
-                  <li><a href="#section-に">に</a></li>
-                  <li><a href="#section-ぬ">ぬ</a></li>
-                  <li><a href="#section-ね">ね</a></li>
-                  <li><a href="#section-の">の</a></li>
-                </ul>
-                <ul class="dict-index-split">
-                  <li><a href="#section-は">は</a></li>
-                  <li><a href="#section-ひ">ひ</a></li>
-                  <li><a href="#section-ふ">ふ</a></li>
-                  <li><a href="#section-へ">へ</a></li>
-                  <li><a href="#section-ほ">ほ</a></li>
-                </ul>
-                <ul class="dict-index-split">
-                  <li><a href="#section-ま">ま</a></li>
-                  <li><a href="#section-み">み</a></li>
-                  <li><a href="#section-む">む</a></li>
-                  <li><a href="#section-め">め</a></li>
-                  <li><a href="#section-も">も</a></li>
-                </ul>
-                <ul class="dict-index-split">
-                  <li><a href="#section-や">や</a></li>
-                  <li><a href="#section-ゆ">ゆ</a></li>
-                  <li><a href="#section-よ">よ</a></li>
-                </ul>
-                <ul class="dict-index-split">
-                  <li><a href="#section-ら">ら</a></li>
-                  <li><a href="#section-り">り</a></li>
-                  <li><a href="#section-る">る</a></li>
-                  <li><a href="#section-れ">れ</a></li>
-                  <li><a href="#section-ろ">ろ</a></li>
-                </ul>
-                <ul class="dict-index-split">
-                  <li><a href="#section-わ">わ</a></li>
-                  <li><span class="dict-index-disabled">を</span></li>
-                  <li><span class="dict-index-disabled">ん</span></li>
-                </ul>
-              </div>
-              
-              <div class="group-selectors center">
-                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true);">Select All Words</button>
-                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false);">Deselect All Words</button>
-              </div>
-            </div>
-            
-            <div id="quick-search-ja">
-              <h2 id="dict-search-ja">Quick Search <span id="dict-search-hits-ja"></span></h2>
-              <p class="dict-desc">Quick search helps you quickly find words you're looking for.</p>
-              <div class="dict-search-wrapper">
-                <input class="dict-search" type="text" placeholder="Search..." oninput="Genki.appendix.jisho.search(this.value, 'ja')">
-                <div class="group-selectors center" style="visibility:hidden;">
-                  <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'search_ja', true);" title="Select all search results"></button>
-                  <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'search_ja', true);" title="Deselect all search results"></button>
+        <div class="dict-block">
+          <div id="japanese-english" class="clear">
+            <h2 id="ja-main-title" class="section-title">Japanese-English Dictionary</h2>
+
+            <div class="columns-2 clear">
+              <div id="dict-index-ja">
+                <h2 id="quick-nav-ja">Dictionary Index</h2>
+                <p class="dict-desc">The Dictionary Index lets you quickly jump to a section or select/deselect all words.</p>
+                <div class="dictionary-index text-block clear">
+                  <ul>
+                    <li><a href="#section-あ">あ</a></li>
+                    <li><a href="#section-い">い</a></li>
+                    <li><a href="#section-う">う</a></li>
+                    <li><a href="#section-え">え</a></li>
+                    <li><a href="#section-お">お</a></li>
+                  </ul>
+                  <ul class="dict-index-split">
+                    <li><a href="#section-か">か</a></li>
+                    <li><a href="#section-き">き</a></li>
+                    <li><a href="#section-く">く</a></li>
+                    <li><a href="#section-け">け</a></li>
+                    <li><a href="#section-こ">こ</a></li>
+                  </ul>
+                  <ul class="dict-index-split">
+                    <li><a href="#section-さ">さ</a></li>
+                    <li><a href="#section-し">し</a></li>
+                    <li><a href="#section-す">す</a></li>
+                    <li><a href="#section-せ">せ</a></li>
+                    <li><a href="#section-そ">そ</a></li>
+                  </ul>
+                  <ul class="dict-index-split">
+                    <li><a href="#section-た">た</a></li>
+                    <li><a href="#section-ち">ち</a></li>
+                    <li><a href="#section-つ">つ</a></li>
+                    <li><a href="#section-て">て</a></li>
+                    <li><a href="#section-と">と</a></li>
+                  </ul>
+                  <ul class="dict-index-split">
+                    <li><a href="#section-な">な</a></li>
+                    <li><a href="#section-に">に</a></li>
+                    <li><a href="#section-ぬ">ぬ</a></li>
+                    <li><a href="#section-ね">ね</a></li>
+                    <li><a href="#section-の">の</a></li>
+                  </ul>
+                  <ul class="dict-index-split">
+                    <li><a href="#section-は">は</a></li>
+                    <li><a href="#section-ひ">ひ</a></li>
+                    <li><a href="#section-ふ">ふ</a></li>
+                    <li><a href="#section-へ">へ</a></li>
+                    <li><a href="#section-ほ">ほ</a></li>
+                  </ul>
+                  <ul class="dict-index-split">
+                    <li><a href="#section-ま">ま</a></li>
+                    <li><a href="#section-み">み</a></li>
+                    <li><a href="#section-む">む</a></li>
+                    <li><a href="#section-め">め</a></li>
+                    <li><a href="#section-も">も</a></li>
+                  </ul>
+                  <ul class="dict-index-split">
+                    <li><a href="#section-や">や</a></li>
+                    <li><a href="#section-ゆ">ゆ</a></li>
+                    <li><a href="#section-よ">よ</a></li>
+                  </ul>
+                  <ul class="dict-index-split">
+                    <li><a href="#section-ら">ら</a></li>
+                    <li><a href="#section-り">り</a></li>
+                    <li><a href="#section-る">る</a></li>
+                    <li><a href="#section-れ">れ</a></li>
+                    <li><a href="#section-ろ">ろ</a></li>
+                  </ul>
+                  <ul class="dict-index-split">
+                    <li><a href="#section-わ">わ</a></li>
+                    <li><span class="dict-index-disabled">を</span></li>
+                    <li><span class="dict-index-disabled">ん</span></li>
+                  </ul>
                 </div>
-                <ul id="dict-search-results-ja" class="dict-search-results"></ul>
-              </div>
-            </div>
-          </div><br><br>
-          
-          <div class="dictionary-group">
-            <h2 id="section-あ" class="section-title">あ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'あ');" title="Select all words in group あ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'あ');" title="Deselect all words in group あ"></button>
-            </div>
-            <ul id="list-あ"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-い" class="section-title">い</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'い');" title="Select all words in group い"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'い');" title="Deselect all words in group い"></button>
-            </div>
-            <ul id="list-い"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-う" class="section-title">う</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'う');" title="Select all words in group う"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'う');" title="Deselect all words in group う"></button>
-            </div>
-            <ul id="list-う"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-え" class="section-title">え</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'え');" title="Select all words in group え"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'え');" title="Deselect all words in group え"></button>
-            </div>
-            <ul id="list-え"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-お" class="section-title">お</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'お');" title="Select all words in group お"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'お');" title="Deselect all words in group お"></button>
-            </div>
-            <ul id="list-お"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-か" class="section-title">か</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'か');" title="Select all words in group か"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'か');" title="Deselect all words in group か"></button>
-            </div>
-            <ul id="list-か"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-き" class="section-title">き</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'き');" title="Select all words in group き"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'き');" title="Deselect all words in group き"></button>
-            </div>
-            <ul id="list-き"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-く" class="section-title">く</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'く');" title="Select all words in group く"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'く');" title="Deselect all words in group く"></button>
-            </div>
-            <ul id="list-く"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-け" class="section-title">け</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'け');" title="Select all words in group け"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'け');" title="Deselect all words in group け"></button>
-            </div>
-            <ul id="list-け"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-こ" class="section-title">こ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'こ');" title="Select all words in group こ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'こ');" title="Deselect all words in group こ"></button>
-            </div>
-            <ul id="list-こ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-さ" class="section-title">さ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'さ');" title="Select all words in group さ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'さ');" title="Deselect all words in group さ"></button>
-            </div>
-            <ul id="list-さ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-し" class="section-title">し</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'し');" title="Select all words in group し"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'し');" title="Deselect all words in group し"></button>
-            </div>
-            <ul id="list-し"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-す" class="section-title">す</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'す');" title="Select all words in group す"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'す');" title="Deselect all words in group す"></button>
-            </div>
-            <ul id="list-す"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-せ" class="section-title">せ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'せ');" title="Select all words in group せ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'せ');" title="Deselect all words in group せ"></button>
-            </div>
-            <ul id="list-せ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-そ" class="section-title">そ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'そ');" title="Select all words in group そ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'そ');" title="Deselect all words in group そ"></button>
-            </div>
-            <ul id="list-そ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-た" class="section-title">た</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'た');" title="Select all words in group た"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'た');" title="Deselect all words in group た"></button>
-            </div>
-            <ul id="list-た"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-ち" class="section-title">ち</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ち');" title="Select all words in group ち"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ち');" title="Deselect all words in group ち"></button>
-            </div>
-            <ul id="list-ち"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-つ" class="section-title">つ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'つ');" title="Select all words in group つ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'つ');" title="Deselect all words in group つ"></button>
-            </div>
-            <ul id="list-つ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-て" class="section-title">て</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'て');" title="Select all words in group て"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'て');" title="Deselect all words in group て"></button>
-            </div>
-            <ul id="list-て"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-と" class="section-title">と</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'と');" title="Select all words in group と"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'と');" title="Deselect all words in group と"></button>
-            </div>
-            <ul id="list-と"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-な" class="section-title">な</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'な');" title="Select all words in group な"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'な');" title="Deselect all words in group な"></button>
-            </div>
-            <ul id="list-な"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-に" class="section-title">に</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'に');" title="Select all words in group に"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'に');" title="Deselect all words in group に"></button>
-            </div>
-            <ul id="list-に"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-ぬ" class="section-title">ぬ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ぬ');" title="Select all words in group ぬ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ぬ');" title="Deselect all words in group ぬ"></button>
-            </div>
-            <ul id="list-ぬ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-ね" class="section-title">ね</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ね');" title="Select all words in group ね"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ね');" title="Deselect all words in group ね"></button>
-            </div>
-            <ul id="list-ね"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-の" class="section-title">の</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'の');" title="Select all words in group の"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'の');" title="Deselect all words in group の"></button>
-            </div>
-            <ul id="list-の"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-は" class="section-title">は</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'は');" title="Select all words in group は"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'は');" title="Deselect all words in group は"></button>
-            </div>
-            <ul id="list-は"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-ひ" class="section-title">ひ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ひ');" title="Select all words in group ひ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ひ');" title="Deselect all words in group ひ"></button>
-            </div>
-            <ul id="list-ひ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-ふ" class="section-title">ふ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ふ');" title="Select all words in group ふ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ふ');" title="Deselect all words in group ふ"></button>
-            </div>
-            <ul id="list-ふ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-へ" class="section-title">へ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'へ');" title="Select all words in group へ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'へ');" title="Deselect all words in group へ"></button>
-            </div>
-            <ul id="list-へ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-ほ" class="section-title">ほ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ほ');" title="Select all words in group ほ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ほ');" title="Deselect all words in group ほ"></button>
-            </div>
-            <ul id="list-ほ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-ま" class="section-title">ま</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ま');" title="Select all words in group ま"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ま');" title="Deselect all words in group ま"></button>
-            </div>
-            <ul id="list-ま"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-み" class="section-title">み</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'み');" title="Select all words in group み"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'み');" title="Deselect all words in group み"></button>
-            </div>
-            <ul id="list-み"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-む" class="section-title">む</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'む');" title="Select all words in group む"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'む');" title="Deselect all words in group む"></button>
-            </div>
-            <ul id="list-む"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-め" class="section-title">め</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'め');" title="Select all words in group め"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'め');" title="Deselect all words in group め"></button>
-            </div>
-            <ul id="list-め"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-も" class="section-title">も</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'も');" title="Select all words in group も"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'も');" title="Deselect all words in group も"></button>
-            </div>
-            <ul id="list-も"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-や" class="section-title">や</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'や');" title="Select all words in group や"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'や');" title="Deselect all words in group や"></button>
-            </div>
-            <ul id="list-や"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-ゆ" class="section-title">ゆ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ゆ');" title="Select all words in group ゆ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ゆ');" title="Deselect all words in group ゆ"></button>
-            </div>
-            <ul id="list-ゆ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-よ" class="section-title">よ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'よ');" title="Select all words in group よ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'よ');" title="Deselect all words in group よ"></button>
-            </div>
-            <ul id="list-よ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-ら" class="section-title">ら</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ら');" title="Select all words in group ら"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ら');" title="Deselect all words in group ら"></button>
-            </div>
-            <ul id="list-ら"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-り" class="section-title">り</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'り');" title="Select all words in group り"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'り');" title="Deselect all words in group り"></button>
-            </div>
-            <ul id="list-り"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-る" class="section-title">る</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'る');" title="Select all words in group る"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'る');" title="Deselect all words in group る"></button>
-            </div>
-            <ul id="list-る"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-れ" class="section-title">れ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'れ');" title="Select all words in group れ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'れ');" title="Deselect all words in group れ"></button>
-            </div>
-            <ul id="list-れ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-ろ" class="section-title">ろ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ろ');" title="Select all words in group ろ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ろ');" title="Deselect all words in group ろ"></button>
-            </div>
-            <ul id="list-ろ"></ul>
-          </div>
-
-          <div class="dictionary-group">
-            <h2 id="section-わ" class="section-title">わ</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'わ');" title="Select all words in group わ"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'わ');" title="Deselect all words in group わ"></button>
-            </div>
-            <ul id="list-わ"></ul>
-          </div>
-          
-        </div>
-        
-        
-        <div id="english-japanese" class="dict-block clear" style="display:none">
-          <h2 id="en-main-title" class="section-title">English-Japanese Dictionary</h2>
-          
-          <div class="columns-2 clear">
-            <div id="dict-index-en">
-              <h2 id="quick-nav-en">Dictionary Index</h2>
-              <p class="dict-desc">The Dictionary Index lets you quickly jump to a section or select/deselect all words.</p>
-              <ul class="dictionary-index dict-alpha text-block clear">
-                <li><a href="#section-A">A</a></li>
-                <li><a href="#section-B">B</a></li>
-                <li><a href="#section-C">C</a></li>
-                <li><a href="#section-D">D</a></li>
-                <li><a href="#section-E">E</a></li>
-                <li><a href="#section-F">F</a></li>
-                <li><a href="#section-G">G</a></li>
-                <li><a href="#section-H">H</a></li>
-                <li><a href="#section-I">I</a></li>
-                <li><a href="#section-J">J</a></li>
-                <li><a href="#section-K">K</a></li>
-                <li><a href="#section-L">L</a></li>
-                <li><a href="#section-M">M</a></li>
-                <li><a href="#section-N">N</a></li>
-                <li><a href="#section-O">O</a></li>
-                <li><a href="#section-P">P</a></li>
-                <li><a href="#section-Q">Q</a></li>
-                <li><a href="#section-R">R</a></li>
-                <li><a href="#section-S">S</a></li>
-                <li><a href="#section-T">T</a></li>
-                <li><a href="#section-U">U</a></li>
-                <li><a href="#section-V">V</a></li>
-                <li><a href="#section-W">W</a></li>
-                <li><a href="#section-X">X</a></li>
-                <li><a href="#section-Y">Y</a></li>
-                <li><a href="#section-Z">Z</a></li>
-              </ul>
-              
-              <div class="group-selectors center">
-                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true);">Select All Words</button>
-                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false);">Deselect All Words</button>
-              </div>
-            </div>
-            
-            <div id="quick-search-en">
-              <h2 id="dict-search-en">Quick Search <span id="dict-search-hits-en"></span></h2>
-              <p class="dict-desc">Quick search helps you quickly find words you're looking for.</p>
-              <div class="dict-search-wrapper">
-                <input class="dict-search" type="text" placeholder="Search..." oninput="Genki.appendix.jisho.search(this.value, 'en')">
-                <div class="group-selectors center" style="visibility:hidden;">
-                  <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'search_en', true);" title="Select all search results"></button>
-                  <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'search_en', true);" title="Deselect all search results"></button>
+                <div class="group-selectors center">
+                  <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true);">Select All Words</button>
+                  <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false);">Deselect All Words</button>
                 </div>
-                <ul id="dict-search-results-en" class="dict-search-results"></ul>
               </div>
+
+              <div id="quick-search-ja">
+                <h2 id="dict-search-ja">Quick Search <span id="dict-search-hits-ja"></span></h2>
+                <p class="dict-desc">Quick search helps you quickly find words you're looking for.</p>
+                <div class="dict-search-wrapper">
+                  <input class="dict-search" type="text" placeholder="Search..." oninput="Genki.appendix.jisho.search(this.value, 'ja')">
+                  <div class="group-selectors center" style="visibility:hidden;">
+                    <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'search_ja', true);" title="Select all search results"></button>
+                    <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'search_ja', true);" title="Deselect all search results"></button>
+                  </div>
+                  <ul id="dict-search-results-ja" class="dict-search-results"></ul>
+                </div>
+              </div>
+            </div><br><br>
+
+            <div class="dictionary-group">
+              <h2 id="section-あ" class="section-title">あ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'あ');" title="Select all words in group あ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'あ');" title="Deselect all words in group あ"></button>
+              </div>
+              <ul id="list-あ"></ul>
             </div>
-          </div><br><br>
-          
-          <div class="dictionary-group">
-            <h2 id="section-A" class="section-title">A</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'A');" title="Select all words in group A"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'A');" title="Deselect all words in group A"></button>
+
+            <div class="dictionary-group">
+              <h2 id="section-い" class="section-title">い</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'い');" title="Select all words in group い"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'い');" title="Deselect all words in group い"></button>
+              </div>
+              <ul id="list-い"></ul>
             </div>
-            <ul id="list-A"></ul>
+
+            <div class="dictionary-group">
+              <h2 id="section-う" class="section-title">う</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'う');" title="Select all words in group う"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'う');" title="Deselect all words in group う"></button>
+              </div>
+              <ul id="list-う"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-え" class="section-title">え</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'え');" title="Select all words in group え"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'え');" title="Deselect all words in group え"></button>
+              </div>
+              <ul id="list-え"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-お" class="section-title">お</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'お');" title="Select all words in group お"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'お');" title="Deselect all words in group お"></button>
+              </div>
+              <ul id="list-お"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-か" class="section-title">か</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'か');" title="Select all words in group か"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'か');" title="Deselect all words in group か"></button>
+              </div>
+              <ul id="list-か"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-き" class="section-title">き</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'き');" title="Select all words in group き"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'き');" title="Deselect all words in group き"></button>
+              </div>
+              <ul id="list-き"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-く" class="section-title">く</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'く');" title="Select all words in group く"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'く');" title="Deselect all words in group く"></button>
+              </div>
+              <ul id="list-く"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-け" class="section-title">け</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'け');" title="Select all words in group け"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'け');" title="Deselect all words in group け"></button>
+              </div>
+              <ul id="list-け"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-こ" class="section-title">こ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'こ');" title="Select all words in group こ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'こ');" title="Deselect all words in group こ"></button>
+              </div>
+              <ul id="list-こ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-さ" class="section-title">さ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'さ');" title="Select all words in group さ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'さ');" title="Deselect all words in group さ"></button>
+              </div>
+              <ul id="list-さ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-し" class="section-title">し</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'し');" title="Select all words in group し"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'し');" title="Deselect all words in group し"></button>
+              </div>
+              <ul id="list-し"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-す" class="section-title">す</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'す');" title="Select all words in group す"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'す');" title="Deselect all words in group す"></button>
+              </div>
+              <ul id="list-す"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-せ" class="section-title">せ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'せ');" title="Select all words in group せ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'せ');" title="Deselect all words in group せ"></button>
+              </div>
+              <ul id="list-せ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-そ" class="section-title">そ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'そ');" title="Select all words in group そ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'そ');" title="Deselect all words in group そ"></button>
+              </div>
+              <ul id="list-そ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-た" class="section-title">た</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'た');" title="Select all words in group た"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'た');" title="Deselect all words in group た"></button>
+              </div>
+              <ul id="list-た"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-ち" class="section-title">ち</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ち');" title="Select all words in group ち"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ち');" title="Deselect all words in group ち"></button>
+              </div>
+              <ul id="list-ち"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-つ" class="section-title">つ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'つ');" title="Select all words in group つ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'つ');" title="Deselect all words in group つ"></button>
+              </div>
+              <ul id="list-つ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-て" class="section-title">て</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'て');" title="Select all words in group て"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'て');" title="Deselect all words in group て"></button>
+              </div>
+              <ul id="list-て"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-と" class="section-title">と</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'と');" title="Select all words in group と"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'と');" title="Deselect all words in group と"></button>
+              </div>
+              <ul id="list-と"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-な" class="section-title">な</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'な');" title="Select all words in group な"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'な');" title="Deselect all words in group な"></button>
+              </div>
+              <ul id="list-な"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-に" class="section-title">に</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'に');" title="Select all words in group に"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'に');" title="Deselect all words in group に"></button>
+              </div>
+              <ul id="list-に"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-ぬ" class="section-title">ぬ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ぬ');" title="Select all words in group ぬ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ぬ');" title="Deselect all words in group ぬ"></button>
+              </div>
+              <ul id="list-ぬ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-ね" class="section-title">ね</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ね');" title="Select all words in group ね"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ね');" title="Deselect all words in group ね"></button>
+              </div>
+              <ul id="list-ね"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-の" class="section-title">の</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'の');" title="Select all words in group の"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'の');" title="Deselect all words in group の"></button>
+              </div>
+              <ul id="list-の"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-は" class="section-title">は</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'は');" title="Select all words in group は"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'は');" title="Deselect all words in group は"></button>
+              </div>
+              <ul id="list-は"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-ひ" class="section-title">ひ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ひ');" title="Select all words in group ひ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ひ');" title="Deselect all words in group ひ"></button>
+              </div>
+              <ul id="list-ひ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-ふ" class="section-title">ふ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ふ');" title="Select all words in group ふ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ふ');" title="Deselect all words in group ふ"></button>
+              </div>
+              <ul id="list-ふ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-へ" class="section-title">へ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'へ');" title="Select all words in group へ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'へ');" title="Deselect all words in group へ"></button>
+              </div>
+              <ul id="list-へ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-ほ" class="section-title">ほ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ほ');" title="Select all words in group ほ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ほ');" title="Deselect all words in group ほ"></button>
+              </div>
+              <ul id="list-ほ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-ま" class="section-title">ま</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ま');" title="Select all words in group ま"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ま');" title="Deselect all words in group ま"></button>
+              </div>
+              <ul id="list-ま"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-み" class="section-title">み</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'み');" title="Select all words in group み"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'み');" title="Deselect all words in group み"></button>
+              </div>
+              <ul id="list-み"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-む" class="section-title">む</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'む');" title="Select all words in group む"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'む');" title="Deselect all words in group む"></button>
+              </div>
+              <ul id="list-む"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-め" class="section-title">め</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'め');" title="Select all words in group め"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'め');" title="Deselect all words in group め"></button>
+              </div>
+              <ul id="list-め"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-も" class="section-title">も</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'も');" title="Select all words in group も"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'も');" title="Deselect all words in group も"></button>
+              </div>
+              <ul id="list-も"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-や" class="section-title">や</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'や');" title="Select all words in group や"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'や');" title="Deselect all words in group や"></button>
+              </div>
+              <ul id="list-や"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-ゆ" class="section-title">ゆ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ゆ');" title="Select all words in group ゆ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ゆ');" title="Deselect all words in group ゆ"></button>
+              </div>
+              <ul id="list-ゆ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-よ" class="section-title">よ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'よ');" title="Select all words in group よ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'よ');" title="Deselect all words in group よ"></button>
+              </div>
+              <ul id="list-よ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-ら" class="section-title">ら</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ら');" title="Select all words in group ら"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ら');" title="Deselect all words in group ら"></button>
+              </div>
+              <ul id="list-ら"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-り" class="section-title">り</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'り');" title="Select all words in group り"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'り');" title="Deselect all words in group り"></button>
+              </div>
+              <ul id="list-り"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-る" class="section-title">る</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'る');" title="Select all words in group る"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'る');" title="Deselect all words in group る"></button>
+              </div>
+              <ul id="list-る"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-れ" class="section-title">れ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'れ');" title="Select all words in group れ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'れ');" title="Deselect all words in group れ"></button>
+              </div>
+              <ul id="list-れ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-ろ" class="section-title">ろ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'ろ');" title="Select all words in group ろ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'ろ');" title="Deselect all words in group ろ"></button>
+              </div>
+              <ul id="list-ろ"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-わ" class="section-title">わ</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'わ');" title="Select all words in group わ"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'わ');" title="Deselect all words in group わ"></button>
+              </div>
+              <ul id="list-わ"></ul>
+            </div>
+
           </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-B" class="section-title">B</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'B');" title="Select all words in group B"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'B');" title="Deselect all words in group B"></button>
-            </div>
-            <ul id="list-B"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-C" class="section-title">C</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'C');" title="Select all words in group C"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'C');" title="Deselect all words in group C"></button>
-            </div>
-            <ul id="list-C"></ul>
-          </div>
+          <div id="english-japanese" class="clear dict-hidden">
+            <h2 id="en-main-title" class="section-title">English-Japanese Dictionary</h2>
 
-          <div class="dictionary-group">
-            <h2 id="section-D" class="section-title">D</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'D');" title="Select all words in group D"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'D');" title="Deselect all words in group D"></button>
-            </div>
-            <ul id="list-D"></ul>
-          </div>
+            <div class="columns-2 clear">
+              <div id="dict-index-en">
+                <h2 id="quick-nav-en">Dictionary Index</h2>
+                <p class="dict-desc">The Dictionary Index lets you quickly jump to a section or select/deselect all words.</p>
+                <ul class="dictionary-index dict-alpha text-block clear">
+                  <li><a href="#section-A">A</a></li>
+                  <li><a href="#section-B">B</a></li>
+                  <li><a href="#section-C">C</a></li>
+                  <li><a href="#section-D">D</a></li>
+                  <li><a href="#section-E">E</a></li>
+                  <li><a href="#section-F">F</a></li>
+                  <li><a href="#section-G">G</a></li>
+                  <li><a href="#section-H">H</a></li>
+                  <li><a href="#section-I">I</a></li>
+                  <li><a href="#section-J">J</a></li>
+                  <li><a href="#section-K">K</a></li>
+                  <li><a href="#section-L">L</a></li>
+                  <li><a href="#section-M">M</a></li>
+                  <li><a href="#section-N">N</a></li>
+                  <li><a href="#section-O">O</a></li>
+                  <li><a href="#section-P">P</a></li>
+                  <li><a href="#section-Q">Q</a></li>
+                  <li><a href="#section-R">R</a></li>
+                  <li><a href="#section-S">S</a></li>
+                  <li><a href="#section-T">T</a></li>
+                  <li><a href="#section-U">U</a></li>
+                  <li><a href="#section-V">V</a></li>
+                  <li><a href="#section-W">W</a></li>
+                  <li><a href="#section-X">X</a></li>
+                  <li><a href="#section-Y">Y</a></li>
+                  <li><a href="#section-Z">Z</a></li>
+                </ul>
 
-          <div class="dictionary-group">
-            <h2 id="section-E" class="section-title">E</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'E');" title="Select all words in group E"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'E');" title="Deselect all words in group E"></button>
-            </div>
-            <ul id="list-E"></ul>
-          </div>
+                <div class="group-selectors center">
+                  <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true);">Select All Words</button>
+                  <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false);">Deselect All Words</button>
+                </div>
+              </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-F" class="section-title">F</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'F');" title="Select all words in group F"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'F');" title="Deselect all words in group F"></button>
-            </div>
-            <ul id="list-F"></ul>
-          </div>
+              <div id="quick-search-en">
+                <h2 id="dict-search-en">Quick Search <span id="dict-search-hits-en"></span></h2>
+                <p class="dict-desc">Quick search helps you quickly find words you're looking for.</p>
+                <div class="dict-search-wrapper">
+                  <input class="dict-search" type="text" placeholder="Search..." oninput="Genki.appendix.jisho.search(this.value, 'en')">
+                  <div class="group-selectors center" style="visibility:hidden;">
+                    <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'search_en', true);" title="Select all search results"></button>
+                    <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'search_en', true);" title="Deselect all search results"></button>
+                  </div>
+                  <ul id="dict-search-results-en" class="dict-search-results"></ul>
+                </div>
+              </div>
+            </div><br><br>
 
-          <div class="dictionary-group">
-            <h2 id="section-G" class="section-title">G</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'G');" title="Select all words in group G"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'G');" title="Deselect all words in group G"></button>
+            <div class="dictionary-group">
+              <h2 id="section-A" class="section-title">A</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'A');" title="Select all words in group A"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'A');" title="Deselect all words in group A"></button>
+              </div>
+              <ul id="list-A"></ul>
             </div>
-            <ul id="list-G"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-H" class="section-title">H</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'H');" title="Select all words in group H"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'H');" title="Deselect all words in group H"></button>
+            <div class="dictionary-group">
+              <h2 id="section-B" class="section-title">B</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'B');" title="Select all words in group B"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'B');" title="Deselect all words in group B"></button>
+              </div>
+              <ul id="list-B"></ul>
             </div>
-            <ul id="list-H"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-I" class="section-title">I</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'I');" title="Select all words in group I"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'I');" title="Deselect all words in group I"></button>
+            <div class="dictionary-group">
+              <h2 id="section-C" class="section-title">C</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'C');" title="Select all words in group C"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'C');" title="Deselect all words in group C"></button>
+              </div>
+              <ul id="list-C"></ul>
             </div>
-            <ul id="list-I"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-J" class="section-title">J</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'J');" title="Select all words in group J"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'J');" title="Deselect all words in group J"></button>
+            <div class="dictionary-group">
+              <h2 id="section-D" class="section-title">D</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'D');" title="Select all words in group D"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'D');" title="Deselect all words in group D"></button>
+              </div>
+              <ul id="list-D"></ul>
             </div>
-            <ul id="list-J"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-K" class="section-title">K</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'K');" title="Select all words in group K"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'K');" title="Deselect all words in group K"></button>
+            <div class="dictionary-group">
+              <h2 id="section-E" class="section-title">E</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'E');" title="Select all words in group E"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'E');" title="Deselect all words in group E"></button>
+              </div>
+              <ul id="list-E"></ul>
             </div>
-            <ul id="list-K"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-L" class="section-title">L</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'L');" title="Select all words in group L"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'L');" title="Deselect all words in group L"></button>
+            <div class="dictionary-group">
+              <h2 id="section-F" class="section-title">F</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'F');" title="Select all words in group F"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'F');" title="Deselect all words in group F"></button>
+              </div>
+              <ul id="list-F"></ul>
             </div>
-            <ul id="list-L"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-M" class="section-title">M</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'M');" title="Select all words in group M"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'M');" title="Deselect all words in group M"></button>
+            <div class="dictionary-group">
+              <h2 id="section-G" class="section-title">G</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'G');" title="Select all words in group G"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'G');" title="Deselect all words in group G"></button>
+              </div>
+              <ul id="list-G"></ul>
             </div>
-            <ul id="list-M"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-N" class="section-title">N</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'N');" title="Select all words in group N"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'N');" title="Deselect all words in group N"></button>
+            <div class="dictionary-group">
+              <h2 id="section-H" class="section-title">H</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'H');" title="Select all words in group H"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'H');" title="Deselect all words in group H"></button>
+              </div>
+              <ul id="list-H"></ul>
             </div>
-            <ul id="list-N"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-O" class="section-title">O</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'O');" title="Select all words in group O"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'O');" title="Deselect all words in group O"></button>
+            <div class="dictionary-group">
+              <h2 id="section-I" class="section-title">I</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'I');" title="Select all words in group I"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'I');" title="Deselect all words in group I"></button>
+              </div>
+              <ul id="list-I"></ul>
             </div>
-            <ul id="list-O"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-P" class="section-title">P</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'P');" title="Select all words in group P"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'P');" title="Deselect all words in group P"></button>
+            <div class="dictionary-group">
+              <h2 id="section-J" class="section-title">J</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'J');" title="Select all words in group J"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'J');" title="Deselect all words in group J"></button>
+              </div>
+              <ul id="list-J"></ul>
             </div>
-            <ul id="list-P"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-Q" class="section-title">Q</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'Q');" title="Select all words in group Q"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'Q');" title="Deselect all words in group Q"></button>
+            <div class="dictionary-group">
+              <h2 id="section-K" class="section-title">K</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'K');" title="Select all words in group K"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'K');" title="Deselect all words in group K"></button>
+              </div>
+              <ul id="list-K"></ul>
             </div>
-            <ul id="list-Q"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-R" class="section-title">R</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'R');" title="Select all words in group R"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'R');" title="Deselect all words in group R"></button>
+            <div class="dictionary-group">
+              <h2 id="section-L" class="section-title">L</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'L');" title="Select all words in group L"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'L');" title="Deselect all words in group L"></button>
+              </div>
+              <ul id="list-L"></ul>
             </div>
-            <ul id="list-R"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-S" class="section-title">S</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'S');" title="Select all words in group S"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'S');" title="Deselect all words in group S"></button>
+            <div class="dictionary-group">
+              <h2 id="section-M" class="section-title">M</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'M');" title="Select all words in group M"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'M');" title="Deselect all words in group M"></button>
+              </div>
+              <ul id="list-M"></ul>
             </div>
-            <ul id="list-S"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-T" class="section-title">T</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'T');" title="Select all words in group T"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'T');" title="Deselect all words in group T"></button>
+            <div class="dictionary-group">
+              <h2 id="section-N" class="section-title">N</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'N');" title="Select all words in group N"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'N');" title="Deselect all words in group N"></button>
+              </div>
+              <ul id="list-N"></ul>
             </div>
-            <ul id="list-T"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-U" class="section-title">U</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'U');" title="Select all words in group U"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'U');" title="Deselect all words in group U"></button>
+            <div class="dictionary-group">
+              <h2 id="section-O" class="section-title">O</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'O');" title="Select all words in group O"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'O');" title="Deselect all words in group O"></button>
+              </div>
+              <ul id="list-O"></ul>
             </div>
-            <ul id="list-U"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-V" class="section-title">V</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'V');" title="Select all words in group V"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'V');" title="Deselect all words in group V"></button>
+            <div class="dictionary-group">
+              <h2 id="section-P" class="section-title">P</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'P');" title="Select all words in group P"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'P');" title="Deselect all words in group P"></button>
+              </div>
+              <ul id="list-P"></ul>
             </div>
-            <ul id="list-V"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-W" class="section-title">W</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'W');" title="Select all words in group W"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'W');" title="Deselect all words in group W"></button>
+            <div class="dictionary-group">
+              <h2 id="section-Q" class="section-title">Q</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'Q');" title="Select all words in group Q"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'Q');" title="Deselect all words in group Q"></button>
+              </div>
+              <ul id="list-Q"></ul>
             </div>
-            <ul id="list-W"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-X" class="section-title">X</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'X');" title="Select all words in group X"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'X');" title="Deselect all words in group X"></button>
+            <div class="dictionary-group">
+              <h2 id="section-R" class="section-title">R</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'R');" title="Select all words in group R"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'R');" title="Deselect all words in group R"></button>
+              </div>
+              <ul id="list-R"></ul>
             </div>
-            <ul id="list-X"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-Y" class="section-title">Y</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'Y');" title="Select all words in group Y"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'Y');" title="Deselect all words in group Y"></button>
+            <div class="dictionary-group">
+              <h2 id="section-S" class="section-title">S</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'S');" title="Select all words in group S"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'S');" title="Deselect all words in group S"></button>
+              </div>
+              <ul id="list-S"></ul>
             </div>
-            <ul id="list-Y"></ul>
-          </div>
 
-          <div class="dictionary-group">
-            <h2 id="section-Z" class="section-title">Z</h2>
-            <div class="group-selectors center">
-              <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'Z');" title="Select all words in group Z"></button>
-              <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'Z');" title="Deselect all words in group Z"></button>
+            <div class="dictionary-group">
+              <h2 id="section-T" class="section-title">T</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'T');" title="Select all words in group T"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'T');" title="Deselect all words in group T"></button>
+              </div>
+              <ul id="list-T"></ul>
             </div>
-            <ul id="list-Z"></ul>
+
+            <div class="dictionary-group">
+              <h2 id="section-U" class="section-title">U</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'U');" title="Select all words in group U"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'U');" title="Deselect all words in group U"></button>
+              </div>
+              <ul id="list-U"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-V" class="section-title">V</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'V');" title="Select all words in group V"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'V');" title="Deselect all words in group V"></button>
+              </div>
+              <ul id="list-V"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-W" class="section-title">W</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'W');" title="Select all words in group W"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'W');" title="Deselect all words in group W"></button>
+              </div>
+              <ul id="list-W"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-X" class="section-title">X</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'X');" title="Select all words in group X"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'X');" title="Deselect all words in group X"></button>
+              </div>
+              <ul id="list-X"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-Y" class="section-title">Y</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'Y');" title="Select all words in group Y"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'Y');" title="Deselect all words in group Y"></button>
+              </div>
+              <ul id="list-Y"></ul>
+            </div>
+
+            <div class="dictionary-group">
+              <h2 id="section-Z" class="section-title">Z</h2>
+              <div class="group-selectors center">
+                <button class="button select-all" onclick="Genki.appendix.jisho.selectAll(true, 'Z');" title="Select all words in group Z"></button>
+                <button class="button deselect-all" onclick="Genki.appendix.jisho.selectAll(false, 'Z');" title="Deselect all words in group Z"></button>
+              </div>
+              <ul id="list-Z"></ul>
+            </div>
+
           </div>
-          
         </div>
         
       </div>
