@@ -455,43 +455,246 @@ Genki.jisho = {
     { ja : '頑張る|がんばる', en : "to do one's best; to try hard", v : 'u', l : '会L13' }
   ],
   
-  'き' : [],
-  'く' : [],
-  'け' : [],
-  'こ' : [],
-  'さ' : [],
-  'し' : [],
-  'す' : [],
-  'せ' : [],
-  'そ' : [],
-  'た' : [],
-  'ち' : [],
-  'つ' : [],
-  'て' : [],
-  'と' : [],
-  'な' : [],
-  'に' : [],
-  'ぬ' : [],
-  'ね' : [],
-  'の' : [],
-  'は' : [],
-  'ひ' : [],
-  'ふ' : [],
-  'へ' : [],
-  'ほ' : [],
-  'ま' : [],
-  'み' : [],
-  'む' : [],
-  'め' : [],
-  'も' : [],
-  'や' : [],
-  'ゆ' : [],
-  'よ' : [],
-  'ら' : [],
-  'り' : [],
-  'る' : [],
-  'れ' : [],
-  'ろ' : [],
-  'わ' : []
+  'き' : [
+    { ja : '木|き', en : 'tree', l : '会L22' },
+    { ja : '黄色い|きいろい', en : 'yellow', l : '会L9(e)' },
+    { ja : '消える|きえる', en : '(something) goes off', v : 'ru', l : '会L18' },
+    { ja : '気温|きおん', en : 'temperature (weather)', l : '会L12' },
+    { ja : '着替える|きがえる', en : 'to change clothes', v :'ru', l : '会L21' },
+    { ja : '気が付く|きがつく', en : 'to notice', v : 'u', l : '会L21' },
+    { ja : '聞く|きく', en : 'to hear; to listen; to ask', v : 'u', l : '会L3, 会L5' },
+    { ja : '聞こえる|きこえる', en : 'to be audible', v : 'ru', l : '会L20' },
+    { ja : '季節|きせつ', en : 'season', l : '会L10' },
+    { ja : '北|きた', en : 'north', l : '会L6(e)' },
+    { ja : 'ギター', en : 'guitar', l : '会L9' },
+    { ja : '汚い|きたない', en : 'dirty', l : '会L16' },
+    { ja : '喫煙ルーム|きつえんルーム', en : 'smoking room', l : '会L15(e)' },
+    { ja : '喫茶店|きっさてん', en : 'cafe', l : '会L12' },
+    { ja : '切手|きって', en : 'postal stamps', l : '会L5, 会L5(e)' },
+    { ja : '切符|きっぷ', en : 'ticket', l : '会L5' },
+    { ja : '切符売り場|きっぷうりば', en : 'ticket vending area', l : '会L10(e)' },
+    { ja : '気に入る|きにいる', en : 'to find something agreeable', v : 'u', l : '会L23' },
+    { ja : '気にする|きにする', en : 'to worry', v : 'irr', l : '読L21-II' },
+    { ja : '昨日|きのう', en : 'yesterday', l : '会L4, 会L4(e)' },
+    { ja : '厳しい|きびしい', en : 'strict', l : '会L13' },
+    { ja : '気分が悪い|きぶんがわるい', en : 'to feel sick', l : '読L13-II, 会L18' },
+    { ja : '期末試験|きまつしけん', en : 'final examination', l : '会L16' },
+    { ja : '決まる|きまる', en : 'to be decided', v : 'ru', l : '会L19' },
+    { ja : '決める|きまえる', en : 'to decide', v : 'ru', l : '会L10' },
+    { ja : '気持ち|きもち', en : 'feeling', l : '読L23-II' },
+    { ja : '着物|きもの', en : 'kimono; Japanese tradition dress', l : '読L9-II, 会L13' },
+    { ja : 'キャッシュカード', en : 'bank card', l : '会L13(e)' },
+    { ja : 'キャンプ', en : 'camp', l : '会L11' },
+    { ja : '急行|きゅうこう', en : 'express', l : '会L10(e)' },
+    { ja : '九歳|きゅうさい', en : 'nine years old', l : '会L1(e)' },
+    { ja : '急に|きゅうに', en : 'suddenly', l : '読L14-II' },
+    { ja : '牛乳|ぎゅうにゅう', en : 'milk', l : '会L10' },
+    { ja : '九分|きゅうふん', en : 'nine mintues', l : '会L1(e)' },
+    { ja : '給料|きゅうりょう', en : 'salary', l : '会L17' },
+    { ja : '今日|きょう', en : 'today', l : '会L3, 会L4(e)' },
+    { ja : '教科書|きょうかしょ', en : 'textbook', l : '会L6' },
+    { ja : '教室|きょうしつ', en : 'classroom', l : '読L16-II' },
+    { ja : '今日中に|きょうじゅうに', en : 'by the end of today', l : '会L16' },
+    { ja : '兄弟|きょうだい', en : 'brothers and sisters', l : '会L7' },
+    { ja : '興味がある|きょうみがある', en : 'to be interested (in)', v : 'u', l : '会L12' },
+    { ja : '～行目|～ぎょうめ', en : 'line number...', l : '会L11(e)' },
+    { ja : '去年|きょねん', en : 'last year', l : '会L4(e), 会L9' },
+    { ja : '嫌い|きらい（な）', en : 'disgusted with; to dislike', l : '会L5' },
+    { ja : '切る|きる', en : 'to cut', v : 'u', l : '会L8, 会L17(e)' },
+    { ja : '着る|きる', en : 'to put on (clothes above your waist)', v : 'ru', l : '会L7' },
+    { ja : 'きれい（な）', en : 'beautiful; clean', l : '会L5' },
+    { ja : '～キロ', en : '...kilometers; ...kilograms', l : '会L13' },
+    { ja : '気をつける|きをつける', en : 'to be cautious/careful', v : 'ru', l : '会L15' },
+    { ja : '金色|きんいろ', en : 'gold', l : '会L9(e)' },
+    { ja : '銀色|ぎんいろ', en : 'silver', l : '会L9(e)' },
+    { ja : '禁煙車|きんえんしゃ', en : 'nonsmoking car', l : '会L10(e)' },
+    { ja : '禁煙ルーム|きんえんルーム', en : 'nonsmoking room', l : '会L15(e)' },
+    { ja : '金額|きんがく', en : 'amount', l : '会L13(e)' },
+    { ja : '銀行|ぎんこう', en : 'bank', l : '会L2' },
+    { ja : '近所|きんじょ', en : 'neighborhood', l : '読L11-II' },
+    { ja : '緊張する|きんちょうする', en : 'to get nervous', v : 'irr', l : '会L12' },
+    { ja : '金髪|きんぱつ', en : 'blonde hair', l : '会L9(e)' },
+    { ja : '金曜日|きんようび', en : 'Friday', l : '会L4, 会L4(e)' }
+  ],
+  
+  'く' : [
+    { ja : '空気|くうき', en : 'air', l : '会L8' },
+    { ja : '空港|くうこう', en : 'airport', l : '読L13-III, 会L20' },
+    { ja : '九月|くがつ', en : 'September', l : '会L4(e)' },
+    { ja : '九時|くじ', en : "nine o'clock", l : '会L1(e)' },
+    { ja : 'くじら', en : 'whale', l : '読L15-II' },
+    { ja : '薬|くすり', en : 'medicine', l : '会L9' },
+    { ja : '薬を飲む|くすりをのむ', en : 'to take medicine', v : 'u', l : '会L9' },
+    { ja : 'くだけた言い方|くだけたいいかた', en : 'colloguial exp.', l : '会L11(e)' },
+    { ja : 'ください', en : 'please give me...', l : '会L2' },
+    { ja : '下さる|くださる', en : 'honorific exp. for くれる', v : 'u', l : '会L19' },
+    { ja : '口|くち', en : 'mouth', l : '会L7, 会L7(e)' },
+    { ja : '靴|くつ', en : 'shoes', l : '会L2' },
+    { ja : '靴下|くつした', en : 'socks', l : '会L23' },
+    { ja : 'クッション', en : 'cushion', l : '会L18' },
+    { ja : '国|くに', en : 'country; place of origin', l : '会L7' },
+    { ja : '首|くび', en : 'neck', l : '会L7(e)' },
+    { ja : '雲|くも', en : 'cloud', l : '読L17-II' },
+    { ja : '曇り|くもり', en : 'cloudy weather', l : '会L12' },
+    { ja : '暗い|くらい', en : 'dark', l : '会L18' },
+    { ja : '～ぐらい', en : 'amount (approximate measurement)', l : '会L4' },
+    { ja : 'クラス', en : 'class', l : '会L4' },
+    { ja : 'グラス', en : 'tumbler; glass', l : '会L14' },
+    { ja : 'クラブ', en : 'night club', l : '会L15' },
+    { ja : '比べる|くらべる', en : 'to compare', v : 'ru', l : '読L23-II' },
+    { ja : 'グリーン', en : 'green', l : '会L9(e)' },
+    { ja : 'クリスマス', en : 'Christmas', l : '会L14' },
+    { ja : '来る|くる', en : 'to come', v : 'irr', l : '会L3' },
+    { ja : '車|くるま', en : 'car', l : '会L7' },
+    { ja : 'グレー', en : 'gray', l : '会L9(e)' },
+    { ja : 'クレジットカード', en : 'credit card', l : '会L10, 会L13(e)' },
+    { ja : 'くれる', en : 'to give (me)', v : 'ru', l : '会L14' },
+    { ja : '黒い|くろい', en : 'black', l : '会L9, 会L9(e)' },
+    { ja : '～君|～くん', en : 'Mr.Ms...(casual)', l : '会L14' }
+  ],
+  
+  'け' : [
+    
+  ],
+  
+  'こ' : [
+    
+  ],
+  
+  'さ' : [
+    
+  ],
+  
+  'し' : [
+    
+  ],
+  
+  'す' : [
+    
+  ],
+  
+  'せ' : [
+    
+  ],
+  
+  'そ' : [
+    
+  ],
+  
+  'た' : [
+    
+  ],
+  
+  'ち' : [
+    
+  ],
+  
+  'つ' : [
+    
+  ],
+  
+  'て' : [
+    
+  ],
+  
+  'と' : [
+    
+  ],
+  
+  'な' : [
+    
+  ],
+  
+  'に' : [
+    
+  ],
+  
+  'ぬ' : [
+    
+  ],
+  
+  'ね' : [
+    
+  ],
+  
+  'の' : [
+    
+  ],
+  
+  'は' : [
+    
+  ],
+  
+  'ひ' : [
+    
+  ],
+  
+  'ふ' : [
+    
+  ],
+  
+  'へ' : [
+    
+  ],
+  
+  'ほ' : [
+    
+  ],
+  
+  'ま' : [
+    
+  ],
+  
+  'み' : [
+    
+  ],
+  
+  'む' : [
+    
+  ],
+  
+  'め' : [
+    
+  ],
+  
+  'も' : [
+    
+  ],
+  
+  'や' : [
+    
+  ],
+  
+  'ゆ' : [
+    
+  ],
+  
+  'よ' : [
+    
+  ],
+  
+  'ら' : [
+    
+  ],
+  
+  'り' : [
+    
+  ],
+  
+  'る' : [
+    
+  ],
+  
+  'れ' : [
+    
+  ],
+  
+  'ろ' : [
+    
+  ],
+  
+  'わ' : [
+    
+  ]
   
 };
