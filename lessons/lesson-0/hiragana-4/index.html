@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Practice: Hiragana | Genki Study Resources</title>
+    <meta name="title" content="Practice: Hiragana | Genki Study Resources">
+    <meta name="twitter:title" content="Practice: Hiragana | Genki Study Resources">
+    <meta property="og:title" content="Practice: Hiragana | Genki Study Resources">
+    <meta name="description" content="Identify all the Hiragana + combos by choosing the correct romaji.">
+    <meta property="og:description" content="Identify all the Hiragana + combos by choosing the correct romaji.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki I, page 24, page 25, page 26, dakuten, handakuten, japanese, quizzes, exercises" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-0/hiragana-4/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../../" id="home-link">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="exercise" class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">Github Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/javascript.min.js"></script>
+    <script>(function() {
+      var kana = ['あ|a', 'い|i', 'う|u', 'え|e', 'お|o', 'か|ka', 'き|ki', 'く|ku', 'け|ke', 'こ|ko', 'さ|sa', 'し|shi', 'す|su', 'せ|se', 'そ|so', 'た|ta', 'ち|chi', 'つ|tsu', 'て|te', 'と|to', 'な|na', 'に|ni', 'ぬ|nu', 'ね|ne', 'の|no', 'は|ha', 'ひ|hi', 'ふ|fu', 'へ|he', 'ほ|ho', 'ま|ma', 'み|mi', 'む|mu', 'め|me', 'も|mo', 'や|ya', 'ゆ|yu', 'よ|yo', 'ら|ra', 'り|ri', 'る|ru', 'れ|re', 'ろ|ro', 'わ|wa', 'を|wo', 'ん|n', 'が|ga', 'ぎ|gi', 'ぐ|gu', 'げ|ge', 'ご|go', 'ざ|za', 'じ|ji', 'ず|zu', 'ぜ|ze', 'ぞ|zo', 'だ|da', 'ぢ|di', 'づ|du', 'で|de', 'ど|do', 'ば|ba', 'び|bi', 'ぶ|bu', 'べ|be', 'ぼ|bo', 'ぱ|pa', 'ぴ|pi', 'ぷ|pu', 'ぺ|pe', 'ぽ|po', 'きゃ|kya', 'きゅ|kyu', 'きょ|kyo', 'ぎゃ|gya', 'ぎゅ|gyu', 'ぎょ|gyo', 'しゃ|sha', 'しゅ|shu', 'しょ|sho', 'じゃ|ja', 'じゅ|ju', 'じょ|jo', 'ちゃ|cha', 'ちゅ|chu', 'ちょ|cho', 'にゃ|nya', 'にゅ|nyu', 'にょ|nyo', 'ひゃ|hya', 'ひゅ|hyu', 'ひょ|hyo', 'びゃ|bya', 'びゅ|byu', 'びょ|byo', 'ぴゃ|pya', 'ぴゅ|pyu', 'ぴょ|pyo', 'みゃ|mya', 'みゅ|myu', 'みょ|myo', 'りゃ|rya', 'りゅ|ryu', 'りょ|ryo'],
+      kanaClone = kana.slice(), // used for assigning random answers
+      quizlet = [],
+      i = 0,
+      j,
+      k,
+      answers,
+      data,
+      n;
+        
+      // randomly setup questions
+      while (kana.length) {
+        n = Math.floor(Math.random() * kana.length);
+        data = kana[n].split('|');
+        
+        quizlet[i] = {
+          question : data[0],
+          answers : ['A' + data[1]]
+        }
+        
+        // randomly assign answers
+        answers = kanaClone.slice();
+        answers.splice(answers.indexOf(kana[n]), 1);
+        j = 3;
+        
+        while (j --> 0) {
+          k = Math.floor(Math.random() * answers.length);
+          
+          quizlet[i].answers.push(answers[k].split('|')[1]);
+          
+          answers.splice(k, 1);
+        }
+        
+        // remove the assigned kana
+        kana.splice(n, 1);
+        i++;
+      }
+      
+      // launch exercise
+      Genki.generateQuiz({
+        type : 'multi',
+        info : 'Identify all the Hiragana + combos by choosing the correct romaji.<br>Note: Answer order is randomized, so the quiz will always be different each time you take it.',
+
+        quizlet : quizlet
+      });
+    }());</script>
+  </body>
+</html>

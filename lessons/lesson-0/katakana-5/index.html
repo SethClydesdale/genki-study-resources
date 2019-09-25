@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Practice: Katakana | Genki Study Resources</title>
+    <meta name="title" content="Practice: Katakana | Genki Study Resources">
+    <meta name="twitter:title" content="Practice: Katakana | Genki Study Resources">
+    <meta property="og:title" content="Practice: Katakana | Genki Study Resources">
+    <meta name="description" content="Identify all the Katakana + combos by choosing the correct romaji.">
+    <meta property="og:description" content="Identify all the Katakana + combos by choosing the correct romaji.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki I, page 28, page 29, page 30, dakuten, handakuten, japanese, quizzes, exercises" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons/lesson-0/katakana-5/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../../" id="home-link">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="exercise" class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">Github Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/javascript.min.js"></script>
+    <script>(function() {
+      var kana = ['ア|a', 'イ|i', 'ウ|u', 'エ|e', 'オ|o', 'カ|ka', 'キ|ki', 'ク|ku', 'ケ|ke', 'コ|ko', 'サ|sa', 'シ|shi', 'ス|su', 'セ|se', 'ソ|so', 'タ|ta', 'チ|chi', 'ツ|tsu', 'テ|te', 'ト|to', 'ナ|na', 'ニ|ni', 'ヌ|nu', 'ネ|ne', 'ノ|no', 'ハ|ha', 'ヒ|hi', 'フ|fu', 'ヘ|he', 'ホ|ho', 'マ|ma', 'ミ|mi', 'ム|mu', 'メ|me', 'モ|mo', 'ヤ|ya', 'ユ|yu', 'ヨ|yo', 'ラ|ra', 'リ|ri', 'ル|ru', 'レ|re', 'ロ|ro', 'ワ|wa', 'ヲ|wo', 'ン|n', 'ガ|ga', 'ギ|gi', 'グ|gu', 'ゲ|ge', 'ゴ|go', 'ザ|za', 'ジ|ji', 'ズ|zu', 'ゼ|ze', 'ゾ|zo', 'ダ|da', 'ヂ|di', 'ヅ|du', 'デ|de', 'ド|do', 'バ|ba', 'ビ|bi', 'ブ|bu', 'ベ|be', 'ボ|bo', 'パ|pa', 'ピ|pi', 'プ|pu', 'ペ|pe', 'ポ|po', 'キャ|kya', 'キュ|kyu', 'キョ|kyo', 'ギャ|gya', 'ギュ|gyu', 'ギョ|gyo', 'シャ|sha', 'シュ|shu', 'ショ|sho', 'ジャ|ja', 'ジュ|ju', 'ジョ|jo', 'チャ|cha', 'チュ|chu', 'チョ|cho', 'ニャ|nya', 'ニュ|nyu', 'ニョ|nyo', 'ヒャ|hya', 'ヒュ|hyu', 'ヒョ|hyo', 'ビャ|bya', 'ビュ|byu', 'ビョ|byo', 'ピャ|pya', 'ピュ|pyu', 'ピョ|pyo', 'ミャ|mya', 'ミュ|myu', 'ミョ|myo', 'リャ|rya', 'リュ|ryu', 'リョ|ryo', 'ウィ|wi', 'ウェ|we', 'ウォ|wo', 'シェ|she', 'ジェ|je', 'チェ|che', 'ファ|fa', 'フィ|fi', 'フェ|fe', 'フォ|fo', 'ティ|ti', 'ディ|di', 'デュ|dyu'],
+      kanaClone = kana.slice(), // used for assigning random answers
+      quizlet = [],
+      i = 0,
+      j,
+      k,
+      answers,
+      currentAnswer,
+      randAnswer,
+      data,
+      n;
+        
+      // randomly setup questions
+      while (kana.length) {
+        n = Math.floor(Math.random() * kana.length);
+        data = kana[n].split('|');
+        currentAnswer = data[1];
+        
+        quizlet[i] = {
+          question : data[0],
+          answers : ['A' + currentAnswer]
+        }
+        
+        // randomly assign answers
+        answers = kanaClone.slice();
+        answers.splice(answers.indexOf(kana[n]), 1);
+        j = 3;
+        
+        while (j --> 0) {
+          k = Math.floor(Math.random() * answers.length);
+          randAnswer = answers[k].split('|')[1];
+          
+          if (randAnswer == currentAnswer) { // prevent identical answers
+            j++; // increment and trying another (identical will be spliced)
+            
+          } else {
+            quizlet[i].answers.push(randAnswer);
+          }
+          
+          answers.splice(k, 1);
+        }
+        
+        // remove the assigned kana
+        kana.splice(n, 1);
+        i++;
+      }
+      
+      // launch exercise
+      Genki.generateQuiz({
+        type : 'multi',
+        info : 'Identify all the Katakana + combos by choosing the correct romaji.<br>Note: Answer order is randomized, so the quiz will always be different each time you take it.',
+
+        quizlet : quizlet
+      });
+    }());</script>
+  </body>
+</html>

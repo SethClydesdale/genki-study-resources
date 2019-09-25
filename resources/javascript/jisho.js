@@ -554,7 +554,35 @@ Genki.jisho = {
   ],
   
   'け' : [
-    
+    { ja : '計画を立てる|けいかくをたてる', en : 'to make a plan', v : 'ru', l : '会L22' },
+    { ja : '経験|けいけん', en : 'experience', l : '読L13-II, 会L15' },
+    { ja : '敬語|けいご', en : 'honorific language', l : '会L19' },
+    { ja : '経済|けいざい', en : 'economics', l : '会L1, 会L2' },
+    { ja : '警察|けいさつ', en : 'police; police station', l : '会L21' },
+    { ja : '警察官|けいさつかん', en : 'police officer', l : '会L11' },
+    { ja : '芸術|げいじゅつ', en : 'art', l : '読L17-II' },
+    { ja : 'ケーキ', en : 'cake', l : '会L10' },
+    { ja : 'ゲーム', en : 'game', l : '会L7' },
+    { ja : 'けが', en : 'injury', l : '会L12(e)' },
+    { ja : '外科|げか', en : 'surgeon', l : '会L12(e)' },
+    { ja : '今朝|けさ', en : 'this morning', l : '会L8' },
+    { ja : '景色|けしき', en : 'scenery', l : '読L15-II' },
+    { ja : '消しゴム|けしゴム', en : 'eraser', l : '会L2(e)' },
+    { ja : '化粧する|けしょうする', en : 'to put makeup on', v : 'irr', l : '会L17' },
+    { ja : '消す|けす', en : 'to turn off; to erase', v : 'u', l : '会L14' },
+    { ja : '結果|けっか', en : 'result', l : '読L23-II' },
+    { ja : '結構です|けっこうです', en : "That would be fine.; That wouldn't be necessary.", l : '会L6' },
+    { ja : '結婚式|けっこんしき', en : 'wedding', l : '会L15' },
+    { ja : '結婚する|けっこんする', en : 'to get married', v : 'irr', l : '会L7' },
+    { ja : '月曜日|げつようび', en : 'Monday', l : '会L4, 会L4(e)' },
+    { ja : '～けど', en : '...,but; ...,so', l : '会L15' },
+    { ja : 'ける', en : 'to kick', v : 'u', l : '会L21' },
+    { ja : 'かんかする', en : 'to have a fight; to quarrel', v : 'irr', l : '会L11' },
+    { ja : '元気|げんき（な）', en : 'healthy; energetic', l : '会L5' },
+    { ja : '元気がない|げんきがない', en : "don't look well", l : '会L12' },
+    { ja : '元気でね|げんきでね', en : 'Take care of yourself.', l : '会L23' },
+    { ja : '研究|けんきゅう', en : 'research', l : '会L16' },
+    { ja : '原爆|げんばく', en : 'atomic bomb', l : '読L15-II' }
   ],
   
   'こ' : [
