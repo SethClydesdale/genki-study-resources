@@ -454,7 +454,7 @@
                   def = document.querySelector('#japanese-english [data-def="' + sel[i] + '"]');
                   furi = def.querySelector('.def-furi i');
 
-                  quizlet[def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>/, '')] = (furi ? furi.innerHTML : '');
+                  quizlet[def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>|\(.*?\)|（.*?）|～|~/g, '')] = (furi ? furi.innerHTML : '');
                 }
                 
                 Genki.generateQuiz({
@@ -476,7 +476,7 @@
                   (i == n ? '</div><div>' : '')+ // changes columns
                   '<div class="problem">'+
                     def.querySelector('.def-en').innerHTML + '<br>'+
-                    ('{' + def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>/, '') + (furi ? '|' + furi.innerHTML + '|answer' : '') + '}').replace(/（(.*?)）/g, '%($1/)').replace(/(～|~)/g, '%($1/)')+
+                    ('{' + def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>/, '') + (furi ? '|' + furi.innerHTML + '|answer' : '') + '}').replace(/\((.*?)\)/g, '%($1/)').replace(/（(.*?)）/g, '%($1/)').replace(/(～|~)/g, '%($1/)')+
                   '</div>'; 
                 }
                 
