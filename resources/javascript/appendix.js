@@ -476,7 +476,9 @@
                   (i == n ? '</div><div>' : '')+ // changes columns
                   '<div class="problem">'+
                     def.querySelector('.def-en').innerHTML + '<br>'+
-                    ('{' + def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>/, '') + (furi ? '|' + furi.innerHTML + '|answer' : '') + '}').replace(/\((.*?)\)/g, '%($1/)').replace(/（(.*?)）/g, '%($1/)').replace(/(～|~)/g, '%($1/)')+
+                    ('{' + def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>/, '') + (furi ? '|' + furi.innerHTML + '|answer' : '') + '}').replace(/\((.*?)\)/g, function (Match, $1) {
+                      return '%(' + $1 + (/\//.test($1) ? '' : '/') + ')';
+                    }).replace(/（(.*?)）/g, '%($1/)').replace(/(～|~)/g, '%($1/)')+
                   '</div>'; 
                 }
                 
