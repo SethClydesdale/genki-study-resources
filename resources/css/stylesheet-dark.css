@@ -39,7 +39,7 @@ code, input[type="text"], input[type="number"], textarea, select, .table td, .wr
   background-color:#1A1A1A;
 }
 
-.quiz-column-title, .verb-quiz .quiz-answer-zone:not(:empty), .quiz-item, #exercise-list, .text-block, #result-list, #genki-modal-body, .question-block {
+.quiz-column-title, .verb-quiz .quiz-answer-zone:not(:empty), .quiz-item, #exercise-list, .text-block, #study-tool-ui .item-row.question-row, #result-list, #genki-modal-body, .question-block {
   background-color:#222;
 }
 

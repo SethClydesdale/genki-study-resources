@@ -1370,6 +1370,7 @@ p.section-desc {
 
 /* custom quiz styles */
 #study-tool-ui .item-row.question-row {
+  background:#EEE;
   border:1px solid #CCC;
   padding:6px;
   margin:10px;
