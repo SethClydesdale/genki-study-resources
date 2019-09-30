@@ -1056,7 +1056,36 @@ Genki.jisho = {
   ],
   
   'ち' : [
-    
+    { ja : '小さい|ちいさい', en : 'small', l : '会L5' },
+    { ja : 'チェックアウト(する)', en : 'checking out', v : 'irr', l : '会L15(e)' },
+    { ja : 'チェックイン(する)', en : 'checking in', v : 'irr', l : '会L15(e)' },
+    { ja : '地下|ちか', en : 'underground', l : '読L15-II' },
+    { ja : '近い|ちかい', en : 'close; near', l : '会L13' },
+    { ja : '違い|ちがい', en : 'difference', l : '会L17' },
+    { ja : '違う|ちがう', en : 'to be different; wrong', v : 'u', l : '読L16-II, 会L23' },
+    { ja : '近く|ちかく', en : 'near; nearby', l : '会L4' },
+    { ja : '地下鉄|ちかてつ', en : 'subway', l : '会L10' },
+    { ja : '力仕事|ちからしごと', en : 'physical labor such as construction', l : '読L18-III' },
+    { ja : 'ちかん', en : 'sexual offender; pervert', l : '会L21' },
+    { ja : 'チケット', en : 'ticket', l : '会L14' },
+    { ja : '遅刻する|ちこくする', en : 'to be late (for an appointment)', v : 'irr', l : '会L11' },
+    { ja : '地図|ちず', en : 'map', l : '会L15' },
+    { ja : '父|ちち', en : '(my) father', l : '会L7' },
+    { ja : '父親|ちちおや', en : 'father', l : '読L14-II' },
+    { ja : '茶|ちゃ', en : 'green tea', l : '会L3' },
+    { ja : '茶色い|ちゃいろい', en : 'brown', l : '会L9(e)' },
+    { ja : '茶店|ちゃみせ', en : 'teahouse', l : '読L20-II' },
+    { ja : '～中|～ちゅう', en : 'while...', l : '読L19-II' },
+    { ja : '注意する|ちゅういする', en : 'to watch out; to give warning', v : 'irr', l : '読L15-II, 会L19' },
+    { ja : '中学生|ちゅうがくせい', en : 'junior high school student', l : '会L19' },
+    { ja : '中国|ちゅうごく', en : 'China', l : '会L1, 会L2' },
+    { ja : '注射|ちゅうしゃ', en : 'injection', l : '会L12(e)' },
+    { ja : '注文する|ちゅうもんする', en : 'to place an order', v : 'irr', l : '会L18' },
+    { ja : '調査|ちょうさ', en : 'survey', l : '読L23-II' },
+    { ja : 'ちょうど', en : 'exactly', l : '会L14' },
+    { ja : '貯金|ちょきん', en : 'savings', l : '読L18-II' },
+    { ja : 'チョコレート', en : 'chocolate', l : '会L14' },
+    { ja : 'ちょっと', en : 'a little', l : '会L3' }
   ],
   
   'つ' : [
