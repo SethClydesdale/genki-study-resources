@@ -1089,11 +1089,42 @@ Genki.jisho = {
   ],
   
   'つ' : [
-    
+    { ja : '一日|ついたち', en : 'the first day of a month', l : '会L4(4)' },
+    { ja : 'ツイン', en : 'twin room', l : '会L15(e)' },
+    { ja : '通帳|つうちょう', en : 'passbook', l : '会L13(e)' },
+    { ja : '通帳記入|つうちょうきにゅう', en : 'passbook update', l : '会L13(e)' },
+    { ja : '使う|つかう', en : 'to use', v : 'u', l : '会L6' },
+    { ja : '捕まる|つかまる', en : 'to be arrested; to be caught', v : 'u', l : '会L21' },
+    { ja : '疲れている|つかれている', en : 'to be tired', l : '読L8-II' },
+    { ja : '疲れる|つかれる', en : 'to get tired', v : 'ru', l : '会L11' },
+    { ja : '月|つき', en : 'moon', l : '会L20' },
+    { ja : '～付|～つき', en : 'with...', l : '会L15(e)' },
+    { ja : '次|つぎ', en : 'next', l : '会L6' },
+    { ja : '付き合う|つきあう', en : 'to date (someone); to keep company', v : 'u', l : '読L14-II, 会L15' },
+    { ja : '次に|つぎに', en : 'secondly', l : '読L8-II' },
+    { ja : '次は～|つぎは～', en : 'next (stop),...', l : '会L10(e)' },
+    { ja : '着く|つく', en : 'to arrive', v : 'u', l : '読L13-III, 会L15' },
+    { ja : 'つく', en : '(something) turns on', v : 'u', l : '会L18' },
+    { ja : '机|つくえ', en : 'desk', l : '会L2(e), 会L4' },
+    { ja : '作る|つくる', en : 'to make', v : 'u', l : '会L8' },
+    { ja : 'つける', en : 'to turn on', v : 'ru', l : '会L6' },
+    { ja : '都合が悪い|つごうがわるい', en : 'inconvenient; to have a scheduling conflict', l : '会L12' },
+    { ja : '伝える|つたえる', en : 'to convey (message)', v : 'ru', l : '会L20' },
+    { ja : '続く|つづく', en : 'to continue', v : 'u', l : '読L16-II' },
+    { ja : '続ける|つづける', en : 'to continue', v : 'ru', l : '会L21' },
+    { ja : '包む|つつむ', en : 'to wrap; to cover', v : 'u', l : '会L21' },
+    { ja : '勤める|つとめる', en : 'to work for', v : 'ru', l : '会L7' },
+    { ja : 'つまらない', en : 'boring', l : '会L5' },
+    { ja : '冷たい|つめたい', en : 'cold (things/people)', l : '会L10' },
+    { ja : '強い|つよい', en : 'strong', l : '会L17' },
+    { ja : 'つり', en : 'fishing', l : '会L11' },
+    { ja : '連れていく|つれていく', en : 'to take (someone) to (a place)', v : 'u', l : '会L16' },
+    { ja : '連れて帰る|つれてかえる', en : 'to bring (a person) back', v : 'u', l : '読L12-II' },
+    { ja : '連れてくる|つれてくる', en : 'to bring (a person)', v : 'irr', l : '会L6' }
   ],
   
   'て' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'と' : [
