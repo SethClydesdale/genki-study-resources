@@ -125,6 +125,9 @@
           }
         }
         
+        // append final group
+        document.getElementById('list-' + group).appendChild(frag);
+        
         // restore preferences
         Genki.appendix.jisho.restoreSettings();
         
