@@ -1238,11 +1238,43 @@ Genki.jisho = {
   ],
   
   'な' : [
-    { ja : '|', en : '', l : '会L読L-II' },
+    { ja : '内科|ないか', en : 'physician', l : '会L12(e)' },
+    { ja : '直す|なおす', en : 'to correct; to fix', v : 'u', l : '会L16' },
+    { ja : '中|なか', en : 'inside', l : '会L4' },
+    { ja : '長い|ながい', en : 'long', l : '会L7' },
+    { ja : '長い間|ながいあいだ', en : 'long time', l : '読L21-II' },
+    { ja : '仲がいい|なかがいい', en : 'be on good/close terms; to get along well', l : '会L19' },
+    { ja : '泣く|なく', en : 'to cry', v : 'u', l : '読L12-II, 会L13' },
+    { ja : 'なくす', en : 'to lose', v : 'u', l : '会L12' },
+    { ja : 'なくなる', en : 'to be lost; to disappear', v : 'u', l : '会L23' },
+    { ja : '殴る|なぐる', en : 'to strike; to hit; to punch', v : 'u', l : '会L21' },
+    { ja : 'なさる', en : 'honorific exp. for する', v : 'u', l : '会L19' },
+    { ja : 'なぜ', en : 'why', l : '会L19' },
+    { ja : '夏|なつ', en : 'summer', l : '会L8' },
+    { ja : 'なつかしい', en : 'to miss; to long for', l : '読L19-II' },
+    { ja : '～など', en : 'and so forth', l : '読L12-II' },
+    { ja : '七歳|ななさい', en : 'seven years old', l : '会L1(e)' },
+    { ja : '七つ|ななつ', en : 'seven', l : '会L9' },
+    { ja : '七分|ななふん', en : 'seven minutes', l : '会L1(e)' },
+    { ja : '何か|なにか', en : 'something', l : '会L8' },
+    { ja : '何も|なにも', en : 'not...anything (with neg. verbs)', l : '会L7' },
+    { ja : '七日|なのか', en : 'the seventh day of a month; seven days', l : '会L4(e), 会L13' },
+    { ja : 'なべ', en : 'pot', l : '読L13-II' },
+    { ja : '名前|なまえ', en : 'name', l : '会L1' },
+    { ja : '名前を付ける|なまえをつける', en : 'to name', v : 'ru', l : '読L17-II' },
+    { ja : '怠け者|なまけもの', en : 'lazy person', l : '会L19' },
+    { ja : '悩み|なやみ', en : 'worry', l : '読L14-II, 会L19' },
+    { ja : '習う|ならう', en : 'to learn', v : 'u', l : '会L11' },
+    { ja : 'なる', en : 'to become', v : 'u', l : '会L10' },
+    { ja : '慣れる|なれる', en : 'to get used to...', v : 'ru', l : '会L17' },
+    { ja : '何|(なん/なに)', en : 'what', l : '会L1' },
+    { ja : 'なんだか', en : 'somehow', l : '読L22-II' },
+    { ja : 'なんでも', en : 'anything; everything', l : '読L13-II' },
+    { ja : '何度も|なんども', en : 'many times', l : '読L17-II, 会L22' }
   ],
   
   'に' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'ぬ' : [
