@@ -1274,15 +1274,49 @@ Genki.jisho = {
   ],
   
   'に' : [
-    { ja : '|', en : '', l : '会L読L-II' },
+    { ja : '似合う|にあう', en : 'to look good (on somebody)', v : 'u', l : '会L14' },
+    { ja : '二か月前|にかげつまえ', en : 'two months ago', l : '会L4(e)' },
+    { ja : '二月|にがつ', en : 'February', l : '会L4(e)' },
+    { ja : 'にぎやか（な）', en : 'lively', l : '会L5' },
+    { ja : '肉|にく', en : 'meat', l : '会L2' },
+    { ja : '～に比べて|～にくらべて', en : 'compared with...', l : '会L17' },
+    { ja : '逃げる|にげる', en : 'to run away; to escape', v : 'ru', l : '読L22-II' },
+    { ja : 'にこにこする', en : 'to smile', v : 'irr', l : '読L20-II' },
+    { ja : '二歳|にさい', en : 'two years old', l : '会L1(e)' },
+    { ja : '二三日|にさんにち', en : 'for two to three days', l : '会L12' },
+    { ja : '西|にし', en : 'west', l : '会L6(e)' },
+    { ja : '二時|にじ', en : "two o'clock", l : '会L1(e)' },
+    { ja : '二十分|にじ(ゅ)っぷん', en : 'twenty minutes', l : '会L1(e)' },
+    { ja : '二時半|にじはん', en : 'half past two', l : '会L1' },
+    { ja : '二週間前|にしゅうかんまえ', en : 'two weeks ago', l : '会L4(e)' },
+    { ja : '二十四日|にじゅうよっか', en : 'the twenty-fourth day of a month', l : '会L4(e)' },
+    { ja : '日曜日|にちようび', en : 'Sunday', l : '会L3, 会L4(e)' },
+    { ja : '～について', en : 'about...; concerning...', l : '会L8' },
+    { ja : '日記|にっき', en : 'diary', l : '読L9-II, 会L18' },
+    { ja : '二分|にふん', en : 'two minutes', l : '会L1(e)' },
+    { ja : '日本|にほん', en : 'Japan', l : '会L1' },
+    { ja : '日本語|にほんご', en : 'Japanese language', l : '会L1' },
+    { ja : '日本人|にほんじん', en : 'Japanese people', l : '会L1' },
+    { ja : '荷物|にもつ', en : 'baggage', l : '会L6' },
+    { ja : 'にやにやする', en : 'to grin', v : 'irr', l : '読L13-II' },
+    { ja : '入院する|にゅういんする', en : 'to be hospitalized', v : 'irr', l : '読L21-II' },
+    { ja : 'ニュース', en : 'news', l : '会L17' },
+    { ja : '～によって', en : 'depending on...', l : '読L23-II' },
+    { ja : '～によると', en : 'according to...', l : '会L17' },
+    { ja : '庭|にわ', en : 'garden', l : '会L15' },
+    { ja : '～人|～にん', en : 'counter for people', l : '会L7' },
+    { ja : '人気がある|にんきがある', en : 'to be popular', v : 'u', l : '会L9' },
+    { ja : '人間|にんげん', en : 'human being', l : '読L23-II' }
   ],
   
   'ぬ' : [
-    
+    { ja : 'ぬいぐるみ', en : 'stuffed animal (e.g. teddy bear)', l : '会L14' },
+    { ja : '脱ぐ|ぬぐ', en : 'to take off (clothes)', v : 'u', l : '会L17' },
+    { ja : '盗む|ぬすむ', en : 'to steal; to rob', v : 'u', l : '会L21' }
   ],
   
   'ね' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'の' : [
