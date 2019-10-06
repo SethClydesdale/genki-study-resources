@@ -1316,15 +1316,38 @@ Genki.jisho = {
   ],
   
   'ね' : [
-    { ja : '|', en : '', l : '会L読L-II' },
+    { ja : '願い|ねがい', en : 'wish', l : '読L12-II' },
+    { ja : 'ネクタイ', en : 'necktie', l : '会L14' },
+    { ja : '猫|ねこ', en : 'cat', l : '会L4' },
+    { ja : '値段|ねだん', en : 'price', l : '読L20-II' },
+    { ja : '熱がある|ねつがある', en : 'to have a fever', v : 'u', l : '会L12' },
+    { ja : '眠い|ねむい', en : 'sleepy', l : '会L10' },
+    { ja : '寝る|ねる', en : 'to sleep; to go to sleep', v : 'ru', l : '会L3' },
+    { ja : '～年|～ねん', en : '...years', l : '会L10' },
+    { ja : '～年間|～ねんかん', en : 'for...years', l : '読L14-II' },
+    { ja : '～年生|～ねんせい', en : '...year student', l : '会L1' }
   ],
   
   'の' : [
-    
+    { ja : 'ノート', en : 'notebook', l : '会L2' },
+    { ja : '残す|のこす', en : 'to leave; to preserve', v : 'u', l : '読L15-II' },
+    { ja : '～の紹介で|～のしょうかいで', en : 'through the introduction of', l : '読L19-III' },
+    { ja : '～のために', en : 'for...', l : '読L19-III' },
+    { ja : '～のための', en : 'for the sake of...', l : '読L17-II' },
+    { ja : '～ので', en : 'because...', l : '会L12' },
+    { ja : 'のど', en : 'throat', l : '会L12' },
+    { ja : 'のどが渇く|のどがかわく', en : 'to become thirsty', v : 'u', l : '会L12' },
+    { ja : '登る|のぼる', en : 'to climb', v : 'u', l : '会L11' },
+    { ja : '飲み物|のみもの', en : 'drink', l : '会L5' },
+    { ja : '飲む|のむ', en : 'to drink', v : 'u', l : '会L3' },
+    { ja : '～のようなもの', en : 'something like...', l : '読L16-II' },
+    { ja : '乗り遅れる|のりおくれる', en : 'to miss (a train, bus, etc.)', v : 'ru', l : '会L16' },
+    { ja : '乗り換え|のりかえ', en : 'transfer', l : '会L10(e)' },
+    { ja : '乗る|のる', en : 'to ride; to board', v : 'u', l : '会L5' }
   ],
   
   'は' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'ひ' : [
