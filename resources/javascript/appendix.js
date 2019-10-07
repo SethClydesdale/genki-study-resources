@@ -457,7 +457,7 @@
                   def = document.querySelector('#japanese-english [data-def="' + sel[i] + '"]');
                   furi = def.querySelector('.def-furi i');
 
-                  quizlet[def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>|\(.*?\)|（.*?）|～|~/g, '')] = (furi ? furi.innerHTML : '');
+                  quizlet[def.querySelector('.def-ja').innerHTML.replace(/\((.*?)\/.*?\)/, '$1').replace(/<i>.*?<\/i>|\(.*?\)|（.*?）|～|~/g, '')] = (furi ? furi.innerHTML : '');
                 }
                 
                 Genki.generateQuiz({
