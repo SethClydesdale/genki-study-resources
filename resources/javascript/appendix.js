@@ -59,7 +59,7 @@
 
               // compile english definitions
               // cleans the english string and converts it to lowercase so words can be sorted more accurately
-              cleaned = Genki.jisho[k][i].en.replace(/^\(.*?\) |^to be |^to |^the |^it |^\.\.\.(?:,|)/i, '').toLowerCase();
+              cleaned = Genki.jisho[k][i].en.replace(/^\(.*?\) |^to be |^to |^the |^it |^\.\.\.(?:,|)|^\d+-|^\d+/i, '').toLowerCase();
 
               if (defList[cleaned]) { // if a key already exists, add the key with a random id
                 cleaned = cleaned + '-' + ++n;
