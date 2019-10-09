@@ -68,7 +68,7 @@
         'onclick="GenkiModal.open({'+
           'title : \'Copy Search Link\','+
           'content : \'<div class=&quot;center&quot;><p>You can copy the direct search link from the box below.</p>'+
-          '<textarea id=&quot;copied-search-link&quot; onfocus=&quot;this.select();&quot; style=&quot;width:80%;height:100px;&quot;>' + (window.location.protocol + '//' + window.location.host + window.location.pathname) + '?search=' + encodeURIComponent(value) + '</textarea></div>\','+
+          '<textarea id=&quot;copied-search-link&quot; onfocus=&quot;this.select();&quot; style=&quot;width:80%;height:100px;&quot;>' + (window.location.protocol + '//' + window.location.host + window.location.pathname) + '?search=' + encodeURIComponent(value) + '#quick-search-exercises</textarea></div>\','+
           'focus : \'#copied-search-link\''+
         '}); return false;"'+
       '>&#xf0ea;</a>' : '';
