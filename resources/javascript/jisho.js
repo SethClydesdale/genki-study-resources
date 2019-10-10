@@ -1542,11 +1542,44 @@ Genki.jisho = {
   ],
   
   'ほ' : [
-    { ja : '|', en : '', l : '会L読L-II' },
+    { ja : '方言|ほうげん', en : 'dialect', l : '会L11(e)' },
+    { ja : '帽子|ぼうし', en : 'hat; cap', l : '会L2' },
+    { ja : '放っておく|ほ(う)っておく', en : 'to leave (someone/something) alone; to neglect', v : 'u', l : '会L22' },
+    { ja : '～方面|～ほうめん', en : 'serving...areas', l : '会L10(e)' },
+    { ja : 'ボーナス', en : 'bonus', l : '会L23' },
+    { ja : 'ホーム', en : 'platform', l : '読L22-II, 会L10(e)' },
+    { ja : 'ホームシック', en : 'homesickness', l : '会L12' },
+    { ja : 'ホームステイ', en : 'homestay; living with a local family', l : '会L8' },
+    { ja : 'ホームレス', en : 'homeless', l : '読L15-II' },
+    { ja : 'ボール', en : 'ball', l : '会L22' },
+    { ja : 'ほかに', en : 'anything else', l : '会L11(e)' },
+    { ja : 'ほかの', en : 'other', l : '会L16' },
+    { ja : '僕|ぼく', en : 'I (used by men)', l : '会L5' },
+    { ja : 'ポケット', en : 'pocket', l : '読L16-II' },
+    { ja : '保険|ほけん', en : 'insurance', l : '会L5(e), 会L15' },
+    { ja : '保険に入る|ほけんにはいる', en : 'to buy insurance', v : 'u', l : '会L15' },
+    { ja : '欲しい|ほしい', en : 'to want', l : '会L14' },
+    { ja : '募集|ぼしゅう', en : 'recruitment', l : '会L13' },
+    { ja : '～募集|～ぼしゅう', en : 'looking for...', l : '読L11-II' },
+    { ja : 'ポスター', en : 'poster', l : '会L21' },
+    { ja : 'ホストファミリー', en : 'host family', l : '読L9-II, 会L11' },
+    { ja : 'ポップコーン', en : 'popcorn', l : '会L18' },
+    { ja : 'ホテル', en : 'hotel', l : '会L4' },
+    { ja : 'ほとんど', en : 'almost', l : '読L23-II' },
+    { ja : 'ほめる', en : 'to praise; to say nice things', v : 'ru', l : '会L21' },
+    { ja : 'ホワイトだー', en : '"White Day" (yet another gift-giving day)', l : '会L14' },
+    { ja : '本|ほん', en : 'book', l : '会L2, 会L2(e)' },
+    { ja : '～本|～ほん', en : 'counter for long objects', l : '会L14, 会L14(e)' },
+    { ja : '盆踊り|ぼんおどり', en : 'Bon dance (Japanese traditional dance)', l : '会L23' },
+    { ja : '本当ですか|ほんとうですか', en : 'Really?', l : '会L6' },
+    { ja : '本当に|ほんとうに', en : 'really', l : '読L14-II, 会L18' },
+    { ja : '本当は|ほんとうは', en : 'in fact; originally', l : '会L19' },
+    { ja : '本屋|ほんや', en : 'bookstore', l : '会L4' },
+    { ja : '翻訳する|ほんやくする', en : 'to translate', v : 'irr', l : '会L22' }
   ],
   
   'ま' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'み' : [
