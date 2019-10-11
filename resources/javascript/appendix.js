@@ -28,7 +28,7 @@
             checked = window.localStorage && localStorage.selectedDefinitions ? localStorage.selectedDefinitions.split(',') : [],
             sorted = [],
             defList = {},
-            frag, group,
+            frag, group, first,
             n = 0;
         
         for (k in Genki.jisho) {
@@ -94,13 +94,22 @@
         
         // add english definitions to the English-Japanese dictionary
         for (i = 0, j = sorted.length; i < j; i++) {
+          first = sorted[i].charAt(0);
           
           // append current group and start a new one
-          if (sorted[i].charAt(0) != group) {
-            document.getElementById('list-' + group).appendChild(frag);
-            
-            group = sorted[i].charAt(0).toUpperCase();
-            frag = document.createDocumentFragment();
+          if (first != group) {
+            // checks if the definition key is valid
+            if (/[a-z]/.test(first)) {
+              document.getElementById('list-' + group).appendChild(frag);
+
+              group = first.toUpperCase();
+              frag = document.createDocumentFragment();
+            } 
+            // throws a soft error in the console if a definition is not valid so that we can fix it
+            else {
+              console.error('STRING CLEAN ERROR: "' + first + '" is an invalid definition key. The key must be alphabetical. (A-Z)\nDefinition Source: { ja : "' + defList[sorted[i]].querySelector('.def-ja').innerHTML.replace(/<span class="def-en">.*?<\/span>/, '') + '", en : "' + defList[sorted[i]].querySelector('.def-en').innerHTML + '" }');
+            }
+
           }
           
           // move the english definition to the front
