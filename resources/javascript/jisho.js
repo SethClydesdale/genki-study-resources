@@ -1621,11 +1621,40 @@ Genki.jisho = {
   ],
   
   'み' : [
-    { ja : '|', en : '', l : '会L読L-II' },
+    { ja : '見える|みえる', en : 'to be visible', v : 'ru', l : '会L15' },
+    { ja : '磨く|みがく', en : 'to brush (teeth); to polish', v : 'u', l : '会L13' },
+    { ja : '味方|みかた', en : "person on one's side", l : '読L16-II' },
+    { ja : 'みかん', en : 'mandarin orange', l : '会L14' },
+    { ja : '右|みぎ', en : 'right', l : '会L4' },
+    { ja : '右側|みぎがわ', en : 'right side', l : '会L6(e)' },
+    { ja : '短い|みじかい', en : 'short (length)', l : '会L7' },
+    { ja : '水|みず', en : 'water', l : '会L3' },
+    { ja : '水色|みずいろ', en : 'light blue', l : '会L9(e)' },
+    { ja : '湖|みずうみ', en : 'lake', l : '会L11' },
+    { ja : '店|みせ', en : 'shop; store', l : '読L4-III, 会L13' },
+    { ja : '見せる|みせる', en : 'to show', v : 'ru', l : '会L16' },
+    { ja : '～みたいなＸ', en : 'X such as...', l : '会L20' },
+    { ja : '道|みち', en : 'way; road; directions', l : '会L16' },
+    { ja : '道に迷う|みちにまよう', en : "to become lost; to lose one's way", v : 'u', l : '会L16' },
+    { ja : '三日|みっか', en : 'the third day of a month; three days', l : '会L4(e), 会L13' },
+    { ja : '見つかる|みつかる', en : 'to be found', v : 'u', l : '会L16' },
+    { ja : '見つける|みつける', en : 'to find', v : 'ru', l : '読L12-II, 会L21' },
+    { ja : '三つ|みっつ', en : 'three', l : '会L9' },
+    { ja : '緑|みどり', en : 'green', l : '会L9(e), 読L15-II' },
+    { ja : '皆様|みなさま', en : 'everyone (polite exp. of みなさん)', l : '読L19-II' },
+    { ja : '皆さん|みなさん', en : 'everyone; all of you', l : '読L6-III, 会L14' },
+    { ja : '南|みなみ', en : 'south', l : '会L6(e), 読L15-II' },
+    { ja : '身ぶり|みぶり', en : 'gesture', l : '読L20-II' },
+    { ja : '耳|みみ', en : 'ear', l : '会L7(e)' },
+    { ja : '土産|みやげ', en : 'souvenir', l : '会L4' },
+    { ja : '未来|みらい', en : 'future', l : '読L16-II' },
+    { ja : '見る|みる', en : 'to see; to look at; to watch', v : 'ru', l : '会L3' },
+    { ja : 'みんな', en : 'all', l : '読L7-II, 会L9' },
+    { ja : 'みんなで', en : 'all (of the people) together', l : '会L8' }
   ],
   
   'む' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'め' : [
