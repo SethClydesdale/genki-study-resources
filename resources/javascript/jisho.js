@@ -1654,11 +1654,25 @@ Genki.jisho = {
   ],
   
   'む' : [
-    { ja : '|', en : '', l : '会L読L-II' },
+    { ja : '六日|むいか', en : 'the sixth day of a month; six days', l : '会L4(e), 会L13' },
+    { ja : '迎えに行く|むかえにいく', en : 'to go to pick up', v : 'u', l : '会L16' },
+    { ja : '迎えに来る|むかえにくる', en : 'to come to pick up', v : 'irr', l : '会L16' },
+    { ja : '昔|むかし', en : 'old days; past', l : '読L15-II, 会L21' },
+    { ja : '昔々|むかしむかし', en : 'once upon a time', l : '読L10-II' },
+    { ja : '向こう|むこう', en : 'the other side; over there', l : '読L12-II' },
+    { ja : '虫|むし', en : 'insect', l : '会L18' },
+    { ja : '虫めがね|むしめがね', en : 'magnifying glass', l : '読L17-II' },
+    { ja : '難しい|むずかしい', en : 'difficult', l : '会L5' },
+    { ja : '娘|むすめ', en : 'daughter', l : '読L12-II' },
+    { ja : '無駄遣い|むだづかい', en : 'waste (money)', l : '会L22' },
+    { ja : '六つ|むっつ', en : 'six', l : '会L9' },
+    { ja : '胸|むね', en : 'breast', l : '会L7(e)' },
+    { ja : '紫|むらさき', en : 'purple', l : '会L9(e)' },
+    { ja : '無理な|むりな', en : 'impossible', l : '読L20-II' }
   ],
   
   'め' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'も' : [
