@@ -1672,15 +1672,57 @@ Genki.jisho = {
   ],
   
   'め' : [
-    { ja : '|', en : '', l : '会L読L-II' },
+    { ja : '目|め', en : 'eye', l : '会L7, 会L7(e)' },
+    { ja : '～目|～め', en : '-th', l : '会L15' },
+    { ja : '～名|～めい', en : '...person(s)', l : '会L15(e)' },
+    { ja : '～名様|～めいさま', en : 'party of...people', l : '会L19' },
+    { ja : '迷信|めいしん', en : 'superstition', l : '読L21-II' },
+    { ja : 'メール', en : 'e-mail', l : '会L4' },
+    { ja : '眼鏡|めがね', en : 'glasses', l : '会L7' },
+    { ja : 'メキシコ', en : 'Mexico', l : '読L5-II' },
+    { ja : '目覚まし時計|めざましどけい', en : 'alarm clock', l : '会L16' },
+    { ja : '召し上がる|めしあがる', en : 'honorific exp. for たべる and のむ', v : 'u', l : '会L19' },
+    { ja : 'めずらしい', en : 'rare', l : '読L13-II' },
+    { ja : 'めちゃくちゃ（な）', en : 'messy; disorganized', l : '会L21' },
+    { ja : 'めったに～ない|', en : 'seldom', l : '読L21-II' },
+    { ja : 'メニュー', en : 'menu', l : '会L2' },
+    { ja : '免許|めんきょ', en : 'license', l : '会L22' },
+    { ja : '面接|めんせつ', en : 'interview', l : '会L23' }
   ],
   
   'も' : [
-    
+    { ja : 'もう', en : 'already', l : '会L9' },
+    { ja : 'もう一度|もういちど', en : 'one more time', l : '会L15' },
+    { ja : '申し込み|もうしこみ', en : 'application', l : '読L19-III' },
+    { ja : '申し訳ありません|もうしわけありません', en : 'You have my apologies.', l : '読L19-III, 会L20' },
+    { ja : '申す|もうす', en : 'extra-modest exp. for いう', v : 'u', l : '会L20' },
+    { ja : 'もうすぐ', en : 'very soon; in a few moments/days', l : '会L12' },
+    { ja : 'もう少し|もうすこし', en : 'a little more', l : '会L22' },
+    { ja : 'もう～ない', en : 'not any longer', l : '読L13-II' },
+    { ja : '目的|もくてき', en : 'object; purpose', l : '読L18-II' },
+    { ja : '木曜日|もくようび', en : 'Thursday', l : '会L4, 会L4(e)' },
+    { ja : '文字|もじ', en : 'letter; character', l : '読L17-II' },
+    { ja : 'もし～たら', en : 'if...', l : '読L19-III' },
+    { ja : 'もしもし', en : 'Hello? (used on the phone)', l : '会L7' },
+    { ja : 'もち', en : 'rice cake', l : '読L10-II' },
+    { ja : 'もちろん', en : 'of course', l : '会L7' },
+    { ja : '持つ|もつ', en : 'to carry; to hold', v : 'u', l : '会L6' },
+    { ja : '持っていく|もっていく', en : 'to take (a thing)', v : 'u', l : '会L8' },
+    { ja : '持ってくる|もってくる', en : 'to bring (a thing)', v : 'irr', l : '会L6' },
+    { ja : 'もっと', en : 'more', l : '会L11' },
+    { ja : '持てる|もてる', en : 'to be popular (in terms of romantic interest)', v : 'ru', l : '会L19' },
+    { ja : '戻ってくる|もどってくる', en : '(something/someone) comes back', v : 'irr', l : '会L23' },
+    { ja : '戻る|もどる', en : 'to return; to come/go back', v : 'u', l : '読L16-II, 会L20' },
+    { ja : '物|もの', en : 'thing (concrete object)', l : '会L12' },
+    { ja : 'ものすごく', en : 'extremely', l : '会L23' },
+    { ja : 'もみあげ', en : 'sideburns', l : '会L17(e)' },
+    { ja : 'もらう', en : 'to get (from somebody)', v : 'u', l : '会L9' },
+    { ja : '文句|もんく', en : 'complaint', l : '会L21' },
+    { ja : '文句を言う|もんくをいう', en : 'to complain', v : 'u', l : '会L21' }
   ],
   
   'や' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'ゆ' : [
