@@ -1722,15 +1722,49 @@ Genki.jisho = {
   ],
   
   'や' : [
-    { ja : '|', en : '', l : '会L読L-II' },
+    { ja : '～屋|～や', en : '...shop', l : '会L20' },
+    { ja : '野球|やきゅう', en : 'baseball', l : '会L10' },
+    { ja : '野球選手|やきゅうせんしゅ', en : 'baseball player', l : '会L11' },
+    { ja : '焼く|やく', en : 'to bake; to burn; to grill', v : 'u', l : '会L21' },
+    { ja : 'やくざ', en : 'yakuza; gangster', l : '会L13' },
+    { ja : '訳す|やくす', en : 'to translate', v : 'u', l : '会L16' },
+    { ja : '約束|やくそく', en : 'promise; appointment', l : '会L13' },
+    { ja : '約束を守る|やくそくをまもる', en : 'to keep a promise', v : 'u', l : '会L13' },
+    { ja : '野菜|やさい', en : 'vegetable', l : '会L2' },
+    { ja : 'やさしい', en : 'easy (problem); kind (person)', l : '会L5' },
+    { ja : '安い|やすい', en : 'inexpensive; cheap (thing)', l : '会L5' },
+    { ja : '休み|やすみ', en : 'holiday; day off; absence', l : '会L5' },
+    { ja : '休む|やすむ', en : 'to be absent (from); to rest', v : 'u', l : '会L6' },
+    { ja : 'やせています', en : 'to be thin', l : '会L7' },
+    { ja : 'やせる', en : 'to lose weight', v : 'ru', l : '会L7' },
+    { ja : '家賃|やちん', en : 'rent', l : '会L18' },
+    { ja : 'やった！', en : 'I did it!', l : '読L20-II' },
+    { ja : '八つ|やっつ', en : 'eight', l : '会L9' },
+    { ja : 'やっぱり', en : 'after all', l : '読L13-II, 会L17' },
+    { ja : '山|やま', en : 'mountain', l : '読L5-II, 会L11' },
+    { ja : '山道|やまみち', en : 'mountain road', l : '読L10-II' },
+    { ja : 'やめる', en : 'to quit', v  : 'ru', l : '会L11' },
+    { ja : 'やる', en : 'to do; to perform; to give (to pets, plants, siblings, etc.)', v : 'u', l : '会L5, 会L21' }
   ],
   
   'ゆ' : [
-    
+    { ja : '夕方|ゆうがた', en : 'evening', l : '会L18' },
+    { ja : '勇気|ゆうき', en : 'courage', l : '読L22-II' },
+    { ja : '優勝する|ゆうしょうする', en : 'to win a championship', v : 'irr', l : '会L23' },
+    { ja : '夕食|ゆうしょく', en : 'dinner', l : '会L23' },
+    { ja : '友人|ゆうじん', en : 'friend', l : '読L19-III' },
+    { ja : '郵便局|ゆうびんきょく', en : 'post office', l : '会L2' },
+    { ja : '有名|ゆうめい（な）', en : 'famous', l : '会L8' },
+    { ja : '有名人|ゆうめいじん', en : 'celebrity', l : '会L10' },
+    { ja : '雪|ゆき', en : 'snow', l : '読L10-II, 会L12' },
+    { ja : 'ゆっくり', en : 'slowly; leisurely; unhurriedly', l : '会L6' },
+    { ja : '指|ゆび', en : 'finger', l : '会L7(e)' },
+    { ja : '指輪|ゆびわ', en : 'ring', l : '会L14' },
+    { ja : '夢|ゆめ', en : 'dream', l : '会L11' }
   ],
   
   'よ' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'ら' : [
