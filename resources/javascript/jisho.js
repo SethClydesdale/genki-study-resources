@@ -1764,15 +1764,50 @@ Genki.jisho = {
   ],
   
   'よ' : [
-    { ja : '|', en : '', l : '会L読L-II' },
+    { ja : '八日|ようか', en : 'the eighth day of a month; eight days', l : '会L4(e), 会L13' },
+    { ja : 'ようこそ', en : 'Welcome.', l : '会L19' },
+    { ja : '用事|ようじ', en : 'business to take care of', l : '会L12' },
+    { ja : '洋服|ようふく', en : 'clothes', l : '読L18-II' },
+    { ja : 'ヨーロッパ', en : 'Europe', l : '会L22' },
+    { ja : 'よかったら', en : 'if you like', l : '会L7' },
+    { ja : '預金|よきん', en : 'savings', l : '会L13(e)' },
+    { ja : 'よく', en : 'often; much; well', l : '会L3, 会L14' },
+    { ja : '横|よこ', en : 'side; horizontal', l : '読L23-II' },
+    { ja : '汚す|よごす', en : 'to make dirty', v : 'u', l : '会L18' },
+    { ja : '汚れる|よごれる', en : 'to become dirty', v : 'ru', l : '会L18' },
+    { ja : '四時|よじ', en : "four o'clock", l : '会L1(e)' },
+    { ja : '予習|よしゅう', en : 'preparation of lessons', l : '会L22' },
+    { ja : '四日|よっか', en : 'the fourth day of a month; four days', l : '会L4(e), 会L13' },
+    { ja : '四つ|よっつ', en : 'four', l : '会L9' },
+    { ja : '予定|よてい', en : 'schedule; plan', l : '会L15' },
+    { ja : '呼ぶ|よぶ', en : "to call (one's name); to invite", v : 'u', l : '会L19' },
+    { ja : '読む|よむ', en : 'to read', v : 'u', l : '会L3' },
+    { ja : '予約|よやく', en : 'reservation', l : '会L10' },
+    { ja : '予約する|よやくする', en : 'to reserve', v : 'irr', l : '会L15' },
+    { ja : '夜|よる', en : 'night', l : '読L5-II, 会L6' },
+    { ja : '寄る|よる', en : 'to stop by', v : 'u', l : '会L19' },
+    { ja : 'よろしかったら', en : 'if it is okay (polite)', l : '会L20' },
+    { ja : 'よろしくお伝えください|よろしくおつたえください', en : 'Please give my best regards (to...)', l : '会L19' },
+    { ja : 'よろしくお願いします|よろしくおねがいします', en : 'Nice to meet you.', l : '会G' },
+    { ja : '弱い|よわい', en : 'weak', l : '読L16-II' },
+    { ja : '四歳|よんさい', en : 'four years old', l : '会L1(e)' },
+    { ja : '四分|よんぷん', en : 'four minutes', l : '会L1(e)' }
   ],
   
   'ら' : [
-    
+    { ja : '来学期|らいがっき', en : 'next semester', l : '会L10' },
+    { ja : '来月|らいげつ', en : 'next month', l : '会L4(e), 会L8' },
+    { ja : '来週|らいしゅう', en : 'next week', l : '会L4(e), 会L6' },
+    { ja : '来年|らいねん', en : 'next year', l : '会L4(e), 会L6' },
+    { ja : '楽|らく（な）', en : 'easy; comfortable', l : '会L22' },
+    { ja : '落語|らくご', en : 'comic monologue', l : '読L20-II' },
+    { ja : '落語家|らくごか', en : 'comic storyteller', l : '読L20-II' },
+    { ja : 'ラジオ', en : 'radio', l : '会L14' },
+    { ja : 'ラッシュ', en : 'the rush hour', l : '読L13-III' }
   ],
   
   'り' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'る' : [
