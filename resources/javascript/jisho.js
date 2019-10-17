@@ -1807,19 +1807,44 @@ Genki.jisho = {
   ],
   
   'り' : [
-    { ja : '|', en : '', l : '会L読L-II' },
+    { ja : '離婚する|りこんする', en : 'to get a divorce', v : 'irr', l : '会L17' },
+    { ja : '理想|りそう', en : 'ideal', l : '会L23' },
+    { ja : '留学する|りゅうがくする', en : 'to study abroad', v : 'irr', l : '会L11' },
+    { ja : '留学生|りゅうがくせい', en : 'international student', l : '会L1' },
+    { ja : '両|りょう', en : 'a unit of currency used in the Edo period', l : '読L20-II' },
+    { ja : '寮|りょう', en : 'dormitory', l : '読L9-II, 会L17' },
+    { ja : '両親|りょうしん', en : 'parents', l : '会L14' },
+    { ja : '料理|りょうり', en : 'cooking', l : '読L6-III' },
+    { ja : '料理する|りょうりする', en : 'to cook', v : 'irr', l : '会L8' },
+    { ja : '旅館|りょかん', en : 'Japanese inn', l : '会L15' },
+    { ja : '旅行|りょこう', en : 'travel', l : '会L5' },
+    { ja : '旅行会社|りょこうがいしゃ', en : 'travel agency', l : '会L17' },
+    { ja : '旅行する|りょこうする', en : 'to travel', v : 'irr', l : '会L10' },
+    { ja : '履歴書|りれきしょ', en : 'résumé', l : '会L14' },
+    { ja : 'りんご', en : 'apple', l : '会L10' }
   ],
   
   'る' : [
-    
+    { ja : 'ルームメート', en : 'roommate', l : '会L11' },
+    { ja : '留守|るす', en : 'absence; not at home', l : '会L21' },
+    { ja : '留守番|るすばん', en : "looking after a house during someone's absence", l : '会L23' },
+    { ja : '留守番電話|るすばんでんわ', en : 'answering machine', l : '会L18' }
   ],
   
   'れ' : [
-    
+    { ja : '例|れい', en : 'example', l : '会L11(e)' },
+    { ja : '冷蔵庫|れいぞうこ', en : 'refrigerator', l : '会L18' },
+    { ja : '歴史|れきし', en : 'history', l : '会L1, 会L2' },
+    { ja : 'レストラン', en : 'restaurant', l : '会L4' },
+    { ja : 'レポート', en : '(term) paper', l : '会L13' },
+    { ja : '練習|れんしゅう', en : 'exercise', l : '会L11(e)' },
+    { ja : '練習する|れんしゅうする', en : 'to practice', v : 'irr', l : '会L10' },
+    { ja : 'レントゲン', en : 'X-ray', l : '会L12(e)' },
+    { ja : '連絡する|れんらくする', en : 'to contact', v : 'irr', l : '会L21' }
   ],
   
   'ろ' : [
-    
+    { ja : '|', en : '', l : '会L読L-II' },
   ],
   
   'わ' : [
