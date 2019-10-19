@@ -278,54 +278,64 @@
       
       // quick search
       search : function (value, mode) {
-        var frag = document.createDocumentFragment(),
-            results = Genki.appendix.jisho.cache.search['res_' + mode],
-            hitsCounter = Genki.appendix.jisho.cache.search['hit_' + mode],
-            def = Genki.appendix.jisho.cache.search[mode],
-            defLen = def.length,
-            hits = 0,
-            i = 0,
-            k,
-            clone;
-        
-        // uncache clones
-        for (k in Genki.appendix.jisho.cache.box) {
-          if (Genki.appendix.jisho.cache.box[k]['search_' + mode]) {
-            delete Genki.appendix.jisho.cache.box[k]['search_' + mode]
-          }
+        // clear existing timeout
+        if (Genki.appendix.jisho.searchTimeout) {
+          window.clearTimeout(Genki.appendix.jisho.searchTimeout);
         }
-        Genki.appendix.jisho.cache.group['search_' + mode] = [];
         
-        // clear prior searches
-        results.innerHTML = '';
-        
-        // loop over the dictionary if a value is present
-        if (value) {
-          for (; i < defLen; i++) {
-            if (def[i].innerText.toLowerCase().indexOf(value.toLowerCase()) != -1) {
-              clone = def[i].cloneNode(true);
-              frag.appendChild(clone); // clone the match for displaying in the results node
-              
-              // cache search clone
-              Genki.appendix.jisho.cache.box[def[i].dataset.def]['search_' + mode] = clone.firstChild;
-              Genki.appendix.jisho.cache.group['search_' + mode].push(clone.firstChild);
-              
-              hits++; // increment hits
+        // wait 300ms before submitting search, just in case the user is still typing
+        Genki.appendix.jisho.searchTimeout = window.setTimeout(function() {
+          var frag = document.createDocumentFragment(),
+              results = Genki.appendix.jisho.cache.search['res_' + mode],
+              hitsCounter = Genki.appendix.jisho.cache.search['hit_' + mode],
+              def = Genki.appendix.jisho.cache.search[mode],
+              defLen = def.length,
+              hits = 0,
+              i = 0,
+              k,
+              clone;
+
+          // uncache clones
+          for (k in Genki.appendix.jisho.cache.box) {
+            if (Genki.appendix.jisho.cache.box[k]['search_' + mode]) {
+              delete Genki.appendix.jisho.cache.box[k]['search_' + mode]
             }
           }
-        }
-        
-        // append the matched exercises or display an error message/hide the search results
-        if (frag.childNodes.length) {
-          results.parentNode.querySelector('.group-selectors').style.visibility = '';
-          results.appendChild(frag);
+          Genki.appendix.jisho.cache.group['search_' + mode] = [];
 
-        } else {
-          results.parentNode.querySelector('.group-selectors').style.visibility = 'hidden';
-          results.innerHTML = value ? '<li>No results found for "' + value + '".</li>' : '';
-        }
+          // clear prior searches
+          results.innerHTML = '';
 
-        hitsCounter.innerHTML = hits ? '(' + hits + ') ' : '';
+          // loop over the dictionary if a value is present
+          if (value) {
+            for (; i < defLen; i++) {
+              if (def[i].innerText.toLowerCase().indexOf(value.toLowerCase()) != -1) {
+                clone = def[i].cloneNode(true);
+                frag.appendChild(clone); // clone the match for displaying in the results node
+
+                // cache search clone
+                Genki.appendix.jisho.cache.box[def[i].dataset.def]['search_' + mode] = clone.firstChild;
+                Genki.appendix.jisho.cache.group['search_' + mode].push(clone.firstChild);
+
+                hits++; // increment hits
+              }
+            }
+          }
+
+          // append the matched exercises or display an error message/hide the search results
+          if (frag.childNodes.length) {
+            results.parentNode.querySelector('.group-selectors').style.visibility = '';
+            results.appendChild(frag);
+
+          } else {
+            results.parentNode.querySelector('.group-selectors').style.visibility = 'hidden';
+            results.innerHTML = value ? '<li>No results found for "' + value + '".</li>' : '';
+          }
+
+          hitsCounter.innerHTML = hits ? '(' + hits + ') ' : '';
+          
+          delete Genki.appendix.jisho.searchTimeout;
+        }, 300);
       },
       
       
