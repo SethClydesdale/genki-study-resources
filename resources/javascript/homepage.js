@@ -11,67 +11,77 @@
   
   // search function
   function quickSearch (value) {
-    var frag = document.createDocumentFragment(),
-        hits = 0,
-        i = 0,
-        clone;
+    // clear existing timeout
+    if (window.GenkiSearchTimeout) {
+      window.clearTimeout(GenkiSearchTimeout);
+    }
     
-    // clear prior searches
-    results.innerHTML = '';
+    // wait 300ms before submitting search, just in case the user is still typing
+    window.GenkiSearchTimeout = window.setTimeout(function() {
+      var frag = document.createDocumentFragment(),
+          hits = 0,
+          i = 0,
+          clone;
 
-    // loop over the exercises if a value is present
-    if (value) {
-      for (; i < exLen; i++) {
-        if (li[i].innerText.toLowerCase().indexOf(value.toLowerCase()) != -1 && li[i].getElementsByTagName('A')[0]) {
-          clone = li[i].cloneNode(true); // clone the match for displaying in the results node
-          
-          // add lesson number to exercise
-          clone.dataset.lesson = clone.getElementsByTagName('A')[0].href.replace(/.*?\/(lesson-\d+).*|.*?\/(study-tools).*|.*?\/(appendix).*/, function (Match, $1, $2, $3) {
-            if ($1) {
-              return $1.charAt(0).toUpperCase() + $1.split('-').pop();
-              
-            } else if ($2) {
-              return 'tool'
-              
-            } else if ($3) {
-              return 'appendix'
+      // clear prior searches
+      results.innerHTML = '';
+
+      // loop over the exercises if a value is present
+      if (value) {
+        for (; i < exLen; i++) {
+          if (li[i].innerText.toLowerCase().indexOf(value.toLowerCase()) != -1 && li[i].getElementsByTagName('A')[0]) {
+            clone = li[i].cloneNode(true); // clone the match for displaying in the results node
+
+            // add lesson number to exercise
+            clone.dataset.lesson = clone.getElementsByTagName('A')[0].href.replace(/.*?\/(lesson-\d+).*|.*?\/(study-tools).*|.*?\/(appendix).*/, function (Match, $1, $2, $3) {
+              if ($1) {
+                return $1.charAt(0).toUpperCase() + $1.split('-').pop();
+
+              } else if ($2) {
+                return 'tool'
+
+              } else if ($3) {
+                return 'appendix'
+              }
+            });
+
+            // add tooltip in case the text gets cut off
+            clone.title = li[i].innerText;
+
+            // add the clone to the fragment if it's valid
+            if (!/^file|^http/.test(clone.dataset.lesson)) {
+              frag.appendChild(clone);
+              hits++; // increment hits
             }
-          });
-          
-          // add tooltip in case the text gets cut off
-          clone.title = li[i].innerText;
-          
-          // add the clone to the fragment if it's valid
-          if (!/^file|^http/.test(clone.dataset.lesson)) {
-            frag.appendChild(clone);
-            hits++; // increment hits
           }
         }
       }
-    }
 
-    // append the matched exercises or display an error message/hide the search results
-    if (frag.childNodes.length) {
-      results.appendChild(frag);
+      // append the matched exercises or display an error message/hide the search results
+      if (frag.childNodes.length) {
+        results.appendChild(frag);
 
-    } else {
-      results.innerHTML = value ? '<li>No exercises found for "' + value + '".</li>' : '';
-    }
-    
-    // update the hits counter and add a button to copy the search link
-    hitsCounter.innerHTML = hits ? '(' + hits + ') '+
-      '<a '+
-        'class="fa" '+
-        'style="color:#F60;" '+
-        'href="#copy-search-link" '+
-        'title="Copy the search link" '+
-        'onclick="GenkiModal.open({'+
-          'title : \'Copy Search Link\','+
-          'content : \'<div class=&quot;center&quot;><p>You can copy the direct search link from the box below.</p>'+
-          '<textarea id=&quot;copied-search-link&quot; onfocus=&quot;this.select();&quot; style=&quot;width:80%;height:100px;&quot;>' + (window.location.protocol + '//' + window.location.host + window.location.pathname) + '?search=' + encodeURIComponent(value) + '#quick-search-exercises</textarea></div>\','+
-          'focus : \'#copied-search-link\''+
-        '}); return false;"'+
-      '>&#xf0ea;</a>' : '';
+      } else {
+        results.innerHTML = value ? '<li>No exercises found for "' + value + '".</li>' : '';
+      }
+
+      // update the hits counter and add a button to copy the search link
+      hitsCounter.innerHTML = hits ? '(' + hits + ') '+
+        '<a '+
+          'class="fa" '+
+          'style="color:#F60;" '+
+          'href="#copy-search-link" '+
+          'title="Copy the search link" '+
+          'onclick="GenkiModal.open({'+
+            'title : \'Copy Search Link\','+
+            'content : \'<div class=&quot;center&quot;><p>You can copy the direct search link from the box below.</p>'+
+            '<textarea id=&quot;copied-search-link&quot; onfocus=&quot;this.select();&quot; style=&quot;width:80%;height:100px;&quot;>' + (window.location.protocol + '//' + window.location.host + window.location.pathname) + '?search=' + encodeURIComponent(value) + '#quick-search-exercises</textarea></div>\','+
+            'focus : \'#copied-search-link\''+
+          '}); return false;"'+
+        '>&#xf0ea;</a>' : '';
+      
+      delete window.GenkiSearchTimeout;
+    }, 300);
   };
   
   
