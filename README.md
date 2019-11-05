@@ -13,10 +13,6 @@ If you're using the offline version you'll have to unzip the files. Once you've 
 **Important:** If you use Firefox and icons appear broken, then please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/broken-icons/) to resolve the issue.
 
 
-### Notice
-This is currently a work in progress. I will be expanding it as I continue studying the Genki textbooks. The reason I created this is mostly so I can setup exercises for myself to practice, however, you are free to use everything here as well. The self-study resources Genki provided are helpful, but not complete, as such I plan to work on exercises for all lessons, including practice and workbook problems.
-
-
 ### Suggestions, Feedback, Bug Reports
 If you have any suggestions, feedback, or bugs to report, feel free to [open a new issue](https://github.com/SethClydesdale/genki-study-resources/issues) in this repository to let me know. For more information, please check out the [report page](https://sethclydesdale.github.io/genki-study-resources/report/) for Genki Study Resources.
 
