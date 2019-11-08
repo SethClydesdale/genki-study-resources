@@ -1384,6 +1384,12 @@
 
       // jump to the exercise title
       Genki.scrollTo('#exercise-title', true);
+      
+      // add dictionary for looking up words, but not for vocab exercises, since that would be cheating!
+      // also disabled in the appendix 
+      if (!/drag|kana/.test(o.type) && !Genki.appendix) {
+        Genki.quickJisho.create();
+      }
     },
 
 
@@ -1864,6 +1870,136 @@
         return '<a href="' + url + '" target="blank" title="View full image" class="lesson-image"><img src="' + url + '" alt="' + (data[2] || data[1]) + '" /></a>';
       }
       
+    },
+    
+    
+    // quick dictionary functionality
+    quickJisho : {
+      hidden : true,
+      
+      // creates the quick dictionary button and popup
+      create : function () {
+        var button = document.createElement('DIV'),
+            box = document.createElement('DIV'),
+            frag = document.createDocumentFragment();
+        
+        // button attrs
+        button.id = 'quick-jisho-toggle';
+        button.onclick = Genki.quickJisho.toggle;
+        button.innerHTML = '<i class="fa">&#xf02d;</i>';
+        button.title = 'Open Quick Dictionary'
+        
+        // box attrs
+        box.id = 'quick-jisho-window';
+        box.className = 'quick-jisho-hidden';
+        box.innerHTML = 
+          '<h3 id="quick-jisho-title" class="main-title">Quick Dictionary <span id="quick-jisho-hits"></span></h3>'+
+          '<div id="quick-jisho-content">'+
+            '<div class="quick-jisho-row center">'+
+              '<input id="quick-jisho-search" type="text" placeholder="Search..." oninput="Genki.quickJisho.search(this.value);">'+
+            '</div>'+
+            '<div class="quick-jisho-row">'+
+              '<ul id="quick-jisho-results"></ul>'+
+            '</div>'+
+          '</div>';
+        
+        // add nodes to the document
+        frag.appendChild(box);
+        frag.appendChild(button);
+        document.body.appendChild(frag);
+        document.querySelector('.footer-right').style.marginRight = '25px'; // offset footer so texts are visible
+        
+        // node cache
+        Genki.quickJisho.cache = {
+          box : box,
+          search : document.getElementById('quick-jisho-search'),
+          results : document.getElementById('quick-jisho-results'),
+          hits : document.getElementById('quick-jisho-hits')
+        };
+      },
+      
+      
+      // toggles the quick dictionary
+      toggle : function () {
+        // load in the dictionary definitions
+        if (!Genki.jisho && !Genki.quickJisho.loading) {
+          Genki.quickJisho.loading = true;
+          
+          var jisho = document.createElement('SCRIPT');
+          jisho.src = getPaths() + 'resources/javascript/jisho.min.js';
+          jisho.onload = function () {
+            if (Genki.quickJisho.cache.search.value) {
+              Genki.quickJisho.search(Genki.quickJisho.cache.search.value);
+            }
+            
+            Genki.quickJisho.loading = false;
+          };
+          
+          document.body.appendChild(jisho);
+        }
+        
+        
+        // toggle dictionary display
+        if (Genki.quickJisho.hidden) {
+          Genki.quickJisho.cache.box.className = '';
+          Genki.quickJisho.hidden = false;
+          Genki.quickJisho.cache.search.focus();
+          
+        } else {
+          Genki.quickJisho.cache.box.className = 'quick-jisho-hidden';
+          Genki.quickJisho.hidden = true;
+        }
+      },
+      
+      
+      // searches the dictionary
+      search : function (value) {
+        // clear existing timeout
+        if (Genki.quickJisho.searchTimeout) {
+          window.clearTimeout(Genki.quickJisho.searchTimeout);
+        }
+        
+        // wait 300ms before submitting search, just in case the user is still typing
+        Genki.quickJisho.searchTimeout = window.setTimeout(function() {
+          var results = '',
+              hits = 0,
+              k, i, j, l, ja;
+          
+          Genki.quickJisho.cache.results.innerHTML = '';
+          
+          if (value) {
+            value = value.toLowerCase();
+            
+            for (k in Genki.jisho) {
+              for (i = 0, j = Genki.jisho[k].length; i < j; i++) {
+                for (l in Genki.jisho[k][i]) {
+                  if (Genki.jisho[k][i][l].toLowerCase().indexOf(value) != -1) {
+                    ja = Genki.jisho[k][i].ja.split('|');
+
+                    results += '<li class="definition clear">'+
+                      '<span class="def-ja' + (ja[1] ? ' def-furi' : '') + '">'+
+                        ja[0]+
+                        (ja[1] ? '<i>' + ja[1] + '</i>' : '')+
+                      '</span>'+
+                      '<span class="def-en">' + Genki.jisho[k][i].en + '</span>'+
+                      (Genki.jisho[k][i].v ? ' <span class="def-vtype">[<i>' + Genki.jisho[k][i].v + '</i>]</span>' : '')+
+                      '<span class="def-label">' + Genki.jisho[k][i].l + '</span>';
+                    '</li>';
+
+                    hits++;
+                    break;
+                  }
+                }
+              }
+            }
+          }
+          
+          Genki.quickJisho.cache.results.innerHTML = results ? results : value ? '<li>No results found for "' + value + '".</li>' : '';
+          Genki.quickJisho.cache.hits.innerHTML = hits ? '(' + hits + ')' : '';
+          
+          delete Genki.quickJisho.searchTimeout;
+        }, 300);
+      }
     },
     
     
