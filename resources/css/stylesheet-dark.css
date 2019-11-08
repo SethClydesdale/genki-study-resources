@@ -33,7 +33,7 @@ a, code {
 
 
 /* 2. BACKGROUND COLORS */
-body { background-color:#161616; }
+body, #quick-jisho-window { background-color:#161616; }
 
 code, input[type="text"], input[type="number"], textarea, select, .table td, .writing-zone, .quiz-multi-answer, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, input.writing-zone-input, .genki_pseudo_checkbox, .genki_pseudo_radio {
   background-color:#1A1A1A;
@@ -49,7 +49,7 @@ code, input[type="text"], input[type="number"], textarea, select, .table td, .wr
 
 
 /* 3. BORDER COLORS */
-code, input[type="text"], input[type="number"], textarea, select, .table td, .quiz-column-title, .verb-quiz .quiz-answer-zone:not(:empty), .verb-quiz.quiz-over [data-mistakes="0"], #quick-search-results, .dict-search-results, .quiz-item, .quiz-answer-zone:empty, #exercise-list, #exercise-list .lesson-title, #exercise-list ul, .quiz-over [data-mistakes="0"] .quiz-item, input.writing-zone-input, .writing-quiz.quiz-over [data-mistakes="0"], .question-block, .quiz-multi-question, .quiz-multi-question .lesson-image img, .quiz-multi-answer, .text-block, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, #result-list, .result-row, #study-tool-ui .item-row.question-row, .genki_pseudo_checkbox, .genki_pseudo_radio {
+code, input[type="text"], input[type="number"], textarea, select, .table td, .quiz-column-title, .verb-quiz .quiz-answer-zone:not(:empty), .verb-quiz.quiz-over [data-mistakes="0"], #quick-search-results, .dict-search-results, .quiz-item, .quiz-answer-zone:empty, #exercise-list, #exercise-list .lesson-title, #exercise-list ul, .quiz-over [data-mistakes="0"] .quiz-item, input.writing-zone-input, .writing-quiz.quiz-over [data-mistakes="0"], .question-block, .quiz-multi-question, .quiz-multi-question .lesson-image img, .quiz-multi-answer, .text-block, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, #result-list, .result-row, #study-tool-ui .item-row.question-row, .genki_pseudo_checkbox, .genki_pseudo_radio, #quick-jisho-window {
   border-color:#333;
 }
 

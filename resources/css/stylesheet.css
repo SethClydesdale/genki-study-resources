@@ -1776,11 +1776,74 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   left:0;
 }
 
-#japanese-english .def-ja, #english-japanese .def-en {
+#japanese-english .def-ja, #english-japanese .def-en, #quick-jisho-results .def-ja {
   margin-right:8px;
 }
 
 .def-label { float:right; }
+
+
+/* QUICK JISHO */
+#quick-jisho-toggle {
+  color:#FFF;
+  font-size:18px;
+  text-align:center;
+  line-height:32px;
+  background:#F60;
+  height:30px;
+  width:30px;
+  border-radius:100%;
+  position:fixed;
+  right:5px;
+  bottom:5px;
+  cursor:pointer;
+}
+#quick-jisho-toggle:hover { opacity:0.7; }
+
+#quick-jisho-window {
+  background:#FFF;
+  border:1px solid #CCC;
+  box-shadow:0px 0px 6px rgba(0, 0, 0, 0.25);
+  height:300px;
+  width:500px;
+  position:fixed;
+  right:5px;
+  bottom:40px;
+  opacity:1;
+  transition-duration:300ms;
+  transition-property:opacity, bottom;
+}
+
+#quick-jisho-window.quick-jisho-hidden {
+  bottom:-310px;
+  opacity:0;
+}
+
+#quick-jisho-title {
+  color:#fff;
+  background:#f60;
+  font-size:18px;
+  text-align:center;
+  line-height:32px;
+  margin:-1px -1px 0 -1px;
+}
+
+.quick-jisho-row { padding:3px; }
+.quick-jisho-row:first-child { padding-bottom:0px; }
+
+#quick-jisho-search {
+  width:100%;
+  height:35px;
+  box-sizing:border-box;
+}
+
+#quick-jisho-results {
+  height:219px;
+  padding:3px;
+  margin:0;
+  overflow-y:auto;
+}
+
 
 
 
@@ -1892,6 +1955,9 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   
   /* reduce size of lesson titles on index */
   #lessons .lesson-title { font-size:18px; }
+  
+  /* reduce quick dictionary width */
+  #quick-jisho-window { width:300px; }
 }
 
 /* improve clickability of list links for touch screens */
