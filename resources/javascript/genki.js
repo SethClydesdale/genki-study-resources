@@ -94,6 +94,7 @@
       'lesson-1/workbook-4|Workbook: NounのNoun|p.15; I',
       'lesson-1/workbook-5|Workbook: XはYです|p.15; II',
       'lesson-1/workbook-6|Workbook: Question Sentences|p.16; I & II',
+      'lesson-1/workbook-8|Workbook: Listening Comprehension 1|p.17; A',
       'lesson-1/workbook-7|Workbook: Questions|p.19',
       'lesson-1/literacy-1|Hiragana Practice: Identifying Hiragana|p.290; I-A',
       'lesson-1/literacy-2|Hiragana Practice: Word Match|p.290; I-B',
@@ -1289,6 +1290,11 @@
           
           if (data[0] == '!IMG') {
             return Genki.parse.image(data);
+            
+          } else if (data[0] == '!AUDIO') {
+            return '<div class="audio-block center">'+
+              '<audio controls><source src="' + getPaths() + 'resources/audio/' + data[1] + '.mp3" type="audio/mpeg"></audio>'+
+            '</div>';
             
           } else {
             // Split the answer from the hint.
