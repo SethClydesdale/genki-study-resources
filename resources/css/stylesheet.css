@@ -1130,8 +1130,13 @@ input.writing-zone-input:focus { border-color:#F60; }
 }
 
 .text-block p { margin:0 0 25px 0; }
-.fill-quiz .problem, .fill-quiz .big-margin { margin:0 0 40px 0; }
-.fill-quiz .small-margin .problem { margin:0 0 25px 0; }
+.fill-quiz .problem, .fill-quiz .big-margin { margin-bottom:40px; }
+.fill-quiz .small-margin .problem, .audio-block { margin-bottom:25px; }
+.fill-quiz .inline-problem .problem {
+  display:inline-block;
+  margin-right:25px;
+}
+
 .fill-quiz span.problem {
   display:inline-block;
   margin:0;
@@ -1142,6 +1147,24 @@ input.writing-zone-input:focus { border-color:#F60; }
   font-weight:bold;
 }
 .fill-quiz .alt-phrase-sep { color:#06C; }
+
+
+/* image list */
+.image-list span {
+  position:relative;
+  display:inline-block;
+  margin:0 25px 25px 0;
+}
+
+.image-list span i {
+  color:#333;
+  font-size:13px;
+  font-weight:bold;
+  font-style:normal;
+  position:absolute;
+  top:2px;
+  left:4px;
+}
 
 /* columns */
 .columns-2 > * {
@@ -1157,6 +1180,19 @@ input.writing-zone-input:focus { border-color:#F60; }
 p.section-desc {
   font-weight:bold;
   margin:20px 0;
+}
+
+.section-number {
+  font-weight:normal;
+  text-align:center;
+  border:1px solid #333;
+  border-radius:100%;
+  display:inline-block;
+  height:20px;
+  width:20px;
+  line-height:21px;
+  vertical-align:middle;
+  cursor:default;
 }
 
 /* counter for problems */
