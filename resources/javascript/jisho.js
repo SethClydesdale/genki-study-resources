@@ -1021,6 +1021,7 @@ Genki.jisho = {
     { ja : '自転車|じてんしゃ', en : 'bicycle', l : '会L2' },
     { ja : '自動車|じどうしゃ', en : 'automobile', l : '読L10-漢字表' },
     { ja : '自動販売機|じどうはんばいき', en : 'vending machine', l : '読L10-漢字表' },
+    { ja : 'シドニー', en : 'Sydney', l : 'ワークブックL1-P18' },
     { ja : '品物|しなもの', en : 'merchandise article', l : '読L17-漢字表' },
     { ja : '死ぬ|しぬ', en : 'to die', v : 'u', l : '会L6' },
     { ja : '始発|しはつ', en : 'first train', l : '読L16-漢字表' },
@@ -1323,6 +1324,7 @@ Genki.jisho = {
     { ja : 'そうですか', en : 'I see.; Is that so?', l : '会L1' },
     { ja : 'そうですね', en : "That's right.; Let me see.", l : '会L3' },
     { ja : '送料|そうりょう', en : 'postage', l : '読L21-漢字表' },
+    { ja : 'ソウル', en : 'Seoul', l : 'ワークブックL1-P18' },
     { ja : '速達|そくたつ', en : 'special delivery', l : '会L5(e)' },
     { ja : 'そこ', en : 'there', l : '会L2' },
     { ja : '素質|そしつ', en : 'aptitude', l : '読L19-漢字表' },
@@ -1388,6 +1390,7 @@ Genki.jisho = {
     { ja : '台風|たいふう', en : 'typhoon', l : '会L16' },
     { ja : 'たいへん', en : 'greatly', l : '読L19-II' },
     { ja : '大変|たいへん（な）', en : 'tough (situation)', l : '読L5-II, 会L6' },
+    { ja : 'タイペイ', en : 'Taipei', l : 'ワークブックL1-P18' },
     { ja : 'タイヤ', en : 'tire', l : '会L23' },
     { ja : '絶える|たえる', en : 'to die out', v : 'ru', l : '読L20-漢字表' },
     { ja : 'タオル', en : 'towel', l : '会L18' },
@@ -1779,6 +1782,7 @@ Genki.jisho = {
     { ja : '入社|にゅうしゃ', en : 'entry to a company', l : '読L7-漢字表' },
     { ja : 'ニュース', en : 'news', l : '会L17' },
     { ja : 'ニューデリー', en : 'New Delhi (India)', l : '読L2-I' },
+    { ja : 'ニューヨーク', en : 'New York', l : 'ワークブックL1-P18' },
     { ja : '～によって', en : 'depending on...', l : '読L23-II' },
     { ja : '～によると', en : 'according to...', l : '会L17' },
     { ja : '庭|にわ', en : 'garden', l : '会L15' },
@@ -1918,6 +1922,7 @@ Genki.jisho = {
     { ja : '(早/速)く|はやく', en : '(do something) early; fast', l : '会L10' },
     { ja : '払う|はらう', en : 'to pay', v : 'u', l : '会L10' },
     { ja : '払い戻し|はらいもどし', en : 'refund', l : '読L20-漢字表' },
+    { ja : 'パリ', en : 'Paris', l : 'ワークブックL1-P18' },
     { ja : 'パリ経由|パリけいゆ', en : 'via Paris', l : '読L21-漢字表' },
     { ja : '春|はる', en : 'spring', l : '会L10' },
     { ja : '貼る|はる', en : 'to post; to stick', v : 'u', l : '会L21' },
@@ -2494,7 +2499,8 @@ Genki.jisho = {
     { ja : 'ロシア', en : 'Russia', l : 'ワークブックL10-P92' },
     { ja : '六百|ろっぴゃく', en : 'six hundred', l : '読L3-漢字表' },
     { ja : '六分|ろっぷん', en : 'six minutes', l : '会L1(e)' },
-    { ja : 'ロボット', en : 'robot', l : '読L16-II' }
+    { ja : 'ロボット', en : 'robot', l : '読L16-II' },
+    { ja : 'ロンドン', en : 'London', l : 'ワークブックL1-P18' }
   ],
   
   'わ' : [
