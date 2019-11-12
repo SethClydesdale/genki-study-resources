@@ -95,6 +95,7 @@
       'lesson-1/workbook-5|Workbook: XはYです|p.15; II',
       'lesson-1/workbook-6|Workbook: Question Sentences|p.16; I & II',
       'lesson-1/workbook-8|Workbook: Listening Comprehension 1|p.17; A',
+      'lesson-1/workbook-9|Workbook: Listening Comprehension 2|p.18; B, C, & D',
       'lesson-1/workbook-7|Workbook: Questions|p.19',
       'lesson-1/literacy-1|Hiragana Practice: Identifying Hiragana|p.290; I-A',
       'lesson-1/literacy-2|Hiragana Practice: Word Match|p.290; I-B',
@@ -1291,10 +1292,13 @@
           if (data[0] == '!IMG') {
             return Genki.parse.image(data);
             
-          } else if (data[0] == '!AUDIO') {
+          } else if (data[0] == '!AUDIO') { // audio tracks
             return '<div class="audio-block center">'+
-              '<audio controls><source src="' + getPaths() + 'resources/audio/' + data[1] + '.mp3" type="audio/mpeg"></audio>'+
+              '<audio id="' + data[1] + '" controls><source src="' + getPaths() + 'resources/audio/' + data[1] + '.mp3" type="audio/mpeg"></audio>'+
             '</div>';
+            
+          } else if (data[0] == '!PLAY') { // buttons for playing specific points of audio
+            return '<button class="button play-button" onclick="Genki.playAudio(\'' + data[1] + '\', ' + data[2] + ');"><i class="fa">&#xf04b;</i></button>';
             
           } else {
             // Split the answer from the hint.
@@ -1395,6 +1399,16 @@
       // also disabled in the appendix 
       if (!/drag|kana/.test(o.type) && !Genki.appendix) {
         Genki.quickJisho.create();
+      }
+      
+      // debug mode
+      // logs certain things to the console for debugging
+      if (/debug=true/.test(window.location.search)) {
+        for (var a = document.querySelectorAll('AUDIO'), i = 0, j = a.length; i < j; i++) {
+          a[i].ontimeupdate = function () {
+            console.log(this.id, Math.round(this.currentTime));
+          }
+        }
       }
     },
 
@@ -2005,6 +2019,17 @@
           
           delete Genki.quickJisho.searchTimeout;
         }, 300);
+      }
+    },
+    
+    
+    // plays the specific audio element
+    playAudio : function (id, time) {
+      var audio = document.getElementById(id);
+      
+      if (audio) {
+        audio.currentTime = time;
+        audio.play();
       }
     },
     
