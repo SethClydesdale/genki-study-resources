@@ -1406,7 +1406,7 @@
       if (/debug=true/.test(window.location.search)) {
         for (var a = document.querySelectorAll('AUDIO'), i = 0, j = a.length; i < j; i++) {
           a[i].ontimeupdate = function () {
-            console.log(this.id, Math.round(this.currentTime));
+            console.log(this.id, this.currentTime);
           }
         }
       }
@@ -1896,18 +1896,20 @@
     // quick dictionary functionality
     quickJisho : {
       hidden : true,
+      selectorHidden : true,
       
       // creates the quick dictionary button and popup
       create : function () {
         var button = document.createElement('DIV'),
             box = document.createElement('DIV'),
+            selector = document.createElement('BUTTON'),
             frag = document.createDocumentFragment();
         
         // button attrs
         button.id = 'quick-jisho-toggle';
         button.onclick = Genki.quickJisho.toggle;
         button.innerHTML = '<i class="fa">&#xf02d;</i>';
-        button.title = 'Open Quick Dictionary'
+        button.title = 'Toggle Quick Dictionary'
         
         // box attrs
         box.id = 'quick-jisho-window';
@@ -1923,9 +1925,17 @@
             '</div>'+
           '</div>';
         
+        // selection button
+        selector.id = 'quick-jisho-selector';
+        selector.className = 'button';
+        selector.style.display = 'none';
+        selector.innerHTML = '<i class="fa">&#xf002;</i>Look up';
+        selector.onclick = Genki.quickJisho.lookUp;
+        
         // add nodes to the document
         frag.appendChild(box);
         frag.appendChild(button);
+        frag.appendChild(selector);
         document.body.appendChild(frag);
         document.querySelector('.footer-right').style.marginRight = '25px'; // offset footer so texts are visible
         
@@ -1934,8 +1944,18 @@
           box : box,
           search : document.getElementById('quick-jisho-search'),
           results : document.getElementById('quick-jisho-results'),
-          hits : document.getElementById('quick-jisho-hits')
+          hits : document.getElementById('quick-jisho-hits'),
+          selector : document.getElementById('quick-jisho-selector')
         };
+        
+        // selection handler
+        document.onselectionchange = Genki.quickJisho.getSelection;
+        
+        // get mouse position for adjusting x/y values of the selector
+        document.onmousemove = function(e) {
+          Genki.quickJisho.x = Math.abs(e.pageX - document.body.clientWidth) < 100 ? e.pageX - 95 : e.pageX;
+          Genki.quickJisho.y = Math.abs(e.pageY - document.body.clientHeight) < 40 ? e.pageY - 32 : e.pageY + 12;
+        }
       },
       
       
@@ -2019,6 +2039,48 @@
           
           delete Genki.quickJisho.searchTimeout;
         }, 300);
+      },
+      
+      
+      // look up a selected word
+      lookUp : function () {
+        if (Genki.quickJisho.hidden) {
+          Genki.quickJisho.toggle();
+        }
+
+        Genki.quickJisho.cache.search.value = ''.trim ? Genki.quickJisho.selectedText.trim() : Genki.quickJisho.selectedText;
+        Genki.quickJisho.search(Genki.quickJisho.cache.search.value);
+
+        // hide the selector search
+        this.style.display = 'none';
+        Genki.quickJisho.selectorHidden = true;
+      },
+      
+      
+      // gets the selected text and shows the look up button
+      getSelection : function () {
+        if (document.getSelection) {
+          var selection = document.getSelection();
+
+          if (selection.type == 'Range' && selection.toString && !/quick-jisho/.test(selection.focusNode.className)) {
+            Genki.quickJisho.selectedText = selection.toString();
+            Genki.quickJisho.cache.selector.style.left = Genki.quickJisho.x + 'px';
+            Genki.quickJisho.cache.selector.style.top = Genki.quickJisho.y + 'px';
+
+            if (Genki.quickJisho.selectorHidden) {
+              Genki.quickJisho.cache.selector.style.display = '';
+              Genki.quickJisho.selectorHidden = false;
+            }
+
+          } else {
+            Genki.quickJisho.selectedText = '';
+
+            if (!Genki.quickJisho.selectorHidden) {
+              Genki.quickJisho.cache.selector.style.display = 'none';
+              Genki.quickJisho.selectorHidden = true;
+            }
+          }
+        }
       }
     },
     
