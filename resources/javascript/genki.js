@@ -145,6 +145,7 @@
       'lesson-2/workbook-4|Workbook: ここ, そこ, and あそこ・だれの|p.23; I & II',
       'lesson-2/workbook-5|Workbook: Noun も|p.24; I',
       'lesson-2/workbook-6|Workbook: Noun じゃないです|p.24; II',
+      'lesson-2/workbook-8|Workbook: Listening Comprehension|p.25; A, B, & C',
       'lesson-2/workbook-7|Workbook: Questions|p.26',
       'lesson-2/literacy-1|Katakana Practice: Identifying Katakana|p.294; I-A',
       'lesson-2/literacy-2|Katakana Practice: Word Match|p.294; I-B',
