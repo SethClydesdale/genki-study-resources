@@ -1,7 +1,7 @@
 // Dictionary for Genki Volumes I & II
 
 // # DEFINITION SYNTAX #
-// preferred if definitions are kept to one line
+// preferred if definitions are kept to one line and are in alphabetical order (see the dictionary key for hiragana order)
 /*{
    ja : 'JAPANESE_DEFINITION|FURIGANA(OPTIONAL)', // | should be omitted if no furigana
    en : 'ENGLISH_DEFINITION',
@@ -229,6 +229,7 @@ Genki.jisho = {
     { ja : '宇宙飛行士|うちゅうひこうし', en : 'astronaut', l : '会L11' },
     { ja : '写す|うつす', en : 'to copy', v : 'u', l : '読L16-II' },
     { ja : '映る|うつる', en : 'to be reflected', v : 'u', l : '読L11-漢字表' },
+    { ja : 'うどん', en : 'udon; thick Japanese wheat noodles', l : 'ワークブックL2-P25' },
     { ja : 'うまく', en : 'well; successfully; skillfully', l : '読L22-II' },
     { ja : 'うまくいく', en : 'to go well', v : 'u', l : '読L22-II' },
     { ja : '生まれる|うまれる', en : 'to be born', v : 'ru', l : '読L15-II, 会L17' },
@@ -535,6 +536,7 @@ Genki.jisho = {
     { ja : '神様|かみさま', en : 'God', l : '読L12-II, 会L22' },
     { ja : '紙皿|かみざら', en : 'paper plate', l : '読L20-漢字表' },
     { ja : '髪をとかす|かみをとかす', en : "to comb one's hair", v : 'u', l : '会L17' },
+    { ja : 'ガム', en : 'gum', l : 'ワークブックL2-P25' },
     { ja : 'かめ', en : 'turtle', l : '読L13-II' },
     { ja : 'カメラ', en : 'camera', l : '会L8' },
     { ja : '通う|かよう', en : 'to commute to', v : 'u', l : '読L22-II' },
@@ -801,6 +803,7 @@ Genki.jisho = {
     { ja : '紅葉|こうよう', en : 'red leaves; autumn tints', l : '読L15-II' },
     { ja : '声|こえ', en : 'voice', l : '読L10-II' },
     { ja : 'コーヒー', en : 'coffee', l : '会L3' },
+    { ja : 'コーラ', en : 'cola', l : 'ワークブックL2-P25' },
     { ja : '五|ご', en : 'five', l : '読L3-漢字表' },
     { ja : 'ゴールド', en : 'gold', l : '会L9(e)' },
     { ja : '五月|ごがつ', en : 'May', l : '会L4(e)' },
@@ -1215,6 +1218,7 @@ Genki.jisho = {
     { ja : '末|すえ', en : 'the end', l : '読L22-漢字表' },
     { ja : 'スカート', en : 'skirt', l : '会L18' },
     { ja : '好き|すき（な）', en : 'fond of; to like', l : '会L5' },
+    { ja : 'すき焼き|すきやき', en : 'sukiyaki; thin slices of beef, cooked with various vegetables in a table-top cast-iron pan', l : 'ワークブックL2-P25' },
     { ja : 'スキー', en : 'ski', l : '会L9' },
     { ja : 'すぐ', en : 'right away', l : '会L6' },
     { ja : '少ない|すくない', en : 'a little; a few', l : '会L17' },
@@ -2062,6 +2066,7 @@ Genki.jisho = {
     { ja : '冬休み|ふゆやすみ', en : 'winter vacation', l : '読L19-漢字表' },
     { ja : 'フライドポテト', en : 'french fries', l : '読L2-I' },
     { ja : 'ブラジル', en : 'Brazil', l : '読L2-I' },
+    { ja : 'フランス', en : 'France', l : 'ワークブックL2-P25' },
     { ja : 'ふる', en : 'to turn down (somebody); to reject; to jilt', v : 'u', l : '会L21' },
     { ja : '古い|ふるい', en : 'old (thing)', l : '会L5' },
     { ja : '無礼|ぶれい（な）', en : 'rude', l : '読L20-漢字表' },
@@ -2340,6 +2345,7 @@ Genki.jisho = {
     { ja : '訳す|やくす', en : 'to translate', v : 'u', l : '会L16' },
     { ja : '約束|やくそく', en : 'promise; appointment', l : '会L13' },
     { ja : '約束を守る|やくそくをまもる', en : 'to keep a promise', v : 'u', l : '会L13' },
+    { ja : '厄年|やくどし', en : 'unlucky year; critical year', l : '読L21-II' },
     { ja : '野菜|やさい', en : 'vegetable', l : '会L2' },
     { ja : 'やさしい', en : 'easy (problem); kind (person)', l : '会L5' },
     { ja : '安い|やすい', en : 'inexpensive; cheap (thing)', l : '会L5' },
