@@ -142,8 +142,11 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 
 /* aesthetic styles */
 .center { text-align:center; }
+.right { text-align:right; }
+.left { text-align:left; }
 
 .ul { text-decoration:underline; }
+.inline { display:inline-block; }
 
 /* text styles */
 .t-red { color:#F00; }
@@ -1144,15 +1147,16 @@ input.writing-zone-input:focus { border-color:#F60; }
 }
 
 .text-block p { margin:0 0 25px 0; }
+.audio-block { margin:25px 0 25px 0; }
 .fill-quiz .problem, .fill-quiz .big-margin { margin-bottom:40px; }
-.fill-quiz .small-margin .problem, .fill-quiz .small-margin .block, .audio-block { margin-bottom:25px; }
+.fill-quiz .small-margin .problem, .fill-quiz .small-margin .block { margin-bottom:25px; }
 .fill-quiz .inline-problem .problem, .fill-quiz .inline-problem .block {
   vertical-align:top;
   display:inline-block;
   margin-right:25px;
 }
 
-.fill-quiz .image-margin img { margin:3px; }
+.fill-quiz .image-margin img, .margin { margin:3px; }
 
 .fill-quiz span.problem {
   display:inline-block;
@@ -1165,6 +1169,10 @@ input.writing-zone-input:focus { border-color:#F60; }
 }
 .fill-quiz .alt-phrase-sep { color:#06C; }
 
+.label {
+  display:inline-block;
+  width:120px;
+}
 
 /* image list */
 .image-list span {
