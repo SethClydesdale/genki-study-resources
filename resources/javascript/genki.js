@@ -187,7 +187,7 @@
       'lesson-3/workbook-6|Workbook: Suggestion Using ～ませんか|p.31; I & II',
       'lesson-3/workbook-7|Workbook: Frequency Adverbs|p.32',
       'lesson-3/workbook-9|Workbook: Listening Comprehension 1|p.33; A & B',
-      //'lesson-3/workbook-10|Workbook: Listening Comprehension 2|p.34; C & D',
+      'lesson-3/workbook-10|Workbook: Listening Comprehension 2|p.34; C & D',
       'lesson-3/workbook-8|Workbook: Questions|p.35',
       'lesson-3/literacy-1|Kanji Practice: 一 and 二|p.298',
       'lesson-3/literacy-2|Kanji Practice: 三 and 四|p.298',
