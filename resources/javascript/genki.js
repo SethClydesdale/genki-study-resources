@@ -236,6 +236,7 @@
       'lesson-4/workbook-5|Workbook: Past Tense (Verbs)|p.40; I & II',
       'lesson-4/workbook-6|Workbook: も|p.41',
       'lesson-4/workbook-7|Workbook: ～時間・Particles|p.42; I & II',
+      'lesson-4/workbook-9|Workbook: Listening Comprehension|p.43; A, B, & C',
       'lesson-4/workbook-8|Workbook: Questions|p.44',
       'lesson-4/literacy-1|Kanji Practice: 日 and 本|p.302',
       'lesson-4/literacy-2|Kanji Practice: 人 and 月|p.302',
