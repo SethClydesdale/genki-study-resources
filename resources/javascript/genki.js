@@ -285,6 +285,7 @@
       'lesson-5/workbook-5|Workbook: Adjective + Noun|p.49; I & II',
       'lesson-5/workbook-6|Workbook: 好き(な)／きらい(な)|p.50',
       'lesson-5/workbook-7|Workbook: ～ましょう|p.51; I & II',
+      'lesson-5/workbook-9|Workbook: Listening Comprehension|p.52; A, B, & C',
       'lesson-5/workbook-8|Workbook: Questions|p.53; I & II',
       'lesson-5/literacy-1|Kanji Practice: 山, 川, and 元|p.306',
       'lesson-5/literacy-2|Kanji Practice: 気, 天, and 私|p.306',
