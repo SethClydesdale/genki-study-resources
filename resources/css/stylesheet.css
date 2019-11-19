@@ -937,10 +937,12 @@ input.writing-zone-input:hover { border-color:#999; }
 input.writing-zone-input:focus { border-color:#F60; }
 
 /* custom width */
-.even-width .writing-zone, .even-width .writing-zone-input {
+.even-width .writing-zone, .even-width .writing-zone-input, .max-width .writing-zone, .max-width .writing-zone-input {
   text-align:left;
   width:100% !important;
 }
+.fill-quiz .even-width .writing-zone-input { padding:3px; }
+.max-width .writing-zone, .max-width .writing-zone-input { text-align:center; }
 
 .large-width .writing-zone, .large-width .writing-zone-input {
   width:90% !important;
