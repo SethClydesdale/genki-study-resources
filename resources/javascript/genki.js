@@ -375,6 +375,7 @@
       'lesson-7/workbook-5|Workbook: Te-forms for Joining Sentences|p.68; I & II',
       'lesson-7/workbook-6|Workbook: Verb Stem + に行く／来る／帰る|p.69; I',
       'lesson-7/workbook-7|Workbook: Counting People|p.70',
+      'lesson-7/workbook-9|Workbook: Listening Comprehension|p.71; A, B, & C',
       'lesson-7/workbook-8|Workbook: Questions|p.72',
       'lesson-7/literacy-1|Kanji Practice: 京, 子, and 小|p.318',
       'lesson-7/literacy-2|Kanji Practice: 会 and 社|p.318',
