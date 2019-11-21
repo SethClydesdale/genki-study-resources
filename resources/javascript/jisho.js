@@ -202,6 +202,7 @@ Genki.jisho = {
     { ja : '色々|いろいろ（な）', en : 'various; different kinds of', l : '読L9-II, 会L13' },
     { ja : 'いろいろな所|いろいろなところ', en : 'various places', l : '読L11-漢字表' },
     { ja : '飲酒運転|いんしゅうんてん', en : 'drunken driving', l : '読L5-漢字表' },
+    { ja : 'インタビュー', en : 'interview', l : 'ワークブックL8-P80' },
     { ja : 'インド', en : 'India', l : '読L2-I' },
     { ja : 'インドネシア', en : 'Indonesia', l : '読L2-I' },
     { ja : 'インターネット', en : 'Internet', l : '会L15' }

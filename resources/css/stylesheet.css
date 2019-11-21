@@ -1152,6 +1152,7 @@ input.writing-zone-input:focus { border-color:#F60; }
 .audio-block { margin:25px 0 25px 0; }
 .fill-quiz .problem, .fill-quiz .big-margin { margin-bottom:40px; }
 .fill-quiz .small-margin .problem, .fill-quiz .small-margin .block { margin-bottom:25px; }
+.fill-quiz .no-margin .problem, .fill-quiz .no-margin .block { margin-bottom:0px; }
 .fill-quiz .inline-problem .problem, .fill-quiz .inline-problem .block {
   vertical-align:top;
   display:inline-block;
@@ -1239,6 +1240,12 @@ p.section-desc {
   margin:0 1px;
   min-width:0;
 }
+
+.fill-quiz .pad-zones .writing-zone {
+  vertical-align:top;
+  margin-bottom:25px;
+}
+.fill-quiz .big-margin.pad-zones .writing-zone { margin-bottom:40px; }
 
 .fill-quiz .writing-zone-input {
   font-size:14px;
