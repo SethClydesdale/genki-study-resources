@@ -29,7 +29,7 @@
       writing_mistakes : 'The items outlined in <span class="t-red t-bold">red</span> were answered wrong. Review these problems before trying again.',
       multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red t-bold">red</span>. The correct answers are outlined in <span class="t-blue t-bold">blue</span>. Review these problems before trying again.',
       fill_mistakes : 'The items underlined in <span class="t-red t-bold">red</span> were answered wrong, the correct answers are listed underneath in <span class="t-green t-bold">green</span>. Review these problems before trying again.',
-      sub_answers : '<b>Note:</b> Answers inside <span class="t-blue t-bold">blue</span> parentheses separated by "<span class="alt-phrase-sep">/</span>" are a list of possible sub-answers; only one can be used.<br>For example.. <span class="t-green"><span class="alt-phrase">(</span>あの<span class="alt-phrase-sep">/</span>その<span class="alt-phrase">)</span>ねこ</span>: そのねこ or あのねこ <span class="t-green">(good)</span> vs あの/そのねこ <span class="t-red">(bad)</span>',
+      sub_answers : '<b>Note:</b> Answers inside <span class="t-blue t-bold">blue</span> parentheses separated by "<span class="alt-phrase-sep">/</span>" are a list of possible sub-answers; only one can be used.<br>For example.. <span class="t-green"><span class="alt-phrase">(</span>あの<span class="alt-phrase-sep">/</span>その<span class="alt-phrase">)</span>ねこ</span>: そのねこ or あのねこ <span class="t-green">(good)</span> vs あの/そのねこ <span class="t-red">(bad)</span><br><span class="t-green"><span class="alt-phrase">(</span>この<span class="alt-phrase-sep">/</span><span class="alt-phrase">)</span>ねこ</span> means the sub-answer is optional; it can be left out.',
       
       // buttons
       // review button for drag/drop exercises
@@ -420,6 +420,7 @@
       'lesson-8/workbook-5|Workbook: ～ないでください|p.77; I & II',
       'lesson-8/workbook-6|Workbook: Verb のが好きです|p.78; I & II',
       'lesson-8/workbook-7|Workbook: が・何か and 何も|p.79; I & II',
+      'lesson-8/workbook-9|Workbook: Listening Comprehension|p.80; A, B, & C',
       'lesson-8/workbook-8|Workbook: Questions|p.81; I & II',
       'lesson-8/literacy-1|Kanji Practice: 員, 新, and 聞|p.323',
       'lesson-8/literacy-2|Kanji Practice: 作, 仕, and 事|p.323',
