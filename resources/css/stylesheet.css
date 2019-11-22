@@ -1240,7 +1240,7 @@ p.section-desc {
   margin:0 1px;
   min-width:0;
 }
-
+.fill-quiz .valign-off .writing-zone { vertical-align:0; }
 .fill-quiz .pad-zones .writing-zone {
   vertical-align:top;
   margin-bottom:25px;

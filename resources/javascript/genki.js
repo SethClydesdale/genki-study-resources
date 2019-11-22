@@ -463,6 +463,7 @@
       'lesson-9/workbook-5|Workbook: Qualifying Nouns with Verbs|p.86',
       'lesson-9/workbook-6|Workbook: まだ～ていません|p.87',
       'lesson-9/workbook-7|Workbook: ～から|p.88; I & II',
+      'lesson-9/workbook-9|Workbook: Listening Comprehension|p.89; A, B, & C',
       'lesson-9/workbook-8|Workbook: Questions|p.90',
       'lesson-9/literacy-1|Kanji Practice: 午, 後, and 前|p.328',
       'lesson-9/literacy-2|Kanji Practice: 名 and 白|p.328',
