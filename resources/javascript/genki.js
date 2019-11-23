@@ -506,6 +506,7 @@
       'lesson-10/workbook-4|Workbook: ～つもりだ|p.94; I & II',
       'lesson-10/workbook-5|Workbook: Adjective + なる|p.95; I & II',
       'lesson-10/workbook-6|Workbook: ～で行きます／かかります・どこかに／どこにも|p.96; I & II',
+      'lesson-10/workbook-8|Workbook: Listening Comprehension|p.97-98; A, B, & C',
       'lesson-10/workbook-7|Workbook: Questions|p.99',
       'lesson-10/literacy-1|Kanji Practice: 住, 正, and 年|p.334',
       'lesson-10/literacy-2|Kanji Practice: 売, 買, and 町|p.334',
