@@ -543,6 +543,7 @@
       'lesson-11/workbook-2|Workbook: ～たり～たりする|p.101; I & II',
       'lesson-11/workbook-3|Workbook: ～ことがある|p.102; I & II',
       'lesson-11/workbook-4|Workbook: Noun A や Noun B|p.103',
+      'lesson-11/workbook-6|Workbook: Listening Comprehension|p.104; A, B, & C',
       'lesson-11/workbook-5|Workbook: Questions|p.105; I & II',
       'lesson-11/literacy-1|Kanji Practice: 手, 紙, and 好|p.340',
       'lesson-11/literacy-2|Kanji Practice: 近, 明, 病, and 院|p.340',
