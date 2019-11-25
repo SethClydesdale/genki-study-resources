@@ -583,6 +583,7 @@
       'lesson-12/workbook-4|Workbook: ～ので|p.109; I & II',
       'lesson-12/workbook-5|Workbook: ～なければいけません／なきゃいけません|p.110; I & II',
       'lesson-12/workbook-6|Workbook: ～でしょう|p.111; I & II',
+      'lesson-12/workbook-8|Workbook: Listening Comprehension|p.112; A, B, & C',
       'lesson-12/workbook-7|Workbook: Questions|p.113',
       'lesson-12/literacy-1|Kanji Practice: 昔, 々, and 神|p.346',
       'lesson-12/literacy-2|Kanji Practice: 早, 起, and 牛|p.346',
