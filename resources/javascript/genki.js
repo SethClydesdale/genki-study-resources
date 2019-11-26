@@ -628,6 +628,7 @@
       'lesson-13/workbook-6|Workbook: ～てみる|p.16; I & II',
       'lesson-13/workbook-7|Workbook: なら|p.17; I & II',
       'lesson-13/workbook-8|Workbook: 一週間に三回|p.18; I & II',
+      'lesson-13/workbook-10|Workbook: Listening Comprehension|p.19; A, B, & C',
       'lesson-13/workbook-9|Workbook: Questions|p.20; I & II',
       'lesson-13/literacy-1|Kanji Practice: 物, 鳥, and 料|p.276',
       'lesson-13/literacy-2|Kanji Practice: 理, 特, and 安|p.276',
