@@ -2032,6 +2032,7 @@ Genki.jisho = {
     { ja : '広い|ひろい', en : 'spacious; wide', l : '会L15' },
     { ja : '拾う|ひろう', en : 'to pick up (something)', v : 'u', l : '会L22' },
     { ja : '広島|ひろしま', en : 'Hiroshima', l : '読L15-漢字表' },
+    { ja : '広島平和記念公園|ひろしまへいわきねんこうえん', en : 'Hiroshima Peace Memorial Park', l : 'ワークブックL15-P33' },
     { ja : '広場|ひろば', en : 'square; open space', l : '読L15-II' },
     { ja : '便|びん', en : 'flight', l : '会L10' },
     { ja : 'ピンク', en : 'pink', l : '会L9(e)' },

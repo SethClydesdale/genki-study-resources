@@ -705,6 +705,7 @@
       'lesson-15/workbook-4|Workbook: ～ておく|p.30; I & II',
       'lesson-15/workbook-5|Workbook: Using Sentences to Qualify Nouns 1|p.31; I & II',
       'lesson-15/workbook-6|Workbook: Using Sentences to Qualify Nouns 2|p.32; I & II',
+      'lesson-15/workbook-8|Workbook: Listening Comprehension|p.33; A, B, & C',
       'lesson-15/workbook-7|Workbook: Questions|p.34; I',
       'lesson-15/literacy-1|Kanji Practice: 死, 意, and 味|p.288',
       'lesson-15/literacy-2|Kanji Practice: 注, 夏, 魚, and 寺|p.288',
