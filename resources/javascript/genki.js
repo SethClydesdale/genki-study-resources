@@ -743,6 +743,7 @@
       'lesson-16/workbook-5|Workbook: ～時 1|p.39; I & II',
       'lesson-16/workbook-6|Workbook: ～時 2|p.40; I & II',
       'lesson-16/workbook-7|Workbook: ～てすみませんでした|p.41; I & II',
+      'lesson-16/workbook-9|Workbook: Listening Comprehension|p.42; A, B, & C',
       'lesson-16/workbook-8|Workbook: Questions|p.43; I',
       'lesson-16/literacy-1|Kanji Practice: 供, 世, and 界|p.295',
       'lesson-16/literacy-2|Kanji Practice: 全, 部, and 始|p.295',
