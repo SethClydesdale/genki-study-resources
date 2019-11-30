@@ -781,6 +781,7 @@
       'lesson-17/workbook-3|Workbook: ～なくてもいいです|p.46; I, II, & III',
       'lesson-17/workbook-4|Workbook: ～みたいです|p.47; I & II',
       'lesson-17/workbook-5|Workbook: ～前に／～てから|p.48; I & II',
+      'lesson-17/workbook-7|Workbook: Listening Comprehension|p.49; A, B, & C',
       'lesson-17/workbook-6|Workbook: Questions|p.50; I',
       'lesson-17/literacy-1|Kanji Practice: 歳, 習, and 主|p.301',
       'lesson-17/literacy-2|Kanji Practice: 結, 婚, and 集|p.301',
