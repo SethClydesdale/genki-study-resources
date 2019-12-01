@@ -822,6 +822,7 @@
       'lesson-18/workbook-4|Workbook: ～と|p.54; I, II, & III',
       'lesson-18/workbook-5|Workbook: ～ながら|p.55; I, II, & III',
       'lesson-18/workbook-6|Workbook: ～ばよかったです|p.56; I, II, & III',
+      'lesson-18/workbook-8|Workbook: Listening Comprehension|p.57; A, B, & C',
       'lesson-18/workbook-7|Workbook: Questions|p.58; I',
       'lesson-18/literacy-1|Kanji Practice: 目, 的, and 力|p.308',
       'lesson-18/literacy-2|Kanji Practice: 洋, 服, 堂, and 授|p.308',
