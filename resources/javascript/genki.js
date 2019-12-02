@@ -860,6 +860,7 @@
       'lesson-19/workbook-4|Workbook: ～てくれてありがとう|p.62; I & II',
       'lesson-19/workbook-5|Workbook: ～てよかったです|p.63; I & II',
       'lesson-19/workbook-6|Workbook: ～はずです|p.64; I, II, & III',
+      'lesson-19/workbook-8|Workbook: Listening Comprehension|p.65-66; A, B, & C',
       'lesson-19/workbook-7|Workbook: Questions|p.67; I',
       'lesson-19/literacy-1|Kanji Practice: 春, 秋, and 冬|p.315',
       'lesson-19/literacy-2|Kanji Practice: 花, 様, and 不|p.315',
