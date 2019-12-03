@@ -1571,6 +1571,7 @@ p.section-desc {
   text-align:center;
   height:0;
   margin-top:-3px;
+  user-select:none;
 }
 
 #light-switch-label {

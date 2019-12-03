@@ -902,6 +902,7 @@
       'lesson-20/workbook-5|Workbook: ～ないで|p.72; I & II',
       'lesson-20/workbook-6|Workbook: Questions Within Larger Sentences|p.73; I & II',
       'lesson-20/workbook-7|Workbook: Name という Item・～やすい／～にくい|p.74; I & II',
+      'lesson-20/workbook-9|Workbook: Listening Comprehension|p.75; A, B, & C',
       'lesson-20/workbook-8|Workbook: Questions|p.76; I',
       'lesson-20/literacy-1|Kanji Practice: 皿, 声, and 茶|p.323',
       'lesson-20/literacy-2|Kanji Practice: 止, 枚, and 両|p.323',
