@@ -1950,6 +1950,7 @@ Genki.jisho = {
     { ja : '春巻|はるまき', en : 'spring roll', l : '読L19-漢字表' },
     { ja : '晴れ|はれ', en : 'sunny weather', l : '会L12' },
     { ja : '晴れる|はれる', en : 'to become sunny', v : 'ru', l : '会L19' },
+    { ja : 'パレス', en : 'palace', l : 'ワークブックL21-P84' },
     { ja : 'バレンタインデー', en : "St. Valentine's Day", l : '会L14' },
     { ja : '半|はん', en : 'half', l : '会L1' },
     { ja : '～番|～ばん', en : 'number...', l : '会L11(e), 会L15' },

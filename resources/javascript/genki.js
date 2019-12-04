@@ -939,6 +939,7 @@
       'lesson-21/workbook-5|Workbook: ～間に|p.81; I & II',
       'lesson-21/workbook-6|Workbook: Adjective + する|p.82; I & II',
       'lesson-21/workbook-7|Workbook: ～てほしい|p.83',
+      'lesson-21/workbook-9|Workbook: Listening Comprehension|p.84; A, B, & C',
       'lesson-21/workbook-8|Workbook: Questions|p.85; I',
       'lesson-21/literacy-1|Kanji Practice: 信, 経, and 台|p.330',
       'lesson-21/literacy-2|Kanji Practice: 風, 犬, and 重|p.330',
