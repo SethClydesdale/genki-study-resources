@@ -978,6 +978,7 @@
       'lesson-22/workbook-5|Workbook: ～ば|p.90; I, II, & III',
       'lesson-22/workbook-6|Workbook: ～のに|p.91; I & II',
       'lesson-22/workbook-7|Workbook: ～のような／～のように|p.92; I, II, & III',
+      'lesson-22/workbook-9|Workbook: Listening Comprehension|p.93; A, B, & C',
       'lesson-22/workbook-8|Workbook: Questions|p.94; I',
       'lesson-22/literacy-1|Kanji Practice: 記, 銀, and 回|p.336',
       'lesson-22/literacy-2|Kanji Practice: 夕, 黒, and 用|p.336',
