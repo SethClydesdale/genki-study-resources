@@ -1371,9 +1371,23 @@
             return el.classList.contains('quiz-answer-zone');
           }
         });
+        
+        // hide overflow during drag
+        drake.on('drag', function () {
+          if (document.body.style.overflow != 'hidden') {
+            document.body.style.overflow = 'hidden';
+          }
+        });
+        
+        // restore overflow
+        drake.on('cancel', function () {
+          document.body.style.overflow = '';
+        });
 
         // check if the answer is correct before dropping the element
         drake.on('drop', function (el, target, source) {
+          document.body.style.overflow = ''; // restore overflow
+          
           if (target.dataset.text) { // makes sure the element is a drop zone (data-text == data-answer)
 
             // if the answer is wrong we'll send the item back to the answer list
