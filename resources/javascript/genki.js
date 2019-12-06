@@ -1018,6 +1018,7 @@
       'lesson-23/workbook-6|Workbook: ～ことにしている|p.101; I & II',
       'lesson-23/workbook-7|Workbook: ～まで|p.102; I & II',
       'lesson-23/workbook-8|Workbook: ～方|p.103; I & II',
+      'lesson-23/workbook-10|Workbook: Listening Comprehension|p.104; A, B, & C',
       'lesson-23/workbook-9|Workbook: Questions|p.105; I',
       'lesson-23/literacy-1|Kanji Practice: 顔, 情, and 怒|p.342',
       'lesson-23/literacy-2|Kanji Practice: 変, 相, and 横|p.342',
