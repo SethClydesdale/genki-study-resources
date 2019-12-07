@@ -5,6 +5,10 @@
   // primary object for functionality of Genki exercises
   var Genki = {
     
+    // checks if touchscreen controls
+    isTouch : 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0,
+    isTouching : false,
+    
     // exercise statistics
     stats : {
       problems : 0, // number of problems to solve in the lesson
@@ -1372,21 +1376,23 @@
           }
         });
         
-        // hide overflow during drag
-        drake.on('drag', function () {
-          if (document.body.style.overflow != 'hidden') {
-            document.body.style.overflow = 'hidden';
-          }
-        });
-        
-        // restore overflow
-        drake.on('cancel', function () {
-          document.body.style.overflow = '';
-        });
+        // hide overflow during drag for touch screens
+        if (Genki.isTouch) {
+          drake.on('drag', function () {
+            if (Genki.isTouching && document.body.style.overflow != 'hidden') {
+              document.body.style.overflow = 'hidden';
+            }
+          });
+
+          // restore overflow
+          drake.on('cancel', function () {
+            document.body.style.overflow = '';
+          });
+        }
 
         // check if the answer is correct before dropping the element
         drake.on('drop', function (el, target, source) {
-          document.body.style.overflow = ''; // restore overflow
+          if (Genki.isTouch) document.body.style.overflow = ''; // restore overflow
           
           if (target.dataset.text) { // makes sure the element is a drop zone (data-text == data-answer)
 
@@ -2161,6 +2167,22 @@
         
       } else {
         result.insertAdjacentHTML('beforebegin', '<h2 id="exercise-title" class="center">' + document.querySelector('TITLE').innerText.replace(/\s\|.*/, '') + '</h2>');
+      }
+      
+      
+      // touch listeners for touch screen events
+      if (Genki.isTouch) {
+        document.ontouchstart = function () {
+          Genki.isTouching = true;
+        }
+        
+        document.ontouchend = function () {
+          Genki.isTouching = false;
+        }
+        
+        document.ontouchcancel = function () {
+          Genki.isTouching = false;
+        }
       }
       
 
