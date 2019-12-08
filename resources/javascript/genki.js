@@ -1334,7 +1334,7 @@
             // passing "furigana" to HIDE_HINT will hide HINT and make it furigana only to aid with reading.
             // passing "width:N" to HIDE_HINT will set the width of the field to N, manually. The hint will remain visible.
             hint = data[1] ? data[1] : '',
-            flag = data[2] ? data[2] : '';
+            flag = (data[3] || data[2]) ? (data[3] || data[2]) : '';
 
             ++Genki.stats.problems; // increment problems number
 
@@ -1345,6 +1345,7 @@
                 'type="text" '+
                 'data-answer="' + data[0] + '" '+
                 (flag == 'answer' ? 'data-answer2="' + hint + '" ' : '')+
+                (flag == 'answer' && data[3] ? 'data-answer3="' + data[2] + '" ' : '')+
                 (flag == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
