@@ -130,13 +130,6 @@
   };
   
   
-  // # ANSWER PARSER #
-  // parses alternate answers that contain a mix of kanji and kana
-  window.parseAlts = function (alts) {
-    return '%(' + alts.join('/') + ')';
-  };
-  
-  
   // # DARK MODE #
   // applies the dark mode theme on page load
   if (window.localStorage && window.localStorage.darkMode == 'on') {

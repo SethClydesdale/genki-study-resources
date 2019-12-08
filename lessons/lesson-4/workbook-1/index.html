@@ -58,40 +58,7 @@
     <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/javascript.min.js"></script>
-    <script>
-    // experimental mixed kana answers
-    var Alts = [
-      [
-        'わたしは辞書がありません',
-        '私はじしょがありません'
-      ],
-      
-      [
-        'あそこにやました先生がいます',
-        'あそこに山下せんせいがいます'
-      ],
-      
-      [
-        'わたしは子供がいます',
-        '私はこどもがいます'
-      ],
-      
-      [
-        'げつようびと水曜日と金曜日に日本語のクラスがあります',
-        '月曜日とすいようびと金曜日に日本語のクラスがあります',
-        '月曜日と水曜日ときんようびに日本語のクラスがあります',
-        '月曜日と水曜日と金曜日ににほんごのクラスがあります'
-        // need to calculate other combos
-        // would be nice to automate this... somehow
-      ],
-      
-      [
-        'はい、おねえさんと弟がいます',
-        'はい、お姉さんとおとうとがいます'
-      ]
-    ];
-      
-    Genki.generateQuiz({
+    <script>Genki.generateQuiz({
       type : 'fill',
       info : 'Complete the following problems using あります／います.',
       
@@ -110,17 +77,17 @@
         
         '<div class="problem">'+
           'I do not have a dictionary. (lit., There is not a dictionary.)<br>'+
-          '{私は辞書がありません|わたしはじしょがありません|' + parseAlts(Alts[0]) + '|answer}。'+
+          '{私は辞書がありません|わたしはじしょがありません|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'There is Professor Yamashita over there.<br>'+
-          '{あそこに山下先生がいます|あそこにやましたせんせいがいます|' + parseAlts(Alts[1]) + '|answer}。'+
+          '{あそこに山下先生がいます|あそこにやましたせんせいがいます|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I have a child. (lit., There is a child.)<br>'+
-          '{私は子供がいます|わたしはこどもがいます|' + parseAlts(Alts[2]) + '|answer}。'+
+          '{私は子供がいます|わたしはこどもがいます|answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions in Japanese using the given cues.</p>'+
@@ -133,7 +100,7 @@
         '<div class="problem">'+
           'いつ日本語のクラスがありますか。<br>'+
           '(There is Japanese class on Monday, Wednesday, and Friday.)<br>'+
-          '{月曜日と水曜日と金曜日に日本語のクラスがあります|げつようびとすいようびときんようびににほんごのクラスがあります|' + parseAlts(Alts[3]) + '|answer}。'+
+          '{月曜日と水曜日と金曜日に日本語のクラスがあります|げつようびとすいようびときんようびににほんごのクラスがあります|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -145,7 +112,7 @@
         '<div class="problem">'+
           '兄弟<i class="define">[きょうだい：siblings; brothers and sisters]</i>がいますか。<br>'+
           '(Yes, I have an older sister and little brother.)<br>'+
-          '{はい、お姉さんと弟がいます|はい、おねえさんとおとうとがいます|' + parseAlts(Alts[4]) + '|answer}。'+
+          '{はい、お姉さんと弟がいます|はい、おねえさんとおとうとがいます|answer}。'+
         '</div>'+
         
         '<div class="sub-section"><small>'+
