@@ -2146,8 +2146,8 @@
     
     
     // returns a list of alternative answers for a string
-    // Genki.parse.alts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご');
-    // OR for DEV: Genki.parse.alts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご', true);
+    // Genki.getAlts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご');
+    // OR for DEV: Genki.getAlts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご', true);
     // [HELP_WANTED] this method of getting all combinations is hackish at best, if you can help improve it, feel free to make a pull request!
     // ACTIVE IN: lesson-4/workbook-6
     getAlts : function (str, alt, arrayOnly) {
