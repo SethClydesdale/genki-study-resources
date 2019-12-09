@@ -1718,13 +1718,20 @@
                     alt = answer.replace(/.*?%\((.*?)\).*/, '$1').split('/');
                     
                     // loop through alternatives
-                    while (alt.length) {
-                      if (val == answer.replace(/%\(.*?\)/, alt[0])) {
-                        correct = true;
-                        break; // break out if correct answer is found
+                    if (k != 'answer3') {
+                      while (alt.length) {
+                        if (val == answer.replace(/%\(.*?\)/, alt[0])) {
+                          correct = true;
+                          break; // break out if correct answer is found
+                        }
+
+                        alt.splice(0, 1); // remove the checked answer
                       }
-                      
-                      alt.splice(0, 1); // remove the checked answer
+                    }
+                    
+                    // search hidden mixed kana/kanji alternatives
+                    else if (k == 'answer3' && alt.indexOf(val) != -1) {
+                      correct = true;
                     }
                   } 
                   
@@ -1922,7 +1929,6 @@
     
     // parsing functions
     parse : {
-      
       // parse images
       image : function (data) {
         // data[n] (n = 0, 1, 2..)
@@ -1933,7 +1939,6 @@
 
         return '<a href="' + url + '" target="blank" title="View full image" class="lesson-image"><img src="' + url + '" alt="' + (data[2] || data[1]) + '" /></a>';
       }
-      
     },
     
     
@@ -2136,6 +2141,103 @@
       if (audio) {
         audio.currentTime = time;
         audio.play();
+      }
+    },
+    
+    
+    // returns a list of alternative answers for a string
+    // Genki.parse.alts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご');
+    // OR for DEV: Genki.parse.alts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご', true);
+    // [HELP_WANTED] this method of getting all combinations is hackish at best, if you can help improve it, feel free to make a pull request!
+    // ACTIVE IN: lesson-4/workbook-6
+    getAlts : function (str, alt, arrayOnly) {
+      try {
+        var a = str.match(/(\{.*?\})/g),
+            b = alt.split('|'),
+            c = [],
+            len = a.length,
+            i = 0, j, k, l, m,
+            S1, S2, S3, S4, S5;
+
+        for (; i < len; i++) {
+          // string streams
+          S5 = S4 = S3 = S2 = S1 = str.replace(a[i], b[i]);
+
+          if (c.indexOf(S1) == -1) {
+            c.push(S1);
+          }
+
+          // variables for looping in multiple directions
+          j = 0;
+          k = len;
+          l = Math.floor(len / 2);
+          m = Math.ceil(len / 2);
+
+          while (j < len || k > -1 || l < len || m > -1) {
+            // fill left --> right
+            if (j < len) {
+              if (j != i) {
+                S2 = S2.replace(a[j], b[j]);
+
+                if (c.indexOf(S2) == -1) {
+                  c.push(S2);
+                }
+              }
+
+              j++;
+            }
+
+            // fill right --> left
+            if (k > -1) {
+              if (k != i) {
+                S3 = S3.replace(a[k], b[k]);
+
+                if (c.indexOf(S3) == -1) {
+                  c.push(S3);
+                }
+              }
+
+              k--;
+            }
+
+            // fill middle --> right
+            if (l < len) {
+              if (l != i) {
+                S4 = S4.replace(a[l], b[l]);
+
+                if (c.indexOf(S4) == -1) {
+                  c.push(S4);
+                }
+              }
+
+              l++;
+            }
+
+            // fill middle --> left
+            if (m > -1) {
+              if (m != i) {
+                S5 = S5.replace(a[m], b[m]);
+
+                if (c.indexOf(S5) == -1) {
+                  c.push(S5);
+                }
+              }
+
+              m--;
+            }
+          }
+        }
+
+        // log results for debugging
+        if (/debug=true/.test(window.location.search)) {
+          console.log(c);
+        }
+
+        return arrayOnly ? c : '|%(' + c.join('/').replace(/\{\d+:|\{|\}/g, '') + ')';
+        
+      } catch (err) {
+        console.error(err);
+        return '';
       }
     },
     
