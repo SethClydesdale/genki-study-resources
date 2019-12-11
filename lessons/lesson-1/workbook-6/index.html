@@ -66,49 +66,49 @@
       '<div class="count-problems">'+
         '<p class="section-desc">Ask the right questions in each of the following exchanges.</p>'+
         '<div class="problem">'+
-          'You：{なんねんせいですか}。<br><br>'+
+          'You：{なんねんせいですか|四年生ですか|answer}。<br><br><br>'+
           'Kimura：よねんせいです。'+
         '</div>'+
 
         '<div class="problem">'+
-          'You：{せんこうはなんですか}。<br><br>'+
+          'You：{せんこうはなんですか|専攻は何ですか' + Genki.getAlts('{専攻}は{何}ですか', 'せんこう|なん') + '|answer}。<br><br><br>'+
           'Kimura：れきしです。'+
         '</div>'+
 
         '<div class="problem">'+
-          'You：{なんさいですか}。<br><br>'+
+          'You：{なんさいですか|何歳ですか|answer}。<br><br><br>'+
           'Kimura：じゅうきゅうさいです。'+
         '</div>'+
 
         '<div class="problem">'+
-          'You：{でんわばんごうはなんですか}。<br><br>'+
+          'You：{でんわばんごうはなんですか|電話番号は何ですか' + Genki.getAlts('{電話番号}は{何}ですか', 'でんわばんごう|なん') + '|answer}。<br><br><br>'+
           'Kimura：よんさんのろくきゅういちななです。'+
         '</div>'+
 
         '<div class="problem">'+
-          'You：すみません。いま{なんじですか}。<br><br>'+
+          'You：すみません。いま{なんじですか|何時ですか|answer}。<br><br><br>'+
           'Kimura：いまくじはんです。'+
         '</div>'+
 
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'Are you a student?<br>'+
-          '{がくせいですか}。'+
+          '{がくせいですか|学生ですか|answer}。'+
         '</div>'+
 
         '<div class="problem">'+
           'Yes, I am a student at Nihon University.<br>'+
-          '{はい、わたしはにほんだいがくのがくせいです}。'+
+          '{はい、わたしはにほんだいがくのがくせいです|はい、私は日本大学の学生です' + Genki.getAlts('はい、{私}は{日本大学}の{学生}です', 'わたし|にほんだいがく|がくせい') + '|answer}。'+
         '</div>'+
 
         '<div class="problem">'+
           'Is Michiko a fourth-year student?<br>'+
-          '{みちこさんはよねんせいですか}。'+
+          '{みちこさんはよねんせいですか|みちこさんは四年生ですか|answer}。'+
         '</div>'+
 
         '<div class="problem">'+
           'No, Michiko is a third-year student.<br>'+
-          '{いいえ、みちこさんはさんねんせいです}。'+
+          '{いいえ、みちこさんはさんねんせいです|いいえ、みちこさんは三年生です|answer}。'+
         '</div>'+
       '</div>'
       

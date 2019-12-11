@@ -71,22 +71,22 @@
         
         '<div class="problem">'+
           'しごとはなんですか。<br>'+
-          '{がくせいです}。(Student)'+
+          '{がくせいです|学生です|answer}。(Student)'+
         '</div>'+
         
         '<div class="problem">'+
           'なんねんせいですか。<br>'+
-          '{にねんせいです}。(2nd year)'+
+          '{にねんせいです|二年生です|answer}。(2nd year)'+
         '</div>'+
         
         '<div class="problem">'+
           'なんさいですか。<br>'+
-          '{じゅうきゅうさいです}。(19 years old)'+
+          '{じゅうきゅうさいです|十九歳です|answer}。(19 years old)'+
         '</div>'+
         
         '<div class="problem">'+
           'せんこうはなんですか。<br>'+
-          '{にほんごです|せんこうはにほんごです|answer}。(Major is Japanese)'+
+          '{%(せんこうは/)にほんごです|%(専攻は/)日本語です' + Genki.getAlts('{専攻}は{日本語}です', 'せんこう|にほんご') + '|answer}。(Major is Japanese)'+
         '</div>'+
         
         '<div class="problem">'+
