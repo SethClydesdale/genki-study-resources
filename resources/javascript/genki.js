@@ -2166,8 +2166,8 @@
     // Genki.getAlts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご');
     // OR for DEV: Genki.getAlts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご', true);
     // [HELP_WANTED] this method of getting all combinations is hackish at best, if you can help improve it, feel free to make a pull request!
-    // combo accuracy is guarenteed 100% up to 7 replacements.
-    // 8 and above starts to have reduced accuracy, going 91% (for 8), 87% (for 9), 72% (for 10), and so on...
+    // combo coverage is guarenteed 100% up to 7 replacements.
+    // 8 and above starts to have reduced coverage, going 91% (for 8), 87% (for 9), 72% (for 10), and so on...
     // recommended to keep replacements at 8 or below, which should be possible for a majority of exercises.
     // https://github.com/SethClydesdale/genki-study-resources/issues/27
     getAlts : function (str, alt, arrayOnly) {
@@ -2320,7 +2320,7 @@
 
         // log results for debugging
         if (/\?debug/.test(window.location.search)) {
-          console[(c.length / Math.pow(2, len) * 100) == 100 ? 'log' : 'warn'](c.length + '/' + Math.pow(2, len) + ' (' + (c.length / Math.pow(2, len) * 100) + '% of possible combos for ' + len + ' replacements)', c);
+          console[(c.length / Math.pow(2, len) * 100) == 100 ? 'log' : 'warn'](c.length + '/' + Math.pow(2, len) + ' (' + (c.length / Math.pow(2, len) * 100) + '% combo coverage for ' + len + ' replacements; ' + (Math.pow(2, len) - c.length) + ' missing combos)', c);
         }
 
         return arrayOnly ? c : '|%(' + c.join('/').replace(/\{\d+:|\{|\}/g, '') + ')';
