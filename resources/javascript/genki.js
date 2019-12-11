@@ -1349,13 +1349,30 @@
                 (flag == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
-                'style="width:' + (/width/.test(flag) ? flag.split(':')[1] : (((hint || data[0]).replace(/\%\((.*?)\)/, function (Match, $1) {
-              // returns ONLY the longest string in the alternative answers array to prevent abnormally large inputs
-              return $1.split('/').sort(function (a, b) {
-                return b.length - a.length;
-              })[0];
+                'style="width:' + (
               
-            }).length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1))) + 14)) + 'px;"'+
+              // manual width definition
+              /width/.test(flag) ? flag.split(':')[1] :
+              
+              // automatic width calculation between alternate answer params; %(../../../..)
+              (/\%\((.*?)\)/.test(hint) || /\%\((.*?)\)/.test(data[0])) ? (((
+                hint ? (data[0].match(/%\((.*?)\)/)[1] || '/').split('/').concat((hint.match(/%\((.*?)\)/)[1] || '/').split('/')) :
+                (data[0].match(/%\((.*?)\)/)[1] || '/').split('/')
+              ).sort(function (a, b) {
+                  return b.length - a.length;
+              
+              })[0].length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1))) + 14) + (
+                ([hint.replace(/\%\((.*?)\)/g, ''), data[0].replace(/\%\((.*?)\)/g, '')].sort(function (a, b) {
+                  return b.length - a.length;
+                })[0].length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1)))
+              ) : 
+              
+              // automatic width calculation between answer1 and answer2/hint
+              (([hint, data[0]].sort(function (a, b) {
+                return b.length - a.length;
+              })[0].length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1))) + 14)
+              
+            ) + 'px;"'+
               '>'+
               ((hint && !/answer|furigana/.test(flag)) ? '<span class="problem-hint">' + hint + '</span>' : '')+
             '</span>';
@@ -1447,7 +1464,7 @@
       
       // debug mode
       // logs certain things to the console for debugging
-      if (/debug=true/.test(window.location.search)) {
+      if (/\?debug/.test(window.location.search)) {
         for (var a = document.querySelectorAll('AUDIO'), i = 0, j = a.length; i < j; i++) {
           a[i].ontimeupdate = function () {
             console.log(this.id, this.currentTime);
@@ -2149,88 +2166,161 @@
     // Genki.getAlts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご');
     // OR for DEV: Genki.getAlts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご', true);
     // [HELP_WANTED] this method of getting all combinations is hackish at best, if you can help improve it, feel free to make a pull request!
-    // ACTIVE IN: lesson-4/workbook-6
+    // combo accuracy is guarenteed 100% up to 7 replacements.
+    // 8 and above starts to have reduced accuracy, going 91% (for 8), 87% (for 9), 72% (for 10), and so on...
+    // recommended to keep replacements at 8 or below, which should be possible for a majority of exercises.
+    // https://github.com/SethClydesdale/genki-study-resources/issues/27
     getAlts : function (str, alt, arrayOnly) {
       try {
         var a = str.match(/(\{.*?\})/g),
             b = alt.split('|'),
             c = [],
             len = a.length,
-            i = 0, j, k, l, m,
-            S1, S2, S3, S4, S5;
+            L0 = 0, L1, L2, // Loop vars
+            I1, I2, // Incrementing vars
+            D1, D2, // Decrementing vars
+            // String vars
+            S1, S2, S3, S4, S5,
+            S6, S7, S8, S9, S10,
+            S11, S12, S13, S14, S15,
+            S16, S17, S18, S19, S20,
+            S20, S21, S22, S23, S24,
+            S25, S26, S27, S28, S29,
+            S30, S31, S32, S33, S34,
+            S35, S36, S37, S38, S39,
+            S40, S41;
 
-        for (; i < len; i++) {
-          // string streams
-          S5 = S4 = S3 = S2 = S1 = str.replace(a[i], b[i]);
+        for (; L0 < len; L0++) {
+          S1 = str.replace(a[L0], b[L0]);
 
           if (c.indexOf(S1) == -1) {
             c.push(S1);
           }
-
-          // variables for looping in multiple directions
-          j = 0;
-          k = len;
-          l = Math.floor(len / 2);
-          m = Math.ceil(len / 2);
-
-          while (j < len || k > -1 || l < len || m > -1) {
-            // fill left --> right
-            if (j < len) {
-              if (j != i) {
-                S2 = S2.replace(a[j], b[j]);
-
-                if (c.indexOf(S2) == -1) {
-                  c.push(S2);
+          
+          // combo set 0
+          L1 = len;
+          
+          // static string values 
+          S7 = S6 = S5 = S4 = str;
+          S25 = S16 = S11 = S10 = S1;
+          while (L1 --> 0) {
+            // [X] == NO MORE POSSIBLE COMBOS (tested with 26 replacements; a-z && 1-26)
+            // Genki.getAlts('{A}{B}{C}{D}{E}{F}{G}{H}{I}{J}{K}{L}{M}{N}{O}{P}{Q}{R}{S}{T}{U}{V}{W}{X}{Y}{Z}', '1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26', true)
+            
+            // recursive string values
+            S22 = S14 = S9 = S8 = str;
+            S13 = S12 = S3 = S2 = S1;
+            
+            // # STR #
+            S35 = S29 = S15 = S6; // left --> right [X]
+            S30 = S23 = S7; // right --> left [X]
+            S36 = S20 = S19 = S4; // middle --> right [X]
+            S37 = S31 = S27 = S5; // middle --> left [X]
+            
+            // # S1 #
+            S38 = S32 = S28 = S10; // left --> right [X]
+            S33 = S24 = S11; // right --> left [X]
+            S21 = S18 = S17 = S16; // middle --> right [X]
+            S39 = S34 = S26 = S25; // middle --> left [X]
+            
+            // # SPLIT STREAMS #
+            // used across multiple replacement streams
+            S40 = str;
+            S41 = S1;
+            
+            // loop values
+            I1 = 0;
+            D1 = len;
+            I2 = Math.floor(len / L1);
+            D2 = Math.ceil(len / L1);
+            
+            L2 = len;
+            while (L2 --> 0) {
+              // fill left --> right by N
+              if (I1 < len) {
+                if (I1 != L0) {
+                  c.indexOf(S2 = S2.replace(a[I1], b[I1])) == -1 && c.push(S2);
+                  c.indexOf(S6 = S6.replace(a[I1], b[I1])) == -1 && c.push(S6);
+                  c.indexOf(S8 = S8.replace(a[I1], b[I1])) == -1 && c.push(S8);
+                  c.indexOf(S10 = S10.replace(a[I1], b[I1])) == -1 && c.push(S10);
+                  c.indexOf(S17 = S17.replace(a[I1], b[I1])) == -1 && c.push(S17);
+                  c.indexOf(S19 = S19.replace(a[I1], b[I1])) == -1 && c.push(S19);
+                  c.indexOf(S23 = S23.replace(a[I1], b[I1])) == -1 && c.push(S23);
+                  c.indexOf(S26 = S26.replace(a[I1], b[I1])) == -1 && c.push(S26);
+                  c.indexOf(S31 = S31.replace(a[I1], b[I1])) == -1 && c.push(S31);
+                  c.indexOf(S33 = S33.replace(a[I1], b[I1])) == -1 && c.push(S33);
+                  c.indexOf(S40 = S40.replace(a[I1], b[I1])) == -1 && c.push(S40);
+                  c.indexOf(S41 = S41.replace(a[I1], b[I1])) == -1 && c.push(S41);
                 }
+                
+                if (I1 == (I1 += L1)) break;
               }
-
-              j++;
-            }
-
-            // fill right --> left
-            if (k > -1) {
-              if (k != i) {
-                S3 = S3.replace(a[k], b[k]);
-
-                if (c.indexOf(S3) == -1) {
-                  c.push(S3);
+              
+              
+              // fill right --> left by N
+              if (D1 > -1) {
+                if (D1 != L0) {
+                  c.indexOf(S3 = S3.replace(a[D1], b[D1])) == -1 && c.push(S3);
+                  c.indexOf(S7 = S7.replace(a[D1], b[D1])) == -1 && c.push(S7);
+                  c.indexOf(S9 = S9.replace(a[D1], b[D1])) == -1 && c.push(S9);
+                  c.indexOf(S11 = S11.replace(a[D1], b[D1])) == -1 && c.push(S11);
+                  c.indexOf(S18 = S18.replace(a[D1], b[D1])) == -1 && c.push(S18);
+                  c.indexOf(S27 = S27.replace(a[D1], b[D1])) == -1 && c.push(S27);
+                  c.indexOf(S35 = S35.replace(a[D1], b[D1])) == -1 && c.push(S35);
+                  c.indexOf(S36 = S36.replace(a[D1], b[D1])) == -1 && c.push(S36);
+                  c.indexOf(S38 = S38.replace(a[D1], b[D1])) == -1 && c.push(S38);
+                  c.indexOf(S39 = S39.replace(a[D1], b[D1])) == -1 && c.push(S39);
+                  c.indexOf(S40 = S40.replace(a[D1], b[D1])) == -1 && c.push(S40);
+                  c.indexOf(S41 = S41.replace(a[D1], b[D1])) == -1 && c.push(S41);
                 }
+
+                if (D1 == (D1 -= L1)) break;
               }
-
-              k--;
-            }
-
-            // fill middle --> right
-            if (l < len) {
-              if (l != i) {
-                S4 = S4.replace(a[l], b[l]);
-
-                if (c.indexOf(S4) == -1) {
-                  c.push(S4);
+              
+              
+              // fill middle --> right
+              if (I2 < len) {
+                if (I2 != L0) {
+                  c.indexOf(S4 = S4.replace(a[I2], b[I2])) == -1 && c.push(S4);
+                  c.indexOf(S12 = S12.replace(a[I2], b[I2])) == -1 && c.push(S12);
+                  c.indexOf(S14 = S14.replace(a[I2], b[I2])) == -1 && c.push(S14);
+                  c.indexOf(S15 = S15.replace(a[I2], b[I2])) == -1 && c.push(S15);
+                  c.indexOf(S16 = S16.replace(a[I2], b[I2])) == -1 && c.push(S16);
+                  c.indexOf(S24 = S24.replace(a[I2], b[I2])) == -1 && c.push(S24);
+                  c.indexOf(S30 = S30.replace(a[I2], b[I2])) == -1 && c.push(S30);
+                  c.indexOf(S32 = S32.replace(a[I2], b[I2])) == -1 && c.push(S32);
+                  c.indexOf(S34 = S34.replace(a[I2], b[I2])) == -1 && c.push(S34);
+                  c.indexOf(S37 = S37.replace(a[I2], b[I2])) == -1 && c.push(S37);
+                  c.indexOf(S40 = S40.replace(a[I2], b[I2])) == -1 && c.push(S40);
+                  c.indexOf(S41 = S41.replace(a[I2], b[I2])) == -1 && c.push(S41);
                 }
+                
+                if (I2 == (I2 += L1)) break;
               }
-
-              l++;
-            }
-
-            // fill middle --> left
-            if (m > -1) {
-              if (m != i) {
-                S5 = S5.replace(a[m], b[m]);
-
-                if (c.indexOf(S5) == -1) {
-                  c.push(S5);
+              
+              
+              // fill middle --> left
+              if (D2 > -1) {
+                if (D2 != L0) {
+                  c.indexOf(S5 = S5.replace(a[D2], b[D2])) == -1 && c.push(S5);
+                  c.indexOf(S13 = S13.replace(a[D2], b[D2])) == -1 && c.push(S13);
+                  c.indexOf(S20 = S20.replace(a[D2], b[D2])) == -1 && c.push(S20);
+                  c.indexOf(S21 = S21.replace(a[D2], b[D2])) == -1 && c.push(S21);
+                  c.indexOf(S22 = S22.replace(a[D2], b[D2])) == -1 && c.push(S22);
+                  c.indexOf(S25 = S25.replace(a[D2], b[D2])) == -1 && c.push(S25);
+                  c.indexOf(S28 = S28.replace(a[D2], b[D2])) == -1 && c.push(S28);
+                  c.indexOf(S29 = S29.replace(a[D2], b[D2])) == -1 && c.push(S29);
                 }
-              }
 
-              m--;
+                if (D2 == (D2 -= L1)) break;
+              }
             }
           }
         }
 
         // log results for debugging
-        if (/debug=true/.test(window.location.search)) {
-          console.log(c);
+        if (/\?debug/.test(window.location.search)) {
+          console[(c.length / Math.pow(2, len) * 100) == 100 ? 'log' : 'warn'](c.length + '/' + Math.pow(2, len) + ' (' + (c.length / Math.pow(2, len) * 100) + '% of possible combos for ' + len + ' replacements)', c);
         }
 
         return arrayOnly ? c : '|%(' + c.join('/').replace(/\{\d+:|\{|\}/g, '') + ')';
