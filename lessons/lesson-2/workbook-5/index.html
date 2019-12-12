@@ -66,27 +66,32 @@
       '<div class="count-problems">'+
         '<div class="problem">'+
           'Ms. Tanaka is Japanese. <span class="ul">Mr. Yoshida</span> is Japanese, too.<br>'+
-          '{たなかさんはにほんじんです。よしださんもにほんじんです。}'+
+          '{たなかさんはにほんじんです|たなかさんは日本人です|answer}。'+
+          '{よしださんもにほんじんです|よしださんも日本人です|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Ms. Tanaka is 20 years old. <span class="ul">Mr. Yoshida</span> is 20 years old, too.<br>'+
-          '{たなかさんははたちです。よしださんもはたちです。}'+
+          '{たなかさんははたちです|たなかさんは二十歳です|answer}。'+
+          '{よしださんもはたちです|よしださんも二十歳です|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'This dictionary is 2,000 yen. <span class="ul">That dictionary</span> is 2,000 yen, too.<br>'+
-          '{このじしょはにせんえんです。そのじしょもにせんえんです。|このじしょはにせんえんです。あのじしょもにせんえんです。|answer}'+
+          '{このじしょはにせんえんです|この辞書は二千円です|' + Genki.getAlts('この{辞書}は{二千円}です', 'じしょ|にせんえん') + 'answer}。'+
+          '{%(その/あの)じしょもにせんえんです|%(その/あの)辞書も二千円です。|' + Genki.getAlts('{その}{辞書}も{二千円}です。', 'あの|じしょ|にせんえん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'This is my bicycle. <span class="ul">That</span> is my bicycle, too.<br>'+
-          '{これはわたしのじてんしゃです。それもわたしのじてんしゃです。|これはわたしのじてんしゃです。あれもわたしのじてんしゃです。|answer}'+
+          '{これはわたしのじてんしゃです|これは私の自転車です|' + Genki.getAlts('これは{私}の{自転車}です', 'わたし|じてんしゃ') + 'answer}。'+
+          '{%(それ/あれ)もわたしのじてんしゃです|%(それ/あれ)も私の自転車です|' + Genki.getAlts('{それ}も{私}の{自転車}です', 'あれ|わたし|じてんしゃ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Takeshi\'s major is history. <span class="ul">My major</span> is history, too.<br>'+
-          '{たけしさんのせんこうはれきしです。わたしのせんこうもれきしです。}'+
+          '{たけしさんのせんこうはれきしです|たけしさんの専攻は歴史です|' + Genki.getAlts('たけしさんの{専攻}は{歴史}です', 'せんこう|れきし') + 'answer}。'+
+          '{わたしのせんこうもれきしです|私の専攻も歴史です|' + Genki.getAlts('{私}の{専攻}も{歴史}です', 'わたし|せんこう|れきし') + 'answer}。'+
         '</div>'+
       '</div>'
       

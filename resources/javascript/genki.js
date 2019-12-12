@@ -1333,8 +1333,9 @@
             // passing "answer" to HIDE_HINT will hide HINT and make it a secondary answer.
             // passing "furigana" to HIDE_HINT will hide HINT and make it furigana only to aid with reading.
             // passing "width:N" to HIDE_HINT will set the width of the field to N, manually. The hint will remain visible.
+            // to show a hint along with a secondary answer, use this syntax: {ANSWER1|ANSWER2|answer;hint:HINT_TEXT}
             hint = data[1] ? data[1] : '',
-            flag = (data[3] || data[2]) ? (data[3] || data[2]) : '';
+            flag = ((data[4] || data[3] || data[2]) ? (data[4] || data[3] || data[2]) : '').split(';');
 
             ++Genki.stats.problems; // increment problems number
 
@@ -1344,15 +1345,16 @@
                 'class="writing-zone-input" '+
                 'type="text" '+
                 'data-answer="' + data[0] + '" '+
-                (flag == 'answer' ? 'data-answer2="' + hint + '" ' : '')+
-                (flag == 'answer' && data[3] ? 'data-answer3="' + data[2] + '" ' : '')+
-                (flag == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
+                (flag[0] == 'answer' ? 'data-answer2="' + hint + '" ' : '')+
+                (flag[0] == 'answer' && data[3] ? 'data-answer3="' + data[2] + '" ' : '')+
+                (flag[0] == 'answer' && data[4] ? 'data-answer4="' + data[3] + '" ' : '')+
+                (flag[0] == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
                 'style="width:' + (
               
               // manual width definition
-              /width/.test(flag) ? flag.split(':')[1] :
+              /width/.test(flag[0]) ? flag[0].split(':')[1] :
               
               // automatic width calculation between alternate answer params; %(../../../..)
               (/\%\((.*?)\)/.test(hint) || /\%\((.*?)\)/.test(data[0])) ? (((
@@ -1374,7 +1376,7 @@
               
             ) + 'px;"'+
               '>'+
-              ((hint && !/answer|furigana/.test(flag)) ? '<span class="problem-hint">' + hint + '</span>' : '')+
+              ((hint && !/answer|furigana/.test(flag[0]) || flag[1] && /hint:/.test(flag[1])) ? '<span class="problem-hint">' + (flag[1] ? flag[1].split(':')[1] : hint) + '</span>' : '')+
             '</span>';
           }
           
@@ -1735,7 +1737,7 @@
                     alt = answer.replace(/.*?%\((.*?)\).*/, '$1').split('/');
                     
                     // loop through alternatives
-                    if (k != 'answer3') {
+                    if (k == 'answer' || k == 'answer2') {
                       while (alt.length) {
                         if (val == answer.replace(/%\(.*?\)/, alt[0])) {
                           correct = true;
@@ -1747,7 +1749,7 @@
                     }
                     
                     // search hidden mixed kana/kanji alternatives
-                    else if (k == 'answer3' && alt.indexOf(val) != -1) {
+                    else if ((k == 'answer3' || k == 'answer4') && alt.indexOf(val) != -1) {
                       correct = true;
                     }
                   } 
@@ -2323,7 +2325,7 @@
           console[(c.length / Math.pow(2, len) * 100) == 100 ? 'log' : 'warn'](c.length + '/' + Math.pow(2, len) + ' (' + (c.length / Math.pow(2, len) * 100) + '% combo coverage for ' + len + ' replacements; ' + (Math.pow(2, len) - c.length) + ' missing combos)', c);
         }
 
-        return arrayOnly ? c : '|%(' + c.join('/').replace(/\{\d+:|\{|\}/g, '') + ')';
+        return arrayOnly ? c : '%(' + c.join('/').replace(/\{\d+:|\{|\}/g, '') + ')|';
         
       } catch (err) {
         console.error(err);
