@@ -67,43 +67,43 @@
         '<p class="section-desc">Read the cues and describe what Mary does on a typical day. Refer to Grammar 6 (Genki; p.92-93) on the basic order of phrases.</p>'+
         '<div class="problem">'+
           'every day/06:00/get up<br>'+
-          'メアリーさんはまいにち{ろく}じに{おき}ます。'+
+          'メアリーさんはまいにち{ろく|六|answer}じに{おき|起き|answer}ます。'+
         '</div>'+
         
         '<div class="problem">'+
           'every day/08:30/go to college<br>'+
-          '{メアリーさんはまいにちはちじはんにだいがくにいきます}。'+
+          '{メアリーさんはまいにちはちじはんにだいがくにいきます|メアリーさんは毎日八時半に大学に行きます|' + Genki.getAlts('メアリーさんは{毎日}{八時}{半}に{大学}に{行}きます', 'まいにち|はちじ|はん|だいがく|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'every day/12:00/eat lunch at school<br>'+
-          '{メアリーさんはまいにちじゅうにじにがっこうでひるごはんをたべます}。'+
+          '{メアリーさんはまいにちじゅうにじにがっこうでひるごはんをたべます|メアリーさんは毎日十二時に学校で昼ご飯を食べます|' + Genki.getAlts('メアリーさんは{毎日}{十二時}に{学校}で{昼}ご{飯}を{食}べます', 'まいにち|じゅうにじ|がっこう|ひる|はん|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'usually/at about 6:00/return home<br>'+
-          '{メアリーさんはたいていろくじごろいえにかえります|メアリーさんはたいていろくじごろうちにかえります|answer}。'+
+          '{メアリーさんはたいていろくじごろ%(いえ/うち)にかえります|メアリーさんはたいてい六時ごろ家に帰ります|' + Genki.getAlts('メアリーさんはたいてい{六時}ごろ{家}に{帰}ります', 'ろくじ|いえ|かえ') + Genki.getAlts('メアリーさんはたいてい{六時}ごろ{家}に{帰}ります', 'ろくじ|うち|かえ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'usually/at about 11:00/sleep<br>'+
-          '{メアリーさんはたいていじゅういちじごろねます}。'+
+          '{メアリーさんはたいていじゅういちじごろねます|メアリーさんはたいてい十一時ごろ寝ます|' + Genki.getAlts('メアリーさんはたいてい{十一時}ごろ{寝}ます', 'じゅういちじ|ね') + 'answer}。'+
         '</div>'+
 
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'I speak Japanese every day.<br>'+
-          '{わたしはまいにちにほんごをはなします}。'+
+          '{わたしはまいにちにほんごをはなします|私は毎日日本語を話します|' + Genki.getAlts('{私}は{毎日}{日本語}を{話}します', 'わたし|まいにち|にほんご|はな') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I will not watch TV tonight.<br>'+
-          '{わたしはこんばんテレビをみません}。'+
+          '{わたしはこんばんテレビをみません|私は今晩テレビを見ません|' + Genki.getAlts('{私}は{今晩}テレビを{見}ません', 'わたし|こんばん|み') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Mary does not come to school on Saturdays.<br>'+
-          '{メアリーさんはどようびにがっこうにきません}。'+
+          '{メアリーさんはどようびにがっこうにきません|メアリーさんは土曜日に学校に来ません|' + Genki.getAlts('メアリーさんは{土曜日}に{学校}に{来}ません', 'どようび|がっこう|き') + 'answer}。'+
         '</div>'+
       '</div>'
       

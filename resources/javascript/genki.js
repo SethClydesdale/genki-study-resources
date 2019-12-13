@@ -1314,7 +1314,7 @@
         
         // add the quiz to the document
         zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '" target="_blank">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
-          var data = match.slice(1, match.length - 1).split('|'), hint, flag;
+          var data = match.slice(1, match.length - 1).split('|'), hint, flag, sub;
           
           if (data[0] == '!IMG') {
             return Genki.parse.image(data);
@@ -1336,6 +1336,14 @@
             // to show a hint along with a secondary answer, use this syntax: {ANSWER1|ANSWER2|answer;hint:HINT_TEXT}
             hint = data[1] ? data[1] : '',
             flag = ((data[4] || data[3] || data[2]) ? (data[4] || data[3] || data[2]) : '').split(';');
+            
+            // sub answer matches for answer 1 & 2 (used for calculating answer area width)
+            if (/\%\((.*?)\)/.test(hint) || /\%\((.*?)\)/.test(data[0])) {
+              sub = [
+                data[0].match(/%\((.*?)\)/),
+                hint.match(/%\((.*?)\)/)
+              ];
+            }
 
             ++Genki.stats.problems; // increment problems number
 
@@ -1354,12 +1362,14 @@
                 'style="width:' + (
               
               // manual width definition
-              /width/.test(flag[0]) ? flag[0].split(':')[1] :
+              /width:/.test(flag[0]) ? flag[0].split(':')[1] :
+              flag[1] && /width:/.test(flag[1]) ? flag[1].split(':')[1] :
+              flag[2] && /width:/.test(flag[2]) ? flag[2].split(':')[1] :
               
               // automatic width calculation between alternate answer params; %(../../../..)
-              (/\%\((.*?)\)/.test(hint) || /\%\((.*?)\)/.test(data[0])) ? (((
-                hint ? (data[0].match(/%\((.*?)\)/)[1] || '/').split('/').concat((hint.match(/%\((.*?)\)/)[1] || '/').split('/')) :
-                (data[0].match(/%\((.*?)\)/)[1] || '/').split('/')
+              sub ? (((
+                hint ? ((sub[0] && sub[0][1]) || '/').split('/').concat(((sub[1] && sub[1][1]) || '/').split('/')) :
+                ((sub[0] && sub[0][1]) || '/').split('/')
               ).sort(function (a, b) {
                   return b.length - a.length;
               
@@ -1376,7 +1386,10 @@
               
             ) + 'px;"'+
               '>'+
-              ((hint && !/answer|furigana/.test(flag[0]) || flag[1] && /hint:/.test(flag[1])) ? '<span class="problem-hint">' + (flag[1] ? flag[1].split(':')[1] : hint) + '</span>' : '')+
+              ((hint && !/answer|furigana/.test(flag[0]) || flag[1] && /hint:/.test(flag[1]) || flag[2] && /hint:/.test(flag[2])) ? '<span class="problem-hint">' + (
+                flag[1] && /hint:/.test(flag[1]) ? flag[1].split(':')[1] : 
+                flag[2] && /hint:/.test(flag[2]) ? flag[2].split(':')[1] : hint
+              ) + '</span>' : '')+
             '</span>';
           }
           

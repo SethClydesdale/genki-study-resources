@@ -65,16 +65,23 @@
       quizlet : 
       '<div class="count-problems">'+
         '<p class="section-desc">Study Dialogue I (Genki I: p.84) and translate the conversation.</p>'+
-        '<div class="problem">メアリー：　{こんばんえいがをみませんか|(Would you like to see a movie tonight?)|width:300}。</div>'+
-        '<div class="problem">たけし　：　{こんばんはちょっと|(Tonight is not a very good time...)|width:300}……。</div>'+
-        '<div class="problem">メアリー：　{あしたはどうですか|(How about tomorrow?)|width:300}。</div>'+
+        '<div class="problem">メアリー：　{こんばんえいがをみませんか|今晩映画を見ませんか|' + Genki.getAlts('{今晩}{映画}を{見}ませんか', 'こんばん|えいが|み') + 'answer;width:300;hint:(Would you like to see a movie tonight?)}。</div>'+
+        
+        '<div class="problem">たけし　：　{こんばんはちょっと|今晩はちょっと|answer;width:300;hint:(Tonight is not a very good time...)}……。</div>'+
+        
+        '<div class="problem">メアリー：　{あしたはどうですか|明日はどうですか|answer;width:300;hint:(How about tomorrow?)}。</div>'+
+        
         '<div class="problem">たけし　：　{いいですね|(Sounds great.)|width:300}。</div>'+
 
         '<p class="section-desc">Translate the conversation between you (replace ○○ with your name) and your friend Abdul.</p>'+
-        '<div class="problem">○○　　　：　{アブドゥルさん、こんばんばんごはんをたべませんか|(Would you like to eat dinner tonight, Abdul?)|width:420}。</div>'+
+        '<div class="problem">○○　　　：　{アブドゥルさん、こんばんばんごはんをたべませんか|アブドゥルさん、今晩晩ご飯を食べませんか|' + Genki.getAlts('アブドゥルさん、{今晩}{晩}ご{飯}を{食}べませんか', 'こんばん|ばん|はん|た') + 'answer;width:420;hint:(Would you like to eat dinner tonight, Abdul?)}。</div>'+
+        
         '<div class="problem">アブドゥル：　{いいですね|(Sounds great.)|width:420}。</div>'+
-        '<div class="problem">○○　　　：　{じゃあ、マクドナルドにいきませんか|(Then, would you like to go to McDonald\'s?)<br><small>McDonald\'s = マクドナルド</small>|width:420}。</div>'+
+        
+        '<div class="problem">○○　　　：　{じゃあ、マクドナルドにいきませんか|じゃあ、マクドナルドに行きませんか|answer;width:420;hint:(Then, would you like to go to McDonald\'s?)<br><small>McDonald\'s = マクドナルド</small>}。</div>'+
+        
         '<div class="problem">アブドゥル：　{マクドナルドはちょっと。ウェンディーズはどうですか。|(McDonald\'s is not a very good place... How about Wendy\'s?)<br><small>Wendy\'s = ウェンディーズ</small>|width:420}</div>'+
+        
         '<div class="problem">○○　　　：　{いいですね|(Sounds great.)|width:420}。</div>'+
 
       '</div>'

@@ -65,42 +65,42 @@
       quizlet : 
       '<div class="count-problems">'+
         '<p class="section-desc">Where do the following activities take place? Add the places and appropriate particles to the following sentences.</p>'+
-        '<div class="problem">{としょかんで|library|width:98}ほんをよみます。</div>'+
+        '<div class="problem">{としょかんで|図書館で|answer;hint:library}ほんをよみます。</div>'+
 
-        '<div class="problem">{がっこうで|school|width:84}べんきょうします。</div>'+
+        '<div class="problem">{がっこうで|学校で|answer;hint:school}べんきょうします。</div>'+
 
-        '<div class="problem">{いえで|home|width:56}テレビをみます。</div>'+
+        '<div class="problem">{いえで|家で|answer;hint:home}テレビをみます。</div>'+
 
-        '<div class="problem">{きっさてんで|cafe|width:98}コーヒーをのみます。</div>'+
+        '<div class="problem">{きっさてんで|喫茶店で|answer;hint:cafe}コーヒーをのみます。</div>'+
 
-        '<div class="problem">{がっこうに|school|width:84}いきます。</div>'+
+        '<div class="problem">{がっこうに|学校に|answer;hint:school}いきます。</div>'+
 
-        '<div class="problem">{いえに|home|width:56}かえります。</div>'+
+        '<div class="problem">{いえに|家に|answer;hint:home}かえります。</div>'+
 
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'Mr. Tanaka will go to the library.<br>'+
-          '{たなかさんはとしょかんにいきます}。'+
+          '{たなかさんはとしょかんにいきます|たなかさんは図書館に行きます|' + Genki.getAlts('たなかさんは{図書館}に{行}きます', 'としょかん|い') + 'answer}。'+
         '</div>'+
 
         '<div class="problem">'+
           'My friend will come to Japan.<br>'+
-          '{わたしのともだちはにほんにきます}。'+
+          '{わたしのともだちはにほんにきます|私の友だちは日本に来ます|' + Genki.getAlts('{私}の{友}だちは{日本}に{来}ます', 'わたし|とも|にほん|き') + 'answer}。'+
         '</div>'+
 
         '<div class="problem">'+
           'Mr. Suzuki listens to music at home.<br>'+
-          '{すずきさんはうちでおんがくをききます|すずきさんはいえでおんがくをききます|answer}。'+
+          '{すずきさんは%(いえ/うち)でおんがくをききます|すずきさんは家で音楽を聞きます|' + Genki.getAlts('すずきさんは{家}で{音楽}を{聞}きます', 'いえ|おんがく|き') + Genki.getAlts('すずきさんは{家}で{音楽}を{聞}きます', 'うち|おんがく|き') + 'answer}。'+
         '</div>'+
 
         '<div class="problem">'+
           'I speak Japanese at home.<br>'+
-          '{わたしはうちでにほんごをはなします|わたしはいえでにほんごをはなします|answer}。'+
+          '{わたしは%(いえ/うち)でにほんごをはなします|私は家で日本語を話します|' + Genki.getAlts('{私}は{家}で{日本語}を{話}します', 'わたし|いえ|にほんご|はな') + Genki.getAlts('{私}は{家}で{日本語}を{話}します', 'うち|いえ|にほんご|はな') + 'answer}。'+
         '</div>'+
 
         '<div class="problem">'+
           'I don\'t eat lunch at school.<br>'+
-          '{わたしはがっこうでひるごはんをたべません}。'+
+          '{わたしはがっこうでひるごはんをたべません|私は学校で昼ご飯を食べません|' + Genki.getAlts('{私}は{学校}で{昼}ご{飯}を{食}べません', 'わたし|がっこう|ひる|はん|た') + 'answer}。'+
         '</div>'+
       '</div>'
       

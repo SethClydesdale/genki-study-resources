@@ -66,37 +66,37 @@
       '<div class="count-problems">'+
         '<div class="problem">'+
           'I often go to the library.<br>'+
-          'わたしは{よく}としょかん{に}{いきます}。'+
+          'わたしは{よく}としょかん{に}{いきます|行きます|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Yumi often comes to my house.<br>'+
-          '{ゆみさんはよくわたしのうちにきます|ゆみさんはよくわたしのいえにきます|answer}。'+
+          '{ゆみさんはよくわたしの%(いえ/うち)にきます|ゆみさんはよく私の家に来ます|' + Genki.getAlts('ゆみさんはよく{私}の{家}に{来}ます', 'わたし|いえ|き') + Genki.getAlts('ゆみさんはよく{私}の{家}に{来}ます', 'わたし|うち|き') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I usually get up at six.<br>'+
-          '{わたしはたいていろくじにおきます}。'+
+          '{わたしはたいていろくじにおきます|私はたいてい六時に起きます|' + Genki.getAlts('{私}はたいてい{六時}に{起}きます', 'わたし|ろくじ|お') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Professor Yamashita usually goes to bed at eleven.<br>'+
-          '{やましたせんせいはたいていじゅういちじにねます}。'+
+          '{やましたせんせいはたいていじゅういちじにねます|山下先生はたいてい十一時に寝ます|' + Genki.getAlts('{山下}{先生}はたいてい{十一時}に{寝}ます', 'やました|せんせい|じゅういちじ|ね') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I sometimes read Japanese newspapers.<br>'+
-          '{わたしはときどきにほんのしんぶんをよみます}。'+
+          '{わたしはときどきにほんのしんぶんをよみます|私は時々日本の新聞を読みます|' + Genki.getAlts('{私}は{時々}{日本}の{新聞}を{読}みます', 'わたし|ときどき|にほん|しんぶん|よ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Takeshi sometimes drinks coffee at that coffee shop.<br>'+
-          '{たけしさんはときどきあのきっさてんでコーヒーをのみます}。'+
+          '{たけしさんはときどきあのきっさてんでコーヒーをのみます|たけしさんは時々あの喫茶店でコーヒーを飲みます|' + Genki.getAlts('たけしさんは{時々}あの{喫茶店}でコーヒーを{飲}みます', 'ときどき|きっさてん|の') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Mary does not eat much.<br>'+
-          '{メアリーさんはあまりたべません}。'+
+          '{メアリーさんはあまりたべません|メアリーさんはあまり食べません|answer}。'+
         '</div>'+
       '</div>'
       
