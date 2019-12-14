@@ -74,7 +74,7 @@
         '<div class="problem">'+
           'きのうは十五日でしたか。<br>'+
           '(No, it was not the 15th. It was the 22nd.)<br>'+
-          '{いいえ、十五日じゃなかったです。二十二日でした。|いいえ、じゅうごにちじゃなかったです。にじゅうににちでした。|answer}'+
+          '{いいえ、十五日じゃなかったです。二十二日でした。|いいえ、じゅうごにちじゃなかったです。にじゅうににちでした。|' + Genki.getAlts('いいえ、{十五日}じゃなかったです。{二十二日}でした。', 'じゅうごにち|にじゅうににち') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
@@ -98,7 +98,7 @@
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'My bicycle was 30,000 yen.<br>'+
-          '{私の自転車は三万円でした|わたしのじてんしゃはさんまんえんでした|answer}。'+
+          '{私の自転車は三万円でした|わたしのじてんしゃはさんまんえんでした|' + Genki.getAlts('{私}の{自転車}は{三万円}でした', 'わたし|じてんしゃ|さんまんえん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -108,7 +108,7 @@
         
         '<div class="problem">'+
           'Professor Yamashita was not a Nihon University student.<br>'+
-          '{山下先生は日本大学の学生じゃなかったです|やましたせんせいはにほんだいがくのがくせいじゃなかったです|answer}。'+
+          '{山下先生は日本大学の学生じゃなかったです|やましたせんせいはにほんだいがくのがくせいじゃなかったです|' + Genki.getAlts('{山下}{先生}は{日本}{大学}の{学生}じゃなかったです', 'やました|せんせい|にほん|だいがく|がくせい') + 'answer}。'+
         '</div>'+
       '</div>'
       

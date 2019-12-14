@@ -67,17 +67,17 @@
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'The dictionary is on top of the desk.<br>'+
-          '{辞書はつくえの上です|じしょはつくえのうえです|answer}。'+
+          '{辞書はつくえの上です|じしょはつくえのうえです|' + Genki.getAlts('{辞書}はつくえの{上}です', 'じしょ|うえ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'The clock is on top of the desk, too.<br>'+
-          '{時計もつくえの上です|とけいもつくえのうえです|answer}。'+
+          '{時計もつくえの上です|とけいもつくえのうえです|' + Genki.getAlts('{時計}もつくえの{上}です', 'とけい|うえ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'The hat is between the dictionary and clock.<br>'+
-          '{ぼうしは辞書と時計の間です|ぼうしはじしょととけいのあいだです|answer}。'+
+          '{ぼうしは辞書と時計の間です|ぼうしはじしょととけいのあいだです|' + Genki.getAlts('ぼうしは{辞書}と{時計}の{間}です', 'じしょ|とけい|あいだ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -111,7 +111,7 @@
         
         '<div class="problem">'+
           '日本語の本はどこですか。<br>'+
-          '{新聞の下です|しんぶんのしたです|answer}。'+
+          '{新聞の下です|しんぶんのしたです|' + Genki.getAlts('{新聞}の{下}です', 'しんぶん|した') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -126,12 +126,12 @@
         
         '<div class="problem">'+
           '図書館はどこですか。<br>'+
-          '{郵便局の後ろです|ゆうびんきょくのうしろです|answer}。'+
+          '{郵便局の後ろです|ゆうびんきょくのうしろです|' + Genki.getAlts('{郵便局}の{後}ろです', 'ゆうびんきょく|うし') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '銀行はどこですか。<br>'+
-          '{郵便局の%(左/となり)です|ゆうびんきょくの%(ひだり/となり)です|answer}。'+
+          '{郵便局の%(左/となり)です|ゆうびんきょくの%(ひだり/となり)です|' + Genki.getAlts('{郵便局}の{左}です', 'ゆうびんきょく|ひだり') + 'answer}。'+
         '</div>'+
       '</div>'
       

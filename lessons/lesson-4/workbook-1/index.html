@@ -77,17 +77,17 @@
         
         '<div class="problem">'+
           'I do not have a dictionary. (lit., There is not a dictionary.)<br>'+
-          '{私は辞書がありません|わたしはじしょがありません|answer}。'+
+          '{私は辞書がありません|わたしはじしょがありません|' + Genki.getAlts('{私}は{辞書}がありません', 'わたし|じしょ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'There is Professor Yamashita over there.<br>'+
-          '{あそこに山下先生がいます|あそこにやましたせんせいがいます|answer}。'+
+          '{あそこに山下先生がいます|あそこにやましたせんせいがいます|' + Genki.getAlts('あそこに{山下}{先生}がいます', 'やました|せんせい') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I have a child. (lit., There is a child.)<br>'+
-          '{私は子供がいます|わたしはこどもがいます|answer}。'+
+          '{私は子供がいます|わたしはこどもがいます|' + Genki.getAlts('{私}は{子供}がいます', 'わたし|こども') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions in Japanese using the given cues.</p>'+
@@ -100,7 +100,7 @@
         '<div class="problem">'+
           'いつ日本語のクラスがありますか。<br>'+
           '(There is Japanese class on Monday, Wednesday, and Friday.)<br>'+
-          '{月曜日と水曜日と金曜日に日本語のクラスがあります|げつようびとすいようびときんようびににほんごのクラスがあります|answer}。'+
+          '{月曜日と水曜日と金曜日に日本語のクラスがあります|げつようびとすいようびときんようびににほんごのクラスがあります|' + Genki.getAlts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -112,7 +112,7 @@
         '<div class="problem">'+
           '兄弟<i class="define">[きょうだい：siblings; brothers and sisters]</i>がいますか。<br>'+
           '(Yes, I have an older sister and little brother.)<br>'+
-          '{はい、お姉さんと弟がいます|はい、おねえさんとおとうとがいます|answer}。'+
+          '{はい、お姉さんと弟がいます|はい、おねえさんとおとうとがいます|' + Genki.getAlts('はい、お{姉}さんと{弟}がいます', 'ねえ|おとうと') + 'answer}。'+
         '</div>'+
         
         '<div class="sub-section"><small>'+

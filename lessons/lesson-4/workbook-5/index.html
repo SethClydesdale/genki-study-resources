@@ -91,7 +91,7 @@
         
         '<div class="problem">'+
           'たけしさんはいつ音楽を聞きましたか。<br>'+
-          '{金曜日に音楽を聞きました|きんようびにおんがくをききました|answer}。'+
+          '{金曜日に音楽を聞きました|きんようびにおんがくをききました|' + Genki.getAlts('{金曜日}に{音楽}を{聞}きました', 'きんようび|おんがく|き') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -102,23 +102,23 @@
         '<div class="problem">'+
           'あなたは、週末、何をしましたか。<br>'+
           '(I met a friend in Yokohama on Saturday. I went shopping at the supermarket on Sunday.)<br>'+
-          '{私は土曜日に横浜で友だちに会いました。日曜日にスーパーで買い物をしました。|わたしはどようびによこはまでともだちにあいました。にちようびにスーパーでかいものをしました。|answer}'+
+          '{私は土曜日に横浜で友だちに会いました。日曜日にスーパーで買い物をしました。|わたしはどようびによこはまでともだちにあいました。にちようびにスーパーでかいものをしました。|' + Genki.getAlts('{私}は{土曜日}に{横浜}で{友}だちに{会}いました。{日曜日}にスーパーで{買い物}をしました。', 'わたし|どようび|よこはま|とも|あ|にちようび|かいもの') + 'answer}'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'Yumi did not take pictures at all.<br>'+
-          '{ゆみさんはぜんぜん写真を撮りませんでした|ゆみさんはぜんぜんしゃしんをとりませんでした|answer}。'+
+          '{ゆみさんはぜんぜん写真を撮りませんでした|ゆみさんはぜんぜんしゃしんをとりませんでした|' + Genki.getAlts('ゆみさんはぜんぜん{写真}を{撮}りませんでした', 'しゃしん|と') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I often ate hamburgers when I was a child.<br>'+
-          '{私は子供の時、よくハンバーガーを食べました|わたしはこどものとき、よくハンバーガーをたべました|answer}。'+
+          '{私は子供の時、よくハンバーガーを食べました|わたしはこどものとき、よくハンバーガーをたべました|' + Genki.getAlts('{私}は{子供}の{時}、よくハンバーガーを{食}べました', 'わたし|こども|とき|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Takeshi did not study much when he was in high school.<br>'+
-          '{たけしさんは高校の時、あまり勉強しませんでした|たけしさんはこうこうのとき、あまりべんきょうしませんでした|answer}。'+
+          '{たけしさんは高校の時、あまり勉強しませんでした|たけしさんはこうこうのとき、あまりべんきょうしませんでした|' + Genki.getAlts('たけしさんは{高校}の{時}、あまり{勉強}しませんでした', 'こうこう|とき|べんきょう') + 'answer}。'+
         '</div>'+
       '</div>'
       
