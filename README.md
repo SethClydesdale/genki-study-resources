@@ -28,6 +28,7 @@ If you have any suggestions, feedback, or bugs to report, feel free to [open a n
 ### Made possible thanks to...
 - [The Japan Times](https://bookclub.japantimes.co.jp/en/), Eri Banno, Yoko Ikeda, Yutaka Ohno, Chikako Shinagawa, and Kyoko Tokashiki for Genki: An Integrated Course in Elementary Japanese.
 - Noriko Udagawa and Reiko Maruyama for some Illustrations that were used.
+- [Patrick Roberts](https://github.com/patrickroberts) for [his help with an algorithm](https://stackoverflow.com/a/59337819/12502093) that helped make mixed kana/kanji answers possible in written quizzes.
 - Everyone who helped contribute to this project, both on Github and outside of it.
 
 The following resources were used in this project. Check them out!
