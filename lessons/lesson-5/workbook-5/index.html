@@ -85,22 +85,22 @@
         
         '<div class="problem">'+
           'Q：どんな部屋ですか。<br>'+
-          'A：{小さい部屋です|ちいさいへやです|answer}。'+
+          'A：{小さい部屋です|ちいさいへやです|' + Genki.getAlts('{小}さい{部屋}です', 'ちい|へや') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：どんな自転車ですか。<br>'+
-          'A：{古い自転車です|ふるいじてんしゃです|answer}。'+
+          'A：{古い自転車です|ふるいじてんしゃです|' + Genki.getAlts('{古}い{自転車}です', 'ふる|じてんしゃ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：どんな町ですか。<br>'+
-          'A：{静かな町です|しずかなまちです|answer}。'+
+          'A：{静かな町です|しずかなまちです|' + Genki.getAlts('{静}かな{町}です', 'しず|まち') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：どんな人ですか。<br>'+
-          'A：{こわい人です|こわいひとです|answer}。'+
+          'A：{怖い人です|こわいひとです|' + Genki.getAlts('{怖}い{人}です', 'こわ|ひと') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -111,17 +111,17 @@
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'I met a kind person.<br>'+
-          '{私はやさしい人に会いました|わたしはやさしいひとにあいました|answer}。'+
+          '{私はやさしい人に会いました|わたしはやさしいひとにあいました|' + Genki.getAlts('{私}はやさしい{人}に{会}いました', 'わたし|ひと|あ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I brought an inexpensive ticket.<br>'+
-          '{私は安い切符を買いました|わたしはやすいきっぷをかいました|answer}。'+
+          '{私は安い切符を買いました|わたしはやすいきっぷをかいました|' + Genki.getAlts('{私}は{安}い{切符}を{買}いました', 'わたし|やす|きっぷ|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I read an interesting book last week.<br>'+
-          '{私は先週おもしろい本を読みました|わたしはせんしゅうおもしろいほんをよみました|answer}。'+
+          '{私は先週面白い本を読みました|わたしはせんしゅうおもしろいほんをよみました|' + Genki.getAlts('{私}は{先週}{面白}い{本}を{読}みました', 'わたし|せんしゅう|おもしろ|ほん|よ') + 'answer}。'+
         '</div>'+
       '</div>'
       

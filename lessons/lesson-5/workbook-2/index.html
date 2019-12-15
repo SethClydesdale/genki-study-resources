@@ -86,19 +86,19 @@
         '<div class="problem">'+
           '日本語のクラスはおもしろいですか。<br>'+
           '(Yes, it is interesting.)<br>'+
-          '{はい、おもしろいです}。'+
+          '{はい、面白いです|はい、おもしろいです|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたの町は静かですか。<br>'+
           '(No, it is not very quiet.)<br>'+
-          '{いいえ、あまり静香じゃないです|いいえ、あまりしずかじゃないです|answer}。'+
+          '{いいえ、あまり静かじゃないです|いいえ、あまりしずかじゃないです|answer}。'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'This watch is expensive.<br>'+
-          '{この時計は高いです|このとけいはたかいです|answer}。'+
+          '{この時計は高いです|このとけいはたかいです|' + Genki.getAlts('この{時計}は{高}いです', 'とけい|たか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -108,7 +108,7 @@
         
         '<div class="problem">'+
           'Professor Yamashita is energetic.<br>'+
-          '{山下先生は元気です|やましたせんせいはげんきです|answer}。'+
+          '{山下先生は元気です|やましたせんせいはげんきです|' + Genki.getAlts('{山下}{先生}は{元気}です', 'やました|せんせい|げんき') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -118,7 +118,7 @@
         
         '<div class="problem">'+
           'I will not be free tomorrow.<br>'+
-          '{私はあしたひまじゃないです|わたしはあしたひまじゃないです|answer}。'+
+          '{私は明日暇じゃないです|わたしはあしたひまじゃないです|' + Genki.getAlts('{私}は{明日}{暇}じゃないです', 'わたし|あした|ひま') + 'answer}。'+
         '</div>'+
       '</div>'
       

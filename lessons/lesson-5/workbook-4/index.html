@@ -68,7 +68,7 @@
         '<div class="problem">'+
           '先週はひまでしたか。<br>'+
           '(No, I was not free. I was busy.)<br>'+
-          '{いいえ、ひまじゃなかったです。忙しかったです。|いいえ、ひまじゃなかったです。いそがしかったです。|answer}'+
+          '{いいえ、暇じゃなかったです。忙しかったです。|いいえ、ひまじゃなかったです。いそがしかったです。|' + Genki.getAlts('いいえ、{暇}じゃなかったです。{忙}しかったです。', 'ひま|いそが') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
@@ -98,17 +98,17 @@
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'I was busy yesterday.<br>'+
-          '{私はきのう忙しかったです|わたしはきのういそがしかったです|answer}。'+
+          '{私はきのう忙しかったです|わたしはきのういそがしかったです|' + Genki.getAlts('{私}は{昨日}{忙}しかったです', 'わたし|きのう|いそが') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'The homework was difficult.<br>'+
-          '{宿題は難しかったです|しゅくだいはむずかしかったです|answer}。'+
+          '{宿題は難しかったです|しゅくだいはむずかしかったです|' + Genki.getAlts('{宿題}は{難}しかったです', 'しゅくだい|むずか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'My room was not clean.<br>'+
-          '{私の部屋はきれいじゃなかったです|わたしのへやはきれいじゃなかったです|answer}。'+
+          '{私の部屋はきれいじゃなかったです|わたしのへやはきれいじゃなかったです|' + Genki.getAlts('{私}の{部屋}はきれいじゃなかったです', 'わたし|へや') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -118,12 +118,12 @@
         
         '<div class="problem">'+
           'The trip was not fun.<br>'+
-          '{旅行は楽しくなかったです|りょこうはたのしくなかったです|answer}。'+
+          '{旅行は楽しくなかったです|りょこうはたのしくなかったです|' + Genki.getAlts('{旅行}は{楽}しくなかったです', 'りょこう|たの') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'The tickets were not expensive.<br>'+
-          '{切符は高くなかったです|きっぷはたかくなかったです|answer}。'+
+          '{切符は高くなかったです|きっぷはたかくなかったです|' + Genki.getAlts('{切符}は{高}くなかったです', 'きっぷ|たか') + 'answer}。'+
         '</div>'+
       '</div>'
       

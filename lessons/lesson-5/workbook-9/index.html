@@ -99,14 +99,14 @@
         
               '<tr>'+
                 '<td><span class="inline-furi">川口<i>かわぐち</i></span></td>'+
-                '<td>{!PLAY|W05-B|23.5} {おもしろい人|おもしろいひと|answer}</td>'+
-                '<td>{!PLAY|W05-B|48} {友だちといっしょにご飯を食べます|ともだちといっしょにごはんをたべます|answer}</td>'+
+                '<td>{!PLAY|W05-B|23.5} {面白い人|おもしろいひと|' + Genki.getAlts('{面白}い{人}', 'おもしろ|ひと') + 'answer}</td>'+
+                '<td>{!PLAY|W05-B|48} {友だちと一緒にご飯を食べます|ともだちといっしょにごはんをたべます|' + Genki.getAlts('{友}だちと{一緒}にご{飯}を{食}べます', 'とも|いっしょ|はん|た') + 'answer}</td>'+
               '</tr>'+
         
               '<tr>'+
                 '<td><span class="inline-furi">中山<i>なかやま</i></span></td>'+
-                '<td>{!PLAY|W05-B|29} {静かな人|しずかなひと|answer}</td>'+
-                '<td>{!PLAY|W05-B|53.5} {家でテレビを見ます|いえでテレビをみます|answer}</td>'+
+                '<td>{!PLAY|W05-B|29} {静かな人|しずかなひと|' + Genki.getAlts('{静}かな{人}', 'しず|ひと') + 'answer}</td>'+
+                '<td>{!PLAY|W05-B|53.5} {家でテレビを見ます|いえでテレビをみます|' + Genki.getAlts('{家}でテレビを{見}ます', 'いえ|み') + 'answer}</td>'+
               '</tr>'+
             '</table>'+
           '</div>'+

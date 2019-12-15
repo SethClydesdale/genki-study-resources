@@ -262,6 +262,28 @@ a#fork-me:hover, a#fork-me:focus {
   background:#FFF;
 }
 
+/* announcement */
+#announcement {
+  color:#FFF;
+  background:#F60;
+  border:1px solid #C30;
+  border-right:none;
+  border-left:none;
+}
+
+#announce-inner {
+  max-width:1000px;
+  margin:0 auto;
+}
+
+#announcement .fa {
+  font-size:24px;
+  vertical-align:middle;
+}
+
+#announcement a { color:#FF0; }
+#announcement h3, #announcement p { margin:5px 0 5px 0; }
+
 /* content */
 #content { flex:1 0 auto; }
 

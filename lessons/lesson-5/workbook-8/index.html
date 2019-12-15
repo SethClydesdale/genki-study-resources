@@ -68,13 +68,13 @@
         '<div class="problem">'+
           'どこに行きましたか。<br>'+
           '(I went to Kyoto.)<br>'+
-          '{京都に行きました|きょうとにいきました|answer}。'+
+          '{京都に行きました|きょうとにいきました|' + Genki.getAlts('{京都}に{行}きました', 'きょうと|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'だれと行きましたか。<br>'+
           '(I went with a friend.)<br>'+
-          '{友だちと行きました|ともだちといきました|answer}。'+
+          '{友だちと行きました|ともだちといきました|' + Genki.getAlts('{友}だちと{行}きました', 'とも|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -92,13 +92,13 @@
         '<div class="problem">'+
           'そこで何をしましたか。<br>'+
           '(I went to a temple. After that, I went shopping.)<br>'+
-          '{お寺に行きました。それから、買い物をしました。|おてらにいきました。それから、かいものをしました。|answer}'+
+          '{お寺に行きました。それから、買い物をしました。|おてらにいきました。それから、かいものをしました。|' + Genki.getAlts('お{寺}に{行}きました。それから、{買い物}をしました。', 'てら|い|かいもの') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'おみやげを買いましたか。<br>'+
           '(Yes, I brought a souvenir.)<br>'+
-          '{はい、おみやげを買いました|はい、おみやげをかいました|answer}。'+
+          '{はい、お土産を買いました|はい、おみやげをかいました|' + Genki.getAlts('はい、お{土産}を{買}いました', 'みやげ|か') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions in Japanese.</p>'+
@@ -117,7 +117,7 @@
         '<div class="problem">'+
           'どんな音楽が好きですか。<br>'+
           '(I like Japanese music.)<br>'+
-          '{日本の音楽が好きです|にほんのおんがくがすきです|answer}。'+
+          '{日本の音楽が好きです|にほんのおんがくがすきです|' + Genki.getAlts('{日本}の{音楽}が{好}きです', 'にほん|おんがく|す') + 'answer}。'+
         '</div>'+
       '</div>'
       

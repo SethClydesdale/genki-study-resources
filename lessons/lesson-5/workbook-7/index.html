@@ -68,45 +68,45 @@
         '<div class="problem">'+
           '友だち：どこに行きますか。<br>'+
           '(Let\'s go to Asakusa.)<br>'+
-          '私：{浅草に行きましょう|あさくさにいきましょう|answer}。'+
+          '私：{浅草に行きましょう|あさくさにいきましょう|' + Genki.getAlts('{浅草}に{行}きましょう', 'あさくさ|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '友だち：いいですね。そこで何をしますか。<br>'+
           '(Let\'s see a temple. After that, let\'s buy souvenirs.)<br>'+
-          '私：{お寺を見ましょう|おてらをみましょう|answer}。それから、{おみやげを買いましょう|おみやげをかいましょう|answer}。'+
+          '私：{お寺を見ましょう|おてらをみましょう|' + Genki.getAlts('お{寺}を{見}ましょう', 'てら|み') + 'answer}。それから、{お土産を買いましょう|おみやげをかいましょう|' + Genki.getAlts('お{土産}を{買}いましょう', 'みやげ|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '友だち：何時に会いますか。<br>'+
           '(Let\'s meet at 10 o\'clock.)<br>'+
-          '私：{十時に会いましょう|じゅうじにあいましょう|answer}。'+
+          '私：{十時に会いましょう|じゅうじにあいましょう|' + Genki.getAlts('{十時}に{会}いましょう', 'じゅうじ|あ') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'Let\'s take pictures here.<br>'+
-          '{ここで写真を撮りましょう|ここでしゃしんをとりましょう|answer}。'+
+          '{ここで写真を撮りましょう|ここでしゃしんをとりましょう|' + Genki.getAlts('ここで{写真}を{撮}りましょう', 'しゃしん|と') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Let\'s watch this movie tonight.<br>'+
-          '{今晩この映画を見ましょう|こんばんこのえいがをみましょう|answer}。'+
+          '{今晩この映画を見ましょう|こんばんこのえいがをみましょう|' + Genki.getAlts('{今晩}この{映画}を{見}ましょう', 'こんばん|えいが|み') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Let\'s wait in the coffee shop.<br>'+
-          '{喫茶店で待ちましょう|きっさてんでまちましょう|answer}。'+
+          '{喫茶店で待ちましょう|きっさてんでまちましょう|' + Genki.getAlts('{喫茶店}で{待}ちましょう', 'きっさてん|ま') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'This kanji is difficult. Let\'s ask our teacher.<br>'+
-          '{この漢字は難しいです。先生に聞きましょう。|このかんじはむずかしいです。せんせいにききましょう。|answer}'+
+          '{この漢字は難しいです。先生に聞きましょう。|このかんじはむずかしいです。せんせいにききましょう。|' + Genki.getAlts('この{漢字}は{難}しいです。{先生}に{聞}きましょう。', 'かんじ|むずか|せんせい|き') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'Let\'s do the homework together.<br>'+
-          '{一緒に宿題をしましょう|いっしょにしゅくだいをしましょう|answer}。'+
+          '{一緒に宿題をしましょう|いっしょにしゅくだいをしましょう|' + Genki.getAlts('{一緒}に{宿題}をしましょう', 'いっしょ|しゅくだい') + 'answer}。'+
         '</div>'+
       '</div>'
       

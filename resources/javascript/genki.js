@@ -2177,8 +2177,11 @@
     },
     
     
-    // returns a list of alternative answers for a string
-    // special thanks to Patrick Roberts for helping me improve this function (stackoverflow.com/questions/59337405/h/59337819#59337819)
+    // Returns a list of alternative answers for a string. Generally used for mixed kana/kanji answers.
+    // Special thanks to Patrick Roberts for helping me improve this function (stackoverflow.com/a/59337819/12502093)
+    // USAGE: Genki.getAlts('...{A}...{B}...{C}...', '1|2|3'); // add 'true' to the 3rd arg to return an array
+    // The text within curly braces is replaced with the identical index in the second argument, so:
+    // A can only be A or 1, B can only be B or 2, and so on...
     getAlts : function (str, alt, arrayOnly) {
       var subs = alt.split('|'),
           length = subs.length,
@@ -2198,6 +2201,7 @@
         results.push(result);
       }
       
+      // append ?debug to the URL for debug logs
       if (/\?debug/.test(window.location.search)) {
         var len = results.length;
         console[len / permutations * 100 == 100 ? 'log' : 'warn'](len + '/' + permutations + ' (' + (len / permutations * 100) + '% combo coverage for ' + length + ' replacements; ' + (permutations - len) + ' missing combos)', results);
