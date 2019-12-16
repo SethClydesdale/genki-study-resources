@@ -277,7 +277,7 @@
       
       
       // quick search
-      search : function (value, mode) {
+      search : function (value, mode, retry) {
         // clear existing timeout
         if (Genki.appendix.jisho.searchTimeout) {
           window.clearTimeout(Genki.appendix.jisho.searchTimeout);
@@ -321,18 +321,30 @@
               }
             }
           }
+          
+          // perform a kanji only search if the previous one yeilded no results
+          if (!retry && !frag.childNodes.length && value && /[\u3400-\u9faf]/.test(value)) {
+            var kanji = value.match(/[\u3400-\u9faf]+/);
+            
+            if (kanji && kanji[0]) {
+              Genki.appendix.jisho.search(kanji[0], mode, true);
+            }
+          } 
+          
+          // show results
+          else {
+            // append the matched exercises or display an error message/hide the search results
+            if (frag.childNodes.length) {
+              results.parentNode.querySelector('.group-selectors').style.visibility = '';
+              results.appendChild(frag);
 
-          // append the matched exercises or display an error message/hide the search results
-          if (frag.childNodes.length) {
-            results.parentNode.querySelector('.group-selectors').style.visibility = '';
-            results.appendChild(frag);
+            } else {
+              results.parentNode.querySelector('.group-selectors').style.visibility = 'hidden';
+              results.innerHTML = value ? '<li>No results found for "' + value + '".</li>' : '';
+            }
 
-          } else {
-            results.parentNode.querySelector('.group-selectors').style.visibility = 'hidden';
-            results.innerHTML = value ? '<li>No results found for "' + value + '".</li>' : '';
+            hitsCounter.innerHTML = hits ? '(' + hits + ') ' : '';
           }
-
-          hitsCounter.innerHTML = hits ? '(' + hits + ') ' : '';
           
           delete Genki.appendix.jisho.searchTimeout;
         }, 300);
