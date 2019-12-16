@@ -14,7 +14,7 @@ If you're using the offline version you'll have to unzip the files. Once you've 
 
 
 ### Suggestions, Feedback, Bug Reports
-If you have any suggestions, feedback, or bugs to report, feel free to [open a new issue](https://github.com/SethClydesdale/genki-study-resources/issues) in this repository to let me know. For more information, please check out the [report page](https://sethclydesdale.github.io/genki-study-resources/report/) for Genki Study Resources.
+If you have any suggestions, feedback, or bugs to report, feel free to [open a new issue](https://github.com/SethClydesdale/genki-study-resources/issues) in this repository or leave a comment in [this reddit thread](https://www.reddit.com/r/LearnJapanese/comments/e725cx/g/) to let me know. For more information, please check out the [report page](https://sethclydesdale.github.io/genki-study-resources/report/) for Genki Study Resources.
 
 
 ### Additional links for studying Japanese

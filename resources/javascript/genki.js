@@ -5,10 +5,6 @@
   // primary object for functionality of Genki exercises
   var Genki = {
     
-    // checks if touchscreen controls
-    isTouch : 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0,
-    isTouching : false,
-    
     // exercise statistics
     stats : {
       problems : 0, // number of problems to solve in the lesson
@@ -17,6 +13,13 @@
          score : 0, // the student's score
        exclude : 0  // answers to exclude, mostly for text-only segments in multi-choice quizzes
     },
+    
+    // checks if touchscreen controls
+    isTouch : 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0,
+    isTouching : false,
+    
+    // tells us if text selection mode is enabled (for multi-choice quizzes)
+    textSelectMode : false,
 
     // tells us if Genki is being used on a local file system so we can append index.html to URLs
     local : window.location.protocol == 'file:' ? 'index.html' : '',
@@ -1261,7 +1264,7 @@
 
           // ready-only questions contain text only, no answers
           if (q[i].text) {
-            quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, true);">NEXT</button></div>';
+            quiz += '<div class="quiz-multi-row"><div class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, true);">NEXT</div></div>';
             ++Genki.stats.exclude; // exclude this block from the overall score
 
           } else { // standard question block construction
@@ -1282,7 +1285,7 @@
                 q[i].answers[n] = q[i].answers[n].slice(1);
               }
 
-              quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</button></div>';
+              quiz += '<div class="quiz-multi-row"><div class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</div></div>';
               isAnswer = false;
 
               q[i].answers.splice(n, 1);
@@ -1302,8 +1305,12 @@
         }
 
         // add the multi-choice quiz to the quiz zone
-        zone.innerHTML = quiz + '</div><div id="quiz-progress"><div id="quiz-progress-bar"></div></div>' + (helper ? '<div id="review-exercise" class="center clearfix">' + Genki.lang.toggle_furigana + '</div>' : '');
-
+        zone.innerHTML = quiz + '</div><div id="quiz-progress"><div id="quiz-progress-bar"></div></div>'+
+          '<div id="review-exercise" class="center clearfix">'+ 
+            (Genki.appendix ? '' : '<button class="button text-selection-mode-button" onclick="Genki.toggle.textSelection(this);"><i class="fa">&#xf246;</i> Enable Text Selection</button>')+
+            (helper ? Genki.lang.toggle_furigana : '')+
+          '</div>';
+        
         // begin the quiz
         Genki.progressQuiz('init');
       }
@@ -1501,6 +1508,12 @@
 
     // show the next question in a multi-choice quiz
     progressQuiz : function (answer, exclude) {
+      // prevent quiz progression while text selection mode is enabled or the quiz is over
+      if (Genki.textSelectMode || Genki.quizOver) {
+        return false;
+      }
+      
+      // standard quiz progression
       if (answer == 'init') {
         document.getElementById('quiz-q' + Genki.stats.solved).style.display = '';
         Genki.incrementProgressBar();
@@ -1546,6 +1559,8 @@
 
     // ends the quiz
     endQuiz : function (type) {
+      Genki.quizOver = true;
+      
       // calculate the total score based on problems solved and mistakes made
       var solved = Genki.stats.solved - Genki.stats.exclude,
           problems = Genki.stats.problems - Genki.stats.exclude;
@@ -1863,6 +1878,30 @@
         if (window.localStorage) {
           localStorage.furiganaVisible = state;
         }
+      },
+      
+      
+      // toggles text selection for buttons in multi-choice quizzes
+      textSelection : function (button) {
+        var zone = document.getElementById('quiz-zone');
+        
+        // hide or show the textual aids
+        switch (Genki.textSelectMode) {
+          case true :
+            Genki.textSelectMode = false;
+            zone.className = zone.className.replace(' text-selection-mode', '');
+            button.innerHTML = button.innerHTML.replace('Dis', 'En');
+            break;
+            
+          case false :
+            Genki.textSelectMode = true;
+            zone.className = zone.className += ' text-selection-mode';
+            button.innerHTML = button.innerHTML.replace('En', 'Dis');
+            break;
+            
+          default :
+            break;
+        }
       }
     },
 
@@ -1897,7 +1936,11 @@
       // creates the exercise list
       exerciseList : function () {
         var attrs = 'class="lesson-title" onclick="Genki.toggle.list(this);" onkeydown="event.key == \'Enter\' && Genki.toggle.list(this);" tabindex="0"', // lesson-title attrs
-            list = '<nav id="exercise-list"><h3 class="main-title">Exercise List</h3><div id="lessons-list"><h4 ' + attrs + '>Lesson 0</h4><ul id="lesson-0">',
+            list = 
+            '<nav id="exercise-list">'+
+              '<h3 class="main-title">Exercise List</h3>'+
+              '<button id="random-exercise" class="button" onclick="Genki.randomExercise();" title="Random Exericse"><i class="fa">&#xf074;</i></button>'+
+              '<div id="lessons-list"><h4 ' + attrs + '>Lesson 0</h4><ul id="lesson-0">',
             lesson = 'lesson-0',
             i = 0,
             j = Genki.exercises.length,
@@ -2074,7 +2117,7 @@
       
       
       // searches the dictionary
-      search : function (value) {
+      search : function (value, retry) {
         // clear existing timeout
         if (Genki.quickJisho.searchTimeout) {
           window.clearTimeout(Genki.quickJisho.searchTimeout);
@@ -2115,8 +2158,20 @@
             }
           }
           
-          Genki.quickJisho.cache.results.innerHTML = results ? results : value ? '<li>No results found for "' + value + '".</li>' : '';
-          Genki.quickJisho.cache.hits.innerHTML = hits ? '(' + hits + ')' : '';
+          // perform a kanji only search if the previous one yeilded no results
+          if (!retry && !results && value && /[\u3400-\u9faf]/.test(value)) {
+            var kanji = value.match(/[\u3400-\u9faf]+/);
+            
+            if (kanji && kanji[0]) {
+              Genki.quickJisho.search(kanji[0], true);
+            }
+          } 
+          
+          // show results
+          else {
+            Genki.quickJisho.cache.results.innerHTML = results ? results : value ? '<li>No results found for "' + value + '".</li>' : '';
+            Genki.quickJisho.cache.hits.innerHTML = hits ? '(' + hits + ')' : '';
+          }
           
           delete Genki.quickJisho.searchTimeout;
         }, 300);
@@ -2208,6 +2263,20 @@
       }
 
       return arrayOnly ? results : '%(' + results.join('/') + ')|';
+    },
+    
+    
+    // takes the user to a random exercise
+    randomExercise : function () {
+      var exercise = Genki.exercises[Math.floor(Math.random() * Genki.exercises.length)].split('|');
+      
+      // only take the user to random lessons
+      if (/lesson-\d+/.test(exercise[0])) {
+        window.location.href = '../../../lessons/' + exercise[0] + '/' + Genki.local;
+        
+      } else { // try again if not a lesson
+        Genki.randomExercise();
+      }
     },
     
     
