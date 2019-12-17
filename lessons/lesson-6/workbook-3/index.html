@@ -66,12 +66,12 @@
         '<div class="count-problems">'+
           '<div class="problem">'+
             'Please take a picture.<br>'+
-            '{写真を撮ってください|しゃしんをとってください|answer}。'+
+            '{写真を撮ってください|しゃしんをとってください|' + Genki.getAlts('{写真}を{撮}ってください', 'しゃしん|と') + 'answer}。'+
           '</div>'+
 
           '<div class="problem">'+
             'Please teach this kanji.<br>'+
-            '{この漢字を教えてください|このかんじをおしえてください|answer}。'+
+            '{この漢字を教えてください|このかんじをおしえてください|' + Genki.getAlts('この{漢字}を{教}えてください', 'かんじ|おし') + 'answer}。'+
           '</div>'+
 
           '<div class="problem">'+
@@ -91,17 +91,17 @@
 
           '<div class="problem">'+
             'Please bring a book.<br>'+
-            '{本を持ってきてください|ほんをもってきてください|answer}。'+
+            '{本を持ってきてください|ほんをもってきてください|' + Genki.getAlts('{本}を{持}ってきてください', 'ほん|も') + 'answer}。'+
           '</div>'+
 
           '<div class="problem">'+
             'Please help with homework.<br>'+
-            '{宿題を手伝ってください|しゅくだいをてつだってください|answer}。'+
+            '{宿題を手伝ってください|しゅくだいをてつだってください|' + Genki.getAlts('{宿題}を{手伝}ってください', 'しゅくだい|てつだ') + 'answer}。'+
           '</div>'+
 
           '<div class="problem">'+
             'Please return the book.<br>'+
-            '{本を返してください|ほんをかえしてください|answer}。'+
+            '{本を返してください|ほんをかえしてください|' + Genki.getAlts('{本}を{返}してください', 'ほん|かえ') + 'answer}。'+
           '</div>'+
 
           '<div class="problem">'+

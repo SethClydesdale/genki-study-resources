@@ -68,39 +68,39 @@
           '<p class="section-desc">The cues below describe what Takeshi did yesterday. Make sentences using te-forms.</p>'+
           '<div class="problem">'+
             'Got up in the morning and ate breakfast.<br>'+
-            '{朝起きて、朝ご飯を食べました|あさおきて、あさごはんをたべました|answer}。'+
+            '{朝起きて、朝ご飯を食べました|あさおきて、あさごはんをたべました|' + Genki.getAlts('{朝}{起}きて、{朝}ご{飯}を{食}べました', 'あさ|お|あさ|はん|た') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             'Closed the window and went out.<br>'+
-            '{窓を閉めて、出かけました|まどをしめて、でかけました|answer}。'+
+            '{窓を閉めて、出かけました|まどをしめて、でかけました|' + Genki.getAlts('{窓}を{閉}めて、{出}かけました', 'まど|し|で') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             'Went to the sea and swam.<br>'+
-            '{海に行って、泳ぎました|うみにいって、およぎました|answer}。'+
+            '{海に行って、泳ぎました|うみにいって、およぎました|' + Genki.getAlts('{海}に{行}って、{泳}ぎました', 'うみ|い|およ') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             'Turned the (electric) light out and went to bed.<br>'+
-            '{電気を消して、寝ました|でんきをけして、ねました|answer}。'+
+            '{電気を消して、寝ました|でんきをけして、ねました|' + Genki.getAlts('{電気}を{消}して、{寝}ました', 'でんき|け|ね') + 'answer}。'+
           '</div>'+
           
           // II
           '<p class="section-desc">Translate the following sentences.</p>'+
           '<div class="problem">'+
             '(I will) go to the library and return the book tomorrow.<br>'+
-            '{あした図書館に行って、本を返します|あしたとしょかんにいって、ほんをかえします|answer}。'+
+            '{あした図書館に行って、本を返します|あしたとしょかんにいって、ほんをかえします|' + Genki.getAlts('{明日}{図書館}に{行}って、{本}を{返}します', 'あした|としょかん|い|ほん|かえ') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             'Mary and Takeshi met and talked for about an hour.<br>'+
-            '{メアリーさんとたけしさんは会って、一時間ぐらい話しました|メアリーさんとたけしさんはあって、いちじかんぐらいはなしました|answer}。'+
+            '{メアリーさんとたけしさんは会って、一時間ぐらい話しました|メアリーさんとたけしさんはあって、いちじかんぐらいはなしました|' + Genki.getAlts('メアリーさんとたけしさんは{会}って、{一時間}ぐらい{話}しました', 'あ|いちじかん|はな') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             'Let\'s enter the coffee shop and rest.<br>'+
-            '{喫茶店に入って、休みましょう|きっさてんにはいって、やすみましょう|answer}。'+
+            '{喫茶店に入って、休みましょう|きっさてんにはいって、やすみましょう|' + Genki.getAlts('{喫茶店}に{入}って、{休}みましょう', 'きっさてん|はい|やす') + 'answer}。'+
           '</div>'+
         '</div>'
     });</script>

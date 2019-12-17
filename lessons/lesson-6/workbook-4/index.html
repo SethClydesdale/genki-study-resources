@@ -67,12 +67,12 @@
           '<p class="section-desc">(To your friend at their apartment)</p>'+
           '<div class="problem">'+
             'to enter the room<br>'+
-            '{部屋に入ってもいいですか|へやにはいってもいいですか|answer}。'+
+            '{部屋に入ってもいいですか|へやにはいってもいいですか|' + Genki.getAlts('{部屋}に{入}ってもいいですか', 'へや|はい') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             'to look at the pictures<br>'+
-            '{写真を見てもいいですか|しゃしんをみてもいいですか|answer}。'+
+            '{写真を見てもいいですか|しゃしんをみてもいいですか|' + Genki.getAlts('{写真}を{見}てもいいですか', 'しゃしん|み') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
@@ -82,7 +82,7 @@
         
           '<div class="problem">'+
             'to open the window<br>'+
-            '{窓を開けてもいいですか|まどをあけてもいいですか|answer}。'+
+            '{窓を開けてもいいですか|まどをあけてもいいですか|' + Genki.getAlts('{窓}を{開}けてもいいですか', 'まど|あ') + 'answer}。'+
           '</div>'+
         
           '<p class="section-desc">(To your teacher in class)</p>'+
@@ -93,17 +93,17 @@
         
           '<div class="problem">'+
             'to speak english<br>'+
-            '{英語を話してもいいですか|えいごをはなしてもいいですか|answer}。'+
+            '{英語を話してもいいですか|えいごをはなしてもいいですか|' + Genki.getAlts('{英語}を{話}してもいいですか', 'えいご|はな') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             'to borrow a textbook<br>'+
-            '{教科書を借りてもいいですか|きょうかしょをかりてもいいですか|answer}。'+
+            '{教科書を借りてもいいですか|きょうかしょをかりてもいいですか|' + Genki.getAlts('{教科書}を{借}りてもいいですか', 'きょうかしょ|か') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             'to be absent from class tomorrow<br>'+
-            '{あしたクラスを休んでもいいですか|あしたクラスをやすんでもいいですか|answer}。'+
+            '{あしたクラスを休んでもいいですか|あしたクラスをやすんでもいいですか|' + Genki.getAlts('{明日}クラスを{休}んでもいいですか', 'あした|やす') + 'answer}。'+
           '</div>'+
         '</div>'
     });</script>

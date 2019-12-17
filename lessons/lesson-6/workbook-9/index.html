@@ -116,7 +116,7 @@
             '<tr>'+
               '<td>{!PLAY|W06-C|22} スー</td>'+
               '<td class="center">{土曜日|どようび|answer}</td>'+
-              '<td class="center">{友だちが来ます|ともだちがきます|answer}。</td>'+
+              '<td class="center">{友だちが来ます|ともだちがきます|' + Genki.getAlts('{友}だちが{来}ます', 'とも|き') + 'answer}。</td>'+
             '</tr>'+
 
             '<tr>'+
@@ -128,7 +128,7 @@
         
           '<div class="problem">'+
             '{!PLAY|W06-C|41.5} いつピクニックに行きますか。<br>'+
-            '{来週行きます|らいしゅういきます|answer}。'+
+            '{来週行きます|らいしゅういきます|' + Genki.getAlts('{来週}{行}きます', 'らいしゅう|い') + 'answer}。'+
           '</div>'+
         '</div>'+
       '</div>'

@@ -68,27 +68,27 @@
           '<p class="section-desc">Translate the following sentences, using ～から.</p>'+
           '<div class="problem">'+
             'I am not free today. Because I have a test tomorrow.<br>'+
-            '{今日はひまじゃないです。あしたテストがありますから。|きょうはひまじゃないです。あしたテストがありますから。|answer}'+
+            '{今日はひまじゃないです。あしたテストがありますから。|きょうはひまじゃないです。あしたテストがありますから。|' + Genki.getAlts('{今日}は{暇}じゃないです。{明日}テストがありますから。', 'きょう|ひま|あした') + 'answer}'+
           '</div>'+
         
           '<div class="problem">'+
             'The test was not difficult. Because I had studied a lot.<br>'+
-            '{テストは難しくなかったです。たくさん勉強しましたから。|テストはむずかしくなかったです。たくさんべんきょうしましたから。|answer}'+
+            '{テストは難しくなかったです。たくさん勉強しましたから。|テストはむずかしくなかったです。たくさんべんきょうしましたから。|' + Genki.getAlts('テストは{難}しくなかったです。たくさん{勉強}しましたから。', 'むずか|べんきょう') + 'answer}'+
           '</div>'+
         
           '<div class="problem">'+
             'Let\'s go out tonight. Because tomorrow is a holiday.<br>'+
-            '{今晩出かけましょう。あしたは休みですから。|こんばんでかけましょう。あしたはやすみですから。|answer}'+
+            '{今晩出かけましょう。あしたは休みですから。|こんばんでかけましょう。あしたはやすみですから。|' + Genki.getAlts('{今晩}{出}かけましょう。{明日}は{休}みですから。', 'こんばん|で|あした|やす') + 'answer}'+
           '</div>'+
         
           '<div class="problem">'+
             'I helped my mother. Because she was busy.<br>'+
-            '{お母さんを手伝いました。お母さんは忙しかったですから。|おかあさんをてつだいました。おかあさんはいそがしかったですから。|answer}'+
+            '{お母さんを手伝いました。お母さんは忙しかったですから。|おかあさんをてつだいました。おかあさんはいそがしかったですから。|' + Genki.getAlts('お{母}さんを{手伝}いました。お{母}さんは{忙}しかったですから。', 'かあ|てつだ|かあ|いそが') + 'answer}'+
           '</div>'+
         
           '<div class="problem">'+
             'I will not drink coffee. Because I drank coffee in the morning.<br>'+
-            '{コーヒーを飲みません。朝コーヒーを飲みましたから。|コーヒーをのみません。あさコーヒーをのみましたから。|answer}'+
+            '{コーヒーを飲みません。朝コーヒーを飲みましたから。|コーヒーをのみません。あさコーヒーをのみましたから。|' + Genki.getAlts('コーヒーを{飲}みません。{朝}コーヒーを{飲}みましたから。', 'の|あさ|の') + 'answer}'+
           '</div>'+
           
           // II
@@ -100,12 +100,12 @@
         
           '<div class="problem">'+
             'Because I am going to the hospital.<br>'+
-            'A : {病院に行きます|びょういんにいきます|answer}から。'+
+            'A : {病院に行きます|びょういんにいきます|' + Genki.getAlts('{病院}に{行}きます', 'びょういん|い') + 'answer}から。'+
           '</div>'+
         
           '<div class="problem">'+
             'Today, I will go to the bank.<br>'+
-            'A : {今日、銀行に行きます|きょう、ぎんこうにいきます|answer}。'+
+            'A : {今日、銀行に行きます|きょう、ぎんこうにいきます|' + Genki.getAlts('{今日}、{銀行}に{行}きます', 'きょう|ぎんこう|い') + 'answer}。'+
           '</div>'+
         
           '<p>B : どうしてですか。</p>'+

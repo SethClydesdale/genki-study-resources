@@ -66,7 +66,7 @@
         '<div class="count-problems">'+
           '<div class="problem">'+
             '朝起きて、何をしますか。<br>'+
-            '{水を飲みます|みずをのみます|answer}。(I drink water.)'+
+            '{水を飲みます|みずをのみます|' + Genki.getAlts('{水}を{飲}みます', 'みず|の') + 'answer}。(I drink water.)'+
           '</div>'+
         
           '<div class="problem">'+
