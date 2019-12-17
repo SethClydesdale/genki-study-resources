@@ -680,6 +680,7 @@ footer li:first-child:before { display:none; }
 /* toggle button */
 #toggle-exercises {
   background:#C30;
+  text-decoration:none;
   text-align:center;
   line-height:32px;
   height:32px;
@@ -1355,6 +1356,7 @@ p.section-desc {
   min-width:0;
 }
 .fill-quiz .valign-off .writing-zone { vertical-align:0; }
+.fill-quiz .valign-top .writing-zone { vertical-align:top; }
 .fill-quiz .pad-zones .writing-zone {
   vertical-align:top;
   margin-bottom:25px;

@@ -2544,7 +2544,7 @@ Genki.jisho = {
   'わ' : [
     { ja : 'ワイン', en : 'wine', l : '読L6-III' },
     { ja : '若い|わかい', en : 'young', l : '会L9' },
-    { ja : 'わかる', en : 'to understand', v : 'u', l : '会L4' },
+    { ja : '分かる|わかる', en : 'to understand', v : 'u', l : '会L4' },
     { ja : '若者|わかもの', en : 'young people', l : '読L14-漢字表' },
     { ja : '別れる|わかれる', en : 'to break up; to separate', v : 'ru', l : '会L12' },
     { ja : '若々しい|わかわかしい', en : 'youthful', l : '読L21-漢字表' },
