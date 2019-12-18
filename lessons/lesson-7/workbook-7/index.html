@@ -66,37 +66,44 @@
       '<div class="count-problems">'+
         '<div class="problem">'+
           '日本語のクラスに女の人が何人いますか。<br>'+
-          '{五人います|ごにんいます|answer}。(5)'+
+          '(5 people)<br>'+
+          '{五人います|ごにんいます|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '日本語のクラスに男の人が何人いますか。<br>'+
-          '{六人います|ろくにんいます|answer}。(6)'+
+          '(6 people)<br>'+
+          '{六人います|ろくにんいます|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '兄弟がいますか。何人いますか。<br>'+
-          '{はい、兄弟がいます。二人います。|はい、きょうだいがいます。ふたりいます。|answer} (Yes, 2)'+
+          '(Yes, I have siblings. I have 2.)<br>'+
+          '{はい、兄弟がいます。二人います。|はい、きょうだいがいます。ふたりいます。|' + Genki.getAlts('はい、{兄弟}がいます。{二人}います。', 'きょうだい|ふたり') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'ルームメート<span class="define">[roommate]</span>がいますか。何人いますか。<br>'+
-          '{はい、ルームメートがいます。一人います。|はい、ルームメートがいます。ひとりいます。|answer} (Yes, 1)'+
+          '(Yes, I have a roommate. I have 1.)<br>'+
+          '{はい、ルームメートがいます。一人います。|はい、ルームメートがいます。ひとりいます。|answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたの大学に学生が何人いますか。<br>'+
-          '{一万二千人います|いちまんにせんにんいます|answer}。(12,000)'+
+          '(12,000 people)<br>'+
+          '{一万二千人います|いちまんにせんにんいます|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたの町に人が何人住んでいますか。<br>'+
-          '{八千人ぐらい住んでいます|はっせんにんぐらいすんでいます|answer}。(about 8,000)'+
+          '(about 8,000 live there.)<br>'+
+          '{八千人ぐらい住んでいます|はっせんにんぐらいすんでいます|' + Genki.getAlts('{八千人}ぐらい{住}んでいます', 'はっせんにん|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '日本人の友だちが何人いますか。<br>'+
-          '{二人います|ふたりいます|answer}。(2)'+
+          '(2 people)<br>'+
+          '{二人います|ふたりいます|answer}。'+
         '</div>'+
       '</div>'
         

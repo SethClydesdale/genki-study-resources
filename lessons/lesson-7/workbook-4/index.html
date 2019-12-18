@@ -67,7 +67,7 @@
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'Yasuo is not tall.<br>'+
-          '{やすおさんは背が高くないです|やすおさんはせがたかくないです|answer}。'+
+          '{やすおさんは背が高くないです|やすおさんはせがたかくないです|' + Genki.getAlts('やすおさんは{背}が{高}くないです', 'せ|たか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -77,7 +77,7 @@
         
         '<div class="problem">'+
           'Norio is wearing a new T-shirt today.<br>'+
-          '{のりおさんは今日新しいＴシャツを着ています|のりおさんはきょうあたらしいＴシャツをきています|answer}。'+
+          '{のりおさんは今日新しいＴシャツを着ています|のりおさんはきょうあたらしいＴシャツをきています|' + Genki.getAlts('のりおさんは{今日}{新}しいＴシャツを{着}ています', 'きょう|あたら|き') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -87,38 +87,38 @@
         
         '<p class="section-desc">You are an eyewitness testifying in court. Describe the person you saw at the scene of the crime using the past tense.</p>'+
         '<div class="problem">'+
-          'Height:<br>'+
-          '{背が低かったです|せがひくかったです|answer}。(Was short)'+
+          'Height: (Was short)<br>'+
+          '{背が低かったです|せがひくかったです|' + Genki.getAlts('{背}が{低}かったです', 'せ|ひく') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
-          'Hair:<br>'+
-          '{髪が短かったです|かみがみじかかったです|answer}。(Was short)'+
+          'Hair: (Was short)<br>'+
+          '{髪が短かったです|かみがみじかかったです|' + Genki.getAlts('{髪}が{短}かったです', 'かみ|みじか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
-          'Glasses:<br>'+
-          '{めがねをかけていました}。(Was wearing glasses)'+
+          'Glasses: (Was wearing glasses)<br>'+
+          '{眼鏡をかけていました|めがねをかけていました|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
-          'Eyes:<br>'+
-          '{目が小さかったです|めがちいさかったです|answer}。(Had small eyes)'+
+          'Eyes: (Had small eyes)<br>'+
+          '{目が小さかったです|めがちいさかったです|' + Genki.getAlts('{目}が{小}さかったです', 'め|ちい') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
-          'Clothes (above the waist):<br>'+
-          '{Ｔシャツを着ていました|Ｔシャツをきていました|answer}。(Was wearing a T-shirt)'+
+          'Clothes above the waist: (Was wearing a T-shirt)<br>'+
+          '{Ｔシャツを着ていました|Ｔシャツをきていました|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
-          'Clothes (below the waist):<br>'+
-          '{ジーンズをはいていました}。(Was wearing jeans)'+
+          'Clothes below the waist: (Was wearing jeans)<br>'+
+          '{ジーンズをはいていました}。'+
         '</div>'+
         
         '<div class="problem">'+
-          'Shoes:<br>'+
-          '{くつをはいていませんでした}。(Was not wearing shoes)'+
+          'Shoes: (Was not wearing shoes)<br>'+
+          '{靴をはいていませんでした|くつをはいていませんでした|answer}。'+
         '</div>'+
       '</div>'
         

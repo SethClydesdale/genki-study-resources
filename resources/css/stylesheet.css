@@ -281,7 +281,11 @@ a#fork-me:hover, a#fork-me:focus {
   vertical-align:middle;
 }
 
-#announcement a { color:#FF0; }
+#announcement a {
+  color:#FF0;
+  font-weight:bold;
+}
+
 #announcement h3 { margin:5px 0 5px 0; }
 
 #announcement .announcement {

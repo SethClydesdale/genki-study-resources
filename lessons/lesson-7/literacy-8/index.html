@@ -103,13 +103,19 @@
         
       '<div class="count-problems">'+
         '<p class="section-desc">Summarize what Mary wrote about the following topics in Japanese.</p>'+
-        '<div class="problem">Japan: {すこしさむいです。}</div>'+
-        '<div class="problem">Her town: {小さくて、しずかです。|ちいさくて、しずかです。|furigana}</div>'+
-        '<div class="problem">Father: {会社につとめています。いそがしくて、毎日おそく帰ります。|かいしゃにつとめています。いそがしくて、まいにちおそくかえります。|furigana}</div>'+
-        '<div class="problem">Mother: {とてもおもしろい人です。|とてもおもしろいひとです。|furigana}</div>'+
-        '<div class="problem">Sister: {高校生です。よくべんきょうします。|こうこうせいです。よくべんきょうします。|furigana}</div>'+
-        '<div class="problem">Brother: {東京の大学に行っています。|とうきょうのだいがくにいっています。|furigana}</div>'+
-        '<div class="problem">School: {とてもおもしろいです。}</div>'+
+        '<div class="problem">Japan: {すこし寒いです|すこしさむいです|' + Genki.getAlts('{少}し{寒}いです', 'すこ|さむ') + 'answer}。</div>'+
+        
+        '<div class="problem">Her town: {小さくて、静かです|ちいさくて、しずかです|' + Genki.getAlts('{小}さくて、{静}かです', 'ちい|しずか') + 'answer}。</div>'+
+        
+        '<div class="problem">Father: {会社に勤めています。忙しくて、毎日遅く帰ります。|かいしゃにつとめています。いそがしくて、まいにちおそくかえります。|' + Genki.getAlts('{会社}に{勤}めています。{忙}しくて、{毎日}{遅}く{帰}ります。', 'かいしゃ|つと|いそが|まいにち|おそ|かえ') + 'answer}</div>'+
+        
+        '<div class="problem">Mother: {とても面白い人です|とてもおもしろいひとです|' + Genki.getAlts('とても{面白}い{人}です', 'おもしろ|ひと') + 'answer}。</div>'+
+        
+        '<div class="problem">Sister: {高校生です。よく勉強します。|こうこうせいです。よくべんきょうします。|' + Genki.getAlts('{高校生}です。よく{勉強}します。', 'こうこうせい|べんきょう') + 'answer}</div>'+
+        
+        '<div class="problem">Brother: {東京の大学に行っています|とうきょうのだいがくにいっています|' + Genki.getAlts('{東京}の{大学}に{行}っています', 'とうきょう|だいがく|い') + 'answer}。</div>'+
+        
+        '<div class="problem">School: {とても面白いです|とてもおもしろいです|answer}。</div>'+
       '</div>'
     });</script>
   </body>

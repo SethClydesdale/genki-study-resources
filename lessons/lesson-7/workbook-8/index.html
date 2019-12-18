@@ -66,42 +66,50 @@
       '<div class="count-problems">'+
         '<div class="problem">'+
           '名前<span class="define">[なまえ]</span>は何ですか。<br>'+
-          '{もりした　まいさんです}。(Mai Morishita)'+
+          '(Her name is Mai Morishita.)<br>'+
+          '{もりした%( /　/)まいさんです}。'+
         '</div>'+
         
         '<div class="problem">'+
           '何歳ですか。<br>'+
-          '{二十二歳です|にじゅうにさいです|answer}。(22)'+
+          '(She\'s 22 years old)<br>'+
+          '{二十二歳です|にじゅうにさいです|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'どこに住んでいますか。<br>'+
-          '{名古屋に住んでいます|なごやにすんでいます|answer}。(Nagoya)'+
+          '(She lives in Nagoya.)<br>'+
+          '{名古屋に住んでいます|なごやにすんでいます|' + Genki.getAlts('{名古屋}に{住}んでいます', 'なごや|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '何をしていますか。<br>'+
-          '{大学生です。大学で経済を勉強しています。|だいがくせいです。だいがくでけいざいをべんきょうしています。|answer} (She is a university student. She is studying economics at a university.)'+
+          '(She\'s a university student. She\'s studying economics at a university.)<br>'+
+          '{大学生です。大学で経済を勉強しています。|だいがくせいです。だいがくでけいざいをべんきょうしています。|' + Genki.getAlts('{大学生}です。{大学}で{経済}を{勉強}しています。', 'だいがくせい|だいがく|けいざい|べんきょう') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '結婚していますか。<br>'+
-          '{いいえ、結婚していません|いいえ、けっこんしていません|answer}。(No)'+
+          '(No, she\'s not married.)<br>'+
+          '{いいえ、結婚していません|いいえ、けっこんしていません|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '背が高いですか。<br>'+
-          '{いいえ、あまり背が高くないです|いいえ、あまりせがたかくないです|answer}。(No, she is not very tall.)'+
+          '(No, she\'s not very tall.)<br>'+
+          '{いいえ、あまり背が高くないです|いいえ、あまりせがたかくないです|' + Genki.getAlts('いいえ、あまり{背}が{高}くないです', 'せ|たか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '髪が長いですか。<br>'+
-          '{はい、髪が長いです|はい、かみがながいです|answer}。(Yes)'+
+          '(Yes, her hair is long.)<br>'+
+          '{はい、髪が長いです|はい、かみがながいです|' + Genki.getAlts('はい、{髪}が{長}いです', 'かみ|なが') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'どんな人ですか。(about personality)<br>'+
-          '{頭がよくて、おもしろい人です|あたまがよくて、おもしろいひとです|answer}。(bright and interesting)'+
+          '(She\'s a smart and interesting person.)<br>'+
+          '{頭がよくて、おもしろい人です|あたまがよくて、おもしろいひとです|' + Genki.getAlts('{頭}がよくて、{面白}い{人}です', 'あたま|おもしろ|ひと') + 'answer}。'+
         '</div>'+
       '</div>'
         

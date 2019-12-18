@@ -72,49 +72,51 @@
         
         '<div class="problem">'+
           'Drinking sake<br>'+
-          '{お酒を飲んでいます|おさけをのんでいます|answer}。'+
+          '{お酒を飲んでいます|おさけをのんでいます|' + Genki.getAlts('お{酒}を{飲}んでいます', 'さけ|の') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Eating rice<br>'+
-          '{ご飯を食べています|ごはんをたべています|answer}。'+
+          '{ご飯を食べています|ごはんをたべています|' + Genki.getAlts('ご{飯}を{食}べています', 'はん|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Taking a picture<br>'+
-          '{写真を撮っています|しゃしんをとっています|answer}。'+
+          '{写真を撮っています|しゃしんをとっています|' + Genki.getAlts('{写真}を{撮}っています', 'しゃしん|と') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Talking with a friend<br>'+
-          '{友だちと話しています|ともだちとはなしています|answer}。'+
+          '{友だちと話しています|ともだちとはなしています|' + Genki.getAlts('{友}だちと{話}しています', 'とも|はな') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions in Japanese.</p>'+
         '<div class="problem">'+
           '今、何をしていますか。<br>'+
-          '{今、日本語を勉強しています|いま、にほんごをべんきょうしています|answer}。(Right now, I am studying Japanese.)'+
+          '(Right now, I am studying Japanese.)<br>'+
+          '{今、日本語を勉強しています|いま、にほんごをべんきょうしています|' + Genki.getAlts('{今}、{日本語}を{勉強}しています', 'いま|にほんご|べんきょう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'きのうの午後八時ごろ何をしていましたか。<br>'+
-          '{テレビを見ていました|テレビをみていました|answer}。(I was watching TV.)'+
+          '(I was watching TV.)<br>'+
+          '{テレビを見ていました|テレビをみていました|answer}。'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'Mary is waiting for a bus at the bus stop.<br>'+
-          '{メアリーさんはバス停でバスを待っています|メアリーさんはバスていでバスをまっています|answer}。'+
+          '{メアリーさんはバス停でバスを待っています|メアリーさんはバスていでバスをまっています|' + Genki.getAlts('メアリーさんはバス{停}でバスを{待}っています', 'てい|ま') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'At two o\'clock yesterday, Takeshi was playing tennis with a friend.<br>'+
-          '{きのう二時にたけしさんは友だちとテニスをしていました|きのうにじにたけしさんはともだちとテニスをしていました|answer}。'+
+          '{きのう二時にたけしさんは友だちとテニスをしていました|きのうにじにたけしさんはともだちとテニスをしていました|' + Genki.getAlts('{昨日}{二時}にたけしさんは{友}だちとテニスをしていました', 'きのう|にじ|とも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I called home. My older sister was doing her homework.<br>'+
-          '{家に電話をかけていました。姉は宿題をしていました。|いえにでんわをかけていました。あねはしゅくだいをしていました。|answer}'+
+          '{家に電話をかけていました。姉は宿題をしていました。|いえにでんわをかけていました。あねはしゅくだいをしていました。|' + Genki.getAlts('{家}に{電話}をかけていました。{姉}は{宿題}をしていました。', 'いえ|でんわ|あね|しゅくだい') + 'answer}'+
         '</div>'+
       '</div>'
         
