@@ -65,55 +65,40 @@
       quizlet : 
       '<div class="count-problems">'+
         '<p class="section-desc">Write what you are good at/what your are not good at/what you like to do/what you don\'t like to do, using the cues below.</p>'+
-        '<div class="problem">'+
-          'singing<br>'+
-          '私は{歌うのが|うたうのが|answer}下手です。'+
-        '</div>'+
+        '<div class="problem">私は{歌うのが|うたうのが|answer;hint:singing}下手です。</div>'+
         
-        '<div class="problem">'+
-          'taking pictures<br>'+
-          '私はあまり{写真を撮るのが|しゃしんをとるのが|answer}上手じゃないです。'+
-        '</div>'+
+        '<div class="problem">私はあまり{写真を撮るのが|しゃしんをとるのが|' + Genki.getAlts('{写真}を{撮}るのが', '|') + 'answer;hint:taking pictures}上手じゃないです。</div>'+
         
-        '<div class="problem">'+
-          'speaking Japanese<br>'+
-          '私は{日本語を話すのが|にほんごをはなすのが|answer}大好きです。'+
-        '</div>'+
+        '<div class="problem">私は{日本語を話すのが|にほんごをはなすのが|' + Genki.getAlts('{日本語}を{話}すのが', '|') + 'answer;hint:speaking Japanese}大好きです。</div>'+
         
-        '<div class="problem">'+
-          'doing laundry<br>'+
-          '私は{洗濯するのが|せんたくするのが|answer}きらいです。'+
-        '</div>'+
+        '<div class="problem">私は{洗濯するのが|せんたくするのが|answer;hint:doing laundry}きらいです。</div>'+
         
-        '<div class="problem">'+
-          'washing a car<br>'+
-          '私はあまり{車を洗うのが|くるまをあらうのが|answer}好きじゃないです。'+
-        '</div>'+
+        '<div class="problem">私はあまり{車を洗うのが|くるまをあらうのが|' + Genki.getAlts('{車}を{洗}うのが', '|') + 'answer;hint:washing a car}好きじゃないです。</div>'+
         
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'Erika is very good at making friends.<br>'+
-          '{えりかさんは友だちを作るのが%(とても/すごく)上手です|えりかさんはともだちをつくるのが%(とても/すごく)じょうずです|answer}。'+
+          '{えりかさんは友だちを作るのが%(とても/すごく)上手です|えりかさんはともだちをつくるのが%(とても/すごく)じょうずです|' + Genki.getAlts('えりかさんは{友}だちを{作}るのが{とても}{上手}です', 'とも|つく|すごく|じょうず') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Kiyoshi loves reading books.<br>'+
-          '{きよしさんは本を読むのが大好きです|きよしさんはほんをよむのがだいすきです|answer}。'+
+          '{きよしさんは本を読むのが大好きです|きよしさんはほんをよむのがだいすきです|' + Genki.getAlts('きよしさんは{本}を{読}むのが{大}{好}きです', 'ほん|よ|だい|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Makoto hates cleaning the room.<br>'+
-          '{まことさんは部屋を掃除するのが大きらいです|まことさんはへやをそうじするのがだいきらいです|answer}。'+
+          '{まことさんは部屋を掃除するのが大きらいです|まことさんはへやをそうじするのがだいきらいです|' + Genki.getAlts('まことさんは{部屋}を{掃除}するのが{大}{嫌}いです', 'へや|そうじ|だい|きら') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Yoshie is not good at driving a car.<br>'+
-          '{よしえさんは車を運転するのが上手じゃないです|よしえさんはくるまをうんてんするのがじょうずじゃないです|answer}。'+
+          '{よしえさんは車を運転するのが上手じゃないです|よしえさんはくるまをうんてんするのがじょうずじゃないです|' + Genki.getAlts('よしえさんは{車}を{運転}するのが{上手}じゃないです', 'くるま|うんてん|じょうず') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Yuki doesn\'t like doing laundry very much.<br>'+
-          '{ゆきさんは洗濯するのがあまり好きじゃないです|ゆきさんはせんたくするのがあまりすきじゃないです|answer}。'+
+          '{ゆきさんは洗濯するのがあまり好きじゃないです|ゆきさんはせんたくするのがあまりすきじゃないです|' + Genki.getAlts('ゆきさんは{洗濯}するのがあまり{好}きじゃないです', 'せんたく|す') + 'answer}。'+
         '</div>'+
       '</div>'
         

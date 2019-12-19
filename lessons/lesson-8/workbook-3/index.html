@@ -67,53 +67,57 @@
         '<p class="section-desc">Translate the following sentences. In sentences 4-6 "I don\'t think..." should be translated as ～ないと思います.</p>'+
         '<div class="problem">'+
           'I think Professor Yamashita is good-looking.<br>'+
-          '{山下先生はかっこいいと思います|やましたせんせいはかっこいいとおもいます|answer}。'+
+          '{山下先生はかっこいいと思います|やましたせんせいはかっこいいとおもいます|' + Genki.getAlts('{山下}{先生}はかっこいいと{思}います', 'やました|せんせい|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I think this woman is Mary\'s Japanese teacher.<br>'+
-          '{この女の人はメアリーさんの日本語の先生だと思います|このおんなのひとはメアリーさんのにほんごのせんせいだとおもいます|answer}。'+
+          '{この女の人はメアリーさんの日本語の先生だと思います|このおんなのひとはメアリーさんのにほんごのせんせいだとおもいます|' + Genki.getAlts('この{女}の{人}はメアリーさんの{日本語}の{先生}だと{思}います', 'おんな|ひと|にほんご|せんせい|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I think Professor Yamashita reads many books.<br>'+
-          '{山下先生はたくさん本を読むと思います|やましたせんせいはたくさんほんをよむとおもいます|answer}。'+
+          '{山下先生はたくさん本を読むと思います|やましたせんせいはたくさんほんをよむとおもいます|' + Genki.getAlts('{山下}{先生}はたくさん{本}を{読}むと{思}います', 'やました|せんせい|ほん|よ|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I don\'t think this town is interesting. (lit., I think this town is not interesting.)<br>'+
-          '{この町はおもしろくないと思います|このまちはおもしろくないとおもいます|answer}。'+
+          '{この町はおもしろくないと思います|このまちはおもしろくないとおもいます|' + Genki.getAlts('この{町}は{面白}くないと{思}います', 'まち|おもしろ|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I don\'t think Mai likes Mayumi.<br>'+
-          '{まいさんはまゆみさんが好きじゃないと思います|まいさんはまゆみさんがすきじゃないとおもいます|answer}。'+
+          '{まいさんはまゆみさんが好きじゃないと思います|まいさんはまゆみさんがすきじゃないとおもいます|' + Genki.getAlts('まいさんはまゆみさんが{好}きじゃないと{思}います', 'す|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I don\'t think Aya will come to school today.<br>'+
-          '{あやさんは今日学校に来ないと思います|あやさんはきょうがっこうにこないとおもいます|answer}。'+
+          '{あやさんは今日学校に来ないと思います|あやさんはきょうがっこうにこないとおもいます|' + Genki.getAlts('あやさんは{今日}{学校}に{来}ないと{思}います', 'きょう|がっこう|こ|おも') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions, using ～と思います.</p>'+
         '<div class="problem">'+
           'あしたはどんな天気ですか。<br>'+
-          '{雨が降ると思います|あめがふるとおもいます|answer}。(I think it will rain.)'+
+          '(I think it will rain.)<br>'+
+          '{雨が降ると思います|あめがふるとおもいます|' + Genki.getAlts('{雨}が{降}ると{思}います', 'あめ|ふ|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '来週は忙しいですか。<br>'+
-          '{忙しくないと思います|いそがしくないとおもいます|answer}。(I don\'t think I will be busy.)'+
+          '(I don\'t think I will be busy.)<br>'+
+          '{忙しくないと思います|いそがしくないとおもいます|' + Genki.getAlts('{忙}しくないと{思}います', 'いそが|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたの日本語の先生は、料理が上手ですか。<br>'+
-          '{はい、上手だと思います|はい、じょうずだとおもいます|answer}。(Yes, I think [my teacher] is good [at cooking].)'+
+          '(Yes, I think he is good [at cooking].)<br>'+
+          '{はい、上手だと思います|はい、じょうずだとおもいます|' + Genki.getAlts('はい、{上手}だと{思}います', 'じょうず|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたの日本語の先生は、今週の週末、何をしますか。<br>'+
-          '{掃除すると思います|そうじするとおもいます|answer}。(I think [my teacher] will be cleaning.)'+
+          '(I think he will clean.)<br>'+
+          '{掃除すると思います|そうじするとおもいます|' + Genki.getAlts('{掃除}すると{思}います', 'そうじ|おも') + 'answer}。'+
         '</div>'+
       '</div>'
         

@@ -64,41 +64,48 @@
       
       quizlet : 
       '<div class="count-problems">'+
-        '<p class="section-desc">Turn to page 79 of your workbook and look at the picture of the party and complete the following conversations. You may also use the provided cues to complete the conversation. (hover/click/select them to reveal the answer)</p>'+
-        '<div class="problem">'+
-          '<p>Q：だれが新聞を読んでいますか。</p>'+
-          '<p>A：{佐藤さんが新聞を読んでいます|さとうさんがしんぶんをよんでいます|answer}。<span class="spoiler">佐藤 (さとう)</span></p>'+
-        '</div>'+
+        '<p class="section-desc">Look at the picture at a party and complete the following conversations.</p>'+
         
-        '<div class="problem">'+
-          '<p>Q：{だれが写真を撮っていますか|だれがしゃしんをとっていますか|answer}。<span class="spoiler">Who is taking pictures?</span></p>'+
-          '<p>A：森さんが撮っています。</p>'+
-        '</div>'+
+        '<div class="columns-2 clear">'+
+          '<div class="center">{!IMG|l8-w7-1.png|party}</div>'+
         
-        '<div class="problem">'+
-          '<p>Q：だれがめがねをかけていますか。</p>'+
-          '<p>A：{山田さんがめがねをかけています|やまださんがめがねをかけています|answer}。<span class="spoiler">山田 (やまだ)</span></p>'+
-        '</div>'+
-        
-        '<div class="problem">'+
-          '<p>Q：{だれが踊っていますか|だれがおどっていますか|answer}。<span class="spoiler">Who is dancing?</span></p>'+
-          '<p>A：田中さんと岡田さんが踊っています。</p>'+
+          '<div>'+
+            '<div class="problem">'+
+              'Q：だれが新聞を読んでいますか。<br><br><br>'+
+              '<div class="indent-block">A：{佐藤さんが新聞を読んでいます|さとうさんがしんぶんをよんでいます|' + Genki.getAlts('{佐藤}さんが{新聞}を{読}んでいます', 'さとう|しんぶん|よ') + 'answer}。</div>'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'Q：{だれが写真を撮っていますか|だれがしゃしんをとっていますか|' + Genki.getAlts('だれが{写真}を{撮}っていますか', 'しゃしん|と') + 'answer}。<br><br><br>'+
+              '<div class="indent-block">A：森さんが撮っています。</div>'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'Q：だれがめがねをかけていますか。<br><br><br>'+
+              '<div class="indent-block">A：{山田さんがめがねをかけています|やまださんがめがねをかけています|' + Genki.getAlts('{山田}さんが{眼鏡}をかけています', 'やまだ|めがね') + 'answer}。</div>'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'Q：{だれが踊っていますか|だれがおどっていますか|answer}。<br><br><br>'+
+              '<div class="indent-block">A：田中さんと岡田さんが踊っています。</div>'+
+            '</div>'+
+          '</div>'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences. (Note especially that 何か and 何も are normally not accompanied by particles.)</p>'+
         '<div class="problem">'+
           'Did you eat anything this morning?<br>'+
-          '{けさ、何か食べましたか|けさ、なにかたべましたか|answer}。'+
+          '{今朝、何か食べましたか|けさ、なにかたべましたか|' + Genki.getAlts('{今朝}、{何}か{食}べましたか', 'けさ|なに|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'No, I did not eat anything this morning.<br>'+
-          '{いいえ、けさ何も食べませんでした|いいえ、けさなにもたべませんでした|answer}。'+
+          '{いいえ、今朝何も食べませんでした|いいえ、けさなにもたべませんでした|' + Genki.getAlts('いいえ、{今朝}{何}も{食}べませんでした', 'けさ|なに|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'What will you do over the weekend?<br>'+
-          '{週末、何をしますか|しゅうまつ、なにをしますか|answer}。'+
+          '{週末、何をしますか|しゅうまつ、なにをしますか|' + Genki.getAlts('{週末}、{何}をしますか', 'しゅうまつ|なに') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -108,12 +115,12 @@
         
         '<div class="problem">'+
           'Yoshio asked something, but I did not understand.<br>'+
-          '{よしおさんは何か聞きましたが、わかりませんでした|よしおさんはなにかききましたが、わかりませんでした|answer}。'+
+          '{よしおさんは何か聞きましたが、わかりませんでした|よしおさんはなにかききましたが、わかりませんでした|' + Genki.getAlts('よしおさんは{何}か{聞}きましたが、{分}かりませんでした', 'なに|き|わ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Would you like to drink anything?<br>'+
-          '{何か飲みませんか|なにかのみませんか|answer}。'+
+          '{何か飲みませんか|なにかのみませんか|' + Genki.getAlts('{何}か{飲}みませんか', 'なに|の') + 'answer}。'+
         '</div>'+
       '</div>'
         

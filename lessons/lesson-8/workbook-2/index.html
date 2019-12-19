@@ -67,58 +67,69 @@
         '<p class="section-desc">Make informal question sentences using the cues and answer them in the negative.</p>'+
         '<div class="problem">'+
           '(Do you) study Japanese today?<br>'+
-          'Q：{今日、日本語を勉強する|きょう、にほんごをべんきょうする|answer}?　A：{ううん、勉強しない|ううん、べんきょうしない|answer}。'+
+          'Q：{今日、日本語を勉強する|きょう、にほんごをべんきょうする|' + Genki.getAlts('{今日}、{日本語}を{勉強}する', 'きょう|にほんご|べんきょう') + 'answer}?<br><br><br>'+
+          'A：{ううん、勉強しない|ううん、べんきょうしない|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '(Do you) often ride a bus?<br>'+
-          'Q：{よくバスに乗る|よくバスにのる|answer}?　A：{ううん、乗らない|ううん、のらない|answer}。'+
+          'Q：{よくバスに乗る|よくバスにのる|answer}?<br><br><br>'+
+          'A：{ううん、乗らない|ううん、のらない|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '(Do you) speak Japanese every day.<br>'+
-          'Q：{毎日日本語を話す|まいにちにほんごをはなす|answer}?　A：{ううん、話さない|ううん、はなさない|answer}。'+
+          'Q：{毎日日本語を話す|まいにちにほんごをはなす|' + Genki.getAlts('{毎日}{日本語}を{話}す', 'まいにち|にほんご|はな') + 'answer}?<br><br><br>'+
+          'A：{ううん、話さない|ううん、はなさない|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '(Do you) have homework today?<br>'+
-          'Q：{今日宿題がある|きょうしゅくだいがある|answer}?　A：{ううん、ない}。'+
+          'Q：{今日宿題がある|きょうしゅくだいがある|' + Genki.getAlts('{今日}{宿題}がある', 'きょう|しゅくだい') + 'answer}?<br><br><br>'+
+          'A：{ううん、ない}。'+
         '</div>'+
         
         '<div class="problem">'+
           '(Will you) go out this weekend?<br>'+
-          'Q：{今週の週末、出かける|こんしゅうのしゅうまつ、でかける|answer}?　A：{ううん、出かけない|ううん、でかけない|answer}。'+
+          'Q：{今週の週末、出かける|こんしゅうのしゅうまつ、でかける|' + Genki.getAlts('{今週}の{週末}、{出}かける', 'こんしゅう|しゅうまつ|で') + 'answer}?<br><br><br>'+
+          'A：{ううん、出かけない|ううん、でかけない|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Are you free tomorrow?<br>'+
-          'Q：{あしたひま}?　A：{ううん、ひまじゃない}。'+
+          'Q：{あした暇|あしたひま|' + Genki.getAlts('{明日}{暇}', 'あした|ひま') + 'answer}?<br><br><br>'+
+          'A：{ううん、暇じゃない|ううん、ひまじゃない|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Are you Japanese?<br>'+
-          'Q：{日本人|にほんじん|answer}?　A：{ううん、日本人じゃない|ううん、にほんじんじゃない|answer}。'+
+          'Q：{日本人|にほんじん|answer}?<br><br><br>'+
+          'A：{ううん、日本人じゃない|ううん、にほんじんじゃない|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Is it hot?<br>'+
-          'Q：{暑い|あつい|answer}?　A：{ううん、暑くない|ううん、あつくない|answer}。'+
+          'Q：{暑い|あつい|answer}?<br><br><br>'+
+          'A：{ううん、暑くない|ううん、あつくない|answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions in informal speech.</p>'+
         '<div class="problem">'+
           '今日は何曜日？<br>'+
-          '{火曜日|かようび|answer}。(Tuesday)'+
+          '(Tuesday)<br>'+
+          '{火曜日|かようび|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'どんな食べ物がきらい？<br>'+
-          '{魚がきらい|さかながきらい|answer}。(Fish)'+
+          '(I dislike Fish)<br>'+
+          '{魚がきらい|さかながきらい|' + Genki.getAlts('{魚}が{嫌}い', 'さかな|きら') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今週の週末、何をする？<br>'+
-          '{買い物をする|かいものをする|answer}。(Shopping)'+
+          '(I\'ll do shopping)<br>'+
+          '{買い物をする|かいものをする|answer}。'+
         '</div>'+
       '</div>'
         
