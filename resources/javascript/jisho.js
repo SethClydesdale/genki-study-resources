@@ -1784,6 +1784,7 @@ Genki.jisho = {
     { ja : '西口|にしぐち', en : 'west exit', l : '読L6-漢字表' },
     { ja : '二十分|にじ(ゅ)っぷん', en : 'twenty minutes', l : '会L1(e)' },
     { ja : '二時半|にじはん', en : 'half past two', l : '会L1' },
+    { ja : '西町|にしまち', en : 'Nishimachi', l : 'ワークブックL8-76' },
     { ja : '二週間前|にしゅうかんまえ', en : 'two weeks ago', l : '会L4(e)' },
     { ja : '二十五歳|にじゅうごさい', en : 'twenty-five years old', l : '読L17-漢字表' },
     { ja : '二週目|にしゅうめ', en : 'second week', l : '読L16-漢字表' },
