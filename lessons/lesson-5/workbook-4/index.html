@@ -67,38 +67,38 @@
         '<p class="section-desc">Answer the following questions by translating the given cues.</p>'+
         '<div class="problem">'+
           '先週はひまでしたか。<br>'+
-          '(No, I was not free. I was busy.)<br>'+
-          '{いいえ、暇じゃなかったです。忙しかったです。|いいえ、ひまじゃなかったです。いそがしかったです。|' + Genki.getAlts('いいえ、{暇}じゃなかったです。{忙}しかったです。', 'ひま|いそが') + 'answer}'+
+          '(No, I was not free last week. I was busy.)<br>'+
+          '{いいえ、%(先週は/)暇じゃなかったです。忙しかったです。|いいえ、%(せんしゅうは/)ひまじゃなかったです。いそがしかったです。|' + Genki.getAlts('いいえ、{暇}じゃなかったです。{忙}しかったです。', 'ひま|いそが') + Genki.getAlts('いいえ、{先週}は{暇}じゃなかったです。{忙}しかったです。', 'せんしゅう|ひま|いそが') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'テストは難しかったですか。<br>'+
-          '(No, it was not difficult. It was easy.)<br>'+
-          '{いいえ、難しくなかったです。やさしかったです。|いいえ、むずかしくなかったです。やさしかったです。|answer}'+
+          '(No, the test was not difficult. It was easy.)<br>'+
+          '{いいえ、%(テストは/)難しくなかったです。やさしかったです。|いいえ、%(テストは/)むずかしくなかったです。やさしかったです。|answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'きのうは暑かったですか。<br>'+
-          '(Yes, it was very hot.)<br>'+
-          '{はい、%(とても/すごく)暑かったです|はい、%(とても/すごく)あつかったです|answer}。'+
+          '(Yes, yesterday was very hot.)<br>'+
+          '{はい、%(きのうは/)とても暑かったです|はい、%(きのうは/)とてもあつかったです|' + Genki.getAlts('はい、{昨日}は{とても}{暑}かったです', 'きのう|すごく|あつ') + Genki.getAlts('はい、すごく{暑}かったです', 'あつ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '週末は楽しかったですか。<br>'+
-          '(Yes, it was fun.)<br>'+
-          '{はい、楽しかったです|はい、たのしかったです|answer}。'+
+          '(Yes, the weekend was fun.)<br>'+
+          '{はい、%(週末は/)楽しかったです|はい、%(しゅうまつは/)たのしかったです|' + Genki.getAlts('はい、{週末}は{楽}しかったです', 'しゅうまつ|たの') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'きのうの晩ご飯はおいしかったですか。<br>'+
-          '(No, it was not very delicious.)<br>'+
-          '{いいえ、あまりおいしくなかったです}。'+
+          '(No, yesterday\'s dinner was not very delicious.)<br>'+
+          '{いいえ、%(きのうの晩ご飯は/)あまりおいしくなかったです|いいえ、%(きのうのばんごはんは/)あまりおいしくなかったです|' + Genki.getAlts('いいえ、{昨日}の{晩}ご{飯}はあまりおいしくなかったです', 'きのう|ばん|はん') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'I was busy yesterday.<br>'+
-          '{私はきのう忙しかったです|わたしはきのういそがしかったです|' + Genki.getAlts('{私}は{昨日}{忙}しかったです', 'わたし|きのう|いそが') + 'answer}。'+
+          '{%(私は/)きのう忙しかったです|%(わたしは/)きのういそがしかったです|' + Genki.getAlts('{私}は{昨日}{忙}しかったです', 'わたし|きのう|いそが') + Genki.getAlts('{昨日}{忙}しかったです', 'きのう|いそが') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+

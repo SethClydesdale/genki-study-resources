@@ -67,32 +67,32 @@
         '<p class="section-desc">Answer the following questions by translating the given cues.</p>'+
         '<div class="problem">'+
           '日本語の宿題はやさしいですか。<br>'+
-          '(No, it is not easy.)<br>'+
-          '{いいえ、やさしくないです}。'+
+          '(No, Japanese homework is not easy.)<br>'+
+          '{いいえ、%(日本語の宿題は/)やさしくないです|いいえ、%(にほんごのしゅくだいは/)やさしくないです|' + Genki.getAlts('いいえ、{日本語}の{宿題}はやさしくないです', 'にほんご|しゅくだい') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今日は忙しいですか。<br>'+
-          '(Yes, it is busy.)<br>'+
-          '{はい、忙しいです|はい、いそがしいです|answer}。'+
+          '(Yes, today is busy.)<br>'+
+          '{はい、%(今日は/)忙しいです|はい、%(きょうは/)いそがしいです|' + Genki.getAlts('はい、{今日}は{忙}しいです', 'きょう|いそが') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたの部屋はきれいですか。<br>'+
-          '(No, it is not clean.)<br>'+
-          '{いいえ、きれいじゃないです}。'+
+          '(No, my room is not clean.)<br>'+
+          '{いいえ、%(私の部屋は/)きれいじゃないです|いいえ、%(わたしのへやは/)きれいじゃないです|' + Genki.getAlts('いいえ、{私}の{部屋}はきれいじゃないです', 'わたし|へや') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '日本語のクラスはおもしろいですか。<br>'+
-          '(Yes, it is interesting.)<br>'+
-          '{はい、面白いです|はい、おもしろいです|answer}。'+
+          '(Yes, Japanese class is interesting.)<br>'+
+          '{はい、%(日本語のクラスは/)面白いです|はい、%(にほんごのクラスは/)おもしろいです|' + Genki.getAlts('はい、{日本語}のクラスは{面白}いです', 'にほんご|おもしろ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたの町は静かですか。<br>'+
-          '(No, it is not very quiet.)<br>'+
-          '{いいえ、あまり静かじゃないです|いいえ、あまりしずかじゃないです|answer}。'+
+          '(No, my town is not very quiet.)<br>'+
+          '{いいえ、%(私の町は/)あまり静かじゃないです|いいえ、%(わたしのまちは/)あまりしずかじゃないです|' + Genki.getAlts('いいえ、{私}の{町}はあまり{静}かじゃないです', 'わたし|まち|しず') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
@@ -118,7 +118,7 @@
         
         '<div class="problem">'+
           'I will not be free tomorrow.<br>'+
-          '{私は明日暇じゃないです|わたしはあしたひまじゃないです|' + Genki.getAlts('{私}は{明日}{暇}じゃないです', 'わたし|あした|ひま') + 'answer}。'+
+          '{%(私は/)明日ひまじゃないです|%(わたしは/)あしたひまじゃないです|' + Genki.getAlts('{私}は{明日}{暇}じゃないです', 'わたし|あした|ひま') + Genki.getAlts('{明日}{暇}じゃないです', 'あした|ひま') + 'answer}。'+
         '</div>'+
       '</div>'
       

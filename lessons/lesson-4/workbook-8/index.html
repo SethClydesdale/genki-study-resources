@@ -66,14 +66,14 @@
       '<div class="count-problems">'+
         '<div class="problem">'+
           'あなたの家はどこですか。<br>'+
-          '(It\'s [in] Osaka.)<br>'+
-          '{大阪です|おおさかです|answer}。'+
+          '(My house is in Osaka.)<br>'+
+          '{%(私の家は/)大阪です|%(わたしのいえは/)おおさかです|' + Genki.getAlts('{私}の{家}は{大阪}です', 'わたし|いえ|おおさか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたの町に何がありますか。<br>'+
-          '(There is a department store and park.)<br>'+
-          '{デパートと公園があります|デパートとこうえんがあります|answer}。'+
+          '(There is a department store and park in my town.)<br>'+
+          '{%(私の町に/)デパートと公園があります|%(わたしのまちに/)デパートとこうえんがあります|' + Genki.getAlts('{私}の{町}にデパートと{公園}があります', 'わたし|まち|こうえん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -85,7 +85,7 @@
         '<div class="problem">'+
           '今日は何月何日ですか。何曜日ですか。<br>'+
           '(Today is October 21st. It\'s Thursday.)<br>'+
-          '{十月二十一日です。木曜日です。|じゅうがつにじゅういちにちです。もくようびです。|' + Genki.getAlts('{十月}{二十一日}です。{木曜日}です。', 'じゅうがつ|にじゅういちにち|もくようび') + 'answer}'+
+          '{%(今日は/)十月二十一日です。木曜日です。|%(きょうは/)じゅうがつにじゅういちにちです。もくようびです。|' + Genki.getAlts('{十月}{二十一日}です。{木曜日}です。', 'じゅうがつ|にじゅういちにち|もくようび') + Genki.getAlts('{今日}は{十月}{二十一日}です。{木曜日}です。', 'きょう|じゅうがつ|にじゅういちにち|もくようび') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+

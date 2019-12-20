@@ -79,14 +79,14 @@
         
         '<div class="problem">'+
           '天気はどうでしたか。<br>'+
-          '(It was good.)<br>'+
-          '{よかったです}。'+
+          '(The weather was good.)<br>'+
+          '{%(天気は/)よかったです|%(てんきは/)よかったです|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '食べ物はどうでしたか。<br>'+
-          '(It was very delicious.)<br>'+
-          '{とてもおいしかったです|すごくおいしかったです|answer}。'+
+          '(The food was very delicious.)<br>'+
+          '{%(食べ物は/)とてもおいしかったです|%(たべものは/)とてもおいしかったです|すごくおいしかったです|' + Genki.getAlts('{食べ物}はすごくおいしかったです', 'たべもの') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -98,7 +98,7 @@
         '<div class="problem">'+
           'おみやげを買いましたか。<br>'+
           '(Yes, I brought a souvenir.)<br>'+
-          '{はい、お土産を買いました|はい、おみやげをかいました|' + Genki.getAlts('はい、お{土産}を{買}いました', 'みやげ|か') + 'answer}。'+
+          '{はい、%(お土産を/)買いました|はい、%(おみやげを/)かいました|' + Genki.getAlts('はい、お{土産}を{買}いました', 'みやげ|か') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions in Japanese.</p>'+

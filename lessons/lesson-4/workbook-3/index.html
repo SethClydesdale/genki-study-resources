@@ -67,32 +67,32 @@
         '<p class="section-desc">Answer the following questions by translating the given cues.</p>'+
         '<div class="problem">'+
           'きのうは月曜日でしたか。<br>'+
-          '(Yes, it was Monday.)<br>'+
-          '{はい、月曜日でした|はい、げつようびでした|answer}。'+
+          '(Yes, yesterday was Monday.)<br>'+
+          '{はい、%(きのうは/)月曜日でした|はい、%(きのうは/)げつようびでした|' + Genki.getAlts('はい、{昨日}は{月曜日}でした', 'きのう|げつようび') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'きのうは十五日でしたか。<br>'+
-          '(No, it was not the 15th. It was the 22nd.)<br>'+
-          '{いいえ、十五日じゃなかったです。二十二日でした。|いいえ、じゅうごにちじゃなかったです。にじゅうににちでした。|' + Genki.getAlts('いいえ、{十五日}じゃなかったです。{二十二日}でした。', 'じゅうごにち|にじゅうににち') + 'answer}'+
+          '(No, yesterday was not the 15th. It was the 22nd.)<br>'+
+          '{いいえ、%(きのうは/)十五日じゃなかったです。二十二日でした。|いいえ、%(きのうは/)じゅうごにちじゃなかったです。にじゅうににちでした。|' + Genki.getAlts('いいえ、{十五日}じゃなかったです。{二十二日}でした。', 'じゅうごにち|にじゅうににち') + Genki.getAlts('いいえ、{昨日}は{十五日}じゃなかったです。{二十二日}でした。', 'きのう|じゅうごにち|にじゅうににち') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '今日の朝ご飯はハンバーガーでしたか。<br>'+
-          '(No, it was not hamburger. It was bread.)<br>'+
-          '{いいえ、ハンバーガーじゃなかったです。パンでした。}'+
+          '(No, today\'s breakfast was not hamburger. It was bread.)<br>'+
+          '{いいえ、%(今日の朝ご飯は/)ハンバーガーじゃなかったです。パンでした。|いいえ、%(きょうのあさごはんは/)ハンバーガーじゃなかったです。パンでした。|' + Genki.getAlts('いいえ、{今日}の{朝}ご{飯}はハンバーガーじゃなかったです。パンでした。', 'きょう|あさ|はん') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '子供の時、いい子供でしたか。<br>'+
-          '(No, I was not a very good child.)<br>'+
-          '{いいえ、あまりいい子供じゃなかったです|いいえ、あまりいいこどもじゃなかったです|answer}。'+
+          '(No, when I was a child, I was not a very good kid.)<br>'+
+          '{いいえ、%(子供の時、/)あまりいい子供じゃなかったです|いいえ、%(こどものとき、/)あまりいいこどもじゃなかったです|' + Genki.getAlts('いいえ、{子供}の{時}、あまりいい子{供}じゃなかったです', 'こども|とき|こども') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '高校の時、いい学生でしたか。<br>'+
-          '(Yes, I was a good student.)<br>'+
-          '{はい、いい学生でした|はい、いいがくせいでした|answer}。'+
+          '(Yes, when I was in high school, I was a good student.)<br>'+
+          '{はい、%(高校の時、/)いい学生でした|はい、%(こうこうのとき、/)いいがくせいでした|' + Genki.getAlts('はい、{高校}の{時}、いい{学生}でした', 'こうこう|とき|がくせい') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
@@ -103,7 +103,7 @@
         
         '<div class="problem">'+
           'Yesterday was Sunday.<br>'+
-          '{きのうは日曜日でした|きのうはにちようびでした|answer}。'+
+          '{きのうは日曜日でした|きのうはにちようびでした|' + Genki.getAlts('{昨日}は{日曜日}でした', 'きのう|にちようび') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+

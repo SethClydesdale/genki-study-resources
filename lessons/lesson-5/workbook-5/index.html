@@ -111,17 +111,17 @@
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'I met a kind person.<br>'+
-          '{私はやさしい人に会いました|わたしはやさしいひとにあいました|' + Genki.getAlts('{私}はやさしい{人}に{会}いました', 'わたし|ひと|あ') + 'answer}。'+
+          '{%(私は/)やさしい人に会いました|%(わたしは/)やさしいひとにあいました|' + Genki.getAlts('{私}はやさしい{人}に{会}いました', 'わたし|ひと|あ') + Genki.getAlts('やさしい{人}に{会}いました', 'ひと|あ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I brought an inexpensive ticket.<br>'+
-          '{私は安い切符を買いました|わたしはやすいきっぷをかいました|' + Genki.getAlts('{私}は{安}い{切符}を{買}いました', 'わたし|やす|きっぷ|か') + 'answer}。'+
+          '{%(私は/)安い切符を買いました|%(わたしは/)やすいきっぷをかいました|' + Genki.getAlts('{私}は{安}い{切符}を{買}いました', 'わたし|やす|きっぷ|か') + Genki.getAlts('{安}い{切符}を{買}いました', 'やす|きっぷ|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I read an interesting book last week.<br>'+
-          '{私は先週面白い本を読みました|わたしはせんしゅうおもしろいほんをよみました|' + Genki.getAlts('{私}は{先週}{面白}い{本}を{読}みました', 'わたし|せんしゅう|おもしろ|ほん|よ') + 'answer}。'+
+          '{%(私は/)先週面白い本を読みました|%(わたしは/)せんしゅうおもしろいほんをよみました|' + Genki.getAlts('{先週}{面白}い{本}を{読}みました', 'わたし|せんしゅう|おもしろ|ほん|よ') + Genki.getAlts('{私}は{先週}{面白}い{本}を{読}みました', 'せんしゅう|おもしろ|ほん|よ') + 'answer}。'+
         '</div>'+
       '</div>'
       

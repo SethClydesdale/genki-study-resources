@@ -66,26 +66,26 @@
         '<div class="count-problems">'+
           '<div class="problem">'+
             '朝起きて、何をしますか。<br>'+
-            '(I drink water.)<br>'+
-            '{水を飲みます|みずをのみます|' + Genki.getAlts('{水}を{飲}みます', 'みず|の') + 'answer}。'+
+            '(I get up in the morning and drink water.)<br>'+
+            '{%(朝起きて/)水を飲みます|%(あさおきて/)みずをのみます|' + Genki.getAlts('{朝}{起}きて{水}を{飲}みます', 'あさ|お|みず|の') + Genki.getAlts('{水}を{飲}みます', 'みず|の') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             'きのう、家に帰って何をしましたか。<br>'+
-            '(I wrote an email.)<br>'+
-            '{メールを書きました|メールをかきました|answer}。'+
+            '(I returned home and wrote an email.)<br>'+
+            '{%(家に帰って/)メールを書きました|%(いえにかえって/)メールをかきました|' + Genki.getAlts('{家}に{帰}ってメールを{書}きました', 'いえ|かえ|か') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             'テストの時、教科書を見てもいいですか。<br>'+
-            '(No, you cannot look.)<br>'+
-            '{いいえ、見てはいけません|いいえ、みてはいけません|answer}。'+
+            '(No, you cannot look at the textbook.)<br>'+
+            '{いいえ、%(教科書を/)見てはいけません|いいえ、%(きょうかしょを/)みてはいけません|' + Genki.getAlts('いいえ、{教科書}を{見}てはいけません', 'きょうかしょ|み') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+
             '飛行機の中で何をしてはいけませんか。<br>'+
-            '(You cannot smoke.)<br>'+
-            '{たばこを吸ってはいけません|たばこをすってはいけません|answer}。'+
+            '(You cannot smoke inside the airplane.)<br>'+
+            '{%(飛行機の中で/)たばこを吸ってはいけません|%(ひこうきのなかで/)たばこをすってはいけません|' + Genki.getAlts('{飛行機}の{中}でたばこを{吸}ってはいけません', 'ひこうき|なか|す') + 'answer}。'+
           '</div>'+
         
           '<div class="problem">'+

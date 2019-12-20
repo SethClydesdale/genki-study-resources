@@ -116,20 +116,20 @@
         '<p class="section-desc">Answer the following questions in informal speech.</p>'+
         '<div class="problem">'+
           '今日は何曜日？<br>'+
-          '(Tuesday)<br>'+
-          '{火曜日|かようび|answer}。'+
+          '(Today is Tuesday.)<br>'+
+          '{%(今日は/)火曜日|%(きょうは/)かようび|' + Genki.getAlts('{今日}は{火曜日}', 'きょう|かようび') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'どんな食べ物がきらい？<br>'+
-          '(I dislike Fish)<br>'+
+          '(I dislike Fish.)<br>'+
           '{魚がきらい|さかながきらい|' + Genki.getAlts('{魚}が{嫌}い', 'さかな|きら') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今週の週末、何をする？<br>'+
-          '(I\'ll do shopping)<br>'+
-          '{買い物をする|かいものをする|answer}。'+
+          '(This weekend, I\'ll do shopping.)<br>'+
+          '{%(今週の週末、/)買い物をする|%(こんしゅうのしゅうまつ、/)かいものをする|' + Genki.getAlts('{今週}の{週末}、{買い物}をする', 'こんしゅう|しゅうまつ|かいもの') + 'answer}。'+
         '</div>'+
       '</div>'
         
