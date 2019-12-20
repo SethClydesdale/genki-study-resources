@@ -1342,7 +1342,7 @@
             // passing "width:N" to HIDE_HINT will set the width of the field to N, manually. The hint will remain visible.
             // to show a hint along with a secondary answer, use this syntax: {ANSWER1|ANSWER2|answer;hint:HINT_TEXT}
             hint = data[1] ? data[1] : '',
-            flag = ((data[4] || data[3] || data[2]) ? (data[4] || data[3] || data[2]) : '').split(';');
+            flag = ((data[6] || data[5] || data[4] || data[3] || data[2]) ? (data[6] || data[5] || data[4] || data[3] || data[2]) : '').split(';');
             
             // sub answer matches for answer 1 & 2 (used for calculating answer area width)
             if (/\%\((.*?)\)/.test(hint) || /\%\((.*?)\)/.test(data[0])) {
@@ -1363,6 +1363,8 @@
                 (flag[0] == 'answer' ? 'data-answer2="' + hint + '" ' : '')+
                 (flag[0] == 'answer' && data[3] ? 'data-answer3="' + data[2] + '" ' : '')+
                 (flag[0] == 'answer' && data[4] ? 'data-answer4="' + data[3] + '" ' : '')+
+                (flag[0] == 'answer' && data[5] ? 'data-answer5="' + data[4] + '" ' : '')+
+                (flag[0] == 'answer' && data[6] ? 'data-answer6="' + data[5] + '" ' : '')+
                 (flag[0] == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
@@ -1777,7 +1779,7 @@
                     }
                     
                     // search hidden mixed kana/kanji alternatives
-                    else if ((k == 'answer3' || k == 'answer4') && alt.indexOf(val) != -1) {
+                    else if ((k == 'answer3' || k == 'answer4' || k == 'answer5' || k == 'answer6') && alt.indexOf(val) != -1) {
                       correct = true;
                     }
                   } 
