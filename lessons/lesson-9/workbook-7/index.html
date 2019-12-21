@@ -67,53 +67,53 @@
         '<p class="section-desc">Translate the following sentences. Note that [the reason+から] precedes the result.</p>'+
         '<div class="problem">'+
           'I won\'t do physical exercises because I am sick today.<br>'+
-          '{今日は病気だから、運動しません|きょうはびょうきだから、うんどうしません|answer}。'+
+          '{今日は病気だから、運動しません|きょうはびょうきだから、うんどうしません|' + Genki.getAlts('{今日}は{病気}だから、{運動}しません', 'きょう|びょうき|うんどう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I will not take a walk today because it is raining.<br>'+
-          '{雨が降っているから、今日は散歩しません|あめがふっているから、きょうはさんぽしません|answer}。'+
+          '{雨が降っているから、今日は散歩しません|あめがふっているから、きょうはさんぽしません|' + Genki.getAlts('{雨}が{降}っているから、{今日}は{散歩}しません', 'あめ|ふ|きょう|さんぽ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Masako is very popular because she is good at dancing.<br>'+
-          '{まさこさんは踊るのが上手だから、%(とても/すごく)人気があります|まさこさんはおどるのがじょうずだから、%(とても/すごく)にんきがあります|answer}。'+
+          '{まさこさんは踊るのが上手だから、%(とても/すごく)人気があります|まさこさんはおどるのがじょうずだから、%(とても/すごく)にんきがあります|' + Genki.getAlts('まさこさんは{踊}るのが{上手}だから、{とても}{人気}があります', 'おど|じょうず|すごく|にんき') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I was very lonely because I did not have any friends.<br>'+
-          '{友だちがいなかったから、%(とても/すごく)さびしかったです|ともだちがいなかったから、%(とても/すごく)さびしかったです|answer}。'+
+          '{友だちがいなかったから、%(とても/すごく)さびしかったです|ともだちがいなかったから、%(とても/すごく)さびしかったです|' + Genki.getAlts('{友}だちがいなかったから、{とても}{寂}しかったです', 'とも|すごく|さび') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the questions by translating the cues, using [the short form+から].</p>'+
         '<div class="problem">'+
           'Q：きのう勉強しましたか。<br>'+
-          '(No, I didn\'t study because there was no homework.)<br>'+
-          'A：{いいえ、宿題がなかったから、勉強しませんでした|いいえ、しゅくだいがなかったから、べんきょうしませんでした|answer}。'+
+          '(No, I didn\'t study yesterday because there was no homework.)<br>'+
+          'A：{いいえ、宿題がなかったから、%(きのう/)勉強しませんでした|いいえ、%(きのう/)しゅくだいがなかったから、べんきょうしませんでした|' + Genki.getAlts('いいえ、{宿題}がなかったから、{昨日}{勉強}しませんでした', 'しゅくだい|きのう|べんきょう') + Genki.getAlts('いいえ、{宿題}がなかったから、{勉強}しませんでした', 'しゅくだい|べんきょう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：先週は忙しかったですか。<br>'+
-          '(Yes, I was busy because there was a test.)<br>'+
-          'A：{はい、テストがあったから、忙しかったです|はい、テストがあったから、いそがしかったです|answer}。'+
+          '(Yes, I was busy last week because there was a test.)<br>'+
+          'A：{はい、テストがあったから、%(先週は/)忙しかったです|はい、テストがあったから、%(せんしゅうは/)いそがしかったです|' + Genki.getAlts('はい、テストがあったから、{先週}は{忙}しかったです', 'せんしゅう|いそが') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：きのう学校に来ましたか。<br>'+
-          '(No, I didn\'t come to school because there was no class.)<br>'+
-          'A：{いいえ、クラスがなかったから、学校に来ませんでした|いいえ、クラスがなかったから、がっこうにきませんでした|answer}。'+
+          '(No, I didn\'t come to school yesterday because there was no class.)<br>'+
+          'A：{いいえ、クラスがなかったから、%(きのう/)学校に来ませんでした|いいえ、クラスがなかったから、%(きのう/)がっこうにきませんでした|' + Genki.getAlts('いいえ、クラスがなかったから、{昨日}{学校}に{来}ませんでした', 'きのう|がっこう|き') + Genki.getAlts('いいえ、クラスがなかったから、{学校}に{来}ませんでした', 'がっこう|き') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：今週の週末、出かけますか。<br>'+
-          '(No, I will not go out because I will be playing games at home with a friend.)<br>'+
-          'A：{いいえ、友だちと家でゲームをするから、出かけません|いいえ、ともだちといえでゲームをするから、でかけません|answer}。'+
+          '(No, I will not go out this weekend because I will be playing games at home with a friend.)<br>'+
+          'A：{いいえ、友だちと家でゲームをするから、%(今週の週末/)出かけません|いいえ、ともだちといえでゲームをするから、%(こんしゅうのしゅうまつ/)でかけません|' + Genki.getAlts('いいえ、{友}だちと{家}でゲームをするから、{今週}の{週末}{出}かけません', 'とも|いえ|こんしゅう|しゅうまつ|で') + Genki.getAlts('いいえ、{友}だちと{家}でゲームをするから、{出}かけません', 'とも|いえ|で') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：来年も日本語を勉強しますか。<br>'+
-          '(Yes, I will study Japanese [next year] because Japanese is interesting.)<br>'+
-          'A：{はい、日本語はおもしろいから、日本語を勉強します|はい、にほんごはおもしろいから、にほんごをべんきょうします|answer}。'+
+          '(Yes, I will study Japanese next year too because Japanese is interesting.)<br>'+
+          'A：{はい、日本語はおもしろいから、%(来年も/)日本語を勉強します|はい、にほんごはおもしろいから、%(らいねんも/)にほんごをべんきょうします|' + Genki.getAlts('はい、{日本語}は{面白}いから、{来年}も{日本語}を{勉強}します', 'にほんご|おもしろ|らいねん|にほんご|べんきょう') + Genki.getAlts('はい、{日本語}は{面白}いから、{日本語}を{勉強}します', 'にほんご|おもしろ|にほんご|べんきょう') + 'answer}。'+
         '</div>'+
       '</div>'
         

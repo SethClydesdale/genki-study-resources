@@ -60,33 +60,35 @@
     <script src="../../../resources/javascript/javascript.min.js"></script>
     <script>Genki.generateQuiz({
       type : 'fill',
-      info : 'Turn to page 86 of the Genki I Workbook and look at the picture to answer the questions. You may also use the hints in the spoilers to answer the questions. Use the pattern ○○さんは～ている人です, describing what each person is currently doing.',
+      info : 'Look at the picture and answer the questions. Use the pattern ○○さんは～ている人です, describing what each person is currently doing.',
       
       quizlet : 
       '<div class="count-problems">'+
+        '<div class="center big-margin">{!IMG|l9-w5-1.png|party}</div>'+
+        
         '<div class="problem">'+
           'みどりさんはどの人ですか。<br>'+
-          '{ハンバーガーを食べている人です|ハンバーガーをたべているひとです|answer}。<span class="spoiler">(The person eating a hamburger.)</span>'+
+          '{%(みどりさんは/)ハンバーガーを食べている人です|%(みどりさんは/)ハンバーガーをたべているひとです|' + Genki.getAlts('{みどりさんは}ハンバーガーを{食}べている{人}です', '|た|ひと') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'けんいちさんはどの人ですか。<br>'+
-          '{コーヒーを飲んでいる人です|コーヒーをのんでいるひとです|answer}。<span class="spoiler">(The person drinking coffee.)</span>'+
+          '{%(けんいちさんは/)コーヒーを飲んでいる人です|%(けんいちさんは/)コーヒーをのんでいるひとです|' + Genki.getAlts('{けんいちさんは}コーヒーを{飲}んでいる{人}です', '|の|ひと') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'ともこさんはどの人ですか。<br>'+
-          '{ピザを切っている人です|ピザをきっているひとです|answer}。<span class="spoiler">(The person cutting the pizza.)</span>'+
+          '{%(ともこさんは/)ピザを切っている人です|%(ともこさんは/)ピザをきっているひとです|' + Genki.getAlts('{ともこさんは}ピザを{切}っている{人}です', '|き|ひと') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'しんじさんはどの人ですか。<br>'+
-          '{歌を歌っている人です|うたをうたっているひとです|answer}。<span class="spoiler">(The person singing a song.)</span>'+
+          '{%(しんじさんは/)歌を歌っている人です|%(しんじさんは/)うたをうたっているひとです|' + Genki.getAlts('{しんじさんは}{歌}を{歌}っている{人}です', '|うた|うた|ひと') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'えりかさんはどの人ですか。<br>'+
-          '{けんいちさんと話している人です|けんいちさんとはなしているひとです|answer}。<span class="spoiler">(The person talking to Kenichi.)</span>'+
+          '{%(えりかさんは/)けんいちさんと話している人です|%(えりかさんは/)けんいちさんとはなしているひとです|' + Genki.getAlts('{えりかさんは}けんいちさんと{話}している{人}です', '|はな|ひと') + 'answer}。'+
         '</div>'+
       '</div>'
         

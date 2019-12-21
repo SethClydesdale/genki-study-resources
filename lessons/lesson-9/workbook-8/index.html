@@ -66,47 +66,56 @@
       '<div class="count-problems">'+
         '<div class="problem">'+
           'きのうの晩ご飯は何を食べた？<br>'+
-          '{カレーを食べた|カレーをたべた|answer}。(I ate curry.)'+
+          '(I ate curry for dinner yesterday.)<br>'+
+          '{%(きのうの晩ご飯は/)カレーを食べた|%(きのうのばんごはんは/)カレーをたべた|' + Genki.getAlts('{昨日}の{晩}ご{飯}はカレーを{食}べた', 'きのう|ばん|はん|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'おいしかった？<br>'+
-          '{うん、おいしかった}。(Yeah, it was delicious.)'+
+          '(Yeah, it was delicious.)<br>'+
+          '{うん、おいしかった}。'+
         '</div>'+
         
         '<div class="problem">'+
           'きのう何時ごろ寝た？<br>'+
-          '{十一時半ごろ寝た|じゅういちじはんごろねた|answer}。(I went to bed at about 11:30.)'+
+          '(I went to bed at about 11:30.)<br>'+
+          '{十一時半ごろ寝た|じゅういちじはんごろねた|' + Genki.getAlts('{十一時}{半}ごろ{寝}た', 'じゅういちじ|はん|ね') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'きのう洗濯した？<br>'+
-          '{ううん、洗濯しなかった|ううん、せんたくしなかった|answer}。(No, I didn\'t do laundry.)'+
+          '(Nah, I didn\'t do the laundry.)<br>'+
+          '{ううん、洗濯しなかった|ううん、せんたくしなかった|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'もう十課<span class="define">[Lesson 10]</span>の単語を覚えた？<br>'+
-          '{ううん、まだ覚えていない|ううん、まだおぼえていない|answer}。(No, I haven\'t memorized [the vocabulary] yet.)'+
+          '(Nah, I haven\'t memorized Lesson 10\'s vocabulary yet.)<br>'+
+          '{ううん、まだ%(十課の単語を/)覚えていない|ううん、まだ%(じゅうかのたんごを/)おぼえていない|' + Genki.getAlts('ううん、まだ{十課}の{単語}を{覚}えていない', 'じゅうか|たんご|おぼ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '先週、映画を見た？<br>'+
-          '{うん、見た|うん、みた|answer}。(Yes, I saw the movie.)'+
+          '(Yeah, I saw a movie.)<br>'+
+          '{うん、%(映画を/)見た|うん、%(えいがを/)みた|' + Genki.getAlts('うん、{映画}を{見}た', 'えいが|み') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'どうだった？<br>'+
-          '{おもしろくなかった}。(It wasn\'t interesting.)'+
+          '(It wasn\'t interesting.)<br>'+
+          '{面白くなかった|おもしろくなかった|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '子供の時、何をするのが好きだった？<br>'+
-          '{サッカーをするのが好きだった|サッカーをするのがすきだった|answer}。(I liked playing soccer.)'+
+          '(I liked playing soccer when I was a child.)<br>'+
+          '{%(子供の時、/)サッカーをするのが好きだった|%(こどものとき、/)サッカーをするのがすきだった|' + Genki.getAlts('{子供}の{時}、サッカーをするのが{好}きだった', 'こども|とき|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '週末、何をした？<br>'+
-          '{何もしなかった|なにもしなかった|answer}。(I didn\'t do anything.)'+
+          '(I didn\'t do anything.)<br>'+
+          '{何もしなかった|なにもしなかった|answer}。'+
         '</div>'+
       '</div>'
         

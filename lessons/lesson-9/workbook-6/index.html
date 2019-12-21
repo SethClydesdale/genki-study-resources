@@ -66,25 +66,25 @@
       '<div class="count-problems">'+
         '<div class="problem">'+
           'eat lunch<br><br>'+
-          'Q：{もう昼ご飯を食べましたか|もうひるごはんをたべましたか|answer}。<br><br><br>'+
+          'Q：{もう昼ご飯を食べましたか|もうひるごはんをたべましたか|' + Genki.getAlts('もう{昼}ご{飯}を{食}べましたか', 'ひる|はん|た') + 'answer}。<br><br><br>'+
           'A：はい、{もう食べました|もうたべました|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'memorize new kanji<br><br>'+
-          'Q：{もう新しい漢字を覚えましたか|もうあたらしいかんじをおぼえましたか|answer}。<br><br><br>'+
+          'Q：{もう新しい漢字を覚えましたか|もうあたらしいかんじをおぼえましたか|' + Genki.getAlts('もう{新}しい{漢字}を{覚}えましたか', 'あたら|かんじ|おぼ') + 'answer}。<br><br><br>'+
           'A：はい、{もう覚えました|もうおぼえました|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'clean your room<br><br>'+
-          'Q：{もう部屋を掃除しましたか|もうへやをそうじしましたか|answer}。<br><br><br>'+
+          'Q：{もう部屋を掃除しましたか|もうへやをそうじしましたか|' + Genki.getAlts('もう{部屋}を{掃除}しましたか', 'へや|そうじ') + 'answer}。<br><br><br>'+
           'A：いいえ、{まだ掃除していません|まだそうじしていません|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'talk with the new teacher<br><br>'+
-          'Q：{もう新しい先生と話しましたか|もうあたらしいせんせいとはなしましたか|answer}。<br><br><br>'+
+          'Q：{もう新しい先生と話しましたか|もうあたらしいせんせいとはなしましたか|' + Genki.getAlts('もう{新}しい{先生}と{話}しましたか', 'あたら|せんせい|はな') + 'answer}。<br><br><br>'+
           'A：いいえ、{まだ話していません|まだはなしていません|answer}。'+
         '</div>'+
         

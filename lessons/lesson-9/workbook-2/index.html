@@ -67,63 +67,71 @@
         '<p class="section-desc">Make informal question sentences using the cues and answer them in the negative.</p>'+
         '<div class="problem">'+
           'きのう、日本語を勉強する<br>'+
-          'Q：{きのう、日本語を勉強した|きのう、にほんごをべんきょうした|answer}?　A：{ううん、勉強しなかった|ううん、べんきょうしなかった|answer}。'+
+          'Q：{きのう、日本語を勉強した|きのう、にほんごをべんきょうした|' + Genki.getAlts('{昨日}、{日本語}を{勉強}した', 'きのう|にほんご|べんきょう') + 'answer}?<br><br><br>'+
+          'A：{ううん、勉強しなかった|ううん、べんきょうしなかった|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'きのう、友だちに会う<br>'+
-          'Q：{きのう、友だちに合った|きのう、ともだちにあった|answer}?　A：{ううん、合わなかった|ううん、あわなかった|answer}。'+
+          'Q：{きのう、友だちに会った|きのう、ともだちにあった|' + Genki.getAlts('{昨日}、{友}だちに{会}った', 'きのう|とも|あ') + 'answer}?<br><br><br>'+
+          'A：{ううん、会わなかった|ううん、あわなかった|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'きのう、運動する<br>'+
-          'Q：{きのう、運動した|きのう、うんどうした|answer}?　A：{ううん、運動しなかった|ううん、うんどうしなかった|answer}。'+
+          'Q：{きのう、運動した|きのう、うんどうした|' + Genki.getAlts('{昨日}、{運動}した', 'きのう|うんどう') + 'answer}?<br><br><br>'+
+          'A：{ううん、運動しなかった|ううん、うんどうしなかった|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '先週、試験がある<br>'+
-          'Q：{先週、試験があった|せんしゅう、しけんがあった|answer}?　A：{ううん、なかった}。'+
+          'Q：{先週、試験があった|せんしゅう、しけんがあった|' + Genki.getAlts('{先週}、{試験}があった', 'せんしゅう|しけん') + 'answer}?<br><br><br>'+
+          'A：{ううん、なかった}。'+
         '</div>'+
         
         '<div class="problem">'+
           '先週の週末、大学に来る<br>'+
-          'Q：{先週の週末、大学に来た|せんしゅうのしゅうまつ、だいがくにきた|answer}?　A：{ううん、来なかった|ううん、こなかった|answer}。'+
+          'Q：{先週の週末、大学に来た|せんしゅうのしゅうまつ、だいがくにきた|' + Genki.getAlts('{先週}の{週末}、{大学}に{来}た', 'せんしゅう|しゅうまつ|だいがく|き') + 'answer}?<br><br><br>'+
+          'A：{ううん、来なかった|ううん、こなかった|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '先週の週末、楽しい<br>'+
-          'Q：{先週の週末、楽しかった|せんしゅうのしゅうまつ、たのしかった|answer}?　A：{ううん、楽しくなかった|ううん、たのしくなかった|answer}。'+
+          'Q：{先週の週末、楽しかった|せんしゅうのしゅうまつ、たのしかった|' + Genki.getAlts('{先週}の{週末}、{楽}しかった', 'せんしゅう|しゅうまつ|たの') + 'answer}?<br><br><br>'+
+          'A：{ううん、楽しくなかった|ううん、たのしくなかった|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '子供の時、髪が長い<br>'+
-          'Q：{子供の時、髪が長かった|こどものとき、かみがながかった|answer}?　A：{ううん、長くなかった|ううん、ながくなかった|answer}。'+
+          'Q：{子供の時、髪が長かった|こどものとき、かみがながかった|' + Genki.getAlts('{子供}の{時}、{髪}が{長}かった', 'こども|とき|かみ|なが') + 'answer}?<br><br><br>'+
+          'A：{ううん、長くなかった|ううん、ながくなかった|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '子供の時、勉強がきらい<br>'+
-          'Q：{子供の時、勉強がきらいだった|こどものとき、べんきょうがきらいだった|answer}?　A：{ううん、きらいじゃなかった}。'+
+          'Q：{子供の時、勉強がきらいだった|こどものとき、べんきょうがきらいだった|' + Genki.getAlts('{子供}の{時}、{勉強}が{嫌}いだった', 'こども|とき|べんきょう|きら') + 'answer}?<br><br><br>'+
+          'A：{ううん、きらいじゃなかった}。'+
         '</div>'+
         
-        '<p class="section-desc">Make questions you want to ask your friend about his/her childhood in informal speech, using the cues below.</p>'+
+        '<p class="section-desc">Make questions you want to ask your friend about his/her childhood in informal speech, by translating the cues below.</p>'+
         '<div class="problem">'+
           'When you were a child, did you play sports often?<br>'+
-          '{子供の時、よくスポーツをした|こどものとき、よくスポーツをした|answer}？'+
+          '{子供の時、よくスポーツをした|こどものとき、よくスポーツをした|' + Genki.getAlts('{子供}の{時}、よくスポーツをした', 'こども|とき') + 'answer}？'+
         '</div>'+
         
         '<div class="problem">'+
           'When you were a child, did you go to the park often?<br>'+
-          '{子供の時、よく公園に行った|こどものとき、よくこうえんにいった|answer}？'+
+          '{子供の時、よく公園に行った|こどものとき、よくこうえんにいった|' + Genki.getAlts('{子供}の{時}、よく{公園}に{行}った', 'こども|とき|こうえん|い') + 'answer}？'+
         '</div>'+
         
         '<div class="problem">'+
           'When you were a child, were you cute?<br>'+
-          '{子供の時、かわいかった|こどものとき、かわいかった|answer}？'+
+          '{子供の時、かわいかった|こどものとき、かわいかった|' + Genki.getAlts('{子供}の{時}、かわいかった', 'こども|とき') + 'answer}？'+
         '</div>'+
         
         '<div class="problem">'+
           'When you were a child, were you a good kid?<br>'+
-          '{子供の時、いい子だった|こどものとき、いいこだった|answer}？'+
+          '{子供の時、いい子だった|こどものとき、いいこだった|' + Genki.getAlts('{子供}の{時}、いい{子}だった', 'こども|とき|こ') + 'answer}？'+
         '</div>'+
       '</div>'
         
