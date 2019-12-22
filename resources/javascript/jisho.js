@@ -156,7 +156,7 @@ Genki.jisho = {
     { ja : '一年生|いちねんせい', en : 'first-year student', l : '会L1' },
     { ja : '一年に一度|いちねんにいちど', en : 'once a year', l : '読L12-II' },
     { ja : '市場|いちば', en : 'market', l : '読L11-漢字表' },
-    { ja : '一番|いちばん', en : 'best; the first', l : '会L10' },
+    { ja : '一番|いちばん', en : 'the first; best; most', l : '会L10' },
     { ja : '一番後ろ|いちばんうしろ', en : 'last car; tail end', l : '会L10(e)' },
     { ja : '一番前|いちばんまえ', en : 'first car; front end', l : '会L10(e)' },
     { ja : '一枚|いちまい', en : 'one sheet', l : '読L20-漢字表' },

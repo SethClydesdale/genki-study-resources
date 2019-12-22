@@ -66,42 +66,50 @@
       '<div class="count-problems">'+
         '<div class="problem">'+
           '食べ物の中で何がいちばん好きですか。<br>'+
-          '{すしがいちばん好きです|すしがいちばんすきです|answer}。(I like sushi the most.)'+
+          '(I like sushi the most.)<br>'+
+          '{%(食べ物の中で/)すしがいちばん好きです|%(たべもののなかで/)すしがいちばんすきです|' + Genki.getAlts('{食べ物}の{中}ですしが{一番}{好}きです', 'たべもの|なか|いちばん|す') + Genki.getAlts('すしが{一番}{好}きです', 'いちばん|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '季節の中でいつがいちばん好きですか。どうしてですか。<br>'+
-          '{夏がいちばん好きです。海で泳ぐのが好きですから。|なつがいちばんすきです。うみでおよぐのがすきですから。|answer} (I like summer the most. Because I like swimming in the sea.)'+
+          '(I like summer the most. Because I like swimming in the sea.)<br>'+
+          '{%(季節の中で/)夏がいちばん好きです。海で泳ぐのが好きですから。|%(きせつのなかで/)なつがいちばんすきです。うみでおよぐのがすきですから。|' + Genki.getAlts('{季節}の{中}で{夏}が{一番}{好}きです。{海}で{泳}ぐのが{好}きですから。', 'きせつ|なか|なつ|いちばん|す|うみ|およ|す') + Genki.getAlts('{夏}が{一番}{好}きです。{海}で{泳}ぐのが{好}きですから。', 'なつ|いちばん|す|うみ|およ|す') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '有名人の中でだれがいちばん好きですか。どうしてですか。<br>'+
-          '{ミクさんがいちばん好きです。歌が上手ですから。|ミクさんがいちばんすきです。うたがじょうずですから。|answer} (I like Miku (ミク) the most. Because her songs are good.)'+
+          '(I like Miku (ミク) the most. Because her songs are good.)<br>'+
+          '{%(有名人の中で/)ミクさんがいちばん好きです。歌が上手ですから。|%(ゆうめいじんのなかで/)ミクさんがいちばんすきです。うたがじょうずですから。|' + Genki.getAlts('{有名人}の{中}でミクさんが{一番}{好}きです。{歌}が{上手}ですから。', 'ゆうめいじん|なか|いちばん|す|うた|じょうず') + Genki.getAlts('ミクさんが{一番}{好}きです。{歌}が{上手}ですから。', 'いちばん|す|うた|じょうず') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたと日本語の先生とどっちのほうが背が高いですか。<br>'+
-          '{私のほうが日本語の先生より背が高いです|わたしのほうがにほんごのせんせいよりせがたかいです|answer}。(I am taller than my Japanese teacher.)'+
+          '(I am taller than my Japanese teacher.)<br>'+
+          '{私のほうが%(日本語の先生より/)背が高いです|わたしのほうが%(にほんごのせんせいより/)せがたかいです|' + Genki.getAlts('{私}のほうが{日本語}の{先生}より{背}が{高}いです', 'わたし|にほんご|せんせい|せ|たか') + Genki.getAlts('{私}のほうが{背}が{高}いです', 'わたし|せ|たか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたはどうやって家から学校まで行きますか。どのぐらいかかりますか。<br>'+
-          '{自転車で行きます。二十分ぐらいかかります。|じてんしゃでいきます。にじゅっぷんぐらいかかります。|answer} (I go by bike. It takes about 20 minutes.)'+
+          '(I go by bicyle from home to school. It takes about 20 minutes.)<br>'+
+          '{%(家から学校まで/)自転車で行きます。二十分ぐらいかかります。|%(いえからがっこうまで/)じてんしゃでいきます。にじゅっぷんぐらいかかります。|' + Genki.getAlts('{家}から{学校}まで{自転車}で{行}きます。{二十分}ぐらいかかります。', 'いえ|がっこう|じてんしゃ|い|にじゅっぷん') + Genki.getAlts('{自転車}で{行}きます。{二十分}ぐらいかかります。', 'じてんしゃ|い|にじゅっぷん') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '今度<span class="define">[こんど；next time]</span>の休みにどこかに行きますか。</span><br>'+
-          '{はい、キャンプに行きます|はい、キャンプにいきます|answer}。(Yes, I will go to camp<span class="define">[キャンプ]</span>.)'+
+          '(Yes, I will go to camp<span class="define">[キャンプ]</span> next vacation.)<br>'+
+          '{はい、%(今度の休みに/)キャンプに行きます|はい、%(こんどのやすみに/)キャンプにいきます|' + Genki.getAlts('はい、{今度}の{休}みにキャンプに{行}きます', 'こんど|やす|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '先週の週末、何かしましたか。<br>'+
-          '{はい、運動しました|はい、うんどうしました|answer}。(Yes, I exercised.)'+
+          '(Yes, I exercised last weekend.)<br>'+
+          '{はい、%(先週の週末、/)運動しました|はい、%(せんしゅうのしゅうまつ、/)うんどうしました|' + Genki.getAlts('はい、{先週}の{週末}、{運動}しました', 'せんしゅう|しゅうまつ|うんどう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '先週の週末、だれかに会いましたか。<br>'+
-          '{はい、友だちに会いました|はい、ともだちにあいました|answer}。(Yes, I saw a friend.)'+
+          '(Yes, I saw a friend last weekend.)<br>'+
+          '{はい、%(先週の週末、/)友だちに会いました|はい、%(せんしゅうのしゅうまつ、/)ともだちにあいました|' + Genki.getAlts('はい、{先週}の{週末}、{友}だちに{会}いました', 'せんしゅう|しゅうまつ|とも|あ') + Genki.getAlts('はい、{友}だちに{会}いました', 'とも|あ') + 'answer}。'+
         '</div>'+
       '</div>'
         

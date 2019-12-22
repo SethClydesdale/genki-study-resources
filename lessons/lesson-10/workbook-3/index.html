@@ -97,27 +97,27 @@
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'This clock is expensive. Give me a cheap one.<br>'+
-          '{この時計は高いです。安いのをください。|このとけいはたかいです。やすいのをください。|answer}'+
+          '{この時計は高いです。安いのをください。|このとけいはたかいです。やすいのをください。|' + Genki.getAlts('この{時計}は{高}いです。{安}いのをください。', 'とけい|たか|やす') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'My computer is slower than yours.<br>'+
-          '{私のパソコンはあなたのより遅いです|わたしのパソコンはあなたのよりおそいです|answer}。'+
+          '{私のパソコンはあなたのより遅いです|わたしのパソコンはあなたのよりおそいです|' + Genki.getAlts('{私}のパソコンはあなたのより{遅}いです', 'わたし|おそ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'What kind of movie do you like? I like scary ones.<br>'+
-          '{どんな映画が好きですか。こわいのが好きです。|どんなえいががすきですか。こわいのがすきです。|answer}'+
+          '{どんな映画が好きですか。こわいのが好きです。|どんなえいががすきですか。こわいのがすきです。|' + Genki.getAlts('どんな{映画}が{好}きですか。{怖}いのが{好}きです。', 'えいが|す|こわ|す') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'This dictionary is old. I will buy a new one.<br>'+
-          '{この辞書は古いです。新しいのを買います。|このじしょはふるいです。あたらしいのをかいます。|answer}'+
+          '{この辞書は古いです。新しいのを買います。|このじしょはふるいです。あたらしいのをかいます。|' + Genki.getAlts('この{辞書}は{古}いです。{新}しいのを{買}います。', 'じしょ|ふる|あたら|か') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'This red shirt is more expensive than that white one.<br>'+
-          '{この赤いシャツは%(あの/その)白いのより高いです|このあかいシャツは%(あの/その)しろいのよりたかいです|answer}。'+
+          '{この赤いシャツは%(あの/その)白いのより高いです|このあかいシャツは%(あの/その)しろいのよりたかいです|' + Genki.getAlts('この{赤}いシャツは{あ}の{白}いのより{高}いです', 'あか|そ|しろ|たか') + 'answer}。'+
         '</div>'+
       '</div>'
         

@@ -67,57 +67,57 @@
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'Q：What is the most delicious Japanese dish (料理<span class="define">[りょうり]</span>)?<br>'+
-          '{日本料理の中で、何がいちばんおいしいですか|にほんりょうりのなかで、なにがいちばんおいしいですか|answer}。'+
+          '{日本料理の中で、何がいちばんおいしいですか|にほんりょうりのなかで、なにがいちばんおいしいですか|' + Genki.getAlts('{日本}{料理}の{中}で、{何}が{一番}おいしいですか', 'にほん|りょうり|なか|なに|いちばん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：I think sushi is the most delicious.<br>'+
-          '{すしがいちばんおいしいと思います|すしがいちばんおいしいとおもいます|answer}。'+
+          '{すしがいちばんおいしいと思います|すしがいちばんおいしいとおもいます|' + Genki.getAlts('すしが{一番}おいしいと{思}います', 'いちばん|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：Out of all the towns in the world, where do you like the best?<br>'+
-          '{世界の町の中で、どこがいちばん好きですか|せかいのまちのなかで、どこがいちばんすきですか|answer}。'+
+          '{世界の町の中で、どこがいちばん好きですか|せかいのまちのなかで、どこがいちばんすきですか|' + Genki.getAlts('{世界}の{町}の{中}で、どこが{一番}{好}きですか', 'せかい|まち|なか|いちばん|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：I like Kyoto the most.<br>'+
-          '{京都がいちばん好きです|きょうとがいちばんすきです|answer}。'+
+          '{京都がいちばん好きです|きょうとがいちばんすきです|' + Genki.getAlts('{京都}が{一番}{好}きです', 'きょうと|いちばん|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：What is the most delicious vegetable?<br>'+
-          '{野菜の中で、何がいちばんおいしいですか|やさいのなかで、なにがいちばんおいしいですか|answer}。'+
+          '{野菜の中で、何がいちばんおいしいですか|やさいのなかで、なにがいちばんおいしいですか|' + Genki.getAlts('{野菜}の{中}で、{何}が{一番}おいしいですか', 'やさい|なか|なに|いちばん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：I think tomatoes are the most delicious.<br>'+
-          '{トマトがいちばんおいしいと思います|トマトがいちばんおいしいとおもいます|answer}。'+
+          '{トマトがいちばんおいしいと思います|トマトがいちばんおいしいとおもいます|' + Genki.getAlts('トマトが{一番}おいしいと{思}います', 'いちばん|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：Out of all foreign languages (外国語<span class="define">[がいこくご]</span>), what one do you think is the easiest?<br>'+
-          '{外国語の中で、何がいちばん簡単だと思いますか|がいこくごのなかで、なにがいちばんかんたんだとおもいますか|answer}。'+
+          '{外国語の中で、何がいちばん簡単だと思いますか|がいこくごのなかで、なにがいちばんかんたんだとおもいますか|' + Genki.getAlts('{外国語}の{中}で、{何}が{一番}{簡単}だと{思}いますか', 'がいこくご|なか|なに|いちばん|かんたん|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：I think Spanish is the easiest.<br>'+
-          '{スペイン語がいちばん簡単だと思います|スペインごがいちばんかんたんだとおもいます|answer}。'+
+          '{スペイン語がいちばん簡単だと思います|スペインごがいちばんかんたんだとおもいます|' + Genki.getAlts('スペイン{語}が{一番}{簡単}だと{思}います', 'ご|いちばん|かんたん|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Between Kanji, Katakana, and Hiragana, Kanji is the most difficult.<br>'+
-          '{漢字とカタカナとひらがなの中で、漢字がいちばん難しいです|かんじとカタカナとひらがなのなかで、かんじがいちばんむずかしいです|answer}。'+
+          '{漢字とカタカナとひらがなの中で、漢字がいちばん難しいです|かんじとカタカナとひらがなのなかで、かんじがいちばんむずかしいです|' + Genki.getAlts('{漢字}とカタカナとひらがなの{中}で、{漢字}が{一番}{難}しいです', 'かんじ|なか|かんじ|いちばん|むずか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Between Takeshi, Robert, and Professor Yamashita, Professor Yamashita is the most interesting.<br>'+
-          '{たけしさんとロバートさんと山下先生の中で、山下先生がいちばんおもしろいです|たけしさんとロバートさんとやましたせんせいのなかで、やましたせんせいがいちばんおもしろいです|answer}。'+
+          '{たけしさんとロバートさんと山下先生の中で、山下先生がいちばんおもしろいです|たけしさんとロバートさんとやましたせんせいのなかで、やましたせんせいがいちばんおもしろいです|' + Genki.getAlts('たけしさんとロバートさんと{山下}{先生}の{中}で、{山下}{先生}が{一番}{面白}いです', 'やました|せんせい|なか|やました|せんせい|いちばん|おもしろ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Between Meat, Fish, and Vegetables, Vegetables are the cheapest.<br>'+
-          '{肉と魚と野菜の中で、野菜がいちばん安いです|にくとさかなとやさいのなかで、やさいがいちばんやすいです|answer}。'+
+          '{肉と魚と野菜の中で、野菜がいちばん安いです|にくとさかなとやさいのなかで、やさいがいちばんやすいです|' + Genki.getAlts('{肉}と{魚}と{野菜}の{中}で、{野菜}が{一番}{安}いです', 'にく|さかな|やさい|なか|やさい|いちばん|やす') + 'answer}。'+
         '</div>'+
       '</div>'
         

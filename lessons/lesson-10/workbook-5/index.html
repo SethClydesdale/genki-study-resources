@@ -67,38 +67,38 @@
         '<p class="section-desc">Describe the following changes, using ～なりました.</p>'+
         '<div class="problem">'+
           'short <i class="fa">&#xf061;</i> tall<br>'+
-          '{背が高くなりました|せがたかくなりました|answer}。'+
+          '{背が高くなりました|せがたかくなりました|' + Genki.getAlts('{背}が{高}くなりました', 'せ|たか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'long hair <i class="fa">&#xf061;</i> short hair<br>'+
-          '{髪が短くなりました|かみがみじかくなりました|answer}。'+
+          '{髪が短くなりました|かみがみじかくなりました|' + Genki.getAlts('{髪}が{短}くなりました', 'かみ|みじか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'busy <i class="fa">&#xf061;</i> free<br>'+
-          '{ひまになりました}。'+
+          '{暇になりました|ひまになりました|answer}。'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences, using the verb ～なります. Pay attention to the order of elements in the sentences "(reason clause)から、(main clause)."</p>'+
         '<div class="problem">'+
           'My room became clean, because I cleaned it this morning.<br>'+
-          '{けさ掃除したから、私の部屋がきれいになりました|けさそうじしたから、わたしのへやがきれいになりました|answer}。'+
+          '{今朝掃除したから、私の部屋がきれいになりました|けさそうじしたから、わたしのへやがきれいになりました|' + Genki.getAlts('{今朝}{掃除}したから、{私}の{部屋}がきれいになりました', 'けさ|そうじ|わたし|へや') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I have become sleepy, because I did not sleep much last night.<br>'+
-          '{きのうの夜あまり寝なかったから、眠くなりました|きのうのよるあまりねなかったから、ねむくなりました|answer}。'+
+          '{昨日の夜あまり寝なかったから、眠くなりました|きのうのよるあまりねなかったから、ねむくなりました|' + Genki.getAlts('{昨日}の{夜}あまり{寝}なかったから、{眠}くなりました', 'きのう|よる|ね|ねむ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I have become very good at speaking Japanese, because I practiced a lot.<br>'+
-          '{たくさん練習したから、日本語を話すのが%(とても/すごく)上手になりました|たくさんれんしゅうしたから、にほんごをはなすのが%(とても/すごく)じょうずになりました|answer}。'+
+          '{たくさん練習したから、日本語を話すのが%(とても/すごく)上手になりました|たくさんれんしゅうしたから、にほんごをはなすのが%(とても/すごく)じょうずになりました|' + Genki.getAlts('たくさん{練習}したから、{日本語}を{話}すのが{とても}{上手}になりました', 'れんしゅう|にほんご|はな|すごく|じょうず') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I will be (become) a teacher, because I like children.<br>'+
-          '{子供が好きだから、先生になります|こどもがすきだから、せんせいになります|answer}。'+
+          '{子供が好きだから、先生になります|こどもがすきだから、せんせいになります|' + Genki.getAlts('{子供}が{好}きだから、{先生}になります', 'こども|す|せんせい') + 'answer}。'+
         '</div>'+
       '</div>'
         

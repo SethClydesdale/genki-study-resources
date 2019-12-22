@@ -67,17 +67,17 @@
         '<p class="section-desc">Make sentences using ～つもりです.</p>'+
         '<div class="problem">'+
           'see a movie tonight<br>'+
-          '{今晩映画を見るつもりです|こんばんえいがをみるつもりです|answer}。'+
+          '{今晩映画を見るつもりです|こんばんえいがをみるつもりです|' + Genki.getAlts('{今晩}{映画}を{見}るつもりです', 'こんばん|えいが|み') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'not go out on sunday<br>'+
-          '{日曜日に出かけないつもりです|にちようびにでかけないつもりです|answer}。'+
+          '{日曜日に出かけないつもりです|にちようびにでかけないつもりです|' + Genki.getAlts('{日曜日}に{出}かけないつもりです', 'にちようび|で') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'work for a Japanese company<br>'+
-          '{日本の会社に勤めるつもりです|にほんのかいしゃにつとめるつもりです|answer}。'+
+          '{日本の会社に勤めるつもりです|にほんのかいしゃにつとめるつもりです|' + Genki.getAlts('{日本}の{会社}に{勤}めるつもりです', 'にほん|かいしゃ|つと') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -87,28 +87,32 @@
         
         '<div class="problem">'+
           'study this week because we have an exam next week<br>'+
-          '{来週試験があるので、今週勉強するつもりです|らいしゅうしけんがあるので、こんしゅうべんきょうするつもりです|answer}。'+
+          '{来週試験があるので、今週勉強するつもりです|らいしゅうしけんがあるので、こんしゅうべんきょうするつもりです|' + Genki.getAlts('{来週}{試験}があるので、{今週}{勉強}するつもりです', 'らいしゅう|しけん|こんしゅう|べんきょう') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions, using ～つもりです.</p>'+
         '<div class="problem">'+
           '今晩何をしますか。<br>'+
-          '{友だちと晩ご飯を食べるつもりです|ともだちとばんごはんをたべるつもりです|answer}。(I plan to eat dinner with a friend.)'+
+          '(I plan to eat dinner with a friend tonight.)<br>'+
+          '{%(今晩/)友だちと晩ご飯を食べるつもりです|%(こんばん/)ともだちとばんごはんをたべるつもりです|' + Genki.getAlts('{今晩}{友}だちと{晩}ご{飯}を{食}べるつもりです', 'こんばん|とも|ばん|はん|た') + Genki.getAlts('{友}だちと{晩}ご{飯}を{食}べるつもりです', 'とも|ばん|はん|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'この週末、何をしますか。<br>'+
-          '{買い物をするつもりです|かいものをするつもりです|answer}。(I plan to do shopping.)'+
+          '(I plan to do shopping this weekend.)<br>'+
+          '{%(この週末/)買い物をするつもりです|%(このしゅうまつ/)かいものをするつもりです|' + Genki.getAlts('この{週末}{買い物}をするつもりです', 'しゅうまつ|かいもの') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '来学期も日本語を勉強しますか。<br>'+
-          '{はい、勉強するつもりです|はい、べんきょうするつもりです|answer}。(Yes, I plan to study [Japanese next semester].)'+
+          '(Yes, I plan to study Japanese next semester, too.)<br>'+
+          '{はい、%(来学期も日本語を/)勉強するつもりです|はい、%(らいがっきもにほんごを/)べんきょうするつもりです|' + Genki.getAlts('はい、{来学期}も{日本語}を{勉強}するつもりです', 'らいがっき|にほんご|べんきょう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '夏休み／冬休みに何をしますか。<br>'+
-          '{アルバイトをするつもりです}。(I plan to work part-time.)'+
+          '(I plan to work part-time during summer vacation.)<br>'+
+          '{%(夏休みに/)アルバイトをするつもりです|%(なつやすみに/)アルバイトをするつもりです|answer}。'+
         '</div>'+
       '</div>'
         

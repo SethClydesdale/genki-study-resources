@@ -83,29 +83,29 @@
           '</tr>'+
         '</table><br><br>'+
         '<div class="problem">'+
-          'みちこ：メアリーさんは、家から北駅までどうやって行きますか。<br>'+
-          'メアリー：{歩いて行きます|あるいていきます|answer}。'+
+          'みちこ：メアリーさんは、家から北駅までどうやって行きますか。<br><br>'+
+          'メアリー：{歩いて行きます|あるいていきます|' + Genki.getAlts('{歩}いて{行}きます', 'ある|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
-          'みちこ：そうですか。{どのぐらいかかります}か。<br>'+
+          'みちこ：そうですか。{どのぐらいかかります}か。<br><br><br>'+
           'メアリー：十分かかります。'+
         '</div>'+
         
         '<div class="problem">'+
-          'みちこ：北駅から大学まで{どうやって行きます|どうやっていきます|answer}か。<br>'+
+          'みちこ：北駅から大学まで{どうやって行きます|どうやっていきます|answer}か。<br><br><br>'+
           'メアリー：バスで行きます。'+
         '</div>'+
         
         '<div class="problem">'+
-          'みちこ：どのぐらいかかりますか。<br>'+
+          'みちこ：どのぐらいかかりますか。<br><br>'+
           'メアリー：そうですね、{十五分かかります|じゅうごふんかかります|answer}。'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
         '<div class="problem">'+
           'Q：Are you going anywhere next holiday.<br>'+
-          '{次の休みにどこかに行きますか|つぎのやすみにどこかにいきますか|answer}。'+
+          '{次の休みにどこかに行きますか|つぎのやすみにどこかにいきますか|' + Genki.getAlts('{次}の{休}みにどこかに{行}きますか', 'つぎ|やす|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -115,7 +115,7 @@
         
         '<div class="problem">'+
           'Q：Did you do anything last weekend.<br>'+
-          '{先週の週末、何かしましたか|せんしゅうのしゅうまつ、なにかしましたか|answer}。'+
+          '{先週の週末、何かしましたか|せんしゅうのしゅうまつ、なにかしましたか|' + Genki.getAlts('{先週}の{週末}、{何}かしましたか', 'せんしゅう|しゅうまつ|なに') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
