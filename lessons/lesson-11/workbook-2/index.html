@@ -67,53 +67,57 @@
         '<p class="section-desc">Translate the following sentences, using ～たり～たりする.</p>'+
         '<div class="problem">'+
           'I watched a movie, shopped, etc., on the weekend.<br>'+
-          '{週末、映画を見たり、買い物をしたりしました|しゅうまつ、えいがをみたり、かいものをしたりしました|answer}。'+
+          '{週末、映画を見たり、買い物をしたりしました|しゅうまつ、えいがをみたり、かいものをしたりしました|' + Genki.getAlts('{週末}、{映画}を{見}たり、{買い物}をしたりしました', 'しゅうまつ|えいが|み|かいもの') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I\'ll do laundry, study, etc., tomorrow.<br>'+
-          '{あした、洗濯したり、勉強したりします|あした、せんたくしたり、べんきょうしたりします|answer}。'+
+          '{あした、洗濯したり、勉強したりします|あした、せんたくしたり、べんきょうしたりします|' + Genki.getAlts('{明日}、{洗濯}したり、{勉強}したりします', 'あした|せんたく|べんきょう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I met a friend, read a book, etc., yesterday.<br>'+
-          '{きのう、友だちに会ったり、本を読んだりしました|きのう、ともだちにあったり、ほんをよんだりしました|answer}。'+
+          '{きのう、友だちに会ったり、本を読んだりしました|きのう、ともだちにあったり、ほんをよんだりしました|' + Genki.getAlts('{昨日}、{友}だちに{会}ったり、{本}を{読}んだりしました', 'きのう|とも|あ|ほん|よ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I practice Japanese, watch a Japanese movie, etc., at home.<br>'+
-          '{家で日本語を練習したり、日本の映画を見たりします|いえでにほんごをれんしゅうしたり、にほんのえいがをみたりします|answer}。'+
+          '{家で日本語を練習したり、日本の映画を見たりします|いえでにほんごをれんしゅうしたり、にほんのえいがをみたりします|' + Genki.getAlts('{家}で{日本語}を{練習}したり、{日本}の{映画}を{見}たりします', 'いえ|にほんご|れんしゅう|にほん|えいが|み') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I want to climb a mountain, go to a hot spring, etc., this weekend.<br>'+
-          '{今週の週末、山に登ったり、温泉に行ったりしたいです|こんしゅうのしゅうまつ、やまにのぼったり、おんせんにいったりしたいです|answer}。'+
+          '{今週の週末、山に登ったり、温泉に行ったりしたいです|こんしゅうのしゅうまつ、やまにのぼったり、おんせんにいったりしたいです|' + Genki.getAlts('{今週}の{週末}、{山}に{登}ったり、{温泉}に{行}ったりしたいです', 'こんしゅう|しゅうまつ|やま|のぼ|おんせん|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'You must not smoke, drink beer, etc., at the dormitory (りょう).<br>'+
-          '{りょうでたばこを吸ったり、ビールを飲んだりしてはいけません|りょうでたばこをすったり、ビールをのんだりしてはいけません|answer}。'+
+          '{りょうでたばこを吸ったり、ビールを飲んだりしてはいけません|りょうでたばこをすったり、ビールをのんだりしてはいけません|' + Genki.getAlts('{寮}でたばこを{吸}ったり、ビールを{飲}んだりしてはいけません', 'りょう|す|の') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the questions, using ～たり～たりする.</p>'+
         '<div class="problem">'+
           'デートの時、何をしますか。<br>'+
-          '{映画を見たり、ご飯を食べたりします|えいがをみたり、ごはんをたべたりします|answer}。(watch a movie, eat rice, etc.)'+
+          '(When on a date, I watch a movie, eat a meal, etc.)<br>'+
+          '{%(デートの時、/)映画を見たり、ご飯を食べたりします|%(デートのとき、/)えいがをみたり、ごはんをたべたりします|' + Genki.getAlts('デートの{時}、{映画}を{見}たり、ご{飯}を{食}べたりします', 'とき|えいが|み|はん|た') + Genki.getAlts('{映画}を{見}たり、ご{飯}を{食}べたりします', 'えいが|み|はん|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '休みに何をしましたか。<br>'+
-          '{旅行したり、アルバイトをしたりしました|りょこうしたり、アルバイトをしたりしました|answer}。(traveled, worked part-time, etc.)'+
+          '(During the vacation I traveled, worked part-time, etc.)<br>'+
+          '{%(休みに/)旅行したり、アルバイトをしたりしました|%(やすみに/)りょこうしたり、アルバイトをしたりしました|' + Genki.getAlts('{休}みに{旅行}したり、アルバイトをしたりしました', 'やす|りょこう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '子供の時、よく何をしましたか。<br>'+
-          '{よく公園に行ったり、ゲームをしたりしました|よくこうえんにいったり、ゲームをしたりしました|answer}。(often went to the park, played games, etc.)'+
+          '(When I was a child, I often went to the park, played games, etc.)<br>'+
+          '{%(子供の時、/)よく公園に行ったり、ゲームをしたりしました|%(こどものとき、/)よくこうえんにいったり、ゲームをしたりしました|' + Genki.getAlts('{子供}の{時}、よく{公園}に{行}ったり、ゲームをしたりしました', 'こども|とき|こうえん|い') + Genki.getAlts('よく{公園}に{行}ったり、ゲームをしたりしました', 'こうえん|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今度の週末、何がしたいですか。<br>'+
-          '{テニスをしたり、友だちの家に行ったりしたいです|テニスをしたり、ともだちのいえにいったりしたいです|answer}。(I want to play tennis, go to a friend\'s house, etc.)'+
+          '(Next weekend, I want to play tennis, go to a friend\'s house, etc.)<br>'+
+          '{%(今度の週末、/)テニスをしたり、友だちの家に行ったりしたいです|%(こんどのしゅうまつ、/)テニスをしたり、ともだちのいえにいったりしたいです|' + Genki.getAlts('{今度}の{週末}、テニスをしたり、{友}だちの{家}に{行}ったりしたいです', 'こんど|しゅうまつ|とも|いえ|い') + Genki.getAlts('テニスをしたり、{友}だちの{家}に{行}ったりしたいです', 'とも|いえ|い') + 'answer}。'+
         '</div>'+
       '</div>'
         

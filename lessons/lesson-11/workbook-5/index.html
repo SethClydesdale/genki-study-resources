@@ -67,43 +67,51 @@
         '<p class="section-desc">Answer the following questions about your trip in Japanese.</p>'+
         '<div class="problem">'+
           'どこに行きましたか。<br>'+
-          '{東京に行きました|とうきょうにいきました|answer}。(I went to Tokyo.)'+
+          '(I went to Tokyo.)<br>'+
+          '{東京に行きました|とうきょうにいきました|' + Genki.getAlts('{東京}に{行}きました', 'とうきょう|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'そこで何をしましたか。<span class="define" style="font-weight:normal;">(use ～たり～たりする)</span><br>'+
-          '{美術館に行ったり、たくさん買い物をしたりしました|びじゅつかんにいったり、たくさんかいものをしたりしました|answer}。(I went to an art museum, did a lot of shopping, etc..)'+
+          '(I went to an art museum, did a lot of shopping, etc..)<br>'+
+          '{美術館に行ったり、たくさん買い物をしたりしました|びじゅつかんにいったり、たくさんかいものをしたりしました|' + Genki.getAlts('{美術館}に{行}ったり、たくさん{買い物}をしたりしました', 'びじゅつかん|い|かいもの') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '食べ物はどうでしたか。何を食べましたか。<span class="define" style="font-weight:normal;">(use や)</span><br>'+
-          '{おいしかったです。すしや天ぷらを食べました。|おいしかったです。すしやてんぷらをたべました。|answer} (It was delicious. I ate sushi and tempura.)'+
+          '(It was delicious. I ate sushi and tempura.)<br>'+
+          '{おいしかったです。すしや天ぷらを食べました。|おいしかったです。すしやてんぷらをたべました。|' + Genki.getAlts('おいしかったです。すしや{天}ぷらを{食}べました。', 'てん|た') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'どんな所でしたか。<span class="define" style="font-weight:normal;">(use ～て／～で)</span><br>'+
-          '{人がたくさんいて、にぎやかでした|ひとがたくさんいて、にぎやかでした|answer}。(There were a lot of people and it was lively.)'+
+          '(There were a lot of people and it was lively.)<br>'+
+          '{人がたくさんいて、にぎやかでした|ひとがたくさんいて、にぎやかでした|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'また行きたいですか。どうしてですか。<br>'+
-          '{はい、また行きたいです。楽しかったですから。|はい、またいきたいです。たのしかったですから。|answer} (Yes, I want to go again. Because it was fun.)'+
+          '(Yes, I want to go again. Because it was fun.)<br>'+
+          '{はい、また行きたいです。楽しかったですから。|はい、またいきたいです。たのしかったですから。|' + Genki.getAlts('はい、また{行}きたいです。{楽}しかったですから。', 'い|たの') + 'answer}'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions in Japanese.</p>'+
         '<div class="problem">'+
           '子供の時、何になりたかったですか。<br>'+
-          '{歌手になりたかったです|かしゅになりたかったです|answer}。(I wanted to become a singer.)'+
+          '(When I was a child, I wanted to become a singer.)<br>'+
+          '{%(子供の時、/)歌手になりたかったです|%(こどものとき、/)かしゅになりたかったです|' + Genki.getAlts('{子供}の{時}、{歌手}になりたかったです', 'こども|とき|かしゅ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '猫や犬を飼ったことがありますか。<br>'+
-          '{はい、猫を飼ったことがあります|はい、ねこをかったことがあります|answer}。(Yes, I have a cat.)'+
+          '(Yes, I have a cat.)<br>'+
+          '{はい、猫を飼ったことがあります|はい、ねこをかったことがあります|' + Genki.getAlts('はい、{猫}を{飼}ったことがあります', 'ねこ|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今は何になりたいですか。どうしてですか。<br>'+
-          '{先生になりたいです。教えるのが好きですから。|せんせいになりたいです。おしえるのがすきですから。|answer} (I want to become a teacher. Because I like teaching.)'+
+          '(I want to become a teacher now. Because I like teaching.)<br>'+
+          '{%(今は/)先生になりたいです。教えるのが好きですから。|%(いまは/)せんせいになりたいです。おしえるのがすきですから。|' + Genki.getAlts('{今}は{先生}になりたいです。{教}えるのが{好}きですから。', 'いま|せんせい|おし|す') + Genki.getAlts('{先生}になりたいです。{教}えるのが{好}きですから。', 'せんせい|おし|す') + 'answer}'+
         '</div>'+
       '</div>'
         

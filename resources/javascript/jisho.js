@@ -885,7 +885,7 @@ Genki.jisho = {
     { ja : '今週|こんしゅう', en : 'this week', l : '会L4(e), 会L6' },
     { ja : 'コンタクト', en : 'contact lenses', l : '会L17' },
     { ja : '込んでいる|こんでいる', en : 'to be crowded', l : '読L13-III' },
-    { ja : '今度|こんど', en : 'near future', l : '会L9' },
+    { ja : '今度|こんど', en : 'this time; next time; near future', l : '会L9' },
     { ja : 'こんな～', en : '...like this; this kind of...', l : '会L14' },
     { ja : 'こんなふう', en : 'like this', l : '会L22' },
     { ja : 'こんにちは', en : 'Good afternoon.', l : '会G' },

@@ -66,37 +66,44 @@
       '<div class="count-problems">'+
         '<div class="problem">'+
           '大学の近くに何がありますか。<br>'+
-          '{郵便局や喫茶店があります|ゆうびんきょくやきっさてんがあります|answer}。(There\'s a post office and coffee shop.)'+
+          '(There\'s a post office and coffee shop near the university.)<br>'+
+          '{%(大学の近くに/)郵便局や喫茶店があります|%(だいがくのちかくに/)ゆうびんきょくやきっさてんがあります|' + Genki.getAlts('{大学}の{近}くに{郵便局}や{喫茶店}があります', 'だいがく|ちか|ゆうびんきょく|きっさてん') + Genki.getAlts('{郵便局}や{喫茶店}があります', 'ゆうびんきょく|きっさてん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今、十万円あります。何が買いたいですか。<br>'+
-          '{時計や新しいシャツが買いたいです|とけいやあたらしいシャツがかいたいです|answer}。(I want to buy a watch and new shirt.)'+
+          '(I want to buy a watch and new shirt.)<br>'+
+          '{時計や新しいシャツが買いたいです|とけいやあたらしいシャツがかいたいです|' + Genki.getAlts('{時計}や{新}しいシャツが{買}いたいです', 'とけい|あたら|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '誕生日に何をもらいましたか。<br>'+
-          '{ケーキや花をもらいました|ケーキやはなをもらいました|answer}。(I received cake and flowers (花；はな).)'+
+          '(I received cake and flowers (花；はな) on my birthday.)<br>'+
+          '{%(誕生日に/)ケーキや花をもらいました|%(たんじょうびに/)ケーキやはなをもらいました|' + Genki.getAlts('{誕生日}にケーキや{花}をもらいました', 'たんじょうび|はな') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '休みの日に、よくどこに行きますか。<br>'+
-          '{よくデパートや公園に行きます|よくデパートやこうえんにいきます|answer}。(I often go to the department store and park.)'+
+          '(I often go to the department store and park on my day off.)<br>'+
+          '{%(休みの日に/)よくデパートや公園に行きます|%(やすみのひに/)よくデパートやこうえんにいきます|' + Genki.getAlts('{休}みの{日}によくデパートや{公園}に{行}きます', 'やす|ひ|こうえん|い') + Genki.getAlts('よくデパートや{公園}に{行}きます', 'こうえん|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '有名人の中で、だれに会いたいですか。<br>'+
-          '{ジェリー・サインフェルドやジェイソン・アレクサンダーに会いたいです|ジェリー・サインフェルドやジェイソン・アレクサンダーにあいたいです|answer}。(I want to meet ジェリー・サインフェルド and ジェイソン・アレクサンダー</span>.)'+
+          '(I want to meet ジェリー・サインフェルド and ジェイソン・アレクサンダー</span>.)<br>'+
+          '{%(有名人の中で/)ジェリー・サインフェルドやジェイソン・アレクサンダーに会いたいです|%(ゆうめいじんのなかで/)ジェリー・サインフェルドやジェイソン・アレクサンダーにあいたいです|' + Genki.getAlts('{有名人}の{中}でジェリー・サインフェルドやジェイソン・アレクサンダーに{会}いたいです', 'ゆうめいじん|なか|あ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'どんな日本料理を食べたことがありますか。<br>'+
-          '{すしや天ぷらを食べたことがあります|すしやてんぷらをたべたことがあります|answer}。(I have eaten sushi and tempura.)'+
+          '(I have eaten sushi and tempura.)<br>'+
+          '{すしや天ぷらを食べたことがあります|すしやてんぷらをたべたことがあります|' + Genki.getAlts('すしや{天}ぷらを{食}べたことがあります', 'てん|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'カラオケでどんな歌を歌いますか。<br>'+
-          '{「狂乱Hey Kids!!」や「Burn My Dread」を歌います|「きょうらんHey Kids!!」や「Burn My Dread」をうたいます|answer}。(I sing「狂乱<span class="define">[きょうらん]</span>Hey Kids!!」and「Burn My Dread」.)'+
+          '(I sing「狂乱<span class="define">[きょうらん]</span>Hey Kids!!」and「Burn My Dread」at karaoke.)<br>'+
+          '{%(カラオケで/)「狂乱Hey Kids!!」や「Burn My Dread」を歌います|%(カラオケで/)「きょうらんHey Kids!!」や「Burn My Dread」をうたいます|' + Genki.getAlts('{カラオケで}「{狂乱}Hey Kids!!」や「Burn My Dread」を{歌}います', '|きょうらん|うた') + 'answer}。'+
         '</div>'+
       '</div>'
         
