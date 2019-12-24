@@ -66,42 +66,50 @@
       '<div class="count-problems">'+
         '<div class="problem">'+
           'あしたはどんな天気ですか。<br>'+
-          '{あしたは雨でしょう|あしたはあめでしょう|answer}。(It will probably rain tomorrow.)'+
+          '(It will probably rain tomorrow.)<br>'+
+          '{%(あしたは/)雨でしょう|%(あしたは/)あめでしょう|' + Genki.getAlts('{明日}は{雨}でしょう', 'あした|あめ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今、気温は何度ぐらいですか。<br>'+
-          '{十八度ぐらいです|じゅうはちどぐらいです|answer}。(It is 18°C.)'+
+          '(Right now, the temperature is 18°C.)<br>'+
+          '{%(今、気温は/)十八度ぐらいです|%(いま、きおんは/)じゅうはちどぐらいです|' + Genki.getAlts('{今}、{気温}は{十八度}ぐらいです', 'いま|きおん|じゅうはちど') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今、何に興味がありますか。<br>'+
-          '{映画に興味があります|えいがにきょうみがあります|answer}。(I am interested in movies.)'+
+          '(Right now, I am interested in movies.)<br>'+
+          '{%(今、/)映画に興味があります|%(いま、/)えいがにきょうみがあります|' + Genki.getAlts('{今}、{映画}に{興味}があります', 'いま|えいが|きょうみ') + Genki.getAlts('{映画}に{興味}があります', 'えいが|きょうみ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '日本語のクラスは宿題が多いと思いますか。<br>'+
-          '{はい、多いと思います|はい、おおいとおもいます|answer}。(Yes, I think there are many.)'+
+          '(Yes, I think there is many Japanese class homework.)<br>'+
+          '{はい、%(日本語のクラスは宿題が/)多いと思います|はい、%(にほんごのクラスはしゅくだいが/)おおいとおもいます|' + Genki.getAlts('はい、{日本語}のクラスは{宿題}が{多}いと{思}います', 'にほんご|しゅくだい|おお|おも') + Genki.getAlts('はい、{多}いと{思}います', 'おお|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '悪い成績を取ったことがありますか。<br>'+
-          '{はい、悪い成績を取ったことがあります|はい、わるいせいせきをとったことがあります|answer}。(Yes, I have gotten bad grades before.)'+
+          '(Yes, I have gotten bad grades before.)<br>'+
+          '{はい、%(悪い成績を/)取ったことがあります|はい、%(わるいせいせきを/)とったことがあります|' + Genki.getAlts('はい、{悪}い{成績}を{取}ったことがあります', 'わる|せいせき|と') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'かぜの時、何をしたほうがいいですか。<br>'+
-          '{ゆっくり休んだほうがいいです|ゆっくりやすんだほうがいいです|answer}。(You\'d better take a day off to rest.)'+
+          '(When you\'re sick, you\'d better take a day off to rest.)<br>'+
+          '{%(かぜの時、/)ゆっくり休んだほうがいいです|%(かぜのとき、/)ゆっくりやすんだほうがいいです|' + Genki.getAlts('{風邪}の{時}、ゆっくり{休}んだほうがいいです', 'かぜ|とき|やす') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今週の週末、何をしなければいけませんか。<br>'+
-          '{掃除しなければいけません|そうじしなければいけません|answer}。(I have to clean.)'+
+          '(This weekend, I have to clean.)<br>'+
+          '{%(今週の週末、/)掃除しなければいけません|%(こんしゅうのしゅうまつ、/)そうじしなければいけません|' + Genki.getAlts('{今週}の{週末}、{掃除}しなければいけません', 'こんしゅう|しゅうまつ|そうじ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'どうして日本語を勉強していますか。<br>'+
-          '{日本の音楽が好きですから|にほんのおんがくがすきですから|answer}。(Because I like Japanese music.)'+
+          '(Because I like Japanese music.)<br>'+
+          '{日本の音楽が好きですから|にほんのおんがくがすきですから|' + Genki.getAlts('{日本}の{音楽}が{好}きですから', 'にほん|おんがく|す') + 'answer}。'+
         '</div>'+
       '</div>'
         

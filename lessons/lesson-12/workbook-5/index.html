@@ -67,9 +67,9 @@
         '<p class="section-desc">Read the first half of the sentences. Then choose what you have to do from the list and complete the sentences using ～なければいけません. You may use the same words only once.</p>'+
         '<div class="sub-section center">quit the part time job　　buy the textbook　　do laundry　　practice　　get up early</div><br>'+
         
-        '<div class="problem">あしたは九時から授業があるので、{早く起きなければいけません|はやくおきなければいけません|answer}。</div>'+
+        '<div class="problem">あしたは九時から授業があるので、{早く起きなければいけません|はやくおきなければいけません|' + Genki.getAlts('{早}く{起}きなければいけません', 'はや|お') + 'answer}。</div>'+
         
-        '<div class="problem">新しい授業が始まるので、{教科書を買わなければいけません|きょうかしょをかわなければいけません|answer}。</div>'+
+        '<div class="problem">新しい授業が始まるので、{教科書を買わなければいけません|きょうかしょをかわなければいけません|' + Genki.getAlts('{教科書}を{買}わなければいけません', 'きょうかしょ|か') + 'answer}。</div>'+
         
         '<div class="problem">来週テストの試合があるので、{練習しなければいけません|れんしゅうしなければいけません|answer}。</div>'+
         
@@ -82,18 +82,18 @@
         '<strong>This week:</strong>'+
         '<div class="problem">'+
           'I have to write a letter to my parents (両親；りょうしん).<br>'+
-          '{両親に手紙を書かなきゃいけません|りょうしんにてがみをかかなきゃいけません|answer}。'+
+          '{両親に手紙を書かなきゃいけません|りょうしんにてがみをかかなきゃいけません|' + Genki.getAlts('{両親}に{手紙}を{書}かなきゃいけません', 'りょうしん|てがみ|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I have to clean my room.<br>'+
-          '{私の部屋を掃除しなきゃいけません|わたしのへやをそうじしなきゃいけません|answer}。'+
+          '{私の部屋を掃除しなきゃいけません|わたしのへやをそうじしなきゃいけません|' + Genki.getAlts('{私}の{部屋}を{掃除}しなきゃいけません', 'わたし|へや|そうじ') + 'answer}。'+
         '</div>'+
         
         '<strong>Yesterday:</strong>'+
         '<div class="problem">'+
           'I had to do Japanese homework.<br>'+
-          '{日本語の宿題をしなきゃいけませんでした|にほんごのしゅくだいをしなきゃいけませんでした|answer}。'+
+          '{日本語の宿題をしなきゃいけませんでした|にほんごのしゅくだいをしなきゃいけませんでした|' + Genki.getAlts('{日本語}の{宿題}をしなきゃいけませんでした', 'にほんご|しゅくだい') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+

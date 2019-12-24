@@ -67,48 +67,51 @@
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'You had better go to a hospital.<br>'+
-          '{病院に行ったほうがいいです|びょういんにいったほうがいいです|answer}。'+
+          '{病院に行ったほうがいいです%(よ/)|びょういんにいったほうがいいです%(よ/)|' + Genki.getAlts('{病院}に{行}ったほうがいいです{よ}', 'びょういん|い|') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'You had better memorize kanji.<br>'+
-          '{漢字を覚えたほうがいいです|かんじをおぼえたほうがいいです|answer}。'+
+          '{漢字を覚えたほうがいいです%(よ/)|かんじをおぼえたほうがいいです%(よ/)|' + Genki.getAlts('{漢字}を{覚}えたほうがいいです{よ}', 'かんじ|おぼ|') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'You had better write a letter to your mother.<br>'+
-          '{お母さんに手紙を書いたほうがいいです|おかあさんにてがみをかいたほうがいいです|answer}。'+
+          '{お母さんに手紙を書いたほうがいいです%(よ/)|おかあさんにてがみをかいたほうがいいです%(よ/)|' + Genki.getAlts('お{母}さんに{手紙}を{書}いたほうがいいです{よ}', 'かあ|てがみ|か|') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'You had better not worry.<br>'+
-          '{心配しないほうがいいです|しんぱいしないほうがいいです|answer}。'+
+          '{心配しないほうがいいです%(よ/)|しんぱいしないほうがいいです%(よ/)|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'You had better not smoke.<br>'+
-          '{たばこを吸わないほうがいいです|たばこをすわないほうがいいです|answer}。'+
+          '{たばこを吸わないほうがいいです%(よ/)|たばこをすわないほうがいいです%(よ/)|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'You had better not tell a lie.<br>'+
-          '{うそをつかないほうがいいです}。'+
+          '{うそをつかないほうがいいです%(よ/)}。'+
         '</div>'+
         
-        '<p class="section-desc">Give advice using ～ほうがいいですよ.</p>'+
+        '<p class="section-desc">Give advice using ～ほうがいいですよ by translating the cues.</p>'+
         '<div class="problem">'+
           'Friend：あしたテストがあるんです。<br>'+
-          'You：{今日、出かけないほうがいいですよ|きょう、でかけないほうがいいですよ|answer}。(You had better not go out today.)'+
+          'You：(You had better not go out today.)<br>'+
+          '{今日、出かけないほうがいいですよ|きょう、でかけないほうがいいですよ|' + Genki.getAlts('{今日}、{出}かけないほうがいいですよ', 'きょう|で') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Friend：おなかがすいたんです。<br>'+
-          'You：{何か食べたほうがいいですよ|なにかたべたほうがいいですよ|answer}。(You had better eat something.)'+
+          'You：(You had better eat something.)<br>'+
+          '{何か食べたほうがいいですよ|なにかたべたほうがいいですよ|' + Genki.getAlts('{何}か{食}べたほうがいいですよ', 'なに|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Friend：かぜをひいたんです。<br>'+
-          'You：{薬を飲んだほうがいいですよ|くすりをのんだほうがいいですよ|answer}。(You had better take your medicine.)'+
+          'You：(You had better take your medicine.)<br>'+
+          '{薬を飲んだほうがいいですよ|くすりをのんだほうがいいですよ|' + Genki.getAlts('{薬}を{飲}んだほうがいいですよ', 'くすり|の') + 'answer}。'+
         '</div>'+
       '</div>'
         

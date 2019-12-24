@@ -67,53 +67,57 @@
         '<p class="section-desc">Translate the following sentences, using ～ので. Note that [the reason + ので] precedes the result.</p>'+
         '<div class="problem">'+
           'I am tired, because I am busy every day.<br>'+
-          '{毎日忙しいので、疲れています|まいにちいそがしいので、つかれています|answer}。'+
+          '{毎日忙しいので、疲れています|まいにちいそがしいので、つかれています|' + Genki.getAlts('{毎日}{忙}しいので、{疲}れています', 'まいにち|いそが|つか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I came to Japan, because I wanted to study Japanese.<br>'+
-          '{日本語を勉強したかったので、日本に来ました|にほんごをべんきょうしたかったので、にほんにきました|answer}。'+
+          '{日本語を勉強したかったので、日本に来ました|にほんごをべんきょうしたかったので、にほんにきました|' + Genki.getAlts('{日本語}を{勉強}したかったので、{日本}に{来}ました', 'にほんご|べんきょう|にほん|き') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I like her, because she is kind.<br>'+
-          '{彼女は親切なので、好きです|かのじょはしんせつなので、すきです|answer}。'+
+          '{彼女は親切なので、%(彼女が/)好きです|かのじょはしんせつなので、%(かのじょが/)すきです|' + Genki.getAlts('{彼女}は{親切}なので、{彼女}が{好}きです', 'かのじょ|しんせつ|かのじょ|す') + Genki.getAlts('{彼女}は{親切}なので、{好}きです', 'かのじょ|しんせつ|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I read the newspaper every day, because I am interested in politics.<br>'+
-          '{政治に興味があるので、毎日、新聞を読みます|せいじにきょうみがあるので、まいにち、しんぶんをよみます|answer}。'+
+          '{政治に興味があるので、毎日、新聞を読みます|せいじにきょうみがあるので、まいにち、しんぶんをよみます|' + Genki.getAlts('{政治}に{興味}があるので、{毎日}、{新聞}を{読}みます', 'せいじ|きょうみ|まいにち|しんぶん|よ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'My grade was bad, because I didn\'t study.<br>'+
-          '{勉強しなかったので、成績が悪かったです|べんきょうしなかったので、せいせきがわるかったです|answer}。'+
+          '{勉強しなかったので、成績が悪かったです|べんきょうしなかったので、せいせきがわるかったです|' + Genki.getAlts('{勉強}しなかったので、{成績}が{悪}かったです', 'べんきょう|せいせき|わる') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I will not go to the party tomorrow, because I have a scheduling conflict.<br>'+
-          '{都合が悪いので、あしたパーティーに行きません|つごうがわるいので、あしたパーティーにいきません|answer}。'+
+          '{都合が悪いので、あしたパーティーに行きません|つごうがわるいので、あしたパーティーにいきません|' + Genki.getAlts('{都合}が{悪}いので、{明日}パーティーに{行}きません', 'つごう|わる|あした|い') + 'answer}。'+
         '</div>'+
         
-        '<p class="section-desc">Answer the questions, using ～ので.</p>'+
+        '<p class="section-desc">Answer the questions, using ～ので by translating the cues.</p>'+
         '<div class="problem">'+
           'Q：きのう勉強しましたか。<br>'+
-          'A：{いいえ、宿題がなかったので、勉強しませんでした|いいえ、しゅくだいがなかったので、べんきょうしませんでした|answer}。(No, I didn\'t study, because there was no homework.)'+
+          '(No, I didn\'t study, because there was no homework.)<br>'+
+          'A：{いいえ、宿題がなかったので、勉強しませんでした|いいえ、しゅくだいがなかったので、べんきょうしませんでした|' + Genki.getAlts('いいえ、{宿題}がなかったので、{勉強}しませんでした', 'しゅくだい|べんきょう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：歌手の中でだれが好きですか。<br>'+
-          'A：{かっこいいので、ミクが好きです|かっこいいので、ミクがすきです|answer}。(I like Miku (ミク), because she\'s good-looking.)'+
+          '(I like Miku (ミク), because she\'s good-looking.)<br>'+
+          'A：{かっこいいので、ミクが好きです|かっこいいので、ミクがすきです|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：今どこにいちばん行きたいですか。<br>'+
-          'A：{スキーがしたいので、山にいちばん行きたいです|スキーがしたいので、やまにいちばんいきたいです|answer}。(I want to go to a mountain the most, because I want to ski.)'+
+          '(I want to go to a mountain the most, because I want to ski.)<br>'+
+          'A：{スキーがしたいので、山に%(いちばん/)行きたいです|スキーがしたいので、やまに%(いちばん/)いきたいです|' + Genki.getAlts('スキーがしたいので、{山}に{一番}{行}きたいです', 'やま|いちばん|い') + Genki.getAlts('スキーがしたいので、{山}に{行}きたいです', 'やま|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：将来どんな仕事がしたいですか。<br>'+
-          'A：{教えるのが好きなので、先生になりたいです|おしえるのがすきなので、せんせいになりたいです|answer}。(I want to become a teacher, because I like teaching.)'+
+          '(I want to become a teacher, because I like teaching.)<br>'+
+          'A：{教えるのが好きなので、先生になりたいです|おしえるのがすきなので、せんせいになりたいです|' + Genki.getAlts('{教}えるのが{好}きなので、{先生}になりたいです', 'おし|す|せんせい') + 'answer}。'+
         '</div>'+
       '</div>'
         
