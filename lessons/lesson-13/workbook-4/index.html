@@ -65,45 +65,45 @@
       quizlet : 
       '<div class="count-problems">'+
         '<p class="section-desc">Complete the sentences, using ～し.</p>'+
-        '<div class="problem">{寒いし|(it is cold)}、{眠いし|(sleepy)}、起きたくないです。</div>'+
+        '<div class="problem">{寒いし|さむいし|answer;width:98;hint:(it is cold)}、{眠いし|ねむいし|answer;width:70;hint:(sleepy)}、起きたくないです。</div>'+
         
-        '<div class="problem">{頭がいいし|(smart)|width:112}、{ギターが弾けるし|(can play guitar)}、田中さんは人気があります。</div>'+
+        '<div class="problem">{頭がいいし|あたまがいいし|answer;width:112;hint:(smart)}、{ギターが弾けるし|ギターがひけるし|answer;hint:(can play guitar)}、田中さんは人気があります。</div>'+
         
-        '<div class="problem">{あしたテストがあるし|(I have a test tomorrow)}、{先生に合わな%(きゃ/ければ)いけないし|(I have to meet the teacher)|width:238}、今日は忙しいです。</div>'+
+        '<div class="problem">{明日テストがあるし|あしたテストがあるし|answer;width:182;hint:(I have a test tomorrow)}、{先生に会わな%(きゃ/ければ)いけないし|せんせいにあわな%(きゃ/ければ)いけないし|' + Genki.getAlts('{先生}に{会}わな{きゃ}いけないし', 'せんせい|あ|ければ') + 'answer;width:238;hint:(I have to meet the teacher)}、今日は忙しいです。</div>'+
         
-        '<div class="problem">{よくうそをつくし|(often lies)|width:126}、{約束を守らないし|(doesn\'t keep a promise)}、山田さんがきらいです。</div>'+
+        '<div class="problem">{よくうそをつくし|よくうそをつくし|answer;width:126;hint:(often lies)}、{約束を守らないし|やくそくをまもらないし|' + Genki.getAlts('{約束}を{守}らないし', 'やくそく|まも') + 'answer;width:182;hint:(doesn\'t keep a promise)}、山田さんがきらいです。</div>'+
         
-        '<div class="problem">{大学に入れたし|(I was able to enter the university)}、{友だちがたくさんいるし|(I have many friends)|width:182}、今幸せです。</div>'+
+        '<div class="problem">{大学に入れたし|だいがくにはいれたし|' + Genki.getAlts('{大学}に{入}れたし', 'だいがく|はい') + 'answer;width:266;hint:(I was able to enter the university)}、{友だちがたくさんいるし|ともだちがたくさんいるし|answer;width:182;hint:(I have many friends)}、今幸せです。</div>'+
         
         '<p class="section-desc">Answer the questions by translating the responses and adding reasons with ～し.</p>'+
         '<div class="problem">'+
           '日本語の授業が好きですか。<br>'+
           '(No, I don\'t like it. The teacher is strict, and there\'s a lot of homework.)<br>'+
-          '{いいえ、好きじゃないです。先生は厳しいし、宿題はたくさんあるし。|いいえ、すきじゃないです。せんせいはきびしいし、しゅくだいはたくさんあるし。|answer}'+
+          '{いいえ、好きじゃないです。先生は厳しいし、宿題はたくさんあるし。|いいえ、すきじゃないです。せんせいはきびしいし、しゅくだいはたくさんあるし。|' + Genki.getAlts('いいえ、{好}きじゃないです。{先生}は{厳}しいし、{宿題}はたくさんあるし。', 'す|せんせい|きび|しゅくだい') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '将来、日本で働きたいですか。<br>'+
           '(No, I don\'t want to work there. Japanese is difficult, and the prices are expensive.)<br>'+
-          '{いいえ、働きたくないです。日本語は難しいし、物価は高いし。|いいえ、はたらきたくないです。にほんごはむずかしいし、ぶっかはたかいし。|answer}'+
+          '{いいえ、働きたくないです。日本語は難しいし、物価は高いし。|いいえ、はたらきたくないです。にほんごはむずかしいし、ぶっかはたかいし。|' + Genki.getAlts('いいえ、{働}きたくないです。{日本語}は{難}しいし、{物価}は{高}いし。', 'はたら|にほんご|むずか|ぶっか|たか') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'あなたの町が好きですか。<br>'+
           '(Yes, I like it. There\'s a beautiful park, and my family is here.)<br>'+
-          '{はい、好きです。きれいな公園があるし、家族がいるし。|はい、すきです。きれいなこうえんがあるし、かぞくがいるし。|answer}'+
+          '{はい、好きです。きれいな公園があるし、家族がいるし。|はい、すきです。きれいなこうえんがあるし、かぞくがいるし。|' + Genki.getAlts('はい、{好}きです。きれいな{公園}があるし、{家族}がいるし。', 'す|こうえん|かぞく') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '夏と冬とどちらが好きですか。<br>'+
           '(I like winter better. I like the snow, and I can ski.)<br>'+
-          '{冬のほうが好きです。雪が好きだし、スキーができるし。|ふゆのほうがすきです。ゆきがすきだし、スキーができるし。|answer}'+
+          '{冬のほうが好きです。雪が好きだし、スキーができるし。|ふゆのほうがすきです。ゆきがすきだし、スキーができるし。|' + Genki.getAlts('{冬}のほうが{好}きです。{雪}が{好}きだし、スキーができるし。', 'ふゆ|す|ゆく|す') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '今どこに行きたいですか。<br>'+
           '(I want to go to Tokyo. My friend is there, and there are a lot of interesting places.)<br>'+
-          '{東京に行きたいです。友だちがいるし、おもしろい所がたくさんあるし。|とうきょうにいきたいです。ともだちがいるし、おもしろいところがたくさんあるし。|answer}'+
+          '{東京に行きたいです。友だちがいるし、おもしろい所がたくさんあるし。|とうきょうにいきたいです。ともだちがいるし、おもしろいところがたくさんあるし。|' + Genki.getAlts('{東京}に{行}きたいです。{友}だちがいるし、{面白}い{所}がたくさんあるし。', 'とうきょう|い|とも|おもしろ|ところ') + 'answer}'+
         '</div>'+
       '</div>'
         

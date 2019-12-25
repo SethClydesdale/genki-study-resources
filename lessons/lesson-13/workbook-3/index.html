@@ -65,37 +65,37 @@
       quizlet : 
       '<div class="count-problems">'+
         '<p class="section-desc">Read the first half of the sentences and fill in the blanks with the potential verbs. Determine whether you should use the affirmative or negative.</p>'+
-        '<div class="problem">中国に住んでいたので、中国語が、{話せます|(speak)|width:84}。</div>'+
+        '<div class="problem">中国に住んでいたので、中国語が、{話せます|はなせます|answer;width:84;hint:(speak)}。</div>'+
         
-        '<div class="problem">水がこわいので、{泳げません|(swim)|width:98}。</div>'+
+        '<div class="problem">水がこわいので、{泳げません|およげません|answer;width:98;hint:(swim)}。</div>'+
         
-        '<div class="problem">いろいろなこと(thing)に興味があるので、専攻が、{決められません|(decide)|width:112}。</div>'+
+        '<div class="problem">いろいろなこと(thing)に興味があるので、専攻が、{決められません|きまめられません|answer;width:112;hint:(decide)}。</div>'+
         
-        '<div class="problem">かぜをひいているので、あした学校に{行けません|(go)|width:84}。</div>'+
+        '<div class="problem">かぜをひいているので、あした学校に{行けません|いけません|answer;width:84;hint:(go)}。</div>'+
         
-        '<div class="problem">おなかがすいているので、たくさん{食べられます|(eat)|width:98}。</div>'+
+        '<div class="problem">おなかがすいているので、たくさん{食べられます|たべられます|answer;width:98;hint:(eat)}。</div>'+
         
-        '<div class="problem">宿題がたくさんあるので、今日は{出かけられません|(go out)|width:126}。</div>'+
+        '<div class="problem">宿題がたくさんあるので、今日は{出かけられません|でかけられません|answer;width:126;hint:(go out)}。</div>'+
         
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'What kind of songs can you sing?<br>'+
-          '{どんな歌が歌えますか|どんなうたがうたえますか|answer}。'+
+          '{どんな歌が歌えますか|どんなうたがうたえますか|' + Genki.getAlts('どんな{歌}が{歌}えますか', 'うた|うた') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Where can I buy cheap clothes?<br>'+
-          '{どこで安い服が買えますか|どこでやすいふくがかえますか|answer}。'+
+          '{どこで安い服が買えますか|どこでやすいふくがかえますか|' + Genki.getAlts('どこで{安}い{服}が{買}えますか', 'やす|ふく|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I was not able to sleep at all last night.<br>'+
-          '{きのうの夜、ぜんぜん寝られませんでした|きのうのよる、ぜんぜんねられませんでした|answer}。'+
+          '{きのうの夜、ぜんぜん寝られませんでした|きのうのよる、ぜんぜんねられませんでした|' + Genki.getAlts('{昨日}の{夜}、{全然}{寝}られませんでした', 'きのう|よる|ぜんぜん|ね') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I was unable to eat a green pepper (ピーマン) when I was a child, but I can eat it now.<br>'+
-          '{子供の時、ピーマンが食べられませんでしたが、今食べられます|こどものとき、ピーマンがたべられませんでしたが、いまたべられます|answer}。'+
+          '{子供の時、ピーマンが食べられませんでしたが、今食べられます|こどものとき、ピーマンがたべられませんでしたが、いまたべられます|' + Genki.getAlts('{子供}の{時}、ピーマンが{食}べられませんでしたが、{今}{食}べられます', 'こども|とき|た|いま|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+

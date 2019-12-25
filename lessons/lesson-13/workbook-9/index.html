@@ -68,49 +68,56 @@
         '<div class="problem">'+
           '料理をするのが好きですか。どんな料理が作れますか。<br>'+
           '(Yes, I like cooking. I can make pizza, hamburgers, and other things.)<br>'+
-          '{はい、好きです。ピザやハンバーガーが作れます。|はい、すきです。ピザやハンバーガーがつくれます。|answer}'+
+          '{はい、好きです。ピザやハンバーガーが作れます。|はい、すきです。ピザやハンバーガーがつくれます。|' + Genki.getAlts('はい、{好}きです。ピザやハンバーガーが{作}れます。', 'す|つく') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '子供の時、どんな食べ物が食べられませんでしたか。<br>'+
-          '{ほうれんそうが食べられませんでした|ほうれんそうがたべられませんでした|answer}。(I couldn\'t eat spinich<span class="define">[ほうれんそう]</span>.)'+
+          '(I couldn\'t eat spinich<span class="define">[ほうれんそう]</span>.)<br>'+
+          '{ほうれん草が食べられませんでした|ほうれんそうがたべられませんでした|' + Genki.getAlts('ほうれん{草}が{食}べられませんでした', 'そう|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今、忙しいですか。(Answer with ～し)<br>'+
           '(Yes. There is a lot of homework, and I have to write a report.)<br>'+
-          '{はい。宿題がたくさんあるし、レポートを書かなきゃいけないし。|はい。しゅくだいがたくさんあるし、レポートをかかなきゃいけないし。|answer}'+
+          '{はい。宿題がたくさんあるし、レポートを書かなきゃいけないし。|はい。しゅくだいがたくさんあるし、レポートをかかなきゃいけないし。|' + Genki.getAlts('はい。{宿題}がたくさんあるし、レポートを{書}かなきゃいけないし。', 'しゅくだい|か') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '子供の時、何がしてみたかったですか。<br>'+
-          '{車を運転してみたかったです|くるまをうんてんしてみたかったです|answer}。(I wanted to try driving a car.)'+
+          '(I wanted to try driving a car.)<br>'+
+          '{車を運転してみたかったです|くるまをうんてんしてみたかったです|' + Genki.getAlts('{車}を{運転}してみたかったです', 'くるま|うんてん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '日本で何をしてみたいですか。<br>'+
-          '{秋葉原に行ってみたいです|あきはばらにいってみたいです|answer}。(I would like to go to Akihabara.)'+
+          '(I would like to go to Akihabara.)<br>'+
+          '{秋葉原に行ってみたいです|あきはばらにいってみたいです|' + Genki.getAlts('{秋葉原}に{行}ってみたいです', 'あきはばら|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '一週間に何日、日本語の授業がありますか。<br>'+
-          '{一週間に三日、日本語の授業があります|いっしゅうかんにみっか、にほんごのじゅぎょうがあります|answer}。(I have Japanese class three days a week.)'+
+          '(I have Japanese class three days a week.)<br>'+
+          '{一週間に三日、日本語の授業があります|いっしゅうかんにみっか、にほんごのじゅぎょうがあります|' + Genki.getAlts('{一週間}に{三日}、{日本語}の{授業}があります', 'いっしゅうかん|みっか|にほんご|じゅぎょう') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">日本語で書いてください。<br>Write about your former part-time job.</p>'+
         '<div class="problem">'+
           'どんな仕事でしたか。<br>'+
-          '{ウェイターの仕事でした|ウェイターのしごとでした|answer}。(It was a waiter job.)'+
+          '(It was a waiter job.)<br>'+
+          '{ウェイターの仕事でした|ウェイターのしごとでした|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '一時間にいくらもらいましたか。<br>'+
-          '{一時間に八百円ぐらいもらいました|いちじかんにはっぴゃくえんぐらいもらいました|answer}。(I received about 800 yen an hour.)'+
+          '(I received about 800 yen an hour.)<br>'+
+          '{一時間に八百円ぐらいもらいました|いちじかんにはっぴゃくえんぐらいもらいました|' + Genki.getAlts('{一時間}に{八百円}ぐらいもらいました', 'いちじかん|はっぴゃくえん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '一週間に何日アルバイトをしていましたか。<br>'+
-          '{一週間に五日していました|いっしゅうかんにいつかしていました|answer}。(I worked five days a week.)'+
+          '(I worked five days a week.)<br>'+
+          '{一週間に五日していました|いっしゅうかんにいつかしていました|' + Genki.getAlts('{一週間}に{五日}していました', 'いっしゅうかん|いつか') + 'answer}。'+
         '</div>'+
       '</div>'
         

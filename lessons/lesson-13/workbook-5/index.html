@@ -77,22 +77,22 @@
         
         '<div class="problem">'+
           'DVD: interesting<br>'+
-          '{このＤＶＤはおもしろそうです}。'+
+          '{このＤＶＤは面白そうです|このＤＶＤはおもしろそうです|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'child: energetic<br>'+
-          '{この子供は元気そうです|このこどもはげんきそうです|answer}。'+
+          '{この子供は元気そうです|このこどもはげんきそうです|' + Genki.getAlts('この{子供}は{元気}そうです', 'こども|げんき') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'ring (指輪；ゆびわ): expensive<br>'+
-          '{この指輪は高そうです|このゆびわはたかそうです|answer}。'+
+          '{この指輪は高そうです|このゆびわはたかそうです|' + Genki.getAlts('この{指輪}は{高}そうです', 'ゆびわ|たか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'dog: not smart<br>'+
-          '{この犬は頭が悪そうです|このいぬはあたまがわるそうです|answer}。'+
+          '{この犬は頭が悪そうです|このいぬはあたまがわるそうです|' + Genki.getAlts('この{犬}は{頭}が{悪}そうです', 'いぬ|あたま|わる') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Describe the same items, but use the adjective + そう combination to qualify the noun.</p>'+
@@ -108,22 +108,22 @@
         
         '<div class="problem">'+
           'DVD: interesting<br>'+
-          '{おもしろそうなＤＶＤですね}。'+
+          '{面白そうなＤＶＤですね|おもしろそうなＤＶＤですね|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'child: energetic<br>'+
-          '{元気そうな子供ですね|げんきそうなこどもですね|answer}。'+
+          '{元気そうな子供ですね|げんきそうなこどもですね|' + Genki.getAlts('{元気}そうな{子供}ですね', 'げんき|こども') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'ring: expensive<br>'+
-          '{高そうな指輪ですね|たかそうなゆびわですね|answer}。'+
+          '{高そうな指輪ですね|たかそうなゆびわですね|' + Genki.getAlts('{高}そうな{指輪}ですね', 'たか|ゆびわ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'dog: not smart<br>'+
-          '{頭が悪そうな犬ですね|あたまがわるそうないぬですね|answer}。'+
+          '{頭が悪そうな犬ですね|あたまがわるそうないぬですね|' + Genki.getAlts('{頭}が{悪}そうな{犬}ですね', 'あたま|わる|いぬ') + 'answer}。'+
         '</div>'+
       '</div>'
         

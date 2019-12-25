@@ -67,43 +67,47 @@
         '<p class="section-desc">Reply to A, using ～てみます.</p>'+
         '<div class="problem">'+
           'A：あの映画は感動しました。<br>'+
-          'B：じゃあ、{見てみます|みてみます|answer}。(I\'ll try watching it)'+
+          '(I\'ll try watching it)<br>'+
+          'B：じゃあ、{見てみます|みてみます|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：あの空手の先生は教えるのがとても上手ですよ。<br>'+
-          'B：じゃあ、{空手のクラスに行ってみます|からてのクラスにいってみます|answer}。(I\'ll try going to karate class)'+
+          '(I\'ll try going to karate class)<br>'+
+          'B：じゃあ、{空手のクラスに行ってみます|からてのクラスにいってみます|' + Genki.getAlts('{空手}のクラスに{行}ってみます', 'からて|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：この本はよかったですよ。<br>'+
-          'B：じゃあ、{読んでみます|よんでみます|answer}。(I\'ll try reading it)'+
+          '(I\'ll try reading it)<br>'+
+          'B：じゃあ、{読んでみます|よんでみます|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：韓国の料理は辛くて、とてもおいしいですよ。<br>'+
-          'B：じゃあ、{食べてみます|たべてみます|answer}。(I\'ll try eating it)'+
+          '(I\'ll try eating it)<br>'+
+          'B：じゃあ、{食べてみます|たべてみます|answer}。'+
         '</div>'+
         
         '<p class="section-desc">Write about three places you have never been to and things you want to try there, using ～てみたい.</p>'+
         '<div class="problem">'+
           'I would like to go to Mongolia (モンゴル). I want to try riding a horse (馬；うま) there.<br>'+
-          '{モンゴルに行ってみたいです。そこで馬に乗ってみたいです。|モンゴルにいってみたいです。そこでうまにのってみたいです。|answer}'+
+          '{モンゴルに行ってみたいです。そこで馬に乗ってみたいです。|モンゴルにいってみたいです。そこでうまにのってみたいです。|' + Genki.getAlts('モンゴルに{行}ってみたいです。そこで{馬}に{乗}ってみたいです。', 'い|うま|の') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'I would like to go to Egypt (エジプト).　I want to try seeing the pyramids (ピラミッド) there.<br>'+
-          '{エジプトに行ってみたいです。そこでピラミッドを見てみたいです。|エジプトにいってみたいです。そこでピラミッドをみてみたいです。|answer}'+
+          '{エジプトに行ってみたいです。そこでピラミッドを見てみたいです。|エジプトにいってみたいです。そこでピラミッドをみてみたいです。|' + Genki.getAlts('エジプトに{行}ってみたいです。そこでピラミッドを{見}てみたいです。', 'い|み') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'I would like to go to Africa (アフリカ). I want to try seeing a lot of animals (動物；どうぶつ) there.<br>'+
-          '{アフリカに行ってみたいです。そこで動物をたくさん見てみたいです。|アフリカにいってみたいです。そこでどうぶつをたくさんみてみたいです。|answer}'+
+          '{アフリカに行ってみたいです。そこで動物をたくさん見てみたいです。|アフリカにいってみたいです。そこでどうぶつをたくさんみてみたいです。|' + Genki.getAlts('アフリカに{行}ってみたいです。そこで{動物}をたくさん{見}てみたいです。', 'い|どうぶつ|み') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'I would like to go to China. I want to try eating all sorts of food there.<br>'+
-          '{中国に行ってみたいです。そこでいろいろな食べ物を食べてみたいです。|ちゅうごくにいってみたいです。そこでいろいろなたべものをたべてみたいです。|answer}'+
+          '{中国に行ってみたいです。そこでいろいろな食べ物を食べてみたいです。|ちゅうごくにいってみたいです。そこでいろいろなたべものをたべてみたいです。|' + Genki.getAlts('{中国}に{行}ってみたいです。そこでいろいろな{食べ物}を{食}べてみたいです。', 'ちゅうごく|い|たべもの|た') + 'answer}'+
         '</div>'+
       '</div>'
         

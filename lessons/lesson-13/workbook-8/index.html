@@ -67,58 +67,65 @@
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'Mary listens to a Japanese CD one hour a day.<br>'+
-          '{メアリーさんは一日に一時間日本語のＣＤを聞きます|メアリーさんはいちにちにいちじかんにほんごのＣＤをききます|answer}。'+
+          '{メアリーさんは一日に一時間日本語のＣＤを聞きます|メアリーさんはいちにちにいちじかんにほんごのＣＤをききます|' + Genki.getAlts('メアリーさんは{一日}に{一時間}{日本語}のＣＤを{聞}きます', 'いちにち|いちじかん|にほんご|き') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'John goes to a supermarket once a week.<br>'+
-          '{ジョンさんは一週間に一回スーパーに行きます|ジョンさんはいっしゅうかんにいっかいスーパーにいきます|answer}。'+
+          '{ジョンさんは一週間に一回スーパーに行きます|ジョンさんはいっしゅうかんにいっかいスーパーにいきます|' + Genki.getAlts('ジョンさんは{一週間}に{一回}スーパーに{行}きます', 'いっしゅうかん|いっかい|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Michiko goes shopping twice a month.<br>'+
-          '{みちこさんは一か月に二回買い物に行きます|みちこさんはいっかげつににかいかいものにいきます|answer}。'+
+          '{みちこさんは一か月に二回買い物に行きます|みちこさんはいっかげつににかいかいものにいきます|' + Genki.getAlts('みちこさんは{一か月}に{二回}{買い物}に{行}きます', 'いっかげつ|にかい|かいもの|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Ken goes abroad once a year.<br>'+
-          '{けんさんは一年に一回外国に行きます|けんさんはいちねんにいっかいがいこくにいきます|answer}。'+
+          '{けんさんは一年に一回外国に行きます|けんさんはいちねんにいっかいがいこくにいきます|' + Genki.getAlts('けんさんは{一年}に{一回}{外国}に{行}きます', 'いちねん|いっかい|がいこく|い') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Write how often/long you do the following activities, by translating the responses.</p>'+
         '<div class="problem">'+
           'watch TV<br>'+
-          '{一日に一時間ぐらいテレビを見ます|いちにちにいちじかんぐらいテレビをみます|answer}。(I watch TV for about one hour a day.)'+
+          '(I watch TV for about one hour a day.)<br>'+
+          '{一日に一時間ぐらいテレビを見ます|いちにちにいちじかんぐらいテレビをみます|' + Genki.getAlts('{一日}に{一時間}ぐらいテレビを{見}ます', 'いちにち|いちじかん|み') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'call your mother<br>'+
-          '{一週間に一回ぐらい母に電話します|いっしゅうかんにいっかいぐらいははにでんわします|answer}。(I call my mom about once a week.)'+
+          '(I call my mom about once a week.)<br>'+
+          '{一週間に一回ぐらい母に電話します|いっしゅうかんにいっかいぐらいははにでんわします|' + Genki.getAlts('{一週間}に{一回}ぐらい{母}に{電話}します', 'いっしゅうかん|いっかい|はは|でんわ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'brush your teeth<br>'+
-          '{一日に二回歯を磨きます|いちにちににかいはをみがきます|answer}。(I brush my teeth twice a day.)'+
+          '(I brush my teeth twice a day.)<br>'+
+          '{一日に二回歯を磨きます|いちにちににかいはをみがきます|' + Genki.getAlts('{一日}に{二回}{歯}を{磨}きます', 'いちにち|にかい|は|みが') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'sleep<br>'+
-          '{一日に七時間ぐらい寝ます|いちにちにしちじかんぐらいねます|answer}。(I sleep for about seven hours a day.)'+
+          '(I sleep for about seven hours a day.)<br>'+
+          '{一日に七時間ぐらい寝ます|いちにちにしちじかんぐらいねます|' + Genki.getAlts('{一日}に{七時間}ぐらい{寝}ます', 'いちにち|しちじかん|ね') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'cut your hair<br>'+
-          '{一か月に一回ぐらい髪を切ります|いっかげつにいっかいぐらいかみをきります|answer}。(I cut my hair about once a month.)'+
+          '(I cut my hair about once a month.)<br>'+
+          '{一か月に一回ぐらい髪を切ります|いっかげつにいっかいぐらいかみをきります|' + Genki.getAlts('{一か月}に{一回}ぐらい{髪}を{切}ります', 'いっかげつ|いっかい|かみ|き') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'do physical exercises<br>'+
-          '{一週間に二日ぐらい運動します|いっしゅうかんにふつかぐらいうんどうします|answer}。(I exercise about two days a week.)'+
+          '(I exercise about two days a week.)<br>'+
+          '{一週間に二日ぐらい運動します|いっしゅうかんにふつかぐらいうんどうします|' + Genki.getAlts('{一週間}に{二日}ぐらい{運動}します', 'いっしゅうかん|ふつか|うんどう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'catch a cold<br>'+
-          '{一年に一回ぐらいかぜをひきます|いちねんにいっかいぐらいかぜをひきます|answer}。(I catch a cold about once a year.)'+
+          '(I catch a cold about once a year.)<br>'+
+          '{一年に一回ぐらいかぜをひきます|いちねんにいっかいぐらいかぜをひきます|' + Genki.getAlts('{一年}に{一回}ぐらい{風邪}をひきます', 'いちねん|いっかい|かぜ') + 'answer}。'+
         '</div>'+
       '</div>'
         

@@ -67,7 +67,7 @@
         '<p class="section-desc">Things you can do:</p>'+
         '<div class="problem">'+
           'can speak japanese<br>'+
-          '{日本語が話せます|にほんごがはなせます|answer}。'+
+          '{日本語が話せます|にほんごがはなせます|' + Genki.getAlts('{日本語}が{話}せます', 'にほんご|はな') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -83,7 +83,7 @@
         
         '<div class="problem">'+
           'cannot sing songs skillfully<br>'+
-          '{上手に歌が歌えません|じょうずにうたがうたえません|answer}。'+
+          '{上手に歌が歌えません|じょうずにうたがうたえません|' + Genki.getAlts('{上手}に{歌}が{歌}えません', 'じょうず|うた|うた') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Things you were able to do in childhood:</p>'+
@@ -100,12 +100,12 @@
         '<p class="section-desc">Things you were unable to do in childhood:</p>'+
         '<div class="problem">'+
           'could not eat meat<br>'+
-          '{肉が食べられませんでした|にくがたべられませんでした|answer}。'+
+          '{肉が食べられませんでした|にくがたべられませんでした|' + Genki.getAlts('{肉}が{食}べられませんでした', 'にく|た') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'could not talk in front of a lot of people<br>'+
-          '{たくさんの人の前で話せませんでした|たくさんのひとのまえではなせませんでした|answer}。'+
+          '{たくさんの人の前で話せませんでした|たくさんのひとのまえではなせませんでした|' + Genki.getAlts('たくさんの{人}の{前}で{話}せませんでした', 'ひと|まえ|はな') + 'answer}。'+
         '</div>'+
       '</div>'
         
