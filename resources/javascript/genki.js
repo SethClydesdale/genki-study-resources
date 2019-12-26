@@ -1486,6 +1486,18 @@
         Genki.quickJisho.create();
       }
       
+      // autofocus fallback (temp until Chromium fixes the autofocus bug)
+      if (o.type == 'fill' || o.type == 'writing') {
+        var autofocus = document.querySelector('[autofocus]');
+        
+        if (autofocus && autofocus != document.activeElement) {
+          autofocus.focus();
+          
+          // lets us know if the fallback is still being used
+          /\?debug/.test(window.location.search) && console.warn('autofocus failed: HTMLElement.focus() will be used as a fallback.');
+        }
+      }
+      
       // debug mode
       // logs certain things to the console for debugging
       if (/\?debug/.test(window.location.search)) {
