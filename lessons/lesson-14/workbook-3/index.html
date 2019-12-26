@@ -64,7 +64,7 @@
       
       quizlet : 
       '<div class="count-problems">'+
-        '<p class="section-desc">The table below indicates who gave what to whom. Describe them using あげる／くれる／もらる.</p>'+
+        '<p class="section-desc">The table below indicates who gave what to whom. Describe them using あげる／くれる／もらう.</p>'+
         '<table class="table center">'+
           '<tr>'+
             '<td>#</td>'+
@@ -76,7 +76,7 @@
         
           '<tr>'+
             '<td>1</td>'+
-            '<td>くつ</td>'+
+            '<td><span class="inline-furi">靴<i>くつ</i></span></td>'+
             '<td>スー</td>'+
             '<td><i class="fa">&#xf061;</i></td>'+
             '<td>けん</td>'+
@@ -84,7 +84,7 @@
         
           '<tr>'+
             '<td>2</td>'+
-            '<td>猫（ねこ）</td>'+
+            '<td><span class="inline-furi">猫<i>ねこ</i></span></td>'+
             '<td>スー</td>'+
             '<td><i class="fa">&#xf060;</i></td>'+
             '<td>けん</td>'+
@@ -92,7 +92,7 @@
         
           '<tr>'+
             '<td>3</td>'+
-            '<td>辞書（じしょ）</td>'+
+            '<td><span class="inline-furi">辞書<i>じしょ</i></span></td>'+
             '<td>私</td>'+
             '<td><i class="fa">&#xf061;</i></td>'+
             '<td>スー</td>'+
@@ -108,7 +108,7 @@
         
           '<tr>'+
             '<td>5</td>'+
-            '<td>時計（とけい）</td>'+
+            '<td><span class="inline-furi">時計<i>とけい</i></span></td>'+
             '<td>私</td>'+
             '<td><i class="fa">&#xf061;</i></td>'+
             '<td>けん</td>'+
@@ -116,7 +116,7 @@
         
           '<tr>'+
             '<td>6</td>'+
-            '<td>帽子（ぼうし）</td>'+
+            '<td><span class="inline-furi">帽子<i>ぼうし</i></span></td>'+
             '<td>私</td>'+
             '<td><i class="fa">&#xf060;</i></td>'+
             '<td>けん</td>'+
@@ -124,8 +124,8 @@
         '</table><br>'+
         
         '<div class="problem">'+
-          '(give) {スーさんはけんさんにくつをあげました}。<br><br><br>'+
-          '(receive) {けんさんはスーさんにくつをもらいました}。'+
+          '(give) {スーさんはけんさんに靴をあげました|スーさんはけんさんにくつをあげました|answer}。<br><br><br>'+
+          '(receive) {けんさんはスーさんに靴をもらいました|けんさんはスーさんにくつをもらいました|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -133,31 +133,31 @@
           '(receive) {スーさんはけんさんに猫をもらいました|スーさんはけんさんにねこをもらいました|answer}。'+
         '</div>'+
         
-        '<div class="problem">{私はスーさんに辞書をあげました|わたしはスーさんにじしょをあげました|answer}。</div>'+
+        '<div class="problem">{私はスーさんに辞書をあげました|わたしはスーさんにじしょをあげました|' + Genki.getAlts('{私}はスーさんに{辞書}をあげました', 'わたし|じしょ') + 'answer}。</div>'+
         
         '<div class="problem">'+
           '(give) {スーさんは私にＴシャツをくれました|スーさんはわたしにＴシャツをくれました|answer}。<br><br><br>'+
           '(receive) {私はスーさんにＴシャツをもらいました|わたしはスーさんにＴシャツをもらいました|answer}。'+
         '</div>'+
         
-        '<div class="problem">{私はけんさんに時計をあげました|わたしはけんさんにとけいをあげました|answer}。</div>'+
+        '<div class="problem">{私はけんさんに時計をあげました|わたしはけんさんにとけいをあげました|' + Genki.getAlts('{私}はけんさんに{時計}をあげました', 'わたし|とけい') + 'answer}。</div>'+
         
         '<div class="problem">'+
-          '(give) {けんさんは私に帽子をくれました|けんさんはわたしにぼうしをくれました|answer}。<br><br><br>'+
-          '(receive) {私はけんさんに帽子をもらいました|わたしはけんさんにぼうしをもらいました|answer}。'+
+          '(give) {けんさんは私に帽子をくれました|けんさんはわたしにぼうしをくれました|' + Genki.getAlts('けんさんは{私}に{帽子}をくれました', 'わたし|ぼうし') + 'answer}。<br><br><br>'+
+          '(receive) {私はけんさんに帽子をもらいました|わたしはけんさんにぼうしをもらいました|' + Genki.getAlts('{私}はけんさんに{帽子}をもらいました', 'わたし|ぼうし') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions by translating the provided cues.</p>'+
         '<div class="problem">'+
           '誕生日に何をもらいましたか。だれにもらいましたか。<br>'+
           '(I received a ring. I received it from my boyfriend.)<br>'+
-          '{指輪をもらいました。彼にもらいました。|ゆびわをもらいました。かれにもらいました。|answer}'+
+          '{指輪をもらいました。彼にもらいました。|ゆびわをもらいました。かれにもらいました。|' + Genki.getAlts('{指輪}をもらいました。{彼}にもらいました。', 'ゆびわ|かれ') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '友だちの誕生日に何をあげるつもりですか。どうしてですか。<br>'+
           '(I plan to give them a kanji dictionary. Because my friend said they like kanji.)<br>'+
-          '{漢字の辞書をあげるつもりです。友だちは漢字が好きだと言っていましたから。|かんじのじしょをあげるつもりです。ともだちはかんじがすきだといっていましたから。|answer}'+
+          '{漢字の辞書をあげるつもりです。友だちは漢字が好きだと言っていましたから。|かんじのじしょをあげるつもりです。ともだちはかんじがすきだといっていましたから。|' + Genki.getAlts('{漢字}の{辞書}をあげるつもりです。{友}だちは{漢字}が{好}きだと{言}っていましたから。', 'かんじ|じしょ|とも|かんじ|す|い') + 'answer}'+
         '</div>'+
       '</div>'
         

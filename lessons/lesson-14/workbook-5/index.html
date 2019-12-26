@@ -67,12 +67,12 @@
         '<p class="section-desc">Translate the following sentences. If you think the number is large, use も. If you think the number is small, use しか.</p>'+
         '<div class="problem">'+
           'Kim has seven cars.<br>'+
-          '{キムさんは車を七台も持っています|キムさんはくるまをななだいももっています|answer}。'+
+          '{キムさんは車を七台も持っています|キムさんはくるまをななだいももっています|' + Genki.getAlts('キムさんは{車}を{七台}も{持}っています', 'くるま|ななだい|も') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'John read three books last year.<br>'+
-          '{ジョンさんは去年本を三冊しか読みませんでした|ジョンさんはきょねんほんをさんさつしかよみませんでした|answer}。'+
+          '{ジョンさんは去年本を三冊しか読みませんでした|ジョンさんはきょねんほんをさんさつしかよみませんでした|' + Genki.getAlts('ジョンさんは{去年}{本}を{三冊}しか{読}みませんでした', 'きょねん|ほん|さんさつ|よ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -82,38 +82,41 @@
         
         '<div class="problem">'+
           'John slept five hours yesterday.<br>'+
-          '{ジョンさんはきのう五時間しか寝ませんでした|ジョンさんはきのうごじかんしかねませんでした|answer}。'+
+          '{ジョンさんはきのう五時間しか寝ませんでした|ジョンさんはきのうごじかんしかねませんでした|' + Genki.getAlts('ジョンさんは{昨日}{五時間}しか{寝}ませんでした', 'きのう|ごじかん|ね') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Takeshi has six cats.<br>'+
-          '{たけしさんは猫を六匹も飼っています|たけしさんはねこをろっぴきもかっています|answer}。'+
+          '{たけしさんは猫を六匹も飼っています|たけしさんはねこをろっぴきもかっています|' + Genki.getAlts('たけしさんは{猫}を{六匹}も{飼}っています', 'ねこ|ろっぴき|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Michiko has two DVDs.<br>'+
-          '{みちこさんはＤＶＤを二枚しか持っていません|みちこさんはＤＶＤをにまいしかもっていません|answer}。'+
+          '{みちこさんはＤＶＤを二枚しか持っていません|みちこさんはＤＶＤをにまいしかもっていません|' + Genki.getAlts('みちこさんは{ＤＶＤ}を{二枚}しか{持}っていません', 'DVD|にまい|も') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Ken has one friend.<br>'+
-          '{けんさんは友だちが一人しかいません|けんさんはともだちがひとりしかいません|answer}。'+
+          '{けんさんは友だちが一人しかいません|けんさんはともだちがひとりしかいません|' + Genki.getAlts('けんさんは{友}だちが{一人}しかいません', 'とも|ひとり') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the following questions. Use "Number + も" or "Number + しか" if necessary.</p>'+
         '<div class="problem">'+
           'きのう何時間テレビを見ましたか。<br>'+
-          '{五時間も見ました|ごじかんもみました|answer}。(I watched it for as many as 5 hours.)'+
+          '(I watched it for as many as 5 hours.)。<br>'+
+          '{五時間も見ました|ごじかんもみました|' + Genki.getAlts('{五時間}も{見}ました', 'ごじかん|み') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今、財布の中にいくらありますか。<br>'+
-          '{千円しかありません|せんえんしかありません|answer}。(There\'s only 1,000 yen.)'+
+          '(There\'s only 1,000 yen.)<br>'+
+          '{千円しかありません|せんえんしかありません|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'ジーンズを何本持っていますか。<br>'+
-          '{三本持っています|さんぼんもっています|answer}。(I own three.)'+
+          '(I own three.)<br>'+
+          '{三本持っています|さんぼんもっています|' + Genki.getAlts('{三本}{持}っています', 'さんぼん|も') + 'answer}。'+
         '</div>'+
       '</div>'
         

@@ -91,19 +91,19 @@
     '<div class="count-problems">'+
       '<div class="problem">'+
         '{!PLAY|W14-B|2}<br>'+
-        '<div class="indent-block big-margin">(a) 留学生は{髪を切りたい|かみをきりたい|answer}と言っていました。</div>'+
-        '<div class="indent-block big-margin">(b) たかこさんのアドバイス：{バス停の前の美容院に行ったら|バスていのまえのびよういんにいったら|answer}どうですか。</div>'+
+        '<div class="indent-block big-margin">(a) 留学生は{髪を切りたい|かみをきりたい|' + Genki.getAlts('{髪}を{切}りたい', 'かみ|き') + 'answer}と言っていました。</div>'+
+        '<div class="indent-block big-margin">(b) たかこさんのアドバイス：{バス停の前の美容院に行ったら|バスていのまえのびよういんにいったら|' + Genki.getAlts('バス{停}の{前}の{美容院}に{行}ったら', 'てい|まえ|びよういん|い') + 'answer}どうですか。</div>'+
       '</div>'+
         
       '<div class="problem">'+
         '{!PLAY|W14-B|40}<br>'+
-        '<div class="indent-block big-margin">(a) 留学生は{日本語をもっと話したい|にほんごをもっとはなしたい|answer}と言っていました。</div>'+
-        '<div class="indent-block big-margin">(b) たかこさんのアドバイス：{何かサークルに入ったら|なにかサークルにはいったら|answer}どうですか。</div>'+
+        '<div class="indent-block big-margin">(a) 留学生は{日本語をもっと話したい|にほんごをもっとはなしたい|' + Genki.getAlts('{日本語}をもっと{話}したい', 'にほんご|はな') + 'answer}と言っていました。</div>'+
+        '<div class="indent-block big-margin">(b) たかこさんのアドバイス：{何かサークルに入ったら|なにかサークルにはいったら|' + Genki.getAlts('{何}かサークルに{入}ったら', 'なに|はい') + 'answer}どうですか。</div>'+
       '</div>'+
         
       '<div class="problem">'+
         '{!PLAY|W14-B|74}<br>'+
-        '<div class="indent-block big-margin">(a) 留学生は{ホストファミリーの子供たらに何かあげたい|ホストファミリーのこどもたらになにかあげたい|answer}と言っていました。</div>'+
+        '<div class="indent-block big-margin">(a) 留学生は{ホストファミリーの子供たらに何かあげたい|ホストファミリーのこどもたらになにかあげたい|' + Genki.getAlts('ホストファミリーの{子供}たらに{何}かあげたい', 'こども|なに') + 'answer}と言っていました。</div>'+
         '<div class="indent-block big-margin">(b) たかこさんのアドバイス：{ディズニーの%(ＤＶＤ/DVD/ディーブイディー)をあげたら}どうですか。</div>'+
       '</div>'+
     '</div>'+
@@ -120,7 +120,7 @@
     
     '<div class="problem">'+
       '2. {!PLAY|W14-C|33.5} みちこさんは一郎さんに何をあげるつもりですか。<br>'+
-      '{まんがを一冊あげるつもりです|まんがをいっさつあげるつもりです|answer}。'+
+      '{まんがを一冊あげるつもりです|まんがをいっさつあげるつもりです|' + Genki.getAlts('{漫画}を{一冊}あげるつもりです', 'まんが|いっさつ') + 'answer}。'+
     '</div>'
       
     });</script>

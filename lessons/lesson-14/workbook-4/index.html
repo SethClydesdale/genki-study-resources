@@ -68,7 +68,7 @@
         '<div class="problem">'+
           'A：日本の会社で仕事がしたいんです。<br>'+
           '(send a resume to the company)<br>'+
-          'B：{会社に履歴書を送ったらどうですか|かいしゃにりれきしょをおくったらどうですか|answer}。'+
+          'B：{会社に履歴書を送ったらどうですか|かいしゃにりれきしょをおくったらどうですか|' + Genki.getAlts('{会社}に{履歴書}を{送}ったらどうですか', 'かいしゃ|りれきしょ|おく') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -80,19 +80,19 @@
         '<div class="problem">'+
           'A：疲れているんです。<br>'+
           '(go to bed early)<br>'+
-          'B：{早く寝たらどうですか|はやくねたらどうですか|answer}。'+
+          'B：{早く寝たらどうですか|はやくねたらどうですか|' + Genki.getAlts('{早}く{寝}たらどうですか', 'はや|ね') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：テストの成績が悪かったんです。<br>'+
           '(consult with the teacher)<br>'+
-          'B：{先生に相談したらどうですか|せんせいにそうだんしたらどうですか|answer}。'+
+          'B：{先生に相談したらどうですか|せんせいにそうだんしたらどうですか|' + Genki.getAlts('{先生}に{相談}したらどうですか', 'せんせい|そうだん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：財布をなくしたんです。<br>'+
           '(go to the police [警察；けいさつ])<br>'+
-          'B：{警察に行ったらどうですか|けいさつにいったらどうですか|answer}。'+
+          'B：{警察に行ったらどうですか|けいさつにいったらどうですか|' + Genki.getAlts('{警察}に{行}ったらどうですか', 'けいさつ|い') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Make dialogue according to the given cues.</p>'+
@@ -105,13 +105,13 @@
         '<div class="problem">'+
           '<em>confessing the problem</em><br>'+
           '(Japanese class is too difficult.)<br>'+
-          'B：{日本語の授業が難しすぎるんです|にほんごのじゅぎょうがむずかしすぎるんです|answer}。'+
+          'B：{日本語の授業が難しすぎるんです|にほんごのじゅぎょうがむずかしすぎるんです|' + Genki.getAlts('{日本語}の{授業}が{難}しすぎるんです', 'にほんご|じゅぎょう|むずか') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '<em>giving advice</em><br>'+
           '(Why don\'t you consult with the teacher?)<br>'+
-          'A：{先生に相談したらどうですか|せんせいにそうだんしたらどうですか|answer}。'+
+          'A：{先生に相談したらどうですか|せんせいにそうだんしたらどうですか|' + Genki.getAlts('{先生}に{相談}したらどうですか', 'せんせい|そうだん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
