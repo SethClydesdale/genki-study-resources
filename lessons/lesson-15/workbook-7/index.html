@@ -80,19 +80,19 @@
         '<div class="problem">'+
           '今度の休みに何をしようと思っていますか。<br>'+
           '(I intend to go to Tokyo to meet a friend.)<br>'+
-          '{東京に友だちに会いに行こうと思っています|とうきょうにともだちにあいにいこうとおもっています|answer}。'+
+          '{東京に友だちに会いに行こうと思っています|とうきょうにともだちにあいにいこうとおもっています|' + Genki.getAlts('{東京}に{友}だちに{会}いに{行}こうと{思}っています', 'とうきょう|とも|あ|い|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'どんな友だちがいますか。(Use a sentence qualifying noun.)<br>'+
           '(I have a friend who lives in Hawaii.)<br>'+
-          '{ハワイに住んでいる友だちがいます|ハワイにすんでいるともだちがいます|answer}。'+
+          '{ハワイに住んでいる友だちがいます|ハワイにすんでいるともだちがいます|' + Genki.getAlts('ハワイに{住}んでいる{友}だちがいます', 'す|とも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'どんな家に住みたいですか。(Use a sentence qualifying noun.)<br>'+
           '(I want to live in a house where I can see the sea.)<br>'+
-          '{海が見える家に住みたいです|うみがみえるいえにすみたいです|answer}。'+
+          '{海が見える家に住みたいです|うみがみえるいえにすみたいです|' + Genki.getAlts('{海}が{見}える{家}に{住}みたいです', 'うみ|み|いえ|す') + 'answer}。'+
         '</div>'+
       '</div>'
         

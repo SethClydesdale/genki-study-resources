@@ -67,22 +67,22 @@
         '<p class="section-desc">Translate the following sentences, paying special attention to the underlined portions.</p>'+
         '<div class="problem">'+
           'I met <u>a person who graduated from Tokyo University.</u><br>'+
-          '{東京大学を卒業した人に会いました|とうきょうだいがくをそつぎょうしたひとにあいました|answer}。'+
+          '{東京大学を卒業した人に会いました|とうきょうだいがくをそつぎょうしたひとにあいました|' + Genki.getAlts('{東京}{大学}を{卒業}した{人}に{会}いました', 'とうきょう|だいがく|そつぎょう|ひと|あ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I have <u>a friend who has been to Russia (ロシア).</u><br>'+
-          '{ロシアに行ったことがある友だちがいます|ロシアにいったことがあるともだちがいます|answer}。'+
+          '{ロシアに行ったことがある友だちがいます|ロシアにいったことがあるともだちがいます|' + Genki.getAlts('ロシアに{行}ったことがある{友}だちがいます', 'い|とも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '<u>The dish (料理；りょうり) I ate yesterday</u> was delicious<br>'+
-          '{きのう食べた料理はおいしかったです|きのうたべたりょうりはおいしかったです|answer}。'+
+          '{きのう食べた料理はおいしかったです|きのうたべたりょうりはおいしかったです|' + Genki.getAlts('{昨日}{食}べた{料理}はおいしかったです', 'きのう|た|りょうり') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I am looking for <u>a person who can speak Chinese.</u><br>'+
-          '{中国語が話せる人を探しています|ちゅうごくごがはなせるひとをさがしています|answer}。'+
+          '{中国語が話せる人を探しています|ちゅうごくごがはなせるひとをさがしています|' + Genki.getAlts('{中国語}が{話}せる{人}を{探}しています', 'ちゅうごくご|はな|ひと|さが') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Answer the questions using the noun qualifier.</p>'+
@@ -101,13 +101,13 @@
         '<div class="problem">'+
           'Q：どんな町に住みたいですか。<br>'+
           '(a town where there are many nice shops)<br>'+
-          'A：{いい店がたくさんある町に住みたいです|いいみせがたくさんあるまちにすみたいです|answer}。'+
+          'A：{いい店がたくさんある町に住みたいです|いいみせがたくさんあるまちにすみたいです|' + Genki.getAlts('いい{店}がたくさんある{町}に{住}みたいです', 'みせ|まち|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Q：ルームメートを探しています。どんな人がいいですか。<br>'+
           '(a person who is good at cooking)<br>'+
-          'A：{料理が上手な人がいいです|りょうりがじょうずなひとがいいです|answer}。'+
+          'A：{料理が上手な人がいいです|りょうりがじょうずなひとがいいです|' + Genki.getAlts('{料理}が{上手}な{人}がいいです', 'りょうり|じょうず|ひと') + 'answer}。'+
         '</div>'+
       '</div>'
         

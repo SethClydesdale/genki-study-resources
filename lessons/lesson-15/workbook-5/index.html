@@ -67,43 +67,43 @@
         '<p class="section-desc">Make sentences using the cues.</p>'+
         '<div class="problem">'+
           '友だちは書きました。<br>'+
-          'これは{友だちが書いた|ともだちがかいた|answer}手紙です。'+
+          'これは{友だちが書いた|ともだちがかいた|' + Genki.getAlts('{友}だちが{書}いた', 'とも|か') + 'answer}手紙です。'+
         '</div>'+
         
         '<div class="problem">'+
           '私は毎日使います。<br>'+
-          'これは{私が毎日使う|わたしがまいにちつかう|answer}パソコンです。'+
+          'これは{私が毎日使う|わたしがまいにちつかう|' + Genki.getAlts('{私}が{毎日}{使}う', 'わたし|まいにち|つか') + 'answer}パソコンです。'+
         '</div>'+
         
         '<div class="problem">'+
           '私は友だちに借りました。<br>'+
-          'これは{私が友だちに借りた|わたしがともだちにかりた|answer}ノートです。'+
+          'これは{私が友だちに借りた|わたしがともだちにかりた|' + Genki.getAlts('{私}が{友}だちに{借}りた', 'わたし|とも|か') + 'answer}ノートです。'+
         '</div>'+
         
         '<div class="problem">'+
           '父は私にくれました。<br>'+
-          'これは{父が私にくれた|ちちがわたしにくれた|answer}ジャケットです。'+
+          'これは{父が私にくれた|ちちがわたしにくれた|' + Genki.getAlts('{父}が{私}にくれた', 'ちち|わたし') + 'answer}ジャケットです。'+
         '</div>'+
         
         '<div class="problem">'+
           '友だちは住んでいます。<br>'+
-          'これは{友だちが住んでいる|ともだちがすんでいる|answer}マンションです。'+
+          'これは{友だちが住んでいる|ともだちがすんでいる|' + Genki.getAlts('{友}だちが{住}んでいる', 'とも|す') + 'answer}マンションです。'+
         '</div>'+
         
         '<div class="problem">'+
           '兄は予約しました。<br>'+
-          'これは{兄が予約した|あにがよやくした|answer}旅館です。'+
+          'これは{兄が予約した|あにがよやくした|' + Genki.getAlts('{兄}が{予約}した', 'あに|よやく') + 'answer}旅館です。'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'This is the school I graduated (from).<br>'+
-          '{これは私が卒業した学校です|これはわたしがそつぎょうしたがっこうです|answer}。'+
+          '{これは私が卒業した学校です|これはわたしがそつぎょうしたがっこうです|' + Genki.getAlts('これは{私}が{卒業}した{学校}です', 'わたし|そつぎょう|がっこう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'This is the mountain I climbed last year.<br>'+
-          '{これは私が去年登った山です|これはわたしがきょねんのぼったやまです|answer}。'+
+          '{これは私が去年登った山です|これはわたしがきょねんのぼったやまです|' + Genki.getAlts('これは{私}が{去年}{登}った{山}です', 'わたし|きょねん|のぼ|やま') + 'answer}。'+
         '</div>'+
       '</div>'
         

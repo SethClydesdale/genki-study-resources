@@ -71,30 +71,33 @@
           'practice new songs　　check the time of the train'+
         '</div><br>'+
         
-        '<div class="problem">来週、北海道を旅行するので、{旅館を予約しておきます|りょかんをよやくしておきます|answer}。</div>'+
+        '<div class="problem">来週、北海道を旅行するので、{旅館を予約しておきます|りょかんをよやくしておきます|' + Genki.getAlts('{旅館}を{予約}しておきます', 'りょかん|よやく') + 'answer}。</div>'+
         
-        '<div class="problem">電車で東京に行くので、{電車の時間を調べておきます|でんしゃのじかんをしらべておきます|answer}。</div>'+
+        '<div class="problem">電車で東京に行くので、{電車の時間を調べておきます|でんしゃのじかんをしらべておきます|' + Genki.getAlts('{電車}の{時間}を{調}べておきます', 'でんしゃ|じかん|しら') + 'answer}。</div>'+
         
-        '<div class="problem">今度の週末、友だちとカラオケに行くので、{新しい歌を練習しておきます|あたらしいうたをれんしゅうしておきます|answer}。</div>'+
+        '<div class="problem">今度の週末、友だちとカラオケに行くので、{新しい歌を練習しておきます|あたらしいうたをれんしゅうしておきます|' + Genki.getAlts('{新}しい{歌}を{練習}しておきます', 'あたら|うた|れんしゅう') + 'answer}。</div>'+
         
         '<div class="problem">週末デートをするので、{いいレストランを探しておきます|いいレストランをさがしておきます|answer}。</div>'+
         
-        '<div class="problem">買い物に行くので、{お金をおろしておきます|おかねをおろしておきます|answer}。</div>'+
+        '<div class="problem">買い物に行くので、{お金をおろしておきます|おかねをおろしておきます|' + Genki.getAlts('お{金}を{下}ろすしておきます', 'かね|お') + 'answer}。</div>'+
         
         '<p class="section-desc">Answer the following questions.</p>'+
         '<div class="problem">'+
           '来週、地震があるかもしれません。何をしておきますか。<br>'+
-          '{水と食べ物を買っておきます|みずとたべものをかっておきます|answer}。(I will buy water and food.)'+
+          '(I will buy water and food.)<br>'+
+          '{水と食べ物を買っておきます|みずとたべものをかっておきます|' + Genki.getAlts('{水}と{食べ物}を{買}っておきます', 'みず|たべもの|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '来週、テストがあります。何をしておきますか。<br>'+
-          '{たくさん勉強しておきます|たくさんべんきょうしておきます|answer}。(I will study a lot.)'+
+          '(I will study a lot.)<br>'+
+          '{たくさん勉強しておきます|たくさんべんきょうしておきます|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '今度の休みに富士山に登ります。何をしておかなければいけませんか。<br>'+
-          '{暖かい服を買っておかなければいけません|あたたかいふくをかっておかなければいけません|answer}。(I have to buy warm clothes.)'+
+          '(I have to buy warm clothes.)<br>'+
+          '{暖かい服を買っておかなければいけません|あたたかいふくをかっておかなければいけません|' + Genki.getAlts('{暖}かい{服}を{買}っておかなければいけません', 'あたた|ふく|か') + 'answer}。'+
         '</div>'+
       '</div>'
         

@@ -23,6 +23,9 @@
 
     // tells us if Genki is being used on a local file system so we can append index.html to URLs
     local : window.location.protocol == 'file:' ? 'index.html' : '',
+    
+    // tells us if debug mode is active so we can append ?debug to exercise URLs
+    debug : /\?debug/.test(window.location.search) ? '?debug' : '',
 
     // frequently used/generic strings
     lang : {
@@ -1494,13 +1497,13 @@
           autofocus.focus();
           
           // lets us know if the fallback is still being used
-          /\?debug/.test(window.location.search) && console.warn('autofocus failed: HTMLElement.focus() will be used as a fallback.');
+          Genki.debug && console.warn('autofocus failed: HTMLElement.focus() will be used as a fallback.');
         }
       }
       
       // debug mode
       // logs certain things to the console for debugging
-      if (/\?debug/.test(window.location.search)) {
+      if (Genki.debug) {
         for (var a = document.querySelectorAll('AUDIO'), i = 0, j = a.length; i < j; i++) {
           a[i].ontimeupdate = function () {
             console.log(this.id, this.currentTime);
@@ -1604,7 +1607,7 @@
           '<div class="center">'+
             (
               /\/dictionary\//.test(window.location) ? Genki.lang.back_to_dict :
-              '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Try Again</a>'
+              '<a href="./' + Genki.local + Genki.debug + '" class="button"><i class="fa">&#xf021;</i>Try Again</a>'
             )+
             '<button class="button" onclick="Genki.breakTime();"><i class="fa">&#xf0f4;</i>Take a Break</button>'+
             '<a href="' + document.getElementById('home-link').href + '" class="button"><i class="fa">&#xf015;</i>Back to Index</a>'+
@@ -1708,7 +1711,7 @@
           // show restart button
           document.getElementById('review-exercise').innerHTML = (
             /\/dictionary\//.test(window.location) ? Genki.lang.back_to_dict :
-            '<a href="./' + Genki.local + '" class="button"><i class="fa">&#xf021;</i>Restart</a>'
+            '<a href="./' + Genki.local + Genki.debug + '" class="button"><i class="fa">&#xf021;</i>Restart</a>'
           ) + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
 
           // change the quiz info
@@ -1938,7 +1941,7 @@
             a = a.split('|');
 
             // create the next/prev link
-            more += '<a href="../../../lessons/' + a[0] + '/' + Genki.local + '" class="button ' + (i == 1 ? 'prev' : 'next') + '-ex" title="' + (i == 1 ? 'Previous' : 'Next') + ' exercise">' + a[1] + '</a>';
+            more += '<a href="../../../lessons/' + a[0] + '/' + Genki.local + Genki.debug + '" class="button ' + (i == 1 ? 'prev' : 'next') + '-ex" title="' + (i == 1 ? 'Previous' : 'Next') + ' exercise">' + a[1] + '</a>';
           }
         }
 
@@ -1993,7 +1996,7 @@
           }
           
           // add the exercise link to the group
-          list += '<li><a href="../../../lessons/' + linkData[0] + '/' + Genki.local + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '"' : '') + ' title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
+          list += '<li><a href="../../../lessons/' + linkData[0] + '/' + Genki.local + Genki.debug + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '"' : '') + ' title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
           
         }
 
@@ -2271,7 +2274,7 @@
       }
       
       // append ?debug to the URL for debug logs
-      if (/\?debug/.test(window.location.search)) {
+      if (Genki.debug) {
         var len = results.length;
         console[len / permutations * 100 == 100 ? 'log' : 'warn'](len + '/' + permutations + ' (' + (len / permutations * 100) + '% combo coverage for ' + length + ' replacements; ' + (permutations - len) + ' missing combos)', results);
       }
@@ -2286,7 +2289,7 @@
       
       // only take the user to random lessons
       if (/lesson-\d+/.test(exercise[0])) {
-        window.location.href = '../../../lessons/' + exercise[0] + '/' + Genki.local;
+        window.location.href = '../../../lessons/' + exercise[0] + '/' + Genki.local + Genki.debug;
         
       } else { // try again if not a lesson
         Genki.randomExercise();
