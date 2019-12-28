@@ -163,5 +163,9 @@
     }
   };
   
-  GenkiAnn.rotate();
+  // commence rotation if more than 1 announcement
+  if (GenkiAnn.msg.length > 1) {
+    document.getElementById('announcement-controls').style.display = '';
+    GenkiAnn.rotate();
+  }
 }(window, document));
