@@ -68,17 +68,17 @@
         '<p class="section-desc">Ask the following people favors. Use the appropriate speech style: ～てくれない (casual), ～てくれませんか (formal), or ～ていただけませんか (very formal).</p>'+
         '<div class="problem">'+
           '(<em>to a friend</em>) Will you lend (me) money?<br>'+
-          '{お金を貸してくれない？|おかねをかしてくれない？|answer}'+
+          '{お金を貸してくれない？|おかねをかしてくれない？|' + Genki.getAlts('お{金}を{貸}してくれない？', 'かね|か') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '(<em>to a friend</em>) Will you correct (my) Japanese?<br>'+
-          '{日本語を直してくれない？|にほんごをなおしてくれない？|answer}'+
+          '{%(私の/)日本語を直してくれない？|%(わたしの/)にほんごをなおしてくれない？|' + Genki.getAlts('{私}の{日本語}を{直}してくれない？', 'わたし|にほんご|なお') + Genki.getAlts('{日本語}を{直}してくれない？', 'にほんご|なお') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '(<em>to your host family</em>) Would you wake me up at seven o\'clock tomorrow?<br>'+
-          '{あした七時に起こしてくれませんか。|あしたしちじにおこしてくれませんか。|answer}'+
+          '{あした七時に起こしてくれませんか。|あしたしちじにおこしてくれませんか。|' + Genki.getAlts('{明日}{七時}に{起}こしてくれませんか。', 'あした|しちじ|お') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
@@ -88,20 +88,20 @@
         
         '<div class="problem">'+
           '(<em>to your professor</em>) Could you write me a letter of recommendation?<br>'+
-          '{推薦状を書いていただけませんか。|すいせんじょうをかいていただけませんか。|answer}'+
+          '{推薦状を書いていただけませんか。|すいせんじょうをかいていただけませんか。|' + Genki.getAlts('{推薦状}を{書}いていただけませんか。', 'すいせんじょう|か') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '(<em>to your professor</em>) Could you translate this into English?<br>'+
-          '{これを英語に訳していただけませんか。|これをえいごにやくしていただけませんか。|answer}'+
+          '{これを英語に訳していただけませんか。|これをえいごにやくしていただけませんか。|' + Genki.getAlts('これを{英語}に{訳}していただけませんか。', 'えいご|やく') + 'answer}'+
         '</div>'+
         
         // II
         '<p class="section-desc">Complete the dialogues, using ～てくれない, ～てくれませんか, or ～ていただけませんか.</p>'+
-        '<div class="problem">You: {お母さん、宿題をしてくれませんか。|おかあさん、しゅくだいをしてくれませんか。|answer} (Mother, could you do my homework?)</div>'+
+        '<div class="problem">You: {お母さん、宿題をしてくれませんか。|おかあさん、しゅくだいをしてくれませんか。|' + Genki.getAlts('お{母}さん、{宿題}をしてくれませんか。', 'かあ|しゅくだい') + 'answer;hint:(Mother, could you do my homework?)}</div>'+
         '<div>Host Mother: だめ、だめ。宿題は自分でじゃなきゃいけませんよ。</div><br><br>'+
         
-        '<div class="problem">You: {お金を返してくれない？|おかねをかえしてくれない？|answer} (Will you return my money?)</div>'+
+        '<div class="problem">You: {お金を返してくれない？|おかねをかえしてくれない？|' + Genki.getAlts('お{金}を{返}してくれない？', 'かね|かえ') + 'answer;hint:(Will you return my money?)}</div>'+
         '<div>Friend: ごめん。来週まで待って。今、お金がないんだ。</div><br>'+
       '</div>'
         

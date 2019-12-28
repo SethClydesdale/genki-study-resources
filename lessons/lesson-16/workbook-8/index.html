@@ -74,7 +74,7 @@
         '<div class="problem">'+
           'さびしい時、だれに何をしてもらいたいですか。<br>'+
           '(I would like to receive a call from my friend.)<br>'+
-          '{友だちに電話してもらいたいです|ともだちにでんわしてもらいたいです|answer}。'+
+          '{友だちに電話してもらいたいです|ともだちにでんわしてもらいたいです|' + Genki.getAlts('{友}だちに{電話}してもらいたいです', 'とも|でんわ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -86,19 +86,19 @@
         '<div class="problem">'+
           'どんな時感動しましたか。<br>'+
           '(I was moved when I went to my friend\'s graduation ceremony [卒業式；そつぎょうしき].)<br>'+
-          '{友だちの卒業式に行った時、感動しました|ともだちのそつぎょうしきにいったとき、かんどうしました|answer}。'+
+          '{友だちの卒業式に行った時、感動しました|ともだちのそつぎょうしきにいったとき、かんどうしました|' + Genki.getAlts('{友}だちの{卒業式}に{行}った{時}、{感動}しました', 'とも|そつぎょうしき|い|とき|かんどう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'よく泣きますか。どんな時泣きますか。<br>'+
           '(Yes, I cry often. I cry when I\'m deeply moved [by something].)<br>'+
-          '{はい、よく泣きます。感動したとき、泣きます。|はい、よくなきます。かんどうしたとき、なきます。|answer}'+
+          '{はい、よく泣きます。感動したとき、泣きます。|はい、よくなきます。かんどうしたとき、なきます。|' + Genki.getAlts('はい、よく{泣}きます。{感動}したとき、{泣}きます。', 'な|かんどう|な') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '道に迷って時、どうしますか。(どうする: what would you do?)<br>'+
           '(Usually, I ask someone for the way.)<br>'+
-          '{たいてい、だれかに道を聞きます|たいてい、だれかにみちをききます|answer}。'+
+          '{たいてい、だれかに道を聞きます|たいてい、だれかにみちをききます|' + Genki.getAlts('たいてい、だれかに{道}を{聞}きます', 'みち|き') + 'answer}。'+
         '</div>'+
       '</div>'
         

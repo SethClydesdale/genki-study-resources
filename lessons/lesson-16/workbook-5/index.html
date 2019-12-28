@@ -66,11 +66,11 @@
       '<div class="count-problems">'+
         // I
         '<p class="section-desc">Write the correct tense expressions in the following sentences.</p>'+
-        '<div class="problem">友だちがこの町に({来た|来る・来た})時、案内します。</div>'+
+        '<div class="problem">友だちがこの町に({来た|きた|answer;width:84;hint:来る・来た})時、案内します。</div>'+
         
-        '<div class="problem">友だちがうちに({来る|来る・来た})時、部屋を掃除します。</div>'+
+        '<div class="problem">友だちがうちに({来る|くる|answer;width:84;hint:来る・来た})時、部屋を掃除します。</div>'+
         
-        '<div class="problem">({朝寝坊した|朝寝坊する・朝寝坊した})時、タクシーに乗ります。</div>'+
+        '<div class="problem">({朝寝坊した|あさねぼうした|answer;width:168;hint:朝寝坊する・朝寝坊した})時、タクシーに乗ります。</div>'+
         
         '<div class="problem">ひま({な|な・だった})時、テレビを見ます。</div>'+
         
@@ -80,17 +80,17 @@
         '<p class="section-desc">Use the cues to complete the 時 sentences. If the cues are shown in the order in which the two events took place, you can use the past tense before 時. If they are in the reverse order, you can use the present tense before 時.</p>'+
         '<div class="problem">'+
           'I say "itadakimasu" when I eat a meal.<br>'+
-          '{ご飯を食べる|ごはんをたべる|answer}時、「いただきます」と言います。'+
+          '{ご飯を食べる|ごはんをたべる|' + Genki.getAlts('ご{飯}を{食}べる', 'はん|た') + 'answer}時、「いただきます」と言います。'+
         '</div>'+
         
         '<div class="problem">'+
           'I say "gochisousama" when I\'ve eaten a meal.<br>'+
-          '{ご飯を食べた|ごはんをたべた|answer}時、{「ごちそうさま」と言います|「ごちそうさま」といいます|answer}。'+
+          '{ご飯を食べた|ごはんをたべた|' + Genki.getAlts('ご{飯}を{食}べた', 'はん|た') + 'answer}時、{「ごちそうさま」と言います|「ごちそうさま」といいます|answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I buy a ticket when I ride the train.<br>'+
-          '{電車に乗る|でんしゃにのる|answer}時、{切符を買います|きっぷをかいます|answer}。'+
+          '{電車に乗る|でんしゃにのる|' + Genki.getAlts('{電車}に{乗}る', 'でんしゃ|の') + 'answer}時、{切符を買います|きっぷをかいます|' + Genki.getAlts('{切符}を{買}います', 'きっぷ|か') + 'answer}。'+
         '</div>'+
       '</div>'
         

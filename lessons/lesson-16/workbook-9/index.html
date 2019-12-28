@@ -97,9 +97,9 @@
         
     '<div class="problem">'+
       '2. {!PLAY|W16-B|74} あきこさんは今何がほしいと思っていますか。<br>'+
-      '{料理の本がほしいと思っています|りょうりのほんがほしいとおもっています|answer}。<br><br><br>'+
+      '{料理の本がほしいと思っています|りょうりのほんがほしいとおもっています|' + Genki.getAlts('{料理}の{本}がほしいと{思}っています', 'りょうり|ほん|おも') + 'answer}。<br><br><br>'+
       'どうしてですか。<br>'+
-      '{みんなに日本料理を作ってあげようと思っていますから|みんなににほんりょうりをつくってあげようとおもっていますから|answer}。'+
+      '{みんなに日本料理を作ってあげようと思っていますから|みんなににほんりょうりをつくってあげようとおもっていますから|' + Genki.getAlts('{皆}に{日本}{料理}を{作}ってあげようと{思}っていますから', 'みんな|にほん|りょうり|つく|おも') + 'answer}。'+
     '</div><br>'+
 
     '<p class="section-desc"><span class="section-number">C</span> A TV reporter is interviewing famous star Rie Gotoh on her birthday. Mark O if the statement is true, and mark X if it is not.</p>'+
