@@ -68,27 +68,27 @@
         '<p class="section-desc">Report the following statements using ～そうです.</p>'+
         '<div class="problem">'+
           '"Ms. Sato got a divorce."<br>'+
-          '{佐藤さんは離婚したそうです|さとうさんはりこんしたそうです|answer}。'+
+          '{佐藤さんは離婚したそうです|さとうさんはりこんしたそうです|' + Genki.getAlts('{佐藤}さんは{離婚}したそうです', 'さとう|りこん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '"It will not be cold tomorrow."<br>'+
-          '{あしたは寒くないそうです|あしたはさむくないそうです|answer}。'+
+          '{あしたは寒くないそうです|あしたはさむくないそうです|' + Genki.getAlts('{明日}は{寒}くないそうです', 'あした|さむ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '"Takeshi got a full-time job at a travel agency."<br>'+
-          '{たけしさんは旅行会社に就職したそうです|たけしさんはりょこうがいしゃにしゅうしょくしたそうです|answer}。'+
+          '{たけしさんは旅行会社に就職したそうです|たけしさんはりょこうがいしゃにしゅうしょくしたそうです|' + Genki.getAlts('たけしさんは{旅行}{会社}に{就職}したそうです', 'りょこう|かいしゃ|しゅうしょく') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '"The movie theater was not crowded."<br>'+
-          '{映画館は込んでいなかったそうです|えいがかんはこんでいなかったそうです|answer}。'+
+          '{映画館は込んでいなかったそうです|えいがかんはこんでいなかったそうです|' + Genki.getAlts('{映画館}は{込}んでいなかったそうです', 'えいがかん|こ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '"Takeshi has to study tonight, because there is an exam tomorrow."<br>'+
-          '{たけしさんはあした試験があるので、今晩勉強しな%(きゃ/ければ)いけないそうです|たけしさんはあしたしけんがあるので、こんばんべんきょうしな%(きゃ/ければ)いけないそうです|answer}。'+
+          '{たけしさんはあした試験があるので、今晩勉強しな%(きゃ/ければ)いけないそうです|たけしさんはあしたしけんがあるので、こんばんべんきょうしな%(きゃ/ければ)いけないそうです|' + Genki.getAlts('たけしさんは{明日}{試験}があるので、{今晩}{勉強}しな{きゃ}いけないそうです', 'あした|しけん|こんばん|べんきょう|ければ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -100,24 +100,24 @@
         '<p class="section-desc">Report what you have heard or read. Use ～によると to describe who you heard it from or where you read it.</p>'+
         '<div class="problem">'+
           '"According to the newspaper, there was an earthquake in Nagano."<br>'+
-          '{新聞によると、長野で地震があったそうです|しんぶんによると、ながのでじしんがあったそうです|answer}。'+
+          '{新聞によると、長野で地震があったそうです|しんぶんによると、ながのでじしんがあったそうです|' + Genki.getAlts('{新聞}によると、{長野}で{地震}があったそうです', 'しんぶん|ながの|じしん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '"According to the weather forecast, it will become very cold tomorrow."<br>'+
-          '{天気予報によると、あしたはとても寒くなるそうです|てんきよほうによると、あしたはとてもさむくなるそうです|answer}。'+
+          '{天気予報によると、あしたはとても寒くなるそうです|てんきよほうによると、あしたはとてもさむくなるそうです|' + Genki.getAlts('{天気予報}によると、{明日}はとても{寒}くなるそうです', 'てんきよほう|あした|さむ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '"According to Mary, there is no class tomorrow."<br>'+
-          '{メアリーさんによると、あしたは授業がないそうです|メアリーさんによると、あしたはじゅぎょうがないそうです|answer}。'+
+          '{メアリーさんによると、あしたは授業がないそうです|メアリーさんによると、あしたはじゅぎょうがないそうです|' + Genki.getAlts('メアリーさんによると、{明日}は{授業}がないそうです', 'あした|じゅぎょう') + 'answer}。'+
         '</div>'+
         
         // III
         '<p class="section-desc">Complete the dialogues, using ～って.</p>'+
-        '<div class="problem">A：ニュース見た？{また円が高くなったって|またえんがたかくなったって|answer}。(it said the yen has become expensive again)</div>'+
+        '<div class="problem">A：ニュース見た？{また円が高くなったって|またえんがたかくなったって|' + Genki.getAlts('また{円}が{高}くなったって', 'えん|たか') + 'answer;width:322;hint:(it said the yen has become expensive again)}。</div>'+
         '<p>B：本当？</p>'+
-        '<div class="problem">A：聞いた？{先生は病気だって|せんせいはびょうきだって|answer}。(they say the teacher is sick)</div>'+
+        '<div class="problem">A：聞いた？{先生は病気だって|せんせいはびょうきだって|' + Genki.getAlts('{先生}は{病気}だって', 'せんせい|びょうき') + 'answer;width:224;hint:(they say the teacher is sick)}。</div>'+
         '<p>B：そうか。大丈夫かなあ。</p>'+
       '</div>'
         

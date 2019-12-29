@@ -68,31 +68,31 @@
         '<div class="problem">'+
           '卒業したら、何をしようと思っていますか。<br>'+
           '(I am intending to get a full-time job at a travel agency.)<br>'+
-          '{旅行会社に就職しようと思っています|りょこうがいしゃにしゅうしょくしようとおもっています|answer}。'+
+          '{旅行会社に就職しようと思っています|りょこうがいしゃにしゅうしょくしようとおもっています|' + Genki.getAlts('{旅行会社}に{就職}しようと{思}っています', 'りょこうがいしゃ|しゅうしょく|おも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '宝くじに当たったら、何がしたいですか。<br>'+
           '(I want to travel to various countries.)<br>'+
-          '{いろいろな国を旅行したいです|いろいろなくにをりょこうしたいです|answer}。'+
+          '{いろいろな国を旅行したいです|いろいろなくにをりょこうしたいです|' + Genki.getAlts('{色々}な{国}を{旅行}したいです', 'いろいろ|くに|りょこう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'クラスメートについて何か知っていますか。<small>(Use ～そうです.)</small><br>'+
           '(Yes. I heard Sally (サリー) broke up with her boyfriend.)<br>'+
-          '{はい。サリーさんは彼と別れたそうです。|はい。サリーさんはかれとわかれたそうです。|answer}'+
+          '{はい。サリーさんは彼と別れたそうです。|はい。サリーさんはかれとわかれたそうです。|' + Genki.getAlts('はい。サリーさんは{彼}と{別}れたそうです。', 'かれ|わか') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           '最近どんなニュースがありましたか。<small>(Use ～によると……そうです.)</small><br>'+
           '(According to the TV news, recently, there have been earthquakes in various places.)<br>'+
-          '{テレビのニュースによると、最近、いろいろな所で地震があったそうです|テレビのニュースによると、さいきん、いろいろなところでじしんがあったそうです|answer}。'+
+          '{テレビのニュースによると、最近、いろいろな所で地震があったそうです|テレビのニュースによると、さいきん、いろいろなところでじしんがあったそうです|' + Genki.getAlts('テレビのニュースによると、{最近}、{色々}な{所}で{地震}があったそうです', 'さいきん|いろいろ|ところ|じしん') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'きのう寝る前に何をしましたか。<br>'+
           '(I practiced kanji.)<br>'+
-          '{漢字を練習しました|かんじをれんしゅうしました|answer}。'+
+          '{漢字を練習しました|かんじをれんしゅうしました|' + Genki.getAlts('{漢字}を{練習}しました', 'かんじ|れんしゅう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
