@@ -38,7 +38,4 @@ The following resources were used in this project. Check them out!
 
 
 ### Donate
-You can help support my work in the following ways.
-
-- [Paypal](https://paypal.me/sethc95/3)
-- [Amazon Wishlist](https://www.amazon.com/hz/wishlist/ls/S7YILFHYK0IZ)
+Please see the [Donate page](https://sethclydesdale.github.io/genki-study-resources/donate/) for ways to support my work.

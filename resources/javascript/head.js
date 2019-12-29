@@ -121,7 +121,7 @@
     } else if (/\/help\/.*?\//.test(path)) {
       return '../../'    
       
-    } else if (/\/report\/|\/download\/|\/privacy\/|\/help\/(index|$)/.test(path)) {
+    } else if (/\/report\/|\/download\/|\/donate\/|\/privacy\/|\/help\/(index|$)/.test(path)) {
       return '../';  
                
     } else {
