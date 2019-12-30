@@ -82,31 +82,31 @@
         '<div class="problem">'+
           '寝る時、電気を消しますか。<br>'+
           '(Yes, I turn the light off.)<br>'+
-          '{はい、電気を消します|はい、でんきをけします|answer}。'+
+          '{はい、電気を消します|はい、でんきをけします|' + Genki.getAlts('はい、{電気}を{消}します', 'でんき|け') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '毎朝、窓を開けますか。<br>'+
           '(No, I do not open the window when it is cold.)<br>'+
-          '{いいえ、寒い時は窓を開けません|いいえ、さむいときはまどをあけません|answer}。'+
+          '{いいえ、寒い時は窓を開けません|いいえ、さむいときはまどをあけません|' + Genki.getAlts('いいえ、{寒}い{時}は{窓}を{開}けません', 'さむ|とき|まど|あ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'よく服を汚しますか。<br>'+
           '(No, I do not dirty my clothes much.)<br>'+
-          '{いいえ、あまり服を汚しません|いいえ、あまりふくをよごしません|answer}。'+
+          '{いいえ、あまり服を汚しません|いいえ、あまりふくをよごしません|' + Genki.getAlts('いいえ、あまり{服}を{汚}しません', 'ふく|よご') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'よく物を壊しますか。<br>'+
           '(Yes, I break things often.)<br>'+
-          '{はい、よく物を壊します|はい、よくものをこわします|answer}。'+
+          '{はい、よく物を壊します|はい、よくものをこわします|' + Genki.getAlts('はい、よく{物}を{壊}します', 'もの|こわ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '財布を落としたことがありますか。<br>'+
           '(No, I have never dropped my wallet.)<br>'+
-          '{いいえ、財布を落としたことがありません|いいえ、さいふをおとしたことがありません|answer}。'+
+          '{いいえ、財布を落としたことがありません|いいえ、さいふをおとしたことがありません|' + Genki.getAlts('いいえ、{財布}を{落}としたことがありません', 'さいふ|お') + 'answer}。'+
         '</div>'+
       '</div>'
         

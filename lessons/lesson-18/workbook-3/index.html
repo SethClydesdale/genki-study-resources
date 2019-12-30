@@ -73,39 +73,39 @@
         
         '<div class="problem">'+
           'I finished reading this book.<br>'+
-          '{この本を読んでしまいました|このほんをよんでしまいました|answer}。'+
+          '{この本を読んでしまいました|このほんをよんでしまいました|' + Genki.getAlts('この{本}を{読}んでしまいました', 'ほん|よ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I didn\'t have much money, but I bought an expensive shirt. (And I came to regret it.)<br>'+
-          '{あまりお金がありませんでしたが、高いシャツを買ってしまいました|あまりおかねがありませんでしたが、たかいシャツをかってしまいました|answer}。'+
+          '{あまりお金がありませんでしたが、高いシャツを買ってしまいました|あまりおかねがありませんでしたが、たかいシャツをかってしまいました|' + Genki.getAlts('あまりお{金}がありませんでしたが、{高}いシャツを{買}ってしまいました', 'かね|たか|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I borrowed my father\'s car, but I broke it. (regrettably)<br>'+
-          '{父の車を借りましたが、壊してしまいました|ちちのくるまをかりましたが、こわしてしまいました|answer}。'+
+          '{父の車を借りましたが、壊してしまいました|ちちのくるまをかりましたが、こわしてしまいました|' + Genki.getAlts('{父}の{車}を{借}りましたが、{壊}してしまいました', 'ちち|くるま|か|こわ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Since my friend didn\'t keep her promise, I had a fight. (regrettably)<br>'+
-          '{友だちが約束を守らなかったので、けんかしてしまいました|ともだちがやくそくをまもらなかったので、けんかしてしまいました|answer}。'+
+          '{友だちが約束を守らなかったので、けんかしてしまいました|ともだちがやくそくをまもらなかったので、けんかしてしまいました|' + Genki.getAlts('{友}だちが{約束}を{守}らなかったので、けんかしてしまいました', 'とも|やくそく|まも') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Since I quit the job (to my regret), I do not have a job right now.<br>'+
-          '{仕事をやめてしまったので、今仕事がありません|しごとをやめてしまったので、いましごとがありません|answer}。'+
+          '{仕事をやめてしまったので、今仕事がありません|しごとをやめてしまったので、いましごとがありません|' + Genki.getAlts('{仕事}をやめてしまったので、{今}{仕事}がありません', 'しごと|いま|しごと') + 'answer}。'+
         '</div>'+
         
         // II
         '<p class="section-desc">Complete the dialogue by translating the given cues, using ～ちゃった／じゃった, the casual version of ～てしまった.</p>'+
         '<div class="problem">'+
           'A：冷蔵庫の牛乳がないんだけど……。<br>'+
-          'B：ごめん。{飲んじゃった|のんじゃった|answer}。(I drank it)'+
+          'B：ごめん。{飲んじゃった|のんじゃった|answer;hint:(I drank it)}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：つくえの上の雑誌もない。<br>'+
-          'B：ごめん。{捨てちゃった|すてちゃった|answer}。(I threw it out)'+
+          'B：ごめん。{捨てちゃった|すてちゃった|answer;width:110;hint:(I threw it out)}。'+
         '</div>'+
         
         '<div>A：……。</div>'+

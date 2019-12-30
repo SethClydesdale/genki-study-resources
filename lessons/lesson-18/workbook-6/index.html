@@ -81,7 +81,7 @@
         '<div class="problem">'+
           'ほしかった服が、もう店にありません。<br>'+
           '(I should have bought those clothes.)<br>'+
-          '{あの服を買えばよかったです|あのふくをかえばよかったです|answer}。'+
+          '{あの服を買えばよかったです|あのふくをかえばよかったです|' + Genki.getAlts('あの{服}を{買}えばよかったです', 'ふく|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -101,7 +101,7 @@
         '<div class="problem">'+
           '気分が悪いです。<br>'+
           '(I should not have read a book in the car.)<br>'+
-          '{車の中で本を読まなければよかったです|くるまのなかでほんをよまなければよかったです|answer}。'+
+          '{車の中で本を読まなければよかったです|くるまのなかでほんをよまなければよかったです|' + Genki.getAlts('{車}の{中}で{本}を{読}まなければよかったです', 'くるま|なか|ほん|よ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -113,14 +113,14 @@
         '<div class="problem">'+
           'かぜをひいてしまいました。<br>'+
           '(Last night, I should not have gone out.)<br>'+
-          '{きのうの夜、出かけなければよかったです|きのうのよる、でかけなければよかったです|answer}。'+
+          '{きのうの夜、出かけなければよかったです|きのうのよる、でかけなければよかったです|' + Genki.getAlts('{昨日}の{夜}、{出}かけなければよかったです', 'きのう|よる|で') + 'answer}。'+
         '</div>'+
         
         // III
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'I should not have drank old milk.<br>'+
-          '{古い牛乳を飲まなければよかったです|ふるいぎゅうにゅうをのまなければよかったです|answer}。'+
+          '{古い牛乳を飲まなければよかったです|ふるいぎゅうにゅうをのまなければよかったです|' + Genki.getAlts('{古}い{牛乳}を{飲}まなければよかったです', 'ふる|ぎゅうにゅう|の') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
