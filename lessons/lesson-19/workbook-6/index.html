@@ -67,12 +67,12 @@
         '<p class="section-desc">Translate the following sentences, using ～はずです.</p>'+
         '<div class="problem">'+
           'I believe that Sue will tidy up her room, because her boyfriend will come.<br>'+
-          '{彼が来るから、スーさんは部屋を片付けるはずです|かれがくるから、スーさんはへやをかたづけるはずです|answer}。'+
+          '{彼が来るから、スーさんは部屋を片付けるはずです|かれがくるから、スーさんはへやをかたづけるはずです|' + Genki.getAlts('{彼}が{来}るから、スーさんは{部屋}を{片付}けるはずです', 'かれ|く|へや|かたづ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I believe that Mary will not cut classes, because she is a good student.<br>'+
-          '{メアリーさんはいい学生だから、授業をサボらないはずです|メアリーさんはいいがくせいだから、じゅぎょうをサボらないはずです|answer}。'+
+          '{メアリーさんはいい学生だから、授業をサボらないはずです|メアリーさんはいいがくせいだから、じゅぎょうをサボらないはずです|' + Genki.getAlts('メアリーさんはいい{学生}だから、{授業}をサボらないはずです', 'がくせい|じゅぎょう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
@@ -82,7 +82,7 @@
         
         '<div class="problem">'+
           'I believe that John is good at Chinese, because he lived in China.<br>'+
-          '{ジョンさんは中国に住んでいたから、中国語が上手なはずです|ジョンさんはちゅうごくにすんでいたから、ちゅうごくごがじょうずなはずです|answer}。'+
+          '{ジョンさんは中国に住んでいたから、中国語が上手なはずです|ジョンさんはちゅうごくにすんでいたから、ちゅうごくごがじょうずなはずです|' + Genki.getAlts('ジョンさんは{中国}に{住}んでいたから、{中国語}が{上手}なはずです', 'ちゅうごく|す|ちゅうごくご|じょうず') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Complete the dialogues, using ～はずです.</p>'+
@@ -99,7 +99,7 @@
         '<p class="section-desc">Complete the sentences, using ～はずでした for the failed predictions.</p>'+
         '<div class="problem">飛行機は九時に空港に{着くはずでした|つくはずでした|answer}が、遅れてしまいました。</div>'+
         '<div class="problem">友だちが私の家に{来るはずでした|くるはずでした|answer}が、来ませんでした。</div>'+
-        '<div class="problem">テストは{難しくないはずでした|やさしいはずでした|answer}が、難しかったです。</div>'+
+        '<div class="problem">テストは{%(難しくない/やさしい)はずでした|むずかしくないはずでした|answer}が、難しかったです。</div>'+
       '</div>'
         
     });</script>
