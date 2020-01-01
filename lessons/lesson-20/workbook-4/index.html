@@ -65,37 +65,37 @@
       quizlet : 
       '<div class="count-problems">'+
         '<p class="section-desc">Mr. Noda is interviewing Mr. Tanaka. Fill in the blanks with the appropriate expressions.</p>'+
-        '<div class="problem">Noda: 田中さんは、どちらに{住んでいらっしゃいますか|すんでいらっしゃいますか|answer}。(Where do you live?)</div>'+
+        '<div class="problem">Noda: 田中さんは、どちらに{住んでいらっしゃいますか|すんでいらっしゃいますか|answer;hint:(Where do you live?)}。</div>'+
         '<div class="problem">Tanaka: 家族と一緒に奈良に{住んでおります|すんでおります|answer}。</div>'+
         
-        '<div class="problem">Noda: 今日はどうやって{いらっしゃいましたか}。(How did you come here today?)</div>'+
+        '<div class="problem">Noda: 今日はどうやって{いらっしゃいましたか|(How did you come here today?)}。</div>'+
         '<div class="problem">Tanaka: 新幹線で{参りました|まいりました|answer}。</div>'+
         
-        '<div class="problem">Noda: ご兄弟が{いらっしゃいますか}。(Do you have any siblings?)</div>'+
+        '<div class="problem">Noda: ご兄弟が{いらっしゃいますか|(Do you have any siblings?)}。</div>'+
         '<div class="problem">Tanaka: はい。兄が一人{おります}。</div>'+
         
-        '<div class="problem">Noda: 田中さんは大学院で{何を勉強なさいましたか|なにをべんきょうなさいましたか|answer}。(What did you study?)</div>'+
+        '<div class="problem">Noda: 田中さんは大学院で{何を勉強なさいましたか|なにをべんきょうなさいましたか|' + Genki.getAlts('{何}を{勉強}なさいましたか', 'なに|べんきょう') + 'answer;hint:(What did you study?)}。</div>'+
         '<div class="problem">Tanaka: 経済を{勉強いたしました|べんきょういたしました|answer}。</div>'+
         
         '<p class="section-desc">One of your business associates, Mr. Mori, came to town. Write the following story in Japanese, using honorific expressions and humble expressions.</p>'+
         '<div class="problem">'+
           '(Mr. Mori arrived at the airport at 9:00.)<br>'+
-          '{森さんは九時に空港にお着きになりました|もりさんはくじにくうこうにおつきになりました|answer}。'+
+          '{森さんは九時に空港にお着きになりました|もりさんはくじにくうこうにおつきになりました|' + Genki.getAlts('{森}さんは{九時}に{空港}にお{着}きになりました', 'もり|くじ|くうこう|つ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '(I met Mr. Mori for the first time.)<br>'+
-          '{初めて森さんにお会いしました|はじめてもりさんにおあいしました|answer}。一緒にゴルフをしに行きました。'+
+          '{初めて森さんにお会いしました|はじめてもりさんにおあいしました|' + Genki.getAlts('{初}めて{森}さんにお{会}いしました', 'はじ|もり|あ') + 'answer}。一緒にゴルフをしに行きました。'+
         '</div>'+
         
         '<div class="problem">'+
           '(Mr. Mori didn\'t bring his clubs [クラブ], so I lent him mine.)<br>'+
-          '{森さんはクラブを持ってきていらっしゃらなかったので、私のをお貸ししました|もりさんはクラブをもってきていらっしゃらなかったので、わたしのをおかししました|answer}。'+
+          '{森さんはクラブを持ってきていらっしゃらなかったので、私のをお貸ししました|もりさんはクラブをもってきていらっしゃらなかったので、わたしのをおかししました|' + Genki.getAlts('{森}さんはクラブを{持}ってきていらっしゃらなかったので、{私}のをお{貸}ししました', 'もり|も|わたし|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '(I gave him a ride to the hotel around 7:00.)<br>'+
-          '{七時ごろホテルまでお送りしました|しちじごろホテルまでおおくりしました|answer}。'+
+          '{七時ごろホテルまでお送りしました|しちじごろホテルまでおおくりしました|' + Genki.getAlts('{七時}ごろホテルまでお{送}りしました', 'しちじ|おく') + 'answer}。'+
         '</div>'+
       '</div>'
         

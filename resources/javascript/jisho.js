@@ -307,6 +307,7 @@ Genki.jisho = {
     { ja : 'お菓子|おかし', en : 'snack; sweets', l : '会L11' },
     { ja : 'お金|おかね', en : 'money', l : '会L6' },
     { ja : 'お金持ち|おかねもち', en : 'rich person', l : '会L10' },
+    { ja : 'おから', en : 'Okara (food); soy pulp; tofu dregs', l : 'ワークブックL20-P74' },
     { ja : '沖縄|おきなわ', en : 'Okinawa', l : '読L4-II' },
     { ja : 'お客さん|おきゃくさん', en : 'guest; visitor; client; customer', l : '会L17' },
     { ja : 'お客様|おきゃくさま', en : 'dear customer', l : '読L19-漢字表' },

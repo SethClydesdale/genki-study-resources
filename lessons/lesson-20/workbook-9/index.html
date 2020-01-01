@@ -97,10 +97,10 @@
     '{!AUDIO|W20-B}'+
     
     '<div class="count-problems">'+
-      '<div class="problem">{!PLAY|W20-B|5} ジョンさんは{財布を持た|さいふをもた|answer}ないで家を出ました。</div>'+
+      '<div class="problem">{!PLAY|W20-B|5} ジョンさんは{財布を持た|さいふをもた|' + Genki.getAlts('{財布}を{持}た', 'さいふ|も') + 'answer}ないで家を出ました。</div>'+
       '<div class="problem">{!PLAY|W20-B|21.5} ロバートさんはきのう{レポートを書か|レポートをかか|answer}ないで寝ました。</div>'+
       '<div class="problem">{!PLAY|W20-B|43} スーさんは{かぎをかけなかった}ので、自転車をなくしました。</div>'+
-      '<div class="problem">{!PLAY|W20-B|60} 先生は{教科書を持た|きょうかしょをもた|answer}ないでクラスに来ました。</div>'+
+      '<div class="problem">{!PLAY|W20-B|60} 先生は{教科書を持た|きょうかしょをもた|' + Genki.getAlts('{教科書}を{持}た', 'きょうかしょ|も') + 'answer}ないでクラスに来ました。</div>'+
     '</div><br>'+
 
     '<p class="section-desc"><span class="section-number">C</span> Listen to the conversation between two college students and mark O if the statement is true, X if it is not.</p>'+
