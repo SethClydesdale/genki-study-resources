@@ -65,36 +65,20 @@
       quizlet : 
       '<div class="count-problems">'+
         '<p class="section-desc">Complete the following sentences by translating the cues, using ～のような.</p>'+
-        '<div class="problem">'+
-          '(like "Harry Potter")<br>'+
-          '私は{「ハリー・ポッター」のような}映画が好きです。'+
-        '</div>'+
+        '<div class="right">*<span class="inline-furi">オペラ歌手<i>オペラかしゅ</i></span>　opera singer</div>'+
         
-        '<div class="problem">'+
-          '(like New York)<br>'+
-          '私は{ニューヨークのような}ところに住みたくないです。'+
-        '</div>'+
+        '<div class="problem">私は{「ハリー・ポッター」のような|(like "Harry Potter")|width:210}映画が好きです。</div>'+
         
-        '<div class="problem">'+
-          '(like Sony)<br>'+
-          '私は{ソニーのような}大きい会社に就職したいです。'+
-        '</div>'+
+        '<div class="problem">私は{ニューヨークのような|(like New York)|width:160}ところに住みたくないです。</div>'+
+        
+        '<div class="problem">私は{ソニーのような|(like Sony)|width:110}大きい会社に就職したいです。</div>'+
         
         '<p class="section-desc">Complete the following sentences by translating the cues, using ～のように.</p>'+
-        '<div class="problem">'+
-          '(like Michael Jackson)<br>'+
-          '私は{マイケル・ジャクソンのように}有名になりたいです。'+
-        '</div>'+
+        '<div class="problem">私は{マイケル・ジャクソンのように|(like Michael Jackson)|width:210}有名になりたいです。</div>'+
         
-        '<div class="problem">'+
-          '(like an opera singer [オペラ歌手；オペラかしゅ])<br>'+
-          'スーさんは{オペラ歌手のように|オペラかしゅのように|answer}歌が歌えます。'+
-        '</div>'+
+        '<div class="problem">スーさんは{オペラ歌手のように|オペラかしゅのように|answer;width:160;hint:(like an opera singer*)}歌が歌えます。</div>'+
         
-        '<div class="problem">'+
-          '(like a twenty-year-old college student)<br>'+
-          '私のおじいさんは{二十歳の大学生のように|はたちのだいがくせいのように|answer}元気です。'+
-        '</div>'+
+        '<div class="problem">私のおじいさんは{二十歳の大学生のように|はたちのだいがくせいのように|' + Genki.getAlts('{二十歳}の{大学生}のように', 'はたち|だいがくせい') + 'answer;width:270;hint:(like a twenty-year-old college student)}元気です。</div>'+
         
         '<p class="section-desc">Translate the sentences, using ～のような／～のように.</p>'+
         '<div class="problem">'+
@@ -104,27 +88,27 @@
         
         '<div class="problem">'+
           'The movie theater was crowded, just like a packed train (満員電車；まんいんでんしゃ).<br>'+
-          '{映画館は満員電車のように込んでいました|えいがかんはまんいんでんしゃのようにこんでいました|answer}。'+
+          '{映画館は満員電車のように込んでいました|えいがかんはまんいんでんしゃのようにこんでいました|' + Genki.getAlts('{映画館}は{満員電車}のように{込}んでいました', 'えいがかん|まんいんでんしゃ|こ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'When she got lost, she cried like a baby.<br>'+
-          '{彼女は道に迷った時、赤ちゃんのように泣きました|かのじょはみちにまよったとき、あかちゃんのようになきました|answer}。'+
+          '{彼女は道に迷った時、赤ちゃんのように泣きました|かのじょはみちにまよったとき、あかちゃんのようになきました|' + Genki.getAlts('{彼女}は{道}に{迷}った{時}、{赤}ちゃんのように{泣}きました', 'かのじょ|みち|まよ|とき|あか|な') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I like summerlike hot days.<br>'+
-          '{夏のよう%(な/に)暑い日が好きです|なつのよう%(な/に)あついひがすきです|answer}。'+
+          '{夏のよう%(な/に)暑い日が好きです|なつのよう%(な/に)あついひがすきです|' + Genki.getAlts('{夏}のよう{な}{暑}い{日}が{好}きです', 'なつ|に|あつ|ひ|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'Mary and Takeshi are always together, like a married couple.<br>'+
-          '{メアリーさんとたけしさんは、夫婦のようにいつも一緒にいます|メアリーさんとたけしさんは、ふうふのようにいつもいっしょにいます|answer}。'+
+          '{メアリーさんとたけしさんは、夫婦のようにいつも一緒にいます|メアリーさんとたけしさんは、ふうふのようにいつもいっしょにいます|' + Genki.getAlts('メアリーさんとたけしさんは、{夫婦}のようにいつも{一緒}にいます', 'ふうふ|いっしょ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I have never met a lazy person like you.<br>'+
-          '{あなたのような怠け者に会ったことがありません|あなたのようななまけものにあったことがありません|answer}。'+
+          '{あなたのような怠け者に会ったことがありません|あなたのようななまけものにあったことがありません|' + Genki.getAlts('あなたのような{怠}け{者}に{会}ったことがありません', 'なま|もの|あ') + 'answer}。'+
         '</div>'+
       '</div>'
         

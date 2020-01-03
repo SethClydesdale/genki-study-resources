@@ -69,12 +69,12 @@
           '<div>'+
             '<div class="problem">'+
               '(though I have a final exam today)<br>'+
-              '{今日、期末試験があるのに|きょう、きまつしけんがあるのに|answer}。'+
+              '{今日、期末試験があるのに|きょう、きまつしけんがあるのに|' + Genki.getAlts('{今日}、{期末試験}があるのに', 'きょう|きまつしけん') + 'answer}。'+
             '</div>'+
         
             '<div class="problem">'+
               '(though I practiced every day)<br>'+
-              '{毎日練習したのに|まいにちれんしゅうしたのに|answer}。'+
+              '{毎日練習したのに|まいにちれんしゅうしたのに|' + Genki.getAlts('{毎日}{練習}したのに', 'まいにち|れんしゅう') + 'answer}。'+
             '</div>'+
         
             '<div class="problem">'+
@@ -89,7 +89,7 @@
         
             '<div class="problem">'+
               '(though that person is not busy)<br>'+
-              '{あの人は忙しくないのに|あのひとはいそがしくないのに|answer}。'+
+              '{あの人は忙しくないのに|あのひとはいそがしくないのに|' + Genki.getAlts('あの{人}は{忙}しくないのに', 'ひと|いそが') + 'answer}。'+
             '</div>'+
           '</div>'+
         
@@ -103,25 +103,13 @@
         '</div>'+
         
         '<p class="section-desc">Complete the following sentences by translating the cues.</p>'+
-        '<div class="problem">'+
-          '(drove a car)<br>'+
-          '彼は免許を持っていないのに{車を運転した|くるまをうんてんした|answer}ので、警察に捕まりました。'+
-        '</div>'+
+        '<div class="problem">彼は免許を持っていないのに{車を運転した|くるまをうんてんした|' + Genki.getAlts('{車}を{運転}した', 'くるま|うんてん') + 'answer;hint:(drove a car)}ので、警察に捕まりました。</div>'+
         
-        '<div class="problem">'+
-          '(grades are good)<br>'+
-          '彼女はよく授業をサボるのに、{成績がいいです|せいせきがいいです|answer}。'+
-        '</div>'+
+        '<div class="problem">彼女はよく授業をサボるのに、{成績がいいです|せいせきがいいです|answer;hint:(grades are good)}。</div>'+
         
-        '<div class="problem">'+
-          '(job is tough)<br>'+
-          '{仕事が大変な|しごとがたいへんな|answer}のに、彼は文句を言いません。'+
-        '</div>'+
+        '<div class="problem">{仕事が大変な|しごとがたいへんな|' + Genki.getAlts('{仕事}が{大変}な', 'しごと|たいへん') + 'answer;hint:(job is tough)}のに、彼は文句を言いません。</div>'+
         
-        '<div class="problem">'+
-          '(gave everything)<br>'+
-          '{何でもしてあげた|なんでもしてあげた|answer}のに、ふられてしまいました。'+
-        '</div>'+
+        '<div class="problem">{何でもしてあげた|なんでもしてあげた|answer;hint:(gave everything)}のに、ふられてしまいました。</div>'+
         
       '</div>'
         

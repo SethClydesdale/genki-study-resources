@@ -68,15 +68,15 @@
         '<div class="problem">'+
           '親になったら、子供に何を習わせたいですか。どうしてですか。<br>'+
           '(I would want to make [my child] learn karate.)<br>'+
-          '{空手を習わせたいです|からてをならわせたいです|answer}。<br><br><br>'+
+          '{空手を習わせたいです|からてをならわせたいです|' + Genki.getAlts('{空手}を{習}わせたいです', 'からて|なら') + 'answer}。<br><br><br>'+
           '(Because I want [them] to become a strong person.)<br>'+
-          '{強い人になってほしいからです|つよいひとになってほしいからです|answer}。'+
+          '{強い人になってほしいからです|つよいひとになってほしいからです|' + Genki.getAlts('{強}い{人}になってほしいからです', 'つよ|ひと') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'どうすれば、いい成績が取れると思いますか。あなたはそれをしていますか。<br>'+
           '(If you prepare for and review lessons, I think you can get good grades.)<br>'+
-          '{予習と復習をすれば、いい成績が取れると思います|よしゅうとふくしゅうをすれば、いいせいせきがとれるとおもいます|answer}。<br><br><br>'+
+          '{予習と復習をすれば、いい成績が取れると思います|よしゅうとふくしゅうをすれば、いいせいせきがとれるとおもいます|' + Genki.getAlts('{予習}と{復習}をすれば、いい{成績}が{取}れると{思}います', 'よしゅう|ふくしゅう|せいせき|と|おも') + 'answer}。<br><br><br>'+
           '(Yes, I\'m doing it.)<br>'+
           '{はい、しています}。'+
         '</div>'+
@@ -84,15 +84,15 @@
         '<div class="problem">'+
           'どんな人になりたいですか。どうしてですか。<small>(Use ～のような.)</small><br>'+
           '(I want to become a person like my mother.)<br>'+
-          '{母のような人になりたいです|ははのようなひとになりたいです|answer}。<br><br><br>'+
+          '{母のような人になりたいです|ははのようなひとになりたいです|' + Genki.getAlts('{母}のような{人}になりたいです', 'はは|ひと') + 'answer}。<br><br><br>'+
           '(Because she is smart, and often knows all sorts of things.)<br>'+
-          '{母は頭がよくて、いろいろなことをよく知っているからです|はははあたまがよくて、いろいろなことをよくしっているからです|answer}。'+
+          '{母は頭がよくて、いろいろなことをよく知っているからです|はははあたまがよくて、いろいろなことをよくしっているからです|' + Genki.getAlts('{母}は{頭}がよくて、{色々}なことをよく{知}っているからです', 'はは|あたま|いろいろ|し') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '高校の時、あなたの両親はあなたに何をさせてくれましたか。何をさせてくれませんでしたか。<br>'+
           '(When I was in high school, [my parents] let me go to my friend\'s house to stay overnight.)<br>'+
-          '{高校の時、友だちの家に泊まりに行かせてくれました|こうこうのとき、ともだちのいえにとまりにいかせてくれました|answer}。<br><br><br>'+
+          '{高校の時、友だちの家に泊まりに行かせてくれました|こうこうのとき、ともだちのいえにとまりにいかせてくれました|' + Genki.getAlts('{高校}の{時}、{友}だちの{家}に{泊}まりに{行}かせてくれました', 'こうこう|とき|とも|いえ|と|い') + 'answer}。<br><br><br>'+
           '([They] didn\'t let me work a part-time job.)<br>'+
           '{アルバイトをさせてくれませんでした}。'+
         '</div>'+
