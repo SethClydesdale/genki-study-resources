@@ -67,54 +67,39 @@
         '<p class="section-desc">Translate the sentences, using ～ても／でも.</p>'+
         '<div class="problem">'+
           'I will not go out, even if it stops raining.<br>'+
-          '{雨がやんでも、出かけません|あめがやんでも、でかけません|answer}。'+
+          '{雨がやんでも、出かけません|あめがやんでも、でかけません|' + Genki.getAlts('{雨}がやんでも、{出}かけません', 'あめ|で') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'My friend says nothing, even if I don\'t keep a promise.<br>'+
-          '{私が約束を守らなくても、友だちは何も言いません|わたしがやくそくをまもらなくても、ともだちはなにもいいません|answer}。'+
+          '{私が約束を守らなくても、友だちは何も言いません|わたしがやくそくをまもらなくても、ともだちはなにもいいません|' + Genki.getAlts('{私}が{約束}を{守}らなくても、{友}だちは{何}も{言}いません', 'わたし|やくそく|まも|とも|なに|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I don\'t complain, even if the class is boring.<br>'+
-          '{授業がつまらなくても、文句を言いません|じゅぎょうがつまらなくても、もんくをいいません|answer}。'+
+          '{授業がつまらなくても、文句を言いません|じゅぎょうがつまらなくても、もんくをいいません|' + Genki.getAlts('{授業}がつまらなくても、{文句}を{言}いません', 'じゅぎょう|もんく|い') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'You will not be on time, even if you run.<br>'+
-          '{走っても、間に合いません|はしっても、まにあいません|answer}。'+
+          '{走っても、間に合いません|はしっても、まにあいません|' + Genki.getAlts('{走}っても、{間}に{合}いません', 'はし|ま|あ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'You had better be careful, even if that place is safe.<br>'+
-          '{その所が安全でも、%(注意した/気をつけた)ほうがいいです|そのところがあんぜんでも、%(ちゅういした/きをつけた)ほうがいいです|answer}。'+
+          '{その所が安全でも、%(注意した/気をつけた)ほうがいいです|そのところがあんぜんでも、%(ちゅういした/きをつけた)ほうがいいです|' + Genki.getAlts('その{所}が{安全}でも、{注意}したほうがいいです', 'ところ|あんぜん|ちゅうい') + Genki.getAlts('その{所}が{安全}でも、{気}をつけたほうがいいです', 'ところ|あんぜん|き') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Complete the following sentences by translating the cues.</p>'+
-        '<div class="problem">'+
-          '(even if I am bullied)<br>'+
-          '{いじめられて}も、泣きません。'+
-        '</div>'+
+        '<div class="problem">{いじめられて|(even if I am bullied)}も、泣きません。</div>'+
         
-        '<div class="problem">'+
-          '(even if I am not happy)<br>'+
-          '{幸せじゃなくて|しあわせじゃなくて|answer}も、我慢します。'+
-        '</div>'+
+        '<div class="problem">{幸せじゃなくて|しあわせじゃなくて|answer;width:180;hint:(even if I am not happy)}も、我慢します。</div>'+
         
-        '<div class="problem">'+
-          '(continue Japanese studies)<br>'+
-          'いい成績が取れなくても、{日本語の勉強を続けます|にほんごのべんきょうをつづけます|answer}。'+
-        '</div>'+
+        '<div class="problem">いい成績が取れなくても、{日本語の勉強を続けます|にほんごのべんきょうをつづけます|' + Genki.getAlts('{日本語}の{勉強}を{続}けます', 'にほんご|べんきょう|つづ') + 'answer;hint:(continue Japanese studies)}。</div>'+
         
-        '<div class="problem">'+
-          '(family) and (study abroad in Japan)<br>'+
-          '{家族|かぞく|answer}に反対されても、{日本に留学します|にほんにりゅうがくします|answer}。'+
-        '</div>'+
+        '<div class="problem">{家族|かぞく|answer;hint:(family)}に反対されても、{日本に留学します|にほんにりゅうがくします|' + Genki.getAlts('{日本}に{留学}します', 'にほん|りゅうがく') + 'answer;hint:(study abroad in Japan)}。</div>'+
         
-        '<div class="problem">'+
-          '(dad\'s cooking) and (eat)<br>'+
-          '{お父さんの料理|おとうさんのりょうり|answer}がまずくても、{食べます|たべます|answer}。'+
-        '</div>'+
+        '<div class="problem">{お父さんの料理|おとうさんのりょうり|' + Genki.getAlts('お{父}さんの{料理}', 'とう|りょうり') + 'answer;hint:(dad\'s cooking)}がまずくても、{食べます|たべます|answer;hint:(eat)}。</div>'+
       '</div>'
         
     });</script>

@@ -67,26 +67,26 @@
         '<p class="section-desc">You were forced to do the things below. Rewrite the sentences, using the causative and the causative-passive forms.</p>'+
         '<div class="problem">'+
           '私はきらいな食べ物を食べました。<br>'+
-          '<i class="fa">&#xf061;</i> 母は{私にきらいな食べ物を食べさせました|わたしにきらいなたべものをたべさせました|answer}。(causative)<br><br><br>'+
-          '<i class="fa">&#xf061;</i> 私は{母にきらいな食べ物を食べさせられました|ははにきらいなたべものをたべさせられました|answer}。(causative-passive)'+
+          '<i class="fa">&#xf061;</i> 母は{私にきらいな食べ物を食べさせました|わたしにきらいなたべものをたべさせました|' + Genki.getAlts('{私}に{嫌}いな{食べ物}を{食}べさせました', 'わたし|きら|たべもの|た') + 'answer;hint:(causative)}。<br><br><br>'+
+          '<i class="fa">&#xf061;</i> 私は{母にきらいな食べ物を食べさせられました|ははにきらいなたべものをたべさせられました|' + Genki.getAlts('{母}に{嫌}いな{食べ物}を{食}べさせられました', 'はは|きら|たべもの|た') + 'answer;hint:(causative-passive)}。'+
         '</div>'+
         
         '<div class="problem">'+
           '私は宿題を手伝いました。<br>'+
-          '<i class="fa">&#xf061;</i> 弟は{私に宿題を手伝わせました|わたしにしゅくだいをてつだわせました|answer}。<br><br><br>'+
-          '<i class="fa">&#xf061;</i> 私は{弟に宿題を手伝わされました|おとうとにしゅくだいをてつだわされました|answer}。'+
+          '<i class="fa">&#xf061;</i> 弟は{私に宿題を手伝わせました|わたしにしゅくだいをてつだわせました|' + Genki.getAlts('{私}に{宿題}を{手伝}わせました', 'わたし|しゅくだい|てつだ') + 'answer}。<br><br><br>'+
+          '<i class="fa">&#xf061;</i> 私は{弟に宿題を手伝わされました|おとうとにしゅくだいをてつだわされました|' + Genki.getAlts('{弟}に{宿題}を{手伝}わされました', 'おとうと|しゅくだい|てつだ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '私はペットの世話をしました。<br>'+
-          '<i class="fa">&#xf061;</i> 親は{私にペットの世話をさせました|わたしにペットのせわをさせました|answer}。<br><br><br>'+
-          '<i class="fa">&#xf061;</i> 私は{親にペットの世話をさせられました|おやにペットのせわをさせられました|answer}。'+
+          '<i class="fa">&#xf061;</i> 親は{私にペットの世話をさせました|わたしにペットのせわをさせました|' + Genki.getAlts('{私}にペットの{世話}をさせました', 'わたし|せわ') + 'answer}。<br><br><br>'+
+          '<i class="fa">&#xf061;</i> 私は{親にペットの世話をさせられました|おやにペットのせわをさせられました|' + Genki.getAlts('{親}にペットの{世話}をさせられました', 'おや|せわ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '私は皿を洗いました。<br>'+
-          '<i class="fa">&#xf061;</i> 親は{私に皿を洗わせました|わたしにさらをあらわせました|answer}。<br><br><br>'+
-          '<i class="fa">&#xf061;</i> 私は{親に皿を洗わされました|おやにさらをあらわされました|answer}。'+
+          '<i class="fa">&#xf061;</i> 親は{私に皿を洗わせました|わたしにさらをあらわせました|' + Genki.getAlts('{私}に{皿}を{洗}わせました', 'わたし|さら|あら') + 'answer}。<br><br><br>'+
+          '<i class="fa">&#xf061;</i> 私は{親に皿を洗わされました|おやにさらをあらわされました|' + Genki.getAlts('{親}に{皿}を{洗}わされました', 'おや|さら|あら') + 'answer}。'+
         '</div>'+
         
         
@@ -94,19 +94,19 @@
         '<div class="problem">'+
           '子供の時、あなたは親に何をさせられましたか。<br>'+
           '([My parents] made me practice piano every day.)<br>'+
-          '{毎日ピアノを練習させられました|まいにちピアノをれんしゅうさせられました|answer}。'+
+          '{毎日ピアノを練習させられました|まいにちピアノをれんしゅうさせられました|' + Genki.getAlts('{毎日}ピアノを{練習}させられました', 'まいにち|れんしゅう') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '高校の時、あなたは先生に何をさせられましたか。<br>'+
           '([My teacher] made me write a long essay.)<br>'+
-          '{長い作文を書かされました|ながいさくぶんをかかされました|answer}。'+
+          '{長い作文を書かされました|ながいさくぶんをかかされました|' + Genki.getAlts('{長}い{作文}を{書}かされました', 'ねが|さくぶん|か') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '最近、だれに何をさせられましたか。<br>'+
           '(The club senior made me go buy boxed lunches.)<br>'+
-          '{クラブの先輩にお弁当を買いに行かされました|クラブのせんぱいにおべんとうをかいにいかされました|answer}。'+
+          '{クラブの先輩にお弁当を買いに行かされました|クラブのせんぱいにおべんとうをかいにいかされました|' + Genki.getAlts('クラブの{先輩}にお{弁当}を{買}いに{行}かされました', 'せんぱい|べんとう|か|い') + 'answer}。'+
         '</div>'+
       '</div>'
         
