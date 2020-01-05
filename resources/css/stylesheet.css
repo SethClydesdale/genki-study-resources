@@ -1109,6 +1109,10 @@ input.writing-zone-input:focus { border-color:#F60; }
   padding:5px;
 }
 
+.text-block.multi-quiz-image {
+  margin:10px 0;
+}
+
 /* furigana */
 .furigana, .inline-furi i {
   color:#777;
@@ -1908,6 +1912,7 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   height:250px;
   padding:3px;
   overflow:auto;
+  position:relative;
 }
 
 /* groups */
@@ -1920,11 +1925,12 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
 .dictionary-group:nth-of-type(even) { margin-right:3%; }
 .dictionary-group:nth-of-type(odd) { margin-right:0; }
 
-.dictionary-group ul {
-  padding:0;
-}
+.dictionary-group .word-list { padding:0; }
+.dictionary-group .word-list.hidden { display:none; }
+
 
 /* select/deselect buttons */
+.group-selectors.hidden { display:none; }
 .group-selectors .select-all:before, .group-selectors .deselect-all:before {
   font-size:17px;
   font-family:FontAwesomeWeb, FontAwesome;

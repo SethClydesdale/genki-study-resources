@@ -276,6 +276,62 @@
       },
       
       
+      // toggles word lists
+      toggleList : function (caller, all) {
+        // toggle all word lists
+        if (all) {
+          var parent = caller.parentNode.parentNode.parentNode.parentNode,
+              buttons = parent.querySelectorAll('.dictionary-group .group-selectors'),
+              list = parent.querySelectorAll('.dictionary-group .word-list'),
+              toggles = parent.querySelectorAll('.dictionary-group .toggle-word-list'),
+              i = 0, j = list.length;
+          
+          // show definitions
+          if (/Show/.test(caller.innerHTML)) {
+            for (; i < j; i++) {
+              list[i].className = list[i].className.replace(' hidden', '');
+              buttons[i].className = buttons[i].className.replace(' hidden', '');
+              toggles[i].innerHTML = toggles[i].innerHTML.replace('Show', 'Hide');
+            }
+            
+            caller.innerHTML = caller.innerHTML.replace('Show', 'Hide');
+          } 
+          
+          // hide definitions
+          else {
+            for (; i < j; i++) {
+              if (!/hidden/.test(list[i].className)) list[i].className += ' hidden';
+              if (!/hidden/.test(buttons[i].className)) buttons[i].className += ' hidden';
+              toggles[i].innerHTML = toggles[i].innerHTML.replace('Hide', 'Show');
+            }
+            
+            caller.innerHTML = caller.innerHTML.replace('Hide', 'Show');
+          }
+        }
+        
+        // toggle single word lists
+        else {
+          var parent = caller.parentNode.parentNode,
+              buttons = parent.querySelector('.group-selectors'),
+              list = parent.querySelector('.word-list');
+          
+          // show definitions
+          if (/hidden/.test(list.className)) {
+            list.className = list.className.replace(' hidden', '');
+            buttons.className = buttons.className.replace(' hidden', '');
+            caller.innerHTML = caller.innerHTML.replace('Show', 'Hide')
+          }
+
+          // hide definitions
+          else {
+            list.className += ' hidden';
+            buttons.className += ' hidden';
+            caller.innerHTML = caller.innerHTML.replace('Hide', 'Show')
+          }
+        }
+      },
+      
+      
       // quick search
       search : function (value, mode, retry) {
         // clear existing timeout
