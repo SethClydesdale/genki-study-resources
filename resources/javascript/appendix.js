@@ -137,6 +137,14 @@
         // append final group
         document.getElementById('list-' + group).appendChild(frag);
         
+        // add definition count to each group's title
+        for (var title = document.querySelectorAll('.dictionary-group .section-title'), i = 0, j = title.length; i < j; i++) {
+          title[i].insertAdjacentHTML('beforeend', '<span class="definition-count">(' + Genki.appendix.jisho.cache.group[title[i].id.replace('section-', '')].length + ')</span>');
+        }
+        
+        // add total definition count to the introduction
+        document.getElementById('total-definitions').innerHTML = '<strong>' + Genki.appendix.jisho.cache.search.ja.length + '</strong>';
+        
         // restore preferences
         Genki.appendix.jisho.restoreSettings();
         
