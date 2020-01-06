@@ -1954,6 +1954,12 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   margin:0;
 }
 
+.definition-count {
+  font-size:16px;
+  vertical-align:top;
+  margin-left:8px;
+}
+
 /* definitions */
 .definition {
   font-size:14px;
