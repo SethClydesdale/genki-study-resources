@@ -40,5 +40,12 @@ function verifyVocab (vocab) {
   }
 };
 
+// switch to debug mode if not enabled
+if (!/\?debug/.test(window.location.search)) {
+  window.location.search = '?debug';
+}
 
-verifyVocab(Genki.exerciseData.quizlet);
+// verify the vocab
+else {
+  verifyVocab(Genki.exerciseData.quizlet);
+}
