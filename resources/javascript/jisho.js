@@ -2100,7 +2100,7 @@ Genki.jisho = {
     { ja : '病院|びょういん', en : 'hospital', l : '会L4' },
     { ja : '病気|びょうき', en : 'illness; sickness', l : '会L9, 会L12(e)' },
     { ja : '表現|ひょうげん', en : 'expression', l : '読L17-漢字表' },
-    { ja : '表現ノート|ひょうげんノート', en : 'expression notes', l : '会G(e)' },
+    { ja : '表現ノート|ひょうげんノート', en : 'expression notes', l : '会G' },
     { ja : '表紙|ひょうし', en : 'front cover', l : '読L11-漢字表' },
     { ja : '標準語|ひょうじゅんご', en : 'standard Japanese', l : '会L11(e)' },
     { ja : '描写する|びょうしゃする', en : 'to describe', v : 'irr', l : '読L17-漢字表' },
