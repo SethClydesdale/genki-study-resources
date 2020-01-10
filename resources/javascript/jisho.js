@@ -20,7 +20,7 @@ Genki.jisho = {
   
   'あ' : [
     { ja : '相変わらず|あいかわらず', en : 'as usual', l : '読L22-II' },
-    { ja : '挨拶|あいさつ', en : 'greeting; greetings; salutation; polite set phrase used when meeting or parting', v : 'u', l : '会G' },
+    { ja : '挨拶|あいさつ', en : 'greeting; greetings; salutation; polite set phrase used when meeting or parting', l : '会G' },
     { ja : '愛す|あいす', en : 'to love', v : 'u', l : '読L14-II' },
     { ja : '合図|あいず', en : 'signal', l : '読L18-漢字表' },
     { ja : 'アイスクリーム', en : 'ice cream', l : '会L3' },
