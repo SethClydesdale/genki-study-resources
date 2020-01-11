@@ -10,7 +10,7 @@
   font-style:normal;
 }
 
-.fa { 
+.fa {
   display:inline-block;
   font:normal normal normal 14px/1 FontAwesomeWeb, FontAwesome;
   font-size:inherit;
@@ -286,7 +286,7 @@ a#fork-me:hover, a#fork-me:focus {
   font-weight:bold;
 }
 
-#announcement h3 { margin:5px 0 5px 0; }
+#announcement h3 { margin:10px 0 0 0; }
 
 #announcement .announcement {
   font-size:14px;
