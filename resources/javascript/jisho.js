@@ -1761,7 +1761,7 @@ Genki.jisho = {
     { ja : '泊まる|とまる', en : 'to stay (at a hotel, etc.)', v : 'u', l : '会L10' },
     { ja : '止まる|とまる', en : 'to stop', v : 'u', l : '読L20-II' },
     { ja : '～と申します|～ともうします', en : 'my name is...', l : '会L13' },
-    { ja : '友だち|ともだち', en : 'friend', l : '会L1' },
+    { ja : '友達／友だち|ともだち', en : 'friend; companion', l : '会L1' },
     { ja : '共働き|ともばたらき', en : 'both husband and wife working', l : '読L12-漢字表' },
     { ja : '土曜日|どようび', en : 'Saturday', l : '会L3; 会L4(e)' },
     { ja : 'ドライブ', en : 'drive', l : '会L11' },
