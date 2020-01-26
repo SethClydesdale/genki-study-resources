@@ -1693,8 +1693,16 @@
               if (!Genki.local && Genki.canNotify && Notification.permission == 'granted') {
                 var notif = new Notification('Genki Study Resources', {
                   body : 'Break time is up!',
-                  icon : document.querySelector('meta[property="og:image"]').content
+                  icon : document.querySelector('meta[property="og:image"]').content,
+                  tag : 'breakTime',
+                  requireInteraction : true
                 });
+                
+                // focus the tab
+                notif.onclick = function () {
+                  window.focus();
+                  this.close();
+                };
               }
             }
           });
