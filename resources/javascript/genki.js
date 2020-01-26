@@ -14,6 +14,8 @@
        exclude : 0  // answers to exclude, mostly for text-only segments in multi-choice quizzes
     },
     
+    canNotify : 'Notification' in window,
+    
     // checks if touchscreen controls
     isTouch : 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0,
     isTouching : false,
@@ -1634,6 +1636,11 @@
         
         // initializes the break timer
         callback : function () {
+          // request permission to show a notification when break time is up
+          if (!Genki.local && Genki.canNotify && !/denied|granted/.test(Notification.permission)) {
+            Notification.requestPermission();
+          }
+          
           var time = +document.getElementById('break-minutes').value, n;
           
           // corrects time
@@ -1681,6 +1688,14 @@
             if (timeString == '00:00:00') {
               clock.innerHTML = 'Break time is up!<div style="font-size:15px;">Click the button below to resume your studies.</div>';
               document.getElementById('genki-modal-ok').style.display = 'inline-block';
+              
+              // notify the user that break time has ended
+              if (!Genki.local && Genki.canNotify && Notification.permission == 'granted') {
+                var notif = new Notification('Genki Study Resources', {
+                  body : 'Break time is up!',
+                  icon : document.querySelector('meta[property="og:image"]').content
+                });
+              }
             }
           });
         }
