@@ -1691,10 +1691,10 @@
               
               // notify the user that break time has ended
               if (!Genki.local && Genki.canNotify && Notification.permission == 'granted') {
-                var notif = new Notification('Genki Study Resources', {
+                var notif = new Notification(document.title, {
                   body : 'Break time is up!',
                   icon : document.querySelector('meta[property="og:image"]').content,
-                  tag : 'breakTime',
+                  tag : 'breakTime-' + Genki.active.index,
                   requireInteraction : true
                 });
                 
