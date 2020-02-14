@@ -589,7 +589,7 @@ Genki.jisho = {
     { ja : '体にいい|からだにいい', en : 'good for health', l : '読L13-II' },
     { ja : '体に気をつける|からだにきをつける', en : 'to take care of oneself', v : 'ru', l : '読L7-II' },
     { ja : '空手|からて', en : 'karate', l : '会L13' },
-    { ja : '借りる|かりる', en : 'to borrow', v : 'u', l : '会L6' },
+    { ja : '借りる|かりる', en : 'to borrow; to rent; to hire', v : 'ru', l : '会L6' },
     { ja : '刈る|かる', en : 'to crop', v : 'u', l : '会L17(e)' },
     { ja : '軽い|かるい', en : 'light', l : '会L20' },
     { ja : '彼|かれ', en : 'he; him; boyfriend', l : '会L12' },
