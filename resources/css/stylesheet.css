@@ -597,6 +597,13 @@ footer li:first-child:before { display:none; }
 }
 #answer-list .quiz-item, .quiz-item.gu-mirror { cursor:move; }
 
+.quiz-item.markedItem {
+  border-color:#F60;
+  outline:1px solid #F60;
+  box-shadow:3px 3px 3px rgba(0, 0, 0, 0.25);
+  position:relative;
+}
+
 #quiz-info {
   color:#FFF;
   background:#F60;
@@ -879,6 +886,23 @@ footer li:first-child:before { display:none; }
   position:absolute;
   top:3px;
   right:-85px;
+}
+
+#wrongAnswer { position:relative; }
+#wrongAnswer:before {
+  content:"\f00d\A0 wrong";
+  font-family:Meiryo, Osaka, Arial, sans-serif, FontAwesomeWeb, FontAwesome;
+  font-size:14px;
+  color:#F00;
+  position:absolute;
+  right:-70px;
+  pointer-events:none;
+}
+
+.kana-quiz #wrongAnswer:before {
+  content:"\f00d";
+  right:-6px;
+  top:-10px;
 }
 
 .quiz-over [data-mistakes="0"] .quiz-item { border-color:#CCC; }

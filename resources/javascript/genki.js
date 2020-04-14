@@ -22,6 +22,9 @@
     
     // tells us if text selection mode is enabled (for multi-choice quizzes)
     textSelectMode : false,
+    
+    // tells us if a quiz item is marked in a drag and drop quiz
+    markedItem : null,
 
     // tells us if Genki is being used on a local file system so we can append index.html to URLs
     local : window.location.protocol == 'file:' ? 'index.html' : '',
@@ -31,9 +34,9 @@
 
     // frequently used/generic strings
     lang : {
-      std_drag : 'Drag the English expression to the Japanese expression that has the same meaning.',
-      std_kana : 'Drag the Kana to the matching Romaji.',
-      std_num : 'Drag the Numbers to the matching Kana.',
+      std_drag : 'Drag the English expression to the Japanese expression that has the same meaning.<br>NEW: Click an expression to mark it, then click an empty field to drop the answer there.',
+      std_kana : 'Drag the Kana to the matching Romaji.<br>NEW: Click the kana to mark it, then click an empty field to drop the answer there.',
+      std_num : 'Drag the Numbers to the matching Kana.<br>NEW: Click a number to mark it, then click an empty field to drop the answer there.',
       std_multi : 'Solve the problems by choosing the correct answers.',
       std_questions : 'Answer the questions as best as you can.',
       std_culture : 'Answer the questions about Japanese culture as best as you can.',
@@ -1423,15 +1426,26 @@
           }
         });
         
-        // hide overflow during drag for touch screens
-        if (Genki.isTouch) {
-          drake.on('drag', function () {
-            if (Genki.isTouching && document.body.style.overflow != 'hidden') {
-              document.body.style.overflow = 'hidden';
-            }
-          });
+        // events during drag
+        drake.on('drag', function (el) {
+          // hide overflow during drag for touch screens
+          if (Genki.isTouch && Genki.isTouching && document.body.style.overflow != 'hidden') {
+            document.body.style.overflow = 'hidden';
+          }
 
-          // restore overflow
+          // unmark marked items
+          if (Genki.markedItem) {
+            Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
+            Genki.markedItem = null;
+          }
+          
+          // mark the draggable element
+          Genki.markedItem = el;
+          el.className += ' markedItem';
+        });
+        
+        if (Genki.isTouch) {
+          // restore overflow on drag cancel (touchscreens only)
           drake.on('cancel', function () {
             document.body.style.overflow = '';
           });
@@ -1453,6 +1467,12 @@
 
             } else {
               target.className += ' answer-correct';
+              
+              // unmark the marked item that was dropped
+              if (Genki.markedItem) {
+                Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
+                Genki.markedItem = null;
+              }
 
               // when all problems have been solved..
               // stop the timer, show the score, and congratulate the student
@@ -1464,6 +1484,68 @@
         });
 
         Genki.drake = drake;
+        
+        // event listener for marking and dropping answers with a click
+        document.addEventListener('click', function (e) {
+          // mark the currently active quiz item
+          if (/quiz-item/.test(e.target.className) && e.target.parentNode.id == 'answer-list') {
+            // unmark the last active quiz item
+            if (Genki.markedItem) {
+              Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
+            }
+            
+            // mark the new active one
+            Genki.markedItem = e.target;
+            Genki.markedItem.className += ' markedItem';
+          } 
+          
+          // attempt dropping the marked quiz item to an answer zone
+          else if (Genki.markedItem && /quiz-answer-zone/.test(e.target.className)) {
+            // wrong answer
+            if (Genki.markedItem.dataset.answer != e.target.dataset.text) {
+              // remove the old notification
+              if (Genki.wrongTimeout) {
+                document.getElementById('wrongAnswer').id = '';
+                clearTimeout(Genki.wrongTimeout);
+                delete Genki.wrongTimeout;
+              }
+              
+              // if the answer is wrong we'll display a small notification using CSS (see #wrongAnswer in stylesheet.css)
+              e.target.id = 'wrongAnswer';
+              
+              // remove the notification after 1 second
+              Genki.wrongTimeout = window.setTimeout(function () {
+                document.getElementById('wrongAnswer').id = '';
+                delete Genki.wrongTimeout;
+              }, 1000);
+
+              // global mistakes are incremented along with mistakes specific to problems
+              e.target.dataset.mistakes = ++e.target.dataset.mistakes;
+              ++Genki.stats.mistakes;
+
+            } 
+            
+            // correct answer
+            else {
+              e.target.className += ' answer-correct';
+              e.target.appendChild(Genki.markedItem);
+              Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
+              Genki.markedItem = null;
+
+              // when all problems have been solved..
+              // stop the timer, show the score, and congratulate the student
+              if (++Genki.stats.solved == Genki.stats.problems) {
+                Genki.endQuiz();
+              }
+            }
+          } 
+          
+          // no conditions met, unmark the currently marked item
+          else if (Genki.markedItem) {
+            Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
+            Genki.markedItem = null;
+          }
+        });
       }
 
 
