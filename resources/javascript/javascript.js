@@ -30,7 +30,7 @@
   
   // # DARK MODE #
   // Allows the student to switch to a dark version of Genki Study Resources. (Great for late night studying!)
-  if (window.localStorage) {
+  if (navigator.cookieEnabled && window.localStorage) {
     var footer = document.querySelector('footer'),
         button = document.createElement('LABEL'),
         container = document.createElement('DIV');

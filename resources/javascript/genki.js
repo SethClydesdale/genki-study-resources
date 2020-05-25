@@ -50,7 +50,7 @@
       // review button for drag/drop exercises
       review : '<div id="review-exercise" class="center clearfix"><button id="review-button" class="button" onclick="Genki.review();"><i class="fa">&#xf02d;</i>Review</button></div>',
       // furigana toggle for vocab exercises
-      toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);"><i class="fa">&#xf2a8;</i>' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>',
+      toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);"><i class="fa">&#xf2a8;</i>' + ((navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>',
       // check answers button for written exercises
       check_answers : '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();"><i class="fa">&#xf00c;</i>Check Answers</button></div>',
       back_to_dict : '<button class="button" onclick="Genki.appendix.jisho.reset();"><i class="fa">&#xf021;</i>Back to Dictionary</button>'
@@ -1140,7 +1140,7 @@
 
         // add a class for the helper styles
         if (helperPresent) {
-          zone.className += ' helper-' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+          zone.className += ' helper-' + ((navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
         
         // generate the answers
@@ -1225,7 +1225,7 @@
         // check if furigana is present and add a toggle button
         if (/data-helper/.test(quiz)) {
           helper = true;
-          zone.className += ' helper-' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+          zone.className += ' helper-' + ((navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
 
         // add the quiz to the document
@@ -1309,7 +1309,7 @@
         // check if furigana is present and add a toggle button
         if (/class="furigana"/.test(quiz)) {
           helper = true;
-          zone.className += ' helper-' + ((window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+          zone.className += ' helper-' + ((navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
 
         // add the multi-choice quiz to the quiz zone
@@ -1973,7 +1973,7 @@
       
       // toggles furigana in drag and drop quizzes
       furigana : function (button) {
-        var state = (window.localStorage && localStorage.furiganaVisible) || 'true',
+        var state = (navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible) || 'true',
             zone = document.getElementById('quiz-zone');
         
         // hide or show the textual aids
@@ -1998,7 +1998,7 @@
         Genki.lang.toggle_furigana = button.outerHTML;
         
         // save settings if supported
-        if (window.localStorage) {
+        if (navigator.cookieEnabled && window.localStorage) {
           localStorage.furiganaVisible = state;
         }
       },
