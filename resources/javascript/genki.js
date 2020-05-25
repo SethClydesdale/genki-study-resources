@@ -1973,8 +1973,8 @@
       
       // toggles furigana in drag and drop quizzes
       furigana : function (button) {
-        var state = (navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible) || 'true',
-            zone = document.getElementById('quiz-zone');
+        var zone = document.getElementById('quiz-zone'),
+            state = (navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible) || (/helper-hidden/.test(zone.className) ? 'false' : 'true');
         
         // hide or show the textual aids
         switch (state) {
