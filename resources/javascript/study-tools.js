@@ -182,12 +182,14 @@
       document.getElementById('downloadCode').href = 'data:,' + encodeURIComponent(json.replace(/\n/g, '\r\n'));
 
       // save JSON to localStorage
-      window.localStorage[{
-        vocab : 'customVocab',
-        spelling : 'customSpelling',
-        quiz : 'customQuiz',
-        fill : 'customWrittenQuiz'
-      }[this.type]] = json;
+      if (navigator.cookieEnabled && window.localStorage) {
+        window.localStorage[{
+          vocab : 'customVocab',
+          spelling : 'customSpelling',
+          quiz : 'customQuiz',
+          fill : 'customWrittenQuiz'
+        }[this.type]] = json;
+      }
     },
 
 
@@ -200,7 +202,7 @@
         fill : 'customWrittenQuiz'
       }[this.type];
 
-      if (window.localStorage[type]) {
+      if (navigator.cookieEnabled && window.localStorage && window.localStorage[type]) {
         document.getElementById('study-tool-json').value = window.localStorage[type];
         this.updateUI();
         this.updateJSON();
@@ -218,7 +220,8 @@
       } else {
         GenkiModal.open({
           title : 'Ready to Study?',
-          content : 'Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save code" to save it to a text document. (click "do not warn me" to disable this message)',
+          content : 'Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save code" to save it to a text document. (click "do not warn me" to disable this message)'+
+          (navigator.cookieEnabled ? '' : '<br><br><div style="color:#F00;font-weight:bold;">WARNING: Cookies are blocked by your browser, so your custom exercise will NOT be saved. Please click "close" and then click "Save code" to backup your custom exercise.</div>'),
 
           callback : Genki.tools.begin
         });
@@ -310,7 +313,7 @@
       handleCheckbox : function (caller, state) {
         if (state) {
           caller.checked = state == 'true' ? true : false;
-        } else {
+        } else if (navigator.cookieEnabled && window.localStorage) {
           window.localStorage[caller.id] = caller.checked;
         }
       },
@@ -318,17 +321,19 @@
 
       // function for restoring settings shared over various tools
       restore : function () {
-        var settings = [
-          'noStudyWarning', 
-          'prettyCode'
-        ],
+        if (navigator.cookieEnabled && window.localStorage) {
+          var settings = [
+            'noStudyWarning', 
+            'prettyCode'
+          ],
 
-        i = 0,
-        j = settings.length;
+          i = 0,
+          j = settings.length;
 
-        for (; i < j; i++) {
-          if (window.localStorage[settings[i]]) {
-            this.handleCheckbox(document.getElementById(settings[i]), window.localStorage[settings[i]]);
+          for (; i < j; i++) {
+            if (window.localStorage[settings[i]]) {
+              this.handleCheckbox(document.getElementById(settings[i]), window.localStorage[settings[i]]);
+            }
           }
         }
       }
