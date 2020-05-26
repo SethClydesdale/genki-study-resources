@@ -25,7 +25,7 @@
       // Initial setup of the dictionary by adding checkboxes, filling out the English-Japanese dictionary, and more..
       init : function () {
         var def, i, j, k, ja, en, cleaned, list,
-            checked = window.localStorage && localStorage.selectedDefinitions ? localStorage.selectedDefinitions.split(',') : [],
+            checked = navigator.cookieEnabled && window.localStorage && localStorage.selectedDefinitions ? localStorage.selectedDefinitions.split(',') : [],
             sorted = [],
             defList = {},
             frag, group, first,
@@ -204,7 +204,7 @@
         Genki.appendix.jisho.mode = mode;
 
         // save preferences
-        if (!init && window.localStorage) {
+        if (!init && navigator.cookieEnabled && window.localStorage) {
           localStorage.genkiJishoMode = mode;
         }
       },
@@ -242,7 +242,7 @@
         }
 
         // save selected
-        if (!selectAll && window.localStorage) {
+        if (!selectAll && navigator.cookieEnabled && window.localStorage) {
           localStorage.selectedDefinitions = Genki.appendix.jisho.selected;
         }
       },
@@ -278,7 +278,7 @@
         }
         
         // save selected
-        if (window.localStorage) {
+        if (navigator.cookieEnabled && window.localStorage) {
           localStorage.selectedDefinitions = Genki.appendix.jisho.selected;
         }
       },
@@ -434,7 +434,7 @@
           }
           
           // update storage with correction
-          if (window.localStorage) {
+          if (navigator.cookieEnabled && window.localStorage) {
             localStorage.selectedDefinitions = Genki.appendix.jisho.selected;
           }
           
@@ -455,10 +455,10 @@
             content : 'Are you ready to practice your selected words? Please select the type of exercise you would like to practice with below.<br><br>'+
             '<div class="center">'+
               '<select id="dict-exercise-type">'+
-                '<option value="multi"' + ( window.localStorage && localStorage.genkiJishoExercise == 'multi' ? ' selected' : '') + '>Multiple Choice</option>'+
-                '<option value="drag"' + ( window.localStorage && localStorage.genkiJishoExercise == 'drag' ? ' selected' : '') + '>Drag and Drop</option>'+
-                '<option value="writing"' + ( window.localStorage && localStorage.genkiJishoExercise == 'writing' ? ' selected' : '') + '>Spelling Practice</option>'+
-                '<option value="fill"' + ( window.localStorage && localStorage.genkiJishoExercise == 'fill' ? ' selected' : '') + '>Write the Definition</option>'+
+                '<option value="multi"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiJishoExercise == 'multi' ? ' selected' : '') + '>Multiple Choice</option>'+
+                '<option value="drag"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiJishoExercise == 'drag' ? ' selected' : '') + '>Drag and Drop</option>'+
+                '<option value="writing"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiJishoExercise == 'writing' ? ' selected' : '') + '>Spelling Practice</option>'+
+                '<option value="fill"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiJishoExercise == 'fill' ? ' selected' : '') + '>Write the Definition</option>'+
               '</select>'+
             '</div>',
 
@@ -476,7 +476,7 @@
                   quizlet;
               
               // store selection
-              if (window.localStorage) {
+              if (navigator.cookieEnabled && window.localStorage) {
                 localStorage.genkiJishoExercise = type;
               }
               
@@ -622,7 +622,7 @@
       
       // restores preferences for the dictionary
       restoreSettings : function () {
-        if (window.localStorage) {
+        if (navigator.cookieEnabled && window.localStorage) {
           
           // dictionary mode pref.
           if (localStorage.genkiJishoMode && localStorage.genkiJishoMode != 'ja') {
@@ -647,14 +647,14 @@
         content : 'Are you ready to study the map of Japan? Please select the quiz you would like to take below.<br><br>'+
         '<div class="center">'+
           '<select id="selected-map">'+
-            '<option value="1"' + ( window.localStorage && localStorage.genkiSelectedMap == '1' ? ' selected' : '') + '>Hokkaido and Tohoku Region (1-8)</option>'+
-            '<option value="2"' + ( window.localStorage && localStorage.genkiSelectedMap == '2' ? ' selected' : '') + '>Kanto Region (9-15)</option>'+
-            '<option value="3"' + ( window.localStorage && localStorage.genkiSelectedMap == '3' ? ' selected' : '') + '>Chubu Region (16-23)</option>'+
-            '<option value="4"' + ( window.localStorage && localStorage.genkiSelectedMap == '4' ? ' selected' : '') + '>Kinki Region (24-30)</option>'+
-            '<option value="5"' + ( window.localStorage && localStorage.genkiSelectedMap == '5' ? ' selected' : '') + '>Chugoku and Shikoku Region (31-39)</option>'+
-            '<option value="6"' + ( window.localStorage && localStorage.genkiSelectedMap == '6' ? ' selected' : '') + '>Kyushu Region (40-47)</option>'+
-            '<option value="7"' + ( window.localStorage && localStorage.genkiSelectedMap == '7' ? ' selected' : '') + '>Cities and Landmarks 1 (48-58)</option>'+
-            '<option value="8"' + ( window.localStorage && localStorage.genkiSelectedMap == '8' ? ' selected' : '') + '>Cities and Landmarks 2 (59-69)</option>'+
+            '<option value="1"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiSelectedMap == '1' ? ' selected' : '') + '>Hokkaido and Tohoku Region (1-8)</option>'+
+            '<option value="2"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiSelectedMap == '2' ? ' selected' : '') + '>Kanto Region (9-15)</option>'+
+            '<option value="3"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiSelectedMap == '3' ? ' selected' : '') + '>Chubu Region (16-23)</option>'+
+            '<option value="4"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiSelectedMap == '4' ? ' selected' : '') + '>Kinki Region (24-30)</option>'+
+            '<option value="5"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiSelectedMap == '5' ? ' selected' : '') + '>Chugoku and Shikoku Region (31-39)</option>'+
+            '<option value="6"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiSelectedMap == '6' ? ' selected' : '') + '>Kyushu Region (40-47)</option>'+
+            '<option value="7"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiSelectedMap == '7' ? ' selected' : '') + '>Cities and Landmarks 1 (48-58)</option>'+
+            '<option value="8"' + ( navigator.cookieEnabled && window.localStorage && localStorage.genkiSelectedMap == '8' ? ' selected' : '') + '>Cities and Landmarks 2 (59-69)</option>'+
           '</select>'+
         '</div>',
 
@@ -671,7 +671,7 @@
               i, j, n;
 
           // store selection
-          if (window.localStorage) {
+          if (navigator.cookieEnabled && window.localStorage) {
             localStorage.genkiSelectedMap = id;
           }
 
