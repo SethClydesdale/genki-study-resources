@@ -1293,7 +1293,7 @@
                 q[i].answers[n] = q[i].answers[n].slice(1);
               }
 
-              quiz += '<div class="quiz-multi-row"><div class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</div></div>';
+              quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</button></div>';
               isAnswer = false;
 
               q[i].answers.splice(n, 1);
