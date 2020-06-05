@@ -1252,6 +1252,8 @@ input.writing-zone-input:focus { border-color:#F60; }
 
 .quiz-multi-answer:hover { border-color:#F60; }
 .quiz-multi-answer:hover:before { color:#F60; }
+.quiz-multi-answer:focus { border-color:#F60; }
+.quiz-multi-answer:focus:before { color:#F60; }
 
 .multi-quiz.quiz-over .quiz-multi-answer { pointer-events:none; }
 .multi-quiz.quiz-over .text-selection-mode .quiz-multi-answer { pointer-events:auto; }
