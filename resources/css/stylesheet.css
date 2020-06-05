@@ -1240,12 +1240,12 @@ input.writing-zone-input:focus { border-color:#F60; }
 .text-selection-mode .quiz-multi-answer {
   cursor:text;
   outline:1px dashed #F60;
-  -webkit-touch-callout:auto;
-    -webkit-user-select:auto;
-     -khtml-user-select:auto;
-       -moz-user-select:auto;
-        -ms-user-select:auto;
-            user-select:auto;
+  -webkit-touch-callout:text;
+    -webkit-user-select:text;
+     -khtml-user-select:text;
+       -moz-user-select:text;
+        -ms-user-select:text;
+            user-select:text;
 }
 
 .quiz-multi-answer:before {
