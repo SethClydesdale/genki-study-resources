@@ -2178,7 +2178,7 @@
           '<h3 id="quick-jisho-title" class="main-title">Quick Dictionary <span id="quick-jisho-hits"></span></h3>'+
           '<div id="quick-jisho-content">'+
             '<div class="quick-jisho-row center">'+
-              '<input id="quick-jisho-search" type="text" placeholder="Search..." oninput="Genki.quickJisho.search(this.value);">'+
+              '<input tabindex="0" id="quick-jisho-search" type="text" placeholder="Search..." oninput="Genki.quickJisho.search(this.value);">'+
             '</div>'+
             '<div class="quick-jisho-row">'+
               '<ul id="quick-jisho-results"></ul>'+
@@ -2191,6 +2191,7 @@
         selector.style.display = 'none';
         selector.innerHTML = '<i class="fa">&#xf002;</i>Look up';
         selector.onclick = Genki.quickJisho.lookUp;
+        selector.tabIndex = '0';
         
         // add nodes to the document
         frag.appendChild(box);
@@ -2276,7 +2277,7 @@
                   if (Genki.jisho[k][i][l].toLowerCase().indexOf(value) != -1) {
                     ja = Genki.jisho[k][i].ja.split('|');
 
-                    results += '<li class="definition clear">'+
+                    results += '<li tabindex="0" class="definition clear">'+
                       '<span class="def-ja' + (ja[1] ? ' def-furi' : '') + '">'+
                         ja[0]+
                         (ja[1] ? '<i>' + ja[1] + '</i>' : '')+
@@ -2336,8 +2337,16 @@
 
           if (selection.type == 'Range' && selection.toString && !/quick-jisho/.test(selection.focusNode.className)) {
             Genki.quickJisho.selectedText = selection.toString();
+
             Genki.quickJisho.cache.selector.style.left = Genki.quickJisho.x + 'px';
             Genki.quickJisho.cache.selector.style.top = Genki.quickJisho.y + 'px';
+
+            // add selection button as child of selected text element
+            // this is done so the user can tab immediately to the 'Look up' button
+            // after selecting text
+            if (selection.focusNode.parentElement) {
+              selection.focusNode.parentElement.appendChild(Genki.quickJisho.cache.selector);
+            }
 
             if (Genki.quickJisho.selectorHidden) {
               Genki.quickJisho.cache.selector.style.display = '';
