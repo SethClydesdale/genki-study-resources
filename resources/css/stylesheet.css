@@ -597,7 +597,9 @@ footer li:first-child:before { display:none; }
 }
 
 button.quiz-item {
+  width:100%;
   display:block;
+  text-align:left;
 }
 
 #answer-list .quiz-item, .quiz-item.gu-mirror { cursor:move; }
