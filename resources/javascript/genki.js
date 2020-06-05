@@ -1467,7 +1467,7 @@
 
             } else {
               target.className += ' answer-correct';
-              
+
               // unmark the marked item that was dropped
               if (Genki.markedItem) {
                 Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
@@ -1535,6 +1535,12 @@
               else {
                 e.target.className += ' answer-correct';
                 e.target.appendChild(Genki.markedItem);
+
+                // prevent the correct answer from being tabbed to
+                // this also includes the element we just added
+                e.target.tabIndex = -1;
+                e.target.firstChild.tabIndex = -1;
+
                 Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
                 Genki.markedItem = null;
 
