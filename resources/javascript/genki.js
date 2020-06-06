@@ -1147,7 +1147,7 @@
         quiz += '<div id="answer-list">';
         while (keysA.length) {
           i = Math.floor(Math.random() * keysA.length);
-          quiz += '<button class="quiz-item" data-answer="' + keysA[i].replace(/\|.*?$/, '') + '">' + o.quizlet[keysA[i]] + '</button>';
+          quiz += '<div tabindex="0" class="quiz-item" data-answer="' + keysA[i].replace(/\|.*?$/, '') + '">' + o.quizlet[keysA[i]] + '</div>';
           keysA.splice(i, 1);
         }
         quiz += '</div>'; // close the answer list
@@ -1174,12 +1174,12 @@
           for (k in kana[i]) {
             quiz += 
             '<div class="quiz-item-row">'+
-              '<div class="quiz-answer-zone" data-text="' + kana[i][k] + '" data-mistakes="0"></div>'+
+              '<div tabindex="0" class="quiz-answer-zone" data-text="' + kana[i][k] + '" data-mistakes="0"></div>'+
               '<div class="quiz-item">' + kana[i][k] + '</div>'+
             '</div>';
 
             // put the kana into an array for later..
-            kanaList.push('<div class="quiz-item" data-answer="' + kana[i][k] + '">' + k + '</div>');
+            kanaList.push('<div tabindex="0" class="quiz-item" data-answer="' + kana[i][k] + '">' + k + '</div>');
             ++Genki.stats.problems;
           }
 
@@ -1272,7 +1272,7 @@
 
           // ready-only questions contain text only, no answers
           if (q[i].text) {
-            quiz += '<div class="quiz-multi-row"><div class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, true);">NEXT</div></div>';
+            quiz += '<div class="quiz-multi-row"><div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, true);" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this);">NEXT</div></div>';
             ++Genki.stats.exclude; // exclude this block from the overall score
 
           } else { // standard question block construction
@@ -1293,7 +1293,7 @@
                 q[i].answers[n] = q[i].answers[n].slice(1);
               }
 
-              quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</button></div>';
+              quiz += '<div class="quiz-multi-row"><div tabindex="0" class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this);">' + q[i].answers[n] + '</div></div>';
               isAnswer = false;
 
               q[i].answers.splice(n, 1);
@@ -1503,7 +1503,7 @@
               // mark the new active one
               Genki.markedItem = e.target;
               Genki.markedItem.className += ' markedItem';
-            } 
+            }
             
             // attempt dropping the marked quiz item to an answer zone
             else if (Genki.markedItem && /quiz-answer-zone/.test(e.target.className)) {
@@ -1520,7 +1520,7 @@
                 e.target.id = 'wrongAnswer';
                 
                 // remove the notification after 1 second
-                Genki.wrongTimeout = window.setTimeout(function () {
+                Genki.wrongTimeout = setTimeout(function () {
                   document.getElementById('wrongAnswer').id = '';
                   delete Genki.wrongTimeout;
                 }, 1000);
@@ -2167,9 +2167,13 @@
         
         // button attrs
         button.id = 'quick-jisho-toggle';
-        button.onclick = Genki.quickJisho.toggle;
         button.innerHTML = '<i class="fa">&#xf02d;</i>';
         button.title = 'Toggle Quick Dictionary'
+        button.tabIndex = 0;
+        button.onclick = Genki.quickJisho.toggle;
+        button.onkeypress = function (e) {
+          e.key == 'Enter' && Genki.quickJisho.toggle();
+        }
         
         // box attrs
         box.id = 'quick-jisho-window';
@@ -2191,7 +2195,7 @@
         selector.style.display = 'none';
         selector.innerHTML = '<i class="fa">&#xf002;</i>Look up';
         selector.onclick = Genki.quickJisho.lookUp;
-        selector.tabIndex = '0';
+        selector.tabIndex = 0;
         
         // add nodes to the document
         frag.appendChild(box);
@@ -2213,10 +2217,21 @@
         document.onselectionchange = Genki.quickJisho.getSelection;
         
         // get mouse position for adjusting x/y values of the selector
-        document.onmousemove = function(e) {
+        document.onmousemove = function (e) {
           Genki.quickJisho.x = Math.abs(e.pageX - document.body.clientWidth) < 100 ? e.pageX - 95 : e.pageX;
           Genki.quickJisho.y = Math.abs(e.pageY - document.body.clientHeight) < 40 ? e.pageY - 32 : e.pageY + 12;
-        }
+        };
+        
+        // LOOKUP TAB SOLUTION
+        // key handler for focusing the dictionary lookup button with a tab press
+        // TODO: Firefox behavior is sketchy with this method, will need to add fallback for it (Chromium: OK; MS Edge: ???)
+        // IDEA: Add selected text to lookup button as data attribute on tab, then get the text from it when hitting enter (for Firefox only, or additional affected browsers; will need to perform more tests)
+        document.onkeydown = function (e) {
+          if (!Genki.quickJisho.selectorHidden && e.key == 'Tab') {
+            Genki.quickJisho.cache.selector.focus();
+            e.preventDefault();
+          }
+        };
       },
       
       
@@ -2340,12 +2355,14 @@
             Genki.quickJisho.cache.selector.style.left = Genki.quickJisho.x + 'px';
             Genki.quickJisho.cache.selector.style.top = Genki.quickJisho.y + 'px';
 
+            // DISABLED: Position of lookup button is offset greatly when the page has overflow, also has a few conflicts with tabbing in workbook exercises.
+            // SOLUTION: see (CTRL+F) "LOOKUP TAB SOLUTION"
             // add selection button as child of selected text element
             // this is done so the user can tab immediately to the 'Look up' button
             // after selecting text
-            if (selection.focusNode.parentElement) {
-              selection.focusNode.parentElement.appendChild(Genki.quickJisho.cache.selector);
-            }
+            //if (selection.focusNode.parentElement) {
+            //  selection.focusNode.parentElement.appendChild(Genki.quickJisho.cache.selector);
+            //}
 
             if (Genki.quickJisho.selectorHidden) {
               Genki.quickJisho.cache.selector.style.display = '';
