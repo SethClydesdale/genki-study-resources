@@ -1126,7 +1126,7 @@
           
           // add the quiz items and drop zones
           quiz += '<div class="quiz-item" ' + (helper || '') + '>' + (helper ? keysQ[i].replace(/(.*?)\|(.*)/, '$1<span class="hidden-text">$2</span>') : keysQ[i]) + '</div>';
-          dropList += '<div class="quiz-answer-zone' + (/\|/.test(keysQ[i]) ? ' helper-answer' : '') + '" data-text="' + keysQ[i].replace(/\|.*?$/, '') + '" data-mistakes="0"></div>';
+          dropList += '<div tabindex="0" class="quiz-answer-zone' + (/\|/.test(keysQ[i]) ? ' helper-answer' : '') + '" data-text="' + keysQ[i].replace(/\|.*?$/, '') + '" data-mistakes="0"></div>';
           keysQ.splice(i, 1);
           
           ++Genki.stats.problems;
@@ -1147,7 +1147,7 @@
         quiz += '<div id="answer-list">';
         while (keysA.length) {
           i = Math.floor(Math.random() * keysA.length);
-          quiz += '<div class="quiz-item" data-answer="' + keysA[i].replace(/\|.*?$/, '') + '">' + o.quizlet[keysA[i]] + '</div>';
+          quiz += '<button class="quiz-item" data-answer="' + keysA[i].replace(/\|.*?$/, '') + '">' + o.quizlet[keysA[i]] + '</button>';
           keysA.splice(i, 1);
         }
         quiz += '</div>'; // close the answer list
@@ -1293,7 +1293,7 @@
                 q[i].answers[n] = q[i].answers[n].slice(1);
               }
 
-              quiz += '<div class="quiz-multi-row"><div class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</div></div>';
+              quiz += '<div class="quiz-multi-row"><button class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);">' + q[i].answers[n] + '</button></div>';
               isAnswer = false;
 
               q[i].answers.splice(n, 1);
@@ -1467,7 +1467,7 @@
 
             } else {
               target.className += ' answer-correct';
-              
+
               // unmark the marked item that was dropped
               if (Genki.markedItem) {
                 Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
@@ -1485,66 +1485,79 @@
 
         Genki.drake = drake;
         
-        // event listener for marking and dropping answers with a click
-        document.addEventListener('click', function (e) {
-          // mark the currently active quiz item
-          if (/quiz-item/.test(e.target.className) && e.target.parentNode.id == 'answer-list') {
-            // unmark the last active quiz item
-            if (Genki.markedItem) {
-              Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
+        // event listener for marking and dropping answers with either a click or the 'Enter' key being pressed
+        ['click', 'keypress'].forEach(function (eventName) {
+          document.addEventListener(eventName, function (e) {
+            // if the event was a keypress and the key was not enter, bail out
+            if (eventName === 'keypress' && e.key !== 'Enter') {
+              return;
             }
-            
-            // mark the new active one
-            Genki.markedItem = e.target;
-            Genki.markedItem.className += ' markedItem';
-          } 
-          
-          // attempt dropping the marked quiz item to an answer zone
-          else if (Genki.markedItem && /quiz-answer-zone/.test(e.target.className)) {
-            // wrong answer
-            if (Genki.markedItem.dataset.answer != e.target.dataset.text) {
-              // remove the old notification
-              if (Genki.wrongTimeout) {
-                document.getElementById('wrongAnswer').id = '';
-                clearTimeout(Genki.wrongTimeout);
-                delete Genki.wrongTimeout;
+
+            // mark the currently active quiz item
+            if (/quiz-item/.test(e.target.className) && e.target.parentNode.id == 'answer-list') {
+              // unmark the last active quiz item
+              if (Genki.markedItem) {
+                Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
               }
               
-              // if the answer is wrong we'll display a small notification using CSS (see #wrongAnswer in stylesheet.css)
-              e.target.id = 'wrongAnswer';
-              
-              // remove the notification after 1 second
-              Genki.wrongTimeout = window.setTimeout(function () {
-                document.getElementById('wrongAnswer').id = '';
-                delete Genki.wrongTimeout;
-              }, 1000);
-
-              // global mistakes are incremented along with mistakes specific to problems
-              e.target.dataset.mistakes = ++e.target.dataset.mistakes;
-              ++Genki.stats.mistakes;
-
+              // mark the new active one
+              Genki.markedItem = e.target;
+              Genki.markedItem.className += ' markedItem';
             } 
             
-            // correct answer
-            else {
-              e.target.className += ' answer-correct';
-              e.target.appendChild(Genki.markedItem);
+            // attempt dropping the marked quiz item to an answer zone
+            else if (Genki.markedItem && /quiz-answer-zone/.test(e.target.className)) {
+              // wrong answer
+              if (Genki.markedItem.dataset.answer != e.target.dataset.text) {
+                // remove the old notification
+                if (Genki.wrongTimeout) {
+                  document.getElementById('wrongAnswer').id = '';
+                  clearTimeout(Genki.wrongTimeout);
+                  delete Genki.wrongTimeout;
+                }
+                
+                // if the answer is wrong we'll display a small notification using CSS (see #wrongAnswer in stylesheet.css)
+                e.target.id = 'wrongAnswer';
+                
+                // remove the notification after 1 second
+                Genki.wrongTimeout = window.setTimeout(function () {
+                  document.getElementById('wrongAnswer').id = '';
+                  delete Genki.wrongTimeout;
+                }, 1000);
+
+                // global mistakes are incremented along with mistakes specific to problems
+                e.target.dataset.mistakes = ++e.target.dataset.mistakes;
+                ++Genki.stats.mistakes;
+
+              } 
+              
+              // correct answer
+              else {
+                e.target.className += ' answer-correct';
+                e.target.appendChild(Genki.markedItem);
+
+                // prevent the correct answer from being tabbed to
+                // this also includes the element we just added
+                e.target.tabIndex = -1;
+                e.target.firstChild.tabIndex = -1;
+
+                Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
+                Genki.markedItem = null;
+
+                // when all problems have been solved..
+                // stop the timer, show the score, and congratulate the student
+                if (++Genki.stats.solved == Genki.stats.problems) {
+                  Genki.endQuiz();
+                }
+              }
+            } 
+            
+            // no conditions met, unmark the currently marked item
+            else if (Genki.markedItem) {
               Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
               Genki.markedItem = null;
-
-              // when all problems have been solved..
-              // stop the timer, show the score, and congratulate the student
-              if (++Genki.stats.solved == Genki.stats.problems) {
-                Genki.endQuiz();
-              }
             }
-          } 
-          
-          // no conditions met, unmark the currently marked item
-          else if (Genki.markedItem) {
-            Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
-            Genki.markedItem = null;
-          }
+          });
         });
       }
 
@@ -2165,7 +2178,7 @@
           '<h3 id="quick-jisho-title" class="main-title">Quick Dictionary <span id="quick-jisho-hits"></span></h3>'+
           '<div id="quick-jisho-content">'+
             '<div class="quick-jisho-row center">'+
-              '<input id="quick-jisho-search" type="text" placeholder="Search..." oninput="Genki.quickJisho.search(this.value);">'+
+              '<input tabindex="0" id="quick-jisho-search" type="text" placeholder="Search..." oninput="Genki.quickJisho.search(this.value);">'+
             '</div>'+
             '<div class="quick-jisho-row">'+
               '<ul id="quick-jisho-results"></ul>'+
@@ -2178,6 +2191,7 @@
         selector.style.display = 'none';
         selector.innerHTML = '<i class="fa">&#xf002;</i>Look up';
         selector.onclick = Genki.quickJisho.lookUp;
+        selector.tabIndex = '0';
         
         // add nodes to the document
         frag.appendChild(box);
@@ -2263,7 +2277,7 @@
                   if (Genki.jisho[k][i][l].toLowerCase().indexOf(value) != -1) {
                     ja = Genki.jisho[k][i].ja.split('|');
 
-                    results += '<li class="definition clear">'+
+                    results += '<li tabindex="0" class="definition clear">'+
                       '<span class="def-ja' + (ja[1] ? ' def-furi' : '') + '">'+
                         ja[0]+
                         (ja[1] ? '<i>' + ja[1] + '</i>' : '')+
@@ -2325,6 +2339,13 @@
             Genki.quickJisho.selectedText = selection.toString();
             Genki.quickJisho.cache.selector.style.left = Genki.quickJisho.x + 'px';
             Genki.quickJisho.cache.selector.style.top = Genki.quickJisho.y + 'px';
+
+            // add selection button as child of selected text element
+            // this is done so the user can tab immediately to the 'Look up' button
+            // after selecting text
+            if (selection.focusNode.parentElement) {
+              selection.focusNode.parentElement.appendChild(Genki.quickJisho.cache.selector);
+            }
 
             if (Genki.quickJisho.selectorHidden) {
               Genki.quickJisho.cache.selector.style.display = '';
