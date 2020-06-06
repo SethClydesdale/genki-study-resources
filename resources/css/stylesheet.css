@@ -596,17 +596,20 @@ footer li:first-child:before { display:none; }
   white-space:nowrap;
 }
 
-button.quiz-item {
-  width:100%;
-  display:block;
-  text-align:left;
-}
-
 #answer-list .quiz-item, .quiz-item.gu-mirror { cursor:move; }
 
+/* focus states for draggable items and drop zones */
+.drag-quiz .quiz-answer-zone:focus, .drag-quiz .quiz-item:focus,
+.kana-quiz .quiz-answer-zone:focus, .kana-quiz .quiz-item:focus {
+  color:#F60;
+  border-color:#F60;
+  outline:none;
+}
+
+/* selected quiz item for dropping */
 .quiz-item.markedItem {
   border-color:#F60;
-  outline:1px solid #F60;
+  outline:1px solid #F60 !important;
   box-shadow:3px 3px 3px rgba(0, 0, 0, 0.25);
   position:relative;
 }
@@ -1240,12 +1243,12 @@ input.writing-zone-input:focus { border-color:#F60; }
 .text-selection-mode .quiz-multi-answer {
   cursor:text;
   outline:1px dashed #F60;
-  -webkit-touch-callout:text;
-    -webkit-user-select:text;
-     -khtml-user-select:text;
-       -moz-user-select:text;
-        -ms-user-select:text;
-            user-select:text;
+  -webkit-touch-callout:auto;
+    -webkit-user-select:auto;
+     -khtml-user-select:auto;
+       -moz-user-select:auto;
+        -ms-user-select:auto;
+            user-select:auto;
 }
 
 .quiz-multi-answer:before {
@@ -1257,10 +1260,13 @@ input.writing-zone-input:focus { border-color:#F60; }
   margin-top:-10px;
 }
 
-.quiz-multi-answer:hover { border-color:#F60; }
-.quiz-multi-answer:hover:before { color:#F60; }
-.quiz-multi-answer:focus { border-color:#F60; }
-.quiz-multi-answer:focus:before { color:#F60; }
+.quiz-multi-answer:hover, .quiz-multi-answer:focus {
+  border-color:#F60;
+}
+
+.quiz-multi-answer:hover:before, .quiz-multi-answer:focus:before {
+  color:#F60;
+}
 
 .multi-quiz.quiz-over .quiz-multi-answer { pointer-events:none; }
 .multi-quiz.quiz-over .text-selection-mode .quiz-multi-answer { pointer-events:auto; }
@@ -2077,7 +2083,11 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   bottom:5px;
   cursor:pointer;
 }
-#quick-jisho-toggle:hover { opacity:0.7; }
+
+#quick-jisho-toggle:hover, #quick-jisho-toggle:focus {
+  opacity:0.7;
+  outline:none;
+}
 
 #quick-jisho-window {
   background:#FFF;
@@ -2123,13 +2133,19 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   overflow-y:auto;
 }
 
+/* focus style for when tabbing through quick jisho results; highlights the text */
+#quick-jisho-results .definition:focus {
+  color:#F60;
+  outline:none;
+}
+
 #quick-jisho-selector {
   border-radius:15px;
   border:1px solid rgba(0, 0, 0, 0.15);
   box-shadow:0px 0px 3px rgba(0, 0, 0, 0.25);
   padding:3px 9px;
   margin:0;
-  position:fixed;
+  position:absolute;
   z-index:9999;
 }
 
