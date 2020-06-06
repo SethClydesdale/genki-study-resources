@@ -2337,7 +2337,6 @@
 
           if (selection.type == 'Range' && selection.toString && !/quick-jisho/.test(selection.focusNode.className)) {
             Genki.quickJisho.selectedText = selection.toString();
-
             Genki.quickJisho.cache.selector.style.left = Genki.quickJisho.x + 'px';
             Genki.quickJisho.cache.selector.style.top = Genki.quickJisho.y + 'px';
 
