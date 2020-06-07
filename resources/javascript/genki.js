@@ -1489,7 +1489,7 @@
         ['click', 'keypress'].forEach(function (eventName) {
           document.addEventListener(eventName, function (e) {
             // if the event was a keypress and the key was not enter, bail out
-            if (eventName === 'keypress' && e.key !== 'Enter') {
+            if (e.type == 'keypress' && e.key != 'Enter') {
               return;
             }
 
@@ -1556,6 +1556,11 @@
             else if (Genki.markedItem) {
               Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
               Genki.markedItem = null;
+            }
+            
+            // blur drop zone if clicking (clears confusion that one can mark a drop zone, then click a quiz item to drop it there)
+            if (e.type == 'click' && /quiz-answer-zone/.test(e.target.className)) {
+              e.target.blur();
             }
           });
         });
