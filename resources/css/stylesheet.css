@@ -1787,6 +1787,7 @@ p.section-desc {
 
 #light-switch {
   background-color:rgba(0, 0, 0, 0.25);
+  border:1px solid rgba(0, 0, 0, 0.25);
   vertical-align:middle;
   display:inline-block;
   position:relative;
@@ -1795,6 +1796,11 @@ p.section-desc {
   border-radius:20px;
   cursor:pointer;
   overflow:hidden;
+}
+
+#light-switch:focus {
+  border:1px solid #F60;
+  outline:none;
 }
 
 #light-switch > input { display:none; }

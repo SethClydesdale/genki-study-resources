@@ -37,7 +37,15 @@
     
     // set button params
     button.id = 'light-switch';
+    button.tabIndex = 0;
     button.innerHTML = '<input id="light-switch-checkbox" type="checkbox" ' + (window.localStorage.darkMode == 'on' ? 'checked="true"' : '') + '/><div></div>';
+    
+    // toggle dark mode when the enter key is press while focused
+    button.onkeyup = function (e) {
+      if (e.key == 'Enter') this.firstChild.click();
+    };
+    
+    // toggles dark mode when the checkbox state changes
     button.firstChild.onchange = function () {
       var root = document.documentElement, css;
       
