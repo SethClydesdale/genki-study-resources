@@ -15,6 +15,8 @@
     //    noFocus : bool, (keeps buttons from being focused)
     //      focus : string, (pass a css selector to focus a specific element; overrides noFocus)
     //   keepOpen : bool, (keeps the modal open when clicking the callback button; useful for opening another modal afterwards)
+    //    noClose : bool, (removes the close button)
+    //     zIndex : 'low', lowers the z-index so the exercise menu can be used
     //   callback : function
     // } // all values are optional
     open : function (o) {
@@ -26,12 +28,12 @@
       var modal = document.createElement('DIV'), button, buttons;
       modal.id = 'genki-modal';
       modal.innerHTML = 
-      '<div id="genki-modal-overlay"></div>'+
-      '<div id="genki-modal-body">'+
+      '<div id="genki-modal-overlay"' + ( o.zIndex == 'low' ? ' style="z-index:1;"' : '' ) + '></div>'+
+      '<div id="genki-modal-body"' + ( o.zIndex == 'low' ? ' style="z-index:2;"' : '' ) + '>'+
         '<h2 id="genki-modal-header">' + ( o.title ? o.title : 'Popup' ) + '</h2>'+
         '<div id="genki-modal-content">' + ( o.content ? o.content : '' ) + '</div>'+
         '<div id="genki-modal-buttons" class="center">'+
-          '<button id="genki-modal-close" class="button" onclick="GenkiModal.close();">Close</button>'+
+          (o.noClose ? '' : '<button id="genki-modal-close" class="button" onclick="GenkiModal.close();">Close</button>')+
         '</div>'+
       '</div>';
 
@@ -94,7 +96,7 @@
     for (var input = document.querySelectorAll('input[type="checkbox"], input[type="radio"]'), i = 0, j = input.length, type; i < j; i++) {
       if (!/light-switch-checkbox|genki_input_hidden/g.test(input[i].outerHTML)) { // exclusions
         input[i].className += ' genki_input_hidden';
-        input[i].insertAdjacentHTML('afterend', '<span class="genki_pseudo_' + input[i].type + '" onclick="this.previousSibling.click(); return false;"/>');
+        input[i].insertAdjacentHTML('afterend', '<span tabindex="0" class="genki_pseudo_' + input[i].type + '" onclick="this.previousSibling.click();" onkeypress="event.key == \'Enter\' && this.previousSibling.click();"/>');
       }
     }
   };
@@ -115,13 +117,13 @@
   window.getPaths = function () {
     var path = window.location.pathname;
     
-    if (/\/lessons\//.test(path)) {
+    if (/\/lessons\/|\/lessons-3rd\/.*?\//.test(path)) {
       return '../../../'
       
     } else if (/\/help\/.*?\//.test(path)) {
       return '../../'    
       
-    } else if (/\/report\/|\/download\/|\/donate\/|\/privacy\/|\/help\/(index|$)/.test(path)) {
+    } else if (/\/lessons-3rd\/|\/report\/|\/download\/|\/donate\/|\/privacy\/|\/help\/(index|$)/.test(path)) {
       return '../';  
                
     } else {
