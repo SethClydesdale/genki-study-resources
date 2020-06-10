@@ -233,6 +233,16 @@ header {
   margin-top:-50px;
 }
 
+.edition-icon:after {
+  font-size:14px;
+  position:absolute;
+  margin-top:40px;
+  margin-left:-85px;
+}
+
+.edition-icon.second-ed:after { content:"\A 2nd Edition"; }
+.edition-icon.third-ed:after { content:"\A 3rd Edition"; }
+
 header h1 { font-size:32px; }
 header h1 a { color:#FFF; }
 
@@ -269,6 +279,7 @@ a#fork-me:hover, a#fork-me:focus {
   border:1px solid #C30;
   border-right:none;
   border-left:none;
+  height:105px;
 }
 
 #announce-inner {
@@ -386,16 +397,19 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   margin:10px 10px 0 0;
 }
 
+#link-edition     { background-color:#F60; border-bottom:2px solid #D40; }
 #link-help      { background-color:#39C; border-bottom:2px solid #17A; }
 #link-report    { background-color:#F66; border-bottom:2px solid #D44; }
 #link-download  { background-color:#9C6; border-bottom:2px solid #7A4; }
 #link-donate    { background-color:#C6C; border-bottom:2px solid #A4A; }
 #link-github    { background-color:#96F; border-bottom:2px solid #74D; }
+#link-edition:hover     { background-color:#E50; }
 #link-help:hover     { background-color:#28B; }
 #link-report:hover   { background-color:#E55; }
 #link-download:hover { background-color:#8B5; }
 #link-donate:hover   { background-color:#B5B; }
 #link-github:hover   { background-color:#85E; }
+#link-edition:active     { background-color:#D40; }
 #link-help:active     { background-color:#17A; }
 #link-report:active   { background-color:#D44; }
 #link-download:active { background-color:#7A4; }
@@ -554,6 +568,28 @@ a.jump-arrow:hover { color:#C30; }
 }
 
 
+/* lesson summary */
+.lesson-summary {
+  font-size:13px;
+  margin:10px;
+  padding:10px;
+  background:#EEE;
+  border:1px dashed #CCC;
+}
+
+.lesson-summary:before {
+  content:"In this lesson, we will learn how to...";
+  font-weight:bold;
+  color:#F60;
+}
+
+.lesson-point { margin-left:13px; }
+.lesson-point:before {
+  content:"• ";
+  color:#F60;
+}
+
+
 /* footer */
 footer {
   color:#FFF;
@@ -595,7 +631,6 @@ footer li:first-child:before { display:none; }
   min-width:25px;
   white-space:nowrap;
 }
-
 #answer-list .quiz-item, .quiz-item.gu-mirror { cursor:move; }
 
 /* focus states for draggable items and drop zones */
@@ -1116,6 +1151,10 @@ input.writing-zone-input:focus { border-color:#F60; }
   width:90% !important;
 }
 
+.fill-quiz .set-problem-width .problem {
+  width:150px;
+}
+
 
 /* mark incorrect answer */
 .writing-quiz.quiz-over .writing-zone-input { pointer-events:none; }
@@ -1358,6 +1397,7 @@ input.writing-zone-input:focus { border-color:#F60; }
   display:inline-block;
   margin-right:25px;
 }
+.fill-quiz .inline-problem.large-space .problem, .fill-quiz .inline-problem.large-space .block { margin-right:50px; }
 
 .fill-quiz .image-margin img, .margin { margin:3px; }
 
@@ -1430,6 +1470,10 @@ p.section-desc {
   content:counter(problems) ".";
   margin-right:6px;
   vertical-align:top;
+}
+
+.count-problems.count-alpha .problem:before {
+  content:counter(problems, lower-alpha) ".";
 }
 
 /* input style */
@@ -1857,7 +1901,11 @@ p.section-desc {
   cursor:pointer;
 }
 
-.genki_pseudo_checkbox:hover, .genki_pseudo_radio:hover { border-color:#F60; }
+.genki_pseudo_checkbox:hover, .genki_pseudo_radio:hover,
+.genki_pseudo_checkbox:focus, .genki_pseudo_radio:focus {
+  border-color:#F60;
+  outline:none;
+}
 
 /* disabled */
 input[disabled] + .genki_pseudo_checkbox, input[disabled] + .genki_pseudo_radio {
@@ -2242,6 +2290,8 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
     left:50%;
     margin-left:-60px;
   }
+  
+  .edition-icon:after { margin-top:30px; }
   
   /* display columns below one another */
   .columns-2 > *, .dictionary-group {

@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Custom Written Quiz - Study Tools | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Custom Written Quiz - Study Tools | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Custom Written Quiz - Study Tools | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Custom Written Quiz - Study Tools | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Setup a custom written quiz to help test yourself.">
+    <meta property="og:description" content="Setup a custom written quiz to help test yourself.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/study-tools/custom-written-quiz/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../" id="home-link" class="edition-icon third-ed">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="study-tool-editor" class="content-block loading">
+        <h2 id="custom-quiz" class="title center">ツール - Custom Written Quiz</h2>
+        <p>Welcome to the custom written quiz tool! Here you will be able to setup your own custom quiz that requires input via keyboard. These quizzes are a bit more advanced and require some <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="blank">HTML</a> to set things up properly. Please read over the <a href="#help-notes-and-tricks">help section</a> for more information.</p>
+        
+        <h2 id="quiz-settings" class="section-title">Written Quiz HTML</h2>
+        <p>Use the textarea below to setup your custom written quiz.</p>
+        <ol id="study-tool-ui" class="written-quiz">
+          <li class="item-row">
+            <textarea oninput="Genki.tools.updateJSON();"></textarea>
+          </li>
+        </ol>
+        <p><strong>Tip</strong>: You can remix existing exercises using <a href="#snippets">snippets</a>.</p>
+        
+        <h3 id="quiz-code" class="sub-title">Custom Written Quiz Code (JSON)</h3>
+        <p>The custom written quiz code is used to save your quiz. You can copy this code and save it to a text file for later, so you don't have to setup your quiz again. When you're ready to study once more, just paste the code into this textarea and click "study" to continue where you left off.</p>
+        
+        <div id="study-tool-code">
+          <textarea id="study-tool-json" oninput="Genki.tools.updateUI();Genki.tools.updateJSON();"></textarea>
+        </div>
+        
+        <ul id="study-tool-settings" class="clear">
+          <li><a id="downloadCode" title="Save to text file" download="Custom Written Quiz Code">Save code</a></li>
+          <li><input id="prettyCode" type="checkbox" onchange="Genki.tools.settings.prettify(this);"><label for="prettyCode">Prettify code</label></li>
+          <li><input id="noStudyWarning" type="checkbox" onchange="Genki.tools.settings.handleCheckbox(this);"><label for="noStudyWarning">Do not warn me</label></li>
+        </ul>
+        
+        <div class="center">
+          <button class="button" onclick="Genki.tools.study();"><i class="fa">&#xf040;</i>Study</button>
+        </div><br>
+        
+        <h3 id="help-notes-and-tricks" class="section-title">Help, Notes, and Tips</h3>
+        <p>The custom written quiz tool is a bit more advanced than the others, as it requires some minimal knowledge of HTML to use properly. However, because of this, these exercises are a bit more flexible in what you can create. Please read over each section carefully.</p>
+        
+        <strong>Quick Navigation</strong>
+        <ul>
+          <li><a href="#creating-input-zones">Creating Input Zones</a></li>
+          <li><a href="#input-zones-with-hints">Input Zones with Hints</a></li>
+          <li><a href="#input-zones-with-two-answers">Input Zones with Two Answers</a></li>
+          <li><a href="#input-zones-with-sub-answers">Input Zones with Sub-Answers</a></li>
+          <li><a href="#input-zones-with-furigana">Input Zones with Furigana</a></li>
+          <li><a href="#input-zones-with-custom-width">Input Zones with Custom Width</a></li>
+          <li><a href="#useful-html-elements">Useful HTML Elements</a></li>
+          <li><a href="#snippets">Snippets</a></li>
+        </ul>
+        
+        <br>
+        <h4 id="creating-input-zones" class="sub-title">Creating Input Zones</h4>
+        <p>Input Zones are used for answering questions that you create. They're fairly simple and straightforward. Your standard Input Zone looks like the following.</p>
+        <code>{ANSWER}</code>
+        <p>The two curly braces {} indicate an input zone, the text between these braces is the answer to a question. If the answer is wrong it'll show the correct answer at the end of the quiz below the input zone. (see example below.)</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="ANSWER" data-mistakes="1" style="width:84px;"></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="ANSWER" data-answer="ANSWER" data-mistakes="0" style="width:84px;" disabled></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="HELLO" data-answer="ANSWER" data-mistakes="1" style="width:84px;" disabled><span class="problem-answer">ANSWER</span></span></div>
+          </div>
+        </div>
+        
+        <br>
+        <h4 id="input-zones-with-hints" class="sub-title">Input Zones with Hints</h4>
+        <p>If you want to provide a hint for your input zone, add a horizontal bar after the answer; the text after the horizontal bar is the hint.</p>
+        <code>{ANSWER|HINT}</code>
+        <p>The hint will be shown beneath the input zone while the quiz is in progress, once the quiz is completed the correct answer will be shown, if it was answered incorrectly.</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="ANSWER" data-mistakes="0" style="width:80px;"><span class="problem-hint">HINT</span></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" value="ANSWER" data-answer="ANSWER" data-mistakes="0" style="width:80px;" disabled=""><span class="problem-hint">HINT</span></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="HELLO" data-answer="ANSWER" data-mistakes="1" style="width:80px;" disabled=""><span class="problem-hint">HINT</span><span class="problem-answer">ANSWER</span></span></div>
+          </div>
+        </div>
+        
+        <br>
+        <h4 id="input-zones-with-two-answers" class="sub-title">Input Zones with Two Answers</h4>
+        <p>If you want to allow an input zone to have two answers you use the syntax below.</p>
+        <code>{ANSWER1|ANSWER2|answer}</code>
+        <p>ANSWER1 and ANSWER2 will be answers to a question. The last text "answer" is a flag that tells the API that the HINT is now an ANSWER.</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="ANSWER1" data-answer2="ANSWER2" data-mistakes="0" tabindex="0" style="width:80px;"></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" value="ANSWER2" data-answer="ANSWER1" data-answer2="ANSWER2" data-mistakes="0" tabindex="0" style="width:80px;" disabled=""></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="HELLO" data-answer="ANSWER1" data-answer2="ANSWER2" data-mistakes="1" tabindex="0" style="width:80px;" disabled=""><span class="problem-answer">ANSWER1<span class="secondary-answer">ANSWER2</span></span></span></div>
+          </div>
+        </div>
+        
+        <br>
+        <h4 id="input-zones-with-sub-answers" class="sub-title">Input Zones with Sub-Answers</h4>
+        <p>If you want to allow an answer to use more than one word or phrase use the syntax below.</p>
+        <code>{%(あの/その/この)ねこ}</code>
+        <p><code>%()</code> initializes a sub-answer list within an answer, which allows a limitless amount of possible words or phrases, seprated by a "/", that can be used to answer the question. Only one of these can be used per answer, which means you can use 1 in ANSWER1 and another 1 in ANSWER2. For example: <code>{%(あの/その/この)ねこ|%(あの/その/この)いぬ|answer}</code> has a total of 6 possible answers.</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="%(あの/その/この)ねこ" data-mistakes="0" tabindex="0" style="width:70px;"></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" data-answer="%(あの/その/この)ねこ" value="このねこ" data-mistakes="0" tabindex="0" style="width:70px;" disabled=""></span></div>
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" data-answer="%(あの/その/この)ねこ" value="そのねこ" data-mistakes="0" tabindex="0" style="width:70px;" disabled=""></span></div>
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" data-answer="%(あの/その/この)ねこ" value="あのねこ" data-mistakes="0" tabindex="0" style="width:70px;" disabled=""></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="%(あの/その/この)ねこ" value="ねこ" data-mistakes="1" tabindex="0" style="width:70px;" disabled=""><span class="problem-answer"><span class="alt-phrase">(</span>あの<span class="alt-phrase-sep">/</span>その<span class="alt-phrase-sep">/</span>この<span class="alt-phrase">)</span>ねこ</span></span></div>
+          </div>
+        </div>
+        
+        <br>
+        <h4 id="input-zones-with-furigana" class="sub-title">Input Zones with Furigana</h4>
+        <p>If you want to show only furigana when an answer is wrong, pass "furigana" to the third parameter.</p>
+        <code>{ANSWER|FURIGANA|furigana}</code>
+        <p>ANSWER is the answer, FURIGANA is the furigana, and "furigana" is a flag that tells the API the second parameter is FURIGANA; not a hint or answer.</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="ANSWER" data-furigana="FURIGANA" data-mistakes="0" tabindex="0" style="width:70px;"></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" value="ANSWER" data-answer="ANSWER" data-furigana="FURIGANA" data-mistakes="0" tabindex="0" style="width:70px;" disabled=""></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="HELLO" data-answer="ANSWER" data-furigana="FURIGANA" data-mistakes="1" tabindex="0" style="width:70px;" disabled=""><span class="problem-answer">ANSWER<span class="secondary-answer furigana-only">FURIGANA</span></span></span></div>
+          </div>
+        </div>
+        
+        <h4 id="input-zones-with-custom-width" class="sub-title">Input Zones with Custom Width</h4>
+        <p>The width of input zones is automatically calcuated based on the amount of characters in ANSWER or HINT. Sometimes the width may be inadequate when using a HINT and you'll need to set it manually using the method below.</p>
+        <code>{ANSWER|HINT|width:N}</code>
+        <p>ANSWER is the answer, HINT is the hint, and "width:N" is a flag that tells the API to set a custom width -- N being a number. Note: the width is set in pixels. (200px in the example below; ex. <code>{ANSWER|HINT|width:200}</code>)</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="ANSWER" data-mistakes="0" style="width:200px;"><span class="problem-hint">HINT</span></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" value="ANSWER" data-answer="ANSWER" data-mistakes="0" style="width:200px;" disabled=""><span class="problem-hint">HINT</span></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="HELLO" data-answer="ANSWER" data-mistakes="1" style="width:200px;" disabled=""><span class="problem-hint">HINT</span><span class="problem-answer">ANSWER</span></span></div>
+          </div>
+        </div>
+        
+        <h4 id="useful-html-elements" class="sub-title">Useful HTML Eelements</h4>
+        <p>Below is a list of useful HTML elements that you can use to format your quizzes.</p>
+        <div class="text-block fill-quiz">
+          <strong>PROBLEMS</strong><br><br>
+          <div class="problem"><code>&lt;div class="problem"&gt;&lt;/div&gt;</code> it is recommended that you put input zones inside this element. It adds a large margin below the input zone, preventing the correct answers from overlapping other elements. You may have multiple input zones inside a div.problem block.</div>
+          
+          <div class="problem"><code>&lt;div class="count-problems"&gt;&lt;/div&gt;</code> put your problem blocks in this element to add numbers next to each problem.</div>
+          
+          <div class="problem"><code>&lt;div class="columns-2 clear"&gt;&lt;div&gt;COLUMN1&lt;/div&gt;&lt;div&gt;COLUMN2&lt;/div&gt;&lt;/div&gt;</code> put problems in COLUMN1 or COLUMN2 to display them side by side.</div>
+          
+          <div class="problem"><code>&lt;p class="section-desc"&gt;&lt;/p&gt;</code> can be used for section descriptions. It creates a bold text section, usually for giving instructions.</div>
+          
+          <strong>TEXT PASSAGES</strong><br><br>
+          <div class="problem"><code>&lt;div class="sub-section"&gt;&lt;/div&gt;</code> you can use this element to add contrast between sections. It creates a block with a white background.</div>
+          
+          <div class="problem"><code>&lt;div class="sub-section text-passage"&gt;&lt;/div&gt;</code> if you're planning to write a lot of text that's going to be read, it's best that you use a div.sub-section.text-passage block, as it increases the size of the text making it more readable.</div>
+          
+          <div class="problem"><code>&lt;div class="sub-section text-passage vertical-text"&gt;&lt;/div&gt;</code> if you're creating a text-passage for vertical text, use this block instead.</div>
+        </div>
+        
+        <h4 id="snippets" class="sub-title">Snippets</h4>
+        <p>Below is the source code for existing exercises that you can remix. Click "Import" or copy and paste the exercise you want to remix into the Written Quiz HTML textarea to see how it works!</p>
+        <div class="text-block fill-quiz">
+          <div class="problem">
+            <button class="button" onclick="Genki.tools.importSnippet('snippet-01');">Import</button> <strong>Workbook: Volitional Form Conjugation Practice - Lesson 15</strong>
+            <textarea id="snippet-01" style="width:80%;height:100px;" onclick="this.select();" readonly><table class="table large-width center">
+  <tr>
+    <td>dictionary form</td>
+    <td>potential form</td>
+    <td>volitional form</td>
+  </tr>
+
+  <tr>
+    <td>まつ</td>
+    <td>{まてる}</td>
+    <td>{まとう}</td>
+  </tr>
+
+  <tr>
+    <td>およぐ</td>
+    <td>{およげる}</td>
+    <td>{およごう}</td>
+  </tr>
+
+  <tr>
+    <td>よむ</td>
+    <td>{よめる}</td>
+    <td>{よもう}</td>
+  </tr>
+
+  <tr>
+    <td>やめる</td>
+    <td>{やめられる}</td>
+    <td>{やめよう}</td>
+  </tr>
+
+  <tr>
+    <td>みがく</td>
+    <td>{みがける}</td>
+    <td>{みがこう}</td>
+  </tr>
+
+  <tr>
+    <td>うる</td>
+    <td>{うれる}</td>
+    <td>{うろう}</td>
+  </tr>
+
+  <tr>
+    <td>すてる</td>
+    <td>{すてられる}</td>
+    <td>{すてよう}</td>
+  </tr>
+
+  <tr>
+    <td>くる</td>
+    <td>{こられる}</td>
+    <td>{こよう}</td>
+  </tr>
+
+  <tr>
+    <td>つきあう</td>
+    <td>{つきあえる}</td>
+    <td>{つきあおう}</td>
+  </tr>
+
+  <tr>
+    <td>そつぎょうする</td>
+    <td>{そつぎょうできる}</td>
+    <td>{そつぎょうしよう}</td>
+  </tr>
+</table></textarea>
+          </div>
+          
+          <div class="problem">
+            <button class="button" onclick="Genki.tools.importSnippet('snippet-02');">Import</button> <strong>Workbook: ～てください - Lesson 6</strong>
+            <textarea id="snippet-02" style="width:80%;height:100px;" onclick="this.select();" readonly><div class="count-problems">
+  <div class="problem">
+    Please take a picture.<br>
+    {写真を撮ってください|しゃしんをとってください|answer}。
+  </div>
+
+  <div class="problem">
+    Please teach this kanji.<br>
+    {この漢字を教えてください|このかんじをおしえてください|answer}。
+  </div>
+
+  <div class="problem">
+    Please carry this bag.<br>
+    {このかばんを持ってください|このかばんをもってください|answer}。
+  </div>
+
+  <div class="problem">
+    Please use this towel. (タオル)<br>
+    {このタオルを使ってください|このタオルをつかってください|answer}。
+  </div>
+
+  <div class="problem">
+    Please sit down.<br>
+    {座ってください|すわってください|answer}。
+  </div>
+
+  <div class="problem">
+    Please bring a book.<br>
+    {本を持ってきてください|ほんをもってきてください|answer}。
+  </div>
+
+  <div class="problem">
+    Please help with homework.<br>
+    {宿題を手伝ってください|しゅくだいをてつだってください|answer}。
+  </div>
+
+  <div class="problem">
+    Please return the book.<br>
+    {本を返してください|ほんをかえしてください|answer}。
+  </div>
+
+  <div class="problem">
+    Please drink the coffee.<br>
+    {コーヒーを飲んでください|コーヒーをのんでください|answer}。
+  </div>
+</div></textarea>
+          </div>
+          
+          <div class="problem">
+            <button class="button" onclick="Genki.tools.importSnippet('snippet-03');">Import</button> <strong>Workbook: Fill in the Blanks - Lesson 13</strong>
+            <textarea id="snippet-03" style="width:80%;height:100px;" onclick="this.select();" readonly><div class="count-problems">
+  <div class="problem">私の{くに|国|width:42}で、日本の{食べ物|たべもの}と{飲み物|のみもの}は高いです。</div>
+  <div class="problem">私は{特に|とくに}{鳥|とり}の{肉|にく}が好きです。</div>
+  <div class="problem">{昼|ひる}に{空港|くうこう}に{着きました|つきました}。</div>
+  <div class="problem">{朝ご飯|あさごはん}は{まいにち|毎日|width:70}、{同じ|おなじ}{物|もの}を食べています。</div>
+  <div class="problem">{こうこうせい|高校生|width:98}の{とき|時|width:42}、よく{海|うみ}に行きました。</div>
+  <div class="problem">{ときどき|時々|width:70}{きぶん|気分|width:56}が{悪く|わるく}なりました。</div>
+  <div class="problem">お母さんは、{ご飯|ごはん}は{安くて|やすくて}、{体|からだ}にいいと言います。</div>
+  <div class="problem">{いっしょう|一年|width:84}に{いちど|一度|width:56}の経験でした。</div>
+  <div class="problem">{買い物|かいもの}の後、{料理|りょうり}をして、{昼ご飯|ひるごはん}を食べました。</div>
+  <div class="problem">この部屋は{空気|くうき}が{悪い|わるい}ので、窓を開けましょう。</div>
+  <div class="problem">日本で{着物|きもの}を{着て|きて}みたいです。</div>
+</div></textarea>
+          </div>
+          
+          <div class="problem">
+            <button class="button" onclick="Genki.tools.importSnippet('snippet-04');">Import</button> <strong>Reading Practice: スーさんの日記 - Lesson 9</strong>
+            <textarea id="snippet-04" style="width:80%;height:100px;" onclick="this.select();" readonly> <p class="section-desc">スーさんは日記を書きました。</p>  
+ <div class="sub-section text-passage">  
+   <p>  
+     十一月二十五日（土）　雨<br>  
+     今日は朝からあめがふっていた。午前中は友だちにメールを書いて、一時間ぐらい音楽を聞いた。昼ごろメアリーの家へ行った。白くて、大きい家だった。メアリーのホストファミリーの山本さんに会った。お父さんは背が高くて、やせている人だった。家で晩ご飯を食べた。お母さんは「何もありませんが」と言っていたが、たくさんごちそうがあった。晩ご飯はとてもおいしかった。お母さんは料理がすごく上手だと思う。晩ご飯の後、いろいろな話をした。そして、きれいな着物をもらった。お母さんは少し古いと言っていたが、すごくきれいだ。メアリーのホストファミリーはとてもしんせつで楽しかった。  
+   </p>  
+ </div>  
+
+ <div class="vocab-key columns-2 clear">  
+   <div>  
+     日記（にっき）　diary<br>  
+     午前中（ごぜんちゅう）　in the morning<br>  
+     昼（ひる）　noon<br>  
+     ホストファミリー host family<br>  
+     ごちそう　excellent food  
+   </div>  
+
+   <div>  
+     いろいろ（な）　various<br>  
+     話をする　to have a talk<br>  
+     そして　and then<br>  
+     着物（きもの）　kimono; Japanese traditional dress  
+   </div>  
+ </div>  
+
+ <div class="count-problems small-margin">  
+   <p class="section-desc">Put the following activities in the right order according to Sue's diary.</p>  
+   <div class="problem">({B}) <i class="fa">&#xf061;</i> ({E}) <i class="fa">&#xf061;</i> ({C}) <i class="fa">&#xf061;</i> ({D}) <i class="fa">&#xf061;</i> ({A})</div>  
+   <div class="sub-section">  
+     (A) Got a kimono from Mary's mother.<br>  
+     (B) Wrote an email to a friend.<br>  
+     (C) Ate dinner at Mary's house.<br>  
+     (D) Talked with Mary's host family.<br>  
+     (E) Listened to music.  
+   </div><br>  
+
+   <p class="section-desc">Mark O if the following statements are true. Mark X if not true.</p>  
+   <div class="problem">({O})　スーさんは古い着物をもらった。</div>  
+   <div class="problem">({X})　お父さんは背がひくくて、やせている。</div>  
+   <div class="problem">({X})　晩ご飯は何もなかった。</div>  
+   <div class="problem">({O})　スーさんはお母さんの料理が好きだ。</div>  
+   <div class="problem">({O})　天気はよくなかった。</div>  
+   <div class="problem">({X})　メアリーさんのホストファミリーの名前は山田だ。</div>  
+ </div><br>  
+
+ <p class="section-desc">  
+   BONUS: Practice your Japanese reading skills by reading the passage below. (optional)<br>  
+   スーさんはメアリーさんのホストファミリーにメールを書きました。  
+ </p>  
+
+ <div class="sub-section text-passage">  
+   <p>  
+     山本さま<br><br>  
+     きのうはどうもありがとうございました。<br>  
+     とてもたのしかったです。<br><br>  
+     りょうではあまり日本のりょうりをたべませんが、<br>  
+     お母さんのりょうりはとてもおいしかったです。<br>  
+     それから、きものをありがとうございました。<br>  
+     とてもきれいなきものですね。<br><br>  
+     かんこくにもあそびに来てください。<br>  
+     私はソウルのおもしろいところを知っていますから、<br>  
+     あんないします。<br><br>  
+     スー・キム<br>  
+     sue@genkinihongo.com  
+   </p>  
+ </div>  
+
+ <div class="columns-2 clear" style="text-align:right;">  
+   <div>  
+     りょう　dormitory<br>  
+   </div>  
+
+   <div>  
+     あんないする　to show someone around  
+   </div>  
+ </div> </textarea>
+          </div>
+          
+          <div class="problem">
+            <button class="button" onclick="Genki.tools.importSnippet('snippet-05');">Import</button> <strong>Kanji Practice: Write the Readings - Lesson 15</strong>
+            <textarea id="snippet-05" style="width:80%;height:100px;" onclick="this.select();" readonly><div class="columns-2 count-problems small-margin clear">  
+ <div>  
+   <div class="problem">生まれる　{うまれる}</div>  
+   <div class="problem">一年中　　{いちねんじゅう}</div>  
+   <div class="problem">人気　　　{にんき}</div>  
+   <div class="problem">お金　　　{おかね}</div>  
+   <div class="problem">二十万人　{にじゅうまんにん}</div>  
+   <div class="problem">楽しむ　　{たのしむ}</div>  
+   <div class="problem">地下　　　{ちか}</div>  
+   <div class="problem">町　　　　{まち}</div>  
+   <div class="problem">近く　　　{ちかく}</div>  
+   <div class="problem">有名　　　{ゆうめい}</div>  
+ </div>  
+
+ <div>  
+   <div class="problem">神社　{じんじゃ}</div>  
+   <div class="problem">青い　{あおい}</div>  
+   <div class="problem">色　　{いろ}</div>  
+   <div class="problem">赤い　{あかい}</div>  
+   <div class="problem">南　　{みなみ}</div>  
+   <div class="problem">今年　{ことし}</div>  
+   <div class="problem">今度　{こんど}</div>  
+   <div class="problem">古い　{ふるい}</div>  
+   <div class="problem">手　　{て}</div>  
+ </div>  
+</div> </textarea>
+          </div>
+        </div>
+        
+        
+      </div>
+      
+      <div id="exercise" class="content-block" style="display:none;">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../" id="footer-home">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+        <li><a href="../../../donate/">Donate</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/study-tools.min.js"></script>
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>
+      Genki.tools.type = 'fill';
+      Genki.tools.settings.restore();
+      Genki.tools.restore();
+      Genki.tools.finishedLoading();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Katakana | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Katakana | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Katakana | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Katakana | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Drag the Kana to the matching Romaji.">
+    <meta property="og:description" content="Drag the Kana to the matching Romaji.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki I, page 24, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/lesson-0/katakana-1/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../" id="home-link" class="edition-icon third-ed">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="exercise" class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../" id="footer-home">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+        <li><a href="../../../donate/">Donate</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'kana',
+      type : ['kana', 'multi', 'fill', 'writing'],
+      info : [Genki.lang.std_kana, Genki.lang.kana_multi, Genki.lang.kana_fill, Genki.lang.kana_writing],
+      
+      // drag and drop quizlet
+      quizlet : [
+        {
+          'ア' : 'a',
+          'イ' : 'i',
+          'ウ' : 'u',
+          'エ' : 'e',
+          'オ' : 'o'
+        },
+        
+        {
+          'カ' : 'ka',
+          'キ' : 'ki',
+          'ク' : 'ku',
+          'ケ' : 'ke',
+          'コ' : 'ko'
+        },
+        
+        {
+          'サ' : 'sa',
+          'シ' : 'shi',
+          'ス' : 'su',
+          'セ' : 'se',
+          'ソ' : 'so'
+        },
+        
+        {
+          'タ' : 'ta',
+          'チ' : 'chi',
+          'ツ' : 'tsu',
+          'テ' : 'te',
+          'ト' : 'to'
+        },
+        
+        {
+          'ナ' : 'na',
+          'ニ' : 'ni',
+          'ヌ' : 'nu',
+          'ネ' : 'ne',
+          'ノ' : 'no'
+        },
+        
+        {
+          'ハ' : 'ha',
+          'ヒ' : 'hi',
+          'フ' : 'fu',
+          'ヘ' : 'he',
+          'ホ' : 'ho'
+        },
+        
+        {
+          'マ' : 'ma',
+          'ミ' : 'mi',
+          'ム' : 'mu',
+          'メ' : 'me',
+          'モ' : 'mo'
+        },
+        
+        {
+          'ヤ' : 'ya',
+          'ユ' : 'yu',
+          'ヨ' : 'yo'
+        },
+        
+        {
+          'ラ' : 'ra',
+          'リ' : 'ri',
+          'ル' : 'ru',
+          'レ' : 're',
+          'ロ' : 'ro'
+        },
+        
+        {
+          'ワ' : 'wa',
+          'ヲ' : 'wo',
+          'ン' : 'n'
+        }
+      ],
+      
+      // fill in the chart quizlet
+      chart : '<table class="table large-width center">'+
+        '<tr>'+
+          '<td>ア<br>{a}</td>'+
+          '<td>イ<br>{i}</td>'+
+          '<td>ウ<br>{u}</td>'+
+          '<td>エ<br>{e}</td>'+
+          '<td>オ<br>{o}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>カ<br>{ka}</td>'+
+          '<td>キ<br>{ki}</td>'+
+          '<td>ク<br>{ku}</td>'+
+          '<td>ケ<br>{ke}</td>'+
+          '<td>コ<br>{ko}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>サ<br>{sa}</td>'+
+          '<td>シ<br>{shi}</td>'+
+          '<td>ス<br>{su}</td>'+
+          '<td>セ<br>{se}</td>'+
+          '<td>ソ<br>{so}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>タ<br>{ta}</td>'+
+          '<td>チ<br>{chi}</td>'+
+          '<td>ツ<br>{tsu}</td>'+
+          '<td>テ<br>{te}</td>'+
+          '<td>ト<br>{to}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>ナ<br>{na}</td>'+
+          '<td>ニ<br>{ni}</td>'+
+          '<td>ヌ<br>{nu}</td>'+
+          '<td>ネ<br>{ne}</td>'+
+          '<td>ノ<br>{no}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>ハ<br>{ha}</td>'+
+          '<td>ヒ<br>{hi}</td>'+
+          '<td>フ<br>{fu}</td>'+
+          '<td>ヘ<br>{he}</td>'+
+          '<td>ホ<br>{ho}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>マ<br>{ma}</td>'+
+          '<td>ミ<br>{mi}</td>'+
+          '<td>ム<br>{mu}</td>'+
+          '<td>メ<br>{me}</td>'+
+          '<td>モ<br>{mo}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>ヤ<br>{ya}</td>'+
+          '<td></td>'+
+          '<td>ユ<br>{yu}</td>'+
+          '<td></td>'+
+          '<td>ヨ<br>{yo}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>ラ<br>{ra}</td>'+
+          '<td>リ<br>{ri}</td>'+
+          '<td>ル<br>{ru}</td>'+
+          '<td>レ<br>{re}</td>'+
+          '<td>ロ<br>{ro}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>ワ<br>{wa}</td>'+
+          '<td></td>'+
+          '<td></td>'+
+          '<td></td>'+
+          '<td>ヲ<br>{wo|o|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>ン<br>{n}</td>'+
+          '<td></td>'+
+          '<td></td>'+
+          '<td></td>'+
+          '<td></td>'+
+        '</tr>'+
+      '</table>'
+    });</script>
+  </body>
+</html>

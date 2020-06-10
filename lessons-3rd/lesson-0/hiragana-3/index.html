@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hiragana: Combos | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Hiragana: Combos | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Hiragana: Combos | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Hiragana: Combos | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Drag the Kana to the matching Romaji.">
+    <meta property="og:description" content="Drag the Kana to the matching Romaji.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki I, page 21, page 22, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/lesson-0/hiragana-3/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../" id="home-link" class="edition-icon third-ed">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="exercise" class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../" id="footer-home">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+        <li><a href="../../../donate/">Donate</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'kana',
+      type : ['kana', 'multi', 'fill', 'writing'],
+      info : [Genki.lang.std_kana, Genki.lang.kana_multi, Genki.lang.kana_fill, Genki.lang.kana_writing],
+      
+      // drag and drop quizlet
+      quizlet : [
+        {
+          'きゃ' : 'kya',
+          'きゅ' : 'kyu',
+          'きょ' : 'kyo',
+          'ぎゃ' : 'gya',
+          'ぎゅ' : 'gyu',
+          'ぎょ' : 'gyo'
+        },
+        
+        {
+          'しゃ' : 'sha',
+          'しゅ' : 'shu',
+          'しょ' : 'sho',
+          'じゃ' : 'ja',
+          'じゅ' : 'ju',
+          'じょ' : 'jo'
+        },
+        
+        {
+          'ちゃ' : 'cha',
+          'ちゅ' : 'chu',
+          'ちょ' : 'cho'
+        },
+        
+        {
+          'にゃ' : 'nya',
+          'にゅ' : 'nyu',
+          'にょ' : 'nyo'
+        },
+        
+        {
+          'ひゃ' : 'hya',
+          'ひゅ' : 'hyu',
+          'ひょ' : 'hyo',
+          'びゃ' : 'bya',
+          'びゅ' : 'byu',
+          'びょ' : 'byo',
+          'ぴゃ' : 'pya',
+          'ぴゅ' : 'pyu',
+          'ぴょ' : 'pyo'
+        },
+        
+        {
+          'みゃ' : 'mya',
+          'みゅ' : 'myu',
+          'みょ' : 'myo'
+        },
+        
+        {
+          'りゃ' : 'rya',
+          'りゅ' : 'ryu',
+          'りょ' : 'ryo'
+        }
+      ],
+      
+      // fill in the chart quizlet
+      chart : '<table class="table large-width center">'+
+        '<tr>'+
+          '<td>きゃ<br>{kya}</td>'+
+          '<td>きゅ<br>{kyu}</td>'+
+          '<td>きょ<br>{kyo}</td>'+
+          '<td>ぎゃ<br>{gya}</td>'+
+          '<td>ぎゅ<br>{gyu}</td>'+
+          '<td>ぎょ<br>{gyo}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>しゃ<br>{sha}</td>'+
+          '<td>しゅ<br>{shu}</td>'+
+          '<td>しょ<br>{sho}</td>'+
+          '<td>じゃ<br>{ja}</td>'+
+          '<td>じゅ<br>{ju}</td>'+
+          '<td>じょ<br>{jo}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>ちゃ<br>{cha}</td>'+
+          '<td>ちゅ<br>{chu}</td>'+
+          '<td>ちょ<br>{cho}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>にゃ<br>{nya}</td>'+
+          '<td>にゅ<br>{nyu}</td>'+
+          '<td>にょ<br>{nyo}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>ひゃ<br>{hya}</td>'+
+          '<td>ひゅ<br>{hyu}</td>'+
+          '<td>ひょ<br>{hyo}</td>'+
+          '<td>びゃ<br>{bya}<br>ぴゃ<br>{pya}</td>'+
+          '<td>びゅ<br>{byu}<br>ぴゅ<br>{pyu}</td>'+
+          '<td>びょ<br>{byo}<br>ぴょ<br>{pyo}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>みゃ<br>{mya}</td>'+
+          '<td>みゅ<br>{myu}</td>'+
+          '<td>みょ<br>{myo}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>りゃ<br>{rya}</td>'+
+          '<td>りゅ<br>{ryu}</td>'+
+          '<td>りょ<br>{ryo}</td>'+
+        '</tr>'+
+      '</table>'
+    });</script>
+  </body>
+</html>

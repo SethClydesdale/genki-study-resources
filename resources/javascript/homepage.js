@@ -2,6 +2,141 @@
 (function (window, document) {
   'use strict';
   
+  // # EDITION PREFERENCE #
+  // stores the currently selected edition so the student can be correctly redirected when clicking home links
+  if (navigator.cookieEnabled && window.localStorage) {
+    localStorage.GenkiEdition = /lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd';
+  }
+  
+  
+  // # ANOUNCEMENTS #
+  window.GenkiAnn = {
+    rotation : false, // determines if the announcements rotate
+    edition : /lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd', // determines current edition
+    
+    // announcement messages
+    // params:
+    // date: [OPTIONAL] adds a date to the announcement, useful for highlighting updates and what not.
+    // content: message body for the announcement; write your announcements here!
+    // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
+    msg : [
+      {
+        date : '06/10/20',
+        content : 'The 3rd Edition version of Genki Study Resources is now available and can be accessed <a href="' + getPaths() + 'lessons-3rd/">here</a>! I would like to thank everyone who took the time to answer the quick survey; your feedback was of great help for deciding on improvements for the 3rd edition resources!',
+        edition : '2nd'
+      },
+      
+      {
+        content : 'The 3rd Edition version of Genki Study Resources is currently under construction and will be expanded over time. You can follow updates to these resources via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">Github</a> or <a href="https://twitter.com/SethC1995">Twitter</a>. Furthermore, if you have any feedback regarding the 3rd edition resources, feel free to let me know <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVoqq2TrHtUR4t0DPo8lIUMwc7mudiRTUZ8ACoPzP3yP1-8A/viewform?usp=sf_link">here</a>. Thank you!',
+        edition : '3rd'
+      },
+      
+      {
+        content : 'Looking for more self-study resources? Visit the official <a href="http://genki.japantimes.co.jp/self_en">self-study room</a> for Genki or check out some of the featured links in the <a href="https://github.com/SethClydesdale/genki-study-resources#additional-links-for-studying-japanese">readme</a> on GitHub.'
+      },
+      
+      {
+        content : 'Curious about the changes to Genki 3rd Edition? Looking for the 3rd Edition answer keys? Head on over to the <a href="https://genki3.japantimes.co.jp/teacher/resources/pre.html">Genki Online Teacher Resources</a> to find what you need!',
+        edition : '3rd'
+      },
+      
+      {
+        content : 'Have a question about the site? Check out the <a href="' + getPaths() + 'help/">FAQ</a>! If you can\'t find an answer to your question, feel free to contact us via <a href="https://github.com/SethClydesdale/genki-study-resources/issues">GitHub\'s issues</a> and we\'ll try to answer your question in a timely manner.'
+      },
+      
+      {
+        content : 'Find a bug or mistake on the site? Want to submit a suggestion or give us feedback? Check out the <a href="' + getPaths() + 'report/">report page</a> for more information. We\'d love to hear from you!'
+      },
+      
+      {
+        content : 'Don\'t have a network connection all the time? Genki Study Resources can be used offline as well! Head on over to the <a href="' + getPaths() + 'download/">download page</a> to get the latest release.'
+      },
+      
+      {
+        content : 'If you found this tool helpful for studying with Genki, please consider making <a href="' + getPaths() + 'donate/">a donation</a> to help support my work. Thank you!'
+      }
+    ],
+    
+    index : 0,
+    list : document.getElementById('announce-list'),
+    
+    
+    // shows the next announcement
+    next : function (n, manual) {
+      // hide old message
+      GenkiAnn.msg[GenkiAnn.index].className += ' announce-hidden';
+      
+      // add +1 or -1 depending on the button press
+      if (typeof n == 'number') {
+        GenkiAnn.index += n;
+        
+        if (GenkiAnn.index == -1) {
+          GenkiAnn.index = GenkiAnn.msg.length - 1;
+        }
+      } 
+      
+      // for automatic rotation increase index by 1
+      else {
+        GenkiAnn.index++;
+      }
+      
+      // reset index if it exceeds the current announcements
+      if (!GenkiAnn.msg[GenkiAnn.index]) {
+        GenkiAnn.index = 0;
+      }
+      
+      // show new message
+      GenkiAnn.msg[GenkiAnn.index].className = GenkiAnn.msg[GenkiAnn.index].className.replace(' announce-hidden', '');
+      
+      // reset rotation if messages were moved manually
+      if (GenkiAnn.rotation && manual) {
+        window.clearInterval(GenkiAnn.rotator);
+        GenkiAnn.rotate();
+      }
+    },
+    
+    
+    // start announcement rotation
+    rotate : function () {
+      GenkiAnn.rotator = window.setInterval(GenkiAnn.next, 15000);
+    },
+    
+    
+    // sets up the announcements
+    init : function () {
+      // set up if more than 1 announcement
+      if (GenkiAnn.msg.length > 1) {
+        document.getElementById('announcement-controls').style.display = '';
+        
+        // parse announcements
+        for (var i = 0, j = GenkiAnn.msg.length, ann = '', first = true; i < j; i++) {
+          if (!GenkiAnn.msg[i].edition || GenkiAnn.msg[i].edition.toLowerCase() == GenkiAnn.edition) {
+            ann += '<div class="announcement' + (first ? '' : ' announce-hidden') + '">'+
+              (GenkiAnn.msg[i].date ? '<span class="date">' + GenkiAnn.msg[i].date + '</span>' : '')+
+              GenkiAnn.msg[i].content+
+            '</div>';
+            
+            // first announcement is shown, so hide the rest
+            first && (first = false);
+          }
+        }
+        
+        // add announcements to the document
+        GenkiAnn.list.insertAdjacentHTML('beforeend', ann);
+        GenkiAnn.msg = document.querySelectorAll('.announcement');
+        
+        // commence rotation if enabled
+        if (GenkiAnn.rotation) {
+          GenkiAnn.rotate();
+        }
+      }
+    }
+  };
+  
+  // initilize the announcement module
+  GenkiAnn.init();
+  
+  
   // # QUICK SEARCH #
   var search = document.getElementById('quick-search'),
       results = document.getElementById('quick-search-results'),
@@ -116,56 +251,4 @@
   // # JUMP ARROWS #
   // Add arrows to each lesson title that will take the student back to the quick navigation
   AddJumpArrowsTo('.lesson-title', 'quick-nav', 'Jump to Quick Navigation');
-  
-  
-  // # ANOUNCEMENT ROTATION #
-  window.GenkiAnn = {
-    msg : document.querySelectorAll('.announcement'),
-    index : 0,
-    
-    // shows the next announcement
-    next : function (n, manual) {
-      // hide old message
-      GenkiAnn.msg[GenkiAnn.index].className += ' announce-hidden';
-      
-      // add +1 or -1 depending on the button press
-      if (typeof n == 'number') {
-        GenkiAnn.index += n;
-        
-        if (GenkiAnn.index == -1) {
-          GenkiAnn.index = GenkiAnn.msg.length - 1;
-        }
-      } 
-      
-      // for automatic rotation increase index by 1
-      else {
-        GenkiAnn.index++;
-      }
-      
-      // reset index if it exceeds the current announcements
-      if (!GenkiAnn.msg[GenkiAnn.index]) {
-        GenkiAnn.index = 0;
-      }
-      
-      // show new message
-      GenkiAnn.msg[GenkiAnn.index].className = GenkiAnn.msg[GenkiAnn.index].className.replace(' announce-hidden', '');
-      
-      // reset rotation if messages were moved manually
-      if (manual) {
-        //window.clearInterval(GenkiAnn.rotator);
-        //GenkiAnn.rotate();
-      }
-    },
-    
-    // start announcement rotation
-    rotate : function () {
-      GenkiAnn.rotator = window.setInterval(GenkiAnn.next, 15000);
-    }
-  };
-  
-  // commence rotation if more than 1 announcement
-  if (GenkiAnn.msg.length > 1) {
-    document.getElementById('announcement-controls').style.display = '';
-    //GenkiAnn.rotate();
-  }
 }(window, document));

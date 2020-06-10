@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <meta property="og:description" content="Genki Study Resources offers a vast collection of exercises for practicing what is taught in Genki: An Integrated Course in Elementary Japanese. If you're self-studying or just want to test your knowledge of Japanese, you've found the right place!">
     <link rel="shortcut icon" type="image/x-icon" href="resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I, Genki II, Workbook, Exercises, Quizzes, Answers" lang="en">
+    <meta name="keywords" content="Genki I, Genki II, 2nd Edition, 3rd Edition, Workbook, Exercises, Quizzes, Answers" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -42,26 +42,22 @@
             <button class="button announce-controls button-left" onclick="GenkiAnn.next(-1, true);"><i class="fa">&#xf060;</i></button>
             <button class="button announce-controls button-right" onclick="GenkiAnn.next(+1, true);"><i class="fa">&#xf061;</i></button>
           </div>
-          <!-- Updates HERE -->
-          <div class="announcement"><span class="date">04/04/20</span>With the arrival of the 3rd edition of Genki, we'd like to hear your thoughts on a few things. Please <a href="https://docs.google.com/forms/d/e/1FAIpQLScYhG06c8W89pztMb3kWX3nwg979F0UqLS2gxlmuPOiNq_SXQ/viewform?usp=sf_link">click here</a> if you'd like to participate in our survey. Thank you for your time!</div>
-          <div class="announcement announce-hidden"><span class="date">04/14/20</span> To make drag and drop exercises easier and more accessible, they have been updated with the following functionality: Click a draggable item to mark it, then click an empty zone to drop the marked item there. Marked items remain as such until the correct answer is found or you click elsewhere on the page, which clears the selection.</div>
-          <!--<div class="announcement announce-hidden"><span class="date">00/00/00</span></div>-->
-          <!-- Default Tips/Info -->
-          <div class="announcement announce-hidden">Looking for more self-study resources? Visit the official <a href="http://genki.japantimes.co.jp/self_en">self-study room</a> for Genki or check out some of the featured links in the <a href="https://github.com/SethClydesdale/genki-study-resources#additional-links-for-studying-japanese">readme</a> on GitHub.</div>
-          <div class="announcement announce-hidden">Have a question about the site? Check out the <a href="help/">FAQ</a>! If you can't find an answer to your question, feel free to contact us via <a href="https://github.com/SethClydesdale/genki-study-resources/issues">GitHub's issues</a> and we'll try to answer your question in a timely manner.</div>
-          <div class="announcement announce-hidden">Find a bug or mistake on the site? Want to submit a suggestion or give us feedback? Check out the <a href="report/">report page</a> for more information. We'd love to hear from you!</div>
-          <div class="announcement announce-hidden">Don't have a network connection all the time? Genki Study Resources can be used offline as well! Head on over to the <a href="download/">download page</a> to get the latest release.</div>
-          <div class="announcement announce-hidden">If you found this tool helpful during your studies, please consider making <a href="donate/">a donation</a> to help support my work. Thank you!</div>
+          <noscript><div class="announcement">Please enable JavaScript to get the latest news and info.</div></noscript>
         </div>
       </div>
     </div>
     
     <div id="content">
       <div id="lessons" class="content-block">
+        <h2 class="title center" id="edition-title">Genki 2nd Edition Exercises</h2>
+        
         <p>Welcome to Genki Study Resources! The exercises provided here are for use with <a href="http://genki.japantimes.co.jp/index_en">Genki: An Integrated Course in Elementary Japanese</a> textbooks (Second Edition) and are meant to help you practice what you have learned in each lesson. Select a lesson from the quick navigation and then the exercise that you want to practice for that lesson to begin testing your knowledge. Happy studying!</p>
+        
+        <p><b style="color:#F60;">NEW:</b> Using the 3rd Edition of Genki? <a href="lessons-3rd/"><b>Click here</b></a> to use our 3rd Edition resources! (Under Construction)</p>
         
         <h3 id="page-links">Page Links</h3>
         <div id="link-list" class="normal-block indent-block">
+          <span><a id="link-edition" href="lessons-3rd/"><i class="fa">&#xf02d;</i>3rd Edition</a></span>
           <span><a id="link-help" href="help/"><i class="fa">&#xf059;</i>Help &amp; FAQ</a></span>
           <span><a id="link-report" href="report/"><i class="fa">&#xf188;</i>Bug Reports &amp; Feedback</a></span>
           <span><a id="link-download" href="download/"><i class="fa">&#xf019;</i>Download</a></span>
@@ -1428,10 +1424,11 @@
     
     <footer class="clear">
       <ul class="footer-left">
-        <li><a href="./">Home</a></li>
+        <li><a href="./" id="footer-home">Home</a></li>
         <li><a href="privacy/">Privacy</a></li>
         <li><a href="report/">Report a Bug</a></li>
         <li><a href="help/">Help</a></li>
+        <li><a href="donate/">Donate</a></li>
       </ul>
       
       <ul class="footer-right">
@@ -1439,7 +1436,7 @@
       </ul>
     </footer>
   
-    <script src="resources/javascript/javascript.min.js"></script>
     <script src="resources/javascript/homepage.min.js"></script>
+    <script src="resources/javascript/all.min.js"></script>
   </body>
 </html>

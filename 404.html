@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -21,16 +21,17 @@
     <div id="content">
       <div class="content-block center">
         <h2 class="title" id="not-found">404 Not Found</h2>
-        <p>The page could not be found.<br>ページが見つかりませんでした。<br><br><a href="https://sethclydesdale.github.io/genki-study-resources/">Return to the Index</a></p>
+        <p>The page could not be found.<br>ページが見つかりませんでした。<br><br><a href="https://sethclydesdale.github.io/genki-study-resources/" id="404-home">Return to the Index</a></p>
       </div>
     </div>
     
     <footer class="clear">
       <ul class="footer-left">
-        <li><a href="https://sethclydesdale.github.io/genki-study-resources/">Home</a></li>
+        <li><a href="https://sethclydesdale.github.io/genki-study-resources/" id="footer-home">Home</a></li>
         <li><a href="https://sethclydesdale.github.io/genki-study-resources/privacy/">Privacy</a></li>
         <li><a href="https://sethclydesdale.github.io/genki-study-resources/report/">Report a Bug</a></li>
         <li><a href="https://sethclydesdale.github.io/genki-study-resources/help/">Help</a></li>
+        <li><a href="https://sethclydesdale.github.io/genki-study-resources/donate/">Donate</a></li>
       </ul>
       
       <ul class="footer-right">
@@ -38,8 +39,12 @@
       </ul>
     </footer>
     
-    <script src="https://sethclydesdale.github.io/genki-study-resources/resources/javascript/javascript.min.js"></script>
+    <script src="https://sethclydesdale.github.io/genki-study-resources/resources/javascript/all.min.js"></script>
     <script>(function (window, document) {
+      if (navigator.cookieEnabled && window.localStorage && localStorage.GenkiEdition == '3rd') {
+        document.getElementById('404-home').href += 'lessons-3rd/';
+      }
+        
       // makes corrections to the page if used on the local file system
       if (window.location.protocol == 'file:') {
         var domain = 'https://sethclydesdale.github.io/genki-study-resources/',
