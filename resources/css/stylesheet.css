@@ -1463,6 +1463,23 @@ p.section-desc {
   cursor:default;
 }
 
+.sectionNumber3rd {
+  font-size:12px;
+  font-weight:bold;
+  text-align:center;
+  background-color:#CCC;
+  border:1px solid #999;
+  border-radius:100%;
+  display:inline-block;
+  height:20px;
+  width:18px;
+  line-height:21px;
+  vertical-align:middle;
+  letter-spacing:-2px;
+  padding-right:2px;
+  cursor:default;
+}
+
 /* counter for problems */
 .count-problems { counter-reset:problems; }
 .count-problems .problem:before {

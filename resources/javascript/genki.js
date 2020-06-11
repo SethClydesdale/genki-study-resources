@@ -1417,8 +1417,9 @@
     
     // quick dictionary functionality
     quickJisho : {
-      hidden : true,
-      selectorHidden : true,
+      hidden : true, // display state of dictionary
+      selectorHidden : true, // display state of "lookup button"
+      tabbing : false, // prevents selection change from occuring while tabbing
       
       // creates the quick dictionary button and popup
       create : function () {
@@ -1484,12 +1485,10 @@
           Genki.quickJisho.y = Math.abs(e.pageY - document.body.clientHeight) < 40 ? e.pageY - 32 : e.pageY + 12;
         };
         
-        // LOOKUP TAB SOLUTION
         // key handler for focusing the dictionary lookup button with a tab press
-        // TODO: Firefox behavior is sketchy with this method, will need to add fallback for it (Chromium: OK; MS Edge: ???)
-        // IDEA: Add selected text to lookup button as data attribute on tab, then get the text from it when hitting enter (for Firefox only, or additional affected browsers; will need to perform more tests)
         document.onkeydown = function (e) {
-          if (!Genki.quickJisho.selectorHidden && e.key == 'Tab') {
+          if (e.key == 'Tab' && !Genki.quickJisho.selectorHidden && document.activeElement != Genki.quickJisho.cache.selector) {
+            Genki.quickJisho.tabbing = true;
             Genki.quickJisho.cache.selector.focus();
             e.preventDefault();
           }
@@ -1609,29 +1608,39 @@
       
       // gets the selected text and shows the look up button
       getSelection : function () {
+        // returns if tabbing to the lookup button
+        // required, as some browsers change selection when focusing a new element w/focus()
+        if (Genki.quickJisho.tabbing) {
+          // delay setting "tabbing" to false, as the selection change tends to proc twice for focus changes
+          if (!Genki.quickJisho.tabbingOff) { // prevent duplication of timeout
+            Genki.quickJisho.tabbingOff = setTimeout(function () {
+              Genki.quickJisho.tabbing = false;
+              delete Genki.quickJisho.tabbingOff;
+            }, 10);
+          }
+          
+          return false;
+        }
+        
+        // get the currently selected texts
         if (document.getSelection) {
           var selection = document.getSelection();
 
           if (selection.type == 'Range' && selection.toString && !/quick-jisho/.test(selection.focusNode.className)) {
+            // stores selected text for searches
             Genki.quickJisho.selectedText = selection.toString();
+            
+            // update lookup button position
             Genki.quickJisho.cache.selector.style.left = Genki.quickJisho.x + 'px';
             Genki.quickJisho.cache.selector.style.top = Genki.quickJisho.y + 'px';
             
-            // DISABLED: Position of lookup button is offset greatly when the page has overflow, also has a few conflicts with tabbing in workbook exercises.
-            // SOLUTION: see (CTRL+F) "LOOKUP TAB SOLUTION"
-            // add selection button as child of selected text element
-            // this is done so the user can tab immediately to the 'Look up' button
-            // after selecting text
-            //if (selection.focusNode.parentElement) {
-            //  selection.focusNode.parentElement.appendChild(Genki.quickJisho.cache.selector);
-            //}
-
+            // show lookup button
             if (Genki.quickJisho.selectorHidden) {
               Genki.quickJisho.cache.selector.style.display = '';
               Genki.quickJisho.selectorHidden = false;
             }
 
-          } else {
+          } else { // hide lookup button and clear selection
             Genki.quickJisho.selectedText = '';
 
             if (!Genki.quickJisho.selectorHidden) {

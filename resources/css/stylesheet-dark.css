@@ -43,7 +43,7 @@ code, input[type="text"], input[type="number"], textarea, select, .table td, .wr
   background-color:#222;
 }
 
-.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before, .genki_pseudo_radio:before {
+.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before, .genki_pseudo_radio:before, .sectionNumber3rd {
   background-color:#333;
 }
 
@@ -57,7 +57,7 @@ code, input[type="text"], input[type="number"], textarea, select, .table td, .qu
   border-color:#444;
 }
 
-input[type="text"]::placeholder, input[type="text"]:hover, input[type="number"]:hover, textarea:hover, select:hover, input.writing-zone-input:hover, hr {
+input[type="text"]::placeholder, input[type="text"]:hover, input[type="number"]:hover, textarea:hover, select:hover, input.writing-zone-input:hover, hr, .sectionNumber3rd {
   border-color:#555;
 }
 
