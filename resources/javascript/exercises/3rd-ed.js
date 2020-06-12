@@ -47,6 +47,9 @@ window.GenkiExercises = [
   'lesson-1/vocab-12|Useful Expressions: Time (Minutes 11-30)|p.55',
   'lesson-1/workbook-1|Workbook: XはYです|p.16; I & II',
   'lesson-1/workbook-2|Workbook: Question Sentences|p.17; I & II',
+  'lesson-1/workbook-3|Workbook: Noun の Noun|p.18; I & II',
+  'lesson-1/workbook-4|Workbook: Time and Telephone Numbers|p.19; I & II',
+  'lesson-1/workbook-5|Workbook: Questions|p.20',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

@@ -1412,10 +1412,13 @@ input.writing-zone-input:focus { border-color:#F60; }
 }
 .fill-quiz .alt-phrase-sep { color:#06C; }
 
-.label {
+.label, .med-label, .big-label {
   display:inline-block;
   width:120px;
+  max-width:100%;
 }
+.med-label { width:200px; }
+.big-label { width:300px; }
 
 /* image list */
 .image-list span {
@@ -1479,6 +1482,7 @@ p.section-desc {
   padding-right:2px;
   cursor:default;
 }
+.sectionNumber3rd.fa { letter-spacing:-4px; }
 
 /* counter for problems */
 .count-problems { counter-reset:problems; }
