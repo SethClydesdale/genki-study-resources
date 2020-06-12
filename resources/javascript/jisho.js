@@ -1684,6 +1684,7 @@ Genki.jisho = {
     { ja : '展覧会|てんらんかい', en : 'art exhibition', l : '読L17-II' },
     { ja : '電話|でんわ', en : 'telephone', l : '会L1' },
     { ja : '電話する|でんわする', en : 'to call', v : 'irr', l : '会L8' },
+    { ja : '電話番号|でんわばんごう', en : 'telephone number', l : '会L1' },
     { ja : '電話をかける|でんわをかける', en : 'to make a phone call', v : 'ru', l : '会L6' }
   ],
   
