@@ -19,7 +19,7 @@ input[type="text"]::placeholder, input[type="number"]::placeholder, textarea::pl
   color:#888;
 }
 
-body, input[type="text"], input[type="number"], textarea, select, input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled, select:disabled, input.writing-zone-input:disabled, #exercise-list .lesson-title, #exercise-list a:before, .quiz-multi-answer  {
+body, input[type="text"], input[type="number"], textarea, select, input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled, select:disabled, input.writing-zone-input:disabled, #exercise-list .lesson-title, #exercise-list li a:before, .quiz-multi-answer  {
   color:#AAA;
 }
 
@@ -75,6 +75,9 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 
 
 /* 4. EXCEPTIONS */
+img, #link-list a { opacity:0.7; }
+img:hover, a:focus img, #link-list a:hover, #link-list a:focus { opacity:1; }
+
 .taking-a-break #genki-modal-body {
   background-color:rgba(34, 34, 34, 0.7);
 }

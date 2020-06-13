@@ -1,4 +1,11 @@
 window.GenkiExercises = [
+  // Page links
+  '../../|Home',
+  '../../../help/|Help & FAQ',
+  '../../../report/|Bug Reports & Feedback',
+  '../../../download/|Download',
+  '../../../donate/|Donate',
+  
   // Lesson 0
   'lesson-0/hiragana-1|Hiragana|p.20-21',
   'lesson-0/hiragana-2|Hiragana: Diacritical Marks|p.21',
@@ -50,6 +57,8 @@ window.GenkiExercises = [
   'lesson-1/workbook-3|Workbook: Noun の Noun|p.18; I & II',
   'lesson-1/workbook-4|Workbook: Time and Telephone Numbers|p.19; I & II',
   'lesson-1/workbook-5|Workbook: Questions|p.20',
+  'lesson-1/workbook-6|Workbook: Listening Comprehension 1|p.21; A',
+  'lesson-1/workbook-7|Workbook: Listening Comprehension 2|p.22; B, C, & D',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

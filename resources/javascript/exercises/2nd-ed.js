@@ -1,4 +1,11 @@
 window.GenkiExercises = [
+  // Page links
+  '../../../|Home',
+  '../../../help/|Help & FAQ',
+  '../../../report/|Bug Reports & Feedback',
+  '../../../download/|Download',
+  '../../../donate/|Donate',
+  
   // Lesson 0
   'lesson-0/hiragana-1|Hiragana|p.24-25',
   'lesson-0/hiragana-2|Hiragana: Diacritical Marks|p.25',

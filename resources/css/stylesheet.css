@@ -79,6 +79,11 @@ a:hover, a:focus { text-decoration:underline; }
 
 img { max-width:100%; }
 
+/* focus style for image links */
+a:focus img {
+  outline:1px solid #F60;
+}
+
 code {
   color:#00F;
   background:#EEE;
@@ -345,7 +350,7 @@ a#fork-me:hover, a#fork-me:focus {
   margin:0;
 }
 
-#announcement .announce-controls:hover { opacity:1; }
+#announcement .announce-controls:hover, #announcement .announce-controls:focus { opacity:1; }
 
 #announcement .announce-controls.button-left { left:-20px; }
 #announcement .announce-controls.button-right { right:-20px; }
@@ -397,24 +402,30 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   margin:10px 10px 0 0;
 }
 
-#link-edition     { background-color:#F60; border-bottom:2px solid #D40; }
+#link-edition   { background-color:#F60; border-bottom:2px solid #D40; }
 #link-help      { background-color:#39C; border-bottom:2px solid #17A; }
 #link-report    { background-color:#F66; border-bottom:2px solid #D44; }
 #link-download  { background-color:#9C6; border-bottom:2px solid #7A4; }
 #link-donate    { background-color:#C6C; border-bottom:2px solid #A4A; }
 #link-github    { background-color:#96F; border-bottom:2px solid #74D; }
-#link-edition:hover     { background-color:#E50; }
+#link-edition:hover  { background-color:#E50; }
 #link-help:hover     { background-color:#28B; }
 #link-report:hover   { background-color:#E55; }
 #link-download:hover { background-color:#8B5; }
 #link-donate:hover   { background-color:#B5B; }
 #link-github:hover   { background-color:#85E; }
-#link-edition:active     { background-color:#D40; }
-#link-help:active     { background-color:#17A; }
-#link-report:active   { background-color:#D44; }
-#link-download:active { background-color:#7A4; }
-#link-donate:active   { background-color:#A4A; }
-#link-github:active   { background-color:#74D; }
+#link-edition:active,
+#link-edition:focus  { background-color:#D40; }
+#link-help:active,
+#link-help:focus     { background-color:#17A; }
+#link-report:active,
+#link-report:focus   { background-color:#D44; }
+#link-download:active,
+#link-download:focus { background-color:#7A4; }
+#link-donate:active,
+#link-donate:focus   { background-color:#A4A; }
+#link-github:active,
+#link-github:focus   { background-color:#74D; }
 
 #link-list i {
   font-size:16px;
@@ -456,7 +467,7 @@ a.jump-arrow {
   float:right;
   margin:6px 3px 0 0;
 }
-a.jump-arrow:hover { color:#C30; }
+a.jump-arrow:hover, a.jump-arrow:focus { color:#C30; }
 
 /* lesson numbers */
 #quick-search-results li[data-lesson]:before {
@@ -867,7 +878,7 @@ footer li:first-child:before { display:none; }
 }
 #exercise-list .lesson-title.lesson-open + ul { display:block; }
 
-#exercise-list a {
+#exercise-list li a {
   white-space:nowrap;
   text-decoration:none;
   text-overflow:ellipsis;
@@ -876,23 +887,30 @@ footer li:first-child:before { display:none; }
   position:relative;
 }
 
-#exercise-list a.active-lesson {
+#exercise-list li a.active-lesson {
   color:#F60;
   font-weight:bold;
 }
 
-#exercise-list a:before {
+#exercise-list li a:before {
   content:"\f054";
   color:#333;
   font-family:FontAwesomeWeb, FontAwesome;
   margin-right:3px;
 }
 
-#exercise-list a:hover, #exercise-list a:focus { color:#F60; }
-#exercise-list a:hover:before, #exercise-list a:focus:before { color:#F60; }
+#exercise-list li a:hover, #exercise-list li a:focus { color:#F60; }
+#exercise-list li a:hover:before, #exercise-list li a:focus:before { color:#F60; }
+
+/* page link icons */
+#exercise-list #page-links li:first-child a:before                { content:"\f015" }
+#exercise-list #page-links li a[href^="../../../help"]:before     { content:"\f059" }
+#exercise-list #page-links li a[href^="../../../report"]:before   { content:"\f188" }
+#exercise-list #page-links li a[href^="../../../download"]:before { content:"\f019" }
+#exercise-list #page-links li a[href^="../../../donate"]:before   { content:"\f004" }
 
 /* show page num. on hover */
-#exercise-list a[data-page]:hover:after, #exercise-list a[data-page]:focus:after {
+#exercise-list li a[data-page]:hover:after, #exercise-list li a[data-page]:focus:after {
   content:attr(data-page);
   color:#FFF;
   font-size:12px;
