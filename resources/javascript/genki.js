@@ -591,7 +591,7 @@
             
           } else if (data[0] == '!AUDIO') { // audio tracks
             return '<div class="audio-block center">'+
-              '<audio id="' + data[1] + '" controls><source src="' + getPaths() + 'resources/audio/' + data[1] + '.mp3" type="audio/mpeg"></audio>'+
+              '<audio id="' + data[1] + '" controls><source src="' + getPaths() + 'resources/audio/' + (Genki.ed == 'lessons-3rd' ? '3rd-edition/' : '2nd-edition/') + data[1] + '.mp3" type="audio/mpeg"></audio>'+
             '</div>';
             
           } else if (data[0] == '!PLAY') { // buttons for playing specific points of audio
@@ -1338,8 +1338,8 @@
             '<nav id="exercise-list">'+
               '<h3 class="main-title">Exercise List</h3>'+
               '<button id="random-exercise" class="button" onclick="Genki.randomExercise();" title="Random Exericse"><i class="fa">&#xf074;</i></button>'+
-              '<div id="lessons-list"><h4 ' + attrs + '>Lesson 0</h4><ul id="lesson-0">',
-            lesson = 'lesson-0',
+              '<div id="lessons-list"><h4 ' + attrs + '>Page links</h4><ul id="page-links">',
+            lesson = '\\.\\.\\/',
             i = 0,
             j = Genki.exercises.length,
             linkData,
@@ -1363,7 +1363,7 @@
           // if the lesson group is different create a new group
           if (!new RegExp(lesson).test(linkData[0])) {
             lesson = /^appendix/.test(linkData[0]) ? 'appendix' : 
-                     /^study-tools/.test(linkData[0]) ? 'study-tools' : 
+                     /^study-tools/.test(linkData[0]) ? 'study-tools' :
                      linkData[0].replace(/(lesson-\d+)\/.*/, '$1');
             
             list += '</ul><h4 ' + attrs + '>' + lesson.charAt(0).toUpperCase() + lesson.replace(/-/, ' ').slice(1) + '</h4><ul id="' + lesson + '">';
@@ -1377,7 +1377,7 @@
           }
           
           // add the exercise link to the group
-          list += '<li><a href="../../../' + Genki.ed + '/' + linkData[0] + '/' + Genki.local + Genki.debug + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '"' : '') + ' title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
+          list += '<li><a href="' + (lesson == '\\.\\.\\/' ? linkData[0] : '../../../' + Genki.ed + '/' + linkData[0] + '/') + Genki.local + Genki.debug + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '"' : '') + ' title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
           
         }
 
