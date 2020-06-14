@@ -1453,6 +1453,7 @@ input.writing-zone-input:focus { border-color:#F60; }
   position:absolute;
   top:2px;
   left:4px;
+  z-index:1;
 }
 
 /* columns */

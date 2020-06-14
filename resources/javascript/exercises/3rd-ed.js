@@ -59,6 +59,13 @@ window.GenkiExercises = [
   'lesson-1/workbook-5|Workbook: Questions|p.20',
   'lesson-1/workbook-6|Workbook: Listening Comprehension 1|p.21; A',
   'lesson-1/workbook-7|Workbook: Listening Comprehension 2|p.22; B, C, & D',
+  'lesson-1/literacy-1|Hiragana Practice: Identifying Hiragana|p.297; I-A',
+  'lesson-1/literacy-2|Hiragana Practice: Word Match|p.297; I-B',
+  'lesson-1/literacy-3|Hiragana Practice: Diacritical Marks|p.297; I-C',
+  'lesson-1/literacy-4|Hiragana Practice: Combos and Double Consonants|p.298; I-D',
+  'lesson-1/literacy-5|Hiragana Practice: Long Vowels|p.298; I-E',
+  'lesson-1/literacy-6|Hiragana Practice: Unscramble|p.298; I-F',
+  'lesson-1/literacy-7|Reading Practice: Hiragana|p.299; II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

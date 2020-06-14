@@ -82,7 +82,8 @@
         
         practice : {
           multi : 'Multiple Choice',
-          fill : 'Written'
+          fill : 'Written',
+          drag : 'Drag and Drop'
         }
       },
       
