@@ -64,8 +64,13 @@ window.GenkiExercises = [
   'lesson-1/literacy-3|Hiragana Practice: Diacritical Marks|p.297; I-C',
   'lesson-1/literacy-4|Hiragana Practice: Combos and Double Consonants|p.298; I-D',
   'lesson-1/literacy-5|Hiragana Practice: Long Vowels|p.298; I-E',
-  'lesson-1/literacy-6|Hiragana Practice: Unscramble|p.298; I-F',
+  'lesson-1/literacy-6|Hiragana Practice: Unscramble the Words|p.298; I-F',
   'lesson-1/literacy-7|Reading Practice: Hiragana|p.299; II',
+  'lesson-1/literacy-wb-1|Workbook: Hiragana (あ-こ)|p.121; I, II, & III',
+  'lesson-1/literacy-wb-2|Workbook: Hiragana (さ-と)|p.122; I, II, & III',
+  'lesson-1/literacy-wb-3|Workbook: Hiragana (な-ほ)|p.123; I, II, & III',
+  'lesson-1/literacy-wb-4|Workbook: Hiragana (ま-よ)|p.124; I, II, & III',
+  'lesson-1/literacy-wb-5|Workbook: Hiragana (ら-ん)|p.125; I, II, & III',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
