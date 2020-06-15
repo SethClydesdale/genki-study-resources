@@ -19,6 +19,7 @@
 Genki.jisho = {
   
   'あ' : [
+    { ja : '愛|あい', en : 'love; affection; care', l : 'ワークブック読L1' },
     { ja : '相変わらず|あいかわらず', en : 'as usual', l : '読L22-II' },
     { ja : '挨拶|あいさつ', en : 'greeting; greetings; salutation; polite set phrase used when meeting or parting', l : '会G' },
     { ja : '愛す|あいす', en : 'to love', v : 'u', l : '読L14-II' },
@@ -135,6 +136,7 @@ Genki.jisho = {
     { ja : '行く|いく', en : 'to go', v : 'u', l : '会L3' },
     { ja : 'いくら', en : 'how much', l : '会L2' },
     { ja : 'イクラ', en : 'salmon roe', l : '会L18(c)' },
+    { ja : '池|いけ', en : 'pond', l : 'ワークブック読L1' },
     { ja : '生け花|いけばな', en : 'ikebana; Japanese art of flower arrangement', l : '読L19-漢字表' },
     { ja : '意見|いけん', en : 'opinion', l : '読L5-漢字表' },
     { ja : 'いじめる', en : 'to bully', v : 'ru', l : '会L21' },
@@ -317,6 +319,7 @@ Genki.jisho = {
     { ja : '大昔|おおむかし', en : 'ancient times', l : '読L12-漢字表' },
     { ja : '大文字|おおもじ', en : 'uppercase letters', l : '読L17-漢字表' },
     { ja : '大家さん|おおやさん', en : 'landlord; landlady', l : '会L14' },
+    { ja : '丘|おか', en : 'hill; height; rising ground', l : 'ワークブック読L1' },
     { ja : 'お母さん|おかあさん', en : 'mother', l : '会L1, 会L2' },
     { ja : 'お返し|おかえし', en : 'return (as a token of gratitude)', l : '会L14' },
     { ja : 'おかえり（なさい）', en : 'Welcome home.', l : '会G' },
@@ -539,6 +542,7 @@ Genki.jisho = {
     { ja : 'かたい言い方|かたいいいかた', en : 'bookish exp.', l : '会L11(e)' },
     { ja : '片仮名|かたかな／カタカナ', en : 'katakana; angular Japanese syllabary used primarily for loanwords', l : '会L11(e)' },
     { ja : '片付ける|かたづける', en : 'to tidy up', v : 'ru', l : '会L18' },
+    { ja : '片手|かたて', en : 'one hand', l : 'ワークブック読L1' },
     { ja : '片道|かたみち', en : 'one way', l : '会L10(e)' },
     { ja : '勝つ|かつ', en : 'to win', v : 'u', l : '会L22' },
     { ja : 'がっかりする', en : 'to be disappointed', v : 'irr', l : '読L20-II, 会L23' },
@@ -708,6 +712,7 @@ Genki.jisho = {
     { ja : 'きれい（な）', en : 'beautiful; clean', l : '会L5' },
     { ja : '～キロ', en : '...kilometers; ...kilograms', l : '会L13' },
     { ja : '究める|きわめる', en : 'to investigate thoroughly', v : 'ru', l : '読L19-漢字表' },
+    { ja : '気をつけて|きをつけて', en : 'take care; be careful; watch out', l : 'ワークブック読L1' },
     { ja : '気をつける|きをつける', en : 'to be cautious/careful', v : 'ru', l : '会L15' },
     { ja : '金色|きんいろ', en : 'gold', l : '会L9(e)' },
     { ja : '銀色|ぎんいろ', en : 'silver', l : '会L9(e)' },
@@ -825,6 +830,7 @@ Genki.jisho = {
     { ja : '～個|～こ', en : 'counter for smaller items', l : '会L14, 会L14(e)' },
     { ja : '～後|～ご', en : 'in...time; after...', l : '会L10' },
     { ja : '～語|～ご', en : '...language', l : '会L1' },
+    { ja : '鯉|こい', en : 'carp', l : 'ワークブック読L1' },
     { ja : '子犬|こいぬ', en : 'puppy', l : '読L21-漢字表' },
     { ja : '好意|こうい', en : 'good will', l : '読L11-漢字表' },
     { ja : '幸運|こううん', en : 'good fortune', l : '読L21-漢字表' },
@@ -900,6 +906,7 @@ Genki.jisho = {
     { ja : 'この間|このあいだ', en : 'the other day', l : '会L16' },
     { ja : 'このぐらい', en : 'about this much', l : '会L16' },
     { ja : 'このごろ', en : 'these days', l : '会L10' },
+    { ja : '木の葉|このは', en : 'leaf; foliage', l : 'ワークブック読L1' },
     { ja : 'この人|このひと', en : 'this person', l : '読L4-漢字表' },
     { ja : '好み|このみ', en : 'liking; taste', l : '読L11-漢字表' },
     { ja : 'このように', en : 'like this; this way', l : '読L23-II' },
@@ -1262,6 +1269,7 @@ Genki.jisho = {
     { ja : '新聞|しんぶん', en : 'newspaper', l : '会L2' },
     { ja : '進歩|しんぽ', en : 'progress', l : '読L17-漢字表' },
     { ja : '親友|しんゆう', en : 'best friend', l : '読L22-II' },
+    { ja : '心理|しんり', en : 'state of mind; mentality; psychology', l : 'ワークブック読L1' },
     { ja : '人類学|じんるいがく', en : 'anthropology', l : '会L1' }
   ],
   
@@ -1486,6 +1494,7 @@ Genki.jisho = {
     { ja : '出す|だす', en : 'to take (something) out; to hand in (something)', v : 'u', l : '会L16' },
     { ja : '多数決|たすうけつ', en : 'decision by majority', l : '読L19-漢字表' },
     { ja : '助かる|たすかる', en : 'to be saved; to be helped', v : 'u', l : '会L18' },
+    { ja : '助け|たすけ', en : 'assistance; help; aid; support', l : 'ワークブック読L1' },
     { ja : '助ける|たすける', en : 'to help; to rescue', v : 'ru', l : '読L16-II, 会L22' },
     { ja : 'ただ', en : 'free of charge', l : '会L23' },
     { ja : 'ただいま', en : "I'm home.", l : '会G' },
@@ -1887,7 +1896,8 @@ Genki.jisho = {
   'ぬ' : [
     { ja : 'ぬいぐるみ', en : 'stuffed animal (e.g. teddy bear)', l : '会L14' },
     { ja : '脱ぐ|ぬぐ', en : 'to take off (clothes)', v : 'u', l : '会L17' },
-    { ja : '盗む|ぬすむ', en : 'to steal; to rob', v : 'u', l : '会L21' }
+    { ja : '盗む|ぬすむ', en : 'to steal; to rob', v : 'u', l : '会L21' },
+    { ja : '布|ぬの', en : 'cloth', l : 'ワークブック読L1' }
   ],
   
   'ね' : [
@@ -2029,6 +2039,7 @@ Genki.jisho = {
     { ja : '半|はん', en : 'half', l : '会L1' },
     { ja : '～番|～ばん', en : 'number...', l : '会L11(e), 会L15' },
     { ja : 'パン', en : 'bread', l : '会L4' },
+    { ja : '繁栄|はんえい', en : 'prosperity; thriving; flourishing', l : 'ワークブック読L1' },
     { ja : '半額|はんがく', en : 'half price', l : '読L4-漢字表' },
     { ja : 'パンクする', en : '(tire) goes flat', v : 'irr', l : '会L23' },
     { ja : '番組|ばんぐみ', en : 'broadcast program', l : '会L15' },
@@ -2090,6 +2101,8 @@ Genki.jisho = {
     { ja : '一人暮らし|ひとりぐらし', en : 'living alone', l : '会L22' },
     { ja : '一人旅|ひとりたび', en : 'traveling alone', l : '読L11-漢字表' },
     { ja : '一人で|ひとりで', en : 'alone', l : '会L4' },
+    { ja : '皮肉|ひにく', en : 'irony; sarcasm; cynicism; satire', l : 'ワークブック読L1' },
+    { ja : '皮膚|ひふ', en : 'skin', l : 'ワークブック読L1' },
     { ja : '皮膚科|ひふか', en : 'dermatologist', l : '会L12(e)' },
     { ja : '暇|ひま（な）', en : 'not busy; to have a lot of free time', l : '会L5' },
     { ja : '秘密|ひみつ', en : 'secret', l : '読L16-II, 会L17' },
@@ -2195,6 +2208,7 @@ Genki.jisho = {
     { ja : '平和記念資料館|へいわきねんしりょうかん', en : 'Peace Memorial Museum', l : '読L15-II' },
     { ja : 'ページ', en : 'page', l : '会L6' },
     { ja : '～ページ', en : 'page number...', l : '会L11(e)' },
+    { ja : '臍|へそ', en : 'navel; belly button', l : 'ワークブック読L1' },
     { ja : '下手|へた（な）', en : 'clumsy; poor at...', l : '会L8' },
     { ja : '別荘|べっそう', en : 'villa; vacation home', l : '会L23' },
     { ja : 'ペット', en : 'pet', l : '会L15' },
@@ -2240,6 +2254,7 @@ Genki.jisho = {
     { ja : '保険|ほけん', en : 'insurance', l : '会L5(e), 会L15' },
     { ja : '保険に入る|ほけんにはいる', en : 'to buy insurance', v : 'u', l : '会L15' },
     { ja : '母語|ぼご', en : 'mother tongue', l : '読L7-漢字表' },
+    { ja : '星|ほし', en : 'star; planet', l : 'ワークブック読L1' },
     { ja : '欲しい|ほしい', en : 'to want', l : '会L14' },
     { ja : '募集|ぼしゅう', en : 'recruitment', l : '会L13' },
     { ja : '～募集|～ぼしゅう', en : 'looking for...', l : '読L11-II' },
@@ -2251,6 +2266,7 @@ Genki.jisho = {
     { ja : 'ホテル', en : 'hotel', l : '会L4' },
     { ja : '歩道|ほどう', en : 'sidewalk', l : '読L17-漢字表' },
     { ja : 'ほとんど', en : 'almost', l : '読L23-II' },
+    { ja : '骨|ほね', en : 'bone', l : 'ワークブック読L1' },
     { ja : '微笑む|ほほえむ', en : 'to smile', v : 'u', l : '読L20-漢字表' },
     { ja : 'ほめる', en : 'to praise; to say nice things', v : 'ru', l : '会L21' },
     { ja : 'ホワイトデー', en : '"White Day" (yet another gift-giving day)', l : '会L14' },
@@ -2407,6 +2423,7 @@ Genki.jisho = {
     { ja : 'めずらしい', en : 'rare', l : '読L13-II' },
     { ja : 'めちゃくちゃ（な）', en : 'messy; disorganized', l : '会L21' },
     { ja : 'めったに～ない|', en : 'seldom', l : '読L21-II' },
+    { ja : '目を覚ます|めをさます', en : 'to wake up', l : 'ワークブック読L1' },
     { ja : 'メニュー', en : 'menu', l : '会L2' },
     { ja : '免許|めんきょ', en : 'license', l : '会L22' },
     { ja : '面接|めんせつ', en : 'interview', l : '会L23' },
@@ -2444,6 +2461,7 @@ Genki.jisho = {
     { ja : '物|もの', en : 'thing (concrete object)', l : '会L12' },
     { ja : 'ものすごく', en : 'extremely', l : '会L23' },
     { ja : 'もみあげ', en : 'sideburns', l : '会L17(e)' },
+    { ja : '靄|もや', en : 'fog; mist; haze', l : 'ワークブック読L1' },
     { ja : 'もらう', en : 'to get (from somebody)', v : 'u', l : '会L9' },
     { ja : '文句|もんく', en : 'complaint', l : '会L21' },
     { ja : '文句を言う|もんくをいう', en : 'to complain', v : 'u', l : '会L21' },
@@ -2591,12 +2609,13 @@ Genki.jisho = {
     { ja : '旅行する|りょこうする', en : 'to travel', v : 'irr', l : '会L10' },
     { ja : '旅券|りょけん', en : 'passport', l : '読L11-漢字表' },
     { ja : '履歴書|りれきしょ', en : 'résumé', l : '会L14' },
+    { ja : '理論|りろん', en : 'theory', l : 'ワークブック読L1' },
     { ja : 'りんご', en : 'apple', l : '会L10' }
   ],
   
   'る' : [
     { ja : 'ルームメート', en : 'roommate', l : '会L11' },
-    { ja : '留守|るす', en : 'absence; not at home', l : '会L21' },
+    { ja : '留守ｎるす', en : 'absence; not at home', l : '会L21' },
     { ja : '留守番|るすばん', en : "looking after a house during someone's absence", l : '会L23' },
     { ja : '留守番電話|るすばんでんわ', en : 'answering machine', l : '会L18' },
     { ja : 'ルワンダ', en : 'Rwanda', l : '読L2-I' }

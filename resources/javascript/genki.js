@@ -630,6 +630,7 @@
                 (flag[0] == 'answer' && data[5] ? 'data-answer5="' + data[4] + '" ' : '')+
                 (flag[0] == 'answer' && data[6] ? 'data-answer6="' + data[5] + '" ' : '')+
                 (flag[0] == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
+                (flag[0] == 'placeholder' ? 'placeholder="' + hint + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
                 'style="width:' + (
@@ -659,7 +660,7 @@
               
             ) + 'px;"'+
               '>'+
-              ((hint && !/answer|furigana/.test(flag[0]) || flag[1] && /hint:/.test(flag[1]) || flag[2] && /hint:/.test(flag[2])) ? '<span class="problem-hint">' + (
+              ((hint && !/answer|furigana|placeholder/.test(flag[0]) || flag[1] && /hint:/.test(flag[1]) || flag[2] && /hint:/.test(flag[2])) ? '<span class="problem-hint">' + (
                 flag[1] && /hint:/.test(flag[1]) ? flag[1].split(':')[1] : 
                 flag[2] && /hint:/.test(flag[2]) ? flag[2].split(':')[1] : hint
               ) + '</span>' : '')+
