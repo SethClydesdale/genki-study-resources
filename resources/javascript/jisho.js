@@ -2615,7 +2615,7 @@ Genki.jisho = {
   
   'る' : [
     { ja : 'ルームメート', en : 'roommate', l : '会L11' },
-    { ja : '留守ｎるす', en : 'absence; not at home', l : '会L21' },
+    { ja : '留守|るす', en : 'absence; not at home', l : '会L21' },
     { ja : '留守番|るすばん', en : "looking after a house during someone's absence", l : '会L23' },
     { ja : '留守番電話|るすばんでんわ', en : 'answering machine', l : '会L18' },
     { ja : 'ルワンダ', en : 'Rwanda', l : '読L2-I' }
