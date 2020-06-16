@@ -15,7 +15,8 @@ window.GenkiExercises = [
   'lesson-0/katakana-3|Katakana: Combos|p.25',
   'lesson-0/katakana-4|Katakana: Additional Combos|p.26',
   'lesson-0/kana-match|Bonus: Match Hiragana and Katakana|p.20-21 & 24',
-  'lesson-0/greetings|Greetings|p.32',
+  'lesson-0/greetings|Greetings 1|p.32',
+  'lesson-0/greetings-2|Greetings 2|p.32',
   'lesson-0/culture-1|Culture Note: Greetings and Bowing|p.32',
   'lesson-0/greetings-practice|Practice: Greetings|p.34',
   'lesson-0/numbers-1|Vocabulary: Numbers 0-14|p.35',
@@ -71,6 +72,8 @@ window.GenkiExercises = [
   'lesson-1/literacy-wb-3|Workbook: Hiragana (な-ほ)|p.123; I, II, & III',
   'lesson-1/literacy-wb-4|Workbook: Hiragana (ま-よ)|p.124; I, II, & III',
   'lesson-1/literacy-wb-5|Workbook: Hiragana (ら-ん)|p.125; I, II, & III',
+  'lesson-1/literacy-wb-6|Workbook: Hiragana (Dots/Circles/Small や, ゆ, よ)|p.126; I, II, III, & IV',
+  'lesson-1/literacy-wb-7|Workbook: Hiragana (Double Consonants/Long Vowels)|p.127; I, II, III, & IV',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

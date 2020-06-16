@@ -1467,7 +1467,7 @@ input.writing-zone-input:focus { border-color:#F60; }
 }
 
 /* indentation */
-.indent-block { margin-left:21px; }
+.indent-block { margin-left:20px; }
 
 /* section descriptions */
 p.section-desc {
