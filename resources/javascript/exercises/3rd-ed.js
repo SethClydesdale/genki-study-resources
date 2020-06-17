@@ -75,6 +75,14 @@ window.GenkiExercises = [
   'lesson-1/literacy-wb-6|Workbook: Hiragana (Dots/Circles/Small や, ゆ, よ)|p.126; I, II, III, & IV',
   'lesson-1/literacy-wb-7|Workbook: Hiragana (Double Consonants/Long Vowels)|p.127; I, II, III, & IV',
   
+  // Lesson 2
+  'lesson-2/vocab-1|Vocabulary: Words the Point|p.58',
+  'lesson-2/vocab-2|Vocabulary: Food|p.58',
+  'lesson-2/vocab-3|Vocabulary: Things|p.58-59',
+  'lesson-2/vocab-4|Vocabulary: Places and Countries|p.59',
+  'lesson-2/vocab-5|Vocabulary: Majors and Family|p.59',
+  'lesson-2/vocab-6|Vocabulary: Money Matters and Expressions|p.59',
+  
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
