@@ -167,7 +167,7 @@
           '<div class="center">'+
             '<div>'+
               '<b>Current Exercise</b><br>'+
-              Genki.active.exercise[1]+
+              document.title.replace(/ \| Genki Study Resources.*$/, '')+
             '</div><br>'+
             '<div>'+
               '<b>Exercise Type</b><br>'+
@@ -1050,7 +1050,7 @@
               
               // notify the user that break time has ended
               if (!Genki.local && Genki.canNotify && Notification.permission == 'granted') {
-                var notif = new Notification(document.title.replace(' | Genki Study Resources', ''), {
+                var notif = new Notification(document.title.replace(/ \| Genki Study Resources.*$/, ''), {
                   body : 'Break time is up!',
                   icon : document.querySelector('meta[property="og:image"]').content,
                   tag : 'breakTime-' + Genki.active.index
