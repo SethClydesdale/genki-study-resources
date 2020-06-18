@@ -82,6 +82,12 @@ window.GenkiExercises = [
   'lesson-2/vocab-4|Vocabulary: Places and Countries|p.59',
   'lesson-2/vocab-5|Vocabulary: Majors and Family|p.59',
   'lesson-2/vocab-6|Vocabulary: Money Matters and Expressions|p.59',
+  'lesson-2/culture-1|Culture Note: Japanese Currency|p.66',
+  'lesson-2/vocab-7|Practice Vocabulary: Numbers (Hundreds)|p.67',
+  'lesson-2/vocab-8|Practice Vocabulary: Numbers (Thousands)|p.67',
+  'lesson-2/vocab-9|Practice Vocabulary: Numbers (Ten Thousands)|p.67',
+  'lesson-2/grammar-1|Practice: Numbers|p.67; I-A',
+  'lesson-2/grammar-2|Practice: Prices|p.67-68; I-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

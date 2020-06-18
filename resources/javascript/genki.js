@@ -56,6 +56,7 @@
       
       // addition number info
       num_multi : 'Read the Japanese and choose the correct numbers.',
+      num_writing : 'Practice spelling the following numbers.',
       num_fill : 'Write the following numbers in Japanese (hiragana).',
       
       // options for exercise variations
@@ -70,6 +71,7 @@
         numbers : {
           drag : 'Drag and Drop',
           multi : 'Multiple Choice',
+          writing : 'Spelling Practice',
           fill : 'Write the Numbers'
         },
         
