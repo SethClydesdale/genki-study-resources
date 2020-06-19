@@ -569,7 +569,7 @@ Genki.jisho = {
     { ja : '金|かね', en : 'money', l : '会L6' },
     { ja : '金持ち|かねもち', en : 'rich person', l : '会L10' },
     { ja : '彼女|かのじょ', en : 'she; her; girlfriend', l : '読L11-II, 会L12' },
-    { ja : 'かばん', en : 'bag', l : '会L2, 会L2(e)' },
+    { ja : '鞄|かばん', en : 'bag', l : '会L2, 会L2(e)' },
     { ja : 'カフェ', en : 'cafe; coffeehouse', l : '読L5-II' },
     { ja : '歌舞伎|かぶき', en : 'Kabuki; traditional Japanese theatrical art', l : '会L9' },
     { ja : 'かぶせる', en : "to put (a hat) on a person's head", v : 'ru', l : '読L10-II' },

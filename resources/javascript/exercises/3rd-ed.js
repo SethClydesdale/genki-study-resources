@@ -88,6 +88,8 @@ window.GenkiExercises = [
   'lesson-2/vocab-9|Practice Vocabulary: Numbers (Ten Thousands)|p.67',
   'lesson-2/grammar-1|Practice: Numbers|p.67; I-A',
   'lesson-2/grammar-2|Practice: Prices|p.67-68; I-B',
+  'lesson-2/grammar-3|Practice: これ／それ|p.69; II-A',
+  'lesson-2/grammar-4|Practice: あれ|p.70; II-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
