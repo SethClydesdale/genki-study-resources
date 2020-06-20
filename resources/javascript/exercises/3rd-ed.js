@@ -90,6 +90,7 @@ window.GenkiExercises = [
   'lesson-2/grammar-2|Practice: Prices|p.67-68; I-B',
   'lesson-2/grammar-3|Practice: これ／それ|p.69; II-A',
   'lesson-2/grammar-4|Practice: あれ|p.70; II-B',
+  'lesson-2/grammar-5|Practice: この／その／あの|p.70-71; III-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
