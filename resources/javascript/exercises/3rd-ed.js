@@ -91,6 +91,9 @@ window.GenkiExercises = [
   'lesson-2/grammar-3|Practice: これ／それ|p.69; II-A',
   'lesson-2/grammar-4|Practice: あれ|p.70; II-B',
   'lesson-2/grammar-5|Practice: この／その／あの|p.70-71; III-A',
+  'lesson-2/grammar-6|Practice: どこ|p.72; IV',
+  'lesson-2/grammar-7|Practice: ここ／そこ／あそこ|p.72; IV',
+  'lesson-2/grammar-8|Practice: だれのNoun|p.73; V',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

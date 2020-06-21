@@ -2360,6 +2360,13 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   
   /* reduce quick dictionary width */
   #quick-jisho-window { width:300px; }
+  
+  /* add margin below problems that can overlap each other */
+  .fill-quiz.quiz-over .writing-zone + .writing-zone {
+    margin-bottom:20px;
+    position:relative;
+    top:20px;
+  }
 }
 
 /* improve clickability of list links for touch screens */

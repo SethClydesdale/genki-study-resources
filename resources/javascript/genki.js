@@ -1322,7 +1322,7 @@
           a = Genki.exercises[i == 1 ? Genki.active.index - 1 : Genki.active.index + 1]; // the prev/next exercise; i=1 is prev, i=0 is next
 
           // if there's a prev/next exercise we'll add the link to more
-          if (a) {
+          if (a && !/^\.\.\//.test(a)) {
             a = a.split('|');
 
             // create the next/prev link
