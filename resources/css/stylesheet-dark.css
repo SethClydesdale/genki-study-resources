@@ -35,7 +35,7 @@ a, code {
 /* 2. BACKGROUND COLORS */
 body, #quick-jisho-window { background-color:#161616; }
 
-code, input[type="text"], input[type="number"], textarea, select, .table td, .writing-zone, .quiz-multi-answer, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, input.writing-zone-input, .genki_pseudo_checkbox, .genki_pseudo_radio {
+code, input[type="text"], input[type="number"], textarea, select, .table td, .quiz-multi-answer, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, input.writing-zone-input, .genki_pseudo_checkbox, .genki_pseudo_radio {
   background-color:#1A1A1A;
 }
 

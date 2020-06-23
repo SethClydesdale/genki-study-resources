@@ -467,7 +467,7 @@
 
         for (i in o.quizlet) {
           // create a new row
-          quiz += '<div class="quiz-answer-row' + (o.quizlet[i] ? ' furi-row' : '') + '"><div class="quiz-item" data-helper="' + o.quizlet[i] + '" ' + width + '>' + i + '</div>';
+          quiz += '<div class="quiz-answer-row' + (o.quizlet[i] ? ' furi-row' : '') + '"><div class="quiz-item" data-helper="' + o.quizlet[i] + '" ' + width + '><div class="quiz-item-text">' + i + '</div></div>';
           j = 0;
 
           // insert the writing zones

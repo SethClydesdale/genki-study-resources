@@ -1125,7 +1125,35 @@ footer li:first-child:before { display:none; }
 .writing-quiz .quiz-item {
   font-size:14px;
   position:relative;
-  pointer-events:none; /* prevent text copying; we want the student to type the kana */
+  /* prevent text copying; we want the student to type the kana */
+  -webkit-touch-callout:none;
+    -webkit-user-select:none;
+     -khtml-user-select:none;
+       -moz-user-select:none;
+        -ms-user-select:none;
+            user-select:none;
+}
+
+/* overflow scrollbar (none/transparents are dark mode overrides) */
+.writing-quiz .quiz-item-text { overflow-x:auto; }
+
+.writing-quiz .quiz-item-text::-webkit-scrollbar {
+  width:6px;
+  height:6px;
+}
+
+.writing-quiz .quiz-item-text::-webkit-scrollbar-thumb {
+  background-color:#F60;
+  border:none;
+}
+.writing-quiz .quiz-item-text::-webkit-scrollbar-thumb:hover { background-color:#E50; }
+.writing-quiz .quiz-item-text::-webkit-scrollbar-thumb:active { background-color:#D40; }
+
+.writing-quiz .quiz-item-text::-webkit-scrollbar-track { background:rgba(0, 0, 0, 0.15); }
+.writing-quiz .quiz-item-text::-webkit-scrollbar-button:single-button {
+  background:transparent;
+  height:0px;
+  width:0px;
 }
 
 /* furigana modifications */
@@ -1136,7 +1164,6 @@ footer li:first-child:before { display:none; }
 .writing-quiz .quiz-item, .writing-zone { text-align:center; }
 
 .writing-zone {
-  background:#EEE;
   margin:3px;
   min-width:25px;
 }
