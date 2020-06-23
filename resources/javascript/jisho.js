@@ -1974,6 +1974,7 @@ Genki.jisho = {
     { ja : '爆笑する|ばくしょうする', en : 'to burst into laughter', v : 'irr', l : '読L20-漢字表' },
     { ja : '白鳥|はくちょう', en : 'swan', l : '読L9-漢字表' },
     { ja : '運ぶ|はこぶ', en : 'to carry', v : 'u', l : '会L22' },
+    { ja : 'パスタ', en : 'pasta', l : '会L2' },
     { ja : 'はし', en : 'chopsticks', l : '会L8' },
     { ja : 'はしご', en : 'ladders', l : '読L17-II' },
     { ja : '始まる|はじまる', en : '(something) begins', v : 'u', l : '会L9' },

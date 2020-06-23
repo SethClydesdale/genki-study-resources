@@ -95,6 +95,10 @@ window.GenkiExercises = [
   'lesson-2/grammar-7|Practice: ここ／そこ／あそこ|p.72; IV',
   'lesson-2/grammar-8|Practice: だれのNoun|p.73; V',
   'lesson-2/grammar-9|Practice: Noun も|p.73-74; VI',
+  'lesson-2/grammar-10|Practice: Noun じゃないです|p.74-75; VII-A',
+  'lesson-2/vocab-10|Bonus Vocabulary: Food|p.76',
+  'lesson-2/vocab-11|Useful Expressions: Classroom Objects|p.81',
+  'lesson-2/vocab-12|Useful Expressions: In the Classroom|p.81',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
