@@ -1437,6 +1437,7 @@ input.writing-zone-input:focus { border-color:#F60; }
 
 .text-block p { margin:0 0 25px 0; }
 .audio-block { margin:25px 0 25px 0; }
+.fill-quiz .inner-problem { display:inline-block; }
 .fill-quiz .problem, .fill-quiz .big-margin { margin-bottom:40px; }
 .fill-quiz .small-margin .problem, .fill-quiz .small-margin .block { margin-bottom:25px; }
 .fill-quiz .no-margin .problem, .fill-quiz .no-margin .block { margin-bottom:0px; }

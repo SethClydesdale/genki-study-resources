@@ -99,6 +99,8 @@ window.GenkiExercises = [
   'lesson-2/vocab-10|Bonus Vocabulary: Food|p.76',
   'lesson-2/vocab-11|Useful Expressions: Classroom Objects|p.81',
   'lesson-2/vocab-12|Useful Expressions: In the Classroom|p.81',
+  'lesson-2/workbook-1|Workbook: Numbers|p.25; I, II, & III',
+  'lesson-2/workbook-2|Workbook: これ／それ／あれ|p.26; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

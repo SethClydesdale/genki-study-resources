@@ -27,7 +27,7 @@
       },
       
       {
-        content : 'The 3rd Edition version of Genki Study Resources is currently under construction and will be expanded over time. You can follow updates to these resources via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">Github</a> or <a href="https://twitter.com/SethC1995">Twitter</a>. Furthermore, if you have any feedback regarding the 3rd edition resources, feel free to let me know <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVoqq2TrHtUR4t0DPo8lIUMwc7mudiRTUZ8ACoPzP3yP1-8A/viewform?usp=sf_link">here</a>. Thank you!',
+        content : 'The 3rd Edition version of Genki Study Resources is currently under construction and will be expanded over time. You can follow updates to these resources via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">Github</a> or <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>. Furthermore, if you have any feedback regarding the 3rd edition resources, feel free to let me know <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVoqq2TrHtUR4t0DPo8lIUMwc7mudiRTUZ8ACoPzP3yP1-8A/viewform?usp=sf_link">here</a>. Thank you!',
         edition : '3rd'
       },
       
