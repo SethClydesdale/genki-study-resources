@@ -177,27 +177,27 @@
               '<h4>Ask whose item it is</h4>'+
               '<div class="problem">'+
                 'Shoes<br>'+
-                'これは{だれ}の{くつ|靴|answer}ですか。'+
+                'これは{だれ|誰|answer}の{くつ|靴|answer}ですか。'+
               '</div>'+
               
               '<div class="problem">'+
                 'Umbrella<br>'+
-                '{これはだれのかさですか|これはだれの傘ですか|answer}。'+
+                '{これはだれのかさですか|これはだれの傘ですか|' + Genki.getAlts('これは{だれ}の{傘}ですか', '誰|かさ') + 'answer}。'+
               '</div>'+
               
               '<div class="problem">'+
                 'Book<br>'+
-                '{これはだれのほんですか|これはだれの本ですか|answer}。'+
+                '{これはだれのほんですか|これはだれの本ですか|' + Genki.getAlts('これは{だれ}の{本}ですか', '誰|ほん') + 'answer}。'+
               '</div>'+
               
               '<div class="problem">'+
                 'Bag<br>'+
-                '{これはだれのかばんですか|これはだれの鞄ですか|answer}。'+
+                '{これはだれのかばんですか|これはだれの鞄ですか|' + Genki.getAlts('これは{だれ}の{鞄}ですか', '誰|かばん') + 'answer}。'+
               '</div>'+
               
               '<div class="problem">'+
                 'Bicycle<br>'+
-                '{これはだれのじてんしゃですか|これはだれの自転車ですか|answer}。'+
+                '{これはだれのじてんしゃですか|これはだれの自転車ですか|' + Genki.getAlts('これは{だれ}の{自転車}ですか', '誰|じてんしゃ') + 'answer}。'+
               '</div>'+
             '</div>'+
             

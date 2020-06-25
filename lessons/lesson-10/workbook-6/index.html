@@ -127,12 +127,12 @@
         
         '<div class="problem">'+
           'Q：Did you meet anyone at the party?<br>'+
-          '{パーティーでだれかに会いましたか|パーティーでだれかにあいましたか|answer}。'+
+          '{パーティーでだれかに会いましたか|パーティーでだれかにあいましたか|' + Genki.getAlts('パーティーで{だれ}かに{会}いましたか', '誰|あ') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'A：No, I did not meet anyone.<br>'+
-          '{いいえ、だれにも会いませんでした|いいえ、だれにもあいませんでした|answer}。'+
+          '{いいえ、だれにも会いませんでした|いいえ、だれにもあいませんでした|' + Genki.getAlts('いいえ、{だれ}にも{会}いませんでした', '誰|あ') + 'answer}。'+
         '</div>'+
       '</div>'
         

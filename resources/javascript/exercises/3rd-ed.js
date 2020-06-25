@@ -101,6 +101,8 @@ window.GenkiExercises = [
   'lesson-2/vocab-12|Useful Expressions: In the Classroom|p.81',
   'lesson-2/workbook-1|Workbook: Numbers|p.25; I, II, & III',
   'lesson-2/workbook-2|Workbook: これ／それ／あれ|p.26; I & II',
+  'lesson-2/workbook-3|Workbook: この／その／あの|p.27',
+  'lesson-2/workbook-4|Workbook: ここ／そこ／あそこ・だれの|p.28; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
