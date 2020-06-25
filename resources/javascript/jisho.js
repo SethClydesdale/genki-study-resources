@@ -1527,7 +1527,7 @@ Genki.jisho = {
     { ja : 'だめ（な）', en : 'no good', l : '会L13' },
     { ja : 'ためる', en : 'to save money', v : 'ru', l : '会L21' },
     { ja : '足りる|たりる', en : 'to be sufficient; to be enough', v : 'ru', l : '会L17' },
-    { ja : 'だれ', en : 'who', l : '会L2' },
+    { ja : '誰|だれ', en : 'who', l : '会L2' },
     { ja : '～(ん)だろう', en : 'short form of ～(ん)でしょう', l : '会L18' },
     { ja : '探究|たんきゅう', en : 'inquiry', l : '読L19-漢字表' },
     { ja : '単語|たんご', en : 'word; vocabulary', l : '会L9' },
