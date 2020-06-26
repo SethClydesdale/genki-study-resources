@@ -460,6 +460,34 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   overflow:hidden;
 }
 
+/* quick nav sub-section buttons */
+#quick-nav-list li { position:relative; }
+#quick-nav-list a.sub-section-button {
+  color:#FFF;
+  background:#F60;
+  font-size:11px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  height:18px;
+  width:18px;
+  line-height:20px;
+  padding:0;
+  border-radius:100%;
+  position:absolute;
+  top:4px;
+  left:-22px;
+}
+
+#quick-nav-list a.sub-section-button:hover,
+#quick-nav-list a.sub-section-button:focus { background-color:#D40 }
+
+a.sub-section-button[data-open="true"]:after { content:"\f078"; }
+a.sub-section-button[data-open="false"]:after {
+  content:"\f054";
+  letter-spacing:-2px;
+}
+
 /* quick nav jump buttons */
 a.jump-arrow {
   color:#F60;

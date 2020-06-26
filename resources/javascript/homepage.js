@@ -248,6 +248,45 @@
   }
   
   
+  // # QUICK NAV SUB-SECTIONS #
+  // Adds buttons for showing sub-sections in each lesson.
+  for (var a = document.querySelectorAll('#quick-nav-list a'), i = 0, j = a.length, l; i < j; i++) {
+    if (/lesson-\d+/.test(a[i])) {
+      l = a[i].href.replace(/.*?lesson-(\d+).*/, '$1'); // get lesson number
+      
+      // create button and list
+      a[i].insertAdjacentHTML('beforebegin', '<a class="sub-section-button fa" href="#toggle-sub-section" onclick="ToggleSubSection(this, '+ l +'); return false;" title="Toggle sub-sections" data-open="false"></a>');
+      a[i].insertAdjacentHTML('afterend', '<ul style="display:none;"></ul>');
+    }
+  }
+  
+  // toggles the display of each sub-section
+  window.ToggleSubSection = function (caller, lesson) {
+    var list = caller.parentNode.lastChild;
+    
+    // gets the sub-section title for the lesson
+    if (!list.innerHTML) {
+      // gets all sub section titles and parses them into a list
+      for (var sec = document.querySelectorAll('#exercises-' + lesson + ' h3'), i = 0, j = sec.length, str = ''; i < j; i++) {
+        str += '<li><a href="#' + sec[i].id + '">' + sec[i].innerText.replace(/\s\(.*\)$/, '') + '</a></li>';
+      }
+      
+      // add the html to the list
+      list.innerHTML = str;
+    }
+    
+    // toggle list display and button icon
+    if (/none/.test(list.style.display)) {
+      list.style.display = 'block';
+      caller.dataset.open = true;
+      
+    } else {
+      list.style.display = 'none';
+      caller.dataset.open = false;
+    }
+  };
+  
+  
   // # JUMP ARROWS #
   // Add arrows to each lesson title that will take the student back to the quick navigation
   AddJumpArrowsTo('.lesson-title', 'quick-nav', 'Jump to Quick Navigation');
