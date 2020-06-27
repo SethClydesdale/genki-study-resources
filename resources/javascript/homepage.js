@@ -257,6 +257,9 @@
       // create button and list
       a[i].insertAdjacentHTML('beforebegin', '<a class="sub-section-button fa" href="#toggle-sub-section" onclick="ToggleSubSection(this, '+ l +'); return false;" title="Toggle sub-sections" data-open="false"></a>');
       a[i].insertAdjacentHTML('afterend', '<ul style="display:none;"></ul>');
+      
+      // hide original bullet style
+      a[i].parentNode.style.listStyleType = 'none';
     }
   }
   
