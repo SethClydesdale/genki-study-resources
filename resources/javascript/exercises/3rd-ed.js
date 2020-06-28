@@ -106,6 +106,7 @@ window.GenkiExercises = [
   'lesson-2/workbook-5|Workbook: Noun も・Noun じゃないです|p.29; I & II',
   'lesson-2/workbook-6|Workbook: Questions|p.30',
   'lesson-2/workbook-7|Workbook: Listening Comprehension|p.31; A, B, & C',
+  'lesson-2/literacy-1|Katakana Practice: Identifying Katakana|p.301; I-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

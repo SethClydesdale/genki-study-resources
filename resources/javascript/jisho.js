@@ -1536,7 +1536,7 @@ Genki.jisho = {
     { ja : '男子学生|だんしがくせい', en : 'male student', l : '読L18-II' },
     { ja : '誕生日|たんじょうび', en : 'birthday', l : '会L5' },
     { ja : '男性|だんせい', en : 'man', l : '読L5-漢字表' },
-    { ja : '暖冬|だんとう', en : 'warn winter', l : '読L19-漢字表' },
+    { ja : '暖冬|だんとう', en : 'warm winter', l : '読L19-漢字表' },
     { ja : '田んぼ|たんぼ', en : 'rice field', l : '読L5-漢字表' },
     { ja : '蒲公英|たんぽぽ', en : 'dandelion', l : '読L1-I' }
   ],
