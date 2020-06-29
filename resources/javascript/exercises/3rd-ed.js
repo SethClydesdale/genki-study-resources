@@ -107,6 +107,15 @@ window.GenkiExercises = [
   'lesson-2/workbook-6|Workbook: Questions|p.30',
   'lesson-2/workbook-7|Workbook: Listening Comprehension|p.31; A, B, & C',
   'lesson-2/literacy-1|Katakana Practice: Identifying Katakana|p.301; I-A',
+  'lesson-2/literacy-2|Katakana Practice: Word Match|p.301; I-B',
+  'lesson-2/literacy-3|Katakana Practice: Countries and Capitals|p.302; I-C',
+  'lesson-2/literacy-4|Katakana Practice: Unscramble the Words|p.302; I-D',
+  'lesson-2/literacy-5|Reading Practice: Katakana|p.302-303; II',
+  'lesson-2/literacy-wb-1|Workbook: Katakana (ア-コ)|p.128; I & II',
+  'lesson-2/literacy-wb-2|Workbook: Katakana (サ-ト)|p.129; I & II',
+  'lesson-2/literacy-wb-3|Workbook: Katakana (ナ-ホ)|p.130; I & II',
+  'lesson-2/literacy-wb-4|Workbook: Katakana (マ-ヨ)|p.131; I & II',
+  'lesson-2/literacy-wb-5|Workbook: Katakana (ラ-ン)|p.132; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
