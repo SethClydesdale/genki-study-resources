@@ -1224,10 +1224,11 @@ input.writing-zone-input:focus { border-color:#F60; }
   width:90% !important;
 }
 
-.fill-quiz .set-problem-width .problem { width:150px; }
-.fill-quiz .set-problem-width-med .problem { width:200px; }
-.fill-quiz .set-problem-width-large .problem { width:300px; }
-.fill-quiz .set-problem-width .problem, .fill-quiz .set-problem-width-med .problem, .fill-quiz .set-problem-width-large .problem {
+.fill-quiz .set-problem-width .problem, .fill-quiz .set-problem-width .block { width:150px; }
+.fill-quiz .set-problem-width-med .problem, .fill-quiz .set-problem-width-med .block { width:200px; }
+.fill-quiz .set-problem-width-large .problem, .fill-quiz .set-problem-width-large .block { width:300px; }
+.fill-quiz .set-problem-width .problem, .fill-quiz .set-problem-width-med .problem, .fill-quiz .set-problem-width-large .problem,
+.fill-quiz .set-problem-width .block, .fill-quiz .set-problem-width-med .block, .fill-quiz .set-problem-width-large .block {
   max-width:100%;
 }
 
