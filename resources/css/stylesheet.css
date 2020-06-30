@@ -460,8 +460,34 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   overflow:hidden;
 }
 
-/* quick nav sub-section buttons */
-#quick-nav-list li { position:relative; }
+/* quick nav sub-section buttons and bullet style */
+#quick-nav-list li {
+  position:relative;
+  list-style-type:none;
+}
+
+#quick-nav-list li:before {
+  content:".";
+  font-size:0;
+  display:block;
+  height:6px;
+  width:6px;
+  background:#F60;
+  border-radius:100%;
+  position:absolute;
+  top:10px;
+  left:-16px;
+}
+
+#quick-nav-list li ul li:before {
+  background:transparent;
+  border:1px solid #F60;
+  height:4px;
+  width:4px;
+}
+
+#quick-nav-list li.noBullet:before { display:none; }
+
 #quick-nav-list a.sub-section-button {
   color:#FFF;
   background:#F60;

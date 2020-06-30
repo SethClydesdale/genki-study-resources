@@ -117,6 +117,15 @@ window.GenkiExercises = [
   'lesson-2/literacy-wb-4|Workbook: Katakana (マ-ヨ)|p.131; I & II',
   'lesson-2/literacy-wb-5|Workbook: Katakana (ラ-ン)|p.132; I & II',
   
+  // Lesson 3
+  'lesson-3/vocab-1|Vocabulary: Entertainment and Sports|p.84',
+  'lesson-3/vocab-2|Vocabulary: Foods and Drinks|p.84',
+  'lesson-3/vocab-3|Vocabulary: Places and Time|p.84-85',
+  'lesson-3/vocab-4|Vocabulary: U-verbs|p.85',
+  'lesson-3/vocab-5|Vocabulary: Ru-verbs and Irregular Verbs|p.85',
+  'lesson-3/vocab-6|Vocabulary: Adverbs|p.85',
+  'lesson-3/vocab-7|Vocabulary: Adjectives and Expressions|p.85',
+  
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
