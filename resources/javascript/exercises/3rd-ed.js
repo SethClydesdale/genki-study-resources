@@ -125,6 +125,7 @@ window.GenkiExercises = [
   'lesson-3/vocab-5|Vocabulary: Ru-verbs and Irregular Verbs|p.85',
   'lesson-3/vocab-6|Vocabulary: Adverbs|p.85',
   'lesson-3/vocab-7|Vocabulary: Adjectives and Expressions|p.85',
+  'lesson-3/grammar-0|Review: Identifying Verbs|p.86-88',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
