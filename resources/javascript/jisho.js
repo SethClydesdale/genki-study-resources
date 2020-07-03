@@ -2327,6 +2327,7 @@ Genki.jisho = {
     { ja : '前売り|まえうり', en : 'advance sale', l : '読L9-漢字表' },
     { ja : '前髪|まえがみ', en : 'forelock; bangs', l : '会L17(e)' },
     { ja : '曲がる|まがる', en : 'to turn (right/left)', v : 'u', l : '会L6(e), 会L20' },
+    { ja : 'マクドナルド', en : "McDonald's", l : '会L3' },
     { ja : '鮪|まぐろ', en : 'tuna', l : '会L18(c)' },
     { ja : '負ける|まける', en : 'to lose (a match)', v : 'ru', l : '会L22' },
     { ja : '誠に|まことに', en : 'really (very polite)', l : '会L20' },

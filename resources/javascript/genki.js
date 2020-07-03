@@ -487,7 +487,7 @@
         }
 
         // add the quiz to the document
-        zone.innerHTML = quiz + '</div>' + Genki.lang.check_answers.replace(/<\/div>/, helper ? Genki.lang.toggle_furigana + '</div>' : '</div>');
+        zone.innerHTML = quiz + '</div>' + Genki.lang.check_answers.replace('</div>', helper ? Genki.lang.toggle_furigana + '</div>' : '</div>');
         
         // add a class for non-practice writing exercises
         // this will remove helpers, forcing the student to recall what they learned
@@ -565,7 +565,7 @@
         }
         
         // check if furigana is present and add a toggle button
-        if (/class="furigana"/.test(quiz)) {
+        if (/class="furigana"|class="inline-furi"/.test(quiz)) {
           helper = true;
           zone.className += ' helper-' + ((navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
@@ -584,6 +584,13 @@
       
       // # 5. FILL IN THE BLANKS #
       else if (o.type == 'fill') {
+        var helper = false;
+        
+        // check if furigana is present and add a toggle button
+        if (/class="furigana"|class="inline-furi"/.test(o.quizlet)) {
+          helper = true;
+          zone.className += ' helper-' + ((navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+        }
         
         // add the quiz to the document
         zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '" target="_blank">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
@@ -669,7 +676,7 @@
             '</span>';
           }
           
-        }) + '</div>' + Genki.lang.check_answers.replace('()', '(false, \'fill\')');
+        }) + '</div>' + Genki.lang.check_answers.replace('()', '(false, \'fill\')').replace('</div>', helper ? Genki.lang.toggle_furigana + '</div>' : '</div>');
         
         // auto-focus the first input field
         document.querySelector('.writing-zone-input').autofocus = true;
