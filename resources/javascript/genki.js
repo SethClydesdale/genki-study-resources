@@ -565,7 +565,7 @@
         }
         
         // check if furigana is present and add a toggle button
-        if (/class="furigana"|class="inline-furi"/.test(quiz)) {
+        if (/class="furigana"|class="inline-furi"|<ruby>/.test(quiz)) {
           helper = true;
           zone.className += ' helper-' + ((navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
@@ -587,7 +587,7 @@
         var helper = false;
         
         // check if furigana is present and add a toggle button
-        if (/class="furigana"|class="inline-furi"/.test(o.quizlet)) {
+        if (/class="furigana"|class="inline-furi"|<ruby>/.test(o.quizlet)) {
           helper = true;
           zone.className += ' helper-' + ((navigator.cookieEnabled && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
