@@ -1333,7 +1333,18 @@ input.writing-zone-input:focus { border-color:#F60; }
   font-size:11px;
   margin-top:-3px;
 }
-.helper-hidden .furigana, .helper-hidden .inline-furi i { display:none; }
+
+ruby rt {
+  color:#777;
+  font-size:11px;
+}
+
+#quiz-info .furigana, #quiz-info .inline-furi i, #quiz-info ruby rt {
+  color:#CCC;
+  color:rgba(255, 255, 255, 0.6);
+}
+
+.helper-hidden .furigana, .helper-hidden .inline-furi i, .helper-hidden ruby rt { display:none; }
 
 /* inline furigana */
 .inline-furi {

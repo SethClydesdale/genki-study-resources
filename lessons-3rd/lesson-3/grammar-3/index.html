@@ -69,7 +69,7 @@
         [
           // MULTIPLE CHOICE
           {
-            question : 'ハンバーガーを<span class="inline-furi">食べます<i>たべます</i></span>／マクドナルド',
+            question : 'ハンバーガーを<ruby>食<rt>た</rt></ruby>べます／マクドナルド',
             answers : [
               'Aマクドナルドでハンバーガーを食べます。',
               'ハンバーガーを食べますでマクドナルド。',
@@ -79,7 +79,7 @@
           },
 
           {
-            question : '<span class="inline-furi">音楽を聞きます<i>おんがくをききます</i></span>／うち',
+            question : '<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>きます／うち',
             answers : [
               'Aうちで音楽を聞きます。',
               '音楽を聞きますでうち。',
@@ -89,7 +89,7 @@
           },
 
           {
-            question : 'コーヒーを<span class="inline-furi">飲みます<i>のみます</i></span>／カフェ',
+            question : 'コーヒーを<ruby>飲<rt>の</rt></ruby>みます／カフェ',
             answers : [
               'Aカフェでコーヒーを飲みます。',
               'コーヒーを飲みますでカフェ。',
@@ -99,7 +99,7 @@
           },
 
           {
-            question : '<span class="inline-furi">日本語を話します／大学<i>にほんごをはなします／だいがく</i></span>',
+            question : '<ruby>日本語<rt>にほんご</rt>を<ruby>話<rt>はな</rt></ruby>します／<ruby>大学<rt>だいがく</rt></ruby></ruby>',
             answers : [
               'A大学で日本語を話します。',
               '日本語を話しますで大学。',
@@ -109,7 +109,7 @@
           },
 
           {
-            question : '<span class="inline-furi">雑誌を読みます／図書館<i>ざっしをよみます／としょかん</i></span>',
+            question : '<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます／<ruby>図書館<rt>としょかん</rt></ruby>',
             answers : [
               'A図書館で雑誌を読みます。',
               '雑誌を読みますで図書館。',
@@ -119,7 +119,7 @@
           },
 
           {
-            question : 'テレビを<span class="inline-furi">見ます<i>みます</i></span>／うち',
+            question : 'テレビを<ruby>見<rt>み</rt></ruby>ます／うち',
             answers : [
               'Aうちでテレビを見ます。',
               'テレビを見ますでうち。',
@@ -129,7 +129,7 @@
           },
 
           {
-            question : 'テニスをします／<span class="inline-furi">学校<i>がっこう</i></span>',
+            question : 'テニスをします／<ruby>学校<rt>がっこう</rt></ruby>',
             answers : [
               'A学校でテニスをします。',
               'テニスをしますで学校。',
@@ -139,7 +139,7 @@
           },
 
           {
-            question : '<span class="inline-furi">日本語を勉強します／図書館<i>にほんごをべんきょうします／としょかん</i></span>',
+            question : '<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します／<ruby>図書館<rt>としょかん</rt></ruby>',
             answers : [
               'A図書館で日本語を勉強します。',
               '日本語を勉強しますで図書館。',
@@ -154,44 +154,44 @@
         '<div class="count-problems columns-2 clear">'+
           '<div>'+
             '<div class="problem">'+
-              'ハンバーガーを<span class="inline-furi">食べます<i>たべます</i></span>／マクドナルド<br>'+
+              'ハンバーガーを<ruby>食<rt>た</rt></ruby>べます／マクドナルド<br>'+
               '{マクドナルド}で{ハンバーガー}を{食べます|たべます|answer}。'+
             '</div>'+
             
             '<div class="problem">'+
-              '<span class="inline-furi">音楽を聞きます<i>おんがくをききます</i></span>／うち<br>'+
+              '<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>きます／うち<br>'+
               '{うちで音楽を聞きます|うちでおんがくをききます|' + Genki.getAlts('{うち}で{音楽}を{聞}きます', '家|おんがく|き') + 'answer}。'+
             '</div>'+
             
             '<div class="problem">'+
-              'コーヒーを<span class="inline-furi">飲みます<i>のみます</i></span>／カフェ<br>'+
+              'コーヒーを<ruby>飲<rt>の</rt></ruby>みます／カフェ<br>'+
               '{カフェでコーヒーを飲みます|カフェでコーヒーをのみます|answer}。'+
             '</div>'+
             
             '<div class="problem">'+
-              '<span class="inline-furi">日本語を話します／大学<i>にほんごをはなします／だいがく</i></span><br>'+
+              '<ruby>日本語<rt>にほんご</rt>を<ruby>話<rt>はな</rt></ruby>します／<ruby>大学<rt>だいがく</rt></ruby></ruby><br>'+
               '{大学で日本語を話します|だいがくでにほんごをはなします|' + Genki.getAlts('{大学}で{日本語}を{話}します', 'だいがく|にほんご|はな') + 'answer}。'+
             '</div>'+
           '</div>'+
 
           '<div>'+
             '<div class="problem">'+
-              '<span class="inline-furi">雑誌を読みます／図書館<i>ざっしをよみます／としょかん</i></span><br>'+
+              '<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます／<ruby>図書館<rt>としょかん</rt></ruby><br>'+
               '{図書館で雑誌を読みます|としょかんでざっしをよみます|' + Genki.getAlts('{図書館}で{雑誌}を{読}みます', 'としょかん|ざっし|よ') + 'answer}。'+
             '</div>'+
             
             '<div class="problem">'+
-              'テレビを<span class="inline-furi">見ます<i>みます</i></span>／うち<br>'+
+              'テレビを<ruby>見<rt>み</rt></ruby>ます／うち<br>'+
               '{うちでテレビを見ます|うちでテレビをみます|' + Genki.getAlts('{うち}でテレビを{見}ます', '家|み') + 'answer}。'+
             '</div>'+
             
             '<div class="problem">'+
-              'テニスをします／<span class="inline-furi">学校<i>がっこう</i></span><br>'+
+              'テニスをします／<ruby>学校<rt>がっこう</rt></ruby><br>'+
               '{学校でテニスをします|がっこうでテニスをします|answer}。'+
             '</div>'+
             
             '<div class="problem">'+
-              '<span class="inline-furi">日本語を勉強します／図書館<i>にほんごをべんきょうします／としょかん</i></span><br>'+
+              '<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します／<ruby>図書館<rt>としょかん</rt></ruby><br>'+
               '{図書館で日本語を勉強します|としょかんでにほんごをべんきょうします|' + Genki.getAlts('{図書館}で{日本語}を{勉強}します', 'としょかん|にほんご|べんきょう') + 'answer}。'+
             '</div>'+
           '</div>'+

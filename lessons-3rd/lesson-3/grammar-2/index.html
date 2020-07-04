@@ -69,7 +69,7 @@
         [
           // MULTIPLE CHOICE
           {
-            question : 'ハンバーガー／<span class="inline-furi">食べる<i>たべる</i></span>',
+            question : 'ハンバーガー／<ruby>食<rt>た</rt></ruby>べる',
             answers : [
               'Aハンバーガーを食べます。',
               'ハンバーガーを食べります。',
@@ -79,7 +79,7 @@
           },
 
           {
-            question : '<span class="inline-furi">音楽／聞く<i>おんがく／きく</i></span>',
+            question : '<ruby>音楽<rt>おんがく</rt></ruby>／<ruby>聞<rt>く</rt></ruby>く',
             answers : [
               'A音楽を聞きます。',
               '音楽を聞くます。',
@@ -89,7 +89,7 @@
           },
 
           {
-            question : 'コーヒー／<span class="inline-furi">飲む<i>のむ</i></span>',
+            question : 'コーヒー／<ruby>飲<rt>の</rt></ruby>む',
             answers : [
               'Aコーヒーを飲みます。',
               'コーヒーを飲ます。',
@@ -99,7 +99,7 @@
           },
 
           {
-            question : '<span class="inline-furi">日本語／話す<i>にほんご／はなす</i></span>',
+            question : '<ruby>日本語<rt>にほんご</rt></ruby>／<ruby>話<rt>はな</rt></ruby>す',
             answers : [
               'A日本語を話します。',
               '日本語を話ます。',
@@ -109,7 +109,7 @@
           },
 
           {
-            question : '<span class="inline-furi">雑誌／読む<i>ざっし／よむ</i></span>',
+            question : '<ruby>雑誌<rt>ざっし</rt></ruby>／<ruby>読<rt>よ</rt></ruby>む',
             answers : [
               'A雑誌を読みます。',
               '雑誌を読むます。',
@@ -119,7 +119,7 @@
           },
 
           {
-            question : 'テレビ／<span class="inline-furi">見る<i>みる</i></span>',
+            question : 'テレビ／<ruby>見<rt>み</rt></ruby>る',
             answers : [
               'Aテレビを見ます。',
               'テレビを見ります。',
@@ -139,7 +139,7 @@
           },
 
           {
-            question : '<span class="inline-furi">日本語／勉強する<i class="furigana">にほんご／べんきょうする</i></span>',
+            question : '<ruby>日本語<rt>にほんご</rt></ruby>／<ruby>勉強<rt>べんきょう</rt></ruby>する',
             answers : [
               'A日本語を勉強します。',
               '日本語を勉強すります',
@@ -154,34 +154,34 @@
         '<div class="count-problems columns-2 clear">'+
           '<div>'+
             '<div class="problem">'+
-              'ハンバーガー／<span class="inline-furi">食べる<i>たべる</i></span><br>'+
+              'ハンバーガー／<ruby>食<rt>た</rt></ruby>べる<br>'+
               '{ハンバーガー}を{食べます|たべます|answer}。'+
             '</div>'+
             
             '<div class="problem">'+
-              '<span class="inline-furi">音楽／聞く<i>おんがく／きく</i></span><br>'+
+              '<ruby>音楽<rt>おんがく</rt></ruby>／<ruby>聞<rt>く</rt></ruby>く<br>'+
               '{音楽を聞きます|おんがくをききます|' + Genki.getAlts('{音楽}を{聞}きます', 'おんがく|き') + 'answer}。'+
             '</div>'+
             
             '<div class="problem">'+
-              'コーヒー／<span class="inline-furi">飲む<i>のむ</i></span><br>'+
+              'コーヒー／<ruby>飲<rt>の</rt></ruby>む<br>'+
               '{コーヒーを飲みます|コーヒーをのみます|answer}。'+
             '</div>'+
             
             '<div class="problem">'+
-              '<span class="inline-furi">日本語／話す<i>にほんご／はなす</i></span><br>'+
+              '<ruby>日本語<rt>にほんご</rt></ruby>／<ruby>話<rt>はな</rt></ruby>す<br>'+
               '{日本語を話します|にほんごをはなします|' + Genki.getAlts('{日本語}を{話}します', 'にほんご|はな') + 'answer}。'+
             '</div>'+
           '</div>'+
 
           '<div>'+
             '<div class="problem">'+
-              '<span class="inline-furi">雑誌／読む<i>ざっし／よむ</i></span><br>'+
+              '<ruby>雑誌<rt>ざっし</rt></ruby>／<ruby>読<rt>よ</rt></ruby>む<br>'+
               '{雑誌を読みます|ざっしをよみます|' + Genki.getAlts('{雑誌}を{読}みます', 'ざっし|よ') + 'answer}。'+
             '</div>'+
             
             '<div class="problem">'+
-              'テレビ／<span class="inline-furi">見る<i>みる</i></span><br>'+
+              'テレビ／<ruby>見<rt>み</rt></ruby>る<br>'+
               '{テレビを見ます|テレビをみます|answer}。'+
             '</div>'+
             
@@ -191,7 +191,7 @@
             '</div>'+
             
             '<div class="problem">'+
-              '<span class="inline-furi">日本語／勉強する<i class="furigana">にほんご／べんきょうする</i></span><br>'+
+              '<ruby>日本語<rt>にほんご</rt></ruby>／<ruby>勉強<rt>べんきょう</rt></ruby>する<br>'+
               '{日本語を勉強します|にほんごをべんきょうします|' + Genki.getAlts('{日本語}を{勉強}します', 'にほんご|べんきょう') + 'answer}。'+
             '</div>'+
           '</div>'+
