@@ -1334,9 +1334,30 @@ input.writing-zone-input:focus { border-color:#F60; }
   margin-top:-3px;
 }
 
+ruby {
+  /* START ruby-position:under; hack */
+  text-align:center;
+  display:inline-block;
+  position:relative;
+  bottom:-16px;
+  margin:-16px 0 16px 0;
+  /* END   ruby-position:under; hack */
+}
+
+.helper-hidden ruby {
+  display:inline;
+  position:static;
+}
+
 ruby rt {
   color:#777;
-  font-size:11px;
+  /* START ruby-position:under; hack */
+  font-size:11px; /* if font size is changed, various values will need to be adjusted */
+  display:block;
+  height:15px;
+  line-height:15px;
+  margin-top:-1px;
+  /* END   ruby-position:under; hack */
 }
 
 #quiz-info .furigana, #quiz-info .inline-furi i, #quiz-info ruby rt {
