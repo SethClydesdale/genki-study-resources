@@ -16,3 +16,39 @@ This script is used for verifying if the words in a vocabulary (type : 'drag') e
 **How to use:** Add ?debug to the end of the URL while viewing a vocab exercise. This will enable debug mode. Once enabled, simply paste this script in your console and hit enter. It should bring up a log with results for each search. If no results are found, the log will be displayed in yellow, letting you know you should investigate further before adding the definition to the dictionary.
 
 **Further verification:** Before a definition is added, you need to verify if the hit was a false positive or not. It's fairly simple; if the definition has special characters (e.g. '...', '~', etc..) try removing them and performing a search in the quick dictionary or a kanji only search as well. If nothing still comes up, the definition should be added to the dictionary.
+
+
+### derubify.js
+This script is for converting `<ruby>` tags in text strings into plain text. It returns two strings: `<ruby>` text and `<rt>` text which can be accessed via the object keys `ruby` or `rt`. Mainly used for converting ruby strings for usage in written quizzes as answers.
+
+Sntax:
+```javascript
+'たけしさんはうちに<ruby>帰<rt>かえ</rt></ruby>ります。'.derubify();
+```
+
+Return value:
+```javascript
+{
+  ruby: "たけしさんはうちに帰ります。",
+  rt: "たけしさんはうちにかえります。"
+}
+```
+
+While the example only shows a replacement of a single ruby tag, replacements of multiple ruby tags in a string are supported automatically.
+
+**Note:** You should define the contents of this script in the console before usage.
+
+
+### getCharWidth.js
+Calculates the width of the string, returning a number which can be used in the `width` param of written answers. Useful for when the width cannot be calculated or is not of a desired value.
+
+Syntax:
+```javascript
+'おはよう'.getCharWidth();
+```
+
+Return value: `70`
+
+Return value usage example: `{おはよう||width:70}`
+
+**Note:** You should define the contents of this script in the console before usage.
