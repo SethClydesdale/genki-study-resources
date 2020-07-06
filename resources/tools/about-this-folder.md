@@ -23,18 +23,28 @@ This script is for converting `<ruby>` tags in text strings into plain text. It 
 
 Sntax:
 ```javascript
-'たけしさんはうちに<ruby>帰<rt>かえ</rt></ruby>ります。'.derubify();
+'たけしさんはうちに<ruby>帰<rt>かえ</rt></ruby>ります'.derubify();
 ```
 
 Return value:
 ```javascript
 {
-  ruby: "たけしさんはうちに帰ります。",
-  rt: "たけしさんはうちにかえります。"
+  ruby: "たけしさんはうちに帰ります",
+  rt: "たけしさんはうちにかえります"
 }
 ```
 
-While the example only shows a replacement of a single ruby tag, replacements of multiple ruby tags in a string are supported automatically.
+Passing `1` or `true` as a param will return an input sequence for written quizzes instead.
+```javascript
+'たけしさんはうちに<ruby>帰<rt>かえ</rt></ruby>ります'.derubify(true);
+```
+
+Return value:
+```javascript
+'{たけしさんはうちに帰ります|たけしさんはうちにかえります|answer}'
+```
+
+While the examples only shows a replacement of a single ruby tag, replacements for multiple ruby tags in a string are supported automatically.
 
 **Note:** You should define the contents of this script in the console before usage.
 

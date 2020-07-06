@@ -131,6 +131,7 @@ window.GenkiExercises = [
   'lesson-3/grammar-3|Practice: で Particle|p.95; II-A; b',
   'lesson-3/grammar-4|Practice: を and で Particles|p.95; II-B',
   'lesson-3/grammar-5|Practice: に Particle|p.96; III-A',
+  'lesson-3/grammar-6|Practice: Time References 1|p.97; IV-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

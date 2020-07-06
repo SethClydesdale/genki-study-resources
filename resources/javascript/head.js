@@ -72,6 +72,8 @@
       if (window.Genki && Genki.timer && Genki.timer.isRunning()) {
         Genki.timer.pause();
       }
+      
+      return o;
     },
 
     // close the modal

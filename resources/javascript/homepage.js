@@ -36,11 +36,6 @@
       },
       
       {
-        content : 'Curious about the changes to Genki 3rd Edition? Looking for the 3rd Edition answer keys? Head on over to the <a href="https://genki3.japantimes.co.jp/teacher/resources/pre.html">Genki Online Teacher Resources</a> to find what you need!',
-        edition : '3rd'
-      },
-      
-      {
         content : 'Have a question about the site? Check out the <a href="' + getPaths() + 'help/">FAQ</a>! If you can\'t find an answer to your question, feel free to contact us via <a href="https://github.com/SethClydesdale/genki-study-resources/issues">GitHub\'s issues</a> and we\'ll try to answer your question in a timely manner.'
       },
       

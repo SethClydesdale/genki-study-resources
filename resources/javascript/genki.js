@@ -157,13 +157,16 @@
       // mainly for exercises that provide multiple exercise variations
       // handles switching and conversion of exercises
       if (typeof o.type === 'object') {
+        var begin = /begin=\d/.test(window.location.search) ? window.location.search.replace(/.*?begin=(\d).*/, '$1') : false,
+            i = 0, j = o.type.length, opts = '', modal;
+        
         // parse options
-        for (var i = 0, j = o.type.length, opts = ''; i < j; i++) {
-          opts += '<option value="' + i + '"' + (navigator.cookieEnabled && window.localStorage && localStorage['genki_pref_' + o.format] == o.type[i] ? ' selected' : '') + '>' + Genki.lang.opts[o.format][o.type[i]] + '</option>';
+        for (; i < j; i++) {
+          opts += '<option value="' + i + '"' + (begin !== false ? (i == begin ? ' selected' : '') : navigator.cookieEnabled && window.localStorage && localStorage['genki_pref_' + o.format] == o.type[i] ? ' selected' : '') + '>' + Genki.lang.opts[o.format][o.type[i]] + '</option>';
         }
         
         // open selection window
-        GenkiModal.open({
+        modal = GenkiModal.open({
           title : 'Please Select an Exercise Type',
           content : 'Please select the type of exercise you would like to do, then click "Begin" to start studying.<br><br>'+
           '<div class="center">'+
@@ -354,6 +357,13 @@
             Genki.generateQuiz(o);
           }
         });
+        
+        // auto start the exercise if "begin=NUMBER" is specified in the URL.
+        // NUMBER should be the index of the drop down exercise types, starting at 0 for the first, 1 for the second, and so on..
+        if (begin !== false) {
+          modal.callback();
+          GenkiModal.close();
+        }
         
         return false;
       }
