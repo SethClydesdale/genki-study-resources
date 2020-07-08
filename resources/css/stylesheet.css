@@ -1393,7 +1393,7 @@ ruby rt {
 
 .quiz-multi-answer {
   color:#333;
-  font:400 13.3333px Arial;
+  font-size:14px;
   text-rendering:auto;
   background:#FFF;
   border:1px solid #CCC;
@@ -1429,6 +1429,8 @@ ruby rt {
 .quiz-multi-answer:before {
   content:attr(data-option) ":";
   font-size:18px;
+  font-weight:400;
+  font-family:Arial;
   position:absolute;
   left:-25px;
   top:50%;
