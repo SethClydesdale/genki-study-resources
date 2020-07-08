@@ -133,6 +133,9 @@ window.GenkiExercises = [
   'lesson-3/grammar-5|Practice: に Particle|p.96; III-A',
   'lesson-3/grammar-6|Practice: Time References 1|p.97; IV-A',
   'lesson-3/grammar-7|Practice: Time References 2|p.98; IV-D',
+  'lesson-3/grammar-8|Practice: Suggestion Using ～ませんか|p.98; V-A',
+  'lesson-3/grammar-9|Practice: Frequency Adverbs|p.99; VI',
+  'lesson-3/culture-1|Culture Note: Japanese Houses|p.101',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
