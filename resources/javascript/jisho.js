@@ -2012,6 +2012,7 @@ Genki.jisho = {
     { ja : 'バス', en : 'bus', l : '会L5' },
     { ja : '恥ずかしい|はずかしい', en : 'embarrassing; to feel embarrassed', l : '会L18' },
     { ja : '恥ずかしがり屋|はずかしがりや', en : 'shy person', l : '会L19' },
+    { ja : 'バスケットボール', en : 'basketball', l : 'ワークブックL3' },
     { ja : 'バス停|バスてい', en : 'bus stop', l : '会L4' },
     { ja : 'パソコン', en : 'personal computer', l : '会L6' },
     { ja : '畑|はたけ', en : 'farm', l : '読L12-II' },

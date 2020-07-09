@@ -4,7 +4,7 @@
   
   // # EDITION PREFERENCE #
   // stores the currently selected edition so the student can be correctly redirected when clicking home links
-  if (navigator.cookieEnabled && window.localStorage) {
+  if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
     localStorage.GenkiEdition = /lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd';
   }
   

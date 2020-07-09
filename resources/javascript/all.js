@@ -4,7 +4,7 @@
   
   // # EDITION REDIRECTOR #
   // properly redirects the student to their preferred edition when clicking the home links
-  if (navigator.cookieEnabled && window.localStorage && localStorage.GenkiEdition == '3rd' && /\/privacy\/|\/report\/|\/help\/|\/donate\/|\/download\//.test(window.location.pathname)) {
+  if (navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.GenkiEdition == '3rd' && /\/privacy\/|\/report\/|\/help\/|\/donate\/|\/download\//.test(window.location.pathname)) {
     document.getElementById('home-link').href += 'lessons-3rd/';
     document.getElementById('footer-home').href += 'lessons-3rd/';
   }
@@ -38,7 +38,7 @@
   
   // # DARK MODE #
   // Allows the student to switch to a dark version of Genki Study Resources. (Great for late night studying!)
-  if (navigator.cookieEnabled && window.localStorage) {
+  if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
     var footer = document.querySelector('footer'),
         button = document.createElement('LABEL'),
         container = document.createElement('DIV');
