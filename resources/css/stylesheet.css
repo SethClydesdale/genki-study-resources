@@ -1637,6 +1637,12 @@ p.section-desc {
   content:counter(problems, lower-alpha) ".";
 }
 
+.count-problems td.problem { margin:0; }
+.count-problems td.problem:before {
+  float:left;
+  margin-left:5px;
+}
+
 /* input style */
 .fill-quiz .writing-zone {
   background:none;
