@@ -139,6 +139,8 @@ window.GenkiExercises = [
   'lesson-3/workbook-1|Workbook: Verb Conjugation|p.32',
   'lesson-3/workbook-2|Workbook: Noun を Verb|p.33',
   'lesson-3/workbook-3|Workbook: Verbs with Places|p.34; I &amp; II',
+  'lesson-3/workbook-4|Workbook: Time References|p.35; I, II, &amp; III',
+  'lesson-3/workbook-5|Workbook: Suggestion Using ～ませんか|p.36; I &amp; II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
