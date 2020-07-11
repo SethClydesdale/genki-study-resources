@@ -141,6 +141,8 @@ window.GenkiExercises = [
   'lesson-3/workbook-3|Workbook: Verbs with Places|p.34; I &amp; II',
   'lesson-3/workbook-4|Workbook: Time References|p.35; I, II, &amp; III',
   'lesson-3/workbook-5|Workbook: Suggestion Using ～ませんか|p.36; I &amp; II',
+  'lesson-3/workbook-6|Workbook: Frequency Adverbs|p.37',
+  'lesson-3/workbook-7|Workbook: Questions|p.38',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
