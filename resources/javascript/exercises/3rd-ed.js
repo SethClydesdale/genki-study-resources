@@ -143,6 +143,8 @@ window.GenkiExercises = [
   'lesson-3/workbook-5|Workbook: Suggestion Using ～ませんか|p.36; I &amp; II',
   'lesson-3/workbook-6|Workbook: Frequency Adverbs|p.37',
   'lesson-3/workbook-7|Workbook: Questions|p.38',
+  'lesson-3/workbook-8|Workbook: Listening Comprehension 1|p.39; A & B',
+  'lesson-3/workbook-9|Workbook: Listening Comprehension 2|p.40; C & D',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
