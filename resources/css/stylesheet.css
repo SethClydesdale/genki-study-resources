@@ -1327,6 +1327,8 @@ input.writing-zone-input:focus { border-color:#F60; }
   margin:10px 0;
 }
 
+.big-kanji { font-size:100px; }
+
 /* furigana */
 .furigana, .inline-furi i {
   color:#777;

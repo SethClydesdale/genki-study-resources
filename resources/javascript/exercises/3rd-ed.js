@@ -145,6 +145,7 @@ window.GenkiExercises = [
   'lesson-3/workbook-7|Workbook: Questions|p.38',
   'lesson-3/workbook-8|Workbook: Listening Comprehension 1|p.39; A & B',
   'lesson-3/workbook-9|Workbook: Listening Comprehension 2|p.40; C & D',
+  'lesson-3/literacy-1|Kanji Practice: Readings and Meanings|p.304-305',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
