@@ -59,6 +59,9 @@
       num_writing : 'Practice spelling the following numbers.',
       num_fill : 'Write the following numbers in Japanese (hiragana).',
       
+      kanji_multi : 'Choose the correct reading(s) for each kanji.',
+      kanji_multi_2 : 'Choose the correct meaning(s) for each kanji.',
+      
       // options for exercise variations
       opts : {
         kana : {
@@ -73,6 +76,11 @@
           multi : 'Multiple Choice',
           writing : 'Spelling Practice',
           fill : 'Write the Numbers'
+        },
+        
+        kanji : {
+          multi : 'Kanji Readings',
+          multi_2 : 'Kanji Meanings'
         },
         
         vocab : {
@@ -198,7 +206,7 @@
             
             // convert the quizlet to the selected type
             // vocab, kana, and number conversions
-            if (/vocab|kana|numbers/.test(o.format)) {
+            if (/vocab|kana|numbers|kanji/.test(o.format)) {
               
               // reformats the quizlet for kana exercises, so that they can be converted to other exercise types
               if (o.format == 'kana' && o.type != 'kana') {
@@ -214,6 +222,19 @@
                 
                 // also change the info description
                 o.info = o.info.replace('%{KANA}', Genki.active.exercise[1].replace(/.*?(Hiragana|Katakana).*/, '$1'));
+              }
+              
+              // switches to either the readings or meanings values for kanji quizzes, so they can be converted properly (also corrects type)
+              if (o.format == 'kanji') {
+                var i;
+                
+                // picks either index 0 (readings) or 1 (meanings)
+                for (i in o.quizlet) {
+                  o.quizlet[i] = o.quizlet[i][type].replace(/(On\:|Kun\:)/g, '<b>$1</b>');;
+                }
+                
+                // removes the number on the end of the type
+                o.type = o.type.replace(/_\d+$/, '');
               }
               
               // BEGIN conversion conditions for vocab or kana
@@ -235,7 +256,7 @@
                   
                   // push the question data
                   quizlet.push({
-                    question : def[0] + (def[1] ? '<div class="furigana">' + def[1] + '</div>' : ''),
+                    question : (o.format == 'kanji' ? '<div class="big-kanji">' : '') + def[0] + (o.format == 'kanji' ? '</div>' : '') + (def[1] ? '<div class="furigana">' + def[1] + '</div>' : ''),
                     answers : ['A' + currentAnswer]
                   });
                   
