@@ -38,6 +38,7 @@ The following resources were used in this project. Check them out!
 - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) for the awesome icons.
 - [dragula](https://github.com/bevacqua/dragula) for the simple drag and drop.
 - [easytimer.js](https://github.com/albert-gonzalez/easytimer.js) for the super easy timer.
+- [Kanji Canvas](https://github.com/asdfjkl/kanjicanvas) by Dominik Klein for the stroke order exercises.
 
 
 ### Donate
