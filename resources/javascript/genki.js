@@ -59,8 +59,10 @@
       num_writing : 'Practice spelling the following numbers.',
       num_fill : 'Write the following numbers in Japanese (hiragana).',
       
-      kanji_multi : 'Choose the correct reading(s) for each kanji.',
-      kanji_multi_2 : 'Choose the correct meaning(s) for each kanji.',
+      kanji_readings_multi : 'Choose the correct readings for each kanji.',
+      kanji_readings_drag : 'Match each kanji with their readings.',
+      kanji_meanings_multi : 'Choose the correct meanings for each kanji.',
+      kanji_meanings_drag : 'Match each kanji with their meanings.',
       
       // options for exercise variations
       opts : {
@@ -79,8 +81,8 @@
         },
         
         kanji : {
-          multi : 'Kanji Readings',
-          multi_2 : 'Kanji Meanings'
+          multi : 'Multiple Choice',
+          drag : 'Drag and Drop'
         },
         
         vocab : {
@@ -100,6 +102,7 @@
       mistakes : 'The items outlined in <span class="t-red t-bold">red</span> were answered wrong before finding the correct answer. Review these problems before trying again.',
       writing_mistakes : 'The items outlined in <span class="t-red t-bold">red</span> were answered wrong. Review these problems before trying again.',
       multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red t-bold">red</span>. The correct answers are outlined in <span class="t-blue t-bold">blue</span>. Review these problems before trying again.',
+      stroke_mistakes : 'The kanji you drew that were wrong are outlined in <span class="t-red t-bold">red</span>. Please review the stroke order and number of strokes for these kanji before trying again.<br><br><b>Note:</b> Sometimes answers may be marked wrong by mistake, due to a mismatch in the recognition algorithm.<br>Please use your own discretion if this occurs.',
       fill_mistakes : 'The items underlined in <span class="t-red t-bold">red</span> were answered wrong, the correct answers are listed underneath in <span class="t-green t-bold">green</span>. Review these problems before trying again.',
       sub_answers : '<b>Note:</b> Answers inside <span class="t-blue t-bold">blue</span> parentheses separated by "<span class="alt-phrase-sep">/</span>" are a list of possible sub-answers; only one can be used.<br>For example.. <span class="t-green"><span class="alt-phrase">(</span>あの<span class="alt-phrase-sep">/</span>その<span class="alt-phrase">)</span>ねこ</span>: そのねこ or あのねこ <span class="t-green">(good)</span> vs あの/そのねこ <span class="t-red">(bad)</span><br><span class="t-green"><span class="alt-phrase">(</span>この<span class="alt-phrase-sep">/</span><span class="alt-phrase">)</span>ねこ</span> means the sub-answer is optional; it can be left out.',
       
@@ -158,6 +161,7 @@
       ** 3. WRITING PRACTICE         **
       ** 4. MULTIPLE CHOICE          **
       ** 5. FILL IN THE BLANKS       **
+      ** 6. STROKE ORDER             **
       *********************************/
       var zone = document.getElementById('quiz-zone'); // area where quizzes are inserted
       
@@ -224,17 +228,18 @@
                 o.info = o.info.replace('%{KANA}', Genki.active.exercise[1].replace(/.*?(Hiragana|Katakana).*/, '$1'));
               }
               
-              // switches to either the readings or meanings values for kanji quizzes, so they can be converted properly (also corrects type)
-              if (o.format == 'kanji') {
+              // formats kanji for readings quizzes
+              if (o.format == 'kanji' && o.readings) {
                 var i;
                 
                 // picks either index 0 (readings) or 1 (meanings)
                 for (i in o.quizlet) {
-                  o.quizlet[i] = o.quizlet[i][type].replace(/(On\:|Kun\:)/g, '<b>$1</b>');;
+                  o.quizlet[i] = o.quizlet[i].replace(/(On\:|Kun\:)/g, '<b>$1</b>');
                 }
                 
-                // removes the number on the end of the type
-                o.type = o.type.replace(/_\d+$/, '');
+                if (o.type == 'drag') {
+                  document.getElementById('exercise').className += ' kanji-readings';
+                }
               }
               
               // BEGIN conversion conditions for vocab or kana
@@ -561,7 +566,7 @@
 
           // ready-only questions contain text only, no answers
           if (q[i].text) {
-            quiz += '<div class="quiz-multi-row"><div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, true);" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this);">NEXT</div></div>';
+            quiz += '<div class="quiz-multi-row"><div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, true);" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this, true);">NEXT</div></div>';
             ++Genki.stats.exclude; // exclude this block from the overall score
 
           } else { // standard question block construction
@@ -711,6 +716,61 @@
         
         // auto-focus the first input field
         document.querySelector('.writing-zone-input').autofocus = true;
+      }
+      
+      
+      // # 6. STROKE ORDER #
+      else if (o.type == 'stroke') {
+        var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
+            answers = '<div id="answer-list">',
+            strokeOrderHidden = navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.strokeOrderVisible == 'false',
+            q = o.quizlet,
+            i = 0,
+            j = q.length;
+
+        // create individual blocks for each question and hide them until later
+        for (; i < j; i++) {
+          // start question block
+          quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;">'+
+            // kanji
+            '<div class="quiz-multi-question">'+
+              '<div class="kanji-container big-kanji">' + q[i].kanji + '</div>'+
+              '<div class="kanji-stroke-order">'+
+                '<a href="https://jisho.org/search/' + q[i].kanji + '%20%23kanji" target="_blank" title="View stroke order on jisho.org"><button class="button"><i class="fa">&#xf002;</i></button></a>'+
+                '<a href="' + getPaths() + 'resources/images/stroke-order/' + q[i].order + '.png" target="_blank" title="Click to view image"><img src="' + getPaths() + 'resources/images/stroke-order/' + q[i].order + '.png" alt="stroke order"/></a>'+
+              '</div>'+
+            '</div>'+
+            
+            // drawing area + buttons
+            '<div class="quiz-multi-row">'+
+              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-strokes="' + q[i].strokes + '" id="canvas-' + i + '" width="200" height="200"></canvas>'+
+            '</div>'+
+            '<div class="kanji-canvas-actions quiz-multi-row center">'+
+              '<button class="button" onclick="KanjiCanvas.erase()"><i class="fa">&#xf12d;</i>Erase</button>'+
+              '<button class="button" onclick="KanjiCanvas.deleteLast()"><i class="fa">&#xf0e2;</i>Undo</button>'+
+            '</div>'+
+            '<div class="quiz-multi-row">'+
+              '<div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, false, \'stroke\');" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this, false, \'stroke\');">Next Kanji</div>'+
+            '</div>'+
+          // end question block
+          '</div>';
+          
+          ++Genki.stats.problems; // increment problems number
+        }
+
+        // add the multi-choice quiz to the quiz zone
+        zone.innerHTML = quiz + '</div><div id="quiz-progress"><div id="quiz-progress-bar"></div></div>'+
+          '<div id="review-exercise" class="center clearfix">'+ 
+            '<button class="button hide-stroke-order" onclick="Genki.toggle.strokeOrder(this);"><i class="fa">&#xf1fc;</i>' + (strokeOrderHidden ? 'Show' : 'Hide') + ' Stroke Order</button>'+
+          '</div>';
+        
+        // hide stroke order based on preferences
+        if (strokeOrderHidden) {
+          zone.className += ' stroke-order-hidden';
+        }
+        
+        // begin the quiz
+        Genki.progressQuiz('init', false, 'stroke');
       }
 
 
@@ -877,7 +937,7 @@
       Genki.timer = timer;
 
       // indicate the exercise has been loaded in
-      document.getElementById('exercise').className += ' content-loaded ' + o.type + '-quiz';
+      document.getElementById('exercise').className += ' content-loaded ' + (o.type == 'stroke' ? 'stroke-quiz multi' : o.type) + '-quiz';
 
       // jump to the exercise title
       Genki.scrollTo('#exercise-title', true);
@@ -927,7 +987,7 @@
 
 
     // show the next question in a multi-choice quiz
-    progressQuiz : function (answer, exclude) {
+    progressQuiz : function (answer, exclude, flag) {
       // prevent quiz progression while text selection mode is enabled or the quiz is over
       if (Genki.textSelectMode || Genki.quizOver) {
         return false;
@@ -939,6 +999,22 @@
         Genki.incrementProgressBar();
 
       } else {
+        // set the canvas as the answer if doing a stroke order exercise
+        if (answer && flag == 'stroke') {
+          var kanji = KanjiCanvas.recognize(), index; // find kanji with the given strokes
+          
+          // set the answer item as the canvas
+          answer = answer.parentNode.parentNode.querySelector('.kanji-canvas');
+          
+          // debugging (logs info about matched kanji, match index, and whether the answer was correct or not)
+          Genki.debug && console.log('toDraw: ' + answer.dataset.kanji);
+          Genki.debug && console.log('Results: ' + kanji);
+          Genki.debug && console.log('Correct: ' + (new RegExp(answer.dataset.kanji).test(kanji) && answer.dataset.strokesAnswer == answer.dataset.strokes).toString());
+          
+          // mark the answer as correct or incorrect depending on: 1. the kanji presence and 2. the number of strokes.
+          answer.dataset.answer = new RegExp(answer.dataset.kanji).test(kanji) && answer.dataset.strokesAnswer == answer.dataset.strokes;
+        }
+        
         // mark the selected answer for reviews
         answer.className += ' selected-answer';
 
@@ -963,7 +1039,7 @@
           Genki.incrementProgressBar();
 
         } else { // end the quiz if there's no new question
-          Genki.endQuiz('multi');
+          Genki.endQuiz(flag == 'stroke' ? flag : 'multi');
 
           // show all questions and answers
           for (var q = document.querySelectorAll('[id^="quiz-q"]'), i = 0, j = q.length; i < j; i++) {
@@ -973,6 +1049,11 @@
           // hide the progress bar
           document.getElementById('quiz-progress').style.display = 'none';
         }
+      }
+      
+      // initialize canvas for stroke order quizzes
+      if (flag == 'stroke' && document.getElementById('canvas-' + Genki.stats.solved)) {
+        KanjiCanvas.init('canvas-' + Genki.stats.solved);
       }
     },
 
@@ -1317,6 +1398,36 @@
         // save settings if supported
         if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
           localStorage.furiganaVisible = state;
+        }
+      },
+      
+      
+      // toggles stroke order in stroke order quizzes
+      strokeOrder : function (button) {
+        var zone = document.getElementById('quiz-zone'),
+            state = (navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.strokeOrderVisible) || (/stroke-order-hidden/.test(zone.className) ? 'false' : 'true');
+        
+        // hide or show the textual aids
+        switch (state) {
+          case 'true' :
+            state = 'false';
+            zone.className = zone.className += ' stroke-order-hidden';
+            button.innerHTML = button.innerHTML.replace('Hide', 'Show');
+            break;
+            
+          case 'false' :
+            state = 'true';
+            zone.className = zone.className.replace(' stroke-order-hidden', '');
+            button.innerHTML = button.innerHTML.replace('Show', 'Hide');
+            break;
+            
+          default :
+            break;
+        }
+        
+        // save settings if supported
+        if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
+          localStorage.strokeOrderVisible = state;
         }
       },
       

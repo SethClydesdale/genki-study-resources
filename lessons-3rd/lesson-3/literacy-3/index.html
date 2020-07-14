@@ -2,12 +2,12 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8">
-    <title>Kanji Practice: Readings - Lesson 3 | Genki Study Resources - 3rd Edition</title>
-    <meta name="title" content="Kanji Practice: Readings - Lesson 3 | Genki Study Resources - 3rd Edition">
-    <meta name="twitter:title" content="Kanji Practice: Readings - Lesson 3 | Genki Study Resources - 3rd Edition">
-    <meta property="og:title" content="Kanji Practice: Readings - Lesson 3 | Genki Study Resources - 3rd Edition">
-    <meta name="description" content="Match each kanji with their readings.">
-    <meta property="og:description" content="Match each kanji with their readings.">
+    <title>Kanji Practice: Stroke Order - Lesson 3 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Kanji Practice: Stroke Order - Lesson 3 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Kanji Practice: Stroke Order - Lesson 3 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Kanji Practice: Stroke Order - Lesson 3 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Practice drawing each kanji by following the stroke order.">
+    <meta property="og:description" content="Practice drawing each kanji by following the stroke order.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
     <meta name="keywords" content="Genki I, Reading and Writing, page 304, page 305, japanese, quizzes, exercises, 3rd Edition" lang="en">
@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="sethclydesdale.github.io">
-    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/lesson-3/literacy-1/">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/lesson-3/literacy-3/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
@@ -57,32 +57,104 @@
     
     <script src="../../../resources/javascript/dragula.min.js"></script>
     <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/kanji-canvas.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      format : 'kanji',
-      type : ['multi', 'drag'],
-      info : [Genki.lang.kanji_readings_multi, Genki.lang.kanji_readings_drag],
-      
-      readings : true,
-      quizlet : {
-        '一' : 'On: いち, いっ<br>Kun: ひと',
-        '二' : 'On: に<br>Kun: ふた',
-        '三' : 'On: さん<br>Kun: みっ',
-        '四' : 'On: し<br>Kun: よん, よ, よっ',
-        '五' : 'On: ご<br>Kun: いつ',
-        '六' : 'On: ろく, ろっ<br>Kun: むっ',
-        '七' : 'On: しち<br>Kun: なな',
-        '八' : 'On: はち, はっ<br>Kun: やっ',
-        '九' : 'On: きゅう, く<br>Kun: ここの',
-        '十' : 'On: じゅう, じゅっ, じっ<br>Kun: とお',
-        '百' : 'On: ひゃく, びゃく, ぴゃく',
-        '千' : 'On: せん, ぜん',
-        '万' : 'On: まん',
-        '円' : 'On: えん<br>Kun: まる',
-        '時' : 'On: じ<br>Kun: とき'
-      }
+      type : 'stroke',
+      info : 'Practice drawing each kanji by following the stroke order.',
+      quizlet : [
+        {
+          kanji : '一',
+          strokes : 1,
+          order : '001'
+        },
+        
+        {
+          kanji : '二',
+          strokes : 2,
+          order : '002'
+        },
+        
+        {
+          kanji : '三',
+          strokes : 3,
+          order : '003'
+        },
+        
+        {
+          kanji : '四',
+          strokes : 5,
+          order : '004'
+        },
+        
+        {
+          kanji : '五',
+          strokes : 4,
+          order : '005'
+        },
+        
+        {
+          kanji : '六',
+          strokes : 4,
+          order : '006'
+        },
+        
+        {
+          kanji : '七',
+          strokes : 2,
+          order : '007'
+        },
+        
+        {
+          kanji : '八',
+          strokes : 2,
+          order : '008'
+        },
+        
+        {
+          kanji : '九',
+          strokes : 2,
+          order : '009'
+        },
+        
+        {
+          kanji : '十',
+          strokes : 2,
+          order : '010'
+        },
+        
+        {
+          kanji : '百',
+          strokes : 6,
+          order : '011'
+        },
+        
+        {
+          kanji : '千',
+          strokes : 3,
+          order : '012'
+        },
+        
+        {
+          kanji : '万',
+          strokes : 3,
+          order : '013'
+        },
+        
+        {
+          kanji : '円',
+          strokes : 4,
+          order : '014'
+        },
+        
+        {
+          kanji : '時',
+          strokes : 10,
+          order : '015'
+        }
+      ]
     });</script>
   </body>
 </html>

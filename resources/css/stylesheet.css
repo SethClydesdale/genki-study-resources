@@ -771,6 +771,17 @@ footer li:first-child:before { display:none; }
   box-sizing:border-box;
 }
 
+/* kanji reading drag style */
+.kanji-readings.drag-quiz .quiz-answer-zone, .kanji-readings.drag-quiz .quiz-item {
+  height:48px;
+}
+
+.kanji-readings.drag-quiz #question-list .quiz-item {
+  line-height:44px;
+  font-size:26px;
+  padding:3px 10px;
+}
+
 
 /* review exercise button styles */
 #review-exercise { margin-top:10px; }
@@ -1046,7 +1057,7 @@ footer li:first-child:before { display:none; }
 }
 
 /* hide helpers */
-.helper-hidden .hidden-text { display:none; }
+.helper-hidden .hidden-text, .stroke-order-hidden .kanji-stroke-order { display:none; }
 
 /* kana quiz styles */
 .kana-quiz #question-list, .kana-quiz #answer-list {
@@ -1329,6 +1340,14 @@ input.writing-zone-input:focus { border-color:#F60; }
 
 .big-kanji { font-size:100px; }
 
+.kanji-container { display:inline-block; }
+.kanji-canvas {
+  background:#FFF;
+  border:1px solid #CCC;
+  display:block;
+  margin:0 auto;
+}
+
 /* furigana */
 .furigana, .inline-furi i {
   color:#777;
@@ -1458,6 +1477,32 @@ ruby rt {
 
 .multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"] { border-color:#09F; }
 .multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"]:before { color:#09F; }
+
+.stroke-quiz.quiz-over .kanji-canvas[data-answer="true"] { border-color:#080; }
+.stroke-quiz.quiz-over .kanji-canvas[data-answer="false"] { border-color:#F00; }
+.stroke-quiz.quiz-over .kanji-canvas { pointer-events:none; }
+.stroke-quiz.quiz-over .next-question,  .stroke-quiz.quiz-over .kanji-canvas-actions { display:none; }
+
+/* stroke order button */
+.kanji-stroke-order .button {
+  color:#333;
+  background:#FFF;
+  border:1px solid #DEDEDE;
+  vertical-align:top;
+  height:30px;
+  width:30px;
+  padding:0;
+  margin:0 0 0 0px;
+}
+
+.kanji-stroke-order .button i {
+  font-size:14px;
+  margin-right:0;
+}
+
+.kanji-stroke-order .button:hover, .kanji-stroke-order .button:focus {
+  color:#F60;
+}
 
 /* read-only questions */
 #exercise .text-passage {
