@@ -746,11 +746,12 @@
               '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-strokes="' + q[i].strokes + '" id="canvas-' + i + '" width="200" height="200"></canvas>'+
             '</div>'+
             '<div class="kanji-canvas-actions quiz-multi-row center">'+
-              '<button class="button" onclick="KanjiCanvas.erase()"><i class="fa">&#xf12d;</i>Erase</button>'+
-              '<button class="button" onclick="KanjiCanvas.deleteLast()"><i class="fa">&#xf0e2;</i>Undo</button>'+
+              '<button class="button" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + i + '"><i class="fa">&#xf12d;</i>Erase</button>'+
+              '<button class="button" onclick="KanjiCanvas.deleteLast(this.dataset.canvas)" data-canvas="canvas-' + i + '"><i class="fa">&#xf0e2;</i>Undo</button>'+
+              (Genki.debug ? '<button class="button" onclick="console.log(KanjiCanvas.recognize(this.dataset.canvas));" data-canvas="canvas-' + i + '" title="Open console (F12) to see recognition candidates"><i class="fa">&#xf188;</i>Test Recognition</button>' : '')+
             '</div>'+
             '<div class="quiz-multi-row">'+
-              '<div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, false, \'stroke\');" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this, false, \'stroke\');">Next Kanji</div>'+
+              '<div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, false, \'stroke\');" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this, false, \'stroke\');" data-canvas="canvas-' + i + '">Next Kanji</div>'+
             '</div>'+
           // end question block
           '</div>';
@@ -1001,7 +1002,7 @@
       } else {
         // set the canvas as the answer if doing a stroke order exercise
         if (answer && flag == 'stroke') {
-          var kanji = KanjiCanvas.recognize(), index; // find kanji with the given strokes
+          var kanji = KanjiCanvas.recognize(answer.dataset.canvas), index; // find kanji with the given strokes
           
           // set the answer item as the canvas
           answer = answer.parentNode.parentNode.querySelector('.kanji-canvas');
