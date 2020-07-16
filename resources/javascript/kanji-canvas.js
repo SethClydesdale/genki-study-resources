@@ -24,6 +24,11 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   window.KanjiCanvas = new Object();
   
   
+  // color coded stroke colors (for 30 strokes -- not that we'll go that high with Genki kanji)
+  // based on https://kanjivg.tagaini.net/viewer.html
+  KanjiCanvas.strokeColors = ['#bf0000', '#bf5600', '#bfac00', '#7cbf00', '#26bf00', '#00bf2f', '#00bf85', '#00a2bf', '#004cbf', '#0900bf', '#5f00bf', '#b500bf', '#bf0072', '#bf001c', '#bf2626', '#bf6b26', '#bfaf26', '#89bf26', '#44bf26', '#26bf4c', '#26bf91', '#26a8bf', '#2663bf', '#2d26bf', '#7226bf', '#b726bf', '#bf2682', '#bf263d', '#bf4c4c', '#bf804c'];
+  
+  
   // init html page and canvas
   KanjiCanvas.init = function (id) {
     KanjiCanvas["canvas_" + id] = document.getElementById(id);
@@ -58,11 +63,11 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     }, false);
   };
 
-  KanjiCanvas.draw = function (id) {
+  KanjiCanvas.draw = function (id, color) {
     KanjiCanvas["ctx_" + id].beginPath();
     KanjiCanvas["ctx_" + id].moveTo(KanjiCanvas["prevX_" + id], KanjiCanvas["prevY_" + id]);
     KanjiCanvas["ctx_" + id].lineTo(KanjiCanvas["currX_" + id], KanjiCanvas["currY_" + id]);
-    KanjiCanvas["ctx_" + id].strokeStyle = "#000";
+    KanjiCanvas["ctx_" + id].strokeStyle = color ? color : "#000";
     KanjiCanvas["ctx_" + id].lineCap = "round";
     //KanjiCanvas["ctx_" + id].lineJoin = "round";
     //KanjiCanvas["ctx_" + id].lineMiter = "round";
@@ -76,8 +81,9 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     if (KanjiCanvas["canvas_" + id].dataset.kanji) {
       var font = 175;
       KanjiCanvas["ctx_" + id].font = font + "px Meiryo";
+      KanjiCanvas["ctx_" + id].textBaseline = "middle";
       KanjiCanvas["ctx_" + id].fillStyle = "#DDD";
-      KanjiCanvas["ctx_" + id].fillText(KanjiCanvas["canvas_" + id].dataset.kanji, (KanjiCanvas["canvas_" + id].width/2) - (font/2), (KanjiCanvas["canvas_" + id].height/2) + ((font/2)/1.4));
+      KanjiCanvas["ctx_" + id].fillText(KanjiCanvas["canvas_" + id].dataset.kanji, (KanjiCanvas["canvas_" + id].width / 2) - (font / 2), KanjiCanvas["canvas_" + id].height / 2);
     }
   };
 
@@ -165,17 +171,18 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       KanjiCanvas["ctx_" + id].clearRect(0, 0, KanjiCanvas["w_" + id], KanjiCanvas["h_" + id]);
       //KanjiCanvas.drawGuide(id);
       for(var i = 0;i<KanjiCanvas["recordedPattern_" + id].length;i++) {
-        var stroke_i = KanjiCanvas["recordedPattern_" + id][i]
-		KanjiCanvas["ctx_" + id].font = "20px Arial";
-        KanjiCanvas["ctx_" + id].fillStyle = "#F60";
-		KanjiCanvas["ctx_" + id].fillText((i + 1).toString(), stroke_i[0][0]+20, stroke_i[0][1]+20);
+        var stroke_i = KanjiCanvas["recordedPattern_" + id][i];
+        
+		//KanjiCanvas["ctx_" + id].font = "20px Arial";
+        //KanjiCanvas["ctx_" + id].fillStyle = "#F60";
+		//KanjiCanvas["ctx_" + id].fillText((i + 1).toString(), stroke_i[0][0]+20, stroke_i[0][1]+20);
         for(var j = 0; j<stroke_i.length-1;j++) {
           KanjiCanvas["prevX_" + id] = stroke_i[j][0];
           KanjiCanvas["prevY_" + id] = stroke_i[j][1];
 
           KanjiCanvas["currX_" + id] = stroke_i[j+1][0];
           KanjiCanvas["currY_" + id] = stroke_i[j+1][1];
-          KanjiCanvas.draw(id);
+          KanjiCanvas.draw(id, KanjiCanvas.strokeColors[i]);
         }
       }
     
