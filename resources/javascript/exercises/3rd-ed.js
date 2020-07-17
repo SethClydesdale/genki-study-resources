@@ -154,6 +154,7 @@ window.GenkiExercises = [
   'lesson-3/literacy-7|Kanji Vocabulary: 十, 百, and 千|p.305',
   'lesson-3/literacy-8|Kanji Vocabulary: 万, 円, and 時|p.305',
   'lesson-3/literacy-9|Kanji Practice: Prices|p.306; I-A & B',
+  'lesson-3/literacy-10|Reading Practice: まいにちのせいかつ|p.307; II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
