@@ -43,6 +43,8 @@
       std_multi : 'Solve the problems by choosing the correct answers.',
       std_questions : 'Answer the questions as best as you can.',
       std_culture : 'Answer the questions about Japanese culture as best as you can.',
+      std_stroke_order : 'Practice drawing each kanji by following the stroke order.',
+      std_drawing : 'Practice drawing the following kanji multiple times.',
       
       // additional vocab info
       vocab_multi : 'Choose the correct definition for each Japanese expression.',
@@ -103,6 +105,7 @@
       writing_mistakes : 'The items outlined in <span class="t-red t-bold">red</span> were answered wrong. Review these problems before trying again.',
       multi_mistakes : 'The answers you selected that were wrong are outlined in <span class="t-red t-bold">red</span>. The correct answers are outlined in <span class="t-blue t-bold">blue</span>. Review these problems before trying again.',
       stroke_mistakes : 'The kanji you drew that were wrong are outlined in <span class="t-red t-bold">red</span>. Please review the stroke order and number of strokes for these kanji before trying again.<br><br><b>Note:</b> Sometimes answers may be marked wrong by mistake, due to a mismatch in the recognition algorithm.<br>Please use your own discretion if this occurs.',
+      drawing_mistakes : 'The kanji you drew that were wrong are outlined in <span class="t-red t-bold">red</span>. Please review the stroke order and number of strokes for these kanji before trying again.<br><br><b>Note:</b> Sometimes answers may be marked wrong by mistake, due to a mismatch in the recognition algorithm.<br>Please use your own discretion if this occurs.',
       fill_mistakes : 'The items underlined in <span class="t-red t-bold">red</span> were answered wrong, the correct answers are listed underneath in <span class="t-green t-bold">green</span>. Review these problems before trying again.',
       sub_answers : '<b>Note:</b> Answers inside <span class="t-blue t-bold">blue</span> parentheses separated by "<span class="alt-phrase-sep">/</span>" are a list of possible sub-answers; only one can be used.<br>For example.. <span class="t-green"><span class="alt-phrase">(</span>あの<span class="alt-phrase-sep">/</span>その<span class="alt-phrase">)</span>ねこ</span>: そのねこ or あのねこ <span class="t-green">(good)</span> vs あの/そのねこ <span class="t-red">(bad)</span><br><span class="t-green"><span class="alt-phrase">(</span>この<span class="alt-phrase-sep">/</span><span class="alt-phrase">)</span>ねこ</span> means the sub-answer is optional; it can be left out.',
       
@@ -162,6 +165,7 @@
       ** 4. MULTIPLE CHOICE          **
       ** 5. FILL IN THE BLANKS       **
       ** 6. STROKE ORDER             **
+      ** 7. DRAWING PRACTICE         **
       *********************************/
       var zone = document.getElementById('quiz-zone'); // area where quizzes are inserted
       
@@ -773,6 +777,51 @@
         // begin the quiz
         Genki.progressQuiz('init', false, 'stroke');
       }
+      
+      
+      // # 7. DRAWING PRACTICE #
+      else if (o.type == 'drawing') {
+        var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
+            columns = o.columns,
+            width = 'style="width:' + (100 / (columns + 1)) + '%;"',
+            q = o.quizlet, n = 0, i = 0, j = o.quizlet.length;
+
+        for (; i < j; i++) {
+          // create a new row
+          quiz += '<div class="quiz-answer-row">'+
+          '<div class="drawing-zone" ' + width + '>'+
+            '<div class="quiz-item">'+
+              '<div class="quiz-item-text">' + q[i].kanji + '</div>'+
+            '</div>'+
+            '<button class="button stroke-order-button" onclick="Genki.viewStrokeOrder(\'' + q[i].kanji + '\', \'' + q[i].order + '\');">Stroke Order</button>'+
+          '</div>';
+
+          // insert the drawing zones
+          while (columns --> 0) {
+            quiz += '<div class="drawing-zone" ' + width + '>'+
+              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-guide="' + (o.columns - columns > 3 ? false : true) + '" data-strokes="' + q[i].strokes + '" data-size="100" id="canvas-' + n + '" width="100" height="100"></canvas>'+
+              '<div class="kanji-canvas-actions">'+
+                '<button class="button icon-only" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Erase"><i class="fa">&#xf12d;</i></button>'+
+                '<button class="button icon-only" onclick="KanjiCanvas.deleteLast(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Undo"><i class="fa">&#xf0e2;</i></button>'+
+                (Genki.debug ? '<button class="button icon-only" onclick="console.log(KanjiCanvas.recognize(this.dataset.canvas));" data-canvas="canvas-' + n + '" title="Test Recognition"><i class="fa">&#xf188;</i></button>' : '')+
+              '</div>'+
+            '</div>';
+            ++Genki.stats.problems;
+            ++n; // increment unique canvas id
+          }
+
+          quiz += '</div>'; // close the row
+          columns = o.columns; // reset column value for next iteration
+        }
+
+        // add the quiz to the document
+        zone.innerHTML = quiz + '</div>' + Genki.lang.check_answers.replace('()', '(false, \'drawing\')');
+        
+        // initialize all canvases
+        for (var c = document.querySelectorAll('.kanji-canvas'), i = 0, j = c.length; i < j; i++) {
+          KanjiCanvas.init(c[i].id);
+        }
+      }
 
 
       // # DRAG AND DROP FUNCTIONALITY #
@@ -945,7 +994,7 @@
       
       // add dictionary for looking up words, but not for vocab exercises, since that would be cheating!
       // also disabled in the appendix 
-      if (Genki.debug || (!/drag|kana/.test(o.type) && !Genki.appendix)) {
+      if (Genki.debug || (!/drag|kana|drawing/.test(o.type) && !Genki.appendix)) {
         if (Genki.debug || (o.format && !/vocab|kana|numbers/.test(o.format)) || !o.format) {
           Genki.quickJisho.create();
         }
@@ -1266,76 +1315,106 @@
 
             // hide check answers button
             document.querySelector('#check-answers button').style.display = 'none';
-
-            // loop over the inputs and check to see if the answers are correct
-            var input = document.querySelectorAll('#exercise .writing-zone-input'),
-                i = 0, j = input.length, k, correct, val, data, answer, alt;
-
-            for (; i < j; i++) {
-              correct = false;
-              data = input[i].dataset;
-              val = input[i].value.toLowerCase();
+            
+            // kanji/kana drawing quizzes
+            if (type && type == 'drawing') {
+              var answer = document.querySelectorAll('.kanji-canvas'), i = 0, j = answer.length, kanji;
               
-              // check for the correct answer
-              for (k in data) {
-                if (/answer/.test(k)) {
-                  answer = data[k].toLowerCase();
-                  
-                  // check if there's alternative answers in the answer
-                  // alternative answers are given as %(alt1/alt2/etc.)
-                  if (/%\(.*?\)/.test(answer)) {
-                    alt = answer.replace(/.*?%\((.*?)\).*/, '$1').split('/');
-                    
-                    // loop through alternatives
-                    if (k == 'answer' || k == 'answer2') {
-                      while (alt.length) {
-                        if (val == answer.replace(/%\(.*?\)/, alt[0])) {
-                          correct = true;
-                          break; // break out if correct answer is found
-                        }
+              for (; i < j; i++) {
+                kanji = KanjiCanvas.recognize(answer[i].id); // find kanji with the given strokes
+                
+                // debugging (logs info about matched kanji, match index, and whether the answer was correct or not)
+                Genki.debug && console.log('toDraw: ' + answer[i].dataset.kanji);
+                Genki.debug && console.log('Results: ' + kanji);
+                Genki.debug && console.log('Correct: ' + (new RegExp(answer[i].dataset.kanji).test(kanji) && answer[i].dataset.strokesAnswer == answer[i].dataset.strokes).toString());
+                
+                // correct answer
+                if (new RegExp(answer[i].dataset.kanji).test(kanji) && answer[i].dataset.strokesAnswer == answer[i].dataset.strokes) {
+                  answer[i].dataset.answer = true;
+                } 
+                
+                // incorrect answer
+                else {
+                  answer[i].dataset.answer = false;
+                  ++Genki.stats.mistakes;
+                }
+                
+                ++Genki.stats.solved;
+              }
+            } 
+            
+            // standard written quizzes
+            else {
+              // loop over the inputs and check to see if the answers are correct
+              var input = document.querySelectorAll('#exercise .writing-zone-input'),
+                  i = 0, j = input.length, k, correct, val, data, answer, alt;
 
-                        alt.splice(0, 1); // remove the checked answer
+              for (; i < j; i++) {
+                correct = false;
+                data = input[i].dataset;
+                val = input[i].value.toLowerCase();
+
+                // check for the correct answer
+                for (k in data) {
+                  if (/answer/.test(k)) {
+                    answer = data[k].toLowerCase();
+
+                    // check if there's alternative answers in the answer
+                    // alternative answers are given as %(alt1/alt2/etc.)
+                    if (/%\(.*?\)/.test(answer)) {
+                      alt = answer.replace(/.*?%\((.*?)\).*/, '$1').split('/');
+
+                      // loop through alternatives
+                      if (k == 'answer' || k == 'answer2') {
+                        while (alt.length) {
+                          if (val == answer.replace(/%\(.*?\)/, alt[0])) {
+                            correct = true;
+                            break; // break out if correct answer is found
+                          }
+
+                          alt.splice(0, 1); // remove the checked answer
+                        }
                       }
-                    }
-                    
-                    // search hidden mixed kana/kanji alternatives
-                    else if ((k == 'answer3' || k == 'answer4' || k == 'answer5' || k == 'answer6') && alt.indexOf(val) != -1) {
+
+                      // search hidden mixed kana/kanji alternatives
+                      else if ((k == 'answer3' || k == 'answer4' || k == 'answer5' || k == 'answer6') && alt.indexOf(val) != -1) {
+                        correct = true;
+                      }
+                    } 
+
+                    // otherwise check the answer normally
+                    else if (val == answer) {
                       correct = true;
                     }
-                  } 
-                  
-                  // otherwise check the answer normally
-                  else if (val == answer) {
-                    correct = true;
+
+                    // break out of the loop when a correct answer is found 
+                    if (correct) break;
                   }
-                  
-                  // break out of the loop when a correct answer is found 
-                  if (correct) break;
                 }
-              }
-              
-              // add classname to correct answers
-              if (correct) {
-                input[i].parentNode.className += ' answer-correct';  
-              }
 
-              // increment mistakes if the answer is incorrect
-              else {
-                ++data.mistakes;
-                ++Genki.stats.mistakes;
-
-                if (type == 'fill') {
-                  input[i].parentNode.insertAdjacentHTML('beforeend', ('<span class="problem-answer">' + data.answer + (data.answer2 || data.furigana ? '<span class="secondary-answer' + (data.furigana ? ' furigana-only' : '') + '">' + (data.answer2 || data.furigana) + '</span>' : '') + '</span>').replace(/%\((.*?)\)/g, function (Match, $1) {
-                    return '<span class="alt-phrase">(</span>' + $1.replace(/\//g, '<span class="alt-phrase-sep">/</span>') + '<span class="alt-phrase">)</span>'
-                  }));
+                // add classname to correct answers
+                if (correct) {
+                  input[i].parentNode.className += ' answer-correct';  
                 }
+
+                // increment mistakes if the answer is incorrect
+                else {
+                  ++data.mistakes;
+                  ++Genki.stats.mistakes;
+
+                  if (type == 'fill') {
+                    input[i].parentNode.insertAdjacentHTML('beforeend', ('<span class="problem-answer">' + data.answer + (data.answer2 || data.furigana ? '<span class="secondary-answer' + (data.furigana ? ' furigana-only' : '') + '">' + (data.answer2 || data.furigana) + '</span>' : '') + '</span>').replace(/%\((.*?)\)/g, function (Match, $1) {
+                      return '<span class="alt-phrase">(</span>' + $1.replace(/\//g, '<span class="alt-phrase-sep">/</span>') + '<span class="alt-phrase">)</span>'
+                    }));
+                  }
+                }
+
+                // increment problems solved
+                ++Genki.stats.solved;
+
+                // disable the input
+                input[i].disabled = true;
               }
-
-              // increment problems solved
-              ++Genki.stats.solved;
-
-              // disable the input
-              input[i].disabled = true;
             }
 
             Genki.endQuiz(type ? type : 'writing'); // show quiz results
@@ -1817,6 +1896,20 @@
       }
     },
     
+    
+    // for viewing the stroke order in Kanji Writing Practice exercises
+    viewStrokeOrder : function (kanji, order) {
+      GenkiModal.open({
+        title : kanji + ' Stroke Order',
+        content :
+          '<div class="kanji-stroke-order center">'+
+            '<div class="big-kanji">' + kanji + '</div>'+
+            '<a href="https://jisho.org/search/' + kanji + '%20%23kanji" target="_blank" title="View stroke order on jisho.org"><button class="button"><i class="fa">&#xf002;</i></button></a>'+
+            '<a href="' + getPaths() + 'resources/images/stroke-order/' + order + '.png" target="_blank" title="Click to view image"><img src="' + getPaths() + 'resources/images/stroke-order/' + order + '.png" alt="stroke order"/></a>'+
+          '</div>'
+        
+      });
+    },
     
     // Returns a list of alternative answers for a string. Generally used for mixed kana/kanji answers.
     // Special thanks to Patrick Roberts for helping me improve this function (stackoverflow.com/a/59337819/12502093)

@@ -77,6 +77,16 @@
         css && document.head.removeChild(css);
         root.className = root.className.replace(' dark-mode', '');
       }
+      
+      // change canvas colors
+      if (window.KanjiCanvas) {
+        KanjiCanvas.darkMode = document.querySelector('.dark-mode') ? true : false;
+        KanjiCanvas.quizOver = document.querySelector('.quiz-over') ? true : false;
+        
+        for (var a = document.querySelectorAll('.kanji-canvas'), i = 0, j = a.length; i < j; i++) {
+          if (KanjiCanvas['canvas_' + a[i].id]) KanjiCanvas.redraw(a[i].id, true);
+        }
+      }
     };
     
     // set container params

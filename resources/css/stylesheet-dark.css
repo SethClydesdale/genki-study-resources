@@ -33,6 +33,8 @@ a, code {
 
 
 /* 2. BACKGROUND COLORS */
+.kanji-canvas { background-color:#000; }
+
 body, #quick-jisho-window { background-color:#161616; }
 
 code, input[type="text"], input[type="number"], textarea, select, .table td, .quiz-multi-answer, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, input.writing-zone-input, .genki_pseudo_checkbox, .genki_pseudo_radio {
@@ -49,7 +51,7 @@ code, input[type="text"], input[type="number"], textarea, select, .table td, .qu
 
 
 /* 3. BORDER COLORS */
-code, input[type="text"], input[type="number"], textarea, select, .table td, .quiz-column-title, .verb-quiz .quiz-answer-zone:not(:empty), .verb-quiz.quiz-over [data-mistakes="0"], #quick-search-results, .dict-search-results, .quiz-item, .quiz-answer-zone:empty, #exercise-list, #exercise-list .lesson-title, #exercise-list ul, .quiz-over [data-mistakes="0"] .quiz-item, input.writing-zone-input, .writing-quiz.quiz-over [data-mistakes="0"], .question-block, .quiz-multi-question, .quiz-multi-question .lesson-image img, .quiz-multi-answer, .text-block, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, #result-list, .result-row, #study-tool-ui .item-row.question-row, .genki_pseudo_checkbox, .genki_pseudo_radio, #quick-jisho-window, .lesson-summary {
+code, input[type="text"], input[type="number"], textarea, select, .table td, .quiz-column-title, .verb-quiz .quiz-answer-zone:not(:empty), .verb-quiz.quiz-over [data-mistakes="0"], #quick-search-results, .dict-search-results, .quiz-item, .quiz-answer-zone:empty, #exercise-list, #exercise-list .lesson-title, #exercise-list ul, .quiz-over [data-mistakes="0"] .quiz-item, input.writing-zone-input, .writing-quiz.quiz-over [data-mistakes="0"], .question-block, .quiz-multi-question, .quiz-multi-question .lesson-image img, .quiz-multi-answer, .text-block, .text-block .sub-section, .show-bg .problem-answer, .show-bg .secondary-answer, #result-list, .result-row, #study-tool-ui .item-row.question-row, .genki_pseudo_checkbox, .genki_pseudo_radio, #quick-jisho-window, .lesson-summary, .kanji-canvas {
   border-color:#333;
 }
 
@@ -75,7 +77,7 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 
 
 /* 4. EXCEPTIONS */
-img, #link-list a, .kanji-canvas, .kanji-stroke-order .button { opacity:0.7; }
+img, #link-list a, .kanji-stroke-order .button { opacity:0.7; }
 img:hover, a:focus img, #link-list a:hover, #link-list a:focus, .kanji-stroke-order .button:hover, .kanji-stroke-order .button:focus { opacity:1; }
 
 .taking-a-break #genki-modal-body {
