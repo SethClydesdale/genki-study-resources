@@ -157,6 +157,14 @@ window.GenkiExercises = [
   'lesson-3/literacy-10|Reading Practice: まいにちのせいかつ|p.307; II',
   'lesson-3/literacy-wb-1|Workbook: Kanji Writing Practice|p.133',
   'lesson-3/literacy-wb-2|Workbook: Using Kanji|p.134; I, II, & III',
+
+  // Lesson 4
+  'lesson-4/vocab-1|Vocabulary: People and Things|p.104',
+  'lesson-4/vocab-2|Vocabulary: Activities and Places|p.104',
+  'lesson-4/vocab-3|Vocabulary: Time|p.105',
+  'lesson-4/vocab-4|Vocabulary: U-verbs and Ru-verbs|p.105',
+  'lesson-4/vocab-5|Vocabulary: Adverbs and Expressions|p.105',
+  'lesson-4/vocab-6|Vocabulary: Location Words|p.106',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

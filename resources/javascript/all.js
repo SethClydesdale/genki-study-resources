@@ -4,7 +4,7 @@
   
   // # EDITION REDIRECTOR #
   // properly redirects the student to their preferred edition when clicking the home links
-  if (navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.GenkiEdition == '3rd' && /\/privacy\/|\/report\/|\/help\/|\/donate\/|\/download\//.test(window.location.pathname)) {
+  if (storageOK && localStorage.GenkiEdition == '3rd' && /\/privacy\/|\/report\/|\/help\/|\/donate\/|\/download\//.test(window.location.pathname)) {
     document.getElementById('home-link').href += 'lessons-3rd/';
     document.getElementById('footer-home').href += 'lessons-3rd/';
   }
@@ -38,7 +38,7 @@
   
   // # DARK MODE #
   // Allows the student to switch to a dark version of Genki Study Resources. (Great for late night studying!)
-  if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
+  if (storageOK) {
     var footer = document.querySelector('footer'),
         button = document.createElement('LABEL'),
         container = document.createElement('DIV');
@@ -46,7 +46,7 @@
     // set button params
     button.id = 'light-switch';
     button.tabIndex = 0;
-    button.innerHTML = '<input id="light-switch-checkbox" type="checkbox" ' + (window.localStorage.darkMode == 'on' ? 'checked="true"' : '') + '/><div></div>';
+    button.innerHTML = '<input id="light-switch-checkbox" type="checkbox" ' + (localStorage.darkMode == 'on' ? 'checked="true"' : '') + '/><div></div>';
     
     // toggle dark mode when the enter key is pressed while focused
     button.onkeyup = function (e) {
@@ -58,7 +58,7 @@
       var root = document.documentElement, css;
       
       if (this.checked) { // turn dark mode on
-        window.localStorage.darkMode = 'on';
+        localStorage.darkMode = 'on';
         
         // add dark mode css to the head
         css = document.createElement('LINK');
@@ -70,7 +70,7 @@
         root.className += ' dark-mode';
         
       } else { // turn dark mode off
-        window.localStorage.darkMode = 'off';
+        localStorage.darkMode = 'off';
         
         // remove dark mode css
         css = document.getElementById('dark-mode');
@@ -84,7 +84,7 @@
         KanjiCanvas.quizOver = document.querySelector('.quiz-over') ? true : false;
         
         for (var a = document.querySelectorAll('.kanji-canvas'), i = 0, j = a.length; i < j; i++) {
-          if (KanjiCanvas['canvas_' + a[i].id]) KanjiCanvas.redraw(a[i].id, true);
+          if (KanjiCanvas['canvas_' + a[i].id]) KanjiCanvas.redraw(a[i].id, true, window.Genki ? Genki.strokeNumberDisplay : false);
         }
       }
     };

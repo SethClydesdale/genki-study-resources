@@ -23,6 +23,9 @@
     // tells us if text selection mode is enabled (for multi-choice quizzes)
     textSelectMode : false,
     
+    // tells us if stroke numbers are visible (for stroke order exercises)
+    strokeNumberDisplay : false,
+    
     // tells us if a quiz item is marked in a drag and drop quiz
     markedItem : null,
     
@@ -113,7 +116,7 @@
       // review button for drag/drop exercises
       review : '<div id="review-exercise" class="center clearfix"><button id="review-button" class="button" onclick="Genki.review();"><i class="fa">&#xf02d;</i>Review</button></div>',
       // furigana toggle for vocab exercises
-      toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);"><i class="fa">&#xf2a8;</i>' + ((navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>',
+      toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);"><i class="fa">&#xf2a8;</i>' + ((storageOK && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>',
       // check answers button for written exercises
       check_answers : '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();"><i class="fa">&#xf00c;</i>Check Answers</button></div>',
       back_to_dict : '<button class="button" onclick="Genki.appendix.jisho.reset();"><i class="fa">&#xf021;</i>Back to Dictionary</button>'
@@ -178,7 +181,7 @@
         
         // parse options
         for (; i < j; i++) {
-          opts += '<option value="' + i + '"' + (begin !== false ? (i == begin ? ' selected' : '') : navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage['genki_pref_' + o.format] == o.type[i] ? ' selected' : '') + '>' + Genki.lang.opts[o.format][o.type[i]] + '</option>';
+          opts += '<option value="' + i + '"' + (begin !== false ? (i == begin ? ' selected' : '') : storageOK && localStorage['genki_pref_' + o.format] == o.type[i] ? ' selected' : '') + '>' + Genki.lang.opts[o.format][o.type[i]] + '</option>';
         }
         
         // open selection window
@@ -208,7 +211,7 @@
             o.info = typeof o.info == 'object' && o.info[type] ? o.info[type] : o.info;
             
             // store exercise preference
-            if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
+            if (storageOK) {
               localStorage['genki_pref_' + o.format] = o.type;
             }
             
@@ -438,7 +441,7 @@
 
         // add a class for the helper styles
         if (helperPresent) {
-          zone.className += ' helper-' + ((navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+          zone.className += ' helper-' + ((storageOK && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
         
         // generate the answers
@@ -523,7 +526,7 @@
         // check if furigana is present and add a toggle button
         if (/data-helper/.test(quiz)) {
           helper = true;
-          zone.className += ' helper-' + ((navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+          zone.className += ' helper-' + ((storageOK && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
 
         // add the quiz to the document
@@ -607,7 +610,7 @@
         // check if furigana is present and add a toggle button
         if (/class="furigana"|class="inline-furi"|<ruby>/.test(quiz)) {
           helper = true;
-          zone.className += ' helper-' + ((navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+          zone.className += ' helper-' + ((storageOK && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
 
         // add the multi-choice quiz to the quiz zone
@@ -629,7 +632,7 @@
         // check if furigana is present and add a toggle button
         if (/class="furigana"|class="inline-furi"|<ruby>/.test(o.quizlet)) {
           helper = true;
-          zone.className += ' helper-' + ((navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+          zone.className += ' helper-' + ((storageOK && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
         }
         
         // add the quiz to the document
@@ -727,7 +730,8 @@
       else if (o.type == 'stroke') {
         var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
             answers = '<div id="answer-list">',
-            strokeOrderHidden = navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.strokeOrderVisible == 'false',
+            strokeOrderHidden = storageOK && localStorage.strokeOrderVisible == 'false',
+            guideHidden = storageOK && localStorage.tracingGuideVisible == 'false',
             q = o.quizlet,
             i = 0,
             j = q.length;
@@ -747,7 +751,7 @@
             
             // drawing area + buttons
             '<div class="quiz-multi-row">'+
-              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-strokes="' + q[i].strokes + '" id="canvas-' + i + '" width="200" height="200"></canvas>'+
+              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-strokes="' + q[i].strokes + '" data-guide="' + (guideHidden ? false : true) + '" id="canvas-' + i + '" width="200" height="200"></canvas>'+
             '</div>'+
             '<div class="kanji-canvas-actions quiz-multi-row center">'+
               '<button class="button" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + i + '"><i class="fa">&#xf12d;</i>Erase</button>'+
@@ -766,7 +770,9 @@
         // add the multi-choice quiz to the quiz zone
         zone.innerHTML = quiz + '</div><div id="quiz-progress"><div id="quiz-progress-bar"></div></div>'+
           '<div id="review-exercise" class="center clearfix">'+ 
-            '<button class="button hide-stroke-order" onclick="Genki.toggle.strokeOrder(this);"><i class="fa">&#xf1fc;</i>' + (strokeOrderHidden ? 'Show' : 'Hide') + ' Stroke Order</button>'+
+            '<button id="toggle-stroke-order" class="button" onclick="Genki.toggle.strokeOrder(this);"><i class="fa">&#xf1fc;</i>' + (strokeOrderHidden ? 'Show' : 'Hide') + ' Stroke Order</button>'+
+            '<button id="toggle-tracing-guide" class="button" onclick="Genki.toggle.tracingGuide(this);"><i class="fa">&#xf031;</i>' + (guideHidden ? 'Show' : 'Hide') + ' Tracing Guide</button>'+
+            '<button id="toggle-stroke-numbers" class="button" onclick="Genki.toggle.strokeNumbers(this);" style="display:none;"><i class="fa">&#xf162;</i>Show Stroke Numbers</button>'+
           '</div>';
         
         // hide stroke order based on preferences
@@ -815,7 +821,7 @@
         }
 
         // add the quiz to the document
-        zone.innerHTML = quiz + '</div>' + Genki.lang.check_answers.replace('()', '(false, \'drawing\')');
+        zone.innerHTML = quiz + '</div>' + Genki.lang.check_answers.replace('()', '(false, \'drawing\')').replace('</div>', '<button id="toggle-stroke-numbers" class="button" onclick="Genki.toggle.strokeNumbers(this);" style="display:none;"><i class="fa">&#xf162;</i>Show Stroke Numbers</button>' + '</div>');
         
         // initialize all canvases
         for (var c = document.querySelectorAll('.kanji-canvas'), i = 0, j = c.length; i < j; i++) {
@@ -895,37 +901,47 @@
         // event listener for marking and dropping answers with either a click or the 'Enter' key being pressed
         ['click', 'keypress'].forEach(function (eventName) {
           document.addEventListener(eventName, function (e) {
-            // if the event was a keypress and the key was not enter, bail out
-            if (e.type == 'keypress' && e.key != 'Enter') {
+            // if the event was a keypress and the key was not enter, bail out (same if the quiz is over)
+            if (e.type == 'keypress' && e.key != 'Enter' || Genki.quizOver) {
               return;
             }
-
+            
+            // check parentNode if no match (up to 2 times)
+            // necessary as some quiz-items contain child nodes that go as deep as 2 nodes
+            var target = e.target, n = 3;
+            while (n --> 0) {
+              if (n < 2) target = target.parentNode;
+              
+              // break out if match found
+              if (/quiz-item|quiz-answer-zone/.test(target.className)) break;
+            }
+            
             // mark the currently active quiz item
-            if (/quiz-item/.test(e.target.className) && e.target.parentNode.id == 'answer-list') {
+            if (/quiz-item/.test(target.className) && target.parentNode.id == 'answer-list') {
               // unmark the last active quiz item
               if (Genki.markedItem) {
                 Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
               }
-              
+
               // mark the new active one
-              Genki.markedItem = e.target;
+              Genki.markedItem = target;
               Genki.markedItem.className += ' markedItem';
             }
-            
+
             // attempt dropping the marked quiz item to an answer zone
-            else if (Genki.markedItem && /quiz-answer-zone/.test(e.target.className)) {
+            else if (Genki.markedItem && /quiz-answer-zone/.test(target.className)) {
               // wrong answer
-              if (Genki.markedItem.dataset.answer != e.target.dataset.text) {
+              if (Genki.markedItem.dataset.answer != target.dataset.text) {
                 // remove the old notification
                 if (Genki.wrongTimeout) {
                   document.getElementById('wrongAnswer').id = '';
                   clearTimeout(Genki.wrongTimeout);
                   delete Genki.wrongTimeout;
                 }
-                
+
                 // if the answer is wrong we'll display a small notification using CSS (see #wrongAnswer in stylesheet.css)
-                e.target.id = 'wrongAnswer';
-                
+                target.id = 'wrongAnswer';
+
                 // remove the notification after 1 second
                 Genki.wrongTimeout = setTimeout(function () {
                   document.getElementById('wrongAnswer').id = '';
@@ -933,20 +949,20 @@
                 }, 1000);
 
                 // global mistakes are incremented along with mistakes specific to problems
-                e.target.dataset.mistakes = ++e.target.dataset.mistakes;
+                target.dataset.mistakes = ++target.dataset.mistakes;
                 ++Genki.stats.mistakes;
 
               } 
-              
+
               // correct answer
               else {
-                e.target.className += ' answer-correct';
-                e.target.appendChild(Genki.markedItem);
+                target.className += ' answer-correct';
+                target.appendChild(Genki.markedItem);
 
                 // prevent the correct answer from being tabbed to
                 // this also includes the element we just added
-                e.target.tabIndex = -1;
-                e.target.firstChild.tabIndex = -1;
+                target.tabIndex = -1;
+                target.firstChild.tabIndex = -1;
 
                 Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
                 Genki.markedItem = null;
@@ -957,8 +973,8 @@
                   Genki.endQuiz();
                 }
               }
-            } 
-            
+            }
+
             // no conditions met, unmark the currently marked item
             else if (Genki.markedItem) {
               Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
@@ -1148,6 +1164,10 @@
           '</div>'+
         '</div>'+
       '</div>';
+      
+      // changes display over certain buttons
+      if (/drawing|stroke/.test(type)) document.getElementById('toggle-stroke-numbers').style.display = '';
+      if (type == 'stroke') document.getElementById('toggle-tracing-guide').style.display = 'none';
 
       // this class will indicate the quiz is over so post-test styles can be applied
       document.getElementById('exercise').className += ' quiz-over';
@@ -1452,7 +1472,7 @@
       // toggles furigana in drag and drop quizzes
       furigana : function (button) {
         var zone = document.getElementById('quiz-zone'),
-            state = (navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.furiganaVisible) || (/helper-hidden/.test(zone.className) ? 'false' : 'true');
+            state = (storageOK && localStorage.furiganaVisible) || (/helper-hidden/.test(zone.className) ? 'false' : 'true');
         
         // hide or show the textual aids
         switch (state) {
@@ -1476,8 +1496,35 @@
         Genki.lang.toggle_furigana = button.outerHTML;
         
         // save settings if supported
-        if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
+        if (storageOK) {
           localStorage.furiganaVisible = state;
+        }
+      },
+      
+      
+      // toggles display of stroke numbers in stroke order quizzes
+      strokeNumbers : function (button) {
+        var zone = document.getElementById('quiz-zone');
+        
+        // hide or show the textual aids
+        switch (Genki.strokeNumberDisplay) {
+          case true :
+            Genki.strokeNumberDisplay = false;
+            button.innerHTML = button.innerHTML.replace('Hide', 'Show');
+            break;
+            
+          case false :
+            Genki.strokeNumberDisplay = true;
+            button.innerHTML = button.innerHTML.replace('Show', 'Hide');
+            break;
+            
+          default :
+            break;
+        }
+        
+        // redraw each canvas
+        for (var a = document.querySelectorAll('.kanji-canvas'), i = 0, j = a.length; i < j; i++) {
+          if (KanjiCanvas['canvas_' + a[i].id]) KanjiCanvas.redraw(a[i].id, false, Genki.strokeNumberDisplay);
         }
       },
       
@@ -1485,7 +1532,7 @@
       // toggles stroke order in stroke order quizzes
       strokeOrder : function (button) {
         var zone = document.getElementById('quiz-zone'),
-            state = (navigator.cookieEnabled && !offlineEdge && window.localStorage && localStorage.strokeOrderVisible) || (/stroke-order-hidden/.test(zone.className) ? 'false' : 'true');
+            state = (storageOK && localStorage.strokeOrderVisible) || (/stroke-order-hidden/.test(zone.className) ? 'false' : 'true');
         
         // hide or show the textual aids
         switch (state) {
@@ -1506,8 +1553,42 @@
         }
         
         // save settings if supported
-        if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
+        if (storageOK) {
           localStorage.strokeOrderVisible = state;
+        }
+      },
+      
+      
+      // toggles tracing guides in the stroke order quizzes
+      tracingGuide : function (button) {
+        var zone = document.getElementById('quiz-zone'),
+            state = storageOK && localStorage.tracingGuideVisible ? localStorage.tracingGuideVisible : 'true';
+        
+        // hide or show the tracing guides
+        switch (state) {
+          case 'true' :
+            state = 'false';
+            button.innerHTML = button.innerHTML.replace('Hide', 'Show');
+            break;
+            
+          case 'false' :
+            state = 'true';
+            button.innerHTML = button.innerHTML.replace('Show', 'Hide');
+            break;
+            
+          default :
+            break;
+        }
+        
+        // loop through and update the data-guide value and redraw each canvas
+        for (var a = document.querySelectorAll('.kanji-canvas'), i = 0, j = a.length; i < j; i++) {
+          a[i].dataset.guide = state;
+          if (KanjiCanvas['canvas_' + a[i].id]) KanjiCanvas.redraw(a[i].id, true);
+        }
+        
+        // save settings if supported
+        if (storageOK) {
+          localStorage.tracingGuideVisible = state;
         }
       },
       
@@ -1910,6 +1991,7 @@
         
       });
     },
+    
     
     // Returns a list of alternative answers for a string. Generally used for mixed kana/kanji answers.
     // Special thanks to Patrick Roberts for helping me improve this function (stackoverflow.com/a/59337819/12502093)

@@ -182,8 +182,8 @@
       document.getElementById('downloadCode').href = 'data:,' + encodeURIComponent(json.replace(/\n/g, '\r\n'));
 
       // save JSON to localStorage
-      if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
-        window.localStorage[{
+      if (storageOK) {
+        localStorage[{
           vocab : 'customVocab',
           spelling : 'customSpelling',
           quiz : 'customQuiz',
@@ -202,8 +202,8 @@
         fill : 'customWrittenQuiz'
       }[this.type];
 
-      if (navigator.cookieEnabled && !offlineEdge && window.localStorage && window.localStorage[type]) {
-        document.getElementById('study-tool-json').value = window.localStorage[type];
+      if (storageOK && localStorage[type]) {
+        document.getElementById('study-tool-json').value = localStorage[type];
         this.updateUI();
         this.updateJSON();
 
@@ -313,15 +313,15 @@
       handleCheckbox : function (caller, state) {
         if (state) {
           caller.checked = state == 'true' ? true : false;
-        } else if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
-          window.localStorage[caller.id] = caller.checked;
+        } else if (storageOK) {
+          localStorage[caller.id] = caller.checked;
         }
       },
 
 
       // function for restoring settings shared over various tools
       restore : function () {
-        if (navigator.cookieEnabled && !offlineEdge && window.localStorage) {
+        if (storageOK) {
           var settings = [
             'noStudyWarning', 
             'prettyCode'
@@ -331,8 +331,8 @@
           j = settings.length;
 
           for (; i < j; i++) {
-            if (window.localStorage[settings[i]]) {
-              this.handleCheckbox(document.getElementById(settings[i]), window.localStorage[settings[i]]);
+            if (localStorage[settings[i]]) {
+              this.handleCheckbox(document.getElementById(settings[i]), localStorage[settings[i]]);
             }
           }
         }
