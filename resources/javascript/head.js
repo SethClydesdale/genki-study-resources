@@ -2,9 +2,13 @@
 (function (window, document) {
   'use strict';
   
-  // Global Var used for telling if the site is being used offline with MS Edge (pre-chromium).
+  // Global used for telling if the site is being used offline with MS Edge (pre-chromium).
   // Helps prevent "unspecified errors" caused by checking for the existence of localStorage support offline.
   window.offlineEdge = window.location.protocol == 'file:' && /Edge/.test(navigator.userAgent);
+  
+  // Global used for checking localStorage support (ex: storageOK && localStorage.myStorageItem)
+  // prevents long winded conditions everytime we want to use storage
+  window.storageOK = navigator.cookieEnabled && !offlineEdge && window.localStorage ? true : false;
   
   // # GENKI MODAL #
   // creates a modal or closes one
@@ -140,7 +144,7 @@
   
   // # DARK MODE #
   // applies the dark mode theme on page load
-  if (navigator.cookieEnabled && !offlineEdge && window.localStorage && window.localStorage.darkMode == 'on') {
+  if (storageOK && localStorage.darkMode == 'on') {
     document.write('<link id="dark-mode" href="' + getPaths() + 'resources/css/stylesheet-dark.min.css" rel="stylesheet">');
     document.documentElement.className += ' dark-mode';
   }

@@ -2516,6 +2516,21 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   }
 }
 
+@media (max-width:850px) {
+  /* drawing quiz responsiveness */
+  .drawing-quiz .drawing-zone {
+    width:auto !important;
+    margin:3px auto;
+  }
+  
+  .drawing-quiz .quiz-answer-row {
+    flex-wrap:wrap;
+    padding-bottom:25px;
+    margin-bottom:25px;
+    border-bottom:3px dashed #F60;
+  }
+}
+
 @media (max-width:820px) {
   header {
     padding:100px 0px 0px 0px;

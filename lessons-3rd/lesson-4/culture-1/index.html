@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Culture Note: Japanese National Holidays - Lesson 4 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Culture Note: Japanese National Holidays - Lesson 4 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Culture Note: Japanese National Holidays - Lesson 4 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Culture Note: Japanese National Holidays - Lesson 4 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Answer the questions about Japanese culture as best as you can. You may want to read the Culture Note about Japanese National Holidays (Genki I: p.114) if you haven't yet.">
+    <meta property="og:description" content="Answer the questions about Japanese culture as best as you can. You may want to read the Culture Note about Japanese National Holidays (Genki I: p.114) if you haven't yet.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki I, page 114, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/lesson-4/culture-1/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../" id="home-link" class="edition-icon third-ed">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="exercise" class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../" id="footer-home">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+        <li><a href="../../../donate/">Donate</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>(function () {
+      var s = 'What holiday is celebrated on ',
+          h = [ // holidays
+            '<ruby>元日<rt>がんじつ</rt></ruby>（New Year\'s Day）', // 0
+            '<ruby>成人の日<rt>せいじんのひ</rt></ruby>（Coming-of-Age Day）', // 1
+            '<ruby>建国記念の日<rt>けんこくきねんのひ</rt></ruby>（National Foundation Day）', // 2
+            '<ruby>春分の日<rt>しゅんぶんのひ</rt></ruby>（Vernal Equinox Day）', // 3
+            '<ruby>昭和の日<rt>しょうわのひ</rt></ruby>（Showa Day）', // 4
+            '<ruby>憲法記念日<rt>けんぽうきねんび</rt></ruby>（Constitution Day）', // 5
+            'みどりの<ruby>日<rt>ひ</rt></ruby>（Greenery Day）', // 6
+            'こどもの<ruby>日<rt>ひ</rt></ruby>（Children\'s Day）', // 7
+            '<ruby>海の日<rt>うみのひ</rt></ruby>（Marine Day）', // 8
+            '<ruby>敬老の日<rt>けいろうのひ</rt></ruby>（Respect-for-the-Aged Day）', // 9
+            '<ruby>秋分の日<rt>しゅうぶんのひ</rt></ruby>（Autumnal Equinox）', // 10
+            '<ruby>体育の日<rt>たいいくのひ</rt></ruby>（Health and Sports Day）', // 11
+            '<ruby>文化の日<rt>ぶんかのひ</rt></ruby>（Culture Day）', // 12
+            '<ruby>勤労感謝の日<rt>きんろうかんしゃ</rt></ruby>（Labor Thanksgiving Day）', // 13
+            '<ruby>天皇誕生日<rt>てんのうたんじょうび</rt></ruby>（Emperor\'s Birthday）', // 14
+            '<ruby>山の日<rt>やまのひ</rt></ruby>（Mountain Day）' // 15
+          ],
+          
+          q = [
+            {
+              question : s + '1月1日？',
+              answers : [
+                'A' + h[0]
+              ]
+            },
+
+            {
+              question : s + '1月第2月曜日？',
+              answers : [
+                'A' + h[1]
+              ]
+            },
+
+            {
+              question : s + '2月11日？',
+              answers : [
+                'A' + h[2]
+              ]
+            },
+
+            {
+              question : s + '2月23日？',
+              answers : [
+                'A' + h[14]
+              ]
+            },
+
+            {
+              question : s + '3月20日ごろ？',
+              answers : [
+                'A' + h[3]
+              ]
+            },
+
+            {
+              question : s + '4月29日？',
+              answers : [
+                'A' + h[4]
+              ]
+            },
+
+            {
+              question : s + '5月3日？',
+              answers : [
+                'A' + h[5]
+              ]
+            },
+
+            {
+              question : s + '5月4日？',
+              answers : [
+                'A' + h[6]
+              ]
+            },
+
+            {
+              question : s + '5月5日？',
+              answers : [
+                'A' + h[7]
+              ]
+            },
+
+            {
+              question : s + '7月第3月曜日？',
+              answers : [
+                'A' + h[8]
+              ]
+            },
+
+            {
+              question : s + '8月11日？',
+              answers : [
+                'A' + h[15]
+              ]
+            },
+
+            {
+              question : s + '9月第3月曜日？',
+              answers : [
+                'A' + h[9]
+              ]
+            },
+
+            {
+              question : s + '9月23日ごろ？',
+              answers : [
+                'A' + h[10]
+              ]
+            },
+
+            {
+              question : s + '10月第2月曜日？',
+              answers : [
+                'A' + h[11]
+              ]
+            },
+
+            {
+              question : s + '11月3日？',
+              answers : [
+                'A' + h[12]
+              ]
+            },
+
+            {
+              question : s + '11月23日？',
+              answers : [
+                'A' + h[13]
+              ]
+            },
+
+            {
+              question : 'The period around April 29 to May 5 encompasses several holidays and is called _____.',
+              answers : [
+                'Aゴールデンウィーク（Golden Week）',
+                'シルバーウィーク（Silver Week）',
+                'ブロンズウィーク（Bronze Week）',
+                'プラチナムウィーク（Platinum Week）'
+              ]
+            }
+          ],
+          i = 0, j = q.length - 1, answers, k, n;
+        
+      // randomly assign answers for problems 1-16
+      for (; i < j; i++) {
+        answers = h.slice();
+        answers.splice(answers.indexOf(q[i].answers[0].slice(1)), 1);
+        k = 3;
+        
+        while (k --> 0) {
+          if (answers.length) {
+            n = Math.floor(Math.random() * answers.length);
+            q[i].answers.push(answers[n].charAt(0) == 'A' ? '!' + answers[n] : answers[n]);
+            answers.splice(n, 1);
+          } else {
+            break; // break out if there's no more answers, to prevent errors
+          }
+        }
+      }
+        
+      Genki.generateQuiz({
+        type : 'multi',
+        info : Genki.lang.std_culture + '<br>You may want to read the Culture Note about Japanese National Holidays (Genki I: p.114) if you haven\'t yet.',
+
+        quizlet : q
+      });
+    }());</script>
+  </body>
+</html>
