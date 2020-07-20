@@ -16,6 +16,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 (function (window, document) {
   'use strict';
+  'Copyright (c) 2019 Dominik Klein, Kanji Canvas (http://github.com/asdfjkl/kanjicanvas)'; // copyright for minified file
   
   // define KanjiCanvas as a global
   // call KanjiCanvas.init(id) to initialize a canvas as a KanjiCanvas
@@ -215,7 +216,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         for(var i = 0;i<KanjiCanvas["recordedPattern_" + id].length;i++) {
           var stroke_i = KanjiCanvas["recordedPattern_" + id][i],
               x = stroke_i[Math.floor(stroke_i.length/2)][0] + 5,
-              y = stroke_i[Math.floor(stroke_i.length/2)][1] + 5;
+              y = stroke_i[Math.floor(stroke_i.length/2)][1] - 5;
           
           KanjiCanvas["ctx_" + id].font = size.toString() + "px Arial";
 
@@ -618,35 +619,39 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
    };
    
    KanjiCanvas.wholeWholeDistance = function (pattern1, pattern2) {
-       var [k1,k2,n,m] = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
+       // [k1, k2, n, m]
+       // a[0], a[1], a[2], a[3]
+       var a = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
 	   var dist = 0;
-	   for(var i = 0; i<m;i++) {
-	       KanjiCanvas.j_of_i = parseInt(parseInt(n/m) * i);
-		   var x1y1 = k1[KanjiCanvas.j_of_i];
-		   var x2y2 = k2[i];
+	   for(var i = 0; i<a[3];i++) {
+	       KanjiCanvas.j_of_i = parseInt(parseInt(a[2]/a[3]) * i);
+		   var x1y1 = a[0][KanjiCanvas.j_of_i];
+		   var x2y2 = a[1][i];
 	       dist += (Math.abs(x1y1[0] - x2y2[0]) + Math.abs(x1y1[1] - x2y2[1]));
 	   }
-	   return parseInt(dist/m);
+	   return parseInt(dist/a[3]);
    };
    
    // initialize N-stroke map by greedy initialization
    KanjiCanvas.initStrokeMap = function (pattern1, pattern2, distanceMetric) {
-	   var [k1,k2,n,m] = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
+       // [k1, k2, n, m]
+       // a[0], a[1], a[2], a[3]
+	   var a = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
 	   // larger is now k1 with length n
 	   var map = new Array();
-	   for(var i=0;i<n;i++) {
+	   for(var i=0;i<a[2];i++) {
 	      map[i] = -1;
 	   }
 	   var free = new Array();
-	   for(var i=0;i<n;i++) {
+	   for(var i=0;i<a[2];i++) {
 	      free[i] = true;
 	   }
-	   for(var i=0;i<m;i++) {
+	   for(var i=0;i<a[3];i++) {
            KanjiCanvas.minDist = 10000000;
 		   KanjiCanvas.min_j = -1;
-		   for(var j=0;j<n;j++) {
+		   for(var j=0;j<a[2];j++) {
 		       if(free[j] == true) {
-			       var d = distanceMetric(k1[j],k2[i]);
+			       var d = distanceMetric(a[0][j],a[1][i]);
   			       if(d < KanjiCanvas.minDist) {
 				       KanjiCanvas.minDist = d;
 					   KanjiCanvas.min_j = j;
@@ -661,23 +666,25 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 	// get best N-stroke map by iterative improvement
 	KanjiCanvas.getMap = function (pattern1, pattern2, distanceMetric) {
-       var [k1,k2,n,m] = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
+       // [k1, k2, n, m]
+       // a[0], a[1], a[2], a[3]
+       var a = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
 	   // larger is now k1 with length n
 	   var L = 3;
-	   var map = KanjiCanvas.initStrokeMap(k1, k2, distanceMetric);
+	   var map = KanjiCanvas.initStrokeMap(a[0], a[1], distanceMetric);
 	   for(var l=0;l<L;l++) {
 	       for(var i=0;i<map.length;i++) {
 		       if(map[i] != -1) {
-                   KanjiCanvas.dii = distanceMetric(k1[i], k2[map[i]]);
+                   KanjiCanvas.dii = distanceMetric(a[0][i], a[1][map[i]]);
 				   for(var j=0;j<map.length;j++) {
 				       // we need to check again, since 
 					   // manipulation of map[i] can occur within
 					   // the j-loop
 					   if(map[i] != -1) {
 					       if(map[j] != -1) {
-						      var djj = distanceMetric(k1[j],k2[map[j]]);
-                              var dij = distanceMetric(k1[j],k2[map[i]]);
-                              var dji = distanceMetric(k1[i],k2[map[j]]);
+						      var djj = distanceMetric(a[0][j],a[1][map[j]]);
+                              var dij = distanceMetric(a[0][j],a[1][map[i]]);
+                              var dji = distanceMetric(a[0][i],a[1][map[j]]);
 							  if(dji + dij < KanjiCanvas.dii + djj) {
 							      var mapj = map[j];
 								  map[j] = map[i];
@@ -685,7 +692,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 								  KanjiCanvas.dii = dij;
 							  }
 						   } else {
-						       var dij = distanceMetric(k1[j], k2[map[i]]);
+						       var dij = distanceMetric(a[0][j], a[1][map[i]]);
                                if(dij < KanjiCanvas.dii) {
                                   map[j] = map[i];
                                   map[i] = -1;
@@ -702,7 +709,9 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	
 	// from optimal N-stroke map create M-N stroke map
 	KanjiCanvas.completeMap = function (pattern1, pattern2, distanceMetric, map) {
-		var [k1,k2,_,_] = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
+       // [k1, k2, _, _]
+       // a[0], a[1], a[2], a[3]
+		var a = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
 	    if(!map.includes(-1)) {
 		    return map;
 		}
@@ -751,20 +760,20 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                var div = start;
                var max_dist = 1000000;
                for(var j=start;j<stop;j++) {
-                   var stroke_ab = k1[start];
+                   var stroke_ab = a[0][start];
 				   // iteration of concat, possibly slow
 				   // due to memory allocations; optimize?!
 			     	for(var temp=start+1;temp<=j;temp++) {
-				       stroke_ab = stroke_ab.concat(k1[temp]);
+				       stroke_ab = stroke_ab.concat(a[0][temp]);
 			    	}
-				   var stroke_bc = k1[j+1];
+				   var stroke_bc = a[0][j+1];
 
 				   for(var temp=j+2;temp<=stop;temp++) {
-				       stroke_bc = stroke_bc.concat(k1[temp]);
+				       stroke_bc = stroke_bc.concat(a[0][temp]);
 				   }
 
-				   var d_ab = distanceMetric(stroke_ab, k2[map[start]]);
-				   var d_bc = distanceMetric(stroke_bc, k2[map[stop]]);				
+				   var d_ab = distanceMetric(stroke_ab, a[1][map[start]]);
+				   var d_bc = distanceMetric(stroke_bc, a[1][map[stop]]);				
                    if(d_ab + d_bc < max_dist) {
                        div = j;
                        max_dist = d_ab + d_bc;
@@ -784,19 +793,21 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	// given two patterns, M-N stroke map and distanceMetric function,
 	// compute overall distance between two patterns
 	KanjiCanvas.computeDistance = function (pattern1, pattern2, distanceMetric, map) {
-	     var [k1,k2,n,m] = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
+         // [k1, k2, n, m]
+         // a[0], a[1], a[2], a[3]
+	     var a = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
 		 var dist = 0.0;
 		 var idx = 0;
-		 while(idx < n) {
-		     var stroke_idx = k2[map[idx]];
+		 while(idx < a[2]) {
+		     var stroke_idx = a[1][map[idx]];
 			 var start = idx;
 			 var stop  = start+1;
 			 while(stop<map.length && map[stop] == map[idx]) {
                   stop++;
              }
-			 var stroke_concat = k1[start];
+			 var stroke_concat = a[0][start];
 			 for(var temp=start+1;temp<stop;temp++) {
-				stroke_concat = stroke_concat.concat(k1[temp]);
+				stroke_concat = stroke_concat.concat(a[0][temp]);
 			 }
 			 dist += distanceMetric(stroke_idx, stroke_concat);
 			 idx = stop;
@@ -807,19 +818,21 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	// given two patterns, M-N strokemap, compute weighted (respect stroke
 	// length when there are concatenated strokes using the wholeWhole distance
 	KanjiCanvas.computeWholeDistanceWeighted = function (pattern1, pattern2, map) {
-	     var [k1,k2,n,m] = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
+         // [k1, k2, n, m]
+         // a[0], a[1], a[2], a[3]
+	     var a = KanjiCanvas.getLargerAndSize(pattern1, pattern2);
 		 var dist = 0.0;
 		 var idx = 0;
-		 while(idx < n) {
-		     var stroke_idx = k2[map[idx]];
+		 while(idx < a[2]) {
+		     var stroke_idx = a[1][map[idx]];
 			 var start = idx;
 			 var stop  = start+1;
 			 while(stop<map.length && map[stop] == map[idx]) {
                   stop++;
              }
-			 var stroke_concat = k1[start];
+			 var stroke_concat = a[0][start];
 			 for(var temp=start+1;temp<stop;temp++) {
-				stroke_concat = stroke_concat.concat(k1[temp]);
+				stroke_concat = stroke_concat.concat(a[0][temp]);
 			 }
 			 
 			 var dist_idx = KanjiCanvas.wholeWholeDistance(stroke_idx, stroke_concat);
@@ -967,7 +980,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	};
   
 	KanjiCanvas.copyToClipboard = function (str) {
-		const el = document.createElement('textarea');
+		var el = document.createElement('textarea');
 		el.value = str;
 		document.body.appendChild(el);
 		el.select();
