@@ -1369,6 +1369,9 @@ input.writing-zone-input:focus { border-color:#F60; }
 }
 
 .big-kanji { font-size:100px; }
+.kana-font { font-family:"NotoSansJP", "MS Gothic", "Yu Gothic", "Meiryo" }
+.drawing-quiz .quiz-item-text.kana-font { margin-top:-7px }
+.drawing-quiz .quiz-item { overflow:hidden; }
 
 .kanji-container { display:inline-block; }
 .kanji-canvas {
@@ -1514,11 +1517,15 @@ ruby rt {
 .stroke-quiz.quiz-over .next-question,  .quiz-over .kanji-canvas-actions { display:none; }
 
 /* stroke order button */
+.kanji-stroke-order .button-link {
+  display:inline-block;
+  vertical-align:top;
+}
+
 .kanji-stroke-order .button {
   color:#333;
   background:#FFF;
   border:1px solid #DEDEDE;
-  vertical-align:top;
   height:30px;
   width:30px;
   padding:0;

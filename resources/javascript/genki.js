@@ -101,6 +101,12 @@
           multi : 'Multiple Choice',
           fill : 'Written',
           drag : 'Drag and Drop'
+        },
+        
+        hirakata : {
+          fill : 'Written',
+          stroke : 'Stroke Order Practice',
+          drawing : 'Drawing Practice'
         }
       },
       
@@ -176,7 +182,10 @@
       // mainly for exercises that provide multiple exercise variations
       // handles switching and conversion of exercises
       if (typeof o.type === 'object') {
-        var begin = /begin=\d/.test(window.location.search) ? window.location.search.replace(/.*?begin=(\d).*/, '$1') : false,
+        // the `begin` query in the URL determines the exercise to immediately start (without popup confirmation)
+        // example: https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/lesson-4/vocab-1/?begin=1 (this starts multiple choice, 0 would start drag and drop)
+        // `begin` or `start` may be used equally, whichever is preferred.
+        var begin = /(?:begin|start)=\d/.test(window.location.search) ? window.location.search.replace(/.*?(?:begin|start)=(\d).*/, '$1') : false,
             i = 0, j = o.type.length, opts = '', modal;
         
         // parse options
@@ -384,6 +393,12 @@
                 var img = document.querySelector('.multi-quiz-image');
                 if (img) img.style.display = 'none';
               }
+            }
+            
+            // for hiragana/katakana writing/stroke order workbooks
+            // switches between the workbook format and stroke order format
+            else if (o.format == 'hirakata') {
+              o.quizlet = o.quizlet[type] ? o.quizlet[type] : o.quizlet[o.quizlet.length - 1];
             }
             
             // finally, launch the quiz
@@ -734,24 +749,28 @@
             guideHidden = storageOK && localStorage.tracingGuideVisible == 'false',
             q = o.quizlet,
             i = 0,
-            j = q.length;
+            j = q.length, img;
 
         // create individual blocks for each question and hide them until later
         for (; i < j; i++) {
+          if (q[i].kana) q[i].kanji = q[i].kana; // applies kana character to kanji property
+          
+          img = getPaths() + 'resources/images/stroke-order/' + q[i].order + '.png';
+          
           // start question block
           quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;">'+
             // kanji
             '<div class="quiz-multi-question">'+
-              '<div class="kanji-container big-kanji">' + q[i].kanji + '</div>'+
+              '<div class="kanji-container big-kanji' + ( q[i].kana ? ' kana-font' : '' ) + '">' + q[i].kanji + '</div>'+
               '<div class="kanji-stroke-order">'+
-                '<a href="https://jisho.org/search/' + q[i].kanji + '%20%23kanji" target="_blank" title="View stroke order on jisho.org"><button class="button"><i class="fa">&#xf002;</i></button></a>'+
-                '<a href="' + getPaths() + 'resources/images/stroke-order/' + q[i].order + '.png" target="_blank" title="Click to view image"><img src="' + getPaths() + 'resources/images/stroke-order/' + q[i].order + '.png" alt="stroke order"/></a>'+
+                '<a class="button-link" href="' + (q[i].kana ? getPaths() + 'resources/images/stroke-order/sasagami-' + o.kanaType + '.jpg' : 'https://jisho.org/search/' + q[i].kanji + '%20%23kanji') + '" target="_blank" title="View stroke order ' + (q[i].kana ? 'chart' : 'on jisho.org') + '"><button class="button"><i class="fa">&#xf002;</i></button></a>'+
+                '<a href="' + img + '" target="_blank" title="Click to view image"><img src="' + img + '" alt="stroke order"/></a>'+
               '</div>'+
             '</div>'+
             
             // drawing area + buttons
             '<div class="quiz-multi-row">'+
-              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-strokes="' + q[i].strokes + '" data-guide="' + (guideHidden ? false : true) + '" id="canvas-' + i + '" width="200" height="200"></canvas>'+
+              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-strokes="' + q[i].strokes + '" data-guide="' + (guideHidden ? false : true) + '"' + (q[i].kana ? ' data-font="NotoSansJP, MS Gothic, Yu Gothic, Meiryo"' : '') + ' id="canvas-' + i + '" width="200" height="200"></canvas>'+
             '</div>'+
             '<div class="kanji-canvas-actions quiz-multi-row center">'+
               '<button class="button" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + i + '"><i class="fa">&#xf12d;</i>Erase</button>'+
@@ -759,7 +778,7 @@
               (Genki.debug ? '<button class="button" onclick="console.log(KanjiCanvas.recognize(this.dataset.canvas));" data-canvas="canvas-' + i + '" title="Open console (F12) to see recognition candidates"><i class="fa">&#xf188;</i>Test Recognition</button>' : '')+
             '</div>'+
             '<div class="quiz-multi-row">'+
-              '<div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, false, \'stroke\');" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this, false, \'stroke\');" data-canvas="canvas-' + i + '">Next Kanji</div>'+
+              '<div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, false, \'stroke\');" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this, false, \'stroke\');" data-canvas="canvas-' + i + '">Next '+ (q[i].kana ? 'Kana' : 'Kanji') + '</div>'+
             '</div>'+
           // end question block
           '</div>';
@@ -793,19 +812,21 @@
             q = o.quizlet, n = 0, i = 0, j = o.quizlet.length;
 
         for (; i < j; i++) {
+          if (q[i].kana) q[i].kanji = q[i].kana; // applies kana character to kanji property
+          
           // create a new row
           quiz += '<div class="quiz-answer-row">'+
           '<div class="drawing-zone" ' + width + '>'+
             '<div class="quiz-item">'+
-              '<div class="quiz-item-text">' + q[i].kanji + '</div>'+
+              '<div class="quiz-item-text' + (q[i].kana ? ' kana-font' : '') + '">' + q[i].kanji + '</div>'+
             '</div>'+
-            '<button class="button stroke-order-button" onclick="Genki.viewStrokeOrder(\'' + q[i].kanji + '\', \'' + q[i].order + '\');">Stroke Order</button>'+
+            '<button class="button stroke-order-button" onclick="Genki.viewStrokeOrder(\'' + q[i].kanji + '\', \'' + q[i].order + '\'' + (q[i].kana ? ",'" + o.kanaType + "'" : '') + ');">Stroke Order</button>'+
           '</div>';
 
           // insert the drawing zones
           while (columns --> 0) {
             quiz += '<div class="drawing-zone" ' + width + '>'+
-              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-guide="' + (o.columns - columns > 3 ? false : true) + '" data-strokes="' + q[i].strokes + '" data-size="100" id="canvas-' + n + '" width="100" height="100"></canvas>'+
+              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-guide="' + (o.columns - columns > 3 ? false : true) + '"' + (q[i].kana ? ' data-font="NotoSansJP, MS Gothic, Yu Gothic, Meiryo"' : '') + ' data-strokes="' + q[i].strokes + '" data-size="100" id="canvas-' + n + '" width="100" height="100"></canvas>'+
               '<div class="kanji-canvas-actions">'+
                 '<button class="button icon-only" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Erase"><i class="fa">&#xf12d;</i></button>'+
                 '<button class="button icon-only" onclick="KanjiCanvas.deleteLast(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Undo"><i class="fa">&#xf0e2;</i></button>'+
@@ -1979,14 +2000,16 @@
     
     
     // for viewing the stroke order in Kanji Writing Practice exercises
-    viewStrokeOrder : function (kanji, order) {
+    viewStrokeOrder : function (kanji, order, kana) {
+      var img = getPaths() + 'resources/images/stroke-order/' + order + '.png';
+          
       GenkiModal.open({
         title : kanji + ' Stroke Order',
         content :
           '<div class="kanji-stroke-order center">'+
             '<div class="big-kanji">' + kanji + '</div>'+
-            '<a href="https://jisho.org/search/' + kanji + '%20%23kanji" target="_blank" title="View stroke order on jisho.org"><button class="button"><i class="fa">&#xf002;</i></button></a>'+
-            '<a href="' + getPaths() + 'resources/images/stroke-order/' + order + '.png" target="_blank" title="Click to view image"><img src="' + getPaths() + 'resources/images/stroke-order/' + order + '.png" alt="stroke order"/></a>'+
+            '<a class="button-link" href="' + (kana ? getPaths() + 'resources/images/stroke-order/sasagami-' + kana + '.jpg' : 'https://jisho.org/search/' + kanji + '%20%23kanji') + '" target="_blank" title="View stroke order ' + (kana ? 'chart' : 'on jisho.org') + '"><button class="button"><i class="fa">&#xf002;</i></button></a>'+
+            '<a href="' + img + '" target="_blank" title="Click to view image"><img src="' + img + '" alt="stroke order"/></a>'+
           '</div>'
         
       });

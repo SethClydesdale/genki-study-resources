@@ -32,6 +32,7 @@ If you have any suggestions, feedback, or bugs to report, feel free to [open a n
 - Noriko Udagawa and Reiko Maruyama for some Illustrations that were used.
 - [DavidBurela](https://github.com/DavidBurela) for gifting me the 3rd Edition textbook and workbook of Genki I.
 - [Patrick Roberts](https://github.com/patrickroberts) for [his help with an algorithm](https://stackoverflow.com/a/59337819/12502093) that helped make mixed kana/kanji answers possible in written quizzes.
+- [sasagami358](http://sasagami358.blog.fc2.com/blog-entry-593.html) for the hiragana and katakana stroke order charts.
 - Everyone who helped contribute to this project, both on GitHub and outside of it.
 
 The following resources were used in this project. Check them out!
