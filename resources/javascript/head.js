@@ -150,6 +150,30 @@
   }
   
   
+  // # FONT PRE-LOADING #
+  // pre-loads fonts for kanji canvases
+  window.preLoadFont = function (font) {
+    var redraw = function () {
+      if (window.KanjiCanvas) {
+        for (var a = document.querySelectorAll('.kanji-canvas'), i = 0, j = a.length; i < j; i++) {
+          if (KanjiCanvas['canvas_' + a[i].id]) {
+            KanjiCanvas.redraw(a[i].id, true);
+          }
+        }
+      }
+    };
+    
+    if (document.fonts && document.fonts.load) {
+      document.fonts.load('10px ' + font).then(redraw);
+    } 
+    // fallback
+    else {
+      document.write('<span style="font-family:' + font + ';opacity:0;position:absolute;font-size:0;height:0;width:0;">' + font + '</span>');
+      window.setTimeout(redraw, 1500);
+    }
+  };
+  
+  
   // # LIMITED MODE WARNING #
   // If cookies are blocked, Genki Study Resources will run in limited mode. Settings are not remembered in this mode and certain features, such as dark mode, are unavailable.
   if (!navigator.cookieEnabled) {

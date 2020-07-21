@@ -167,6 +167,7 @@ window.GenkiExercises = [
   'lesson-4/vocab-6|Vocabulary: Location Words|p.106',
   'lesson-4/culture-1|Culture Note: Japanese National Holidays|p.114',
   'lesson-4/grammar-1|Practice: Xがあります／います|p.115; I-A',
+  'lesson-4/grammar-2|Practice: Xがあります|p.116; I-C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
