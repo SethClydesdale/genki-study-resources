@@ -761,7 +761,7 @@
           quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;">'+
             // kanji
             '<div class="quiz-multi-question">'+
-              '<div class="kanji-container big-kanji' + ( q[i].kana ? ' kana-font' : '' ) + '">' + q[i].kanji + '</div>'+
+              '<div class="kanji-container big-kanji' + ( q[i].kana ? ' kana-font' : '' ) + '"' + (q[i].font ? ' style="font-family:' + q[i].font + '"' : '') + '>' + q[i].kanji + '</div>'+
               '<div class="kanji-stroke-order">'+
                 '<a class="button-link" href="' + (q[i].kana ? getPaths() + 'resources/images/stroke-order/sasagami-' + o.kanaType + '.jpg' : 'https://jisho.org/search/' + q[i].kanji + '%20%23kanji') + '" target="_blank" title="View stroke order ' + (q[i].kana ? 'chart' : 'on jisho.org') + '"><button class="button"><i class="fa">&#xf002;</i></button></a>'+
                 '<a href="' + img + '" target="_blank" title="Click to view image"><img src="' + img + '" alt="stroke order"/></a>'+
@@ -770,7 +770,7 @@
             
             // drawing area + buttons
             '<div class="quiz-multi-row">'+
-              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-strokes="' + q[i].strokes + '" data-guide="' + (guideHidden ? false : true) + '"' + (q[i].kana ? ' data-font="NotoSansJP, MS Gothic, Yu Gothic, Meiryo"' : '') + ' id="canvas-' + i + '" width="200" height="200"></canvas>'+
+              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-strokes="' + q[i].strokes + '" data-guide="' + (guideHidden ? false : true) + '"' + (q[i].kana && !q[i].font ? ' data-font="NotoSansJP, SawarabiGothic, MS Gothic, Yu Gothic, Meiryo"' : q[i].font ? ' data-font="' + q[i].font + '"' : '') + ' id="canvas-' + i + '" width="200" height="200"' + (q[i].kana ? 'data-kana="true"' : '') + '></canvas>'+
             '</div>'+
             '<div class="kanji-canvas-actions quiz-multi-row center">'+
               '<button class="button" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + i + '"><i class="fa">&#xf12d;</i>Erase</button>'+
@@ -818,7 +818,7 @@
           quiz += '<div class="quiz-answer-row">'+
           '<div class="drawing-zone" ' + width + '>'+
             '<div class="quiz-item">'+
-              '<div class="quiz-item-text' + (q[i].kana ? ' kana-font' : '') + '">' + q[i].kanji + '</div>'+
+              '<div class="quiz-item-text' + (q[i].kana ? ' kana-font' : '') + '"' + (q[i].font ? ' style="font-family:' + q[i].font + '"' : '') + '>' + q[i].kanji + '</div>'+
             '</div>'+
             '<button class="button stroke-order-button" onclick="Genki.viewStrokeOrder(\'' + q[i].kanji + '\', \'' + q[i].order + '\'' + (q[i].kana ? ",'" + o.kanaType + "'" : '') + ');">Stroke Order</button>'+
           '</div>';
@@ -826,7 +826,7 @@
           // insert the drawing zones
           while (columns --> 0) {
             quiz += '<div class="drawing-zone" ' + width + '>'+
-              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-guide="' + (o.columns - columns > 3 ? false : true) + '"' + (q[i].kana ? ' data-font="NotoSansJP, MS Gothic, Yu Gothic, Meiryo"' : '') + ' data-strokes="' + q[i].strokes + '" data-size="100" id="canvas-' + n + '" width="100" height="100"></canvas>'+
+              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-guide="' + (o.columns - columns > 3 ? false : true) + '"' + (q[i].kana && !q[i].font ? ' data-font="NotoSansJP, SawarabiGothic, MS Gothic, Yu Gothic, Meiryo"' : q[i].font ? ' data-font="' + q[i].font + '"' : '') + ' data-strokes="' + q[i].strokes + '" data-size="100" id="canvas-' + n + '" width="100" height="100"' + (q[i].kana ? 'data-kana="true"' : '') + '></canvas>'+
               '<div class="kanji-canvas-actions">'+
                 '<button class="button icon-only" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Erase"><i class="fa">&#xf12d;</i></button>'+
                 '<button class="button icon-only" onclick="KanjiCanvas.deleteLast(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Undo"><i class="fa">&#xf0e2;</i></button>'+
@@ -2007,7 +2007,7 @@
         title : kanji + ' Stroke Order',
         content :
           '<div class="kanji-stroke-order center">'+
-            '<div class="big-kanji">' + kanji + '</div>'+
+            '<div class="big-kanji' + (kana ? ' kana-font' : '') + '"' + ( /り/.test(kanji) ? ' style="font-family:SawarabiGothic, MS Gothic, Yu Gothic, NotoSansJP, Meiryo;"' : '' ) + '>' + kanji + '</div>'+
             '<a class="button-link" href="' + (kana ? getPaths() + 'resources/images/stroke-order/sasagami-' + kana + '.jpg' : 'https://jisho.org/search/' + kanji + '%20%23kanji') + '" target="_blank" title="View stroke order ' + (kana ? 'chart' : 'on jisho.org') + '"><button class="button"><i class="fa">&#xf002;</i></button></a>'+
             '<a href="' + img + '" target="_blank" title="Click to view image"><img src="' + img + '" alt="stroke order"/></a>'+
           '</div>'

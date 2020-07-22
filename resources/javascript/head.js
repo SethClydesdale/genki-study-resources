@@ -152,7 +152,8 @@
   
   // # FONT PRE-LOADING #
   // pre-loads fonts for kanji canvases
-  window.preLoadFont = function (font) {
+  window.preLoadFonts = function () {
+    // function used to redraw canvases once the font is loaded
     var redraw = function () {
       if (window.KanjiCanvas) {
         for (var a = document.querySelectorAll('.kanji-canvas'), i = 0, j = a.length; i < j; i++) {
@@ -163,12 +164,27 @@
       }
     };
     
+    // loop through arguments to form @font-face rules and apply events for loading fonts
+    for (var a = arguments, i = 0, j = arguments.length, styles = '', fonts = '', font; i < j; i++) {
+      font = a[i].replace(/\..*?$/, '');
+      fonts += font + (i == j - 1 ? '' : ', ');
+      styles += 
+        '@font-face {'+
+          'font-family:"' + font + '";'+
+          'src:url(' + getPaths() + 'resources/fonts/' + a[i] + ') format("' + (/otf/.test(a[i]) ? 'opentype' : /ttf/ ? 'truetype' : '') + '");'+
+        '}\n';
+    }
+    
+    // apply @font-face rules to the document
+    document.write('<style>' + styles + '</style>');
+    
+    // load and render fonts
     if (document.fonts && document.fonts.load) {
-      document.fonts.load('10px ' + font).then(redraw);
+      document.fonts.load('10px ' + fonts).then(redraw);
     } 
     // fallback
     else {
-      document.write('<span style="font-family:' + font + ';opacity:0;position:absolute;font-size:0;height:0;width:0;">' + font + '</span>');
+      document.write('<span style="font-family:' + fonts + ';opacity:0;position:absolute;font-size:0;height:0;width:0;">' + fonts + '</span>');
       window.setTimeout(redraw, 1500);
     }
   };
