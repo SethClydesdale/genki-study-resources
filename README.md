@@ -40,6 +40,7 @@ The following resources were used in this project. Check them out!
 - [dragula](https://github.com/bevacqua/dragula) for the simple drag and drop.
 - [easytimer.js](https://github.com/albert-gonzalez/easytimer.js) for the super easy timer.
 - [Kanji Canvas](https://github.com/asdfjkl/kanjicanvas) by [Dominik Klein](https://github.com/asdfjkl) for the stroke order exercises.
+- [Noto CJK](https://www.google.com/get/noto/help/cjk/) by Google and [Sawarabi Gothic](https://fonts.google.com/specimen/Sawarabi+Gothic) by mshio for the fonts used in the Hiragana/Katakana stroke order exercises.
 
 
 ### Donate

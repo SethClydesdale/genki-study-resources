@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
     <script src="../../../resources/javascript/head.min.js"></script>
     <script src="../../../resources/javascript/ga.js" async></script>
+    
+    <script>preLoadFonts('NotoSansJP.otf', 'SawarabiGothic.ttf');</script>
   </head>
 
   <body>
@@ -57,164 +59,236 @@
     
     <script src="../../../resources/javascript/dragula.min.js"></script>
     <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/kanji-canvas.min.js"></script>
+    <script src="../../../resources/javascript/ref-patterns/hiragana.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'fill',
-      info : 'Practice using the Hiragana さ-と.',
-      
+      format : 'hirakata',
+      type : ['fill', 'stroke', 'drawing'],
+      info : ['Practice using the Hiragana さ-と.', 'Practice drawing the Hiragana さ-と by following the stroke order.', 'Practice drawing the Hiragana さ-と multiple times.'],
+        
+      kanaType : 'hiragana',
+      columns : 7,
       quizlet : 
-      '<p class="section-desc"><span class="sectionNumber3rd">I</span> Practice typing the following ten hiragana (さ through と).</p>'+
-      '<table class="table large-width center">'+
-        '<tr>'+
-          '<td style="font-size:24px;width:50px;">さ<div class="furigana" style="font-size:12px;">sa</div></td>'+
-          '<td>{さ|さ|placeholder}</td>'+
-          '<td>{さ|さ|placeholder}</td>'+
-          '<td>{さ|さ|placeholder}</td>'+
-          '<td>{さ}</td>'+
-          '<td>{さ}</td>'+
-          '<td>{さ}</td>'+
-          '<td>{さ}</td>'+
-        '</tr>'+
+        [
+          // WRITTEN
+          '<p class="section-desc"><span class="sectionNumber3rd">I</span> Practice typing the following ten hiragana (さ through と).</p>'+
+          '<table class="table large-width center">'+
+            '<tr>'+
+              '<td style="font-size:24px;width:50px;">さ<div class="furigana" style="font-size:12px;">sa</div></td>'+
+              '<td>{さ|さ|placeholder}</td>'+
+              '<td>{さ|さ|placeholder}</td>'+
+              '<td>{さ|さ|placeholder}</td>'+
+              '<td>{さ}</td>'+
+              '<td>{さ}</td>'+
+              '<td>{さ}</td>'+
+              '<td>{さ}</td>'+
+            '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">し<div class="furigana" style="font-size:12px;">shi</div></td>'+
-          '<td>{し|し|placeholder}</td>'+
-          '<td>{し|し|placeholder}</td>'+
-          '<td>{し|し|placeholder}</td>'+
-          '<td>{し}</td>'+
-          '<td>{し}</td>'+
-          '<td>{し}</td>'+
-          '<td>{し}</td>'+
-        '</tr>'+
+            '<tr>'+
+              '<td style="font-size:24px;">し<div class="furigana" style="font-size:12px;">shi</div></td>'+
+              '<td>{し|し|placeholder}</td>'+
+              '<td>{し|し|placeholder}</td>'+
+              '<td>{し|し|placeholder}</td>'+
+              '<td>{し}</td>'+
+              '<td>{し}</td>'+
+              '<td>{し}</td>'+
+              '<td>{し}</td>'+
+            '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">す<div class="furigana" style="font-size:12px;">su</div></td>'+
-          '<td>{す|す|placeholder}</td>'+
-          '<td>{す|す|placeholder}</td>'+
-          '<td>{す|す|placeholder}</td>'+
-          '<td>{す}</td>'+
-          '<td>{す}</td>'+
-          '<td>{す}</td>'+
-          '<td>{す}</td>'+
-        '</tr>'+
+            '<tr>'+
+              '<td style="font-size:24px;">す<div class="furigana" style="font-size:12px;">su</div></td>'+
+              '<td>{す|す|placeholder}</td>'+
+              '<td>{す|す|placeholder}</td>'+
+              '<td>{す|す|placeholder}</td>'+
+              '<td>{す}</td>'+
+              '<td>{す}</td>'+
+              '<td>{す}</td>'+
+              '<td>{す}</td>'+
+            '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">せ<div class="furigana" style="font-size:12px;">se</div></td>'+
-          '<td>{せ|せ|placeholder}</td>'+
-          '<td>{せ|せ|placeholder}</td>'+
-          '<td>{せ|せ|placeholder}</td>'+
-          '<td>{せ}</td>'+
-          '<td>{せ}</td>'+
-          '<td>{せ}</td>'+
-          '<td>{せ}</td>'+
-        '</tr>'+
+            '<tr>'+
+              '<td style="font-size:24px;">せ<div class="furigana" style="font-size:12px;">se</div></td>'+
+              '<td>{せ|せ|placeholder}</td>'+
+              '<td>{せ|せ|placeholder}</td>'+
+              '<td>{せ|せ|placeholder}</td>'+
+              '<td>{せ}</td>'+
+              '<td>{せ}</td>'+
+              '<td>{せ}</td>'+
+              '<td>{せ}</td>'+
+            '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">そ<div class="furigana" style="font-size:12px;">so</div></td>'+
-          '<td>{そ|そ|placeholder}</td>'+
-          '<td>{そ|そ|placeholder}</td>'+
-          '<td>{そ|そ|placeholder}</td>'+
-          '<td>{そ}</td>'+
-          '<td>{そ}</td>'+
-          '<td>{そ}</td>'+
-          '<td>{そ}</td>'+
-        '</tr>'+
+            '<tr>'+
+              '<td style="font-size:24px;">そ<div class="furigana" style="font-size:12px;">so</div></td>'+
+              '<td>{そ|そ|placeholder}</td>'+
+              '<td>{そ|そ|placeholder}</td>'+
+              '<td>{そ|そ|placeholder}</td>'+
+              '<td>{そ}</td>'+
+              '<td>{そ}</td>'+
+              '<td>{そ}</td>'+
+              '<td>{そ}</td>'+
+            '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">た<div class="furigana" style="font-size:12px;">ta</div></td>'+
-          '<td>{た|た|placeholder}</td>'+
-          '<td>{た|た|placeholder}</td>'+
-          '<td>{た|た|placeholder}</td>'+
-          '<td>{た}</td>'+
-          '<td>{た}</td>'+
-          '<td>{た}</td>'+
-          '<td>{た}</td>'+
-        '</tr>'+
+            '<tr>'+
+              '<td style="font-size:24px;">た<div class="furigana" style="font-size:12px;">ta</div></td>'+
+              '<td>{た|た|placeholder}</td>'+
+              '<td>{た|た|placeholder}</td>'+
+              '<td>{た|た|placeholder}</td>'+
+              '<td>{た}</td>'+
+              '<td>{た}</td>'+
+              '<td>{た}</td>'+
+              '<td>{た}</td>'+
+            '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">ち<div class="furigana" style="font-size:12px;">chi</div></td>'+
-          '<td>{ち|ち|placeholder}</td>'+
-          '<td>{ち|ち|placeholder}</td>'+
-          '<td>{ち|ち|placeholder}</td>'+
-          '<td>{ち}</td>'+
-          '<td>{ち}</td>'+
-          '<td>{ち}</td>'+
-          '<td>{ち}</td>'+
-        '</tr>'+
+            '<tr>'+
+              '<td style="font-size:24px;">ち<div class="furigana" style="font-size:12px;">chi</div></td>'+
+              '<td>{ち|ち|placeholder}</td>'+
+              '<td>{ち|ち|placeholder}</td>'+
+              '<td>{ち|ち|placeholder}</td>'+
+              '<td>{ち}</td>'+
+              '<td>{ち}</td>'+
+              '<td>{ち}</td>'+
+              '<td>{ち}</td>'+
+            '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">つ<div class="furigana" style="font-size:12px;">tsu</div></td>'+
-          '<td>{つ|つ|placeholder}</td>'+
-          '<td>{つ|つ|placeholder}</td>'+
-          '<td>{つ|つ|placeholder}</td>'+
-          '<td>{つ}</td>'+
-          '<td>{つ}</td>'+
-          '<td>{つ}</td>'+
-          '<td>{つ}</td>'+
-        '</tr>'+
+            '<tr>'+
+              '<td style="font-size:24px;">つ<div class="furigana" style="font-size:12px;">tsu</div></td>'+
+              '<td>{つ|つ|placeholder}</td>'+
+              '<td>{つ|つ|placeholder}</td>'+
+              '<td>{つ|つ|placeholder}</td>'+
+              '<td>{つ}</td>'+
+              '<td>{つ}</td>'+
+              '<td>{つ}</td>'+
+              '<td>{つ}</td>'+
+            '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">て<div class="furigana" style="font-size:12px;">te</div></td>'+
-          '<td>{て|て|placeholder}</td>'+
-          '<td>{て|て|placeholder}</td>'+
-          '<td>{て|て|placeholder}</td>'+
-          '<td>{て}</td>'+
-          '<td>{て}</td>'+
-          '<td>{て}</td>'+
-          '<td>{て}</td>'+
-        '</tr>'+
+            '<tr>'+
+              '<td style="font-size:24px;">て<div class="furigana" style="font-size:12px;">te</div></td>'+
+              '<td>{て|て|placeholder}</td>'+
+              '<td>{て|て|placeholder}</td>'+
+              '<td>{て|て|placeholder}</td>'+
+              '<td>{て}</td>'+
+              '<td>{て}</td>'+
+              '<td>{て}</td>'+
+              '<td>{て}</td>'+
+            '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">と<div class="furigana" style="font-size:12px;">to</div></td>'+
-          '<td>{と|と|placeholder}</td>'+
-          '<td>{と|と|placeholder}</td>'+
-          '<td>{と|と|placeholder}</td>'+
-          '<td>{と}</td>'+
-          '<td>{と}</td>'+
-          '<td>{と}</td>'+
-          '<td>{と}</td>'+
-        '</tr>'+
-      '</table><br>'+
-        
-      '<p class="section-desc"><span class="sectionNumber3rd">II</span> Choose the right romanization for each of the hiragana words below.</p>'+
-      '<div class="count-problems columns-2 inline-problem valign-top clear">'+
-        '<div>'+
-          '<div class="problem"><span class="inline-furi">あさ<i>morning</i></span>　({f})</div>'+
-          '<div class="problem"><span class="inline-furi">とち<i>land</i></span>　({d})</div>'+
-          '<div class="problem"><span class="inline-furi">かたて<i>one hand</i></span>　({c})</div>'+
-          '<div class="problem"><span class="inline-furi">すし<i>sushi</i></span>　({e})</div>'+
-          '<div class="problem"><span class="inline-furi">きせつ<i>season</i></span>　({a})</div>'+
-          '<div class="problem"><span class="inline-furi">そと<i>outside</i></span>　({b})</div>'+
-        '</div>'+
+            '<tr>'+
+              '<td style="font-size:24px;">と<div class="furigana" style="font-size:12px;">to</div></td>'+
+              '<td>{と|と|placeholder}</td>'+
+              '<td>{と|と|placeholder}</td>'+
+              '<td>{と|と|placeholder}</td>'+
+              '<td>{と}</td>'+
+              '<td>{と}</td>'+
+              '<td>{と}</td>'+
+              '<td>{と}</td>'+
+            '</tr>'+
+          '</table><br>'+
 
-        '<div>'+
-          '<div class="text-block clear" style="display:inline-block;margin:0;width:150px;">'+
-            '<div style="float:left;">'+
-              'a. <em>kisetsu</em><br>'+
-              'b. <em>soto</em><br>'+
-              'c. <em>katate</em>'+
+          '<p class="section-desc"><span class="sectionNumber3rd">II</span> Choose the right romanization for each of the hiragana words below.</p>'+
+          '<div class="count-problems columns-2 inline-problem valign-top clear">'+
+            '<div>'+
+              '<div class="problem"><span class="inline-furi">あさ<i>morning</i></span>　({f})</div>'+
+              '<div class="problem"><span class="inline-furi">とち<i>land</i></span>　({d})</div>'+
+              '<div class="problem"><span class="inline-furi">かたて<i>one hand</i></span>　({c})</div>'+
+              '<div class="problem"><span class="inline-furi">すし<i>sushi</i></span>　({e})</div>'+
+              '<div class="problem"><span class="inline-furi">きせつ<i>season</i></span>　({a})</div>'+
+              '<div class="problem"><span class="inline-furi">そと<i>outside</i></span>　({b})</div>'+
             '</div>'+
-        
-            '<div style="float:right;">'+
-              'd. <em>tochi</em><br>'+
-              'e. <em>sushi</em><br>'+
-              'f. <em>asa</em>'+
+
+            '<div>'+
+              '<div class="text-block clear" style="display:inline-block;margin:0;width:150px;">'+
+                '<div style="float:left;">'+
+                  'a. <em>kisetsu</em><br>'+
+                  'b. <em>soto</em><br>'+
+                  'c. <em>katate</em>'+
+                '</div>'+
+
+                '<div style="float:right;">'+
+                  'd. <em>tochi</em><br>'+
+                  'e. <em>sushi</em><br>'+
+                  'f. <em>asa</em>'+
+                '</div>'+
+              '</div>'+
             '</div>'+
           '</div>'+
-        '</div>'+
-      '</div>'+
 
-      '<p class="section-desc"><span class="sectionNumber3rd">III</span> Write the words below in hiragana.</p>'+
-      '<div class="count-problems inline-problem set-problem-width-large valign-top">'+
-        '<div class="problem"><span class="inline-furi label"><em>tasuke</em><i>help</i></span>{たすけ}</div>'+
-        '<div class="problem"><span class="inline-furi label"><em>chikatetsu</em><i>subway</i></span>{ちかてつ}</div>'+
-        '<div class="problem"><span class="inline-furi label"><em>sekai</em><i>world</i></span>{せかい}</div>'+
-        '<div class="problem"><span class="inline-furi label"><em>kasa</em><i>umbrella</i></span>{かさ}</div>'+
-        '<div class="problem"><span class="inline-furi label"><em>toshi</em><i>age</i></span>{とし}</div>'+
-        '<div class="problem"><span class="inline-furi label"><em>asoko</em><i>over there</i></span>{あそこ}</div>'+
-      '</div>'
+          '<p class="section-desc"><span class="sectionNumber3rd">III</span> Write the words below in hiragana.</p>'+
+          '<div class="count-problems inline-problem set-problem-width-large valign-top">'+
+            '<div class="problem"><span class="inline-furi label"><em>tasuke</em><i>help</i></span>{たすけ}</div>'+
+            '<div class="problem"><span class="inline-furi label"><em>chikatetsu</em><i>subway</i></span>{ちかてつ}</div>'+
+            '<div class="problem"><span class="inline-furi label"><em>sekai</em><i>world</i></span>{せかい}</div>'+
+            '<div class="problem"><span class="inline-furi label"><em>kasa</em><i>umbrella</i></span>{かさ}</div>'+
+            '<div class="problem"><span class="inline-furi label"><em>toshi</em><i>age</i></span>{とし}</div>'+
+            '<div class="problem"><span class="inline-furi label"><em>asoko</em><i>over there</i></span>{あそこ}</div>'+
+          '</div>',
+          
+          
+          // STROKE ORDER
+          [
+            {
+              kana : 'さ',
+              strokes : 3,
+              order : 'hi-sa'
+            },
+            
+            {
+              kana : 'し',
+              strokes : 1,
+              order : 'hi-shi'
+            },
+            
+            {
+              kana : 'す',
+              strokes : 2,
+              order : 'hi-su'
+            },
+            
+            {
+              kana : 'せ',
+              strokes : 3,
+              order : 'hi-se'
+            },
+            
+            {
+              kana : 'そ',
+              strokes : 1,
+              order : 'hi-so'
+            },
+            
+            {
+              kana : 'た',
+              strokes : 4,
+              order : 'hi-ta'
+            },
+            
+            {
+              kana : 'ち',
+              strokes : 2,
+              order : 'hi-chi'
+            },
+            
+            {
+              kana : 'つ',
+              strokes : 1,
+              order : 'hi-tsu'
+            },
+            
+            {
+              kana : 'て',
+              strokes : 1,
+              order : 'hi-te'
+            },
+            
+            {
+              kana : 'と',
+              strokes : 2,
+              order : 'hi-to'
+            }
+          ]
+        ]
         
     });</script>
   </body>

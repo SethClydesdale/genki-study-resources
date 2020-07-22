@@ -32,6 +32,9 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   // tells if the user is in dark mode
   KanjiCanvas.darkMode = document.querySelector('.dark-mode') ? true : false;
   
+  // tells if the user is using firefox, so we can adjust things, since firefox has alignment issues.
+  KanjiCanvas.firefox = /Firefox/.test(navigator.userAgent);
+  
   
   // color coded stroke colors (for 30 strokes -- not that we'll go that high with Genki kanji)
   // based on https://kanjivg.tagaini.net/viewer.html
@@ -105,7 +108,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       KanjiCanvas["ctx_" + id].font = font + "px " + (KanjiCanvas["canvas_" + id].dataset.font ? KanjiCanvas["canvas_" + id].dataset.font : 'Meiryo');
       KanjiCanvas["ctx_" + id].textBaseline = "middle";
       KanjiCanvas["ctx_" + id].fillStyle = KanjiCanvas.darkMode ? "#222" : "#DDD";
-      KanjiCanvas["ctx_" + id].fillText(KanjiCanvas["canvas_" + id].dataset.kanji, (KanjiCanvas["canvas_" + id].width / 2) - (font / 2), KanjiCanvas["canvas_" + id].height / 2);
+      KanjiCanvas["ctx_" + id].fillText(KanjiCanvas["canvas_" + id].dataset.kanji, (KanjiCanvas["canvas_" + id].width / 2) - (font / 2), (KanjiCanvas["canvas_" + id].height / 2) + (KanjiCanvas.firefox ? font / (KanjiCanvas["canvas_" + id].dataset.kana == 'true' ? 12 : 6) : 0));
     }
   };
 
