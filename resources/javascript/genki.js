@@ -198,10 +198,10 @@
           title : 'Please Select an Exercise Type',
           content : 'Please select the type of exercise you would like to do, then click "Begin" to start studying.<br><br>'+
           '<div class="center">'+
-            '<div>'+
+            (/\/dictionary\//.test(window.location) ? '' : '<div>'+
               '<b>Current Exercise</b><br>'+
               document.title.replace(/ \| Genki Study Resources.*$/, '')+
-            '</div><br>'+
+            '</div><br>')+
             '<div>'+
               '<b>Exercise Type</b><br>'+
               '<select id="exercise-type">' + opts + '</select>'+
@@ -412,6 +412,9 @@
           modal.callback();
           GenkiModal.close();
         }
+        
+        // create button to change exercise type (eliminates the need to press refresh or F5)
+        Genki.create.exerciseTypeButton();
         
         return false;
       }
@@ -754,6 +757,7 @@
         // create individual blocks for each question and hide them until later
         for (; i < j; i++) {
           if (q[i].kana) q[i].kanji = q[i].kana; // applies kana character to kanji property
+          if (o.kanaType) o.kanaType = o.kanaType.charAt(0).toUpperCase() + o.kanaType.slice(1).toLowerCase();
           
           img = getPaths() + 'resources/images/stroke-order/' + q[i].order + '.png';
           
@@ -778,7 +782,7 @@
               (Genki.debug ? '<button class="button" onclick="console.log(KanjiCanvas.recognize(this.dataset.canvas));" data-canvas="canvas-' + i + '" title="Open console (F12) to see recognition candidates"><i class="fa">&#xf188;</i>Test Recognition</button>' : '')+
             '</div>'+
             '<div class="quiz-multi-row">'+
-              '<div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, false, \'stroke\');" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this, false, \'stroke\');" data-canvas="canvas-' + i + '">Next '+ (q[i].kana ? 'Kana' : 'Kanji') + '</div>'+
+              '<div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, false, \'stroke\');" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this, false, \'stroke\');" data-canvas="canvas-' + i + '">Next '+ (q[i].kana ? o.kanaType : 'Kanji') + '</div>'+
             '</div>'+
           // end question block
           '</div>';
@@ -807,6 +811,7 @@
       // # 7. DRAWING PRACTICE #
       else if (o.type == 'drawing') {
         var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
+            guideHidden = storageOK && localStorage.tracingGuideVisible == 'false',
             columns = o.columns,
             width = 'style="width:' + (100 / (columns + 1)) + '%;"',
             q = o.quizlet, n = 0, i = 0, j = o.quizlet.length;
@@ -826,7 +831,7 @@
           // insert the drawing zones
           while (columns --> 0) {
             quiz += '<div class="drawing-zone" ' + width + '>'+
-              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-guide="' + (o.columns - columns > 3 ? false : true) + '"' + (q[i].kana && !q[i].font ? ' data-font="NotoSansJP, SawarabiGothic, MS Gothic, Yu Gothic, Meiryo"' : q[i].font ? ' data-font="' + q[i].font + '"' : '') + ' data-strokes="' + q[i].strokes + '" data-size="100" id="canvas-' + n + '" width="100" height="100"' + (q[i].kana ? 'data-kana="true"' : '') + '></canvas>'+
+              '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-guide="' + (o.columns - columns > 3 ? false : guideHidden ? false : true) + '"' + (q[i].kana && !q[i].font ? ' data-font="NotoSansJP, SawarabiGothic, MS Gothic, Yu Gothic, Meiryo"' : q[i].font ? ' data-font="' + q[i].font + '"' : '') + ' data-strokes="' + q[i].strokes + '" data-size="100" id="canvas-' + n + '" width="100" height="100"' + (q[i].kana ? 'data-kana="true"' : '') + '></canvas>'+
               '<div class="kanji-canvas-actions">'+
                 '<button class="button icon-only" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Erase"><i class="fa">&#xf12d;</i></button>'+
                 '<button class="button icon-only" onclick="KanjiCanvas.deleteLast(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Undo"><i class="fa">&#xf0e2;</i></button>'+
@@ -842,7 +847,10 @@
         }
 
         // add the quiz to the document
-        zone.innerHTML = quiz + '</div>' + Genki.lang.check_answers.replace('()', '(false, \'drawing\')').replace('</div>', '<button id="toggle-stroke-numbers" class="button" onclick="Genki.toggle.strokeNumbers(this);" style="display:none;"><i class="fa">&#xf162;</i>Show Stroke Numbers</button>' + '</div>');
+        zone.innerHTML = quiz + '</div>' + Genki.lang.check_answers.replace('()', '(false, \'drawing\')').replace('</div>', 
+          '<button id="toggle-tracing-guide" class="button" onclick="Genki.toggle.tracingGuide(this, true);"><i class="fa">&#xf031;</i>' + (guideHidden ? 'Show' : 'Hide') + ' Tracing Guide</button>'+
+          '<button id="toggle-stroke-numbers" class="button" onclick="Genki.toggle.strokeNumbers(this);" style="display:none;"><i class="fa">&#xf162;</i>Show Stroke Numbers</button>' + '</div>'
+        );
         
         // initialize all canvases
         for (var c = document.querySelectorAll('.kanji-canvas'), i = 0, j = c.length; i < j; i++) {
@@ -1187,8 +1195,14 @@
       '</div>';
       
       // changes display over certain buttons
-      if (/drawing|stroke/.test(type)) document.getElementById('toggle-stroke-numbers').style.display = '';
-      if (type == 'stroke') document.getElementById('toggle-tracing-guide').style.display = 'none';
+      if (/drawing|stroke/.test(type))  {
+        document.getElementById('toggle-stroke-numbers').style.display = '';
+        document.getElementById('toggle-tracing-guide').style.display = 'none';
+      }
+      
+      // hide change exercise type button
+      var changeType = document.getElementById('change-exercise-type-container');
+      if (changeType) changeType.style.display = 'none';
 
       // this class will indicate the quiz is over so post-test styles can be applied
       document.getElementById('exercise').className += ' quiz-over';
@@ -1311,6 +1325,10 @@
 
           // change the quiz info
           document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';
+          
+          // hide change exercise type button
+          var changeType = document.getElementById('change-exercise-type-container');
+          if (changeType) changeType.style.display = 'none';
         }
       });
     },
@@ -1350,6 +1368,7 @@
         !Genki.exerciseComplete && GenkiModal.open({
           title : 'Check Answers?',
           content : mapEnded ? 'The last input field has been filled in. Are you ready to check your answers?' : 'Checking your answers will end the quiz. Do you want to continue?',
+          buttonText : 'Yes, check my answers!',
           
           callback : function () {
             Genki.exerciseComplete = true;
@@ -1581,7 +1600,7 @@
       
       
       // toggles tracing guides in the stroke order quizzes
-      tracingGuide : function (button) {
+      tracingGuide : function (button, drawingPractice) {
         var zone = document.getElementById('quiz-zone'),
             state = storageOK && localStorage.tracingGuideVisible ? localStorage.tracingGuideVisible : 'true';
         
@@ -1602,9 +1621,31 @@
         }
         
         // loop through and update the data-guide value and redraw each canvas
-        for (var a = document.querySelectorAll('.kanji-canvas'), i = 0, j = a.length; i < j; i++) {
-          a[i].dataset.guide = state;
-          if (KanjiCanvas['canvas_' + a[i].id]) KanjiCanvas.redraw(a[i].id, true);
+        var a = document.querySelectorAll('.kanji-canvas'), i = 0, j = a.length
+        
+        // Stroke Order loop
+        if (!drawingPractice) {
+          for (; i < j; i++) {
+            a[i].dataset.guide = state;
+            if (KanjiCanvas['canvas_' + a[i].id]) KanjiCanvas.redraw(a[i].id, true);
+          }
+        }
+        
+        // Drawing Practice loop
+        else {
+          for (var n = 0, kanji = ''; i < j; i++) {
+            // resets counter if new row
+            if (a[i].dataset.kanji != kanji) {
+              kanji = a[i].dataset.kanji;
+              n = 0;
+            }
+            
+            // changes the guide state of the first 3 canvases
+            if (n++ < 3) {
+              a[i].dataset.guide = state;
+              if (KanjiCanvas['canvas_' + a[i].id]) KanjiCanvas.redraw(a[i].id, true);
+            }
+          }
         }
         
         // save settings if supported
@@ -1730,6 +1771,55 @@
 
           // jump to the active exercise
           document.getElementById('lessons-list').scrollTop = active.offsetTop - (active.getBoundingClientRect().height + (window.matchMedia && matchMedia('(pointer:coarse)').matches ? 0 : 6));
+        }
+      },
+      
+      
+      // creates button for refreshing the page and triggering the exercise type selection
+      exerciseTypeButton : function () {
+        // container and button creation
+        var timer = document.getElementById('quiz-timer'),
+            div = document.createElement('DIV'),
+            button = document.createElement('BUTTON');
+        
+        // container and button attributes
+        div.id = 'change-exercise-type-container';
+        div.className = 'more-exercises center';
+        
+        button.id = 'change-exercise-type';
+        button.className = 'button';
+        button.innerHTML = '<i class="fa">&#xf021;</i> Change Exercise Type';
+        
+        // action to perform on click of the button
+        button.onclick = function () {
+          // opens a prompt warning the user that the exercise will end
+          GenkiModal.open({
+            title : 'Change Exercise Type?',
+            content : 'To change the exercise type, you must quit the current exercise. Do you want to quit?',
+            buttonText : 'Quit',
+            keepOpen : /\/dictionary\//.test(window.location) ? true : false,
+            
+            // clicking "OK" will reload the exercise, leading to the exercise type selection screen
+            callback : function () {
+              if (/\?start|\?begin/.test(window.location.search)) {
+                window.location.search = '';
+                
+              } else {
+                /\/dictionary\//.test(window.location) ? Genki.appendix.jisho.reset() : window.location.reload();
+              }
+            }
+          });
+        }
+        
+        // appends the button to the container
+        div.appendChild(button);
+        
+        // adds the container and button to the document
+        if (timer.nextSibling) {
+          timer.parentNode.insertBefore(div, timer.nextSibling);
+          
+        } else {
+          timer.parentNode.appendChild(div);
         }
       }
     },

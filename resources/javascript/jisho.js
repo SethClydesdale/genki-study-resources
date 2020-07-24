@@ -145,7 +145,7 @@ Genki.jisho = {
     { ja : '移住する|いじゅうする', en : 'to immigrate', v : 'irr', l : '読L10-漢字表' },
     { ja : '～以上|～いじょう', en : '...or more', l : '読L18-II' },
     { ja : '意地悪|いじわる（な）', en : 'mean-spirited', l : '会L9' },
-    { ja : 'いす', en : 'chair', l : '会L2(e), 会L4' },
+    { ja : '椅子|いす', en : 'chair; stool', l : '会L2(e), 会L4' },
     { ja : '以前|いぜん', en : 'before; formerly', l : '読L16-漢字表' },
     { ja : '忙しい|いそがしい', en : 'busy (people/days)', l : '会L5' },
     { ja : '急ぐ|いそぐ', en : 'to hurry', v : 'u', l : '会L6' },

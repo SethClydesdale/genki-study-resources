@@ -452,142 +452,30 @@
         } else {
           GenkiModal.open({
             title : 'Begin Practice?',
-            content : 'Are you ready to practice your selected words? Please select the type of exercise you would like to practice with below.<br><br>'+
-            '<div class="center">'+
-              '<select id="dict-exercise-type">'+
-                '<option value="multi"' + ( storageOK && localStorage.genkiJishoExercise == 'multi' ? ' selected' : '') + '>Multiple Choice</option>'+
-                '<option value="drag"' + ( storageOK && localStorage.genkiJishoExercise == 'drag' ? ' selected' : '') + '>Drag and Drop</option>'+
-                '<option value="writing"' + ( storageOK && localStorage.genkiJishoExercise == 'writing' ? ' selected' : '') + '>Spelling Practice</option>'+
-                '<option value="fill"' + ( storageOK && localStorage.genkiJishoExercise == 'fill' ? ' selected' : '') + '>Write the Definition</option>'+
-              '</select>'+
-            '</div>',
-
+            content : 'Are you ready to practice your selected words?',
+            buttonText : 'Yes',
+            keepOpen : true,
+            
             callback : function () {
-              var type = document.getElementById('dict-exercise-type').value,
-                  sel = Genki.appendix.jisho.selected,
-                  i = 0,
-                  n,
-                  k,
-                  answers,
-                  answer,
-                  currentAnswer,
-                  def,
-                  furi,
-                  quizlet;
-              
-              // store selection
-              if (storageOK) {
-                localStorage.genkiJishoExercise = type;
+              var sel = Genki.appendix.jisho.selected,
+                  quizlet = {}, i = 0, def, furi;
+
+              for (; i < j; i++) {
+                def = document.querySelector('#japanese-english [data-def="' + sel[i] + '"]');
+                furi = def.querySelector('.def-furi i');
+
+                quizlet[def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>/, '') + (furi ? '|' + furi.innerHTML : '')] = def.querySelector('.def-en').innerHTML;
               }
               
-              // show exercise
+              Genki.generateQuiz({
+                format : 'vocab',
+                type : ['drag', 'multi', 'writing', 'fill'],
+                info : [Genki.lang.std_drag, Genki.lang.vocab_multi, Genki.lang.vocab_writing, Genki.lang.vocab_fill],
+
+                quizlet : quizlet
+              });
+              
               Genki.appendix.showExercise();
-
-              // drag and drop
-              if (type == 'drag') {
-                for (quizlet = {}; i < j; i++) {
-                  def = document.querySelector('#japanese-english [data-def="' + sel[i] + '"]');
-                  furi = def.querySelector('.def-furi i');
-
-                  quizlet[def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>/, '') + (furi ? '|' + furi.innerHTML : '')] = def.querySelector('.def-en').innerHTML;
-                }
-
-                Genki.generateQuiz({
-                  type : type,
-                  info : Genki.lang.std_drag,
-
-                  quizlet : quizlet
-                });
-              }
-
-              // multiple choice
-              else if (type == 'multi') {
-                for (quizlet = []; i < j; i++) {
-                  def = document.querySelector('#japanese-english [data-def="' + sel[i] + '"]');
-                  furi = def.querySelector('.def-furi i');
-                  currentAnswer = def.querySelector('.def-en').innerHTML;
-                  
-                  quizlet[i] = {
-                    question : def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>/, '') + (furi ? '<div class="furigana">' + furi.innerHTML + '</div>' : ''),
-                    answers : ['A' + currentAnswer]
-                  }
-                  
-                  // randomly assign answers
-                  answers = sel.slice();
-                  answers.splice(i, 1);
-                  k = 3;
-                  
-                  while (k --> 0) {
-                    if (answers.length) {
-                      n = Math.floor(Math.random() * answers.length);
-                      answer = document.querySelector('#japanese-english [data-def="' + answers[n] + '"] .def-en').innerHTML;
-                      
-                      // prevent identical answers from showing
-                      if (answer == currentAnswer) {
-                        k++; // increment to try another
-                      }
-                      // otherwise add a new answer if it's not identical
-                      else {
-                        quizlet[i].answers.push(answer.charAt(0) == 'A' ? '!' + answer : answer);
-                      }
-                      
-                      answers.splice(n, 1);
-                    } else {
-                      break; // break out if there's no more answers to prevent errors
-                    }
-                  }
-                }
-                
-                Genki.generateQuiz({
-                  type : type,
-                  info : 'Choose the correct definition for each word.',
-
-                  quizlet : quizlet
-                });
-              }
-
-              // spelling practice
-              else if (type == 'writing') {
-                for (quizlet = {}; i < j; i++) {
-                  def = document.querySelector('#japanese-english [data-def="' + sel[i] + '"]');
-                  furi = def.querySelector('.def-furi i');
-
-                  quizlet[def.querySelector('.def-ja').innerHTML.replace(/\((.*?)\/.*?\)/, '$1').replace(/<i>.*?<\/i>|\(.*?\)|（.*?）|～|~|／.*/g, '')] = (furi ? furi.innerHTML : '');
-                }
-                
-                Genki.generateQuiz({
-                  type : type,
-                  info : 'Practice spelling the following words.',
-
-                  columns : 6,
-                  quizlet : quizlet
-                });
-              }
-
-              // write the definition
-              else if (type == 'fill') {
-                for (quizlet = '<div class="count-problems columns-2 clear"><div>', n = Math.ceil(j/2); i < j; i++) {
-                  def = document.querySelector('#japanese-english [data-def="' + sel[i] + '"]');
-                  furi = def.querySelector('.def-furi i');
-                  
-                  quizlet += 
-                  (i == n ? '</div><div>' : '')+ // changes columns
-                  '<div class="problem">'+
-                    def.querySelector('.def-en').innerHTML + '<br>'+
-                    ('{' + def.querySelector('.def-ja').innerHTML.replace(/<i>.*?<\/i>/, '') + (furi ? '|' + furi.innerHTML + '|answer' : '') + '}').replace(/\((.*?)\)/g, function (Match, $1) {
-                      return '%(' + $1 + (/\//.test($1) ? '' : '/') + ')';
-                    }).replace(/（(.*?)）/g, '%($1/)').replace(/(～|~)/g, '%($1/)').replace(/／/g, '|')+
-                  '</div>'; 
-                }
-                
-                Genki.generateQuiz({
-                  type : type,
-                  info : 'Write the Japanese definition for the following words.',
-
-                  quizlet : quizlet + '</div></div>'
-                });
-              }
-
             }
           });
         }
@@ -598,6 +486,7 @@
       reset : function () {
         // reset stats
         Genki.exerciseComplete = false;
+        Genki.quizOver = false;
         Genki.stats = {
           problems : 0,
             solved : 0,
