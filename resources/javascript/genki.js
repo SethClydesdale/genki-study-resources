@@ -36,7 +36,7 @@
     local : window.location.protocol == 'file:' ? 'index.html' : '',
     
     // tells us if debug mode is active so we can append ?debug to exercise URLs
-    debug : /\?debug/.test(window.location.search) ? '?debug' : '',
+    debug : /debug/.test(window.location.search) ? '?debug' : '',
 
     // frequently used/generic strings
     lang : {
@@ -125,7 +125,7 @@
       toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);"><i class="fa">&#xf2a8;</i>' + ((storageOK && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>',
       // check answers button for written exercises
       check_answers : '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();"><i class="fa">&#xf00c;</i>Check Answers</button></div>',
-      back_to_dict : '<button class="button" onclick="Genki.appendix.jisho.reset();"><i class="fa">&#xf021;</i>Back to Dictionary</button>'
+      back_to_dict : '<button class="button" onclick="Genki.reset();"><i class="fa">&#xf021;</i>Back to Dictionary</button>'
     },
 
     // info about the currently active exercise
@@ -164,6 +164,11 @@
 
     // To generate a quiz simply pass an object with the necessary data (see vocab-1/index.html and other quiz files for examples)
     generateQuiz : function (o) {
+      // cache exercise data for resetting exercises
+      if (!Genki.exerciseData && window.JSON) {
+        Genki.exerciseData = JSON.stringify(o);
+      }
+      
       /********************************
       ========# EXERCISE TYPES #=======
       *********************************
@@ -198,7 +203,7 @@
           title : 'Please Select an Exercise Type',
           content : 'Please select the type of exercise you would like to do, then click "Begin" to start studying.<br><br>'+
           '<div class="center">'+
-            (/\/dictionary\//.test(window.location) ? '' : '<div>'+
+            (/\/dictionary\/|\/custom-vocab\//.test(window.location) ? '' : '<div>'+
               '<b>Current Exercise</b><br>'+
               document.title.replace(/ \| Genki Study Resources.*$/, '')+
             '</div><br>')+
@@ -927,95 +932,99 @@
 
         Genki.drake = drake;
         
-        // event listener for marking and dropping answers with either a click or the 'Enter' key being pressed
-        ['click', 'keypress'].forEach(function (eventName) {
-          document.addEventListener(eventName, function (e) {
-            // if the event was a keypress and the key was not enter, bail out (same if the quiz is over)
-            if (e.type == 'keypress' && e.key != 'Enter' || Genki.quizOver) {
-              return;
-            }
-            
-            // check parentNode if no match (up to 2 times)
-            // necessary as some quiz-items contain child nodes that go as deep as 2 nodes
-            var target = e.target, n = 3;
-            while (n --> 0) {
-              if (n < 2) target = target.parentNode;
-              
-              // break out if match found
-              if (/quiz-item|quiz-answer-zone/.test(target.className)) break;
-            }
-            
-            // mark the currently active quiz item
-            if (/quiz-item/.test(target.className) && target.parentNode.id == 'answer-list') {
-              // unmark the last active quiz item
-              if (Genki.markedItem) {
-                Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
+        // event listeners for marking and dropping answers with either a click or the 'Enter' key being pressed
+        if (!Genki.globalEventListenersSet) { 
+          Genki.globalEventListenersSet = true; // prevents duplication of event listeners on Genki.reset();
+          
+          ['click', 'keypress'].forEach(function (eventName) {
+            document.addEventListener(eventName, function (e) {
+              // if the event was a keypress and the key was not enter, bail out (same if the quiz is over)
+              if (e.type == 'keypress' && e.key != 'Enter' || Genki.quizOver) {
+                return;
               }
 
-              // mark the new active one
-              Genki.markedItem = target;
-              Genki.markedItem.className += ' markedItem';
-            }
+              // check parentNode if no match (up to 2 times)
+              // necessary as some quiz-items contain child nodes that go as deep as 2 nodes
+              var target = e.target, n = 3;
+              while (n --> 0) {
+                if (n < 2) target = target.parentNode;
 
-            // attempt dropping the marked quiz item to an answer zone
-            else if (Genki.markedItem && /quiz-answer-zone/.test(target.className)) {
-              // wrong answer
-              if (Genki.markedItem.dataset.answer != target.dataset.text) {
-                // remove the old notification
-                if (Genki.wrongTimeout) {
-                  document.getElementById('wrongAnswer').id = '';
-                  clearTimeout(Genki.wrongTimeout);
-                  delete Genki.wrongTimeout;
+                // break out if match found
+                if (/quiz-item|quiz-answer-zone/.test(target.className)) break;
+              }
+
+              // mark the currently active quiz item
+              if (/quiz-item/.test(target.className) && target.parentNode.id == 'answer-list') {
+                // unmark the last active quiz item
+                if (Genki.markedItem) {
+                  Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
                 }
 
-                // if the answer is wrong we'll display a small notification using CSS (see #wrongAnswer in stylesheet.css)
-                target.id = 'wrongAnswer';
+                // mark the new active one
+                Genki.markedItem = target;
+                Genki.markedItem.className += ' markedItem';
+              }
 
-                // remove the notification after 1 second
-                Genki.wrongTimeout = setTimeout(function () {
-                  document.getElementById('wrongAnswer').id = '';
-                  delete Genki.wrongTimeout;
-                }, 1000);
+              // attempt dropping the marked quiz item to an answer zone
+              else if (Genki.markedItem && /quiz-answer-zone/.test(target.className)) {
+                // wrong answer
+                if (Genki.markedItem.dataset.answer != target.dataset.text) {
+                  // remove the old notification
+                  if (Genki.wrongTimeout) {
+                    document.getElementById('wrongAnswer').id = '';
+                    clearTimeout(Genki.wrongTimeout);
+                    delete Genki.wrongTimeout;
+                  }
 
-                // global mistakes are incremented along with mistakes specific to problems
-                target.dataset.mistakes = ++target.dataset.mistakes;
-                ++Genki.stats.mistakes;
+                  // if the answer is wrong we'll display a small notification using CSS (see #wrongAnswer in stylesheet.css)
+                  target.id = 'wrongAnswer';
 
-              } 
+                  // remove the notification after 1 second
+                  Genki.wrongTimeout = setTimeout(function () {
+                    document.getElementById('wrongAnswer').id = '';
+                    delete Genki.wrongTimeout;
+                  }, 1000);
 
-              // correct answer
-              else {
-                target.className += ' answer-correct';
-                target.appendChild(Genki.markedItem);
+                  // global mistakes are incremented along with mistakes specific to problems
+                  target.dataset.mistakes = ++target.dataset.mistakes;
+                  ++Genki.stats.mistakes;
 
-                // prevent the correct answer from being tabbed to
-                // this also includes the element we just added
-                target.tabIndex = -1;
-                target.firstChild.tabIndex = -1;
+                } 
 
+                // correct answer
+                else {
+                  target.className += ' answer-correct';
+                  target.appendChild(Genki.markedItem);
+
+                  // prevent the correct answer from being tabbed to
+                  // this also includes the element we just added
+                  target.tabIndex = -1;
+                  target.firstChild.tabIndex = -1;
+
+                  Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
+                  Genki.markedItem = null;
+
+                  // when all problems have been solved..
+                  // stop the timer, show the score, and congratulate the student
+                  if (++Genki.stats.solved == Genki.stats.problems) {
+                    Genki.endQuiz();
+                  }
+                }
+              }
+
+              // no conditions met, unmark the currently marked item
+              else if (Genki.markedItem) {
                 Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
                 Genki.markedItem = null;
-
-                // when all problems have been solved..
-                // stop the timer, show the score, and congratulate the student
-                if (++Genki.stats.solved == Genki.stats.problems) {
-                  Genki.endQuiz();
-                }
               }
-            }
 
-            // no conditions met, unmark the currently marked item
-            else if (Genki.markedItem) {
-              Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
-              Genki.markedItem = null;
-            }
-            
-            // blur drop zone if clicking (clears confusion that one can mark a drop zone, then click a quiz item to drop it there)
-            if (e.type == 'click' && /quiz-answer-zone/.test(e.target.className)) {
-              e.target.blur();
-            }
+              // blur drop zone if clicking (clears confusion that one can mark a drop zone, then click a quiz item to drop it there)
+              if (e.type == 'click' && /quiz-answer-zone/.test(e.target.className)) {
+                e.target.blur();
+              }
+            });
           });
-        });
+        }
       }
 
 
@@ -1065,8 +1074,6 @@
             console.log(this.id, this.currentTime);
           }
         }
-        
-        Genki.exerciseData = o;
       }
     },
 
@@ -1186,7 +1193,7 @@
           '<div class="center">'+
             (
               /\/dictionary\//.test(window.location) ? Genki.lang.back_to_dict :
-              '<a href="./' + Genki.local + Genki.debug + '" class="button"><i class="fa">&#xf021;</i>Try Again</a>'
+              '<button class="button" onclick="Genki.reset();"><i class="fa">&#xf021;</i>Try Again</button>'
             )+
             '<button class="button" onclick="Genki.breakTime();"><i class="fa">&#xf0f4;</i>Take a Break</button>'+
             '<a href="' + document.getElementById('home-link').href + '" class="button"><i class="fa">&#xf015;</i>Back to Index</a>'+
@@ -1207,6 +1214,75 @@
       // this class will indicate the quiz is over so post-test styles can be applied
       document.getElementById('exercise').className += ' quiz-over';
       Genki.scrollTo('#complete-banner', true); // jump to the quiz results
+    },
+    
+    
+    // resets exercise state, allowing students to redo quizzes without reloading the page
+    reset : function () {
+      if (window.JSON) {
+        // reset data
+        Genki.exerciseComplete = false;
+        Genki.quizOver = false;
+        Genki.isTouching = false;
+        Genki.textSelectMode = false;
+        Genki.strokeNumberDisplay = false;
+        Genki.markedItem = null;
+        Genki.stats = {
+          problems : 0,
+            solved : 0,
+          mistakes : 0,
+             score : 0,
+           exclude : 0
+        };
+        
+        // stop timer
+        Genki.timer.isRunning() && Genki.timer.stop();
+        
+        // reset quick dictionary state
+        if (Genki.quickJisho.cache) {
+          !Genki.quickJisho.hidden && Genki.quickJisho.toggle();
+          Genki.quickJisho.search('');
+          Genki.quickJisho.cache.search.value = '';
+        }
+
+        // hide exercise and reset contents
+        var exercise = document.getElementById('exercise');
+        exercise.className = 'content-block';
+        exercise.innerHTML = document.getElementById('exercise-title').outerHTML + '<div id="quiz-result"></div><div id="quiz-zone" class="clear"></div><div id="quiz-timer" class="center"></div>' + document.querySelector('.more-exercises').outerHTML;
+        
+        // things to do depending on the page
+        // appendix
+        if (Genki.appendix) {
+          // hide/show main containers
+          exercise.style.display = 'none'; // hides exercise
+          document.getElementById('appendix-tool').style.display = ''; // shows tools
+          
+          // scroll to the main titles
+          Genki.scrollTo(/\/dictionary\//.test(window.location) ? '#pratice-words' : '.title');
+          
+          // launch exercise prompt based on the current page
+          if (/\/dictionary\//.test(window.location)) Genki.appendix.jisho.launchExercise();
+          else if (/\/map-of-japan\//.test(window.location)) Genki.appendix.studyMap();
+          else if (/\/numbers-chart\//.test(window.location)) Genki.appendix.studyChart('numbers');
+          else if (/\/conjugation-chart\//.test(window.location)) Genki.appendix.studyChart('conjugation');
+        } 
+        
+        // study tools
+        else if (Genki.tools) {
+          // similar to appendix; see above comments
+          exercise.style.display = 'none';
+          document.getElementById('study-tool-editor').style.display = '';
+          Genki.scrollTo('.title');
+        }
+        
+        // standard quizzes
+        else {
+          Genki.generateQuiz(JSON.parse(Genki.exerciseData));
+        }
+        
+      } else {
+        window.location.reload(); // reloads the page if unable to use JSON to reset quizzes
+      }
     },
     
     
@@ -1240,11 +1316,12 @@
             title : 'Taking a Break',
             content : '<div id="break-timer" class="center">00:' + (time < 10 ? '0' : '') + time + ':00</div>',
             buttonText : 'End Break Time',
-            keepOpen : true,
+            keepOpen : Genki.appendix || (!Genki.tools && /"format"/.test(Genki.exerciseData)) ? true : false,
             
             // reloads the current exercise
             callback : function () {
-              location.reload();
+              Genki.reset();
+              document.body.className = document.body.className.replace(' taking-a-break', '');
             }
           });
           
@@ -1320,7 +1397,7 @@
           // show restart button
           document.getElementById('review-exercise').innerHTML = (
             /\/dictionary\//.test(window.location) ? Genki.lang.back_to_dict :
-            '<a href="./' + Genki.local + Genki.debug + '" class="button"><i class="fa">&#xf021;</i>Restart</a>'
+            '<button class="button" onclick="Genki.reset();"><i class="fa">&#xf021;</i>Restart</button>'
           ) + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
 
           // change the quiz info
@@ -1784,7 +1861,7 @@
         
         // container and button attributes
         div.id = 'change-exercise-type-container';
-        div.className = 'more-exercises center';
+        div.className = 'center';
         
         button.id = 'change-exercise-type';
         button.className = 'button';
@@ -1797,16 +1874,25 @@
             title : 'Change Exercise Type?',
             content : 'To change the exercise type, you must quit the current exercise. Do you want to quit?',
             buttonText : 'Quit',
-            keepOpen : /\/dictionary\//.test(window.location) ? true : false,
+            keepOpen : /\/dictionary\//.test(window.location) || (!Genki.tools && /"format"/.test(Genki.exerciseData)) ? true : false,
             
             // clicking "OK" will reload the exercise, leading to the exercise type selection screen
             callback : function () {
-              if (/\?start|\?begin/.test(window.location.search)) {
-                window.location.search = '';
-                
-              } else {
-                /\/dictionary\//.test(window.location) ? Genki.appendix.jisho.reset() : window.location.reload();
-              }
+              // remove start/begin queries, so the user can select a new exercise type
+              if (/(?:begin|start)=\d/.test(window.location.search)) {
+                if (window.history && window.history.pushState) {
+                  window.history.pushState({}, document.title, window.location.href.replace(window.location.search, '') + Genki.debug);
+                } 
+              
+                // remove the old fashioned way if the history API cannot be used
+                else {
+                  window.location.search = '';
+                  return;
+                }
+              } 
+              
+              // reset exercise state
+              Genki.reset();
             }
           });
         }
@@ -1848,6 +1934,8 @@
       
       // creates the quick dictionary button and popup
       create : function () {
+        if (Genki.quickJisho.cache) return; // prevent duplication of the quickJisho
+        
         var button = document.createElement('DIV'),
             box = document.createElement('DIV'),
             selector = document.createElement('BUTTON'),

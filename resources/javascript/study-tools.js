@@ -222,6 +222,7 @@
           title : 'Ready to Study?',
           content : 'Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save code" to save it to a text document. (click "do not warn me" to disable this message)'+
           (navigator.cookieEnabled && !offlineEdge ? '' : '<br><br><div style="color:#F00;font-weight:bold;">WARNING: Cookies are blocked by your browser, so your custom exercise will NOT be saved. Please click "close" and then click "Save code" to backup your custom exercise.</div>'),
+          keepOpen : Genki.tools.type == 'vocab' ? true : false,
 
           callback : Genki.tools.begin
         });
@@ -243,8 +244,9 @@
       // generate a vocab exercise
       if (type == 'vocab') {
         Genki.generateQuiz({
-          type : 'drag',
-          info : 'Match the definition/kana to the word/kanji.',
+          format : 'vocab',
+          type : ['drag', 'multi', 'writing', 'fill'],
+          info : [Genki.lang.std_drag, Genki.lang.vocab_multi, Genki.lang.vocab_writing, Genki.lang.vocab_fill],
 
           quizlet : JSON.parse(quizlet)
         });
