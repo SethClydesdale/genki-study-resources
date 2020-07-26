@@ -772,7 +772,7 @@
             '<div class="quiz-multi-question">'+
               '<div class="kanji-container big-kanji' + ( q[i].kana ? ' kana-font' : '' ) + '"' + (q[i].font ? ' style="font-family:' + q[i].font + '"' : '') + '>' + q[i].kanji + '</div>'+
               '<div class="kanji-stroke-order">'+
-                '<a class="button-link" href="' + (q[i].kana ? getPaths() + 'resources/images/stroke-order/sasagami-' + o.kanaType + '.jpg' : 'https://jisho.org/search/' + q[i].kanji + '%20%23kanji') + '" target="_blank" title="View stroke order ' + (q[i].kana ? 'chart' : 'on jisho.org') + '"><button class="button"><i class="fa">&#xf002;</i></button></a>'+
+                '<a class="button-link" href="' + (q[i].kana ? getPaths() + 'resources/images/stroke-order/sasagami-' + o.kanaType.toLowerCase() + '.jpg' : 'https://jisho.org/search/' + q[i].kanji + '%20%23kanji') + '" target="_blank" title="View stroke order ' + (q[i].kana ? 'chart' : 'on jisho.org') + '"><button class="button"><i class="fa">&#xf002;</i></button></a>'+
                 '<a href="' + img + '" target="_blank" title="Click to view image"><img src="' + img + '" alt="stroke order"/></a>'+
               '</div>'+
             '</div>'+
