@@ -171,6 +171,7 @@ window.GenkiExercises = [
   'lesson-4/grammar-3|Practice: Describing Where Things Are 1|p.117; II-A',
   'lesson-4/grammar-4|Practice: Describing Where Things Are 2|p.117; II-B',
   'lesson-4/grammar-5|Practice: Past Tense of です|p.118; III-A',
+  'lesson-4/grammar-6|Practice: Verb Conjugation (Past Tense)|p.120; IV-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
