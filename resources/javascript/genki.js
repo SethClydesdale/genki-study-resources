@@ -782,9 +782,9 @@
               '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-strokes="' + q[i].strokes + '" data-guide="' + (guideHidden ? false : true) + '"' + (q[i].kana && !q[i].font ? ' data-font="NotoSansJP, SawarabiGothic, MS Gothic, Yu Gothic, Meiryo"' : q[i].font ? ' data-font="' + q[i].font + '"' : '') + ' id="canvas-' + i + '" width="200" height="200"' + (q[i].kana ? 'data-kana="true"' : '') + '></canvas>'+
             '</div>'+
             '<div class="kanji-canvas-actions quiz-multi-row center">'+
-              '<button class="button" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + i + '"><i class="fa">&#xf12d;</i>Erase</button>'+
-              '<button class="button" onclick="KanjiCanvas.deleteLast(this.dataset.canvas)" data-canvas="canvas-' + i + '"><i class="fa">&#xf0e2;</i>Undo</button>'+
-              (Genki.debug ? '<button class="button" onclick="console.log(KanjiCanvas.recognize(this.dataset.canvas));" data-canvas="canvas-' + i + '" title="Open console (F12) to see recognition candidates"><i class="fa">&#xf188;</i>Test Recognition</button>' : '')+
+              '<button class="button" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + i + '" title="(CTRL+X)"><i class="fa">&#xf12d;</i>Erase</button>'+
+              '<button class="button" onclick="KanjiCanvas.deleteLast(this.dataset.canvas)" data-canvas="canvas-' + i + '" title="(CTRL+Z)"><i class="fa">&#xf0e2;</i>Undo</button>'+
+              (Genki.debug ? '<button class="button" onclick="console.log(KanjiCanvas.recognize(this.dataset.canvas));" data-canvas="canvas-' + i + '" title="Open console (F12) to see recognition candidates (CTRL+F)"><i class="fa">&#xf188;</i>Test Recognition</button>' : '')+
             '</div>'+
             '<div class="quiz-multi-row">'+
               '<div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.progressQuiz(this, false, \'stroke\');" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this, false, \'stroke\');" data-canvas="canvas-' + i + '">Next '+ (q[i].kana ? o.kanaType : 'Kanji') + '</div>'+
@@ -838,9 +838,9 @@
             quiz += '<div class="drawing-zone" ' + width + '>'+
               '<canvas class="kanji-canvas" data-kanji="' + q[i].kanji + '" data-guide="' + (o.columns - columns > 3 ? false : guideHidden ? false : true) + '"' + (q[i].kana && !q[i].font ? ' data-font="NotoSansJP, SawarabiGothic, MS Gothic, Yu Gothic, Meiryo"' : q[i].font ? ' data-font="' + q[i].font + '"' : '') + ' data-strokes="' + q[i].strokes + '" data-size="100" id="canvas-' + n + '" width="100" height="100"' + (q[i].kana ? 'data-kana="true"' : '') + '></canvas>'+
               '<div class="kanji-canvas-actions">'+
-                '<button class="button icon-only" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Erase"><i class="fa">&#xf12d;</i></button>'+
-                '<button class="button icon-only" onclick="KanjiCanvas.deleteLast(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Undo"><i class="fa">&#xf0e2;</i></button>'+
-                (Genki.debug ? '<button class="button icon-only" onclick="console.log(KanjiCanvas.recognize(this.dataset.canvas));" data-canvas="canvas-' + n + '" title="Test Recognition"><i class="fa">&#xf188;</i></button>' : '')+
+                '<button class="button icon-only" onclick="KanjiCanvas.erase(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Erase (CTRL+X)"><i class="fa">&#xf12d;</i></button>'+
+                '<button class="button icon-only" onclick="KanjiCanvas.deleteLast(this.dataset.canvas)" data-canvas="canvas-' + n + '" title="Undo (CTRL+Z)"><i class="fa">&#xf0e2;</i></button>'+
+                (Genki.debug ? '<button class="button icon-only" onclick="console.log(KanjiCanvas.recognize(this.dataset.canvas));" data-canvas="canvas-' + n + '" title="Test Recognition (CTRL+F)"><i class="fa">&#xf188;</i></button>' : '')+
               '</div>'+
             '</div>';
             ++Genki.stats.problems;

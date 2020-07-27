@@ -48,6 +48,8 @@ While the examples only shows a replacement of a single ruby tag, replacements f
 
 **Note:** You should define the contents of this script in the console before usage.
 
+If you're using Brackets, you can use [this extension](https://github.com/SethClydesdale/brackets-rubify-text) instead.
+
 
 ### getCharWidth.js
 Calculates the width of the string, returning a number which can be used in the `width` param of written answers. Useful for when the width cannot be calculated or is not of a desired value.
@@ -62,3 +64,10 @@ Return value: `70`
 Return value usage example: `{おはよう||width:70}`
 
 **Note:** You should define the contents of this script in the console before usage.
+
+
+### jisho-dupe-checker.js
+Checks for duplicate entries in the dictionary so that they can either be merged or removed. Execute this script in the console while viewing the [dictionary](https://sethclydesdale.github.io/genki-study-resources/lessons/appendix/dictionary/) to check for any dupes.
+
+Considering how huge it is, we may end up making duplicate entries from time to time. So this script helps ensure the dictionary word count stays accurate, while delegating the tedious job of checking to robots!
+ 
