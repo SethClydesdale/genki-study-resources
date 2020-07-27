@@ -44,6 +44,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   // init html page and canvas
   KanjiCanvas.init = function (id) {
     KanjiCanvas["canvas_" + id] = document.getElementById(id);
+    KanjiCanvas["canvas_" + id].tabIndex = 0;
     KanjiCanvas["ctx_" + id] = KanjiCanvas["canvas_" + id].getContext("2d");
     KanjiCanvas["w_" + id] = KanjiCanvas["canvas_" + id].width;
     KanjiCanvas["h_" + id] = KanjiCanvas["canvas_" + id].height;
@@ -229,11 +230,11 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
           // outline
           KanjiCanvas["ctx_" + id].lineWidth = 3;
-          KanjiCanvas["ctx_" + id].strokeStyle = KanjiCanvas.alterHex(KanjiCanvas.strokeColors[i], 60, 'dec');
+          KanjiCanvas["ctx_" + id].strokeStyle = KanjiCanvas.alterHex(KanjiCanvas.strokeColors[i] ? KanjiCanvas.strokeColors[i] : "#333333", 60, 'dec');
           KanjiCanvas["ctx_" + id].strokeText((i + 1).toString(), x, y);
 
           // fill
-          KanjiCanvas["ctx_" + id].fillStyle = KanjiCanvas.strokeColors[i] ? KanjiCanvas.strokeColors[i] : "#000";
+          KanjiCanvas["ctx_" + id].fillStyle = KanjiCanvas.strokeColors[i] ? KanjiCanvas.strokeColors[i] : "#333";
           KanjiCanvas["ctx_" + id].fillText((i + 1).toString(), x, y);
         }
       }
@@ -489,8 +490,8 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		var mu20_ = KanjiCanvas.mu20(KanjiCanvas["recordedPattern_" + id], xc_);
 		var mu02_ = KanjiCanvas.mu02(KanjiCanvas["recordedPattern_" + id], yc_);
 
-		var alpha = (aranWidth) / (4 * Math.sqrt(mu20_/m00_));
-		var beta = (aranHeight) / (4 * Math.sqrt(mu02_/m00_));
+		var alpha = (aranWidth) / (4 * Math.sqrt(mu20_/m00_)) || 0;
+		var beta = (aranHeight) / (4 * Math.sqrt(mu02_/m00_)) || 0;
 			
 		var nf = new Array();
 		for(var i=0;i<KanjiCanvas["recordedPattern_" + id].length;i++) {
@@ -505,7 +506,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 			}
 			nf.push(nsi);
 		}
-
+        
 		return KanjiCanvas.transform(nf, xOffset, yOffset);
 	};
 	
@@ -946,7 +947,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	KanjiCanvas.recognize = function (id) {
 		   
 	   var mn = KanjiCanvas.momentNormalize(id);
-
+      
 	   var extractedFeatures = KanjiCanvas.extractFeatures(mn, 20.);
   
 	   var map = KanjiCanvas.getMap(extractedFeatures, KanjiCanvas.refPatterns[0][2] ,KanjiCanvas.endPointDistance);
@@ -994,4 +995,37 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		document.execCommand('copy');
 		document.body.removeChild(el);
 	};
+  
+    
+  // event listener for shortcuts
+  document.addEventListener('keydown', function (e) {
+    var id = document.activeElement.id;
+    
+    if (KanjiCanvas["canvas_" + id] && e.ctrlKey) {
+      switch (e.key.toLowerCase()) {
+        // undo
+        case 'z' :
+          e.preventDefault();
+          KanjiCanvas.deleteLast(id);
+          break;
+
+        // erase
+        case 'x' :
+          e.preventDefault();
+          KanjiCanvas.erase(id);
+          break;
+        
+        // recognize
+        case 'f' :
+          if (/debug/.test(window.location.search)) {
+            e.preventDefault();
+            console.log(KanjiCanvas.recognize(id));
+          }
+          break;
+
+        default :
+          break;
+      }
+    }
+  });
 }(window, document));

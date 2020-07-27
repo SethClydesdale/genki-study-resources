@@ -781,7 +781,7 @@ footer li:first-child:before { display:none; }
 
 
 /* timer styles */
-#quiz-timer, #change-exercise-type-container { margin-top:10px; }
+#quiz-timer, #check-answers, #change-exercise-type-container { margin-top:10px; }
 #quiz-timer:before {
   content:"Time Elapsed";
   display:block;
@@ -1379,6 +1379,12 @@ input.writing-zone-input:focus { border-color:#F60; }
   border:1px solid #CCC;
   display:block;
   margin:0 auto;
+  outline:none;
+}
+
+.kanji-canvas:focus {
+  border-color:#F60;
+  border-color:rgba(255, 102, 0, 0.50);
 }
 
 /* furigana */
