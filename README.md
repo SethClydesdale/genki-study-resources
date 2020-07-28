@@ -9,11 +9,11 @@ Genki Study Resources is a website that offers a vast collection of exercises fo
 -----
 
 **Quick Links**
-- [Using the Offline Version](using-the-offline-version)
-- [Suggestions, Feedback, Bug Reports](suggestions-feedback-bug-reports)
-- [Resources for Studying Japanese](resources-for-studying-japanese)
-- [Special Thanks](special-thanks)
-- [Donate](donate)
+- [Using the Offline Version](#using-the-offline-version)
+- [Suggestions, Feedback, Bug Reports](#suggestions-feedback-bug-reports)
+- [Resources for Studying Japanese](#resources-for-studying-japanese)
+- [Special Thanks](#special-thanks)
+- [Donate](#donate)
 
 
 ### Using the Offline Version
