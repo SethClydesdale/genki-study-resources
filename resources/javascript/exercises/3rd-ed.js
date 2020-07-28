@@ -173,6 +173,7 @@ window.GenkiExercises = [
   'lesson-4/grammar-5|Practice: Past Tense of です|p.118; III-A',
   'lesson-4/grammar-6|Practice: Verb Conjugation (Past Tense)|p.120; IV-A',
   'lesson-4/grammar-7|Practice: Past Tense of Verbs 1|p.120; IV-B',
+  'lesson-4/grammar-8|Practice: Past Tense of Verbs 2|p.121; IV-C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
