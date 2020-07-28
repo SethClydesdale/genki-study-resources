@@ -10,7 +10,7 @@
     <meta property="og:description" content="Practice using the Katakana ナ-ホ.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I Workbook, Reading and Writing, page 130, problem I, problem II, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="keywords" content="Genki I Workbook, Katakana stroke order, Reading and Writing, page 130, problem I, problem II, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
     <script src="../../../resources/javascript/head.min.js"></script>
     <script src="../../../resources/javascript/ga.js" async></script>
+    
+    <script>preLoadFonts('NotoSansJP.otf', 'SawarabiGothic.ttf');</script>
   </head>
 
   <body>
@@ -57,140 +59,211 @@
     
     <script src="../../../resources/javascript/dragula.min.js"></script>
     <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/kanji-canvas.min.js"></script>
+    <script src="../../../resources/javascript/ref-patterns/katakana.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'fill',
-      info : 'Practice using the Katakana ナ-ホ.',
+      format : 'hirakata',
+      type : ['fill', 'stroke', 'drawing'],
+      info : ['Practice using the Katakana ナ-ホ.', 'Practice drawing the Katakana ナ-ホ by following the stroke order.', 'Practice drawing the Katakana ナ-ホ multiple times.'],
       
-      quizlet : 
-      '<p class="section-desc"><span class="sectionNumber3rd">I</span> Practice typing the following ten katakana (ナ through ホ).</p>'+
-      '<table class="table large-width center">'+
-        '<tr>'+
-          '<td style="font-size:24px;width:50px;">ナ<div class="furigana" style="font-size:12px;">na</div></td>'+
-          '<td>{ナ|ナ|placeholder}</td>'+
-          '<td>{ナ|ナ|placeholder}</td>'+
-          '<td>{ナ|ナ|placeholder}</td>'+
-          '<td>{ナ}</td>'+
-          '<td>{ナ}</td>'+
-          '<td>{ナ}</td>'+
-          '<td>{ナ}</td>'+
-        '</tr>'+
+      kanaType : 'katakana',
+      columns : 7,
+      quizlet : [
+        // WRITTEN
+        '<p class="section-desc"><span class="sectionNumber3rd">I</span> Practice typing the following ten katakana (ナ through ホ).</p>'+
+        '<table class="table large-width center">'+
+          '<tr>'+
+            '<td style="font-size:24px;width:50px;">ナ<div class="furigana" style="font-size:12px;">na</div></td>'+
+            '<td>{ナ|ナ|placeholder}</td>'+
+            '<td>{ナ|ナ|placeholder}</td>'+
+            '<td>{ナ|ナ|placeholder}</td>'+
+            '<td>{ナ}</td>'+
+            '<td>{ナ}</td>'+
+            '<td>{ナ}</td>'+
+            '<td>{ナ}</td>'+
+          '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">ニ<div class="furigana" style="font-size:12px;">ni</div></td>'+
-          '<td>{ニ|ニ|placeholder}</td>'+
-          '<td>{ニ|ニ|placeholder}</td>'+
-          '<td>{ニ|ニ|placeholder}</td>'+
-          '<td>{ニ}</td>'+
-          '<td>{ニ}</td>'+
-          '<td>{ニ}</td>'+
-          '<td>{ニ}</td>'+
-        '</tr>'+
+          '<tr>'+
+            '<td style="font-size:24px;">ニ<div class="furigana" style="font-size:12px;">ni</div></td>'+
+            '<td>{ニ|ニ|placeholder}</td>'+
+            '<td>{ニ|ニ|placeholder}</td>'+
+            '<td>{ニ|ニ|placeholder}</td>'+
+            '<td>{ニ}</td>'+
+            '<td>{ニ}</td>'+
+            '<td>{ニ}</td>'+
+            '<td>{ニ}</td>'+
+          '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">ヌ<div class="furigana" style="font-size:12px;">nu</div></td>'+
-          '<td>{ヌ|ヌ|placeholder}</td>'+
-          '<td>{ヌ|ヌ|placeholder}</td>'+
-          '<td>{ヌ|ヌ|placeholder}</td>'+
-          '<td>{ヌ}</td>'+
-          '<td>{ヌ}</td>'+
-          '<td>{ヌ}</td>'+
-          '<td>{ヌ}</td>'+
-        '</tr>'+
+          '<tr>'+
+            '<td style="font-size:24px;">ヌ<div class="furigana" style="font-size:12px;">nu</div></td>'+
+            '<td>{ヌ|ヌ|placeholder}</td>'+
+            '<td>{ヌ|ヌ|placeholder}</td>'+
+            '<td>{ヌ|ヌ|placeholder}</td>'+
+            '<td>{ヌ}</td>'+
+            '<td>{ヌ}</td>'+
+            '<td>{ヌ}</td>'+
+            '<td>{ヌ}</td>'+
+          '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">ネ<div class="furigana" style="font-size:12px;">ne</div></td>'+
-          '<td>{ネ|ネ|placeholder}</td>'+
-          '<td>{ネ|ネ|placeholder}</td>'+
-          '<td>{ネ|ネ|placeholder}</td>'+
-          '<td>{ネ}</td>'+
-          '<td>{ネ}</td>'+
-          '<td>{ネ}</td>'+
-          '<td>{ネ}</td>'+
-        '</tr>'+
+          '<tr>'+
+            '<td style="font-size:24px;">ネ<div class="furigana" style="font-size:12px;">ne</div></td>'+
+            '<td>{ネ|ネ|placeholder}</td>'+
+            '<td>{ネ|ネ|placeholder}</td>'+
+            '<td>{ネ|ネ|placeholder}</td>'+
+            '<td>{ネ}</td>'+
+            '<td>{ネ}</td>'+
+            '<td>{ネ}</td>'+
+            '<td>{ネ}</td>'+
+          '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">ノ<div class="furigana" style="font-size:12px;">no</div></td>'+
-          '<td>{ノ|ノ|placeholder}</td>'+
-          '<td>{ノ|ノ|placeholder}</td>'+
-          '<td>{ノ|ノ|placeholder}</td>'+
-          '<td>{ノ}</td>'+
-          '<td>{ノ}</td>'+
-          '<td>{ノ}</td>'+
-          '<td>{ノ}</td>'+
-        '</tr>'+
+          '<tr>'+
+            '<td style="font-size:24px;">ノ<div class="furigana" style="font-size:12px;">no</div></td>'+
+            '<td>{ノ|ノ|placeholder}</td>'+
+            '<td>{ノ|ノ|placeholder}</td>'+
+            '<td>{ノ|ノ|placeholder}</td>'+
+            '<td>{ノ}</td>'+
+            '<td>{ノ}</td>'+
+            '<td>{ノ}</td>'+
+            '<td>{ノ}</td>'+
+          '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">ハ<div class="furigana" style="font-size:12px;">ha</div></td>'+
-          '<td>{ハ|ハ|placeholder}</td>'+
-          '<td>{ハ|ハ|placeholder}</td>'+
-          '<td>{ハ|ハ|placeholder}</td>'+
-          '<td>{ハ}</td>'+
-          '<td>{ハ}</td>'+
-          '<td>{ハ}</td>'+
-          '<td>{ハ}</td>'+
-        '</tr>'+
+          '<tr>'+
+            '<td style="font-size:24px;">ハ<div class="furigana" style="font-size:12px;">ha</div></td>'+
+            '<td>{ハ|ハ|placeholder}</td>'+
+            '<td>{ハ|ハ|placeholder}</td>'+
+            '<td>{ハ|ハ|placeholder}</td>'+
+            '<td>{ハ}</td>'+
+            '<td>{ハ}</td>'+
+            '<td>{ハ}</td>'+
+            '<td>{ハ}</td>'+
+          '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">ヒ<div class="furigana" style="font-size:12px;">hi</div></td>'+
-          '<td>{ヒ|ヒ|placeholder}</td>'+
-          '<td>{ヒ|ヒ|placeholder}</td>'+
-          '<td>{ヒ|ヒ|placeholder}</td>'+
-          '<td>{ヒ}</td>'+
-          '<td>{ヒ}</td>'+
-          '<td>{ヒ}</td>'+
-          '<td>{ヒ}</td>'+
-        '</tr>'+
+          '<tr>'+
+            '<td style="font-size:24px;">ヒ<div class="furigana" style="font-size:12px;">hi</div></td>'+
+            '<td>{ヒ|ヒ|placeholder}</td>'+
+            '<td>{ヒ|ヒ|placeholder}</td>'+
+            '<td>{ヒ|ヒ|placeholder}</td>'+
+            '<td>{ヒ}</td>'+
+            '<td>{ヒ}</td>'+
+            '<td>{ヒ}</td>'+
+            '<td>{ヒ}</td>'+
+          '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">フ<div class="furigana" style="font-size:12px;">fu</div></td>'+
-          '<td>{フ|フ|placeholder}</td>'+
-          '<td>{フ|フ|placeholder}</td>'+
-          '<td>{フ|フ|placeholder}</td>'+
-          '<td>{フ}</td>'+
-          '<td>{フ}</td>'+
-          '<td>{フ}</td>'+
-          '<td>{フ}</td>'+
-        '</tr>'+
+          '<tr>'+
+            '<td style="font-size:24px;">フ<div class="furigana" style="font-size:12px;">fu</div></td>'+
+            '<td>{フ|フ|placeholder}</td>'+
+            '<td>{フ|フ|placeholder}</td>'+
+            '<td>{フ|フ|placeholder}</td>'+
+            '<td>{フ}</td>'+
+            '<td>{フ}</td>'+
+            '<td>{フ}</td>'+
+            '<td>{フ}</td>'+
+          '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">ヘ<div class="furigana" style="font-size:12px;">he</div></td>'+
-          '<td>{ヘ|ヘ|placeholder}</td>'+
-          '<td>{ヘ|ヘ|placeholder}</td>'+
-          '<td>{ヘ|ヘ|placeholder}</td>'+
-          '<td>{ヘ}</td>'+
-          '<td>{ヘ}</td>'+
-          '<td>{ヘ}</td>'+
-          '<td>{ヘ}</td>'+
-        '</tr>'+
+          '<tr>'+
+            '<td style="font-size:24px;">ヘ<div class="furigana" style="font-size:12px;">he</div></td>'+
+            '<td>{ヘ|ヘ|placeholder}</td>'+
+            '<td>{ヘ|ヘ|placeholder}</td>'+
+            '<td>{ヘ|ヘ|placeholder}</td>'+
+            '<td>{ヘ}</td>'+
+            '<td>{ヘ}</td>'+
+            '<td>{ヘ}</td>'+
+            '<td>{ヘ}</td>'+
+          '</tr>'+
 
-        '<tr>'+
-          '<td style="font-size:24px;">ホ<div class="furigana" style="font-size:12px;">ho</div></td>'+
-          '<td>{ホ|ホ|placeholder}</td>'+
-          '<td>{ホ|ホ|placeholder}</td>'+
-          '<td>{ホ|ホ|placeholder}</td>'+
-          '<td>{ホ}</td>'+
-          '<td>{ホ}</td>'+
-          '<td>{ホ}</td>'+
-          '<td>{ホ}</td>'+
-        '</tr>'+
-      '</table><br>'+
+          '<tr>'+
+            '<td style="font-size:24px;">ホ<div class="furigana" style="font-size:12px;">ho</div></td>'+
+            '<td>{ホ|ホ|placeholder}</td>'+
+            '<td>{ホ|ホ|placeholder}</td>'+
+            '<td>{ホ|ホ|placeholder}</td>'+
+            '<td>{ホ}</td>'+
+            '<td>{ホ}</td>'+
+            '<td>{ホ}</td>'+
+            '<td>{ホ}</td>'+
+          '</tr>'+
+        '</table><br>'+
 
-      '<p class="section-desc"><span class="sectionNumber3rd">II</span> Write the words below in katakana.</p>'+
-      '<div class="count-problems inline-problem set-problem-width-large valign-top">'+
-        '<div class="problem"><span class="inline-furi label">ぼさのば<i>bossa nova</i></span>{ボサノバ}</div>'+
-        '<div class="problem"><span class="inline-furi label">かぬー<i>canoe</i></span>{カヌー}</div>'+
-        '<div class="problem"><span class="inline-furi label">はーぶ<i>herb</i></span>{ハーブ}</div>'+
-        '<div class="problem"><span class="inline-furi label">びきに<i>bikini</i></span>{ビキニ}</div>'+
-        '<div class="problem"><span class="inline-furi label">なっつ<i>nuts</i></span>{ナッツ}</div>'+
-        '<div class="problem"><span class="inline-furi label">ぺっと<i>pet</i></span>{ペット}</div>'+
-        '<div class="problem"><span class="inline-furi label">こね<i>connection</i></span>{コネ}</div>'+
-        '<div class="problem"><span class="inline-furi label">はっぴー<i>happy</i></span>{ハッピー}</div>'+
-        '<div class="problem"><span class="inline-furi label">ねくたい<i>necktie</i></span>{ネクタイ}</div>'+
-        '<div class="problem"><span class="inline-furi label">のーと<i>notebook</i></span>{ノート}</div>'+
-      '</div>'
+        '<p class="section-desc"><span class="sectionNumber3rd">II</span> Write the words below in katakana.</p>'+
+        '<div class="count-problems inline-problem set-problem-width-large valign-top">'+
+          '<div class="problem"><span class="inline-furi label">ぼさのば<i>bossa nova</i></span>{ボサノバ}</div>'+
+          '<div class="problem"><span class="inline-furi label">かぬー<i>canoe</i></span>{カヌー}</div>'+
+          '<div class="problem"><span class="inline-furi label">はーぶ<i>herb</i></span>{ハーブ}</div>'+
+          '<div class="problem"><span class="inline-furi label">びきに<i>bikini</i></span>{ビキニ}</div>'+
+          '<div class="problem"><span class="inline-furi label">なっつ<i>nuts</i></span>{ナッツ}</div>'+
+          '<div class="problem"><span class="inline-furi label">ぺっと<i>pet</i></span>{ペット}</div>'+
+          '<div class="problem"><span class="inline-furi label">こね<i>connection</i></span>{コネ}</div>'+
+          '<div class="problem"><span class="inline-furi label">はっぴー<i>happy</i></span>{ハッピー}</div>'+
+          '<div class="problem"><span class="inline-furi label">ねくたい<i>necktie</i></span>{ネクタイ}</div>'+
+          '<div class="problem"><span class="inline-furi label">のーと<i>notebook</i></span>{ノート}</div>'+
+        '</div>',
+
+
+        // STROKE ORDER
+        [
+          {
+            kana : 'ナ',
+            strokes : 2,
+            order : 'ka-na'
+          },
+          
+          {
+            kana : 'ニ',
+            strokes : 2,
+            order : 'ka-ni'
+          },
+          
+          {
+            kana : 'ヌ',
+            strokes : 2,
+            order : 'ka-nu'
+          },
+          
+          {
+            kana : 'ネ',
+            strokes : 4,
+            order : 'ka-ne'
+          },
+          
+          {
+            kana : 'ノ',
+            strokes : 1,
+            order : 'ka-no'
+          },
+          
+          {
+            kana : 'ハ',
+            strokes : 2,
+            order : 'ka-ha'
+          },
+          
+          {
+            kana : 'ヒ',
+            strokes : 2,
+            order : 'ka-hi'
+          },
+          
+          {
+            kana : 'フ',
+            strokes : 1,
+            order : 'ka-fu'
+          },
+          
+          {
+            kana : 'ヘ',
+            strokes : 1,
+            order : 'ka-he'
+          },
+          
+          {
+            kana : 'ホ',
+            strokes : 4,
+            order : 'ka-ho'
+          }
+        ]
+      ]
         
     });</script>
   </body>

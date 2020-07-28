@@ -6,41 +6,52 @@ Genki Study Resources is a website that offers a vast collection of exercises fo
 
 **Offline Version:** [download](https://github.com/SethClydesdale/genki-study-resources/archive/master.zip)
 
+-----
+
+**Quick Links**
+- [Using the Offline Version](using-the-offline-version)
+- [Suggestions, Feedback, Bug Reports](suggestions-feedback-bug-reports)
+- [Resources for Studying Japanese](resources-for-studying-japanese)
+- [Special Thanks](special-thanks)
+- [Donate](donate)
+
 
 ### Using the Offline Version
 If you're using the offline version you'll have to unzip the files. Once you've done that, you can access all the study resources by opening any of the [**index.html**](https://i62.servimg.com/u/f62/18/21/41/30/captur11.png) files in the browser of your choice. It should have the same experience as the online version, however, whenever new exercises/lessons are added they wont be available; you'll have to download the latest version of the repository to get them.
 
-**If Icons are Broken:** If you use Firefox and icons appear broken, then please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/broken-icons/) to resolve the issue.
+**If icons are broken:** If you use Firefox and icons appear broken, then please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/broken-icons/) to resolve the issue.
 
-**If Exercises Wont Load:** If exercises are stuck endlessly loading, please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/stuck-loading/) for resolving the issue.
+**If settings wont save:** If your settings wont save, such as furigana preference or dark mode, please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/stuck-loading/) for resolving the issue.
 
 
 ### Suggestions, Feedback, Bug Reports
-If you have any suggestions, feedback, or bugs to report, feel free to [open a new issue](https://github.com/SethClydesdale/genki-study-resources/issues) in this repository or leave a comment in [this reddit thread](https://www.reddit.com/r/LearnJapanese/comments/e725cx/g/) to let me know. For more information, please check out the [report page](https://sethclydesdale.github.io/genki-study-resources/report/) for Genki Study Resources.
+If you have any suggestions, feedback, questions, or bugs to report, feel free to [open a new issue](https://github.com/SethClydesdale/genki-study-resources/issues) in this repository. For alternative contact methods, please see the [report page](https://sethclydesdale.github.io/genki-study-resources/report/) for Genki Study Resources.
 
 
-### Additional links for studying Japanese
-- [Genki Self-study Room](http://genki.japantimes.co.jp/self_en)
+### Resources for Studying Japanese
+- [Genki Self-study Room](http://genki.japantimes.co.jp/self_en) | [Genki Online](https://genki3.japantimes.co.jp/)
 - [Tae Kim's Guide to Learning Japanese](http://www.guidetojapanese.org/learn/)
 - [Imabi](http://www.imabi.net/)
 - [Jisho - Japanese Dictionary](http://jisho.org/)
 - [/r/LearnJapanese](https://www.reddit.com/r/LearnJapanese/wiki/index)
 
 
-### Made possible thanks to...
+### Special Thanks
+Genki Study Resources was made possible thanks to...
 - [The Japan Times](https://bookclub.japantimes.co.jp/en/), Eri Banno, Yoko Ikeda, Yutaka Ohno, Chikako Shinagawa, and Kyoko Tokashiki for Genki: An Integrated Course in Elementary Japanese.
 - Noriko Udagawa and Reiko Maruyama for some Illustrations that were used.
 - [DavidBurela](https://github.com/DavidBurela) for gifting me the 3rd Edition textbook and workbook of Genki I.
 - [Patrick Roberts](https://github.com/patrickroberts) for [his help with an algorithm](https://stackoverflow.com/a/59337819/12502093) that helped make mixed kana/kanji answers possible in written quizzes.
+- [Dominik Klein](https://github.com/asdfjkl) for [his help with adding new recognition patterns](https://github.com/asdfjkl/kanjicanvas/issues/1) for the stroke order exercises.
 - [sasagami358](http://sasagami358.blog.fc2.com/blog-entry-593.html) for the hiragana and katakana stroke order charts.
-- Everyone who helped contribute to this project, both on GitHub and outside of it.
+- Everyone who helped support or contribute to this project, whether it was on GitHub or outside of it.
 
-The following resources were used in this project. Check them out!
+The following resources were used in this project. I couldn't have done it without them, so check them out!
 - [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) for the awesome icons.
 - [dragula](https://github.com/bevacqua/dragula) for the simple drag and drop.
 - [easytimer.js](https://github.com/albert-gonzalez/easytimer.js) for the super easy timer.
-- [Kanji Canvas](https://github.com/asdfjkl/kanjicanvas) by [Dominik Klein](https://github.com/asdfjkl) for the stroke order exercises.
-- [Noto CJK](https://www.google.com/get/noto/help/cjk/) by Google and [Sawarabi Gothic](https://fonts.google.com/specimen/Sawarabi+Gothic) by mshio for the fonts used in the Hiragana/Katakana stroke order exercises.
+- [Kanji Canvas](https://github.com/asdfjkl/kanjicanvas) for the stroke order exercises.
+- [Noto CJK](https://www.google.com/get/noto/help/cjk/) and [Sawarabi Gothic](https://fonts.google.com/specimen/Sawarabi+Gothic) for the fonts used in the Hiragana/Katakana stroke order exercises.
 
 
 ### Donate
