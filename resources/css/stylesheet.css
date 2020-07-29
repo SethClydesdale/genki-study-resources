@@ -54,7 +54,7 @@ body {
   color:#333;
   background:#FFF;
   font-size:13px;
-  font-family:'Meiryo', 'Osaka', Arial, sans-serif;
+  font-family:'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, sans-serif;
   padding:0;
   margin:0;
   display:flex;
@@ -95,7 +95,7 @@ code {
   color:#FFF;
   background:#F60;
   font-size:13px;
-  font-family:Meiryo, Osaka, Arial, sans-serif;
+  font-family:'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, sans-serif;
   text-decoration:none;
   border:none;
   font-weight:bold;
@@ -147,7 +147,7 @@ code {
 /* input fields */
 input[type="text"], input[type="number"], textarea, select {
   font-size:14px;
-  font-family:Meiryo, Osaka, Arial, sans-serif;
+  font-family:'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, sans-serif;
   background:#FFF;
   border:1px solid #CCC;
   padding:6px;
@@ -1039,7 +1039,7 @@ footer li:first-child:before { display:none; }
   color:#F00;
   content:"\f060\A0 wrong " attr(data-mistakes) "x";
   font-size:14px;
-  font-family:Meiryo, Osaka, Arial, sans-serif, FontAwesomeWeb, FontAwesome;
+  font-family:'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, sans-serif, FontAwesomeWeb, FontAwesome;
   display:block;
   position:absolute;
   top:3px;
@@ -1049,7 +1049,7 @@ footer li:first-child:before { display:none; }
 #wrongAnswer { position:relative; }
 #wrongAnswer:before {
   content:"\f00d\A0 wrong";
-  font-family:Meiryo, Osaka, Arial, sans-serif, FontAwesomeWeb, FontAwesome;
+  font-family:'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, sans-serif, FontAwesomeWeb, FontAwesome;
   font-size:14px;
   color:#F00;
   position:absolute;
@@ -1265,7 +1265,7 @@ footer li:first-child:before { display:none; }
 
 input.writing-zone-input {
   font-size:14px;
-  font-family:Meiryo, Osaka, Arial, sans-serif;
+  font-family:'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, sans-serif;
   text-align:center;
   background:#FFF;
   border:1px solid #CCC;
