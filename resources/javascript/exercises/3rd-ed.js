@@ -174,6 +174,7 @@ window.GenkiExercises = [
   'lesson-4/grammar-6|Practice: Verb Conjugation (Past Tense)|p.120; IV-A',
   'lesson-4/grammar-7|Practice: Past Tense of Verbs 1|p.120; IV-B',
   'lesson-4/grammar-8|Practice: Past Tense of Verbs 2|p.121; IV-C',
+  'lesson-4/grammar-9|Practice: Past Tense of Verbs 3|p.121; IV-D',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
