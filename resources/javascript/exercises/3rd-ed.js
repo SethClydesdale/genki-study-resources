@@ -176,6 +176,7 @@ window.GenkiExercises = [
   'lesson-4/grammar-8|Practice: Past Tense of Verbs 2|p.121; IV-C',
   'lesson-4/grammar-9|Practice: Past Tense of Verbs 3|p.121; IV-D',
   'lesson-4/grammar-10|Practice: も 1|p.122; V-A',
+  'lesson-4/grammar-11|Practice: も 2|p.122-123; V-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
