@@ -98,4 +98,61 @@
     footer.appendChild(container);
   }
   
+  
+  // # KEYBOARD SHORTCUTS #
+  // various keyboard shortcuts used around the website
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && e.altKey) {
+      var button;
+
+      // check what key was pressed
+      switch (e.key) {
+        // previous exercise (ctrl+alt+left)
+        case 'Left':
+        case 'ArrowLeft':
+          button = document.querySelector('.prev-ex');
+          break;
+
+        // next exercise (ctrl+alt+right)
+        case 'Right':
+        case 'ArrowRight':
+          button = document.querySelector('.next-ex');
+          break;
+
+        // toggle exercise list (ctrl+alt+e)
+        case 'e':
+          button = document.getElementById('toggle-exercises');
+          break;
+
+        // toggle quick jisho (ctrl+alt+q)
+        case 'q':
+          button = document.getElementById('quick-jisho-toggle');
+          break;
+
+        // toggle dark mode (ctrl+alt+d)
+        case 'd':
+          button = document.getElementById('light-switch');
+          break;
+
+        // toggle furigana (ctrl+alt+f)
+        case 'f':
+          button = document.getElementById('toggle-furigana');
+          break;
+
+        // random exercise (ctrl+alt+r)
+        case 'r':
+          button = document.getElementById('random-exercise');
+          break;
+
+        default:
+          break;
+      }
+
+      // prevent default behavior and click the button
+      if (button) {
+        e.preventDefault();
+        button.click();
+      }
+    }
+  });
 }(window, document));

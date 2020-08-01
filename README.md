@@ -10,6 +10,7 @@ Genki Study Resources is a website that offers a vast collection of exercises fo
 
 **Quick Links**
 - [Using the Offline Version](#using-the-offline-version)
+- [Keyboard Shortcuts](#keyboard-shortcuts)
 - [Suggestions, Feedback, Bug Reports](#suggestions-feedback-bug-reports)
 - [Resources for Studying Japanese](#resources-for-studying-japanese)
 - [Special Thanks](#special-thanks)
@@ -22,6 +23,29 @@ If you're using the offline version you'll have to unzip the files. Once you've 
 **If icons are broken:** If you use Firefox and icons appear broken, then please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/broken-icons/) to resolve the issue.
 
 **If settings wont save:** If your settings wont save, such as furigana preference or dark mode, please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/stuck-loading/) for resolving the issue.
+
+
+### Keyboard Shortcuts
+Genki Study Resources supports a few keyboard shortcuts which you can use to make things easier.
+
+#### Global
+Shortcuts that can be used anywhere.
+
+| Shortcut | Description |
+| -------- | ----------- |
+| CTRL+ALT+D | Toggle Dark Mode on/off |
+
+#### Exercises
+Shortcuts that can only be used in exercises.
+
+| Shortcut | Description |
+| -------- | ----------- |
+| CTRL+ALT+LEFT | Navigate to the previous exercise in the lesson |
+| CTRL+ALT+RIGHT | Navigate to the next exercise in the lesson |
+| CTRL+ALT+R | Navigate to a random exercise |
+| CTRL+ALT+E | Open/Close the Exercise List |
+| CTRL+ALT+Q | Open/Close the Quick Dictionary |
+| CTRL+ALT+F | Toggle Furigana on/off |
 
 
 ### Suggestions, Feedback, Bug Reports
