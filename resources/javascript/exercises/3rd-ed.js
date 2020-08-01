@@ -177,6 +177,12 @@ window.GenkiExercises = [
   'lesson-4/grammar-9|Practice: Past Tense of Verbs 3|p.121; IV-D',
   'lesson-4/grammar-10|Practice: も 1|p.122; V-A',
   'lesson-4/grammar-11|Practice: も 2|p.122-123; V-B',
+  'lesson-4/grammar-12|Practice: ～時間|p.123; VI-A',
+  'lesson-4/vocab-7|Useful Expressions: Days (1-15)|p.127',
+  'lesson-4/vocab-8|Useful Expressions: Days (16-31)|p.127',
+  'lesson-4/vocab-9|Useful Expressions: Months|p.127',
+  'lesson-4/vocab-10|Useful Expressions: Time Words (Day and Week)|p.127',
+  'lesson-4/vocab-11|Useful Expressions: Time Words (Month and Year)|p.127',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

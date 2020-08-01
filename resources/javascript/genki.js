@@ -121,9 +121,9 @@
       // review button for drag/drop exercises
       review : '<div id="review-exercise" class="center clearfix"><button id="review-button" class="button" onclick="Genki.review();"><i class="fa">&#xf02d;</i>Review</button></div>',
       // furigana toggle for vocab exercises
-      toggle_furigana : '<button class="button" onclick="Genki.toggle.furigana(this);"><i class="fa">&#xf2a8;</i>' + ((storageOK && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>',
+      toggle_furigana : '<button id="toggle-furigana" class="button" onclick="Genki.toggle.furigana(this);"><i class="fa">&#xf2a8;</i>' + ((storageOK && localStorage.furiganaVisible == 'false') ? 'Show' : 'Hide') + ' Furigana</button>',
       // check answers button for written exercises
-      check_answers : '<div id="check-answers" class="center"><button class="button" onclick="Genki.check.answers();"><i class="fa">&#xf00c;</i>Check Answers</button></div>',
+      check_answers : '<div id="check-answers" class="center"><button id="check-answers-button" class="button" onclick="Genki.check.answers();"><i class="fa">&#xf00c;</i>Check Answers</button></div>',
       back_to_dict : '<button class="button" onclick="Genki.reset();"><i class="fa">&#xf021;</i>Back to Dictionary</button>'
     },
 
