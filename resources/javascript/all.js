@@ -101,7 +101,7 @@
   
   // # KEYBOARD SHORTCUTS #
   // various keyboard shortcuts used around the website
-  document.addEventListener('keydown', function (e) {
+  document.addEventListener('keyup', function (e) {
     if (e.ctrlKey && e.altKey) {
       var button;
 
