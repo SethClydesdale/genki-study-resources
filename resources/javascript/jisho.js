@@ -1332,7 +1332,7 @@ Genki.jisho = {
     { ja : 'スペイン', en : 'Spain', l : '読L2-I' },
     { ja : '全て|すべて', en : 'all', l : '読L16-漢字表' },
     { ja : 'スポーツ', en : 'sports', l : '会L3' },
-    { ja : 'スマホ', en : 'smartphone; mobile', l : '会L2' },
+    { ja : 'スマホ', en : 'smartphone; smart phone; mobile', l : '会L2' },
     { ja : 'すみません', en : "Excuse me.; I'm sorry.", l : '会G' },
     { ja : '住む|すむ', en : 'to live', v : 'u', l : '会L7' },
     { ja : '相撲|すもう', en : 'sumo wrestling', l : '会L9(c)' },

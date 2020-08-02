@@ -183,6 +183,10 @@ window.GenkiExercises = [
   'lesson-4/vocab-9|Useful Expressions: Months|p.127',
   'lesson-4/vocab-10|Useful Expressions: Time Words (Day and Week)|p.127',
   'lesson-4/vocab-11|Useful Expressions: Time Words (Month and Year)|p.127',
+  'lesson-4/workbook-1|Workbook: Xがあります／います|p.41; I & II',
+  'lesson-4/workbook-2|Workbook: Describing Where Things Are|p.42; I & II',
+  'lesson-4/workbook-3|Workbook: Past Tense (Nouns)|p.43; I & II',
+  'lesson-4/workbook-4|Workbook: Verb Conjugation (Past Tense)|p.44',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
