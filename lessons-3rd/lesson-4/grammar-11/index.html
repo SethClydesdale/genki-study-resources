@@ -172,76 +172,122 @@
         
         // WRITTEN
         'Example: '+
-        '<div class="problem">'+
-          'Yamamoto/student<br>'+
-          '{やまもとさん}は{学生|がくせい|answer}です。<br><br><br>'+
-          'Tanaka/student, too<br>'+
-          '{たなかさん}も{学生|がくせい|answer}です。'+
-        '</div>'+
-        
-        '<div class="count-problems columns-2 clear">'+
+        '<div class="columns-2 inline-columns">'+
           '<div>'+
-            '<div class="problem">'+
+            'Yamamoto/student<br>'+
+            '{やまもとさん}は{学生|がくせい|answer}です。'+
+          '</div>'+
+
+          '<div>'+
+            'Tanaka/student, too<br>'+
+            '{たなかさん}も{学生|がくせい|answer}です。'+
+          '</div>'+
+        '</div><br>'+
+        
+        '<div class="count-problems">'+
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
               'Kimura/go to a hospital<br>'+
-              '{きむらさんは病院に行きます|きむらさんはびょういんにいきます|' + Genki.getAlts('きむらさんは{病院}に{行}きます', 'びょういん|い') + 'answer}。<br><br><br>'+
+              '{きむらさんは病院に行きます|きむらさんはびょういんにいきます|' + Genki.getAlts('きむらさんは{病院}に{行}きます', 'びょういん|い') + 'answer}。'+
+            '</div>'+
+
+            '<div>'+
               'Yamaguchi/go to a hospital, too<br>'+
               '{やまぐちさんも病院に行きます|やまぐちさんもびょういんにいきます|' + Genki.getAlts('やまぐちさんも{病院}に{行}きます', 'びょういん|い') + 'answer}。'+
             '</div>'+
-            
-            '<div class="problem">'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
               'Takeshi/eats rice<br>'+
-              '{たけしさんはご飯を食べます|たけしさんはごはんをたべます|' + Genki.getAlts('たけしさんはご{飯}を{食}べます', 'はん|た') + 'answer}。<br><br><br>'+
+              '{たけしさんはご飯を食べます|たけしさんはごはんをたべます|' + Genki.getAlts('たけしさんはご{飯}を{食}べます', 'はん|た') + 'answer}。'+
+            '</div>'+
+
+            '<div>'+
               'eats bread, too<br>'+
               '{パンも食べます|パンもたべます|answer}。'+
             '</div>'+
-            
-            '<div class="problem">'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
               'Robert/drinks coffee<br>'+
-              '{ロバートさんはコーヒーを飲みます|ロバートさんはコーヒーをのみます|answer}。<br><br><br>'+
+              '{ロバートさんはコーヒーを飲みます|ロバートさんはコーヒーをのみます|answer}。'+
+            '</div>'+
+
+            '<div>'+
               'drinks tea, too<br>'+
               '{お茶も飲みます|おちゃものみます|' + Genki.getAlts('お{茶}も{飲}みます', 'ちゃ|の') + 'answer}。'+
             '</div>'+
-            
-            '<div class="problem">'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
               'Mary/speaks English<br>'+
-              '{メアリーさんは英語を話します|メアリーさんはえいごをはなします|' + Genki.getAlts('メアリーさんは{英語}を{話}します', 'えいご|はな') + 'answer}。<br><br><br>'+
+              '{メアリーさんは英語を話します|メアリーさんはえいごをはなします|' + Genki.getAlts('メアリーさんは{英語}を{話}します', 'えいご|はな') + 'answer}。'+
+            '</div>'+
+
+            '<div>'+
               'speaks Spanish, too<br>'+
               '{スペイン語も話します|スペインごもはなします|' + Genki.getAlts('スペイン{語}も{話}します', 'ご|はな') + 'answer}。'+
             '</div>'+
-            
-            '<div class="problem">'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
               'take pictures/at a park<br>'+
-              '{公園で写真を撮ります|こうえんでしゃしんをとります|' + Genki.getAlts('{公園}で{写真}を{撮}ります', 'こうえん|しゃしん|と') + 'answer}。<br><br><br>'+
+              '{公園で写真を撮ります|こうえんでしゃしんをとります|' + Genki.getAlts('{公園}で{写真}を{撮}ります', 'こうえん|しゃしん|と') + 'answer}。'+
+            '</div>'+
+
+            '<div>'+
               'take pictures/at a temple, too<br>'+
               '{お寺でも写真を撮ります|おてらでもしゃしんをとります|' + Genki.getAlts('お{寺}でも{写真}を{撮}ります', 'てら|しゃしん|と') + 'answer}。'+
             '</div>'+
           '</div>'+
-
-          '<div>'+
-            '<div class="problem">'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
               'study/at home<br>'+
-              '{うちで勉強します|うちでべんきょうします|' + Genki.getAlts('{うち}で{勉強}します', '家|べんきょう') + 'answer}。<br><br><br>'+
+              '{うちで勉強します|うちでべんきょうします|' + Genki.getAlts('{うち}で{勉強}します', '家|べんきょう') + 'answer}。'+
+            '</div>'+
+
+            '<div>'+
               'study/at the library, too<br>'+
               '{図書館でも勉強します|としょかんでもべんきょうします|' + Genki.getAlts('{図書館}でも{勉強}します', 'としょかん|べんきょう') + 'answer}。'+
             '</div>'+
-            
-            '<div class="problem">'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
               'go on a date/on Saturday<br>'+
-              '{土曜日にデートをします|どうようびにデートをします|answer}。<br><br><br>'+
+              '{土曜日にデートをします|どうようびにデートをします|answer}。'+
+            '</div>'+
+
+            '<div>'+
               'go on a date/on Sunday, too<br>'+
               '{日曜日にもデートをします|にちようびにもデートをします|answer}。'+
             '</div>'+
-            
-            '<div class="problem">'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
               'there\'s a test/on Tuesday<br>'+
-              '{火曜日にテストがあります|かようびにテストがあります|answer}。<br><br><br>'+
+              '{火曜日にテストがあります|かようびにテストがあります|answer}。'+
+            '</div>'+
+
+            '<div>'+
               'there\'s a test/on Thursday, too<br>'+
               '{木曜日にもテストがあります|もくようびにもテストがあります|answer}。'+
             '</div>'+
-            
-            '<div class="problem">'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
               'Tokyo/go to<br>'+
-              '{東京に行きます|とうきょうにいきます|' + Genki.getAlts('{東京}に{行}きます', 'とうきょう|い') + 'answer}。<br><br><br>'+
+              '{東京に行きます|とうきょうにいきます|' + Genki.getAlts('{東京}に{行}きます', 'とうきょう|い') + 'answer}。'+
+            '</div>'+
+
+            '<div>'+
               'Hiroshima/go to, too<br>'+
               '{広島にも行きます|ひろしまにもいきます|' + Genki.getAlts('{広島}にも{行}きます', 'ひろしま|い') + 'answer}。'+
             '</div>'+

@@ -142,51 +142,87 @@
         
         // WRITTEN
         '<div class="count-problems">'+
-          '<div class="columns-2 clear">'+
+          '<div class="problem columns-2 inline-columns">'+
             '<div>'+
-              '<div class="problem">'+
-                'Father and Mother/Both Japanese<br>'+
-                '{おとうさん|お父さん|answer;hint:father}は{にほんじん|日本人|answer}です。<br><br><br>'+
-                '{おかあさん|お母さん|answer;hint:mother}も{にほんじん|日本人|answer}です。'+
-              '</div>'+
-              
-              '<div class="problem">'+
-                'Mary and Masato/Both second years<br>'+
-                '{メアリーさんはにねんせいです|メアリーさんは二年生です|answer}。<br><br><br>'+
-                '{まさとさんもにねんせいです|まさとさんも二年生です|answer}。'+
-              '</div>'+
-              
-              '<div class="problem">'+
-                'Bag (in hand) and Bag (far away)/Both cost ￥5,800<br>'+
-                '{このかばんはごせんはっぴゃくえんです|この鞄は五千八百円です|' + Genki.getAlts('この{鞄}は{五千八百}{円}です', 'かばん|ごせんはっぴゃく|えん') + 'answer}。<br><br><br>'+
-                '{あのかばんもごせんはっぴゃくえんです|あの鞄も五千八百円です|' + Genki.getAlts('あの{鞄}も{五千八百}{円}です', 'かばん|ごせんはっぴゃく|えん') + 'answer}。'+
-              '</div>'+
-              
-              '<div class="problem">'+
-                'Takeshi and Robert/Both 22-years old<br>'+
-                '{たけしさんはにじゅうにさいです|たけしさんは二十二歳です|answer}。<br><br><br>'+
-                '{ロバートさんもにじゅうにさいです|ロバートさんも二十二歳です|answer}。'+
-              '</div>'+
+              'Father/Japanese<br>'+
+              '{おとうさん|お父さん|answer}は{にほんじん|日本人|answer}です。'+
             '</div>'+
-            
+
             '<div>'+
-              '<div class="problem">'+
-                'Seoul and Tokyo/Both 07:00<br>'+
-                '{ソウルはしちじです|ソウルは七時です|answer}。<br><br><br>'+
-                '{とうきょうもしちじです|東京も七時です|' + Genki.getAlts('{東京}も{七時}です', 'とうきょう|しちじ') + 'answer}。'+
-              '</div>'+
-              
-              '<div class="problem">'+
-                'Food (in hand) and Food (far away)/Both vegetables<br>'+
-                '{これはやさいです|これは野菜です|answer}。<br><br><br>'+
-                '{あれもやさいです|あれも野菜です|answer}。'+
-              '</div>'+
-              
-              '<div class="problem">'+
-                'Robert and Naomi/Both University of London students<br>'+
-                '{ロバートさんはロンドンだいがくのがくせいです|ロバートさんはロンドン大学の学生です|' + Genki.getAlts('ロバートさんはロンドン{大学}の{学生}です', 'だいがく|がくせい') + 'answer}。<br><br><br>'+
-                '{ナオミさんもロンドンだいがくのがくせいです|ナオミさんもロンドン大学の学生です|' + Genki.getAlts('ナオミさんもロンドン{大学}の{学生}です', 'だいがく|がくせい') + 'answer}。'+
-              '</div>'+
+              'Mother/Japanese, too<br>'+
+              '{おかあさん|お母さん|answer}も{にほんじん|日本人|answer}です。'+
+            '</div>'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
+              'Mary/second year<br>'+
+              '{メアリーさんはにねんせいです|メアリーさんは二年生です|answer}。'+
+            '</div>'+
+
+            '<div>'+
+              'Masato/second year, too<br>'+
+              '{まさとさんもにねんせいです|まさとさんも二年生です|answer}。'+
+            '</div>'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
+              'Bag (in hand)/￥5,800<br>'+
+              '{このかばんはごせんはっぴゃくえんです|この鞄は五千八百円です|' + Genki.getAlts('この{鞄}は{五千八百}{円}です', 'かばん|ごせんはっぴゃく|えん') + 'answer}。'+
+            '</div>'+
+
+            '<div>'+
+              'Bag (far away)/￥5,800, too<br>'+
+              '{あのかばんもごせんはっぴゃくえんです|あの鞄も五千八百円です|' + Genki.getAlts('あの{鞄}も{五千八百}{円}です', 'かばん|ごせんはっぴゃく|えん') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
+              'Takeshi/22-years old<br>'+
+              '{たけしさんはにじゅうにさいです|たけしさんは二十二歳です|answer}。'+
+            '</div>'+
+
+            '<div>'+
+              'Robert/22-years old, too<br>'+
+              '{ロバートさんもにじゅうにさいです|ロバートさんも二十二歳です|answer}。'+
+            '</div>'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
+              'Seoul/07:00<br>'+
+              '{ソウルはしちじです|ソウルは七時です|answer}。'+
+            '</div>'+
+
+            '<div>'+
+              'Tokyo/07:00, too<br>'+
+              '{とうきょうもしちじです|東京も七時です|' + Genki.getAlts('{東京}も{七時}です', 'とうきょう|しちじ') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
+              'Food (in hand)/vegetable<br>'+
+              '{これはやさいです|これは野菜です|answer}。'+
+            '</div>'+
+
+            '<div>'+
+              'Food (far away)/vegetable, too<br>'+
+              '{あれもやさいです|あれも野菜です|answer}。'+
+            '</div>'+
+          '</div>'+
+          
+          '<div class="problem columns-2 inline-columns">'+
+            '<div>'+
+              'Robert/University of London student<br>'+
+              '{ロバートさんはロンドンだいがくのがくせいです|ロバートさんはロンドン大学の学生です|' + Genki.getAlts('ロバートさんはロンドン{大学}の{学生}です', 'だいがく|がくせい') + 'answer}。'+
+            '</div>'+
+
+            '<div>'+
+              'Naomi/University of London student, too<br>'+
+              '{ナオミさんもロンドンだいがくのがくせいです|ナオミさんもロンドン大学の学生です|' + Genki.getAlts('ナオミさんもロンドン{大学}の{学生}です', 'だいがく|がくせい') + 'answer}。'+
             '</div>'+
           '</div>'+
         '</div>'
