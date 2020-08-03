@@ -2578,6 +2578,7 @@ Genki.jisho = {
     { ja : '横書き|よこがき', en : 'horizontal writing', l : '読L23-漢字表' },
     { ja : '汚す|よごす', en : 'to make dirty', v : 'u', l : '会L18' },
     { ja : '横綱|よこづな', en : 'grand champion of sumo', l : '読L23-漢字表' },
+    { ja : '横浜|よこはま', en : 'Yokohama (city)', l : 'ワークブックL4' },
     { ja : '汚れる|よごれる', en : 'to become dirty', v : 'ru', l : '会L18' },
     { ja : '四時|よじ', en : "four o'clock", l : '会L1(e)' },
     { ja : '予習|よしゅう', en : 'preparation of lessons', l : '会L22' },

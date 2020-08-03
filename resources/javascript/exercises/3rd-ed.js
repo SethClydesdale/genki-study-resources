@@ -187,6 +187,8 @@ window.GenkiExercises = [
   'lesson-4/workbook-2|Workbook: Describing Where Things Are|p.42; I & II',
   'lesson-4/workbook-3|Workbook: Past Tense (Nouns)|p.43; I & II',
   'lesson-4/workbook-4|Workbook: Verb Conjugation (Past Tense)|p.44',
+  'lesson-4/workbook-5|Workbook: Past Tense (Verbs)|p.45; I & II',
+  'lesson-4/workbook-6|Workbook: も|p.46',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

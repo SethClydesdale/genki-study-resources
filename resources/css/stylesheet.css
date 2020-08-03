@@ -1674,11 +1674,30 @@ ruby rt {
   float:left;
 }
 
+.columns-2.inline-columns > * {
+  width:auto;
+  float:none;
+  display:inline-block;
+  margin-right:10px;
+}
+.problem.columns-2.inline-columns > * { margin-bottom:40px; }
+.problem.columns-2.inline-columns {
+  position:relative;
+  padding-left:30px;
+  margin:0;
+}
+
+.problem.columns-2.inline-columns:before {
+  position:absolute;
+  left:0px;
+}
+
+
 /* indentation */
 .indent-block { margin-left:20px; }
 
 /* section descriptions */
-p.section-desc {
+.section-desc, .sectionDesc3rd {
   font-weight:bold;
   margin:20px 0;
 }
@@ -1712,7 +1731,20 @@ p.section-desc {
   padding-right:2px;
   cursor:default;
 }
+
 .sectionNumber3rd.fa { letter-spacing:-4px; }
+
+.sectionDesc3rd { padding-left:28px; }
+.sectionDesc3rd .sectionNumber3rd { margin:0 6px 0 -28px; }
+
+.section-number, .sectionNumber3rd {
+  -webkit-touch-callout:none;
+    -webkit-user-select:none;
+     -khtml-user-select:none;
+       -moz-user-select:none;
+        -ms-user-select:none;
+            user-select:none;
+}
 
 /* counter for problems */
 .count-problems { counter-reset:problems; }
