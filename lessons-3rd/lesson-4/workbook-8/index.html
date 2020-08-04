@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workbook: Questions - Lesson 4 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Workbook: Questions - Lesson 4 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Workbook: Questions - Lesson 4 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Workbook: Questions - Lesson 4 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Answer the following questions in Japanese by translating the given cues.">
+    <meta property="og:description" content="Answer the following questions in Japanese by translating the given cues.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki I Workbook, page 48, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/lesson-4/workbook-8/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../" id="home-link" class="edition-icon third-ed">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="exercise" class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../" id="footer-home">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+        <li><a href="../../../donate/">Donate</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>
+    // for assigning the current day to problem #4
+    var genkiCurrentDay = new Date().getDay();
+    var genkiEnDay = ['Sun', 'Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur'][genkiCurrentDay],
+        genkiJpDay = ['日', '月', '火', '水', '木', '金', '土'][genkiCurrentDay],
+        genkiJpDayFuri = ['にち', 'げつ', 'か', 'すい', 'もく', 'きん', 'ど'][genkiCurrentDay];
+      
+    Genki.generateQuiz({
+      type : 'fill',
+      info : 'Answer the following questions in Japanese by translating the given cues.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd fa">&#xf054;</span>Answer the following questions in Japanese by translating the given cues.</p>'+
+        
+        '<div class="problem">'+
+          'あなたの<ruby>家<rt>いえ</rt></ruby>はどこですか。<br>'+
+          '(My house is in Osaka.)<br>'+
+          '{%(私の家は/)大阪です|%(わたしのいえは/)おおさかです|' + Genki.getAlts('{私}の{家}は{大阪}です', 'わたし|いえ|おおさか') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'あなたの<ruby>町<rt>まち</rt></ruby>に<ruby>本屋<rt>ほんや</rt></ruby>がありますか。<br>'+
+          '(No, there isn\'t a book store in my town.)<br>'+
+          '{いいえ、%(私の町に本屋が/)ありません|いいえ、%(わたしのまちにほんやが/)ありません|' + Genki.getAlts('いいえ、{私}の{町}に{本屋}がありません', 'わたし|まち|ほんや') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>猫<rt>ねこ</rt></ruby>／<ruby>犬<rt>いぬ</rt></ruby>がいますか。<ruby>名前<rt>なまえ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。<br>'+
+          '(Yes, I have a dog. It\'s name is ポチ.)<br>'+
+          '{はい、犬がいます。名前はポチです。|はい、いぬがいます。なまえはポチです。|' + Genki.getAlts('はい、{犬}がいます。{名前}はポチです。', 'いぬ|なまえ') + 'answer}'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>今日<rt>きょう</rt></ruby>は<ruby>何曜日<rt>なんようび</rt></ruby>ですか。<br>'+
+          '(Today is ' + genkiEnDay + 'day.)<br>'+
+          '{%(今日は/)' + genkiJpDay + '曜日です|%(きょうは/)' + genkiJpDayFuri + 'ようびです|' + Genki.getAlts('{今日}は{' + genkiJpDay + '曜日}です。', 'きょう|' + genkiJpDayFuri + 'ようび') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'きのう、だれと<ruby>晩ご飯<rt>ばんごはん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べましたか。<br>'+
+          '(I ate dinner with a friend.)<br>'+
+          '{友だちと晩ご飯を食べました|ともだちとばんごはんをたべました|' + Genki.getAlts('{友}{達}と{晩}ご{飯}を{食}べました', 'とも|だち|ばん|はん|た') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'きのう、<ruby>何時間<rt>なんじかん</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>しましたか。<br>'+
+          '(I studied for about 2 hours.)<br>'+
+          '{二時間ぐらい勉強しました|にじかんぐらいべんきょうしました|' + Genki.getAlts('{二時間}ぐらい{勉強}しました', 'にじかん|べんきょう') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>何曜日<rt>なんようび</rt></ruby>に<ruby>日本語<rt>にほんご</rt></ruby>のクラスがありますか。<br>'+
+          '(There are Japanese classes on Monday, Wednesday, and Friday.)<br>'+
+          '{月曜日と水曜日と金曜日に日本語のクラスがあります|げつようびとすいようびときんようびににほんごのクラスがあります|' + Genki.getAlts('{月曜日}と{水曜日}と{金曜日}に{日本語}のクラスがあります', 'げつようび|すいようび|きんようび|にほんご') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>先週<rt>せんしゅう</rt></ruby>の<ruby>週末<rt>しゅうまつ</rt></ruby>、<ruby>何<rt>なに</rt></ruby>をしましたか。<br>'+
+          '(I went to a restaurant with a friend.)<br>'+
+          '{友だちとレストランに行きました|ともだちとレストランにいきました|' + Genki.getAlts('{友}{達}とレストランに{行}きました', 'とも|だち|い') + 'answer}。'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
+  </body>
+</html>

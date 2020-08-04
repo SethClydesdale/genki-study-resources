@@ -165,6 +165,19 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 .left { text-align:left; }
 
 .ul { text-decoration:underline; }
+.ul-double {
+  text-decoration:underline;
+  position:relative; 
+}
+.ul-double:after {
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:2px;
+  border-bottom:1px solid #333;
+}
+
 .inline { display:inline-block; }
 
 /* text styles */
@@ -1421,6 +1434,13 @@ ruby rt {
   padding:0 2px;
 }
 
+/* for non-furigana use */
+.ruby-always-visible ruby {
+  display:inline-block !important;
+  position:relative !important;
+}
+.ruby-always-visible rt { display:block !important; }
+
 #quiz-info .furigana, #quiz-info .inline-furi i, #quiz-info ruby rt {
   color:#CCC;
   color:rgba(255, 255, 255, 0.6);
@@ -1674,20 +1694,19 @@ ruby rt {
   float:left;
 }
 
-.columns-2.inline-columns > * {
-  width:auto;
-  float:none;
+.inline-columns > * {
   display:inline-block;
-  margin-right:10px;
+  margin:0 10px 25px 0;
 }
-.problem.columns-2.inline-columns > * { margin-bottom:40px; }
-.problem.columns-2.inline-columns {
+
+.problem.inline-columns > * { margin-bottom:40px; }
+.problem.inline-columns {
   position:relative;
   padding-left:30px;
   margin:0;
 }
 
-.problem.columns-2.inline-columns:before {
+.problem.inline-columns:before {
   position:absolute;
   left:0px;
 }

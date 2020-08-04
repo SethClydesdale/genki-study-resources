@@ -67,7 +67,7 @@ input[type="text"]::placeholder, input[type="text"]:hover, input[type="number"]:
   border-color:#666;
 }
 
-.section-number {
+.section-number, .ul-double:after {
   border-color:#AAA;
 }
 
