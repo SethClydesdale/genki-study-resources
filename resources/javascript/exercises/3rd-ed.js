@@ -191,6 +191,7 @@ window.GenkiExercises = [
   'lesson-4/workbook-6|Workbook: も|p.46',
   'lesson-4/workbook-7|Workbook: ～時間・Particles|p.47; I & II',
   'lesson-4/workbook-8|Workbook: Questions|p.48',
+  'lesson-4/workbook-9|Workbook: Listening Comprehension|p.49; A, B, &amp; C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
