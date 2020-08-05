@@ -1065,13 +1065,22 @@
         }
       }
       
-      // debug mode
-      // logs certain things to the console for debugging
-      if (Genki.debug) {
-        for (var a = document.querySelectorAll('AUDIO'), i = 0, j = a.length; i < j; i++) {
+      // audio events
+      for (var a = document.querySelectorAll('AUDIO'), i = 0, j = a.length; i < j; i++) {
+        // pause all audio elements that are current playing and only plays the one that was just clicked
+        a[i].onplay = function () {
+          for (var a = document.querySelectorAll('AUDIO'), i = 0, j = a.length; i < j; i++) {
+            if (a[i] != this && !a[i].paused) {
+              a[i].pause();
+            }
+          }
+        };
+        
+        // logs time to console for debugging; mainly used for adding time stamps to the play buttons in listening exercises
+        if (Genki.debug) { // debug mode only
           a[i].ontimeupdate = function () {
             console.log(this.id, this.currentTime);
-          }
+          };
         }
       }
     },
@@ -2170,6 +2179,7 @@
     
     // plays the specific audio element
     playAudio : function (id, time) {
+      // play the targeted audio file
       var audio = document.getElementById(id);
       
       if (audio) {
