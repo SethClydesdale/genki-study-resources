@@ -106,7 +106,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       if (KanjiCanvas["canvas_" + id].dataset.guide == 'false') return;
       
       var font = KanjiCanvas["canvas_" + id].dataset.size ? KanjiCanvas["canvas_" + id].dataset.size : 175;
-      KanjiCanvas["ctx_" + id].font = font + "px " + (KanjiCanvas["canvas_" + id].dataset.font ? KanjiCanvas["canvas_" + id].dataset.font : 'Meiryo');
+      KanjiCanvas["ctx_" + id].font = font + "px " + (KanjiCanvas["canvas_" + id].dataset.font ? KanjiCanvas["canvas_" + id].dataset.font : "'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Arial, sans-serif");
       KanjiCanvas["ctx_" + id].textBaseline = "middle";
       KanjiCanvas["ctx_" + id].fillStyle = KanjiCanvas.darkMode ? "#222" : "#DDD";
       KanjiCanvas["ctx_" + id].fillText(KanjiCanvas["canvas_" + id].dataset.kanji, (KanjiCanvas["canvas_" + id].width / 2) - (font / 2), (KanjiCanvas["canvas_" + id].height / 2) + (KanjiCanvas.firefox ? font / (KanjiCanvas["canvas_" + id].dataset.kana == 'true' ? 12 : 6) : 0));

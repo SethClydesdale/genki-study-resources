@@ -192,6 +192,9 @@ window.GenkiExercises = [
   'lesson-4/workbook-7|Workbook: ～時間・Particles|p.47; I & II',
   'lesson-4/workbook-8|Workbook: Questions|p.48',
   'lesson-4/workbook-9|Workbook: Listening Comprehension|p.49; A, B, &amp; C',
+  'lesson-4/literacy-1|Kanji Practice: Readings|p.308-309',
+  'lesson-4/literacy-2|Kanji Practice: Meanings|p.308-309',
+  'lesson-4/literacy-3|Kanji Practice: Stroke Order|p.308-309',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

@@ -66,6 +66,8 @@
       
       kanji_readings_multi : 'Choose the correct readings for each kanji.',
       kanji_readings_drag : 'Match each kanji with their readings.',
+      kanji_yomikata : '</div><p class="text-block" style="margin:10px 0;">▶ indicates the <em>on-yomi</em> (pronunciation originally borrowed from Chinese).<br>▷ indicates the <em>kun-yomi</em> (native Japanese reading).</p>',
+      
       kanji_meanings_multi : 'Choose the correct meanings for each kanji.',
       kanji_meanings_drag : 'Match each kanji with their meanings.',
       
@@ -249,16 +251,27 @@
               }
               
               // formats kanji for readings quizzes
-              if (o.format == 'kanji' && o.readings) {
-                var i;
+              if (o.format == 'kanji') {
                 
-                // picks either index 0 (readings) or 1 (meanings)
-                for (i in o.quizlet) {
-                  o.quizlet[i] = o.quizlet[i].replace(/(On\:|Kun\:)/g, '<b>$1</b>');
+                // kanji readings modifications
+                if (o.readings) {
+                  var i;
+
+                  // add on and kun arrows to the readings
+                  for (i in o.quizlet) {
+                    var yomikata = o.quizlet[i].split('|');
+                    o.quizlet[i] = 
+                      (yomikata[0] ? '<span class="yomikata" title="on-yomi">▶</span>' + yomikata[0] + '<br>' : '')+
+                      (yomikata[1] ? '<span class="yomikata" title="kun-yomi">▷</span>' + yomikata[1] : '');
+                  }
+
+                  // add on/kun after the info box
+                  o.info += Genki.lang.kanji_yomikata;
                 }
                 
+                // special classes for kanji readings and meanings
                 if (o.type == 'drag') {
-                  document.getElementById('exercise').className += ' kanji-readings';
+                  document.getElementById('exercise').className += o.readings ? ' kanji-readings' : o.meanings ? ' kanji-meanings' : '';
                 }
               }
               
@@ -616,7 +629,7 @@
                 q[i].answers[n] = q[i].answers[n].slice(1);
               }
 
-              quiz += '<div class="quiz-multi-row"><div tabindex="0" class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this);">' + q[i].answers[n] + '</div></div>';
+              quiz += '<div class="quiz-multi-row"><div tabindex="0" class="quiz-multi-answer" data-answer="' + isAnswer + '" data-option="' + String.fromCharCode(option++) + '" onclick="Genki.progressQuiz(this);" onkeypress="event.key == \'Enter\' && Genki.progressQuiz(this);"><div class="quiz-answer-inner-text">' + q[i].answers[n] + '</div></div></div>';
               isAnswer = false;
 
               q[i].answers.splice(n, 1);
