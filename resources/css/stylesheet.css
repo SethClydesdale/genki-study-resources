@@ -814,17 +814,18 @@ footer li:first-child:before { display:none; }
   box-sizing:border-box;
 }
 
-/* kanji reading drag style */
-.kanji-readings.drag-quiz .quiz-answer-zone, .kanji-readings.drag-quiz .quiz-item {
+/* kanji reading/meanings drag style */
+.kanji-readings.drag-quiz .quiz-answer-zone, .kanji-readings.drag-quiz .quiz-item,
+.kanji-meanings.drag-quiz .quiz-answer-zone, .kanji-meanings.drag-quiz #question-list .quiz-item{
   height:48px;
 }
 
-.kanji-readings.drag-quiz #question-list .quiz-item {
+.kanji-readings.drag-quiz #question-list .quiz-item,
+.kanji-meanings.drag-quiz #question-list .quiz-item{
   line-height:44px;
   font-size:26px;
   padding:3px 10px;
 }
-
 
 /* review exercise button styles */
 #review-exercise { margin-top:10px; }
@@ -1495,6 +1496,11 @@ ruby rt {
             user-select:none;
 }
 
+.quiz-answer-inner-text {
+  display:inline-block;
+  text-align:left;
+}
+
 .text-selection-mode .quiz-multi-answer {
   cursor:text;
   outline:1px dashed #F60;
@@ -1756,7 +1762,8 @@ ruby rt {
 .sectionDesc3rd { padding-left:28px; }
 .sectionDesc3rd .sectionNumber3rd { margin:0 6px 0 -28px; }
 
-.section-number, .sectionNumber3rd {
+.yomikata { margin-right:5px; }
+.section-number, .sectionNumber3rd, .yomikata {
   -webkit-touch-callout:none;
     -webkit-user-select:none;
      -khtml-user-select:none;
