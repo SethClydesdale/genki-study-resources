@@ -195,6 +195,7 @@ window.GenkiExercises = [
   'lesson-4/literacy-1|Kanji Practice: Readings|p.308-309',
   'lesson-4/literacy-2|Kanji Practice: Meanings|p.308-309',
   'lesson-4/literacy-3|Kanji Practice: Stroke Order|p.308-309',
+  'lesson-4/literacy-4|Kanji Vocabulary: 日, 本, and 人|p.308',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

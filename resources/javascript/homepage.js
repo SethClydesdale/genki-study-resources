@@ -21,13 +21,19 @@
     // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
     msg : [
       {
+        date : '08/07/20',
+        content : 'We are now using GitHub Discussions (beta) to connect with the community! Have questions about the site or the material in Genki? Suggestions? Just want to chat? In Japanese perhaps? Head on over to <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/81">the forum</a> and join us!'
+      },
+      
+      
+      {
         date : '06/10/20',
         content : 'The 3rd Edition version of Genki Study Resources is now available and can be accessed <a href="' + getPaths() + 'lessons-3rd/">here</a>! I would like to thank everyone who took the time to answer the quick survey; your feedback was of great help for deciding on improvements for the 3rd edition resources!',
         edition : '2nd'
       },
       
       {
-        content : 'The 3rd Edition version of Genki Study Resources is currently under construction and will be expanded over time. You can follow updates to these resources via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">Github</a> or <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>. Furthermore, if you have any feedback regarding the 3rd edition resources, feel free to let me know <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVoqq2TrHtUR4t0DPo8lIUMwc7mudiRTUZ8ACoPzP3yP1-8A/viewform?usp=sf_link">here</a>. Thank you!',
+        content : 'The 3rd Edition version of Genki Study Resources is currently under construction and will be expanded over time. You can follow updates to these resources via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">Github</a> or <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>. Furthermore, if you have any feedback regarding the 3rd edition resources, feel free to let me know <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/83">here</a>. Thank you!',
         edition : '3rd'
       },
       
