@@ -49,7 +49,7 @@ Shortcuts that can only be used in exercises.
 
 
 ### Suggestions, Feedback, Bug Reports
-If you have any suggestions, feedback, questions, or bugs to report, feel free to [open a new issue](https://github.com/SethClydesdale/genki-study-resources/issues) in this repository. For alternative contact methods, please see the [report page](https://sethclydesdale.github.io/genki-study-resources/report/) for Genki Study Resources.
+If you have any suggestions, feedback, questions, or bugs to report, feel free to [open a new discussion](https://github.com/SethClydesdale/genki-study-resources/discussions) in this repository. For alternative contact methods and detailed reporting information, please see the [report page](https://sethclydesdale.github.io/genki-study-resources/report/) for Genki Study Resources.
 
 
 ### Resources for Studying Japanese
