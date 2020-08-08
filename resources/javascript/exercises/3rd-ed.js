@@ -196,6 +196,13 @@ window.GenkiExercises = [
   'lesson-4/literacy-2|Kanji Practice: Meanings|p.308-309',
   'lesson-4/literacy-3|Kanji Practice: Stroke Order|p.308-309',
   'lesson-4/literacy-4|Kanji Vocabulary: 日, 本, and 人|p.308',
+  'lesson-4/literacy-5|Kanji Vocabulary: 月 and 火|p.308',
+  'lesson-4/literacy-6|Kanji Vocabulary: 水, 木, and 金|p.308',
+  'lesson-4/literacy-7|Kanji Vocabulary: 土, 曜, and 上|p.309',
+  'lesson-4/literacy-8|Kanji Vocabulary: 下, 中, and 半|p.309',
+  'lesson-4/literacy-9|Kanji Practice: Days of the Week|p.310; I-A',
+  'lesson-4/literacy-10|Kanji Practice: Location Words|p.310; I-B',
+  'lesson-4/literacy-11|Reading Practice: おかあさんへのメモ|p.310; II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
