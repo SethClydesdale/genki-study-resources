@@ -179,6 +179,7 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 }
 
 .inline { display:inline-block; }
+.t-valign-top { vertical-align:top; }
 
 /* text styles */
 .t-red { color:#F00; }
@@ -669,6 +670,11 @@ a.jump-arrow:hover, a.jump-arrow:focus { color:#C30; }
   border:1px dashed #CCC;
 }
 
+.lesson-summary .inline-columns > * {
+  margin-right:50px;
+  margin-bottom:0;
+}
+
 .lesson-summary:before {
   content:"In this lesson, we will learn how to...";
   font-weight:bold;
@@ -727,9 +733,9 @@ footer li:first-child:before { display:none; }
 
 .drawing-quiz .quiz-item {
   font-size:80px;
-  height:100px;
-  width:100px;
-  line-height:100px;
+  height:110px;
+  width:110px;
+  line-height:110px;
   box-sizing:border-box;
   margin:0 auto;
 }
@@ -737,7 +743,7 @@ footer li:first-child:before { display:none; }
 .drawing-quiz .stroke-order-button {
   margin:0;
   padding:0;
-  width:100px;
+  width:110px;
   height:25px;
 }
 
@@ -2587,7 +2593,7 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   }
 }
 
-@media (max-width:850px) {
+@media (max-width:930px) {
   /* drawing quiz responsiveness */
   .drawing-quiz .drawing-zone {
     width:auto !important;
@@ -2627,6 +2633,10 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   .columns-2 > *, .dictionary-group {
     float:none;
     width:100%;
+  }
+  
+  .inline-columns > *, .lesson-summary .inline-columns > * {
+    margin-right:0;
   }
   
   .dictionary-group { margin:0; }
