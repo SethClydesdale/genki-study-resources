@@ -203,6 +203,9 @@ window.GenkiExercises = [
   'lesson-4/literacy-9|Kanji Practice: Days of the Week|p.310; I-A',
   'lesson-4/literacy-10|Kanji Practice: Location Words|p.310; I-B',
   'lesson-4/literacy-11|Reading Practice: おかあさんへのメモ|p.310; II',
+  'lesson-4/literacy-12|Reading Practice: メアリーさんのしゅうまつ|p.311; III',
+  'lesson-4/literacy-wb-1|Workbook: Kanji Writing Practice|p.135',
+  'lesson-4/literacy-wb-2|Workbook: Using Kanji|p.136; I, II, & III',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
