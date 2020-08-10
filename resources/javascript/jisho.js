@@ -296,6 +296,7 @@ Genki.jisho = {
     { ja : '海老フライ|えびフライ', en : 'deep-fried prawns/shrimp', l : '会L8(c)' },
     { ja : '絵馬|えま', en : 'Ema (Shinto); wooden prayer/wish plaque', l : '会L21(c)' },
     { ja : '選ぶ|えらぶ', en : 'to choose; to select', v : 'u', l : '会L17' },
+    { ja : 'Lサイズ|エルサイズ', en : 'L size; large size', l : '会L5' },
     { ja : 'エレベーター', en : 'elevator; lift', l : 'ワークブック読L4' },
     { ja : '円|えん', en : 'yen; circle', l : '会L2, 読L3-漢字表' },
     { ja : '円高|えんだか', en : 'strong yen', l : '読L3-漢字表' },
