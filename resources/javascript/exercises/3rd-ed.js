@@ -207,6 +207,13 @@ window.GenkiExercises = [
   'lesson-4/literacy-wb-1|Workbook: Kanji Writing Practice|p.135',
   'lesson-4/literacy-wb-2|Workbook: Using Kanji|p.136; I, II, & III',
   
+  // Lesson 5
+  'lesson-5/vocab-1|Vocabulary: Nouns|p.130',
+  'lesson-5/vocab-2|Vocabulary: い-adjectives|p.130-131',
+  'lesson-5/vocab-3|Vocabulary: な-adjectives|p.131',
+  'lesson-5/vocab-4|Vocabulary: U-verbs and Ru-verbs|p.131',
+  'lesson-5/vocab-5|Vocabulary: Adverbs and Other Expressions|p.131',
+  
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
