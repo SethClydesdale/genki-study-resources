@@ -1650,7 +1650,7 @@ ruby rt {
 .text-block p { margin:0 0 25px 0; }
 .audio-block { margin:25px 0 25px 0; }
 .fill-quiz .inner-problem { display:inline-block; }
-.fill-quiz .problem, .fill-quiz .big-margin { margin-bottom:40px; }
+.fill-quiz .problem, .fill-quiz .example-problem, .fill-quiz .big-margin { margin-bottom:40px; }
 .fill-quiz .small-margin .problem, .fill-quiz .small-margin .block { margin-bottom:25px; }
 .fill-quiz .no-margin .problem, .fill-quiz .no-margin .block { margin-bottom:0px; }
 .fill-quiz .inline-problem .problem, .fill-quiz .inline-problem .block {
@@ -1783,6 +1783,19 @@ ruby rt {
 .count-problems .problem:before {
   counter-increment:problems;
   content:counter(problems) ".";
+  margin-right:6px;
+  vertical-align:top;
+}
+
+.example-problem:before {
+  content:"Example";
+  color:#F60;
+  border:1px solid #F60;
+  border-radius:5px;
+  padding:2px;
+  font-size:12px;
+  line-height:12px;
+  display:inline-block;
   margin-right:6px;
   vertical-align:top;
 }
