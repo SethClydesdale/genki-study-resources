@@ -214,6 +214,8 @@ window.GenkiExercises = [
   'lesson-5/vocab-4|Vocabulary: U-verbs and Ru-verbs|p.131',
   'lesson-5/vocab-5|Vocabulary: Adverbs and Other Expressions|p.131',
   'lesson-5/grammar-1|Practice: Adjective Conjugation (Present Affirmative)|p.138; I-A',
+  'lesson-5/grammar-2|Practice: Adjective Conjugation (Present Negative)|p.139; I-B',
+  'lesson-5/grammar-3|Practice: Adjectives (Present Tense) 1|p.139; I-C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
