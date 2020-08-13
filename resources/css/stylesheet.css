@@ -1711,14 +1711,15 @@ ruby rt {
   margin:0 10px 30px 0;
 }
 
-.problem.inline-columns > * { margin-bottom:40px; }
-.problem.inline-columns {
+.problem.inline-columns > *, .example-problem.inline-columns > * { margin-bottom:40px; }
+.problem.inline-columns, .example-problem.inline-columns {
   position:relative;
   padding-left:30px;
   margin:0;
 }
+.example-problem.inline-columns { padding-left:62px; }
 
-.problem.inline-columns:before {
+.problem.inline-columns:before, .example-problem.inline-columns:before {
   position:absolute;
   left:0px;
 }

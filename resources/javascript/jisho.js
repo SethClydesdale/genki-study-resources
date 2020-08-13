@@ -2133,7 +2133,7 @@ Genki.jisho = {
     { ja : '皮肉|ひにく', en : 'irony; sarcasm; cynicism; satire', l : 'ワークブック読L1' },
     { ja : '皮膚|ひふ', en : 'skin', l : 'ワークブック読L1' },
     { ja : '皮膚科|ひふか', en : 'dermatologist', l : '会L12(e)' },
-    { ja : '暇|ひま（な）', en : 'not busy; to have a lot of free time', l : '会L5' },
+    { ja : '暇|ひま（な）', en : 'not busy; free time; spare time', l : '会L5' },
     { ja : '秘密|ひみつ', en : 'secret', l : '読L16-II, 会L17' },
     { ja : '百|ひゃく', en : 'hundred', l : '読L3-漢字表' },
     { ja : '百円|ひゃくえん', en : 'one hundred yen', l : '読L3-漢字表' },
