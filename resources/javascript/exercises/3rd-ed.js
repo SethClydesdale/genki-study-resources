@@ -217,6 +217,9 @@ window.GenkiExercises = [
   'lesson-5/grammar-2|Practice: Adjective Conjugation (Present Negative)|p.139; I-B',
   'lesson-5/grammar-3|Practice: Adjectives (Present Tense) 1|p.139; I-C',
   'lesson-5/grammar-4|Practice: Adjectives (Present Tense) 2|p.139; I-D',
+  'lesson-5/grammar-5|Practice: Adjective Conjugation (Past Affirmative)|p.140; II-A',
+  'lesson-5/grammar-6|Practice: Adjective Conjugation (Past Negative)|p.140; II-B',
+  'lesson-5/grammar-7|Practice: Adjectives (Past Tense)|p.140; II-C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
