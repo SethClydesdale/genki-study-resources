@@ -1502,7 +1502,7 @@ ruby rt {
             user-select:none;
 }
 
-.quiz-answer-inner-text {
+.quiz-answer-inner-text, .quiz-question-inner-text {
   display:inline-block;
   text-align:left;
 }

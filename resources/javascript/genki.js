@@ -294,7 +294,7 @@
                   
                   // push the question data
                   quizlet.push({
-                    question : (o.format == 'kanji' ? '<div class="big-kanji">' : '') + def[0] + (o.format == 'kanji' ? '</div>' : '') + (def[1] ? '<div class="furigana">' + def[1] + '</div>' : ''),
+                    question : (def[1] ? '<ruby>' : o.format == 'kanji' ? '<div class="big-kanji">' : '') + def[0] + (def[1] ? '<rt>' + def[1] + '</rt></ruby>' : o.format == 'kanji' ? '</div>' : ''),
                     answers : ['A' + currentAnswer]
                   });
                   
@@ -598,13 +598,13 @@
 
         // create individual blocks for each question and hide them until later
         for (; i < j; i++) {
-          quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + (typeof q[i].question != 'undefined' ? q[i].question.replace(/\{.*?\}/g, function (match) {
+          quiz += '<div id="quiz-q' + i + '" class="question-block" data-qid="' + (i + 1) + '" style="display:none;"><div class="quiz-multi-question">' + (o.questionsAlignLeft ? '<div class="quiz-question-inner-text">' : '') + (typeof q[i].question != 'undefined' ? q[i].question.replace(/\{.*?\}/g, function (match) {
             var data = match.slice(1, match.length - 1).split('|');
           
             if (data[0] == '!IMG') {
               return Genki.parse.image(data);
             }
-          }) : '<div class="text-passage' + (q[i].vertical ? ' vertical-text' : '') + '" ' + (q[i].text.replace(/<br>/g, '').length < 50 ? 'style="text-align:center;"' : '') + '>' + q[i].text + '</div>' + (q[i].helper || '')) + '</div>';
+          }) : '<div class="text-passage' + (q[i].vertical ? ' vertical-text' : '') + '" ' + (q[i].text.replace(/<br>/g, '').length < 50 ? 'style="text-align:center;"' : '') + '>' + q[i].text + '</div>' + (q[i].helper || '')) + (o.questionsAlignLeft ? '</div>' : '') + '</div>';
 
           // ready-only questions contain text only, no answers
           if (q[i].text) {
