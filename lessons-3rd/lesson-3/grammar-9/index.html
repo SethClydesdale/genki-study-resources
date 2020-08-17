@@ -90,7 +90,7 @@
         [
           // MULTIPLE CHOICE
           {
-            question : 'Q：<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みますか。<br>A：no, not often',
+            question : 'Q：<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みますか。<br>A：no, not much',
             answers : [
               'Aいいえ、あまり<ruby>読<rt>よ</rt></ruby>みません。',
               'いいえ、あまり<ruby>読<rt>よ</rt></ruby>みます。',
@@ -130,7 +130,7 @@
           },
           
           {
-            question : 'Q：<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ますか。<br>A：no, not often',
+            question : 'Q：<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ますか。<br>A：no, not much',
             answers : [
               'Aいいえ、あまり<ruby>見<rt>み</rt></ruby>ません。',
               'いいえ、あまり<ruby>見<rt>み</rt></ruby>ます。',
@@ -172,33 +172,42 @@
         
         
         // WRITTEN
-        '<table class="table center" style="width:200px;margin:0 auto;">'+
-          '<tr>'+
-            '<td>'+
-              '<ruby>毎日<rt>まいにち</rt></ruby><br>'+
-              'よく<br>'+
-              'ときどき'+
-            '</td>'+
+        '<div class="columns-2 clear">'+
+          '<div>'+
+            '<div class="example-problem">'+
+              '<div class="inner-problem">'+
+                'Q：<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みますか。<br>A：no, not much<br>'+
+                'いいえ、{あまり}{読み|よみ|answer}ません。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+          
+          '<div>'+
+            '<table class="table center" style="width:200px;margin:0 auto;">'+
+              '<tr>'+
+                '<td>'+
+                  '<ruby>毎日<rt>まいにち</rt></ruby><br>'+
+                  'よく<br>'+
+                  'ときどき'+
+                '</td>'+
 
-            '<td>～ます</td>'+
-          '</tr>'+
+                '<td>～ます</td>'+
+              '</tr>'+
 
-          '<tr>'+
-            '<td>'+
-              'あまり<br>'+
-              'ぜんぜん'+
-            '</td>'+
+              '<tr>'+
+                '<td>'+
+                  'あまり<br>'+
+                  'ぜんぜん'+
+                '</td>'+
 
-            '<td>～ません</td>'+
-          '</tr>'+
-        '</table><br>'+
+                '<td>～ません</td>'+
+              '</tr>'+
+            '</table>'+
+          '</div>'+
+        '</div>'+
+        
         '<div class="count-problems columns-2 clear">'+
           '<div>'+
-            '<div class="problem">'+
-              '<div class="inner-problem">Q：<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みますか。<br>A：no, not often</div><br>'+
-              'いいえ、{あまり}{読みません|よみません|answer}。'+
-            '</div>'+
-            
             '<div class="problem">'+
               '<div class="inner-problem">Q：スポーツをしますか。<br>A：yes, often</div><br>'+
               '{はい、よくします}。'+
@@ -213,14 +222,14 @@
               '<div class="inner-problem">Q：コンビに<ruby>行<rt>い</rt></ruby>きますか。<br>A：yes, sometimes</div><br>'+
               '{はい、ときどき行きます|はい、ときどきいきます|' + Genki.getAlts('はい、{ときどき}{行}きます', '時々|い') + 'answer}。'+
             '</div>'+
+        
+            '<div class="problem">'+
+              '<div class="inner-problem">Q：<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ますか。<br>A：no, not much</div><br>'+
+              '{いいえ、あまり見ません|いいえ、あまりみません|answer}。'+
+            '</div>'+
           '</div>'+
 
           '<div>'+
-            '<div class="problem">'+
-              '<div class="inner-problem">Q：<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ますか。<br>A：no, not often</div><br>'+
-              '{いいえ、あまり見ません|いいえ、あまりみません|answer}。'+
-            '</div>'+
-            
             '<div class="problem">'+
               '<div class="inner-problem">Q：コーヒーを<ruby>飲<rt>の</rt></ruby>みますか。<br>A：yes, every day</div><br>'+
               '{はい、毎日飲みます|はい、まいにちのみます|' + Genki.getAlts('はい、{毎日}{飲}みます', 'まいにち|の') + 'answer}。'+

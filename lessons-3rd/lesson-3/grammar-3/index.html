@@ -151,13 +151,15 @@
         
         
         // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'ハンバーガーを<ruby>食<rt>た</rt></ruby>べます／マクドナルド<br>'+
+            '{マクドナルド|place|width:98}で{ハンバーガー|noun|width:98}を{食べます|たべます|answer;hint:verb}。'+
+          '</div>'+
+        '</div>'+
+        
         '<div class="count-problems columns-2 clear">'+
           '<div>'+
-            '<div class="problem">'+
-              'ハンバーガーを<ruby>食<rt>た</rt></ruby>べます／マクドナルド<br>'+
-              '{マクドナルド}で{ハンバーガー}を{食べます|たべます|answer}。'+
-            '</div>'+
-            
             '<div class="problem">'+
               '<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>きます／うち<br>'+
               '{うちで音楽を聞きます|うちでおんがくをききます|' + Genki.getAlts('{うち}で{音楽}を{聞}きます', '家|おんがく|き') + 'answer}。'+
@@ -172,14 +174,14 @@
               '<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>します／<ruby>大学<rt>だいがく</rt></ruby><br>'+
               '{大学で日本語を話します|だいがくでにほんごをはなします|' + Genki.getAlts('{大学}で{日本語}を{話}します', 'だいがく|にほんご|はな') + 'answer}。'+
             '</div>'+
-          '</div>'+
-
-          '<div>'+
+        
             '<div class="problem">'+
               '<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます／<ruby>図書館<rt>としょかん</rt></ruby><br>'+
               '{図書館で雑誌を読みます|としょかんでざっしをよみます|' + Genki.getAlts('{図書館}で{雑誌}を{読}みます', 'としょかん|ざっし|よ') + 'answer}。'+
             '</div>'+
-            
+          '</div>'+
+
+          '<div>'+
             '<div class="problem">'+
               'テレビを<ruby>見<rt>み</rt></ruby>ます／うち<br>'+
               '{うちでテレビを見ます|うちでテレビをみます|' + Genki.getAlts('{うち}でテレビを{見}ます', '家|み') + 'answer}。'+
