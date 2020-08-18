@@ -224,6 +224,10 @@ window.GenkiExercises = [
   'lesson-5/grammar-9|Practice: Adjectives (Noun Modification) 1|p.141; III-A',
   'lesson-5/grammar-10|Practice: Adjectives (Noun Modification) 2|p.142; III-B',
   'lesson-5/grammar-11|Practice: 好き(な)／きらい(な) 1|p.142; IV-A',
+  'lesson-5/grammar-12|Practice: 好き(な)／きらい(な) 2|p.143; IV-B',
+  'lesson-5/grammar-13|Practice: ～ましょう|p.143; V-A',
+  'lesson-5/culture-1|Culture Note: Japanese Festivals|p.145',
+  'lesson-5/workbook-1|Workbook: Adjective Conjugation (Present Tense)|p.50',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

@@ -191,86 +191,88 @@
         
         
         // WRITTEN
-        '<div class="count-problems">'+
-          '<table class="table center">'+
-            '<tr style="font-weight:bold">'+
-              '<td></td>'+
-              '<td>メアリー・ハート<br><small>Hart, Mary</small></td>'+
-              '<td>きむら　たけし<br><small>Kimura Takeshi</small></td>'+
-              '<td>ソラ・キム<br><small>Kim, Sora</small></td>'+
-              '<td>ロバート・スミス<br><small>Smith, Robert</small></td>'+
-              '<td>やましたせんせい<br><small>Yamashita sensei</small></td>'+
-            '</tr>'+
+        '<table class="table center">'+
+          '<tr style="font-weight:bold">'+
+            '<td></td>'+
+            '<td>メアリー・ハート<br><small>Hart, Mary</small></td>'+
+            '<td>きむら　たけし<br><small>Kimura Takeshi</small></td>'+
+            '<td>ソラ・キム<br><small>Kim, Sora</small></td>'+
+            '<td>ロバート・スミス<br><small>Smith, Robert</small></td>'+
+            '<td>やましたせんせい<br><small>Yamashita sensei</small></td>'+
+          '</tr>'+
 
-            '<tr>'+
-              '<td style="font-weight:bold">School</td>'+
-              '<td>University of Arizona<br><small>(アリゾナ)</small></td>'+
-              '<td>Sakura University<br><small>(さくら)</small></td>'+
-              '<td>Seoul University<br><small>(ソウル)</small></td>'+
-              '<td>University of London<br><small>(ロンドン)</small></td>'+
-              '<td>Sakura University<br><small>(さくら)</small></td>'+
-            '</tr>'+
+          '<tr>'+
+            '<td style="font-weight:bold">School</td>'+
+            '<td>University of Arizona<br><small>(アリゾナ)</small></td>'+
+            '<td>Sakura University<br><small>(さくら)</small></td>'+
+            '<td>Seoul University<br><small>(ソウル)</small></td>'+
+            '<td>University of London<br><small>(ロンドン)</small></td>'+
+            '<td>Sakura University<br><small>(さくら)</small></td>'+
+          '</tr>'+
 
-            '<tr>'+
-              '<td style="font-weight:bold">Major</td>'+
-              '<td>Japanese</td>'+
-              '<td>history<br><small>(れきし)</small></td>'+
-              '<td>computer<br><small>(コンピューター)</small></td>'+
-              '<td>business<br><small>(ビジネス)</small></td>'+
-              '<td>(Japanese teacher)</td>'+
-            '</tr>'+
-          '</table><br>'+
+          '<tr>'+
+            '<td style="font-weight:bold">Major</td>'+
+            '<td>Japanese</td>'+
+            '<td>history<br><small>(れきし)</small></td>'+
+            '<td>computer<br><small>(コンピューター)</small></td>'+
+            '<td>business<br><small>(ビジネス)</small></td>'+
+            '<td>(Japanese teacher)</td>'+
+          '</tr>'+
+        '</table><br>'+
 
-          '<div class="columns-2 clear">'+
-            '<div>'+
-              '<h3>School</h3>'+
-              '<div class="problem">'+
+        '<div class="columns-2 clear">'+
+          '<div class="count-problems">'+
+            '<h3>School</h3>'+
+            '<div class="example-problem">'+
+              '<div class="inner-problem">'+
                 'メアリーさん<br>'+
-                '{メアリーさん}は{アリゾナ}{だいがく|大学|answer}の{がくせい|学生|answer}です。'+
-              '</div>'+
-        
-              '<div class="problem">'+
-                'たけしさん<br>'+
-                '{たけしさんはさくらだいがくのがくせいです|たけしさんはさくら大学の学生です|' + Genki.getAlts('たけしさんは{桜}{大学}の{学生}です', 'さくら|だいがく|がくせい') + 'answer}。'+
-              '</div>'+
-        
-              '<div class="problem">'+
-                'ソラさん<br>'+
-                '{ソラさんはソウルだいがくのがくせいです|ソラさんはソウル大学の学生です|' + Genki.getAlts('ソラさんはソウル{大学}の{学生}です', 'だいがく|がくせい') + 'answer}。'+
-              '</div>'+
-        
-              '<div class="problem">'+
-                'ロバートさん<br>'+
-                '{ロバートさんはロンドンだいがくのがくせいです|ロバートさんはロンドン大学の学生です|' + Genki.getAlts('ロバートさんはロンドン{大学}の{学生}です', 'だいがく|がくせい') + 'answer}。'+
-              '</div>'+
-        
-              '<div class="problem">'+
-                'やましたせんせい<br>'+
-                '{やましたせんせいはさくらだいがくのせんせいです|山下先生はさくら大学の先生です|' + Genki.getAlts('{山下}{先生}は{桜}{大学}の{先生}です', 'やました|せんせい|さくら|だいがく|せんせい') + 'answer}。'+
+                '{メアリーさん}は{アリゾナ|Arizona}{だいがく|大学|answer;hint:University}の{がくせい|学生|answer;hint:student}です。'+
               '</div>'+
             '</div>'+
 
-            '<div>'+
-              '<h3>Major</h3>'+
-              '<div class="problem">'+
+            '<div class="problem">'+
+              'たけしさん<br>'+
+              '{たけしさんはさくらだいがくのがくせいです|たけしさんはさくら大学の学生です|' + Genki.getAlts('たけしさんは{桜}{大学}の{学生}です', 'さくら|だいがく|がくせい') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'ソラさん<br>'+
+              '{ソラさんはソウルだいがくのがくせいです|ソラさんはソウル大学の学生です|' + Genki.getAlts('ソラさんはソウル{大学}の{学生}です', 'だいがく|がくせい') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'ロバートさん<br>'+
+              '{ロバートさんはロンドンだいがくのがくせいです|ロバートさんはロンドン大学の学生です|' + Genki.getAlts('ロバートさんはロンドン{大学}の{学生}です', 'だいがく|がくせい') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'やましたせんせい<br>'+
+              '{やましたせんせいはさくらだいがくのせんせいです|山下先生はさくら大学の先生です|' + Genki.getAlts('{山下}{先生}は{桜}{大学}の{先生}です', 'やました|せんせい|さくら|だいがく|せんせい') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="count-problems">'+
+            '<h3>Major</h3>'+
+            '<div class="example-problem">'+
+              '<div class="inner-problem">'+
                 'メアリーさん<br>'+
-                '{メアリーさん}の{せんこう|専攻|answer}は{にほんご|日本語|answer}です。'+
+                '{メアリーさん}の{せんこう|専攻|answer;hint:major}は{にほんご|日本語|answer;hint:Japanese}です。'+
               '</div>'+
-        
-              '<div class="problem">'+
-                'たけしさん<br>'+
-                '{たけしさんのせんこうはれきしです|たけしさんの専攻は歴史です|' + Genki.getAlts('たけしさんの{専攻}は{歴史}です', 'せんこう|れきし') + 'answer}。'+
-              '</div>'+
-        
-              '<div class="problem">'+
-                'ソラさん<br>'+
-                '{ソラさんのせんこうはコンピューターです|ソラさんの専攻はコンピューターです|answer}。'+
-              '</div>'+
-        
-              '<div class="problem">'+
-                'ロバートさん<br>'+
-                '{ロバートさんのせんこうはビジネスです|ロバートさんの専攻はビジネスです|answer}。'+
-              '</div>'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'たけしさん<br>'+
+              '{たけしさんのせんこうはれきしです|たけしさんの専攻は歴史です|' + Genki.getAlts('たけしさんの{専攻}は{歴史}です', 'せんこう|れきし') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'ソラさん<br>'+
+              '{ソラさんのせんこうはコンピューターです|ソラさんの専攻はコンピューターです|answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'ロバートさん<br>'+
+              '{ロバートさんのせんこうはビジネスです|ロバートさんの専攻はビジネスです|answer}。'+
             '</div>'+
           '</div>'+
         '</div>'

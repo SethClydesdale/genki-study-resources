@@ -2690,7 +2690,7 @@ Genki.jisho = {
     { ja : '六甲山|ろっこうさん', en : 'Mt. Rokko', l : 'ワークブックL17' },
     { ja : '六百|ろっぴゃく', en : 'six hundred', l : '読L3-漢字表' },
     { ja : '六分|ろっぷん', en : 'six minutes', l : '会L1(e)' },
-    { ja : 'ロック', en : 'lock; rock', l : '読L17-II' },
+    { ja : 'ロック', en : 'lock; rock (music)', l : '読L17-II' },
     { ja : 'ロックバンド', en : 'rock band', l : '読L17-II' },
     { ja : 'ロボット', en : 'robot', l : '読L16-II' },
     { ja : 'ロンドン', en : 'London', l : 'ワークブックL1' }

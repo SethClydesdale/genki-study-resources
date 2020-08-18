@@ -33,19 +33,19 @@ Shortcuts that can be used anywhere.
 
 | Shortcut | Description |
 | -------- | ----------- |
-| CTRL+ALT+D | Toggle Dark Mode on/off |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>D</kbd> | Toggle Dark Mode on/off |
 
 #### Exercises
 Shortcuts that can only be used in exercises.
 
 | Shortcut | Description |
 | -------- | ----------- |
-| CTRL+ALT+LEFT | Navigate to the previous exercise in the lesson |
-| CTRL+ALT+RIGHT | Navigate to the next exercise in the lesson |
-| CTRL+ALT+R | Navigate to a random exercise |
-| CTRL+ALT+E | Open/Close the Exercise List |
-| CTRL+ALT+Q | Open/Close the Quick Dictionary |
-| CTRL+ALT+F | Toggle Furigana on/off |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>LEFT</kbd> | Navigate to the previous exercise in the lesson |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>RIGHT</kbd> | Navigate to the next exercise in the lesson |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>R</kbd> | Navigate to a random exercise |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>E</kbd> | Open/Close the Exercise List |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Q</kbd> | Open/Close the Quick Dictionary |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>F</kbd> | Toggle Furigana on/off |
 
 
 ### Suggestions, Feedback, Bug Reports
