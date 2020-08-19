@@ -822,7 +822,7 @@ footer li:first-child:before { display:none; }
 
 /* kanji reading/meanings drag style */
 .kanji-readings.drag-quiz .quiz-answer-zone, .kanji-readings.drag-quiz .quiz-item,
-.kanji-meanings.drag-quiz .quiz-answer-zone, .kanji-meanings.drag-quiz #question-list .quiz-item{
+.kanji-meanings.drag-quiz .quiz-answer-zone, .kanji-meanings.drag-quiz #question-list .quiz-item {
   height:48px;
 }
 
