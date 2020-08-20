@@ -820,6 +820,28 @@ footer li:first-child:before { display:none; }
   box-sizing:border-box;
 }
 
+/* horizontal mode for drag and drop */
+.vocab-horizontal #drop-list { display:none; }
+.vocab-horizontal #answer-list, .vocab-horizontal #question-list { float:none; }
+.vocab-horizontal #question-list { margin-bottom:30px; }
+
+.vocab-horizontal #answer-list .quiz-item { display:inline-block; }
+.vocab-horizontal .quiz-item-group {
+  display:inline-block;
+  vertical-align:top;
+  width:20%;
+}
+
+/* answer zone size */
+.drag-quiz .vocab-horizontal .quiz-answer-zone, .vocab-horizontal #answer-list .quiz-item { min-width:100px; }
+.vocab-horizontal #answer-list .quiz-item { text-align:center; }
+
+.vocab-horizontal .quiz-answer-zone .quiz-item { margin:0 }
+.vocab-horizontal .quiz-answer-zone { margin:3px }
+
+/* furigana offset for furigana-less items */
+.vocab-horizontal.helper-present #question-list .quiz-item { margin-bottom:18px; }
+
 /* kanji reading/meanings drag style */
 .kanji-readings.drag-quiz .quiz-answer-zone, .kanji-readings.drag-quiz .quiz-item,
 .kanji-meanings.drag-quiz .quiz-answer-zone, .kanji-meanings.drag-quiz #question-list .quiz-item {
@@ -827,7 +849,7 @@ footer li:first-child:before { display:none; }
 }
 
 .kanji-readings.drag-quiz #question-list .quiz-item,
-.kanji-meanings.drag-quiz #question-list .quiz-item{
+.kanji-meanings.drag-quiz #question-list .quiz-item {
   line-height:44px;
   font-size:26px;
   padding:3px 10px;
@@ -1047,11 +1069,14 @@ footer li:first-child:before { display:none; }
 }
 
 .answer-correct { pointer-events:none; }
-.answer-correct .quiz-item:before {
+.quiz-over.drag-quiz .answer-correct, .review-mode .answer-correct { pointer-events:auto; }
+
+.answer-correct .quiz-item:before, .drag-quiz .answer-correct .quiz-item-text:before {
   content:"\f005\A0";
   font-family:FontAwesomeWeb, FontAwesome;
   color:#F60;
 }
+.drag-quiz .answer-correct .quiz-item:before { content:""; }
 
 .quiz-over [data-mistakes] { position:relative; }
 .quiz-over [data-mistakes] .quiz-item { border-color:#F00; }
@@ -1066,6 +1091,16 @@ footer li:first-child:before { display:none; }
   right:-85px;
 }
 
+.quiz-over .vocab-horizontal [data-mistakes]:after {
+  content:"x" attr(data-mistakes);
+  font-size:10px;
+  font-weight:bold;
+  right:3px;
+  top:auto;
+  bottom:-2px;
+}
+.quiz-over .vocab-horizontal [data-mistakes="0"]:after { content:""; }
+
 #wrongAnswer { position:relative; }
 #wrongAnswer:before {
   content:"\f00d\A0 wrong";
@@ -1075,6 +1110,11 @@ footer li:first-child:before { display:none; }
   position:absolute;
   right:-70px;
   pointer-events:none;
+}
+
+.vocab-horizontal #wrongAnswer:before {
+  right:auto;
+  left:3px;
 }
 
 .kana-quiz #wrongAnswer:before {
@@ -1250,22 +1290,36 @@ footer li:first-child:before { display:none; }
 }
 
 /* overflow scrollbar (none/transparents are dark mode overrides) */
-.writing-quiz .quiz-item-text { overflow-x:auto; }
+.writing-quiz .quiz-item-text, .vocab-horizontal .quiz-item-text { overflow-x:auto; }
 
 .writing-quiz .quiz-item-text::-webkit-scrollbar {
   width:6px;
   height:6px;
 }
 
-.writing-quiz .quiz-item-text::-webkit-scrollbar-thumb {
+.vocab-horizontal .quiz-item-text::-webkit-scrollbar {
+  width:4px;
+  height:4px;
+}
+
+.writing-quiz .quiz-item-text::-webkit-scrollbar-thumb, .vocab-horizontal .quiz-item-text::-webkit-scrollbar-thumb {
   background-color:#F60;
   border:none;
 }
-.writing-quiz .quiz-item-text::-webkit-scrollbar-thumb:hover { background-color:#E50; }
-.writing-quiz .quiz-item-text::-webkit-scrollbar-thumb:active { background-color:#D40; }
 
-.writing-quiz .quiz-item-text::-webkit-scrollbar-track { background:rgba(0, 0, 0, 0.15); }
-.writing-quiz .quiz-item-text::-webkit-scrollbar-button:single-button {
+.writing-quiz .quiz-item-text::-webkit-scrollbar-thumb:hover, .vocab-horizontal .quiz-item-text::-webkit-scrollbar-thumb:hover {
+  background-color:#E50;
+}
+
+.writing-quiz .quiz-item-text::-webkit-scrollbar-thumb:active, .vocab-horizontal .quiz-item-text::-webkit-scrollbar-thumb:active {
+  background-color:#D40;
+}
+
+.writing-quiz .quiz-item-text::-webkit-scrollbar-track, .vocab-horizontal .quiz-item-text::-webkit-scrollbar-track {
+  background:rgba(0, 0, 0, 0.15);
+}
+
+.writing-quiz .quiz-item-text::-webkit-scrollbar-button:single-button, .vocab-horizontal .quiz-item-text::-webkit-scrollbar-button:single-button {
   background:transparent;
   height:0px;
   width:0px;
@@ -2665,6 +2719,13 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
     float:left;
     width:33.33%;
   }
+  
+  .drag-quiz .vocab-horizontal #question-list, .drag-quiz .vocab-horizontal #drop-list, .drag-quiz .vocab-horizontal #answer-list {
+    float:none;
+    width:auto;
+  }
+  
+  .vocab-horizontal .quiz-item-group { width:auto; }
   
   /* reduce size of lesson titles on index */
   #lessons .lesson-title { font-size:18px; }

@@ -229,6 +229,9 @@ window.GenkiExercises = [
   'lesson-5/culture-1|Culture Note: Japanese Festivals|p.145',
   'lesson-5/workbook-1|Workbook: Adjective Conjugation (Present Tense)|p.50',
   'lesson-5/workbook-2|Workbook: Adjectives (Present Tense)|p.51; I & II',
+  'lesson-5/workbook-3|Workbook: Adjective Conjugation (Present and Past Tenses)|p.52',
+  'lesson-5/workbook-4|Workbook: Adjectives (Past Tense)|p.53; I & II',
+  'lesson-5/workbook-5|Workbook: Adjective + Noun|p.54; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

@@ -486,13 +486,18 @@
         quiz += '<div id="answer-list">';
         while (keysA.length) {
           i = Math.floor(Math.random() * keysA.length);
-          quiz += '<div tabindex="0" class="quiz-item" data-answer="' + keysA[i].replace(/\|.*?$/, '') + '">' + o.quizlet[keysA[i]] + '</div>';
+          quiz += '<div tabindex="0" class="quiz-item" data-answer="' + keysA[i].replace(/\|.*?$/, '') + '"><div class="quiz-item-text">' + o.quizlet[keysA[i]] + '</div></div>';
           keysA.splice(i, 1);
         }
         quiz += '</div>'; // close the answer list
-
+        
         // add the quiz to the document
-        zone.innerHTML = quiz + Genki.lang.review.replace('</div>', Genki.lang.toggle_furigana + '</div>');
+        zone.innerHTML = quiz + Genki.lang.review.replace('</div>', Genki.lang.toggle_furigana + '<button id="toggle-orientation" class="button" onclick="Genki.toggle.vocabOrientation(this);"><i class="fa" style="position:relative;transform:rotate(90deg);">&#xf0db;</i>Horizontal Mode</button>' + '</div>');
+        
+        // if selected, change the vocab orientation so that it's horizontal
+        if (storageOK && localStorage.vocabHorizontal == 'true') {
+          Genki.toggle.vocabOrientation(document.getElementById('toggle-orientation'), 'false');
+        }
       }
 
 
@@ -936,10 +941,10 @@
               
               // unmark the marked item that was dropped
               if (Genki.markedItem) {
-                Genki.markedItem.className = Genki.markedItem.className.replace(' markedItem', '');
+                Genki.markedItem.className = 'quiz-item';
                 Genki.markedItem = null;
               }
-
+              
               // when all problems have been solved..
               // stop the timer, show the score, and congratulate the student
               if (++Genki.stats.solved == Genki.stats.problems) {
@@ -962,14 +967,14 @@
                 return;
               }
 
-              // check parentNode if no match (up to 2 times)
-              // necessary as some quiz-items contain child nodes that go as deep as 2 nodes
-              var target = e.target, n = 3;
+              // check parentNode if no match (up to 3 times; e.g. 4-1: the initial element is not counted)
+              // necessary as some quiz-items contain child nodes that go as deep as 3 nodes
+              var target = e.target, n = 4, m = n - 1;
               while (n --> 0) {
-                if (n < 2) target = target.parentNode;
-
+                if (n < m) target = target.parentNode ? target.parentNode : target;
+                
                 // break out if match found
-                if (/quiz-item|quiz-answer-zone/.test(target.className)) break;
+                if (/quiz-item$|quiz-answer-zone/.test(target.className)) break;
               }
 
               // mark the currently active quiz item
@@ -1238,6 +1243,15 @@
         document.getElementById('toggle-tracing-guide').style.display = 'none';
       }
       
+      // kill drag event handlers
+      if (Genki.drake) {
+        // slight delay is required, otherwise an error is thrown
+        setTimeout(function () {
+          Genki.drake.destroy();
+          delete Genki.drake;
+        }, 100);
+      }
+      
       // hide change exercise type button
       var changeType = document.getElementById('change-exercise-type-container');
       if (changeType) changeType.style.display = 'none';
@@ -1429,10 +1443,11 @@
           document.getElementById('review-exercise').innerHTML = (
             /\/dictionary\//.test(window.location) ? Genki.lang.back_to_dict :
             '<button class="button" onclick="Genki.reset();"><i class="fa">&#xf021;</i>Restart</button>'
-          ) + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana : '');
+          ) + (document.querySelector('.drag-quiz') ? Genki.lang.toggle_furigana + document.getElementById('toggle-orientation').outerHTML : '');
 
           // change the quiz info
           document.getElementById('quiz-info').innerHTML = 'You are currently in review mode; go ahead and take your time to study. When you are ready to practice this exercise, click the "restart" button.';
+          document.getElementById('quiz-zone').className += ' review-mode';
           
           // hide change exercise type button
           var changeType = document.getElementById('change-exercise-type-container');
@@ -1646,6 +1661,53 @@
         // save settings if supported
         if (storageOK) {
           localStorage.furiganaVisible = state;
+        }
+      },
+      
+      
+      // toggles the orientation of drag and drop vocab from vertical-vertical to horizontal-horizontal
+      vocabOrientation : function (button, customState) {
+        var zone = document.getElementById('quiz-zone'),
+            state = typeof customState !== 'undefined' ? customState : (storageOK && localStorage.vocabHorizontal) || (/vocab-horizontal/.test(zone.className) ? 'true' : 'false'),
+            answer = document.querySelectorAll('.quiz-answer-zone'),
+            i = 0,
+            j = answer.length;
+        
+        // change the vocab orientation
+        switch (state) {
+          case 'true' :
+            state = 'false';
+            zone.className = zone.className.replace(' vocab-horizontal', '');
+            button.innerHTML = button.innerHTML.replace('Vertical', 'Horizontal');
+            button.querySelector('i').style.transform = 'rotate(90deg)';
+            
+            // revert answer zones to their original positions
+            for (var dropList = document.getElementById('drop-list'); i < j; i++) {
+              dropList.appendChild(answer[i]);
+            }
+            
+            break;
+            
+          case 'false' :
+            state = 'true';
+            zone.className += ' vocab-horizontal';
+            button.innerHTML = button.innerHTML.replace('Horizontal', 'Vertical');
+            button.querySelector('i').style.transform = 'rotate(0deg)';
+            
+            // reposition answer zones
+            for (var group = document.querySelectorAll('.quiz-item-group'); i < j; i++) {
+              group[i].appendChild(answer[i]);
+            }
+            
+            break;
+            
+          default :
+            break;
+        }
+        
+        // save settings if supported
+        if (storageOK && !customState) {
+          localStorage.vocabHorizontal = state;
         }
       },
       

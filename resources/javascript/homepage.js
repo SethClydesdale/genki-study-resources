@@ -21,10 +21,14 @@
     // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
     msg : [
       {
+        date : '08/20/20',
+        content : 'Drag and drop exercises now offer a new option: Horizontal Mode! This mode is designed to be more compact and easy to use. You can read more about this new option <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/85">on the forum</a>.'
+      },
+      
+      {
         date : '08/07/20',
         content : 'We are now using GitHub Discussions (beta) to connect with the community! Have questions about the site or the material in Genki? Suggestions? Just want to chat? In Japanese perhaps? Head on over to <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/81">the forum</a> and join us!'
       },
-      
       
       {
         date : '06/10/20',
