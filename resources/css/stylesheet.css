@@ -670,7 +670,7 @@ a.jump-arrow:hover, a.jump-arrow:focus { color:#C30; }
   border:1px dashed #CCC;
 }
 
-.lesson-summary .inline-columns > * {
+.lesson-summary .inline-columns > div {
   margin-right:50px;
   margin-bottom:0;
 }
@@ -1727,11 +1727,12 @@ ruby rt {
 }
 .fill-quiz .alt-phrase-sep { color:#06C; }
 
-.label, .med-label, .big-label {
+.label, .sm-label, .med-label, .big-label {
   display:inline-block;
   width:120px;
   max-width:100%;
 }
+.sm-label { width:80px; }
 .med-label { width:200px; }
 .big-label { width:300px; }
 
@@ -1754,18 +1755,18 @@ ruby rt {
 }
 
 /* columns */
-.columns-2 > * {
+.columns-2 > div {
   width:50%;
   margin:0 0 25px 0;
   float:left;
 }
 
-.inline-columns > * {
+.inline-columns > div {
   display:inline-block;
   margin:0 10px 30px 0;
 }
 
-.problem.inline-columns > *, .example-problem.inline-columns > * { margin-bottom:40px; }
+.problem.inline-columns > div, .example-problem.inline-columns > div { margin-bottom:40px; }
 .problem.inline-columns, .example-problem.inline-columns {
   position:relative;
   padding-left:30px;
@@ -2698,12 +2699,12 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   .edition-icon:after { margin-top:30px; }
   
   /* display columns below one another */
-  .columns-2 > *, .dictionary-group {
+  .columns-2 > div, .dictionary-group {
     float:none;
     width:100%;
   }
   
-  .inline-columns > *, .lesson-summary .inline-columns > * {
+  .inline-columns > div, .lesson-summary .inline-columns > div {
     margin-right:0;
   }
   
