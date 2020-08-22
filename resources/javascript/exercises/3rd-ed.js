@@ -235,6 +235,7 @@ window.GenkiExercises = [
   'lesson-5/workbook-6|Workbook: 好き(な)／きらい(な)|p.55',
   'lesson-5/workbook-7|Workbook: ～ましょう／～ましょうか|p.56; I & II',
   'lesson-5/workbook-8|Workbook: Questions|p.57; I & II',
+  'lesson-5/workbook-9|Workbook: Listening Comprehension|p.58; A, B, & C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
