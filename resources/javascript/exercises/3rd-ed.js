@@ -236,6 +236,9 @@ window.GenkiExercises = [
   'lesson-5/workbook-7|Workbook: ～ましょう／～ましょうか|p.56; I & II',
   'lesson-5/workbook-8|Workbook: Questions|p.57; I & II',
   'lesson-5/workbook-9|Workbook: Listening Comprehension|p.58; A, B, & C',
+  'lesson-5/literacy-1|Kanji Practice: Readings|p.312-313',
+  'lesson-5/literacy-2|Kanji Practice: Meanings|p.312-313',
+  'lesson-5/literacy-3|Kanji Practice: Stroke Order|p.312-313',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
