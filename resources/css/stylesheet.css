@@ -834,10 +834,31 @@ footer li:first-child:before { display:none; }
 
 /* answer zone size */
 .drag-quiz .vocab-horizontal .quiz-answer-zone, .vocab-horizontal #answer-list .quiz-item { min-width:100px; }
-.vocab-horizontal #answer-list .quiz-item { text-align:center; }
+.vocab-horizontal #answer-list .quiz-item {
+  text-align:center;
+  vertical-align:top;
+}
 
 .vocab-horizontal .quiz-answer-zone .quiz-item { margin:0 }
 .vocab-horizontal .quiz-answer-zone { margin:3px }
+
+/* kanji practice: readings/meanings adjustments */
+.kanji-readings.drag-quiz .vocab-horizontal .quiz-item-text {
+  text-align:left;
+  display:inline-block;
+  margin:0 auto;
+}
+
+.kanji-readings.drag-quiz .vocab-horizontal #question-list .quiz-answer-zone .quiz-item {
+  font-size:13px;
+  line-height:20px;
+}
+
+.kanji-meanings.drag-quiz .vocab-horizontal #question-list .quiz-answer-zone .quiz-item {
+  font-size:13px;
+  height:28px;
+  line-height:20px;
+}
 
 /* furigana offset for furigana-less items */
 .vocab-horizontal.helper-present #question-list .quiz-item { margin-bottom:18px; }
