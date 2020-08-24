@@ -239,6 +239,13 @@ window.GenkiExercises = [
   'lesson-5/literacy-1|Kanji Practice: Readings|p.312-313',
   'lesson-5/literacy-2|Kanji Practice: Meanings|p.312-313',
   'lesson-5/literacy-3|Kanji Practice: Stroke Order|p.312-313',
+  'lesson-5/literacy-4|Kanji Vocabulary: 山, 川, and 元|p.312',
+  'lesson-5/literacy-5|Kanji Vocabulary: 気, 天, and 私|p.312',
+  'lesson-5/literacy-6|Kanji Vocabulary: 今, 田, and 女|p.312-313',
+  'lesson-5/literacy-7|Kanji Vocabulary: 男, 見, and 行|p.313',
+  'lesson-5/literacy-8|Kanji Vocabulary: 食 and 飲|p.313',
+  'lesson-5/literacy-9|Kanji Practice: Match the Sentences|p.314; I-B',
+  'lesson-5/literacy-10|Kanji Practice: Match the Readings|p.314; I-C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

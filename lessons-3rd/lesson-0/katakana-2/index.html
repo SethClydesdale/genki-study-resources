@@ -60,10 +60,12 @@
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
-    <script>Genki.generateQuiz({
+    <script>var diduex = '<br>NOTE: ヂ is pronounced like ジ and ヅ is pronounced like ズ. The romanizations used are how you type these characters with a keyboard.';
+      
+    Genki.generateQuiz({
       format : 'kana',
       type : ['kana', 'multi', 'fill', 'writing'],
-      info : [Genki.lang.std_kana, Genki.lang.kana_multi, Genki.lang.kana_fill, Genki.lang.kana_writing],
+      info : [Genki.lang.std_kana + diduex, Genki.lang.kana_multi + diduex, Genki.lang.kana_fill + diduex, Genki.lang.kana_writing + diduex],
       
       // drag and drop quizlet
       quizlet : [
