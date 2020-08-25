@@ -246,6 +246,8 @@ window.GenkiExercises = [
   'lesson-5/literacy-8|Kanji Vocabulary: 食 and 飲|p.313',
   'lesson-5/literacy-9|Kanji Practice: Match the Sentences|p.314; I-B',
   'lesson-5/literacy-10|Kanji Practice: Match the Readings|p.314; I-C',
+  'lesson-5/literacy-11|Katakana Practice: Match the Words|p.315; II-A',
+  'lesson-5/literacy-12|Reading Practice: Moe\'s Trip to Vienna|p.315; II-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
