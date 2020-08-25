@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Reading Practice: Moe's Trip to Vienna - Lesson 5 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Reading Practice: Moe's Trip to Vienna - Lesson 5 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Reading Practice: Moe's Trip to Vienna - Lesson 5 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Reading Practice: Moe's Trip to Vienna - Lesson 5 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Read Moe's post below. Write O for the things she did or does and write X for the things she didn't or doesn't do in Vienna.">
+    <meta property="og:description" content="Read Moe's post below. Write O for the things she did or does and write X for the things she didn't or doesn't do in Vienna.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki I, Reading and Writing, page 315, problem II-B, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/lesson-5/literacy-12/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1><a href="../../" id="home-link" class="edition-icon third-ed">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="content">
+      <div id="exercise" class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../" id="footer-home">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+        <li><a href="../../../donate/">Donate</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Read Moe\'s post below. Write O for the things she did or does and write X for the things she didn\'t or doesn\'t do in Vienna.',
+      
+      quizlet : 
+        '<div class="columns-2 count-problems clear">'+
+          '<div>'+
+            '<div style="padding:0 30px;">'+
+              '<strong>山田もえ</strong><br>'+
+              '<small>1月6日 17:35</small>'+
+              '<p class="sub-section" style="margin:5px 0;">'+
+                '今、ウィーンにいます。<br>'+
+                'ここはちょっとさむいです。<br>'+
+                'ウィーンはとてもきれいなまちです。<br><br>'+
+                
+                'きのうはおしろを見ました。<br>'+
+                'ふるかったですが、とてもきれいでした。<br>'+
+                'たくさんしゃしんをとりました。<br><br>'+
+                
+                'よるはクラシックのコンサートに行きました。よかったです。<br><br>'+
+                
+                'ウィーンにはカフェがたくさんあります。<br>'+
+                'まいにちカフェでコーヒーを飲みます。<br>'+
+                'ケーキも食べます。すごくおいしいです。'+
+              '</p>'+
+              '<div class="center">'+
+                '<button class="button" onclick="GenkiInc(this);"><i class="fa">&#xf164;</i>いいね！(0)</button>'+
+                '<button id="genkiCommentButton" class="button" onclick="GenkiTxt();"><i class="fa">&#xf075;</i>コメントする (0)</button>'+
+                '<button class="button" onclick="GenkiInc(this);"><i class="fa">&#xf064;</i>シェア (0)</button>'+
+              '</div>'+
+              '<div id="genkiComments"></div>'+
+              '<p style="text-align:right;">'+
+                'おしろ castle<br>'+
+                '～が ...,but<br>'+
+                'よる night'+
+              '</p>'+
+            '</div>'+
+          '</div>'+
+        
+          '<div class="small-margin">'+
+            '<div class="problem">({O}) see an old castle</div>'+
+            '<div class="problem">({X}) go to see a ballet</div>'+
+            '<div class="problem">({O}) take pictures</div>'+
+            '<div class="problem">({X}) drink beer at the cafe</div>'+
+            '<div class="problem">({O}) enjoy sweets</div>'+
+            '<div class="problem">({X}) eat at McDonald\'s</div>'+
+          '</div>'+
+        '</div>'
+    });
+    
+    // increment button numbers
+    function GenkiInc (caller) {
+      caller.innerHTML = caller.innerHTML.replace(/(\d+)/, function ($1) {
+        return +$1 + 1;
+      });
+    };
+      
+    // post message
+    function GenkiPost () {
+      var txt = document.getElementById('genkiTxt'),
+          zone = document.getElementById('genkiTxtZone'),
+          comments = document.getElementById('genkiComments'),
+          button = document.getElementById('genkiCommentButton');
+      
+      if (txt.value) {
+        var post = document.createElement('DIV');
+        post.className = 'sub-section';
+        post.style.margin = '5px 0';
+        post.innerText = txt.value;
+        
+        comments.removeChild(zone);
+        comments.appendChild(post);
+        GenkiInc(button);
+      }
+    };
+    
+    // create text area
+    function GenkiTxt () {
+      if (document.getElementById('genkiTxtZone')) return;
+      
+      var txt = document.createElement('TEXTAREA'),
+          submit = document.createElement('BUTTON'),
+          zone = document.createElement('DIV'),
+          comments = document.getElementById('genkiComments');
+      
+      txt.id = 'genkiTxt';
+      txt.style.width = '100%';
+      txt.style.height = '50px';
+      txt.style.resize = 'none';
+      
+      submit.id = 'genkiSubmit';
+      submit.className = 'button';
+      submit.innerHTML = '<i class="fa">&#xf1d8;</i>コメント';
+      submit.onclick = GenkiPost;
+      
+      zone.id = 'genkiTxtZone';
+      
+      zone.appendChild(txt);
+      zone.appendChild(submit);
+      comments.appendChild(zone);
+      
+      txt.focus();
+    };</script>
+  </body>
+</html>
