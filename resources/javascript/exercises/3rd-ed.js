@@ -248,6 +248,9 @@ window.GenkiExercises = [
   'lesson-5/literacy-10|Kanji Practice: Match the Readings|p.314; I-C',
   'lesson-5/literacy-11|Katakana Practice: Match the Words|p.315; II-A',
   'lesson-5/literacy-12|Reading Practice: Moe\'s Trip to Vienna|p.315; II-B',
+  'lesson-5/literacy-13|Reading Practice: Robert\'s Postcard|p.316; II-C',
+  'lesson-5/literacy-wb-1|Workbook: Kanji Writing Practice|p.137',
+  'lesson-5/literacy-wb-2|Workbook: Using Kanji|p.138; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
