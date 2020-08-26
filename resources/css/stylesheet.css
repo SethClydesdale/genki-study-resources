@@ -673,6 +673,7 @@ a.jump-arrow:hover, a.jump-arrow:focus { color:#C30; }
 .lesson-summary .inline-columns > div {
   margin-right:50px;
   margin-bottom:0;
+  vertical-align:top;
 }
 
 .lesson-summary:before {
