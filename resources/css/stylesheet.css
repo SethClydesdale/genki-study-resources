@@ -1314,14 +1314,9 @@ footer li:first-child:before { display:none; }
 /* overflow scrollbar (none/transparents are dark mode overrides) */
 .writing-quiz .quiz-item-text, .vocab-horizontal .quiz-item-text { overflow-x:auto; }
 
-.writing-quiz .quiz-item-text::-webkit-scrollbar {
+.writing-quiz .quiz-item-text::-webkit-scrollbar, .vocab-horizontal .quiz-item-text::-webkit-scrollbar {
   width:6px;
   height:6px;
-}
-
-.vocab-horizontal .quiz-item-text::-webkit-scrollbar {
-  width:4px;
-  height:4px;
 }
 
 .writing-quiz .quiz-item-text::-webkit-scrollbar-thumb, .vocab-horizontal .quiz-item-text::-webkit-scrollbar-thumb {
