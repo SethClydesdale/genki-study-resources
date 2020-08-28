@@ -21,6 +21,11 @@
     // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
     msg : [
       {
+        date : '08/28/20',
+        content : 'You can now manage the font size and page width of the site via the Settings Manager (cog icon) in the footer! This will also let you adjust the range used for the Random Exercise button. Read more about this new feature <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/87">on the forum</a>.'
+      },
+      
+      {
         date : '08/20/20',
         content : 'Drag and drop exercises now offer a new option: Horizontal Mode! This mode is designed to be more compact and easy to use. You can read more about this new option <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/85">on the forum</a>.'
       },

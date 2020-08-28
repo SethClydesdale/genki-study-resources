@@ -36,12 +36,14 @@
   }
   
   
-  // # DARK MODE #
+  // # DARK MODE AND SETTINGS #
   // Allows the student to switch to a dark version of Genki Study Resources. (Great for late night studying!)
+  // Also adds a button to manage global site settings.
   if (storageOK) {
     var footer = document.querySelector('footer'),
         button = document.createElement('LABEL'),
-        container = document.createElement('DIV');
+        container = document.createElement('DIV'),
+        settings = document.createElement('A');
     
     // set button params
     button.id = 'light-switch';
@@ -93,8 +95,26 @@
     container.id = 'light-switch-container';
     container.innerHTML = '<label id="light-switch-label" for="light-switch-checkbox">Dark Mode </label>';
     
+    // settings button
+    settings.id = 'genki-site-settings';
+    settings.innerHTML = '<i class="fa">&#xf013;</i>';
+    settings.title = 'Site Settings';
+    settings.href = '#';
+    settings.onclick = function () {
+      // prevent opening popup when one is already opened
+      // mainly for the exercise selector. If using the shortcut you'll be stuck loading if you haven't selected an exercise yet.
+      if (document.getElementById('genki-modal')) return false;
+      
+      // open settings manager
+      GenkiSettings.manager();
+      
+      // prevent normal link behavior
+      return false;
+    };
+    
     // add the elements to the document
     container.appendChild(button);
+    container.appendChild(settings);
     footer.appendChild(container);
   }
   
@@ -142,6 +162,11 @@
         // random exercise (ctrl+alt+r)
         case 'r':
           button = document.getElementById('random-exercise');
+          break;
+
+        // open site settings (ctrl+alt+m)
+        case 'm':
+          button = document.getElementById('genki-site-settings');
           break;
 
         default:
