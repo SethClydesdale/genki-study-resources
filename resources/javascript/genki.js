@@ -680,7 +680,7 @@
         
         // add the quiz to the document
         zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '" target="_blank">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
-          var data = match.slice(1, match.length - 1).split('|'), hint, flag, sub;
+          var data = match.slice(1, match.length - 1).split('|'), hint, flag, sub, width;
           
           if (data[0] == '!IMG') {
             return Genki.parse.image(data);
@@ -712,6 +712,31 @@
             }
 
             ++Genki.stats.problems; // increment problems number
+            
+            // get problem width
+            width =
+              // manual width definition
+              /width:/.test(flag[0]) ? flag[0].split(':')[1] :
+              flag[1] && /width:/.test(flag[1]) ? flag[1].split(':')[1] :
+              flag[2] && /width:/.test(flag[2]) ? flag[2].split(':')[1] :
+
+              // automatic width calculation between alternate answer params; %(../../../..)
+              sub ? (((
+                hint ? ((sub[0] && sub[0][1]) || '/').split('/').concat(((sub[1] && sub[1][1]) || '/').split('/')) :
+                ((sub[0] && sub[0][1]) || '/').split('/')
+              ).sort(function (a, b) {
+                  return b.length - a.length;
+
+              })[0].length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1))) + 14) + (
+                ([hint.replace(/\%\((.*?)\)/g, ''), data[0].replace(/\%\((.*?)\)/g, '')].sort(function (a, b) {
+                  return b.length - a.length;
+                })[0].length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1)))
+              ) : 
+
+              // automatic width calculation between answer1 and answer2/hint
+              (([hint, data[0]].sort(function (a, b) {
+                return b.length - a.length;
+              })[0].length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1))) + 14);
 
             // parse and return the input field
             return '<span class="writing-zone">'+
@@ -732,32 +757,8 @@
                 (flag[0] == 'placeholder' ? 'placeholder="' + hint + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
-                'style="width:' + (
-              
-              // manual width definition
-              /width:/.test(flag[0]) ? flag[0].split(':')[1] :
-              flag[1] && /width:/.test(flag[1]) ? flag[1].split(':')[1] :
-              flag[2] && /width:/.test(flag[2]) ? flag[2].split(':')[1] :
-              
-              // automatic width calculation between alternate answer params; %(../../../..)
-              sub ? (((
-                hint ? ((sub[0] && sub[0][1]) || '/').split('/').concat(((sub[1] && sub[1][1]) || '/').split('/')) :
-                ((sub[0] && sub[0][1]) || '/').split('/')
-              ).sort(function (a, b) {
-                  return b.length - a.length;
-              
-              })[0].length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1))) + 14) + (
-                ([hint.replace(/\%\((.*?)\)/g, ''), data[0].replace(/\%\((.*?)\)/g, '')].sort(function (a, b) {
-                  return b.length - a.length;
-                })[0].length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1)))
-              ) : 
-              
-              // automatic width calculation between answer1 and answer2/hint
-              (([hint, data[0]].sort(function (a, b) {
-                return b.length - a.length;
-              })[0].length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1))) + 14)
-              
-            ) + 'px;"'+
+                'data-default-width="' + width + '" '+
+                'style="width:' + (width * (storageOK && localStorage.genkiFontSize ? (+localStorage.genkiFontSize / 100) : 1)) + 'px;"'+
               '>'+
               ((hint && !/answer|furigana|placeholder/.test(flag[0]) || flag[1] && /hint:/.test(flag[1]) || flag[2] && /hint:/.test(flag[2])) ? '<span class="problem-hint">' + (
                 flag[1] && /hint:/.test(flag[1]) ? flag[1].split(':')[1] : 
@@ -2324,7 +2325,19 @@
     
     // takes the user to a random exercise
     randomExercise : function () {
-      var exercise = Genki.exercises[Math.floor(Math.random() * Genki.exercises.length)].split('|');
+      // random exercise preference (current lesson)
+      if (storageOK && localStorage.genkiRandomExercise == 'lesson' && /lesson-\d+/.test(window.location.href)) {
+        var regex = new RegExp(window.location.href.replace(/.*?(lesson-\d+).*/, '$1')),
+            list = Genki.exercises.filter(function(a) { return regex.test(a) });
+      } 
+      
+      // default (all lessons), triggers this instead of preference if in the appendix or study tools since they're not lessons
+      else {
+        var list = Genki.exercises;
+      }
+      
+      // the random exercise
+      var exercise = list[Math.floor(Math.random() * list.length)].split('|');
       
       // only take the user to random lessons
       if (/lesson-\d+/.test(exercise[0])) {

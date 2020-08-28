@@ -258,6 +258,7 @@ window.GenkiExercises = [
   'lesson-6/vocab-3|Vocabulary: U-verbs|p.148-149',
   'lesson-6/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.149',
   'lesson-6/vocab-5|Vocabulary: Adverbs and Other Expressions|p.149',
+  'lesson-6/grammar-0|Review: Te-form Conjugation Rules|p.150-151',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

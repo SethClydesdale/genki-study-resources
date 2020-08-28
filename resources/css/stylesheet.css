@@ -318,6 +318,7 @@ a#fork-me:hover, a#fork-me:focus {
 #announce-inner {
   max-width:1000px;
   margin:0 auto;
+  padding:0 30px;
 }
 
 #announcement .fa {
@@ -693,6 +694,7 @@ a.jump-arrow:hover, a.jump-arrow:focus { color:#C30; }
 footer {
   color:#FFF;
   background:#333;
+  text-align:center;
   padding:15px;
 }
 
@@ -1343,7 +1345,7 @@ footer li:first-child:before { display:none; }
 }
 
 /* furigana modifications */
-.writing-quiz .helper-present #question-list .quiz-item[data-helper] { margin:3px; }
+.writing-quiz .helper-present #question-list .quiz-item[data-helper] { margin-bottom:3px; }
 .writing-quiz .helper-hidden .quiz-item[data-helper]:before { display:none; }
 .writing-quiz .helper-hidden .quiz-answer-row.furi-row { margin-bottom:0; }
 
@@ -1812,9 +1814,10 @@ ruby rt {
   border:1px solid #333;
   border-radius:100%;
   display:inline-block;
-  height:20px;
-  width:20px;
+  height:22px;
+  width:22px;
   line-height:21px;
+  box-sizing:border-box;
   vertical-align:middle;
   cursor:default;
 }
@@ -1827,9 +1830,10 @@ ruby rt {
   border:1px solid #999;
   border-radius:100%;
   display:inline-block;
-  height:20px;
-  width:18px;
+  height:22px;
+  width:22px;
   line-height:21px;
+  box-sizing:border-box;
   vertical-align:middle;
   letter-spacing:-2px;
   padding-right:2px;
@@ -2081,7 +2085,7 @@ ruby rt {
 }
 
 #downloadCode { font-weight:bold; }
-#downloadCode:before{
+#downloadCode:before {
   font-family:FontAwesomeWeb, FontAwesome;
   font-weight:normal;
   font-size:16px;
@@ -2218,11 +2222,31 @@ ruby rt {
 }
 
 
+/* SETTINGS MANAGER */
+#genki-site-settings {
+  font-size:18px;
+  display:inline-block;
+  height:26px;
+  line-height:26px;
+  margin-left:10px;
+}
+#genki-site-settings:focus { color:#F60; }
+#genki-site-settings i { vertical-align:-2px; }
+
+.genki-settings-list { list-style-type:none; }
+.genki-settings-list li { margin:10px 0; }
+
+.genki-settings-list .label {
+  width:40%;
+  margin-right:10px;
+  text-align:right;
+  font-weight:bold;
+  cursor:help;
+}
+
+
 /* DARK MODE */
 #light-switch-container {
-  text-align:center;
-  height:0;
-  margin-top:-3px;
   -webkit-touch-callout:none;
     -webkit-user-select:none;
      -khtml-user-select:none;
@@ -2619,6 +2643,7 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
 @media (max-width:1000px) {
   /* wrapper's max-width is 1000px, so remove padding so the page takes up the whole screen */
   .content-block { padding:30px 0; }
+  #announce-inner { padding:0 6px; }
   
   /* footer links */
   footer li {
