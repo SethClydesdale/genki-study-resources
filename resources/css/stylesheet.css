@@ -2241,8 +2241,18 @@ ruby rt {
   margin-right:10px;
   text-align:right;
   font-weight:bold;
+  vertical-align:top;
   cursor:help;
 }
+
+#page-custom-css {
+  width:50%;
+  height:100px;
+}
+
+.button.opt-off { background-color:#999; }
+.button.opt-off:hover { background-color:#888; }
+.button.opt-off:focus { background-color:#777; }
 
 
 /* DARK MODE */

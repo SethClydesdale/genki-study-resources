@@ -17,16 +17,16 @@
     // opens a new modal
     // params: object (optional)
     // {
-    //      title : string,
-    //    content : string,
-    // buttonText : string,
+    //      title : string, (popup title)
+    //    content : string, (popup content)
+    // buttonText : string, (custom text for the OK button)
     //    noFocus : bool, (keeps buttons from being focused)
     //      focus : string, (pass a css selector to focus a specific element; overrides noFocus)
     // customSize : object, manually set the top, left, right, and bottom css properties
     //   keepOpen : bool, (keeps the modal open when clicking the callback button; useful for opening another modal afterwards)
     //    noClose : bool, (removes the close button)
     //     zIndex : 'low', lowers the z-index so the exercise menu can be used
-    //   callback : function
+    //   callback : function (function to execute when the OK button is clicked)
     // } // all values are optional
     open : function (o) {
       o = o ? o : {};
@@ -150,7 +150,13 @@
       // various settings and their selected/default values
       var fontSize = +localStorage.genkiFontSize || 100,
           pageWidth = +localStorage.genkiPageWidth || 100,
-          randomExercise = localStorage.genkiRandomExercise || 'all';
+          randomExercise = localStorage.genkiRandomExercise || 'all',
+          customCSS = localStorage.genkiCustomCSS || '',
+          darkMode = localStorage.darkMode || 'off',
+          furigana = localStorage.furiganaVisible || 'true',
+          vocabHorizontal = localStorage.vocabHorizontal || 'false',
+          strokeOrder = localStorage.strokeOrderVisible || 'true',
+          tracingGuide = localStorage.tracingGuideVisible || 'true';
       
       // create stylesheet for settings
       if (!GenkiSettings.stylesheet) {
@@ -172,21 +178,55 @@
             '<span class="label" title="Increases the maximum page width for the site (up to the size of your screen)">Page Width:</span>'+
             '<input id="page-width-range" type="range" min="100" max="500" value="' + pageWidth + '" oninput="GenkiSettings.updatePageWidth(this);" onchange="GenkiSettings.updatePageWidth(this, true);"><span id="page-width-value">' + pageWidth + '%</span>'+
           '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Enable or disable Dark Mode for some late night studying">Dark Mode:</span>'+
+            '<button id="settings-dark-mode" class="button' + (darkMode == 'on' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateDarkMode(this);">' + (darkMode == 'on' ? 'ON' : 'OFF') + '</button>'+
+          '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Use your own CSS to customize the design of the site">Custom CSS:<br><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank" style="font-weight:normal;"><small>What is CSS?</small></a></span>'+
+            '<textarea id="page-custom-css" oninput="GenkiSettings.updateCustomCSS(this, true);">' + customCSS + '</textarea>'+
+          '</li>'+
         '</ul>'+
         
-        '<div class="section-title">Other</div>'+
+        '<div class="section-title">Exercises</div>'+
         '<ul class="genki-settings-list">'+
           '<li>'+
-            '<span class="label" title="Changes the range for the Random Exercise button in the exercise list (change to Current Lesson if you want to avoid exercises above your current level)">Random Exercise:</span>'+
+            '<span class="label" title="Enable or disable furigana (reading aid) for kanji">Furigana:</span>'+
+            '<button id="settings-furigana" class="button' + (furigana == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateFurigana(this);">' + (furigana == 'true' ? 'ON' : 'OFF') + '</button>'+
+          '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Changes the orientation used for drag and drop exercises">Drag and Drop Mode:</span>'+
+            '<select id="settings-vocab-mode" onchange="GenkiSettings.updateVocabMode(this);">'+
+              '<option value="false"' + ( vocabHorizontal == 'false' ? ' selected' : '' ) + '>Vertical</option>'+
+              '<option value="true"' + ( vocabHorizontal == 'true' ? ' selected' : '' ) + '>Horizontal</option>'+
+            '</select>'+
+          '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Changes the range for the Random Exercise button in the exercise list (change to Current Lesson if you want to avoid exercises above your current level)">Random Exercise Range:</span>'+
             '<select id="random-exercise-type" onchange="GenkiSettings.updateRandomExercise(this);">'+
               '<option value="all"' + ( randomExercise == 'all' ? ' selected' : '' ) + '>All Lessons</option>'+
               '<option value="lesson"' + ( randomExercise == 'lesson' ? ' selected' : '' ) + '>Current Lesson</option>'+
             '</select>'+
           '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Enable or disable the stroke order display in stroke order exercises (3rd edition only)">Stroke Order:</span>'+
+            '<button id="settings-stroke-order" class="button' + (strokeOrder == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateStrokeOrder(this);">' + (strokeOrder == 'true' ? 'ON' : 'OFF') + '</button>'+
+          '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Enable or disable the tracing guide display in stroke order exercises (3rd edition only)">Tracing Guide:</span>'+
+            '<button id="settings-tracing-guide" class="button' + (tracingGuide == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateTracingGuide(this);">' + (tracingGuide == 'true' ? 'ON' : 'OFF') + '</button>'+
+          '</li>'+
         '</ul>',
 
         buttonText : 'Close',
         noFocus : true,
+        focus : '#font-size-range',
         
         customSize : {
           top : '5%',
@@ -198,29 +238,21 @@
     },
     
     
-    // updates the page width
-    updatePageWidth : function (caller, updateCSS) {
-      var n = (caller ? +caller.value : localStorage.genkiPageWidth) / 100;
-      
-      // update number value
-      if (caller) caller.nextSibling.innerText = caller.value + '%';
-      
-      // update the CSS
-      if (updateCSS) {
-        // remove old rules
-        if (/\/\*PAGE-WIDTH-START\*\//.test(GenkiSettings.stylesheet.innerText)) {
-          GenkiSettings.stylesheet.innerText = GenkiSettings.stylesheet.innerText.replace(/\/\*PAGE-WIDTH-START\*\/.*?\/\*PAGE-WIDTH-END\*\//, '');
-        }
-
-        // add new rules
-        GenkiSettings.stylesheet.innerText += '/*PAGE-WIDTH-START*/'+
-          // font size
-          '.content-block, #announce-inner { max-width:' + (1000 * n) + 'px }'+
-        '/*PAGE-WIDTH-END*/'
+    // update button state for settings
+    updateButton : function (caller, callback) {
+      // switches button state to ON if it's off
+      if (/opt-off/.test(caller.className)) {
+        caller.innerText = 'ON';
+        caller.className = caller.className.replace('opt-off', '');
+        callback && callback('ON');
       }
       
-      // save setting to localStorage
-      if (caller) localStorage.genkiPageWidth = caller.value;
+      // switches button state to OFF if it's on
+      else {
+        caller.innerText = 'OFF';
+        caller.className += ' opt-off';
+        callback && callback('OFF');
+      }
     },
     
     
@@ -233,14 +265,9 @@
       
       // update the CSS
       if (updateCSS) {
-        // remove old rules
-        if (/\/\*FONT-SIZE-START\*\//.test(GenkiSettings.stylesheet.innerText)) {
-          GenkiSettings.stylesheet.innerText = GenkiSettings.stylesheet.innerText.replace(/\/\*FONT-SIZE-START\*\/.*?\/\*FONT-SIZE-END\*\//, '');
-        }
-
-        // add new rules
-        GenkiSettings.stylesheet.innerText += '/*FONT-SIZE-START*/'+
+        var css = '/*FONT-SIZE-START*/'+
           // font size
+          'footer li:before { font-size:' + (6 * n) + 'px }'+
           '.kana-quiz.quiz-over [data-mistakes]:after { font-size:' + (8 * n) + 'px }'+
           '.quiz-over .vocab-horizontal [data-mistakes]:after, .verb-quiz.quiz-over [data-mistakes]:after { font-size:' + (10 * n) + 'px }'+
           '.define, #announcement .announcement .date, #quick-search-results li[data-lesson]:before, .writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before, .furigana, .inline-furi i, ruby rt, .secondary-answer, .def-ja.def-furi i { font-size:' + (11 * n) + 'px }'+
@@ -301,6 +328,8 @@
           '#genki-modal-content { bottom:' + (40 * n) + 'px }'+
           '#wrongAnswer:before { right:-' + (70 * n) + 'px }'+
           '.quiz-over [data-mistakes]:after { right:-' + (85 * n) + 'px }'+
+          // bottom borders
+          '.fill-quiz .writing-zone-input, .section-title, .lesson-title, #link-list a { border-bottom-width:' + ( 2 * n ) + 'px; }'+
           // modal position
           '#genki-modal-body { top:' + (10 / n) + '%; left:' + (25 / n) + '%; right:' + (25 / n) + '%; bottom:' + (40 / n) + '%; }'+
           // exercise list
@@ -326,8 +355,6 @@
           // furigana
           'ruby { bottom:-' + ( 16 * n ) + 'px; margin:-' + ( 16 * n ) + 'px 0 ' + ( 16 * n ) + 'px 0 }'+
           'ruby rt { height:' + ( 15 * n ) + 'px; line-height:' + ( 15 * n ) + 'px; margin-top:-' + ( 1 * n ) + 'px; }'+
-          // written problems
-          '.fill-quiz .writing-zone-input, .section-title { border-bottom-width:' + ( 2 * n ) + 'px; }'+
           // section numbers/icons
           '.sectionNumber3rd, .section-number { width:' + ( 22 * n ) + 'px; height:' + ( 22 * n ) + 'px; line-height:' + ( 21 * n ) + 'px; }'+
           // info icon
@@ -345,6 +372,16 @@
           '.button.icon-only .fa, #random-exercise i { font-size:18px }'+
         '/*FONT-SIZE-END*/';
         
+        // replace old css rules
+        if (/\/\*FONT-SIZE-START\*\//.test(GenkiSettings.stylesheet.innerText)) {
+          GenkiSettings.stylesheet.innerText = GenkiSettings.stylesheet.innerText.replace(/\/\*FONT-SIZE-START\*\/.*?\/\*FONT-SIZE-END\*\//, css);
+        }
+
+        // add new css rules
+        else {
+          GenkiSettings.stylesheet.innerText += css;
+        }
+        
         // update the width of input elements
         if (caller) { // if caller is not present, CSS was updated on page load, thus the following elements are null
           for (var input = document.querySelectorAll('[data-default-width]'), i = 0, j = input.length; i < j; i++) {
@@ -358,9 +395,137 @@
     },
     
     
+    // updates the page width
+    updatePageWidth : function (caller, updateCSS) {
+      var n = (caller ? +caller.value : localStorage.genkiPageWidth) / 100;
+      
+      // update number value
+      if (caller) caller.nextSibling.innerText = caller.value + '%';
+      
+      // update the CSS
+      if (updateCSS) {
+        var css = '/*PAGE-WIDTH-START*/'+
+          '.content-block, #announce-inner { max-width:' + (1000 * n) + 'px }'+
+        '/*PAGE-WIDTH-END*/';
+        
+        // replace old css rules
+        if (/\/\*PAGE-WIDTH-START\*\//.test(GenkiSettings.stylesheet.innerText)) {
+          GenkiSettings.stylesheet.innerText = GenkiSettings.stylesheet.innerText.replace(/\/\*PAGE-WIDTH-START\*\/.*?\/\*PAGE-WIDTH-END\*\//, css);
+        } 
+        
+        // add new css rules
+        else {
+          GenkiSettings.stylesheet.innerText += css;
+        }
+      }
+      
+      // save setting to localStorage
+      if (caller) localStorage.genkiPageWidth = caller.value;
+    },
+    
+    
+    // updates dark mode state
+    updateDarkMode : function (caller) {
+      document.getElementById('light-switch-checkbox').click();
+      GenkiSettings.updateButton(caller);
+    },
+    
+    
+    // updates custom css
+    updateCustomCSS : function (caller, updateCSS) {
+      // update the CSS
+      if (updateCSS) {
+        var css = '/*CUSTOM-CSS-START*/' + (caller ? caller.value : localStorage.genkiCustomCSS) + '/*CUSTOM-CSS-END*/';
+        
+        // replace old css rules
+        if (/\/\*CUSTOM-CSS-START\*\//.test(GenkiSettings.stylesheet.innerText)) {
+          GenkiSettings.stylesheet.innerText = GenkiSettings.stylesheet.innerText.replace(/\/\*CUSTOM-CSS-START\*\/.*?\/\*CUSTOM-CSS-END\*\//, css);
+        } 
+        
+        // add new css rules
+        else {
+          GenkiSettings.stylesheet.innerText += css;
+        }
+      }
+      
+      // save setting to localStorage
+      if (caller) localStorage.genkiCustomCSS = caller.value;
+    },
+    
+    
     // updates the random exercise preference
     updateRandomExercise : function (caller) {
       if (caller) localStorage.genkiRandomExercise = caller.value;
+    },
+    
+    
+    // updates furigana preference
+    updateFurigana : function (caller) {
+      GenkiSettings.updateButton(caller, function (state) {
+        var button = document.getElementById('toggle-furigana');
+
+        // update preferences by clicking the button if it's present
+        if (button) {
+          button.click();
+        }
+        
+        // otherwise manually update the localStorage preference
+        else {
+          localStorage.furiganaVisible = state == 'ON' ? 'true' : 'false';
+        }
+      });
+    },
+    
+    
+    // updates furigana preference
+    updateVocabMode : function (caller) {
+      var button = document.getElementById('toggle-orientation');
+
+      // update preferences by clicking the button if it's present
+      if (button) {
+        button.click();
+      }
+
+      // otherwise manually update the localStorage preference
+      else {
+        localStorage.vocabHorizontal = caller.value;
+      }
+    },
+
+    
+    // updates stroke order preference
+    updateStrokeOrder : function (caller) {
+      GenkiSettings.updateButton(caller, function (state) {
+        var button = document.getElementById('toggle-stroke-order');
+
+        // update preferences by clicking the button if it's present
+        if (button) {
+          button.click();
+        }
+        
+        // otherwise manually update the localStorage preference
+        else {
+          localStorage.strokeOrderVisible = state == 'ON' ? 'true' : 'false';
+        }
+      });
+    },
+
+    
+    // updates stroke order preference
+    updateTracingGuide : function (caller) {
+      GenkiSettings.updateButton(caller, function (state) {
+        var button = document.getElementById('toggle-tracing-guide');
+
+        // update preferences by clicking the button if it's present
+        if (button) {
+          button.click();
+        }
+        
+        // otherwise manually update the localStorage preference
+        else {
+          localStorage.tracingGuideVisible = state == 'ON' ? 'true' : 'false';
+        }
+      });
     },
     
     // creates the global settings stylesheet
@@ -388,6 +553,11 @@
     // apply selected page width
     if (localStorage.genkiPageWidth && localStorage.genkiPageWidth != '100') {
       GenkiSettings.updatePageWidth(false, true);
+    }
+    
+    // apply custom CSS
+    if (localStorage.genkiCustomCSS && localStorage.genkiCustomCSS != '') {
+      GenkiSettings.updateCustomCSS(false, true);
     }
   }
   

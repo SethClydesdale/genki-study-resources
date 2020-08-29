@@ -45,8 +45,16 @@ code, input[type="text"], input[type="number"], textarea, select, .table td, .qu
   background-color:#222;
 }
 
-.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before, .genki_pseudo_radio:before, .sectionNumber3rd {
+.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before, .genki_pseudo_radio:before, .sectionNumber3rd, .dark-mode .button.opt-off:focus {
   background-color:#333;
+}
+
+.button.opt-off:hover {
+  background-color:#444;
+}
+
+.button.opt-off {
+  background-color:#555;
 }
 
 
