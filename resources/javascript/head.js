@@ -166,11 +166,11 @@
       // open settings popup
       GenkiModal.open({
         title : 'Settings Manager',
-        content : '<p>Here you can manage global settings for Genki Study Resources to help customize your experience.</p>'+
+        content : '<p>Here you can manage your settings for Genki Study Resources. To learn more about a setting, hover over its label for a short description.</p>'+
         '<div class="section-title">Display</div>'+
         '<ul class="genki-settings-list">'+
           '<li>'+
-            '<span class="label" title="Increases the font size for the site">Font Size:</span>'+
+            '<span class="label" title="Increases the font size for the site (increase this if you have trouble reading -- page width may require an increase as well)">Font Size:</span>'+
             '<input id="font-size-range" type="range" min="100" max="500" value="' + fontSize + '" oninput="GenkiSettings.updateFontSize(this);" onchange="GenkiSettings.updateFontSize(this, true);"><span id="font-size-value">' + fontSize + '%</span>'+
           '</li>'+
         
@@ -180,12 +180,12 @@
           '</li>'+
         
           '<li>'+
-            '<span class="label" title="Enable or disable Dark Mode for some late night studying">Dark Mode:</span>'+
+            '<span class="label" title="Enable or disable Dark Mode (great for late night studying!)">Dark Mode:</span>'+
             '<button id="settings-dark-mode" class="button' + (darkMode == 'on' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateDarkMode(this);">' + (darkMode == 'on' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
           '<li>'+
-            '<span class="label" title="Use your own CSS to customize the design of the site">Custom CSS:<br><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank" style="font-weight:normal;"><small>What is CSS?</small></a></span>'+
+            '<span class="label" title="Use your own CSS to customize the design of the site to your liking">Custom CSS:<br><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank" style="font-weight:normal;"><small>What is CSS?</small></a></span>'+
             '<textarea id="page-custom-css" oninput="GenkiSettings.updateCustomCSS(this, true);">' + customCSS + '</textarea>'+
           '</li>'+
         '</ul>'+
@@ -193,12 +193,12 @@
         '<div class="section-title">Exercises</div>'+
         '<ul class="genki-settings-list">'+
           '<li>'+
-            '<span class="label" title="Enable or disable furigana (reading aid) for kanji">Furigana:</span>'+
+            '<span class="label" title="Enable or disable furigana (reading aid) for kanji (challenge your brain and memorize those kanji!)">Furigana:</span>'+
             '<button id="settings-furigana" class="button' + (furigana == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateFurigana(this);">' + (furigana == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
           '<li>'+
-            '<span class="label" title="Changes the orientation used for drag and drop exercises">Drag and Drop Mode:</span>'+
+            '<span class="label" title="Changes the orientation used for drag and drop vocabulary exercises (kana exercises are not affected)">Drag and Drop Mode:</span>'+
             '<select id="settings-vocab-mode" onchange="GenkiSettings.updateVocabMode(this);">'+
               '<option value="false"' + ( vocabHorizontal == 'false' ? ' selected' : '' ) + '>Vertical</option>'+
               '<option value="true"' + ( vocabHorizontal == 'true' ? ' selected' : '' ) + '>Horizontal</option>'+

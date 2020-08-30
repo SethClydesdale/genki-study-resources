@@ -116,6 +116,17 @@
     container.appendChild(button);
     container.appendChild(settings);
     footer.appendChild(container);
+  } 
+  
+  // show help link instead of dark mode when running in limited mode
+  else {
+    var footer = document.querySelector('footer'),
+        container = document.createElement('DIV');
+    
+    container.id = 'light-switch-container';
+    container.innerHTML = '<a href="' + getPaths() + 'help/stuck-loading/' + (window.location.protocol == 'file:' ? 'index.html' : '') + '"><strong>Where is Dark Mode?</strong></a>';
+    
+    footer.appendChild(container);
   }
   
   
