@@ -147,14 +147,15 @@
   // functions for managing global site settings
   window.GenkiSettings = {
     manager : function () {
-      // various settings and their selected/default values
+      // various settings and their selected||default values
       var fontSize = +localStorage.genkiFontSize || 100,
           pageWidth = +localStorage.genkiPageWidth || 100,
-          randomExercise = localStorage.genkiRandomExercise || 'all',
-          customCSS = localStorage.genkiCustomCSS || '',
           darkMode = localStorage.darkMode || 'off',
+          customCSS = localStorage.genkiCustomCSS || '',
           furigana = localStorage.furiganaVisible || 'true',
           vocabHorizontal = localStorage.vocabHorizontal || 'false',
+          randomExercise = localStorage.genkiRandomExercise || 'all',
+          skipExType = localStorage.genkiSkipExType || 'false',
           strokeOrder = localStorage.strokeOrderVisible || 'true',
           tracingGuide = localStorage.tracingGuideVisible || 'true';
       
@@ -211,6 +212,11 @@
               '<option value="all"' + ( randomExercise == 'all' ? ' selected' : '' ) + '>All Lessons</option>'+
               '<option value="lesson"' + ( randomExercise == 'lesson' ? ' selected' : '' ) + '>Current Lesson</option>'+
             '</select>'+
+          '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Skips that pesky exercise type selection prompt and instantly starts exercises when enabled. (3rd edition only; Partial 2nd ed. support)\nThe exercise type can still be changed manually via the Change Exercise Type button at the bottom of an exercise.">Skip Exercise Type Selection:</span>'+
+            '<button id="settings-skip-ex-type" class="button' + (skipExType == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateSkipExType(this);">' + (skipExType == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
           '<li>'+
@@ -490,6 +496,14 @@
       else {
         localStorage.vocabHorizontal = caller.value;
       }
+    },
+
+    
+    // updates exercise type selection skipping preference
+    updateSkipExType : function (caller) {
+      GenkiSettings.updateButton(caller, function (state) {
+        localStorage.genkiSkipExType = state == 'ON' ? 'true' : 'false';
+      });
     },
 
     

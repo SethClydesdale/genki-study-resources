@@ -261,6 +261,8 @@ window.GenkiExercises = [
   'lesson-6/grammar-0|Review: Te-form Conjugation Rules|p.150-151',
   'lesson-6/culture-1|Culture Note: Japan\'s Educational System (1)|p.154-155',
   'lesson-6/grammar-1|Practice: Te-form Conjugation|p.156',
+  'lesson-6/grammar-2|Practice: ～てください 1|p.156-157; II-A',
+  'lesson-6/grammar-3|Practice: ～てください 2|p.157; II-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

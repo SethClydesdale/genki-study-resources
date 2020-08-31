@@ -208,9 +208,16 @@
               '<b>Current Exercise</b><br>'+
               document.title.replace(/ \| Genki Study Resources.*$/, '')+
             '</div><br>')+
+            
             '<div>'+
               '<b>Exercise Type</b><br>'+
               '<select id="exercise-type">' + opts + '</select>'+
+            '</div><br>'+
+            
+            '<div title="The exercise type can still be changed via the Change Exercise Type button at the bottom of an exercise.">'+
+              '<input id="modal-skip-ex-type" class="genki_input_hidden" type="checkbox"' + (storageOK && localStorage.genkiSkipExType == 'true' ? ' checked' : '') + ' onchange="localStorage.genkiSkipExType = this.checked">'+
+              '<span tabindex="0" class="genki_pseudo_checkbox" onclick="this.previousSibling.click();" onkeypress="event.key == \'Enter\' && this.previousSibling.click();"></span>'+
+              '<label class="checkbox-label" for="modal-skip-ex-type">Skip Exercise Type Selection</label>'+
             '</div>'+
           '</div>',
           
@@ -420,12 +427,15 @@
             
             // finally, launch the quiz
             Genki.generateQuiz(o);
+            
+            // set exercise type changing to false so exercises will automatically start on retry if genkiSkipExType is enabled
+            Genki.changingExType = false;
           }
         });
         
-        // auto start the exercise if "begin=NUMBER" is specified in the URL.
+        // auto start the exercise if "begin=NUMBER" is specified in the URL. OR Exercise Type Selection Skipping is Enabled
         // NUMBER should be the index of the drop down exercise types, starting at 0 for the first, 1 for the second, and so on..
-        if (begin !== false) {
+        if (!Genki.changingExType && (begin !== false || (storageOK && localStorage.genkiSkipExType == 'true'))) {
           modal.callback();
           GenkiModal.close();
         }
@@ -1984,6 +1994,9 @@
                   return;
                 }
               } 
+              
+              // set flag so genkiSkipExType doesn't trigger while trying to change the exercise type
+              Genki.changingExType = true;
               
               // reset exercise state
               Genki.reset();
