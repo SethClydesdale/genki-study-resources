@@ -2395,6 +2395,12 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   position:absolute;
 }
 
+.checkbox-label {
+  font-size:13px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
 
 /* APPENDIX */
 /* dictionary */

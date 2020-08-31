@@ -137,16 +137,16 @@
       var button;
 
       // check what key was pressed
-      switch (e.key) {
+      switch (e.key.toLowerCase()) {
         // previous exercise (ctrl+alt+left)
-        case 'Left':
-        case 'ArrowLeft':
+        case 'left':
+        case 'arrowleft':
           button = document.querySelector('.prev-ex');
           break;
 
         // next exercise (ctrl+alt+right)
-        case 'Right':
-        case 'ArrowRight':
+        case 'right':
+        case 'arrowright':
           button = document.querySelector('.next-ex');
           break;
 
