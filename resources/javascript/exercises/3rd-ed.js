@@ -263,6 +263,8 @@ window.GenkiExercises = [
   'lesson-6/grammar-1|Practice: Te-form Conjugation|p.156',
   'lesson-6/grammar-2|Practice: ～てください 1|p.156-157; II-A',
   'lesson-6/grammar-3|Practice: ～てください 2|p.157; II-B',
+  'lesson-6/grammar-4|Practice: Describing Two Activities 1|p.158; III-A',
+  'lesson-6/grammar-5|Practice: Describing Two Activities 2|p.158; III-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
