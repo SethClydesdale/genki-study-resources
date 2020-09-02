@@ -260,11 +260,13 @@ window.GenkiExercises = [
   'lesson-6/vocab-5|Vocabulary: Adverbs and Other Expressions|p.149',
   'lesson-6/grammar-0|Review: Te-form Conjugation Rules|p.150-151',
   'lesson-6/culture-1|Culture Note: Japan\'s Educational System (1)|p.154-155',
-  'lesson-6/grammar-1|Practice: Te-form Conjugation|p.156',
+  'lesson-6/grammar-1|Practice: Te-form Conjugation|p.156; I-A',
   'lesson-6/grammar-2|Practice: ～てください 1|p.156-157; II-A',
   'lesson-6/grammar-3|Practice: ～てください 2|p.157; II-B',
   'lesson-6/grammar-4|Practice: Describing Two Activities 1|p.158; III-A',
   'lesson-6/grammar-5|Practice: Describing Two Activities 2|p.158; III-B',
+  'lesson-6/grammar-6|Practice: ～てもいいです 1|p.159; IV-A',
+  'lesson-6/grammar-7|Practice: ～てもいいです 2|p.160; IV-C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
