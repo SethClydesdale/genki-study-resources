@@ -267,6 +267,8 @@ window.GenkiExercises = [
   'lesson-6/grammar-5|Practice: Describing Two Activities 2|p.158; III-B',
   'lesson-6/grammar-6|Practice: ～てもいいです 1|p.159; IV-A',
   'lesson-6/grammar-7|Practice: ～てもいいです 2|p.160; IV-C',
+  'lesson-6/grammar-8|Practice: ～てはいけません 1|p.160; V-A',
+  'lesson-6/grammar-9|Practice: ～てはいけません 2|p.161; V-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
