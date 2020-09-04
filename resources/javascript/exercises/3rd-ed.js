@@ -269,6 +269,7 @@ window.GenkiExercises = [
   'lesson-6/grammar-7|Practice: ～てもいいです 2|p.160; IV-C',
   'lesson-6/grammar-8|Practice: ～てはいけません 1|p.160; V-A',
   'lesson-6/grammar-9|Practice: ～てはいけません 2|p.161; V-B',
+  'lesson-6/grammar-10|Practice: ～から|p.161; VI-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
