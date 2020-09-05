@@ -209,6 +209,7 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 .spoiler {
   color:#000;
   background:#000;
+  padding:0 3px;
 }
 
 .spoiler:hover { color:#FFF; }
