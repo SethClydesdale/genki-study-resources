@@ -46,17 +46,25 @@
       
       <div class="content-block">
         <h3 class="section-title" id="microsoft-tips">Tips for the Microsoft IME</h3>
-        <p>Below is a list of tips and tricks for making effective use of the Microsoft IME.</p>
+        <p>Below is a list of tips and tricks for making effective use of the Microsoft IME. These shortcuts may work for other IMEs as well. You can use the button below to open a textarea and test out some of these tips firsthand.</p>
+        
+        <div class="center">
+          <button class="button" onclick="GenkiTestarea.open();">Open Textarea</button>
+        </div>
         
         <h4 class="sub-title" id="microsoft-shortcuts">Shortcuts</h4>
         <ul>
-          <li><strong>ALT+SHIFT</strong> : Switch Keyboards</li>
-          <li><strong>ALT+`</strong> : Toggle Kana/Alphanumeric Input</li>
-          <li><strong>ALT+CAPS</strong> : Change to Katakana Input</li>
-          <li><strong>CTRL+CAPS</strong> : Change to Hiragana Input</li>
-          <li><strong>CTRL+SHIFT+CAPS</strong> : Toggle Input Method between Romaji and Kana</li>
-          <li><strong>SPACE (while kana is underlined)</strong> : Convert Kana to Kanji/Focus conversion list</li>
-          <li><strong>ENTER (while kana is underlined)</strong> : End word/phrase</li>
+          <li><strong>ALT+SHIFT</strong>: Switch Keyboards</li>
+          <li><strong>ALT+`</strong>: Toggle Kana/Alphanumeric Input</li>
+          <li><strong>ALT+CAPS</strong>: Change to Katakana Input</li>
+          <li><strong>CTRL+CAPS</strong>: Change to Hiragana Input</li>
+          <li><strong>CTRL+SHIFT+CAPS</strong>: Toggle Input Method between Romaji and Kana</li>
+          <li><strong>SPACE <small>(while kana is underlined)</small></strong>: Convert Kana to Kanji/Focus conversion list</li>
+          <li><strong>ENTER <small>(while underlined)</small></strong>: End word/phrase</li>
+          <li><strong>F6 <small>(while underlined)</small></strong>: Convert to hiragana</li>
+          <li><strong>F7 <small>(while underlined)</small></strong>: Convert to katakana</li>
+          <li><strong>F9 <small>(while underlined)</small></strong>: Convert to full-width alphanumeric</li>
+          <li><strong>F10 <small>(while underlined)</small></strong>: Convert to half-width alphanumeric</li>
         </ul>
         
         <h4 class="sub-title" id="microsoft-n">Typing ん／ン</h4>
@@ -125,5 +133,51 @@
     </footer>
     
     <script src="../../resources/javascript/all.min.js"></script>
+    <style>
+      #GenkiTestarea {
+        position:fixed;
+        width:50%;
+        right:10px;
+        bottom:10px;
+      }
+
+      #GenkiTestarea textarea {
+        height:150px;
+        width:100%;
+        box-sizing:border-box;
+        resize:none;
+      }
+
+      #GenkiTestarea textarea, #GenkiTestarea .button {
+        box-shadow:0px 0px 6px rgba(0, 0, 0, 0.25);
+      }
+    </style>
+    <script>
+      window.GenkiTestarea = {
+        // opens the test textarea
+        open : function () {
+          if (this.textarea) return;
+          var txt = document.createElement('DIV');
+          txt.id = 'GenkiTestarea';
+          txt.innerHTML = 
+            '<textarea placeholder="タイプしてみましょうね！"></textarea>'+
+            '<div class="center">'+
+              '<button class="button" onclick="GenkiTestarea.close();">Close Textarea</button>'+
+            '</div>';
+          
+          document.body.appendChild(txt);
+          this.textarea = txt;
+          this.textarea.firstChild.focus();
+        },
+        
+        // closes the test textarea
+        close : function () {
+          if (this.textarea) {
+            this.textarea.parentNode.removeChild(this.textarea);
+            delete this.textarea;
+          }
+        }
+      };
+    </script>
   </body>
 </html>
