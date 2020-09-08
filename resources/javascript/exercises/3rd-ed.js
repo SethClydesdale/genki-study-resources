@@ -276,6 +276,10 @@ window.GenkiExercises = [
   'lesson-6/workbook-1|Workbook: Te-form Conjugation 1|p.59-60',
   'lesson-6/workbook-2|Workbook: Te-form Conjugation 2|p.61',
   'lesson-6/workbook-3|Workbook: ～てください|p.62; I & II',
+  'lesson-6/workbook-4|Workbook: Describing Two Activities|p.63; I & II',
+  'lesson-6/workbook-5|Workbook: ～てもいいです|p.64',
+  'lesson-6/workbook-6|Workbook: ～てはいけません|p.65; I & II',
+  'lesson-6/workbook-7|Workbook: ～から・～ましょうか|p.66; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
