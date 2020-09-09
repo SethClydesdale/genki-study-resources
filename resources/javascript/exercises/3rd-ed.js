@@ -280,6 +280,8 @@ window.GenkiExercises = [
   'lesson-6/workbook-5|Workbook: ～てもいいです|p.64',
   'lesson-6/workbook-6|Workbook: ～てはいけません|p.65; I & II',
   'lesson-6/workbook-7|Workbook: ～から・～ましょうか|p.66; I & II',
+  'lesson-6/workbook-8|Workbook: Questions|p.67',
+  'lesson-6/workbook-9|Workbook: Listening Comprehension|p.68; A, B, & C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
