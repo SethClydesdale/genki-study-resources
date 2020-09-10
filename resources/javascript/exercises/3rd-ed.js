@@ -282,6 +282,14 @@ window.GenkiExercises = [
   'lesson-6/workbook-7|Workbook: ～から・～ましょうか|p.66; I & II',
   'lesson-6/workbook-8|Workbook: Questions|p.67',
   'lesson-6/workbook-9|Workbook: Listening Comprehension|p.68; A, B, & C',
+  'lesson-6/literacy-1|Kanji Practice: Readings|p.318-319',
+  'lesson-6/literacy-2|Kanji Practice: Meanings|p.318-319',
+  'lesson-6/literacy-3|Kanji Practice: Stroke Order|p.318-319',
+  'lesson-6/literacy-4|Kanji Vocabulary: 東, 西, and 南|p.318',
+  'lesson-6/literacy-5|Kanji Vocabulary: 北, 口, and 出|p.318',
+  'lesson-6/literacy-6|Kanji Vocabulary: 右, 左, and 分|p.318-319',
+  'lesson-6/literacy-7|Kanji Vocabulary: 先, 生, and 大|p.319',
+  'lesson-6/literacy-8|Kanji Vocabulary: 学, 外, and 国|p.319',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
