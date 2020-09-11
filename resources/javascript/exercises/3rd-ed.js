@@ -290,6 +290,10 @@ window.GenkiExercises = [
   'lesson-6/literacy-6|Kanji Vocabulary: 右, 左, and 分|p.318-319',
   'lesson-6/literacy-7|Kanji Vocabulary: 先, 生, and 大|p.319',
   'lesson-6/literacy-8|Kanji Vocabulary: 学, 外, and 国|p.319',
+  'lesson-6/literacy-9|Kanji Practice: Combine the Kanji|p.320; I-A',
+  'lesson-6/literacy-10|Kanji Practice: Find the Location|p.320; I-B',
+  'lesson-6/literacy-11|Reading Practice: Bulletin Board|p.320-321; II',
+  //'lesson-6/literacy-12|Reading Practice: 私の好きなレストラン|p.322-323; III-A, B, & C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
