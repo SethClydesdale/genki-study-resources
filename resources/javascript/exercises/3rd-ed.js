@@ -293,7 +293,12 @@ window.GenkiExercises = [
   'lesson-6/literacy-9|Kanji Practice: Combine the Kanji|p.320; I-A',
   'lesson-6/literacy-10|Kanji Practice: Find the Location|p.320; I-B',
   'lesson-6/literacy-11|Reading Practice: Bulletin Board|p.320-321; II',
-  //'lesson-6/literacy-12|Reading Practice: 私の好きなレストラン|p.322-323; III-A, B, & C',
+  'lesson-6/literacy-12|Reading Practice: 私のすきなレストラン|p.322-323; III-A, B, & C',
+  'lesson-6/literacy-wb-1|Workbook: Kanji Writing Practice|p.139',
+  'lesson-6/literacy-wb-2|Workbook: Using Kanji|p.140; I & II',
+  
+  // Lesson 7
+  
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

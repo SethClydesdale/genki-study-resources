@@ -1942,17 +1942,17 @@ ruby rt {
   border:1px solid #999;
 }
 
-.vocab-key > * {
+.vocab-key > div {
   padding:6px;
   box-sizing:border-box;
   margin-bottom:0;
 }
 
-.vocab-key > *:last-child {
+.vocab-key > div:last-child {
   border-left:1px solid #999;
   margin-left:-1px;
 }
-.vocab-key > *:first-child {
+.vocab-key > div:first-child {
   border-right:1px solid #999;
   border-left:none;
 }
@@ -2771,8 +2771,8 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   .dictionary-group .definition { padding:0 3px; }
   
   /* change vocab key border to a horizontal one */
-  .vocab-key > *:first-child, .vocab-key > *:last-child { border:none; }
-  .vocab-key > *:first-child { border-bottom:1px solid #999; }
+  .vocab-key > div:first-child, .vocab-key > div:last-child { border:none; }
+  .vocab-key > div:first-child { border-bottom:1px solid #999; }
 
   /* prevent vocab quizzes from wrapping */
   .drag-quiz #question-list, .drag-quiz #drop-list, .drag-quiz #answer-list {
