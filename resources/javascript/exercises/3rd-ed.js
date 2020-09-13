@@ -298,7 +298,12 @@ window.GenkiExercises = [
   'lesson-6/literacy-wb-2|Workbook: Using Kanji|p.140; I & II',
   
   // Lesson 7
-  
+  'lesson-7/vocab-1|Vocabulary: Nouns 1|p.168',
+  'lesson-7/vocab-2|Vocabulary: Nouns 2|p.168',
+  'lesson-7/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.168-169',
+  'lesson-7/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.169',
+  'lesson-7/vocab-5|Vocabulary: Adverbs and Other Expressions|p.169',
+  'lesson-7/vocab-6|Bonus Vocabulary: Counting People|p.174',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

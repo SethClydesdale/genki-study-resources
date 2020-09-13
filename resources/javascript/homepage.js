@@ -21,27 +21,12 @@
     // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
     msg : [
       {
-        date : '08/28/20',
-        content : 'You can now manage the font size and page width of the site via the Settings Manager (cog icon) in the footer! This will also let you adjust the range used for the Random Exercise button. Read more about this new feature <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/87">on the forum</a>.'
-      },
-      
-      {
-        date : '08/20/20',
-        content : 'Drag and drop exercises now offer a new option: Horizontal Mode! This mode is designed to be more compact and easy to use. You can read more about this new option <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/85">on the forum</a>.'
-      },
-      
-      {
-        date : '08/07/20',
-        content : 'We are now using GitHub Discussions (beta) to connect with the community! Have questions about the site or the material in Genki? Suggestions? Just want to chat? In Japanese perhaps? Head on over to <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/81">the forum</a> and join us!'
-      },
-      
-      {
         content : 'The 3rd Edition version of Genki Study Resources is currently under construction and will be expanded over time. You can follow updates to these resources via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">Github</a> or <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>. Furthermore, if you have any feedback regarding the 3rd edition resources, feel free to let me know <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/83">here</a>. Thank you!',
         edition : '3rd'
       },
       
       {
-        content : 'Want to stay up to date on the latest changes made to Genki Study Resources? You can follow updates via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">Github</a> or <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>.',
+        content : 'Want to stay up to date on the latest changes made to Genki Study Resources? You can follow updates via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">Github</a> or <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>. Feel free to also contact us on <a href="https://github.com/SethClydesdale/genki-study-resources/discussions">the forum</a> if you have any questions or feedback.',
         edition : '2nd'
       },
       
