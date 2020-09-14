@@ -56,7 +56,7 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 ### Resources for Studying Japanese
 
 ##### Tools
-- [Anki - SRS Flashcard App](https://apps.ankiweb.net/) (great for memorizing vocab)
+- [Anki - SRS Flashcard App](https://apps.ankiweb.net/) (great for memorizing vocab, decks matching this repo are available [here](resources/tools/decks) )
 - [Jisho - Online Japanese Dictionary](http://jisho.org/) (extremely useful for looking up words, kanji, etc.)
 - [KanjiTomo - Japanese OCR Program](https://www.kanjitomo.net/) (very useful for reading manga, LNs, etc.)
 
@@ -83,7 +83,7 @@ The following resources were used in this project. I couldn't have done it witho
 - [easytimer.js](https://github.com/albert-gonzalez/easytimer.js) for the super easy timer.
 - [Kanji Canvas](https://github.com/asdfjkl/kanjicanvas) for the stroke order exercises.
 - [Noto CJK](https://www.google.com/get/noto/help/cjk/) and [Sawarabi Gothic](https://fonts.google.com/specimen/Sawarabi+Gothic) for the fonts used in the Hiragana/Katakana stroke order exercises.
-
+- [Genanki](https://github.com/kerrickstaley/genanki) for the simple package to create Anki decks
 
 ### Donate
 Please see the [Donate page](https://sethclydesdale.github.io/genki-study-resources/donate/) for ways to support my work.
