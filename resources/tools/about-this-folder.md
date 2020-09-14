@@ -71,3 +71,19 @@ Checks for duplicate entries in the dictionary so that they can either be merged
 
 Considering how huge it is, we may end up making duplicate entries from time to time. So this script helps ensure the dictionary word count stays accurate, while delegating the tedious job of checking to robots!
  
+ 
+ ### anki_decks_maker.py
+ * Requires python 3.6+ with the [genanki](https://pypi.org/project/genanki) pkg installed  
+ 
+ Create [Anki](https://apps.ankiweb.net/) flashcards decks to memorise vocabulary,
+ each card that is created is tagged with it's lesson number, type, and category (e.g Lesson_1, Vocabulary, Family) 
+ 
+ ```shell script
+python3 anki_decks_maker.py <path_to_lessons_folder>
+
+# For example: 
+python3 anki_decks_maker.py ../../lessons-3rd
+python3 anki_decks_maker.py ../../lessons
+```
+ 
+All of the decks created are currently available under the `decks` folder
