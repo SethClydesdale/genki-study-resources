@@ -70,6 +70,7 @@ def main():
                     vocab = get_vocab(html)
                 except Exception:
                     print(f'Failed parsing of lesson-{lesson_number}, vocab file {vocab_folder}')
+                    continue
                 for jp, eng in vocab.items():
                     note = genanki.Note(model=my_model,
                                         fields=[jp, eng],
