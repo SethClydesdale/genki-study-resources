@@ -304,6 +304,7 @@ window.GenkiExercises = [
   'lesson-7/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.169',
   'lesson-7/vocab-5|Vocabulary: Adverbs and Other Expressions|p.169',
   'lesson-7/vocab-6|Bonus Vocabulary: Counting People|p.174',
+  'lesson-7/grammar-1|Practice: ～ている (Actions in Progress)|p.176; I-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

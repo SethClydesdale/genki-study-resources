@@ -54,11 +54,17 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 
 
 ### Resources for Studying Japanese
-- [Genki Self-study Room](http://genki.japantimes.co.jp/self_en) | [Genki Online](https://genki3.japantimes.co.jp/)
-- [Tae Kim's Guide to Learning Japanese](http://www.guidetojapanese.org/learn/)
-- [Imabi](http://www.imabi.net/)
-- [Jisho - Japanese Dictionary](http://jisho.org/)
-- [/r/LearnJapanese](https://www.reddit.com/r/LearnJapanese/wiki/index)
+
+##### Tools
+- [Anki - SRS Flashcard App](https://apps.ankiweb.net/) (great for memorizing vocab)
+- [Jisho - Online Japanese Dictionary](http://jisho.org/) (extremely useful for looking up words, kanji, etc.)
+- [KanjiTomo - Japanese OCR Program](https://www.kanjitomo.net/) (very useful for reading manga, LNs, etc.)
+
+##### Websites
+- [Genki Self-study Room](http://genki.japantimes.co.jp/self_en) | [Genki Online](https://genki3.japantimes.co.jp/) (official Genki sites/resources)
+- [Tae Kim's Guide to Learning Japanese](http://www.guidetojapanese.org/learn/) (good for supplementary learning/explanations)
+- [Imabi](http://www.imabi.net/) (very useful for more advanced learning/explanations)
+- [/r/LearnJapanese Wiki](https://www.reddit.com/r/LearnJapanese/wiki/index) (additional resources, guides, etc.)
 
 
 ### Special Thanks
