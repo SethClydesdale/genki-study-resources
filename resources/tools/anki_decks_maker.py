@@ -25,7 +25,11 @@ def get_vocab(html):
 
 
 def main():
-    output_folder.mkdir(parents=True, exist_ok=False)
+    try :
+        print('Creating folder for decks...')
+        output_folder.mkdir(parents=True, exist_ok=False)
+    except Exception:
+        print('Folder already exists, skipping this step.')
 
     my_model = genanki.Model(
         1607392319,
@@ -55,7 +59,9 @@ def main():
     decks = [combined_deck]
     for lesson_folder in lessons_folder.glob('lesson*'):
         lesson_number = lesson_folder.name.split('-')[-1]
-
+        
+        print(f'Getting vocab for Lesson {lesson_number}...')
+        
         my_deck = genanki.Deck(
             1810167044 + int(lesson_number),  # Random hardcoded id
             f'Genki lesson {lesson_number}')
@@ -63,7 +69,7 @@ def main():
         decks.append(my_deck)
 
         for vocab_folder in lesson_folder.glob('vocab*'):
-            with open(vocab_folder.joinpath('index.html')) as f:
+            with open(vocab_folder.joinpath('index.html'), 'r', encoding='UTF8') as f:
                 html = f.read()
                 tags = get_tags(html)
                 try:
@@ -73,14 +79,17 @@ def main():
                     continue
                 for jp, eng in vocab.items():
                     note = genanki.Note(model=my_model,
-                                        fields=[jp, eng],
+                                        fields=[re.sub(r'(.*?)\|(.*?)$', r'<ruby>\1<rt>\2</rt></ruby>', jp), eng],
                                         tags=['Genki', f'lesson-{lesson_number}', *tags])
                     my_deck.add_note(note)
                     combined_deck.add_note(note)
 
     for deck in decks:
         if deck.notes:
+            print(f'Creating deck for {deck.name}...');
             genanki.Package(deck).write_to_file(output_folder.joinpath(f'{deck.name.replace(" ", "_")}.apkg'))
+            
+    print('All Anki decks for the selected edition have been generated!')
 
 
 if __name__ == '__main__':

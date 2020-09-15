@@ -56,7 +56,7 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 ### Resources for Studying Japanese
 
 ##### Tools
-- [Anki - SRS Flashcard App](https://apps.ankiweb.net/) (great for memorizing vocab, decks matching this repo are available [here](resources/tools/decks) )
+- [Anki - SRS Flashcard App](https://apps.ankiweb.net/) (great for memorizing vocab; you can find decks for Genki [here](resources/tools/decks#readme))
 - [Jisho - Online Japanese Dictionary](http://jisho.org/) (extremely useful for looking up words, kanji, etc.)
 - [KanjiTomo - Japanese OCR Program](https://www.kanjitomo.net/) (very useful for reading manga, LNs, etc.)
 
@@ -74,6 +74,7 @@ Genki Study Resources was made possible thanks to...
 - [DavidBurela](https://github.com/DavidBurela) for gifting me the 3rd Edition textbook and workbook of Genki I.
 - [Patrick Roberts](https://github.com/patrickroberts) for [his help with an algorithm](https://stackoverflow.com/a/59337819/12502093) that helped make mixed kana/kanji answers possible in written quizzes.
 - [Dominik Klein](https://github.com/asdfjkl) for [his help with adding new recognition patterns](https://github.com/asdfjkl/kanjicanvas/issues/1) for the stroke order exercises.
+- [Ronserruya](https://github.com/Ronserruya) for the [Anki Decks and Deck Maker script](https://github.com/SethClydesdale/genki-study-resources/pull/89).
 - [sasagami358](http://sasagami358.blog.fc2.com/blog-entry-593.html) for the hiragana and katakana stroke order charts.
 - Everyone who helped support or contribute to this project, whether it was on GitHub or outside of it.
 
