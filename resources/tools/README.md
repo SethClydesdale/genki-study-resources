@@ -1,5 +1,5 @@
 # About Tools
-This folder contains useful snippets for developing Genki Study Resources -- basically things that make working on it 100x easier. They're not to be installed on the website directly, so as such this folder is more of a toolbox that you open when you need to get a certain job done. Any snippets present in this folder will be explained below.
+This folder contains useful snippets for Genki Study Resources. They're not to be installed on the website directly, so as such this folder is more of a toolbox that you open when you need to get a certain job done. Any snippets present in this folder will be explained below.
 
 
 ### link-grabber.js
@@ -51,7 +51,7 @@ While the examples only shows a replacement of a single ruby tag, replacements f
 If you're using Brackets, you can use [this extension](https://github.com/SethClydesdale/brackets-rubify-text) instead.
 
 
-### getCharWidth.js
+### get-char-width.js
 Calculates the width of the string, returning a number which can be used in the `width` param of written answers. Useful for when the width cannot be calculated or is not of a desired value.
 
 Syntax:
@@ -85,5 +85,7 @@ python3 anki_decks_maker.py <path_to_lessons_folder>
 python3 anki_decks_maker.py ../../lessons-3rd
 python3 anki_decks_maker.py ../../lessons
 ```
+
+You can also generate decks by executing `anki_decks_maker-run.bat` and typing either `2nd` or `3rd` to generate a deck for that edition.
  
-All of the decks created are currently available under the `decks` folder
+All of the decks created are currently available under the [decks](decks/) folder
