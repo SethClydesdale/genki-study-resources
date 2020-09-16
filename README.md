@@ -56,7 +56,7 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 ### Resources for Studying Japanese
 
 ##### Tools
-- [Anki - SRS Flashcard App](https://apps.ankiweb.net/) (great for memorizing vocab; you can find decks for Genki [here](resources/tools/decks#readme))
+- [Anki - SRS Flashcard App](https://apps.ankiweb.net/) (great for memorizing vocab; you can find decks for Genki [here](https://sethclydesdale.github.io/genki-study-resources/help/anki-decks/))
 - [Jisho - Online Japanese Dictionary](http://jisho.org/) (extremely useful for looking up words, kanji, etc.)
 - [KanjiTomo - Japanese OCR Program](https://www.kanjitomo.net/) (very useful for reading manga, LNs, etc.)
 

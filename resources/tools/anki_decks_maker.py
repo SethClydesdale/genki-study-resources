@@ -41,15 +41,37 @@ def main():
         templates=[
             {
                 'name': 'Card',
-                'qfmt': '{{Question}}',
-                'afmt': '{{FrontSide}}<hr id="answer">{{Answer}}',
+                'qfmt': '<span class="question-side">{{Question}}</span>',
+                'afmt': '<span class="question-side">{{FrontSide}}</span><hr id="answer">{{Answer}}',
             },
         ],
         css="""
-            .card {
-             font-size: 48px;
-             text-align: center;
-            }""")
+.question-side { font-size:48px; }
+
+hr {
+  border:none;
+  border-bottom:1px solid #999;
+}
+
+ruby rt { color:#777; }
+ruby:hover rt { color:#333; }
+
+.card {
+  color:#333;
+  background-color:#EEE;
+  font-size:25px;
+  font-family:'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, sans-serif;
+  text-align:center;
+}
+
+/* Night Mode CSS */
+.nightMode hr { border-color:#555; }
+.nightMode ruby rt { color:#999; }
+.nightMode ruby:hover rt { color:#CCC; }
+.nightMode.card {
+  color:#CCC;
+  background-color:#222;
+}""")
 
     combined_deck = genanki.Deck(
         1810167044,  # Random hardcoded id
