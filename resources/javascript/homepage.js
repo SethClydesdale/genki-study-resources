@@ -22,7 +22,7 @@
     msg : [
       {
         date : '09/15/20',
-        content : 'Do you use Anki to study vocab? If so, you can now find decks for the vocab on Genki Study Resources <a href="https://github.com/SethClydesdale/genki-study-resources/tree/master/resources/tools/decks#readme">here</a>! A big thank you to <a href="https://github.com/SethClydesdale/genki-study-resources/pull/89">Ronserruya</a> for the script used to generate the decks!',
+        content : 'Do you use Anki to study vocab? If so, you can now find decks for the vocab on Genki Study Resources <a href="' + getPaths() + 'help/anki-decks/">here</a>! A big thank you to <a href="https://github.com/SethClydesdale/genki-study-resources/pull/89">Ronserruya</a> for the script used to generate the decks!',
       },
       
       {

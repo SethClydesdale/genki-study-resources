@@ -306,6 +306,7 @@ window.GenkiExercises = [
   'lesson-7/vocab-6|Bonus Vocabulary: Counting People|p.174',
   'lesson-7/grammar-1|Practice: ～ている (Actions in Progress)|p.176; I-A',
   'lesson-7/grammar-2|Practice: ～ている (Result of a Change)|p.177; II-A',
+  'lesson-7/grammar-3|Practice: Describing People 1|p.178; III-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
