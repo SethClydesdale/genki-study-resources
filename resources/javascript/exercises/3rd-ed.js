@@ -307,6 +307,8 @@ window.GenkiExercises = [
   'lesson-7/grammar-1|Practice: ～ている (Actions in Progress)|p.176; I-A',
   'lesson-7/grammar-2|Practice: ～ている (Result of a Change)|p.177; II-A',
   'lesson-7/grammar-3|Practice: Describing People 1|p.178; III-A',
+  'lesson-7/grammar-4|Practice: Describing People 2|p.178; III-B',
+  'lesson-7/grammar-5|Practice: Adjective/Noun Te-forms 1|p.179; IV-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
