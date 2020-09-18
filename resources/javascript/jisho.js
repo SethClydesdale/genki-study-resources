@@ -1737,6 +1737,7 @@ Genki.jisho = {
     { ja : '同級生|どうきゅうせい', en : 'classmate', l : '読L13-漢字表' },
     { ja : '東京|とうきょう', en : 'Tokyo', l : '読L6-漢字表' },
     { ja : '東京駅|とうきょうえき', en : 'Tokyo Station', l : '読L22-漢字表' },
+    { ja : '東京スカイツリー|とうきょうスカイツリー', en : 'Tokyo Skytree', l : '会L7' },
     { ja : '道具|どうぐ', en : 'tool', l : '読L16-II' },
     { ja : '同時|どうじ', en : 'same time', l : '読L13-漢字表' },
     { ja : '当時|とうじ', en : 'at that time', l : '読L14-漢字表' },
