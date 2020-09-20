@@ -311,6 +311,8 @@ window.GenkiExercises = [
   'lesson-7/grammar-5|Practice: Adjective/Noun Te-forms 1|p.179; IV-A',
   'lesson-7/grammar-6|Practice: Adjective/Noun Te-forms 2|p.180; IV-C',
   'lesson-7/grammar-7|Practice: Verb Stem + に行く／来る／帰る 1|p.181; V-A',
+  'lesson-7/grammar-8|Practice: Verb Stem + に行く／来る／帰る 2|p.182; V-C',
+  'lesson-7/grammar-9|Practice: Counting People|p.182; VI-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
