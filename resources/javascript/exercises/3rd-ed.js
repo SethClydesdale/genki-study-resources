@@ -313,6 +313,9 @@ window.GenkiExercises = [
   'lesson-7/grammar-7|Practice: Verb Stem + に行く／来る／帰る 1|p.181; V-A',
   'lesson-7/grammar-8|Practice: Verb Stem + に行く／来る／帰る 2|p.182; V-C',
   'lesson-7/grammar-9|Practice: Counting People|p.182; VI-A',
+  'lesson-7/culture-1|Culture Note: Kinship Terms 1|p.184',
+  'lesson-7/culture-2|Culture Note: Kinship Terms 2|p.184',
+  'lesson-7/vocab-7|Useful Expressions: Parts of the Body|p.185',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

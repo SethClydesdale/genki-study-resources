@@ -2,12 +2,14 @@ import re
 import ast
 import sys
 from pathlib import Path
+from itertools import chain
 
 import genanki
 
 lessons_folder = Path(sys.argv[1])
 title_regex = re.compile(r'<title>(.*):(.*)- Lesson')
 quizlet_regex = re.compile(r'quizlet : (.*?})', flags=re.S)
+filter_regex = re.compile(r"format : 'kanji'|format : 'practice'|format : 'hirakata'|type : 'fill'|type : 'drawing'|type : 'stroke'|type : 'multi'|type : 'writing'|<title>Review:|Kanji Practice: Match the Readings|Kanji Practice: Match the Sentences|Kanji Practice: Match the Verbs|Katakana Practice: Countries and Capitals", flags=re.S)
 output_folder = Path('.').absolute().joinpath('decks').joinpath(lessons_folder.name)
 
 
@@ -89,22 +91,23 @@ ruby:hover rt { color:#333; }
             f'Genki lesson {lesson_number}')
         my_deck.add_model(my_model)
         decks.append(my_deck)
-
-        for vocab_folder in lesson_folder.glob('vocab*'):
+        
+        for vocab_folder in chain(lesson_folder.glob('vocab*'), lesson_folder.glob('literacy*')):
             with open(vocab_folder.joinpath('index.html'), 'r', encoding='UTF8') as f:
                 html = f.read()
-                tags = get_tags(html)
-                try:
-                    vocab = get_vocab(html)
-                except Exception:
-                    print(f'Failed parsing of lesson-{lesson_number}, vocab file {vocab_folder}')
-                    continue
-                for jp, eng in vocab.items():
-                    note = genanki.Note(model=my_model,
-                                        fields=[re.sub(r'(.*?)\|(.*?)$', r'<ruby>\1<rt>\2</rt></ruby>', jp), eng],
-                                        tags=['Genki', f'lesson-{lesson_number}', *tags])
-                    my_deck.add_note(note)
-                    combined_deck.add_note(note)
+                if filter_regex.search(html) == None: # Filter out exercise types that are NOT vocab
+                    tags = get_tags(html)
+                    try:
+                        vocab = get_vocab(html)
+                    except Exception:
+                        print(f'Failed parsing of lesson-{lesson_number}, vocab file {vocab_folder}')
+                        continue
+                    for jp, eng in vocab.items():
+                        note = genanki.Note(model=my_model,
+                                            fields=[re.sub(r'(.*?)\|(.*?)$', r'<ruby>\1<rt>\2</rt></ruby>', jp), eng],
+                                            tags=['Genki', f'lesson-{lesson_number}', *tags])
+                        my_deck.add_note(note)
+                        combined_deck.add_note(note)
 
     for deck in decks:
         if deck.notes:
