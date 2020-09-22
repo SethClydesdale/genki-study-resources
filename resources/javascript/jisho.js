@@ -1439,6 +1439,7 @@ Genki.jisho = {
     { ja : 'ソックス', en : 'socks', l : 'ワークブック読L2' },
     { ja : '外|そと', en : 'outside', l : '会L18' },
     { ja : '供える|そなえる', en : 'to offer; to sacrifice', v : 'ru', l : '読L16-漢字表' },
+    { ja : 'ソニー', en : 'Sony', l : 'ワークブックL7' },
     { ja : 'その', en : 'that...', l : '会L2' },
     { ja : 'その後|そのご', en : 'after that', l : '読L17-II' },
     { ja : 'そば', en : 'soba; Japanese buckwheat noodle', l : '会L15' },

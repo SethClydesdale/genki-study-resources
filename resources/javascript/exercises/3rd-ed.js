@@ -316,6 +316,9 @@ window.GenkiExercises = [
   'lesson-7/culture-1|Culture Note: Kinship Terms 1|p.184',
   'lesson-7/culture-2|Culture Note: Kinship Terms 2|p.184',
   'lesson-7/vocab-7|Useful Expressions: Parts of the Body|p.185',
+  'lesson-7/workbook-1|Workbook: Te-form Conjugation|p.69',
+  'lesson-7/workbook-2|Workbook: ～ている (Actions in Progress)|p.70; I, II, & III',
+  'lesson-7/workbook-3|Workbook: ～ている (Result of a Change)|p.71; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
