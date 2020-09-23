@@ -319,6 +319,9 @@ window.GenkiExercises = [
   'lesson-7/workbook-1|Workbook: Te-form Conjugation|p.69',
   'lesson-7/workbook-2|Workbook: ～ている (Actions in Progress)|p.70; I, II, & III',
   'lesson-7/workbook-3|Workbook: ～ている (Result of a Change)|p.71; I & II',
+  'lesson-7/workbook-4|Workbook: Describing People|p.72; I & II',
+  'lesson-7/workbook-5|Workbook: Adjective/Noun Te-forms|p.73; I & II',
+  'lesson-7/workbook-6|Workbook: Verb Stem + に行く／来る／帰る|p.74; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
