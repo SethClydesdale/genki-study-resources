@@ -1375,6 +1375,7 @@ Genki.jisho = {
     { ja : 'せきが出る|せきがでる', en : 'to cough', v : 'ru', l : '会L12' },
     { ja : '赤十字|せきじゅうじ', en : 'the Red Cross', l : '読L12-漢字表' },
     { ja : '赤道|せきどう', en : 'the equator', l : '読L12-漢字表' },
+    { ja : 'セクシー', en : 'sexy', l : 'ワークブックL7' },
     { ja : '世代|せだい', en : 'generation', l : '読L16-漢字表' },
     { ja : '説教する|せっきょうする', en : 'to preach', v : 'irr', l : '読L22-漢字表' },
     { ja : '絶対に|ぜったいに', en : 'definitely; no matter what', l : '読L20-II, 会L22' },
@@ -2665,7 +2666,7 @@ Genki.jisho = {
   ],
   
   'る' : [
-    { ja : 'ルームメート', en : 'roommate', l : '会L11' },
+    { ja : 'ルームメート／ルームメイト', en : 'roommate', l : '会L11' },
     { ja : 'ルーレット', en : 'roulette', l : 'ワークブック読L2' },
     { ja : '留守|るす', en : 'absence; not at home', l : '会L21' },
     { ja : '留守番|るすばん', en : "looking after a house during someone's absence", l : '会L23' },
