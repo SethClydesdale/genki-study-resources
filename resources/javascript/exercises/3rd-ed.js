@@ -325,6 +325,9 @@ window.GenkiExercises = [
   'lesson-7/workbook-7|Workbook: Counting People|p.75; I & II',
   'lesson-7/workbook-8|Workbook: Questions|p.76',
   'lesson-7/workbook-9|Workbook: Listening Comprehension|p.77; A, B, & C',
+  'lesson-7/literacy-1|Kanji Practice: Readings|p.324-325',
+  'lesson-7/literacy-2|Kanji Practice: Meanings|p.324-325',
+  'lesson-7/literacy-3|Kanji Practice: Stroke Order|p.324-325',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
