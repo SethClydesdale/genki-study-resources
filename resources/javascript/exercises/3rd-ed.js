@@ -328,6 +328,11 @@ window.GenkiExercises = [
   'lesson-7/literacy-1|Kanji Practice: Readings|p.324-325',
   'lesson-7/literacy-2|Kanji Practice: Meanings|p.324-325',
   'lesson-7/literacy-3|Kanji Practice: Stroke Order|p.324-325',
+  'lesson-7/literacy-4|Kanji Vocabulary: 京, 子, and 小|p.324',
+  'lesson-7/literacy-5|Kanji Vocabulary: 会, 社, and 父|p.324',
+  'lesson-7/literacy-6|Kanji Vocabulary: 母, 高, and 校|p.324-325',
+  'lesson-7/literacy-7|Kanji Vocabulary: 毎, 語, and 文|p.325',
+  'lesson-7/literacy-8|Kanji Vocabulary: 帰 and 入|p.325',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
