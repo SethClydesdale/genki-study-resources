@@ -690,7 +690,7 @@
         
         // add the quiz to the document
         zone.innerHTML = '<div id="quiz-info">' + o.info + '<br>If you don\'t know how to type in Japanese on your computer, please visit our help page by <a href="../../../help/writing/' + Genki.local + '" target="_blank">clicking here</a>.</div><div class="text-block">' + o.quizlet.replace(/\{.*?\}/g, function (match) {
-          var data = match.slice(1, match.length - 1).split('|'), hint, flag, sub, width;
+          var data = match.slice(1, match.length - 1).split('|'), hint, flag, sub, width, placeholder;
           
           if (data[0] == '!IMG') {
             return Genki.parse.image(data);
@@ -747,6 +747,11 @@
               (([hint, data[0]].sort(function (a, b) {
                 return b.length - a.length;
               })[0].length * (14 / (/[a-z]/i.test(hint || data[0]) && !/[\u3000-\u30FF]/.test(hint || data[0]) ? 2 : 1))) + 14);
+            
+            placeholder =
+              /placeholder:/.test(flag[0]) ? flag[0].split(':')[1] :
+              flag[1] && /placeholder:/.test(flag[1]) ? flag[1].split(':')[1] :
+              flag[2] && /placeholder:/.test(flag[2]) ? flag[2].split(':')[1] : null;
 
             // parse and return the input field
             return '<span class="writing-zone">'+
@@ -764,7 +769,7 @@
                 (flag[0] == 'answer' && data[9] ? 'data-answer9="' + data[8] + '" ' : '')+
                 (flag[0] == 'answer' && data[10] ? 'data-answer10="' + data[9] + '" ' : '')+
                 (flag[0] == 'furigana' ? 'data-furigana="' + hint + '" ' : '')+
-                (flag[0] == 'placeholder' ? 'placeholder="' + hint + '" ' : '')+
+                ((flag[0] == 'placeholder' || placeholder) ? 'placeholder="' + (placeholder || hint) + '" ' : '')+
                 'data-mistakes="0" '+
                 'tabindex="0" '+
                 'data-default-width="' + width + '" '+
