@@ -333,6 +333,8 @@ window.GenkiExercises = [
   'lesson-7/literacy-6|Kanji Vocabulary: 母, 高, and 校|p.324-325',
   'lesson-7/literacy-7|Kanji Vocabulary: 毎, 語, and 文|p.325',
   'lesson-7/literacy-8|Kanji Vocabulary: 帰 and 入|p.325',
+  'lesson-7/literacy-9|Kanji Practice: Fill in the Blanks|p.326; I-A',
+  'lesson-7/literacy-10|Kanji Practice: Word Search|p.326; I-C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
