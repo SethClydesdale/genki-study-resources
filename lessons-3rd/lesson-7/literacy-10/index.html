@@ -65,7 +65,8 @@
       info : 'Find seven kanji compounds from this lesson and six review compounds. Mark each kanji that is part of a compound with O.',
       
       quizlet : 
-      '<div class="example-problem" style="font-size:24px;">先生</div>'+
+      '<p class="crossword-answers center" style="display:none;font-weight:bold;color:#F60;">Please see the <a href="#crossword-answers">answers</a> at the bottom of this page for a complete list of words.</p>'+
+      '<div class="example-problem" style="font-size:24px;"><ruby>先生<rt>せんせい</rt></ruby></div>'+
       '<p><strong>Note:</strong> There are <strong>13</strong> compounds in all, so <strong>23</strong> kanji should be marked with <strong>O</strong>.</p>'+
       '<table id="crossword" class="table center">'+
         '<tr>'+
@@ -121,7 +122,37 @@
           '<td style="color:#F60;">生<br>{O}</td>'+
           '<td>男<br>{}</td>'+
         '</tr>'+
-      '</table>'
+      '</table>'+
+        
+      '<div id="crossword-answers" class="crossword-answers" style="display:none">'+
+        '<h3 class="section-title">Answers</h3>'+
+        '<div class="columns-2 clear">'+
+          '<div>'+
+            '<h4>Words from this lesson</h4>'+
+            '<ol>'+
+              '<li><ruby>東京<rt>とうきょう</rt></ruby></li>'+
+              '<li><ruby>高校<rt>こうこう</rt></ruby></li>'+
+              '<li><ruby>学校<rt>がっこう</rt></ruby></li>'+
+              '<li><ruby>毎日<rt>まいにち</rt></ruby></li>'+
+              '<li><ruby>日本語<rt>にほんご</rt></ruby></li>'+
+              '<li><ruby>会社<rt>かいしゃ</rt></ruby></li>'+
+              '<li><ruby>文学<rt>ぶんがく</rt></ruby></li>'+
+            '</ol>'+
+          '</div>'+
+
+          '<div>'+
+            '<h4>Review words</h4>'+
+            '<ol>'+
+              '<li><ruby>先生<rt>せんせい</rt></ruby></li>'+
+              '<li><ruby>外国人<rt>がいこくじん</rt></ruby></li>'+
+              '<li><ruby>元気<rt>げんき</rt></ruby></li>'+
+              '<li><ruby>天気<rt>てんき</rt></ruby></li>'+
+              '<li><ruby>出口<rt>でぐち</rt></ruby></li>'+
+              '<li><ruby>中国<rt>ちゅうごく</rt></ruby></li>'+
+            '</ol>'+
+          '</div>'+
+        '</div>'+
+      '</div>'
     });</script>
     <style>
       #crossword {
@@ -129,10 +160,9 @@
         max-width:600px;
         margin:10px auto;
       }
-
-      #crossword .writing-zone input {
-        width:100% !important;
-      }
+      #crossword .writing-zone input { width:100% !important; }
+      #crossword-answers li { margin:10px 0; }
+      .quiz-over .crossword-answers { display:block !important; }
     </style>
   </body>
 </html>

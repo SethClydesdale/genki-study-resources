@@ -335,6 +335,7 @@ window.GenkiExercises = [
   'lesson-7/literacy-8|Kanji Vocabulary: 帰 and 入|p.325',
   'lesson-7/literacy-9|Kanji Practice: Fill in the Blanks|p.326; I-A',
   'lesson-7/literacy-10|Kanji Practice: Word Search|p.326; I-C',
+  'lesson-7/literacy-11|Reading Practice: メアリーさんのてがみ|p.327-328; II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
