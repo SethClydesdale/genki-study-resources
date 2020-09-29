@@ -336,6 +336,15 @@ window.GenkiExercises = [
   'lesson-7/literacy-9|Kanji Practice: Fill in the Blanks|p.326; I-A',
   'lesson-7/literacy-10|Kanji Practice: Word Search|p.326; I-C',
   'lesson-7/literacy-11|Reading Practice: メアリーさんのてがみ|p.327-328; II',
+  'lesson-7/literacy-wb-1|Workbook: Kanji Writing Practice|p.141',
+  'lesson-7/literacy-wb-2|Workbook: Using Kanji|p.142; I & II',
+  
+  // Lesson 8
+  'lesson-8/vocab-1|Vocabulary: Nouns 1|p.188',
+  'lesson-8/vocab-2|Vocabulary: Nouns 2|p.188',
+  'lesson-8/vocab-3|Vocabulary: な-adjectives and U-verbs|p.188-189',
+  'lesson-8/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.189',
+  'lesson-8/vocab-5|Vocabulary: Adverbs and Other Expressions|p.189',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
