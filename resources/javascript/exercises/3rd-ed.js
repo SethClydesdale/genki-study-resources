@@ -345,6 +345,9 @@ window.GenkiExercises = [
   'lesson-8/vocab-3|Vocabulary: な-adjectives and U-verbs|p.188-189',
   'lesson-8/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.189',
   'lesson-8/vocab-5|Vocabulary: Adverbs and Other Expressions|p.189',
+  'lesson-8/grammar-0|Review: Short Form Conjugation Rules|p.190-191',
+  'lesson-8/grammar-1|Practice: Short Form Conjugation (Verbs)|p.198; I-A',
+  'lesson-8/grammar-2|Practice: Short Form Conjugation (Adjectives/Nouns)|p.198; I-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
