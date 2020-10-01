@@ -1,4 +1,4 @@
-# Genki Study Resources
+# Genki Study Resources -   An amazing Stuff for Practioner
 Genki Study Resources is a website that offers a vast collection of exercises for practicing what is taught in [Genki: An Integrated Course in Elementary Japanese](http://genki.japantimes.co.jp/index_en). It was mainly created to help aid with self-study, as such, you can use it online or offline depending on your needs. Choose one of the links below to begin testing the Japanese you've learned in Genki!
 
 
