@@ -1319,7 +1319,7 @@
           document.getElementById('appendix-tool').style.display = ''; // shows tools
           
           // scroll to the main titles
-          Genki.scrollTo(/\/dictionary\//.test(window.location) ? '#pratice-words' : '.title');
+          Genki.scrollTo(/\/dictionary\//.test(window.location) ? '#practice-words' : '.title');
           
           // launch exercise prompt based on the current page
           if (/\/dictionary\//.test(window.location)) Genki.appendix.jisho.launchExercise();
