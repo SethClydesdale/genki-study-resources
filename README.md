@@ -1,4 +1,4 @@
-# Genki Study Resources
+# Genki Study Resources (About)
 Genki Study Resources is a website that offers a vast collection of exercises for practicing what is taught in [Genki: An Integrated Course in Elementary Japanese](http://genki.japantimes.co.jp/index_en). It was mainly created to help aid with self-study, as such, you can use it online or offline depending on your needs. Choose one of the links below to begin testing the Japanese you've learned in Genki!
 
 
@@ -25,7 +25,7 @@ If you're using the offline version you'll have to unzip the files. Once you've 
 **If settings wont save:** If your settings wont save, such as furigana preference or dark mode, please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/stuck-loading/) for resolving the issue.
 
 
-### Keyboard Shortcuts
+### Keyboard Shortcuts are given below : 
 Genki Study Resources supports a few keyboard shortcuts which you can use to make things easier.
 
 #### Global
