@@ -146,7 +146,7 @@
         <h4 id="input-zones-with-sub-answers" class="sub-title">Input Zones with Sub-Answers</h4>
         <p>If you want to allow an answer to use more than one word or phrase use the syntax below.</p>
         <code>{%(あの/その/この)ねこ}</code>
-        <p><code>%()</code> initializes a sub-answer list within an answer, which allows a limitless amount of possible words or phrases, seprated by a "/", that can be used to answer the question. Only one of these can be used per answer, which means you can use 1 in ANSWER1 and another 1 in ANSWER2. For example: <code>{%(あの/その/この)ねこ|%(あの/その/この)いぬ|answer}</code> has a total of 6 possible answers.</p>
+        <p><code>%()</code> initializes a sub-answer list within an answer, which allows a limitless amount of possible words or phrases, separated by a "/", that can be used to answer the question. Only one of these can be used per answer, which means you can use 1 in ANSWER1 and another 1 in ANSWER2. For example: <code>{%(あの/その/この)ねこ|%(あの/その/この)いぬ|answer}</code> has a total of 6 possible answers.</p>
         <div class="text-block">
           <strong>QUIZ IN PROGRESS</strong>
           <div class="fill-quiz">
@@ -187,7 +187,7 @@
         </div>
         
         <h4 id="input-zones-with-custom-width" class="sub-title">Input Zones with Custom Width</h4>
-        <p>The width of input zones is automatically calcuated based on the amount of characters in ANSWER or HINT. Sometimes the width may be inadequate when using a HINT and you'll need to set it manually using the method below.</p>
+        <p>The width of input zones is automatically calculated based on the amount of characters in ANSWER or HINT. Sometimes the width may be inadequate when using a HINT and you'll need to set it manually using the method below.</p>
         <code>{ANSWER|HINT|width:N}</code>
         <p>ANSWER is the answer, HINT is the hint, and "width:N" is a flag that tells the API to set a custom width -- N being a number. Note: the width is set in pixels. (200px in the example below; ex. <code>{ANSWER|HINT|width:200}</code>)</p>
         <div class="text-block">
