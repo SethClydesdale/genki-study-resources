@@ -348,6 +348,7 @@ window.GenkiExercises = [
   'lesson-8/grammar-0|Review: Short Form Conjugation Rules|p.190-191',
   'lesson-8/grammar-1|Practice: Short Form Conjugation (Verbs)|p.198; I-A',
   'lesson-8/grammar-2|Practice: Short Form Conjugation (Adjectives/Nouns)|p.198; I-B',
+  'lesson-8/grammar-3|Practice: Informal Speech (Verbs)|p.198-199; II-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
