@@ -21,7 +21,7 @@ This script is used for verifying if the words in a vocabulary (type : 'drag') e
 ### derubify.js
 This script is for converting `<ruby>` tags in text strings into plain text. It returns two strings: `<ruby>` text and `<rt>` text which can be accessed via the object keys `ruby` or `rt`. Mainly used for converting ruby strings for usage in written quizzes as answers.
 
-Sntax:
+Syntax:
 ```javascript
 'たけしさんはうちに<ruby>帰<rt>かえ</rt></ruby>ります'.derubify();
 ```
