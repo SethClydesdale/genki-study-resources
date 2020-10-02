@@ -18,11 +18,11 @@ Genki Study Resources is a website that offers a vast collection of exercises fo
 
 
 ### Using the Offline Version
-If you're using the offline version you'll have to unzip the files. Once you've done that, you can access all the study resources by opening any of the [**index.html**](https://i62.servimg.com/u/f62/18/21/41/30/captur11.png) files in the browser of your choice. It should have the same experience as the online version, however, whenever new exercises/lessons are added they wont be available; you'll have to download the latest version of the repository to get them.
+If you're using the offline version you'll have to unzip the files. Once you've done that, you can access all the study resources by opening any of the [**index.html**](https://i62.servimg.com/u/f62/18/21/41/30/captur11.png) files in the browser of your choice. It should have the same experience as the online version, however, whenever new exercises/lessons are added they won't be available; you'll have to download the latest version of the repository to get them.
 
 **If icons are broken:** If you use Firefox and icons appear broken, then please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/broken-icons/) to resolve the issue.
 
-**If settings wont save:** If your settings wont save, such as furigana preference or dark mode, please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/stuck-loading/) for resolving the issue.
+**If settings won't save:** If your settings won't save, such as furigana preference or dark mode, please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/stuck-loading/) for resolving the issue.
 
 
 ### Keyboard Shortcuts
