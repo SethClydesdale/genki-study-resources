@@ -28,7 +28,7 @@ If you're using the offline version you'll have to unzip the files. Once you've 
 ### Keyboard Shortcuts
 Genki Study Resources supports a few keyboard shortcuts which you can use to make things easier.
 
-#### Global
+### Global 
 Shortcuts that can be used anywhere.
 
 | Shortcut | Description |
@@ -36,7 +36,7 @@ Shortcuts that can be used anywhere.
 | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>D</kbd> | Toggle Dark Mode on/off |
 | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>M</kbd> | Open Settings Manager |
 
-#### Exercises
+### Exercises
 Shortcuts that can only be used in exercises.
 
 | Shortcut | Description |
