@@ -22,7 +22,7 @@ If you're using the offline version you'll have to unzip the files. Once you've 
 
 **If icons are broken:** If you use Firefox and icons appear broken, then please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/broken-icons/) to resolve the issue.
 
-**If settings wont save:** If your settings wont save, such as furigana preference or dark mode, please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/stuck-loading/) for resolving the issue.
+**If settings won't save:** If your settings won't save, such as furigana preference or dark mode, please see [this topic](https://sethclydesdale.github.io/genki-study-resources/help/stuck-loading/) for resolving the issue.
 
 
 ### Keyboard Shortcuts
