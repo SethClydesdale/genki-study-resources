@@ -350,6 +350,7 @@ window.GenkiExercises = [
   'lesson-8/grammar-2|Practice: Short Form Conjugation (Adjectives/Nouns)|p.198; I-B',
   'lesson-8/grammar-3|Practice: Informal Speech (Verbs)|p.198-199; II-A',
   'lesson-8/grammar-4|Practice: Informal Speech (Adjectives/Nouns)|p.199; II-B',
+  'lesson-8/grammar-5|Practice: Quotations (～と思います) 1|p.199; III-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
