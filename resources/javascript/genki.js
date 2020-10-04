@@ -412,10 +412,31 @@
             else if (o.format == 'practice') {
               o.quizlet = o.quizlet[type]; // variations are handled file-side for better control
               
+              var img = document.querySelector('.multi-quiz-image');
+              
+              // restore multiple choice image if it was removed
+              if (Genki.multiCachedImage && !img) {
+                var timer = document.getElementById('quiz-timer');
+                
+                if (timer) {
+                  timer.parentNode.insertBefore(Genki.multiCachedImage, timer);
+                  img = Genki.multiCachedImage;
+                }
+              }
+              
               // hide multi-choice images if written test is chosen
-              if (o.type == 'fill') {
-                var img = document.querySelector('.multi-quiz-image');
-                if (img) img.style.display = 'none';
+              if (o.type == 'fill' && img) {
+                img.style.display = 'none';
+              }
+              
+              // show multi-choice images if multiple choice is chosen
+              else if (o.type == 'multi' && img) {
+                img.style.display = '';
+              }
+              
+              // cache image for resets
+              if (img) {
+                Genki.multiCachedImage = img.cloneNode(true);
               }
             }
             
