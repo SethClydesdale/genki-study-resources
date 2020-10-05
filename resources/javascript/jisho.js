@@ -51,7 +51,7 @@ Genki.jisho = {
     { ja : 'あげる', en : 'to give (to others)', v : 'ru', l : '会L14' },
     { ja : '朝|あさ', en : 'morning', l : '会L3' },
     { ja : '朝ご飯|あさごはん', en : 'breakfast', l : '会L3' },
-    { ja : 'あさって', en : 'the day after tomorrow', l : '会L4(e), 会L8' },
+    { ja : '明後日|あさって', en : 'the day after tomorrow', l : '会L4(e), 会L8' },
     { ja : '朝寝坊する|あさねぼうする', en : 'to oversleep', v : 'irr', l : '会L16' },
     { ja : '足|あし', en : 'leg; foot', l : '会L7(e), 会L12' },
     { ja : '味|あじ', en : 'taste', l : '読L15-漢字表' },
