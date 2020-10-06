@@ -353,6 +353,8 @@ window.GenkiExercises = [
   'lesson-8/grammar-5|Practice: Quotations (～と思います) 1|p.199; III-A',
   'lesson-8/grammar-6|Practice: Quotations (～と思います) 2|p.200; III-B',
   'lesson-8/grammar-7|Practice: Quotations (～と言っていました)|p.201; IV-A',
+  'lesson-8/grammar-8|Practice: ～ないでください|p.202; V-A',
+  'lesson-8/grammar-9|Practice: Verbのが上手です|p.203; VI-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
