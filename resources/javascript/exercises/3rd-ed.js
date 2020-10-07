@@ -355,6 +355,12 @@ window.GenkiExercises = [
   'lesson-8/grammar-7|Practice: Quotations (～と言っていました)|p.201; IV-A',
   'lesson-8/grammar-8|Practice: ～ないでください|p.202; V-A',
   'lesson-8/grammar-9|Practice: Verbのが上手です|p.203; VI-A',
+  'lesson-8/grammar-10|Practice: が|p.204; VII-A',
+  'lesson-8/grammar-11|Practice: 何も|p.204; VIII-A',
+  'lesson-8/vocab-6|Culture Note: Common Dishes in Japan|p.208',
+  'lesson-8/culture-1|Culture Note: Foods in Japan|p.208',
+  'lesson-8/vocab-7|Useful Expressions: At the Supermarket|p.209',
+  'lesson-8/vocab-8|Useful Expressions: Supermarket Foods|p.209',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
