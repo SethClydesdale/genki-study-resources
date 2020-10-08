@@ -361,6 +361,7 @@ window.GenkiExercises = [
   'lesson-8/culture-1|Culture Note: Foods in Japan|p.208',
   'lesson-8/vocab-7|Useful Expressions: At the Supermarket|p.209',
   'lesson-8/vocab-8|Useful Expressions: Supermarket Foods|p.209',
+  'lesson-8/workbook-1|Workbook: Short Form Conjugation (Present Tense)|p.78',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
