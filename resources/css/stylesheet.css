@@ -2764,7 +2764,7 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   }
   
   .inline-columns > div, .lesson-summary .inline-columns > div {
-    margin-right:0;
+    margin-right:5px;
   }
   
   .dictionary-group { margin:0; }
