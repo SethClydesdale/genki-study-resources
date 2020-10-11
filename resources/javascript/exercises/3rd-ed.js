@@ -364,6 +364,7 @@ window.GenkiExercises = [
   'lesson-8/workbook-1|Workbook: Short Form Conjugation (Present Tense)|p.78',
   'lesson-8/workbook-2|Workbook: Short Forms (Informal Speech)|p.79; I & II',
   'lesson-8/workbook-3|Workbook: Quotations (～と思います)|p.80; I & II',
+  'lesson-8/workbook-4|Workbook: Quotations (～と言っていました)|p.81',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
