@@ -9,7 +9,7 @@
   }
   
   
-  // # ANOUNCEMENTS #
+  // # ANNOUNCEMENTS #
   window.GenkiAnn = {
     rotation : false, // determines if the announcements rotate
     edition : /lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd', // determines current edition
@@ -127,7 +127,7 @@
     }
   };
   
-  // initilize the announcement module
+  // initialize the announcement module
   GenkiAnn.init();
   
   
