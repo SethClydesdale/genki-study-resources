@@ -21,11 +21,6 @@
     // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
     msg : [
       {
-        date : '09/15/20',
-        content : 'Do you use Anki to study vocab? If so, you can now find decks for the vocab on Genki Study Resources <a href="' + getPaths() + 'help/anki-decks/">here</a>! A big thank you to <a href="https://github.com/SethClydesdale/genki-study-resources/pull/89">Ronserruya</a> for the script used to generate the decks!',
-      },
-      
-      {
         content : 'The 3rd Edition version of Genki Study Resources is currently under construction and will be expanded over time. You can follow updates to these resources via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">GitHub</a> or <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>. Furthermore, if you have any feedback regarding the 3rd edition resources, feel free to let me know <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/83">here</a>. Thank you!',
         edition : '3rd'
       },
@@ -36,7 +31,7 @@
       },
       
       {
-        content : 'Looking for more self-study resources? Visit the official <a href="http://genki.japantimes.co.jp/self_en">self-study room</a> for Genki or check out some of the featured links in the <a href="https://github.com/SethClydesdale/genki-study-resources#additional-links-for-studying-japanese">readme</a> on GitHub.'
+        content : 'Looking for more self-study resources? Visit the official <a href="http://genki.japantimes.co.jp/self_en">self-study room</a> for Genki or check out some of the resources in the <a href="https://github.com/SethClydesdale/genki-study-resources#resources-for-studying-japanese">readme</a> on GitHub. If you use Anki to study vocab, you can find decks for the vocab on Genki Study Resources <a href="' + getPaths() + 'help/anki-decks/">here</a>!'
       },
       
       {
