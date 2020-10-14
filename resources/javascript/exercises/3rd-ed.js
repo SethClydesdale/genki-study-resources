@@ -368,6 +368,8 @@ window.GenkiExercises = [
   'lesson-8/workbook-5|Workbook: ～ないでください|p.82; I & II',
   'lesson-8/workbook-6|Workbook: Verbのが好きです／上手です|p.83; I & II',
   'lesson-8/workbook-7|Workbook: が・何か and 何も|p.84; I & II',
+  'lesson-8/workbook-8|Workbook: Questions|p.85; I & II',
+  'lesson-8/workbook-9|Workbook: Listening Comprehension|p.86; A, B, & C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
