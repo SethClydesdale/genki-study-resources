@@ -370,6 +370,8 @@ window.GenkiExercises = [
   'lesson-8/workbook-7|Workbook: が・何か and 何も|p.84; I & II',
   'lesson-8/workbook-8|Workbook: Questions|p.85; I & II',
   'lesson-8/workbook-9|Workbook: Listening Comprehension|p.86; A, B, & C',
+  'lesson-8/literacy-1|Kanji Practice: Readings|p.329-330',
+  'lesson-8/literacy-2|Kanji Practice: Meanings|p.329-330',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
