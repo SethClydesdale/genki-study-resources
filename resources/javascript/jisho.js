@@ -1721,6 +1721,7 @@ Genki.jisho = {
     { ja : '伝言板|でんごんばん', en : 'bulletin board; message board', l : '読L6-II' },
     { ja : '天才|てんさい', en : 'genius', l : '読L5-漢字表' },
     { ja : '電子辞書|でんしじしょ', en : 'electronic dictionary', l : '会L20' },
+    { ja : '電子レンジ|でんしレンジ', en : 'microwave oven', l : '読L8-漢字表' },
     { ja : '電車|でんしゃ', en : 'train', l : '会L6' },
     { ja : '天井|てんじょう', en : 'ceiling', l : '読L17-II' },
     { ja : '電池|でんち', en : 'battery', l : '会L15' },
