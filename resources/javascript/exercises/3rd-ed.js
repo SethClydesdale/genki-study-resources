@@ -373,6 +373,11 @@ window.GenkiExercises = [
   'lesson-8/literacy-1|Kanji Practice: Readings|p.329-330',
   'lesson-8/literacy-2|Kanji Practice: Meanings|p.329-330',
   'lesson-8/literacy-3|Kanji Practice: Stroke Order|p.329-330',
+  'lesson-8/literacy-4|Kanji Vocabulary: 員, 新, and 聞|p.329',
+  'lesson-8/literacy-5|Kanji Vocabulary: 作, 仕, and 事|p.329',
+  'lesson-8/literacy-6|Kanji Vocabulary: 電 and 車|p.329',
+  'lesson-8/literacy-7|Kanji Vocabulary: 休, 言, and 読|p.330',
+  'lesson-8/literacy-8|Kanji Vocabulary: 思, 次, and 何|p.330',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
