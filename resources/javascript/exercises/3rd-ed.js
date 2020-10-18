@@ -378,6 +378,7 @@ window.GenkiExercises = [
   'lesson-8/literacy-6|Kanji Vocabulary: 電 and 車|p.329',
   'lesson-8/literacy-7|Kanji Vocabulary: 休, 言, and 読|p.330',
   'lesson-8/literacy-8|Kanji Vocabulary: 思, 次, and 何|p.330',
+  'lesson-8/literacy-9|Kanji Practice: Match the Verbs|p.331; I-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
