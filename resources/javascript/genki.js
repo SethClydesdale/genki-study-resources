@@ -2366,7 +2366,7 @@
     randomExercise : function () {
       // random exercise preference (current lesson)
       if (storageOK && localStorage.genkiRandomExercise == 'lesson' && /lesson-\d+/.test(window.location.href)) {
-        var regex = new RegExp(window.location.href.replace(/.*?(lesson-\d+).*/, '$1')),
+        var regex = new RegExp(window.location.href.replace(/.*?(lesson-\d+).*/, '$1/')),
             list = Genki.exercises.filter(function(a) { return regex.test(a) });
       } 
       
