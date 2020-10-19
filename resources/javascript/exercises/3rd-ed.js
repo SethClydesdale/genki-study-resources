@@ -379,6 +379,7 @@ window.GenkiExercises = [
   'lesson-8/literacy-7|Kanji Vocabulary: 休, 言, and 読|p.330',
   'lesson-8/literacy-8|Kanji Vocabulary: 思, 次, and 何|p.330',
   'lesson-8/literacy-9|Kanji Practice: Match the Verbs|p.331; I-B',
+  'lesson-8/literacy-10|Reading Practice: 日本の会社員|p.332-333; II-C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
