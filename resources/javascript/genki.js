@@ -414,16 +414,6 @@
               
               var img = document.querySelector('.multi-quiz-image');
               
-              // restore multiple choice image if it was removed
-              if (Genki.multiCachedImage && !img) {
-                var timer = document.getElementById('quiz-timer');
-                
-                if (timer) {
-                  timer.parentNode.insertBefore(Genki.multiCachedImage, timer);
-                  img = Genki.multiCachedImage;
-                }
-              }
-              
               // hide multi-choice images if written test is chosen
               if (o.type == 'fill' && img) {
                 img.style.display = 'none';
@@ -432,11 +422,6 @@
               // show multi-choice images if multiple choice is chosen
               else if (o.type == 'multi' && img) {
                 img.style.display = '';
-              }
-              
-              // cache image for resets
-              if (img) {
-                Genki.multiCachedImage = img.cloneNode(true);
               }
             }
             
@@ -1328,9 +1313,11 @@
         }
 
         // hide exercise and reset contents
-        var exercise = document.getElementById('exercise');
+        var exercise = document.getElementById('exercise'),
+            img = document.querySelector('.multi-quiz-image');
+        
         exercise.className = 'content-block';
-        exercise.innerHTML = document.getElementById('exercise-title').outerHTML + '<div id="quiz-result"></div><div id="quiz-zone" class="clear"></div><div id="quiz-timer" class="center"></div>' + document.querySelector('.more-exercises').outerHTML;
+        exercise.innerHTML = document.getElementById('exercise-title').outerHTML + '<div id="quiz-result"></div><div id="quiz-zone" class="clear"></div>' + (img ? img.outerHTML : '') + '<div id="quiz-timer" class="center"></div>' + document.querySelector('.more-exercises').outerHTML;
         
         // things to do depending on the page
         // appendix
