@@ -390,6 +390,8 @@ window.GenkiExercises = [
   'lesson-9/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.213',
   'lesson-9/vocab-5|Vocabulary: Adverbs and Other Expressions|p.213',
   'lesson-9/vocab-6|Vocabulary: Numbers (used to count small items)|p.213',
+  'lesson-9/grammar-0|Review: Short Form Conjugation Rules (Past Tense)|p.214',
+  'lesson-9/grammar-1|Practice: Short Form Conjugation (Past Tense Verbs)|p.219; I-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
