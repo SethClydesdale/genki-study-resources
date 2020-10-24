@@ -61,7 +61,7 @@
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
     <script>(function () {
-      var q = 'が<ruby>好<rt>すき</rt></ruby>きですか。',
+      var q = 'が<ruby>好<rt>す</rt></ruby>きですか。',
           a = [
             'Aはい、(<ruby>大<rt>だい</rt></ruby>)<ruby>好<rt>す</rt></ruby>きです。',
             'Aいいえ、(<ruby>大<rt>だい</rt></ruby>)<ruby>嫌<rt>きら</rt></ruby>いです。',
@@ -71,7 +71,7 @@
             '<ruby>好<rt>す</rt></ruby>きでも<ruby>嫌<rt>きら</rt></ruby>いでもじゃないです。'
           ],
           
-          input = '{はい、%(大/)好きです|いいえ、%(大/)嫌いです|はい、すきです|いいえ、きらいです|' + Genki.getAlts('いいえ、{大}{好}きです', 'だい|す') + Genki.getAlts('いいえ、{大}{嫌}いです', 'だい|きらい') + Genki.getAlts('{好}きでも{嫌}いでもないです', 'す|きら') + 'answer;width:200}。';
+          input = '{はい、%(大/)好きです|いいえ、%(大/)嫌いです|はい、すきです|いいえ、きらいです|' + Genki.getAlts('はい、{大}{好}きです', 'だい|す') + Genki.getAlts('いいえ、{大}{嫌}いです', 'だい|きら') + Genki.getAlts('{好}きでも{嫌}いでもないです', 'す|きら') + 'answer;width:200}。';
       
       Genki.generateQuiz({
         format : 'practice',
