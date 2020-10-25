@@ -1492,9 +1492,11 @@ ruby {
   /* START ruby-position:under; hack */
   text-align:center;
   display:inline-block;
+  /*OLD: (replaced w/valign:top)
   position:relative;
   bottom:-16px;
-  margin:-16px 0 16px 0;
+  margin:-16px 0 16px 0;*/
+  vertical-align:top;
   /* END   ruby-position:under; hack */
 }
 
@@ -1508,8 +1510,9 @@ ruby rt {
   /* START ruby-position:under; hack */
   font-size:11px; /* if font size is changed, various values will need to be adjusted */
   display:block;
+  /*OLD: (w/valign:top this doesn't seem necessary)
   height:15px;
-  line-height:15px;
+  line-height:15px;*/
   margin-top:-1px;
   /* END   ruby-position:under; hack */
   padding:0 2px;
