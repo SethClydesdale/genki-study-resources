@@ -394,6 +394,7 @@ window.GenkiExercises = [
   'lesson-9/grammar-1|Practice: Short Form Conjugation (Past Tense Verbs)|p.219; I-A',
   'lesson-9/grammar-2|Practice: Short Form Conjugation (Past Tense Adjectives/Nouns)|p.219-220; I-B',
   'lesson-9/grammar-3|Practice: Informal Speech (Past Tense Verbs)|p.220; II-A',
+  'lesson-9/grammar-4|Practice: Informal Speech (Past Tense Adjectives/Nouns)|p.220-221; II-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
