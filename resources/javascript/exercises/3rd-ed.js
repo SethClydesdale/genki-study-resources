@@ -397,6 +397,7 @@ window.GenkiExercises = [
   'lesson-9/grammar-4|Practice: Informal Speech (Past Tense Adjectives/Nouns)|p.220-221; II-B',
   'lesson-9/grammar-5|Practice: Quotations (～と思います)|p.221; III-A',
   'lesson-9/grammar-6|Practice: Quotations (～と言っていました)|p.222; IV-A',
+  'lesson-9/grammar-7|Practice: Qualifying Nouns with Verbs|p.223; V-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
