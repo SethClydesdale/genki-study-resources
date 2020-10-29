@@ -398,6 +398,7 @@ window.GenkiExercises = [
   'lesson-9/grammar-5|Practice: Quotations (～と思います)|p.221; III-A',
   'lesson-9/grammar-6|Practice: Quotations (～と言っていました)|p.222; IV-A',
   'lesson-9/grammar-7|Practice: Qualifying Nouns with Verbs|p.223; V-A',
+  'lesson-9/grammar-8|Practice: もう～ました／まだ～ていません|p.224; VI-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
