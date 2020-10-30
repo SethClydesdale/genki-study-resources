@@ -399,6 +399,10 @@ window.GenkiExercises = [
   'lesson-9/grammar-6|Practice: Quotations (～と言っていました)|p.222; IV-A',
   'lesson-9/grammar-7|Practice: Qualifying Nouns with Verbs|p.223; V-A',
   'lesson-9/grammar-8|Practice: もう～ました／まだ～ていません|p.224; VI-A',
+  'lesson-9/grammar-9|Practice: ～から|p.225; VII-A',
+  'lesson-9/culture-1|Culture Note: Japanese Traditional Culture|p.228',
+  'lesson-9/vocab-7|Useful Expressions: Color Names|p.229',
+  'lesson-9/vocab-8|Useful Expressions: Colors|p.229',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
