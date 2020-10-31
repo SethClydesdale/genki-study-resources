@@ -403,6 +403,8 @@ window.GenkiExercises = [
   'lesson-9/culture-1|Culture Note: Japanese Traditional Culture|p.228',
   'lesson-9/vocab-7|Useful Expressions: Color Names|p.229',
   'lesson-9/vocab-8|Useful Expressions: Colors|p.229',
+  'lesson-9/workbook-1|Workbook: Past Tense Short Forms|p.87',
+  'lesson-9/workbook-2|Workbook: Past Tense Short Forms (Informal Speech)|p.88; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
