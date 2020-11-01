@@ -405,6 +405,8 @@ window.GenkiExercises = [
   'lesson-9/vocab-8|Useful Expressions: Colors|p.229',
   'lesson-9/workbook-1|Workbook: Past Tense Short Forms|p.87',
   'lesson-9/workbook-2|Workbook: Past Tense Short Forms (Informal Speech)|p.88; I & II',
+  'lesson-9/workbook-3|Workbook: Quotations (～と思います)|p.89; I & II',
+  'lesson-9/workbook-4|Workbook: Quotations (～と言っていました)|p.90',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
