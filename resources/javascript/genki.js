@@ -347,11 +347,11 @@
                   // words which contain '／' have multiple variations, as such we should loop through and add these separately
                   for (var a = split[0].split('／'), b = 0, c = a.length, furi; b < c; b++) {
                     furi = split[1] ? split[1] : o.format == 'kana' ? o.quizlet[i] : '';
-                    quizlet[a[b].replace(/\(.*?\)|（.*?）|。|～/g, '')] = furi;
+                    quizlet[a[b].replace(/\(.*?\)|（.*?）|～/g, '')] = furi;
 
                     // add additional variations if the word/expression contains optional parts
                     if (/\(.*?\)|（.*?）/.test(a[b])) {
-                      quizlet[a[b].replace(/。|～|\(|\)|（|）/g, '')] = furi;
+                      quizlet[a[b].replace(/～|\(|\)|（|）/g, '')] = furi;
                     }
                   }
                 }
@@ -365,7 +365,7 @@
                 // written format for vocab
                 if (/vocab|numbers/.test(o.format)) {
                   var quizlet = '<div class="count-problems columns-2 clear"><div>',
-                      filter = /。|～/g,
+                      filter = /～/g,
                       keys = [], def, problem, i, j, n;
 
                   // get keys
