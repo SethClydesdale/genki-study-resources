@@ -28,7 +28,7 @@ def get_vocab(html):
 
 def main():
     try :
-        print('Creating folder for decks...')
+        print('Creating folder for xlsx...')
         output_folder.mkdir(parents=True, exist_ok=False)
     except Exception:
         print('Folder already exists, skipping this step.')
@@ -50,13 +50,13 @@ def main():
             with open(vocab_folder.joinpath('index.html'), 'r', encoding='UTF8') as f:
                 html = f.read()
                 if filter_regex.search(html) == None: # Filter out exercise types that are NOT vocab
-                    tags = get_tags(html)
                     try:
                         vocab = get_vocab(html)
                     except Exception:
                         print(f'Failed parsing of lesson-{lesson_number}, vocab file {vocab_folder}')
                         continue
                     for jp, eng in vocab.items():
+                        eng = re.sub(r"\<(.*?)\>", '', eng)
                         sheet.cell(row_num, 1).value = eng
                         sheet.cell(row_num, 2).value = jp
 
@@ -68,7 +68,7 @@ def main():
         print(f'Creating deck for {name}...');
         wb.save(output_folder.joinpath(f'{name}.xlsx'))
             
-    print('All Anki decks for the selected edition have been generated!')
+    print('All xlsx list for the selected edition have been generated!')
 
 
 if __name__ == '__main__':
