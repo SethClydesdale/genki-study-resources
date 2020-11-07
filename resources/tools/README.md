@@ -89,3 +89,22 @@ python3 anki_decks_maker.py ../../lessons
 You can also generate decks by executing `anki_decks_maker-run.bat` and typing either `2nd` or `3rd` to generate a deck for that edition.
  
 All of the decks created are currently available under the [decks](decks/) folder
+
+
+### wordlist_E-J.py
+ * Requires python 3.6+.
+ 
+ Create xlsx wordlist with words and their English meaning to memorise vocabulary,
+
+ 
+ ```shell script
+python3 wordlist_E-J.py <path_to_lessons_folder>
+
+# For example: 
+python3 wordlist_E-J.py ../../lessons-3rd
+python3 wordlist_E-J.py ../../lessons
+```
+
+You can also generate decks by executing `wordlist_E-J-run.bat` and typing either `2nd` or `3rd` to generate a deck for that edition.
+ 
+All of the lists created are currently available under the [wordlists_E-J](wordlists_E-J/) folder
