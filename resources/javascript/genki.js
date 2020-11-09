@@ -347,11 +347,11 @@
                   // words which contain '／' have multiple variations, as such we should loop through and add these separately
                   for (var a = split[0].split('／'), b = 0, c = a.length, furi; b < c; b++) {
                     furi = split[1] ? split[1] : o.format == 'kana' ? o.quizlet[i] : '';
-                    quizlet[a[b].replace(/\(.*?\)|（.*?）|。|～/g, '')] = furi;
+                    quizlet[a[b].replace(/\(.*?\)|（.*?）|～/g, '')] = furi;
 
                     // add additional variations if the word/expression contains optional parts
                     if (/\(.*?\)|（.*?）/.test(a[b])) {
-                      quizlet[a[b].replace(/。|～|\(|\)|（|）/g, '')] = furi;
+                      quizlet[a[b].replace(/～|\(|\)|（|）/g, '')] = furi;
                     }
                   }
                 }
@@ -365,7 +365,6 @@
                 // written format for vocab
                 if (/vocab|numbers/.test(o.format)) {
                   var quizlet = '<div class="count-problems columns-2 clear"><div>',
-                      filter = /。|～/g,
                       keys = [], def, problem, i, j, n;
 
                   // get keys
@@ -376,17 +375,18 @@
                   // parse written quiz
                   for (i = 0, j = keys.length, n = Math.ceil(j/2); i < j; i++) {
                     def = keys[i].split('|');
+                    
                     problem = ('{'+
-                      // answer 1
-                      def[0].replace(filter, '')+ 
-                      (filter.test(def[0]) ? '|' + def[0] : '')+ // unfiltered answer 1
-                      // answer 2 (usu. furigana)
-                      (def[1] ? '|' + def[1].replace(filter, '')+ 
-                      (filter.test(def[1]) ? '|' + def[1] : '') : '')+// unfiltered answer 2
+                      // filter: /。|～/g (4 below)
+                      // cannot be cached to a variable due to this bug: http://blog.stevenlevithan.com/archives/es3-regexes-broken
+                      def[0].replace(/。|～/g, '')+ // answer 1
+                      (def[1] ? '|' + def[1].replace(/。|～/g, '') : '')+ // answer 2
+                      (/。|～/g.test(def[0]) ? '|' + def[0] : '')+ // unfiltered answer 1
+                      (def[1] && /。|～/g.test(def[1]) ? '|' + def[1] : '')+ // unfiltered answer 2
                       // additional parsing
                     '}').replace(/\((.*?)\)/g, '%($1/)').replace(/（(.*?)）/g, '%($1/)') // adds optional sub-answers
-                        .replace(/／/g, '|'), // adds additional answers
-
+                        .replace(/／/g, '|'); // adds additional answers
+                    
                     quizlet += 
                     (i == n ? '</div><div>' : '')+ // changes columns
                     '<div class="problem">'+
@@ -395,8 +395,9 @@
                       // the horizontal bar indicates multiple answers in this instance
                       (/\|/.test(problem) ? problem.replace('}', '|answer}') : problem)+ 
                     '</div>'; 
+                    
                   }
-
+                  
                   o.quizlet = quizlet + '</div></div>';
                 }
                 
