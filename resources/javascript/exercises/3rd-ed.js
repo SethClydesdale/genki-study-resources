@@ -411,6 +411,7 @@ window.GenkiExercises = [
   'lesson-9/workbook-6|Workbook: もう～ました／まだ～ていません|p.92',
   'lesson-9/workbook-7|Workbook: ～から|p.93; I & II',
   'lesson-9/workbook-8|Workbook: Questions|p.94',
+  'lesson-9/workbook-9|Workbook: Listening Comprehension|p.95; A, B, & C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
