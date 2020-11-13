@@ -415,6 +415,11 @@ window.GenkiExercises = [
   'lesson-9/literacy-1|Kanji Practice: Readings|p.334-335',
   'lesson-9/literacy-2|Kanji Practice: Meanings|p.334-335',
   'lesson-9/literacy-3|Kanji Practice: Stroke Order|p.334-335',
+  'lesson-9/literacy-4|Kanji Vocabulary: 午, 後, and 前|p.334',
+  'lesson-9/literacy-5|Kanji Vocabulary: 名, 白, and 雨|p.334',
+  'lesson-9/literacy-6|Kanji Vocabulary: 書, 友, and 間|p.334-335',
+  'lesson-9/literacy-7|Kanji Vocabulary: 家, 話, and 少|p.335',
+  'lesson-9/literacy-8|Kanji Vocabulary: 古, 知, and 来|p.335',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
