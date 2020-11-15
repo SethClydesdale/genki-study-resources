@@ -421,6 +421,10 @@ window.GenkiExercises = [
   'lesson-9/literacy-7|Kanji Vocabulary: 家, 話, and 少|p.335',
   'lesson-9/literacy-8|Kanji Vocabulary: 古, 知, and 来|p.335',
   'lesson-9/literacy-9|Kanji Practice: Fill in the Blanks|p.336; I-A & B',
+  'lesson-9/literacy-10|Reading Practice: ソラさんの日記|p.336-338; II-A, B, & C',
+  'lesson-9/vocab-9|Useful Expressions: for Mail/Letters|p.339',
+  'lesson-9/literacy-wb-1|Workbook: Kanji Writing Practice|p.145',
+  'lesson-9/literacy-wb-2|Workbook: Using Kanji|p.146; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
