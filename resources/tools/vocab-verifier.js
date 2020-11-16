@@ -47,5 +47,5 @@ if (!/\?debug/.test(window.location.search)) {
 
 // verify the vocab
 else {
-  verifyVocab(Genki.exerciseData.quizlet);
+  verifyVocab(JSON.parse(Genki.exerciseData).quizlet);
 }
