@@ -940,6 +940,7 @@ Genki.jisho = {
     { ja : 'これから', en : 'from now on', l : '読L11-II, 会L16' },
     { ja : 'ころ', en : 'time of...; when...', l : '会L21' },
     { ja : '～ごろ', en : 'at about...', l : '会L3' },
+    { ja : 'ごろごろする', en : 'to chill out at home; to stay home and do nothing', l : '会L10' },
     { ja : '転ぶ|ころぶ', en : 'to fall down', v : 'u', l : '会L18' },
     { ja : '怖い|こわい', en : 'scary; frightening', l : '会L5' },
     { ja : '壊す|こわす', en : 'to break (something)', v : 'u', l : '会L18' },
@@ -1628,7 +1629,8 @@ Genki.jisho = {
   ],
   
   'つ' : [
-    { ja : '一日|ついたち', en : 'the first day of a month', l : '会L4(4)' },
+    { ja : 'ツアー', en : 'tour', l : '会L10' },
+    { ja : '一日|ついたち', en : 'the first day of a month', l : '会L4(e)' },
     { ja : 'ツイン', en : 'twin room', l : '会L15(e)' },
     { ja : '通学|つうがく', en : 'going to school', l : '読L15-漢字表' },
     { ja : '通勤|つうきん', en : 'going to work', l : '読L15-漢字表' },
@@ -1794,7 +1796,7 @@ Genki.jisho = {
     { ja : 'ところが', en : 'however; on the contrary', l : '読L21-II' },
     { ja : 'ところで', en : 'by the way', l : '会L9' },
     { ja : '年|とし', en : 'year', l : '読L10-II' },
-    { ja : '年上|としうえ', en : 'being older', l : '読L14-II' },
+    { ja : '年上|としうえ', en : 'being older; someone older', l : '読L14-II' },
     { ja : '図書館|としょかん', en : 'library', l : '会L2' },
     { ja : 'どちら', en : 'which; where (polite)', l : '会L10, 会L19' },
     { ja : '土地|とち', en : 'land', l : '読L4-漢字表' },
