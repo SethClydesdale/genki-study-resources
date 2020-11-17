@@ -308,6 +308,7 @@ Genki.jisho = {
   
   'お' : [
     { ja : 'お預け入れ|おあずけいれ', en : 'deposit', l : '会L13(e)' },
+    { ja : '老い|おい', en : 'old; old age; old person', l : '会L10' },
     { ja : 'おいしい', en : 'delicious', l : '会L2' },
     { ja : 'お祈りする|おいのりする', en : 'to pray', v : 'irr', l : '会L17' },
     { ja : '王子|おうじ', en : 'prince', l : 'ワークブックL19' },
