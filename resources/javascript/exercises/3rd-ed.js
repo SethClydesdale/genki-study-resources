@@ -432,6 +432,7 @@ window.GenkiExercises = [
   'lesson-10/vocab-3|Vocabulary: い-adjectives and な-adjectives|p.233',
   'lesson-10/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.233',
   'lesson-10/vocab-5|Vocabulary: Adverbs and Other Expressions|p.233',
+  'lesson-10/grammar-1|Practice: Comparison between Two Items|p.239; I-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
