@@ -435,6 +435,7 @@ window.GenkiExercises = [
   'lesson-10/grammar-1|Practice: Comparison between Two Items|p.239; I-A',
   'lesson-10/grammar-2|Practice: Comparison among Three or More Items|p.240; II-A',
   'lesson-10/grammar-3|Practice: Adjective/Noun + の 1|p.242; III-A',
+  'lesson-10/grammar-4|Practice: Adjective/Noun + の 2|p.242; III-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
