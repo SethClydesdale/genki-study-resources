@@ -437,7 +437,9 @@ window.GenkiExercises = [
   'lesson-10/grammar-3|Practice: Adjective/Noun + の 1|p.242; III-A',
   'lesson-10/grammar-4|Practice: Adjective/Noun + の 2|p.242; III-B',
   'lesson-10/grammar-5|Practice: ～つもりだ|p.243; IV-A',
-  'lesson-10/grammar-6|Practice: Adjective + なる|p.244-245; V-A',
+  'lesson-10/grammar-6|Practice: Adjective + なる 1|p.244-245; V-A',
+  'lesson-10/grammar-7|Practice: Adjective + なる 2|p.245; V-B',
+  'lesson-10/grammar-8|Practice: どこかに／どこにも|p.246; VI-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
