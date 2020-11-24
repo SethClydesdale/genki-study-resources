@@ -440,6 +440,7 @@ window.GenkiExercises = [
   'lesson-10/grammar-6|Practice: Adjective + なる 1|p.244-245; V-A',
   'lesson-10/grammar-7|Practice: Adjective + なる 2|p.245; V-B',
   'lesson-10/grammar-8|Practice: どこかに／どこにも|p.246; VI-A',
+  'lesson-10/grammar-9|Practice: ～で行きます|p.247; VII-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
