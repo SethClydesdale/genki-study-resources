@@ -441,6 +441,11 @@ window.GenkiExercises = [
   'lesson-10/grammar-7|Practice: Adjective + なる 2|p.245; V-B',
   'lesson-10/grammar-8|Practice: どこかに／どこにも|p.246; VI-A',
   'lesson-10/grammar-9|Practice: ～で行きます|p.247; VII-A',
+  'lesson-10/grammar-10|Practice: ～かかります|p.247; VII-B',
+  'lesson-10/culture-1|Culture Note: Public Transportation in Japan|p.251',
+  'lesson-10/vocab-6|Useful Expressions: At the Station 1|p.252',
+  'lesson-10/vocab-7|Useful Expressions: At the Station 2|p.252',
+  'lesson-10/vocab-8|Useful Expressions: At the Station 3|p.253',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
