@@ -446,6 +446,8 @@ window.GenkiExercises = [
   'lesson-10/vocab-6|Useful Expressions: At the Station 1|p.252',
   'lesson-10/vocab-7|Useful Expressions: At the Station 2|p.252',
   'lesson-10/vocab-8|Useful Expressions: At the Station 3|p.253',
+  'lesson-10/workbook-1|Workbook: Comparison between Two Items|p.96; I & II',
+  'lesson-10/workbook-2|Workbook: Comparison among Three or More Items|p.97; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
