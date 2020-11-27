@@ -448,6 +448,8 @@ window.GenkiExercises = [
   'lesson-10/vocab-8|Useful Expressions: At the Station 3|p.253',
   'lesson-10/workbook-1|Workbook: Comparison between Two Items|p.96; I & II',
   'lesson-10/workbook-2|Workbook: Comparison among Three or More Items|p.97; I & II',
+  'lesson-10/workbook-3|Workbook: Adjective/Noun + の|p.98; I & II',
+  'lesson-10/workbook-4|Workbook: ～つもりだ|p.99; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

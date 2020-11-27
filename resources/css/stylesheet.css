@@ -1784,6 +1784,7 @@ ruby rt {
   float:left;
 }
 
+.valign-top.inline-columns > div { vertical-align:top }
 .inline-columns > div {
   display:inline-block;
   margin:0 10px 30px 0;
