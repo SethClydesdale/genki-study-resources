@@ -450,6 +450,8 @@ window.GenkiExercises = [
   'lesson-10/workbook-2|Workbook: Comparison among Three or More Items|p.97; I & II',
   'lesson-10/workbook-3|Workbook: Adjective/Noun + の|p.98; I & II',
   'lesson-10/workbook-4|Workbook: ～つもりだ|p.99; I & II',
+  'lesson-10/workbook-5|Workbook: Adjective + なる|p.100; I & II',
+  'lesson-10/workbook-6|Workbook: どこかに／どこにも・～で行きます|p.101; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
