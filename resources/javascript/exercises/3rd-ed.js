@@ -452,6 +452,10 @@ window.GenkiExercises = [
   'lesson-10/workbook-4|Workbook: ～つもりだ|p.99; I & II',
   'lesson-10/workbook-5|Workbook: Adjective + なる|p.100; I & II',
   'lesson-10/workbook-6|Workbook: どこかに／どこにも・～で行きます|p.101; I & II',
+  'lesson-10/workbook-7|Workbook: Questions|p.102',
+  'lesson-10/workbook-8|Workbook: Listening Comprehension|p.103-104; A, B, & C',
+  'lesson-10/literacy-1|Kanji Practice: Readings|p.340-341',
+  'lesson-10/literacy-2|Kanji Practice: Meanings|p.340-341',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
