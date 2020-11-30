@@ -456,6 +456,14 @@ window.GenkiExercises = [
   'lesson-10/workbook-8|Workbook: Listening Comprehension|p.103-104; A, B, & C',
   'lesson-10/literacy-1|Kanji Practice: Readings|p.340-341',
   'lesson-10/literacy-2|Kanji Practice: Meanings|p.340-341',
+  'lesson-10/literacy-3|Kanji Practice: Stroke Order|p.340-341',
+  'lesson-10/literacy-4|Kanji Vocabulary: 住, 正, and 年|p.340',
+  'lesson-10/literacy-5|Kanji Vocabulary: 売, 買, and 町|p.340',
+  'lesson-10/literacy-6|Kanji Vocabulary: 長, 道, and 雪|p.340-341',
+  'lesson-10/literacy-7|Kanji Vocabulary: 立, 自, and 夜|p.341',
+  'lesson-10/literacy-8|Kanji Vocabulary: 朝 and 持|p.341',
+  'lesson-10/literacy-9|Kanji Practice: Antonyms|p.342; I-B',
+  'lesson-10/literacy-10|Kanji Practice: Fill in the Blanks|p.342; I-C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
