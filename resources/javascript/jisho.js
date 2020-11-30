@@ -1355,6 +1355,7 @@ Genki.jisho = {
   ],
   
   'せ' : [
+    { ja : '正解|せいかい', en : 'correct answer', l : '読L10-漢字表' },
     { ja : '政界|せいかい', en : 'political world', l : '読L16-漢字表' },
     { ja : '性格|せいかく', en : 'personality', l : '会L19' },
     { ja : '生活|せいかつ', en : 'life; living', l : '会L10' },
