@@ -464,6 +464,9 @@ window.GenkiExercises = [
   'lesson-10/literacy-8|Kanji Vocabulary: 朝 and 持|p.341',
   'lesson-10/literacy-9|Kanji Practice: Antonyms|p.342; I-B',
   'lesson-10/literacy-10|Kanji Practice: Fill in the Blanks|p.342; I-C',
+  'lesson-10/literacy-11|Reading Practice: かさじぞう|p.343-345; II-B, C, & D',
+  'lesson-10/literacy-wb-1|Workbook: Kanji Writing Practice|p.147',
+  'lesson-10/literacy-wb-2|Workbook: Using Kanji|p.148; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
