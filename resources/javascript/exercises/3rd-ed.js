@@ -475,6 +475,7 @@ window.GenkiExercises = [
   'lesson-11/vocab-4|Vocabulary: Adverbs and Other Expressions|p.257',
   'lesson-11/vocab-5|Vocabulary: Occupations|p.257',
   'lesson-11/grammar-1|Practice: ～たい|p.264; I-A',
+  'lesson-11/grammar-2|Practice: ～たい (Past Tense)|p.264; I-C',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
