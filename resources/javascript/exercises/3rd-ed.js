@@ -477,6 +477,7 @@ window.GenkiExercises = [
   'lesson-11/grammar-1|Practice: ～たい|p.264; I-A',
   'lesson-11/grammar-2|Practice: ～たい (Past Tense)|p.264; I-C',
   'lesson-11/grammar-3|Practice: ～たり～たりする|p.266; II-A',
+  'lesson-11/grammar-4|Practice: ～ことがある|p.267; III-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
