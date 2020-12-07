@@ -479,6 +479,11 @@ window.GenkiExercises = [
   'lesson-11/grammar-3|Practice: ～たり～たりする|p.266; II-A',
   'lesson-11/grammar-4|Practice: ～ことがある|p.267; III-A',
   'lesson-11/grammar-5|Practice: Noun A や Noun B|p.268; IV',
+  'lesson-11/culture-1|Culture Note: New Year\'s|p.270',
+  'lesson-11/vocab-6|Useful Expressions: In Japanese Class|p.271',
+  'lesson-11/vocab-7|Useful Expressions: Japanese Class Vocabulary 1|p.271',
+  'lesson-11/vocab-8|Useful Expressions: Japanese Class Vocabulary 2|p.271',
+  'lesson-11/workbook-1|Workbook: ～たい|p.105; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
