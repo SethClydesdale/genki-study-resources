@@ -484,6 +484,10 @@ window.GenkiExercises = [
   'lesson-11/vocab-7|Useful Expressions: Japanese Class Vocabulary 1|p.271',
   'lesson-11/vocab-8|Useful Expressions: Japanese Class Vocabulary 2|p.271',
   'lesson-11/workbook-1|Workbook: ～たい|p.105; I & II',
+  'lesson-11/workbook-2|Workbook: ～たり～たりする|p.106; I & II',
+  'lesson-11/workbook-3|Workbook: ～ことがある|p.107; I & II',
+  'lesson-11/workbook-4|Workbook: Noun A や Noun B|p.108',
+  'lesson-11/workbook-5|Workbook: Questions|p.109; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
