@@ -489,6 +489,9 @@ window.GenkiExercises = [
   'lesson-11/workbook-4|Workbook: Noun A や Noun B|p.108',
   'lesson-11/workbook-5|Workbook: Questions|p.109; I & II',
   'lesson-11/workbook-6|Workbook: Listening Comprehension|p.110; A, B, & C',
+  'lesson-11/literacy-1|Kanji Practice: Readings|p.346-347',
+  'lesson-11/literacy-2|Kanji Practice: Meanings|p.346-347',
+  'lesson-11/literacy-3|Kanji Practice: Stroke Order|p.346-347',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
