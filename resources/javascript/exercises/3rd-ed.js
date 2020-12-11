@@ -492,6 +492,12 @@ window.GenkiExercises = [
   'lesson-11/literacy-1|Kanji Practice: Readings|p.346-347',
   'lesson-11/literacy-2|Kanji Practice: Meanings|p.346-347',
   'lesson-11/literacy-3|Kanji Practice: Stroke Order|p.346-347',
+  'lesson-11/literacy-4|Kanji Vocabulary: 手, 紙, and 好|p.346',
+  'lesson-11/literacy-5|Kanji Vocabulary: 近, 明, 病, and 院|p.346',
+  'lesson-11/literacy-6|Kanji Vocabulary: 映, 画, and 歌|p.346-347',
+  'lesson-11/literacy-7|Kanji Vocabulary: 市, 所, and 勉|p.347',
+  'lesson-11/literacy-8|Kanji Vocabulary: 強, 有, and 旅|p.347',
+  'lesson-11/literacy-9|Kanji Practice: Compounds|p.348; I-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
