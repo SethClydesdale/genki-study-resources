@@ -498,6 +498,9 @@ window.GenkiExercises = [
   'lesson-11/literacy-7|Kanji Vocabulary: 市, 所, and 勉|p.347',
   'lesson-11/literacy-8|Kanji Vocabulary: 強, 有, and 旅|p.347',
   'lesson-11/literacy-9|Kanji Practice: Compounds|p.348; I-B',
+  'lesson-11/literacy-10|Reading Practice: 友だち・メンバー募集|p.348-351; II-B, C, D, & E',
+  'lesson-11/literacy-wb-1|Workbook: Kanji Writing Practice|p.149',
+  'lesson-11/literacy-wb-2|Workbook: Using Kanji|p.150; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

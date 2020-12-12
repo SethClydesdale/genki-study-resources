@@ -2261,6 +2261,7 @@ Genki.jisho = {
   ],
   
   'へ' : [
+    { ja : '平日|へいじつ', en : 'weekday', l : '読L11-II' },
     { ja : '平和|へいわ', en : 'peace', l : '読L15-II' },
     { ja : '平和記念資料館|へいわきねんしりょうかん', en : 'Peace Memorial Museum', l : '読L15-II' },
     { ja : 'ページ', en : 'page', l : '会L6' },
@@ -2327,6 +2328,8 @@ Genki.jisho = {
     { ja : '骨|ほね', en : 'bone', l : 'ワークブック読L1' },
     { ja : '微笑む|ほほえむ', en : 'to smile', v : 'u', l : '読L20-漢字表' },
     { ja : 'ほめる', en : 'to praise; to say nice things', v : 'ru', l : '会L21' },
+    { ja : 'ホラー', en : 'horror', l : '読L11-II' },
+    { ja : 'ボランティア', en : 'volunteer', l : '読L11-II' },
     { ja : 'ホワイトデー', en : '"White Day" (yet another gift-giving day)', l : '会L14' },
     { ja : '本|ほん', en : 'book', l : '会L2, 会L2(e)' },
     { ja : '～本|～ほん', en : 'counter for long objects', l : '会L14, 会L14(e)' },
@@ -2485,7 +2488,8 @@ Genki.jisho = {
     { ja : '召し上がる|めしあがる', en : 'honorific exp. for たべる and のむ', v : 'u', l : '会L19' },
     { ja : 'めずらしい', en : 'rare', l : '読L13-II' },
     { ja : 'めちゃくちゃ（な）', en : 'messy; disorganized', l : '会L21' },
-    { ja : 'めったに～ない|', en : 'seldom', l : '読L21-II' },
+    { ja : 'めったに～ない', en : 'seldom', l : '読L21-II' },
+    { ja : 'メッセージ', en : 'message', l : '読L11-II' },
     { ja : '目を覚ます|めをさます', en : 'to wake up', l : 'ワークブック読L1' },
     { ja : 'メニュー', en : 'menu', l : '会L2' },
     { ja : 'メモ', en : 'memo; note; memorandum', l : 'ワークブック読L2' },
