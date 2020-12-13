@@ -221,7 +221,8 @@ Genki.jisho = {
     { ja : 'インタビュー', en : 'interview', l : 'ワークブックL8' },
     { ja : 'インド', en : 'India', l : '読L2-I' },
     { ja : 'インドネシア', en : 'Indonesia', l : '読L2-I' },
-    { ja : 'インターネット', en : 'Internet', l : '会L15' }
+    { ja : 'インターネット', en : 'Internet', l : '会L15' },
+    { ja : 'インフルエンザ', en : 'influenza; flu', l : '会L12' }
   ],
   
   'う' : [
