@@ -509,6 +509,7 @@ window.GenkiExercises = [
   'lesson-12/vocab-4|Vocabulary: U-verbs, Ru-verbs, and Irregular Verbs|p.275',
   'lesson-12/vocab-5|Vocabulary: Adverbs and Other Expressions|p.275',
   'lesson-12/grammar-1|Practice: ～んです 1|p.282; I-A',
+  'lesson-12/grammar-2|Practice: ～んです 2|p.283; I-B',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
