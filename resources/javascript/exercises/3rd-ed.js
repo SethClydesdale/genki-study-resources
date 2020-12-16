@@ -510,6 +510,9 @@ window.GenkiExercises = [
   'lesson-12/vocab-5|Vocabulary: Adverbs and Other Expressions|p.275',
   'lesson-12/grammar-1|Practice: ～んです 1|p.282; I-A',
   'lesson-12/grammar-2|Practice: ～んです 2|p.283; I-B',
+  'lesson-12/grammar-3|Practice: ～すぎる|p.284-285; II-A',
+  'lesson-12/grammar-4|Practice: ～ほうがいいです|p.285; III-A',
+  'lesson-12/grammar-5|Practice: ～ので|p.287; IV-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
