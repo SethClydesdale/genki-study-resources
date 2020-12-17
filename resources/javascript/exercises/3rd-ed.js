@@ -513,6 +513,7 @@ window.GenkiExercises = [
   'lesson-12/grammar-3|Practice: ～すぎる|p.284-285; II-A',
   'lesson-12/grammar-4|Practice: ～ほうがいいです|p.285; III-A',
   'lesson-12/grammar-5|Practice: ～ので|p.287; IV-A',
+  'lesson-12/grammar-6|Practice: ～なければいけません|p.288; V-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
