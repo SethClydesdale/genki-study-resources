@@ -514,6 +514,11 @@ window.GenkiExercises = [
   'lesson-12/grammar-4|Practice: ～ほうがいいです|p.285; III-A',
   'lesson-12/grammar-5|Practice: ～ので|p.287; IV-A',
   'lesson-12/grammar-6|Practice: ～なければいけません|p.288; V-A',
+  'lesson-12/grammar-7|Practice: ～なきゃいけない|p.288; V-C',
+  'lesson-12/grammar-8|Practice: ～でしょうか|p.289; VI-A',
+  'lesson-12/culture-1|Culture Note: The Japanese Climate|p.292',
+  'lesson-12/vocab-6|Useful Expressions: Health and Illness|p.293-294',
+  'lesson-12/vocab-7|Useful Expressions: Doctor\'s Office Vocabulary|p.294',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
