@@ -1731,6 +1731,7 @@ Genki.jisho = {
     { ja : '電車|でんしゃ', en : 'train', l : '会L6' },
     { ja : '天井|てんじょう', en : 'ceiling', l : '読L17-II' },
     { ja : '電池|でんち', en : 'battery', l : '会L15' },
+    { ja : '点滴|てんてき', en : 'intravenous feeding; IV', l : '会L12(e)' },
     { ja : '天皇|てんのう', en : 'Japanese emperor', l : '読L5-漢字表' },
     { ja : '天ぷら|てんぷら', en : 'tempura', l : '会L10' },
     { ja : '展覧会|てんらんかい', en : 'art exhibition', l : '読L17-II' },
