@@ -519,6 +519,10 @@ window.GenkiExercises = [
   'lesson-12/culture-1|Culture Note: The Japanese Climate|p.292',
   'lesson-12/vocab-6|Useful Expressions: Health and Illness|p.293-294',
   'lesson-12/vocab-7|Useful Expressions: Doctor\'s Office Vocabulary|p.294',
+  'lesson-12/workbook-1|Workbook: ～んです|p.111; I & II',
+  'lesson-12/workbook-2|Workbook: ～すぎる|p.112; I & II',
+  'lesson-12/workbook-3|Workbook: ～ほうがいいです|p.113; I & II',
+  'lesson-12/workbook-4|Workbook: ～ので|p.114; I & II',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
