@@ -523,6 +523,12 @@ window.GenkiExercises = [
   'lesson-12/workbook-2|Workbook: ～すぎる|p.112; I & II',
   'lesson-12/workbook-3|Workbook: ～ほうがいいです|p.113; I & II',
   'lesson-12/workbook-4|Workbook: ～ので|p.114; I & II',
+  'lesson-12/workbook-5|Workbook: ～なければいけません／なきゃいけません|p.115; I & II',
+  'lesson-12/workbook-6|Workbook: ～でしょうか|p.116',
+  'lesson-12/workbook-7|Workbook: Questions|p.117',
+  'lesson-12/workbook-8|Workbook: Listening Comprehension|p.118; A, B, & C',
+  'lesson-12/literacy-1|Kanji Practice: Readings|p.352-353',
+  'lesson-12/literacy-2|Kanji Practice: Meanings|p.352-353',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
