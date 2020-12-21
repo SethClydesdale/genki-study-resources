@@ -529,6 +529,13 @@ window.GenkiExercises = [
   'lesson-12/workbook-8|Workbook: Listening Comprehension|p.118; A, B, & C',
   'lesson-12/literacy-1|Kanji Practice: Readings|p.352-353',
   'lesson-12/literacy-2|Kanji Practice: Meanings|p.352-353',
+  'lesson-12/literacy-3|Kanji Practice: Stroke Order|p.352-353',
+  'lesson-12/literacy-4|Kanji Vocabulary: 昔, 々, and 神|p.352',
+  'lesson-12/literacy-5|Kanji Vocabulary: 早, 起, and 牛|p.352',
+  'lesson-12/literacy-6|Kanji Vocabulary: 使, 働, and 連|p.352-353',
+  'lesson-12/literacy-7|Kanji Vocabulary: 別 and 度|p.353',
+  'lesson-12/literacy-8|Kanji Vocabulary: 赤, 青, and 色|p.353',
+  'lesson-12/literacy-9|Kanji Practice: Match the Readings|p.354; I-A',
   
   // Appendix
   //TODO:'appendix/grammar-index|Grammar Index|p.358-359',

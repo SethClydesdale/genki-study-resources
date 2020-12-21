@@ -973,6 +973,7 @@ Genki.jisho = {
     { ja : 'サーフィン', en : 'surfing', l : '会L5' },
     { ja : '～歳|～さい', en : '...years old', l : '会L1, 会L1(e)' },
     { ja : '最悪|さいあく', en : 'the worst', l : '読L20-II' },
+    { ja : '再起動|さいきどう', en : 'reboot; restart', l : '読L12-漢字表' },
     { ja : '最近|さいきん', en : 'recently', l : '会L15' },
     { ja : '最高|さいこう', en : 'the best', l : '読L7-漢字表' },
     { ja : '最後に|さいごに', en : 'finally; lastly', l : '読L8-II, 会L23' },
