@@ -536,9 +536,11 @@ window.GenkiExercises = [
   'lesson-12/literacy-7|Kanji Vocabulary: 別 and 度|p.353',
   'lesson-12/literacy-8|Kanji Vocabulary: 赤, 青, and 色|p.353',
   'lesson-12/literacy-9|Kanji Practice: Match the Readings|p.354; I-A',
+  'lesson-12/literacy-10|Reading Practice: 七夕|p.355-356; II-B & C',
+  'lesson-12/literacy-wb-1|Workbook: Kanji Writing Practice|p.151',
+  'lesson-12/literacy-wb-2|Workbook: Using Kanji|p.152; I & II',
   
   // Appendix
-  //TODO:'appendix/grammar-index|Grammar Index|p.358-359',
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
   'appendix/map-of-japan|Map of Japan|p.378-379',
   'appendix/numbers-chart|Numbers Chart|p.380-381',
