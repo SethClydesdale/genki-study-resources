@@ -1482,9 +1482,17 @@
     },
     
     
+    // converts to half-width characters if full-width (e.g. ＡＢＣ --> ABC)
+    // used in check.answers to reduce erroneous incorrect answers due to usage of full-width characters.
+    toHalfWidth : function (str) {
+      return str.replace(/[\uFF01-\uFF5E]/g, function (c) {
+        return String.fromCharCode(c.charCodeAt(0) - 0xFEE0);
+      });
+    },
+    
+    
     // functions that check the value of input fields
     check : {
-      
       // checks the value of the current input and automatically moves onto the next input if the value is correct
       // speeds things up, so the student doesn't need to click or tab into the next input field
       busy : false, // prevents IMEs from triggering multiple input events when a value is correct
@@ -1560,12 +1568,12 @@
               for (; i < j; i++) {
                 correct = false;
                 data = input[i].dataset;
-                val = input[i].value.toLowerCase();
+                val = Genki.toHalfWidth(input[i].value).toLowerCase();
 
                 // check for the correct answer
                 for (k in data) {
                   if (/answer/.test(k)) {
-                    answer = data[k].toLowerCase();
+                    answer = Genki.toHalfWidth(data[k]).toLowerCase();
 
                     // check if there's alternative answers in the answer
                     // alternative answers are given as %(alt1/alt2/etc.)
@@ -2099,7 +2107,13 @@
         frag.appendChild(button);
         frag.appendChild(selector);
         document.body.appendChild(frag);
-        document.querySelector('.footer-right').style.marginRight = '25px'; // offset footer so texts are visible
+        var footerRight = document.querySelector('.footer-right'), footerA;
+        footerRight.style.marginRight = '40px'; // offset footer so texts are visible
+        
+        // open right footer links in new tab to avoid accidental page change when opening dictionary
+        footerA = footerRight.querySelectorAll('A');
+        footerA[0].target = '_blank';
+        footerA[1].target = '_blank';
         
         // node cache
         Genki.quickJisho.cache = {
