@@ -26,7 +26,7 @@
     <script src="../../../resources/javascript/ga.js" async></script>
   </head>
 
-  <body>
+  <body ondrop="Genki.tools.dropFile(event);">
     
     <header>
       <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
@@ -51,15 +51,16 @@
         </ol>
         
         <h3 id="vocab-code" class="sub-title">Custom Vocabulary Code (JSON)</h3>
-        <p>The custom vocabulary code is used to save your created vocabulary list. You can copy this code and save it to a text file for later, so you don't have to recreate your custom vocab. When you're ready to study your vocab again, just paste the code into this textarea and click "study" to continue where you left off.</p>
+        <p>The custom vocabulary code is used to save your created vocabulary list. You can save this code to a text file for later, so you don't have to recreate your custom vocab. When you're ready to study your vocab again, just load the file or drag and drop it into this textarea and click "study" to continue where you left off.</p>
         
         <div id="study-tool-code">
           <textarea id="study-tool-json" oninput="Genki.tools.updateUI();Genki.tools.updateJSON();"></textarea>
         </div>
         
         <ul id="study-tool-settings" class="clear">
-          <li><a id="downloadCode" title="Save to text file" download="Custom Vocabulary Code">Save code</a></li>
-          <li><input id="prettyCode" type="checkbox" onchange="Genki.tools.settings.prettify(this);"><label for="prettyCode">Prettify code</label></li>
+          <li><a id="downloadCode" class="button" title="Save custom exercise" download="Custom Vocabulary Exercise">Save</a></li>
+          <li><button id="loadCode" class="button" title="Load custom exercise" onclick="this.nextSibling.click();">Load</button><input id="study-tool-file" type="file" accept=".txt,.json,.js" onchange="Genki.tools.loadCode(this);"></li>
+          <li><input id="prettyCode" type="checkbox" onchange="Genki.tools.settings.prettify(this);"><label for="prettyCode">Prettify</label></li>
           <li><input id="noStudyWarning" type="checkbox" onchange="Genki.tools.settings.handleCheckbox(this);"><label for="noStudyWarning">Do not warn me</label></li>
         </ul>
         

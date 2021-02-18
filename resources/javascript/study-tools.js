@@ -220,8 +220,8 @@
       } else {
         GenkiModal.open({
           title : 'Ready to Study?',
-          content : 'Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save code" to save it to a text document. (click "do not warn me" to disable this message)'+
-          (navigator.cookieEnabled && !offlineEdge ? '' : '<br><br><div style="color:#F00;font-weight:bold;">WARNING: Cookies are blocked by your browser, so your custom exercise will NOT be saved. Please click "close" and then click "Save code" to backup your custom exercise.</div>'),
+          content : 'Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save" to save it to a text document. (click "do not warn me" to disable this message)'+
+          (navigator.cookieEnabled && !offlineEdge ? '' : '<br><br><div style="color:#F00;font-weight:bold;">WARNING: Cookies are blocked by your browser, so your custom exercise will NOT be saved. Please click "close" and then click "Save" to backup your custom exercise.</div>'),
           keepOpen : Genki.tools.type == 'vocab' ? true : false,
 
           callback : Genki.tools.begin
@@ -298,6 +298,29 @@
           Genki.scrollTo('#quiz-settings');
         }
       });
+    },
+    
+    
+    // loads a custom exercise code from a txt/json/js file
+    loadCode : function (input, dropped) {
+      var file = dropped ? input : input.files[0],
+          reader = new FileReader();
+      
+      reader.onload = function (e) {
+        document.getElementById('study-tool-json').value = e.target.result;
+        if (!dropped) input.value = '';
+        Genki.tools.updateUI();
+        Genki.tools.updateJSON();
+      };
+      
+      reader.readAsText(file, 'UTF-8');
+    },
+    
+    
+    // handles drag and dropping an exercise code file into the textarea
+    dropFile : function (e) {
+      Genki.tools.loadCode(e.dataTransfer.files[0], true);
+      e.preventDefault();
     },
 
 

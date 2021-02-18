@@ -2075,13 +2075,17 @@ ruby rt {
 #study-tool-settings {
   margin:5px 0;
   padding:0;
+  font-size:0;
 }
 
 #study-tool-settings li {
   list-style-type:none;
-  float:left;
+  display:inline-block;
   margin-right:10px;
+  font-size:13px;
 }
+
+#study-tool-settings .button { margin:0; }
 
 #study-tool-settings label {
   cursor:pointer;
@@ -2089,8 +2093,7 @@ ruby rt {
   font-weight:bold;
 }
 
-#downloadCode { font-weight:bold; }
-#downloadCode:before {
+#downloadCode:before, #loadCode:before {
   font-family:FontAwesomeWeb, FontAwesome;
   font-weight:normal;
   font-size:16px;
@@ -2098,6 +2101,11 @@ ruby rt {
   vertical-align:middle;
 }
 #downloadCode:before { content:"\f019"; }
+#loadCode:before { content:"\f093"; }
+#study-tool-file {
+  visibility:hidden;
+  position:absolute;
+}
 
 /* custom quiz styles */
 #study-tool-ui .item-row.question-row {
