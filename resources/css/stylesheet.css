@@ -1998,6 +1998,10 @@ ruby rt {
 /* hide hints */
 [data-mistakes="1"] + .problem-hint { display:none; }
 
+/* view hints on hover for incorrect answers */
+.quiz-over .writing-zone:hover [data-mistakes="1"] + .problem-hint { display:block; }
+.quiz-over .writing-zone:hover [data-mistakes="1"] + .problem-hint + .problem-answer { display:none; }
+
 /* mark incorrect answer */
 .fill-quiz.quiz-over .writing-zone-input { pointer-events:none; }
 .fill-quiz.quiz-over [data-mistakes] { border-color:#F00; }
