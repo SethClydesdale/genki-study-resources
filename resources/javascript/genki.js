@@ -909,6 +909,19 @@
           KanjiCanvas.init(c[i].id);
         }
       }
+      
+      
+      // restore prior answers for written quizzes, if selected
+      if (Genki.currentAnswers) {
+        if (o.type == Genki.currentAnswers.type) { // only apply answers for same type!
+          for (var a = document.querySelectorAll('.writing-zone-input'), i = 0, j = a.length; i < j; i++) {
+            a[i].value = Genki.currentAnswers.list[i];
+          }
+        }
+        
+        // delete the freshly applied answers to prevent reapplication, if not selected or all answers were correct
+        delete Genki.currentAnswers;
+      }
 
 
       // # DRAG AND DROP FUNCTIONALITY #
@@ -1286,8 +1299,42 @@
     
     
     // resets exercise state, allowing students to redo quizzes without reloading the page
-    reset : function () {
+    reset : function (skipModal) {
       if (window.JSON) {
+        // written answer preservation permission
+        if (!skipModal && /fill-quiz|writing-quiz/.test(document.getElementById('exercise').className) && Genki.stats.mistakes > 0) {
+          return GenkiModal.open({
+            title : 'Try again with your current answers?',
+            content : '<div>Would you like to try again with your current answers? This will allow you to correct the answers you got wrong while preserving what you have already written.</div><br>'+
+            '<div>※ Please note that your answers will be lost if you change the page or exercise type.</div>',
+            buttonText : 'Yes',
+            closeButtonText : 'No',
+            customButton : '<button id="genki-modal-cancel" class="button" onclick="GenkiModal.close();">Cancel</button>',
+            keepOpen : true,
+
+            callback : function () {
+              // get and cache current answers
+              for (var currentAnswers = [], a = document.querySelectorAll('.writing-zone-input'), i = 0, j = a.length; i < j; i++) {
+                currentAnswers.push(a[i].value);
+              }
+              
+              // temporarily cache the answers and previous exercise type (in case of mulitple types, we can check and apply the answers or not)
+              Genki.currentAnswers = {
+                type : /fill-quiz/.test(document.getElementById('exercise').className) ? 'fill' : 'writing',
+                list : currentAnswers
+              };
+              
+              GenkiModal.close();
+              Genki.reset(true);
+            },
+            
+            closeCallback : function () {
+              GenkiModal.close();
+              Genki.reset(true);
+            }
+          });
+        }
+        
         // reset data
         Genki.exerciseComplete = false;
         Genki.quizOver = false;

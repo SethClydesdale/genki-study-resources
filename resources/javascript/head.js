@@ -17,16 +17,19 @@
     // opens a new modal
     // params: object (optional)
     // {
-    //      title : string, (popup title)
-    //    content : string, (popup content)
-    // buttonText : string, (custom text for the OK button)
-    //    noFocus : bool, (keeps buttons from being focused)
-    //      focus : string, (pass a css selector to focus a specific element; overrides noFocus)
-    // customSize : object, manually set the top, left, right, and bottom css properties
-    //   keepOpen : bool, (keeps the modal open when clicking the callback button; useful for opening another modal afterwards)
-    //    noClose : bool, (removes the close button)
-    //     zIndex : 'low', lowers the z-index so the exercise menu can be used
-    //   callback : function (function to execute when the OK button is clicked)
+    //           title : string, (popup title)
+    //         content : string, (popup content)
+    //      buttonText : string, (custom text for the OK button)
+    // closeButtonText : string, (custom text for the close button)
+    //         noFocus : bool, (keeps buttons from being focused)
+    //           focus : string, (pass a css selector to focus a specific element; overrides noFocus)
+    //      customSize : object, manually set the top, left, right, and bottom css properties
+    //    customButton : string, add custom HTML to the button area
+    //        keepOpen : bool, (keeps the modal open when clicking the callback button; useful for opening another modal afterwards)
+    //         noClose : bool, (removes the close button)
+    //          zIndex : 'low', lowers the z-index so the exercise menu can be used
+    //        callback : function (function to execute when the OK button is clicked)
+    //   closeCallback : function (function to execute when the close button is clicked)
     // } // all values are optional
     open : function (o) {
       o = o ? o : {};
@@ -42,7 +45,8 @@
         '<h2 id="genki-modal-header">' + ( o.title ? o.title : 'Popup' ) + '</h2>'+
         '<div id="genki-modal-content">' + ( o.content ? o.content : '' ) + '</div>'+
         '<div id="genki-modal-buttons" class="center">'+
-          (o.noClose ? '' : '<button id="genki-modal-close" class="button" onclick="GenkiModal.close();">Close</button>')+
+          (o.noClose ? '' : '<button id="genki-modal-close" class="button" onclick="GenkiModal.close();">' + (o.closeButtonText ? o.closeButtonText : 'Close') + '</button>')+
+          (o.customButton ? o.customButton : '') +
         '</div>'+
       '</div>';
 
@@ -76,6 +80,13 @@
         document.getElementById('genki-modal-' + (o.callback ? 'ok' : 'close')).focus();
       }
       
+      // apply close button callback
+      if (o.closeCallback) {
+        document.getElementById('genki-modal-close').onclick = function () {
+          o.closeCallback();
+          !o.keepOpen && GenkiModal.close();
+        };
+      }
 
       // pause the timer when opening the modal
       if (window.Genki && Genki.timer && Genki.timer.isRunning()) {
