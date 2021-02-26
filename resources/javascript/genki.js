@@ -2157,11 +2157,6 @@
         var footerRight = document.querySelector('.footer-right'), footerA;
         footerRight.style.marginRight = '40px'; // offset footer so texts are visible
         
-        // open right footer links in new tab to avoid accidental page change when opening dictionary
-        footerA = footerRight.querySelectorAll('A');
-        footerA[0].target = '_blank';
-        footerA[1].target = '_blank';
-        
         // node cache
         Genki.quickJisho.cache = {
           box : box,
@@ -2493,7 +2488,50 @@
     }
     
   };
-
+  
+  
+  // prevent progress loss on page change
+  window.onbeforeunload = function () {
+    var lossDetected = false,
+        type = document.getElementById('exercise').className;
+    
+    // determine exercise type and find if the user may incur progress loss for the current exercise
+    if (/quiz-over/.test(type) || document.querySelector('.review-mode')) { // ignore this check completely if the quiz is over or student is in review mode
+      lossDetected = false;
+    } 
+    
+    // check if any of the inputs have been filled in for a written quiz
+    else if (/fill-quiz|writing-quiz/.test(type)) {
+      for (var a = document.querySelectorAll('.writing-zone-input'), i = 0, j = a.length; i < j; i++) {
+        if (a[i].value != '') { // mark as a "loss" if an input is filled in and break out of the loop
+          lossDetected = true;
+          break;
+        }
+      }
+    }
+    
+    // check if any of the canvases have been drawn on
+    else if (/drawing-quiz|stroke-quiz/.test(type)) {
+      for (var a = document.querySelectorAll('.kanji-canvas'), i = 0, j = a.length; i < j; i++) {
+        if (KanjiCanvas['recordedPattern_' + a[i].id].length) { // mark as a "loss" if a canvas has been drawn on and break out of the loop
+          lossDetected = true;
+          break;
+        }
+      }
+    }
+    
+    // check if progress has been made in the following quizzes
+    else if (/multi-quiz|drag-quiz|kana-quiz/.test(type) && Genki.stats.solved > 0) {
+      lossDetected = true;
+    }
+    
+    // return warning about progress loss
+    if (lossDetected) {
+      return 'Your progress will be lost. Do you want to continue?';
+    }
+  };
+  
+  
   // initial setup
   Genki.init();
 }(window, document));
