@@ -55,8 +55,17 @@ hr {
   border-bottom:1px solid #999;
 }
 
-ruby rt { color:#777; }
-ruby:hover rt { color:#333; }
+ruby rt {
+  color:#DDD;
+  background:#DDD;
+  border:1px solid #CCC;
+  border-radius:10px;
+}
+ruby:hover rt {
+  color:#333;
+  background:none;
+  border-color:transparent;
+}
 
 .card {
   color:#333;
@@ -68,8 +77,16 @@ ruby:hover rt { color:#333; }
 
 /* Night Mode CSS */
 .nightMode hr { border-color:#555; }
-.nightMode ruby rt { color:#999; }
-.nightMode ruby:hover rt { color:#CCC; }
+.nightMode ruby rt {
+  color:#333;
+  background:#333;
+  border-color:#444;
+}
+.nightMode ruby:hover rt {
+  color:#CCC;
+  background:none;
+  border-color:transparent;
+}
 .nightMode.card {
   color:#CCC;
   background-color:#222;
