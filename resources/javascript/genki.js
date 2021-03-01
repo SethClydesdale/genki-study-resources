@@ -2154,7 +2154,7 @@
         frag.appendChild(button);
         frag.appendChild(selector);
         document.body.appendChild(frag);
-        var footerRight = document.querySelector('.footer-right'), footerA;
+        var footerRight = document.querySelector('.footer-right');
         footerRight.style.marginRight = '40px'; // offset footer so texts are visible
         
         // node cache

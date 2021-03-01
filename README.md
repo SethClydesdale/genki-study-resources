@@ -74,6 +74,7 @@ Genki Study Resources was made possible thanks to...
 - Noriko Udagawa and Reiko Maruyama for some Illustrations that were used.
 - [DavidBurela](https://github.com/DavidBurela) for gifting me the 3rd Edition textbook and workbook of Genki I.
 - [Maarten Jacobs](https://github.com/maartenJacobs) for gifting me the 3rd Edition textbook and workbook of Genki II.
+- **Everyone** who donated, as I was able to purchase the Answer Key for the 3rd Edition thanks to your support.
 - [Patrick Roberts](https://github.com/patrickroberts) for [his help with an algorithm](https://stackoverflow.com/a/59337819/12502093) that helped make mixed kana/kanji answers possible in written quizzes.
 - [Dominik Klein](https://github.com/asdfjkl) for [his help with adding new recognition patterns](https://github.com/asdfjkl/kanjicanvas/issues/1) for the stroke order exercises.
 - [Ronserruya](https://github.com/Ronserruya) for the [Anki Decks and Deck Maker script](https://github.com/SethClydesdale/genki-study-resources/pull/89).
