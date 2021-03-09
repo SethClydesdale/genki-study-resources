@@ -1353,6 +1353,7 @@ Genki.jisho = {
     { ja : 'すみません', en : "Excuse me.; I'm sorry.", l : '会G' },
     { ja : '住む|すむ', en : 'to live', v : 'u', l : '会L7' },
     { ja : '相撲|すもう', en : 'sumo wrestling', l : '会L9(c)' },
+    { ja : 'スリランカ', en : 'Sri Lanka', l : '会L13' },
     { ja : 'する', en : 'to do; to decide on (an item); to wear small items (necktie, watch, etc.); to cost', v : 'irr', l : '会L3, 会L15, 会L17, 読L20-II' },
     { ja : 'すると', en : '...Then,...', l : '読L16-II' },
     { ja : '座る|すわる', en : 'to sit down', v : 'u', l : '会L6' }
