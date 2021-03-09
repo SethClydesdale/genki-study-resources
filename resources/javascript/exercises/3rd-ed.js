@@ -548,6 +548,8 @@ window.GenkiExercises = [
   'lesson-13/vocab-5|Vocabulary: Adverbs and Other Expressions|p.25',
   'lesson-13/vocab-6|Vocabulary: Numbers Used to Count Days|p.25',
   'lesson-13/grammar-1|Practice: Potential Verbs 1|p.33; I-A',
+  'lesson-13/grammar-2|Practice: Potential Verbs 2|p.33; I-B',
+  'lesson-13/grammar-3|Practice: Potential Verbs 3|p.35; I-F',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
