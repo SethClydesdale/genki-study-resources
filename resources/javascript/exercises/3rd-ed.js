@@ -550,6 +550,8 @@ window.GenkiExercises = [
   'lesson-13/grammar-1|Practice: Potential Verbs 1|p.33; I-A',
   'lesson-13/grammar-2|Practice: Potential Verbs 2|p.33; I-B',
   'lesson-13/grammar-3|Practice: Potential Verbs 3|p.35; I-F',
+  'lesson-13/grammar-4|Practice: ～し|p.35-36; II-A',
+  'lesson-13/grammar-5|Practice: ～そうです 1|p.37; III-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
