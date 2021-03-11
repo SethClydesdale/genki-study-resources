@@ -1772,7 +1772,7 @@ Genki.jisho = {
     { ja : 'どうぞよろしくお願いします|どうぞよろしくおねがいします', en : 'Thank you in advance.', l : '読L19-III' },
     { ja : 'どうですか', en : 'How about...?; How is...?', l : '会L3' },
     { ja : '堂々とした|どうどうとした', en : 'dignified; imposing', l : '読L18-漢字表' },
-    { ja : 'とうふ', en : 'tofu', l : 'ワークブックL20' },
+    { ja : '豆腐|とうふ', en : 'tofu', l : 'ワークブックL20' },
     { ja : '動物|どうぶつ', en : 'animal', l : '読L13-漢字表' },
     { ja : '動物園|どうぶつえん', en : 'zoo', l : '会L17' },
     { ja : 'どうも', en : 'Thank you.', l : '会L2' },
