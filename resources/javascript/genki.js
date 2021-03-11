@@ -2047,6 +2047,7 @@
             title : 'Change Exercise Type?',
             content : 'To change the exercise type, you must quit the current exercise. Do you want to quit?',
             buttonText : 'Quit',
+            closeButtonText : 'Cancel',
             keepOpen : /\/dictionary\//.test(window.location) || (!Genki.tools && /"format"/.test(Genki.exerciseData)) ? true : false,
             
             // clicking "OK" will reload the exercise, leading to the exercise type selection screen
