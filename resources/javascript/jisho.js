@@ -1931,6 +1931,7 @@ Genki.jisho = {
     { ja : '入院する|にゅういんする', en : 'to be hospitalized', v : 'irr', l : '読L21-II' },
     { ja : '入試|にゅうし', en : 'entrance exam', l : '読L18-漢字表' },
     { ja : '入社|にゅうしゃ', en : 'entry to a company', l : '読L7-漢字表' },
+    { ja : 'ニュージーランド', en : 'New Zealand', l : '会L13' },
     { ja : 'ニュース', en : 'news', l : '会L17' },
     { ja : 'ニューデリー', en : 'New Delhi (India)', l : '会L1, 読L2-I' },
     { ja : 'ニューヨーク', en : 'New York', l : '会L1, ワークブックL1' },
