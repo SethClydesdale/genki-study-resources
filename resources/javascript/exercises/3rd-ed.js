@@ -556,6 +556,10 @@ window.GenkiExercises = [
   'lesson-13/grammar-7|Practice: ～てみる|p.39; IV-A',
   'lesson-13/grammar-8|Practice: なら|p.40; V-A',
   'lesson-13/grammar-9|Practice: 一週間に三回|p.41; VI-A',
+  'lesson-13/culture-1|Culture Note: Names of Years|p.44',
+  'lesson-13/culture-2|Culture Note: East Asian Zodiacs|p.44',
+  'lesson-13/vocab-7|Useful Expressions: Bank Words|p.45',
+  'lesson-13/vocab-8|Useful Expressions: At the Bank|p.45',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
