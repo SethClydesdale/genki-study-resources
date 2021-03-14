@@ -560,6 +560,8 @@ window.GenkiExercises = [
   'lesson-13/culture-2|Culture Note: East Asian Zodiacs|p.44',
   'lesson-13/vocab-7|Useful Expressions: Bank Words|p.45',
   'lesson-13/vocab-8|Useful Expressions: At the Bank|p.45',
+  'lesson-13/workbook-1|Workbook: Potential Verbs Conjugation|p.11; I',
+  'lesson-13/workbook-2|Workbook: Potential Verbs 1|p.12; II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
