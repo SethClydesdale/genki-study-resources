@@ -562,6 +562,9 @@ window.GenkiExercises = [
   'lesson-13/vocab-8|Useful Expressions: At the Bank|p.45',
   'lesson-13/workbook-1|Workbook: Potential Verbs Conjugation|p.11; I',
   'lesson-13/workbook-2|Workbook: Potential Verbs 1|p.12; II',
+  'lesson-13/workbook-3|Workbook: Potential Verbs 2|p.13; I & II',
+  'lesson-13/workbook-4|Workbook: ～し|p.14; I & II',
+  'lesson-13/workbook-5|Workbook: ～そうです|p.15; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
