@@ -565,6 +565,10 @@ window.GenkiExercises = [
   'lesson-13/workbook-3|Workbook: Potential Verbs 2|p.13; I & II',
   'lesson-13/workbook-4|Workbook: ～し|p.14; I & II',
   'lesson-13/workbook-5|Workbook: ～そうです|p.15; I & II',
+  'lesson-13/workbook-6|Workbook: ～てみる|p.16; I & II',
+  'lesson-13/workbook-7|Workbook: なら|p.17; I & II',
+  'lesson-13/workbook-8|Workbook: 一週間に三回|p.18; I & II',
+  'lesson-13/workbook-9|Workbook: Questions|p.19; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
