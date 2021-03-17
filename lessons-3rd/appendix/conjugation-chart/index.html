@@ -35,8 +35,8 @@
     
     <div id="content">
       <div id="appendix-tool" class="content-block loading">
-        <h2 id="main-conj-title" class="title center" data-page="Genki I: p.382">巻末 - Conjugation Chart</h2>
-        <p>This chart shows all the verb conjugations learned in Genki volume<!--s--> I<!-- and II-->. You can use this chart to review and compare conjugations you may be having trouble with. Additionally you can click the button below to start a quiz where you can practice using all the conjugations listed in the chart below.</p>
+        <h2 id="main-conj-title" class="title center" data-page="Genki II: p.388-389">巻末 - Conjugation Chart</h2>
+        <p>This chart shows all the verb conjugations learned in Genki volumes I and II. You can use this chart to review and compare conjugations you may be having trouble with. Additionally you can click the button below to start a quiz where you can practice using all the conjugations listed in the chart below.</p>
         
         <div class="center">
           <button class="button" onclick="Genki.appendix.studyChart('conjugation');"><i class="fa">&#xf040;</i>Study Conjugation Chart</button>
@@ -47,11 +47,11 @@
           <li>The forms with * are exceptions.</li>
           <li>The underlined portions show what is changed, with the exception of the negative ある forms where it is changed entirely into ない.</li>
           <li>The tilde represents the unchanged portion of the verb. (the part not underlined)</li>
-          <!--<li>"Genki I" and "Genki II" show what volume the conjugations were learned in.</li>-->
+          <li>"Genki I" and "Genki II" show what volume the conjugations were learned in.</li>
         </ol>
         
         <div class="text-block">
-          <!--<h3 class="sub-title">Genki I</h3>-->
+          <h3 class="sub-title">Genki I</h3>
           <table class="table center">
             <tr>
               <td style="width:25px">verb types</td>
@@ -204,7 +204,7 @@
             </tr>
           </table><br>
           
-          <!--<h3 class="sub-title">Genki II</h3>
+          <h3 class="sub-title">Genki II</h3>
           <table class="table center">
             <tr>
               <td style="width:25px">verb types</td>
@@ -370,7 +370,7 @@
               <td>～させる</td>
               <td>～させられる</td>
             </tr>
-          </table>-->
+          </table>
         </div>
 
       </div>
@@ -404,7 +404,7 @@
     <script src="../../../resources/javascript/all.min.js"></script>
     <script>
       Genki.appendix.conjugation_chart = 
-        //'<h3 class="sub-title">Genki I</h3>'+
+        '<h3 class="sub-title">Genki I</h3>'+
         '<table class="table large-width center">'+
           '<tr>'+
             '<td style="width:25px">verb types</td>'+
@@ -555,7 +555,7 @@
             '<td>{はなさない}</td>'+
             '<td>{はなさなかった}</td>'+
           '</tr>'+
-        '</table><br>'/*+
+        '</table><br>'+
 
         '<h3 class="sub-title">Genki II</h3>'+
         '<table class="table large-width center">'+
@@ -723,7 +723,7 @@
             '<td>{はなさせる}</td>'+
             '<td>{はなさせられる}</td>'+
           '</tr>'+
-        '</table>'*/;
+        '</table>';
       
       Genki.appendix.finishedLoading();
     </script>

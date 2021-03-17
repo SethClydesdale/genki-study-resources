@@ -300,6 +300,7 @@
           '.kanji-readings.drag-quiz #question-list .quiz-item, .kanji-meanings.drag-quiz #question-list .quiz-item { font-size:' + (26 * n) + 'px }'+
           '.title { font-size:' + (28 * n) + 'px }'+
           // width
+          '.slim-ruby ruby { width:' + (10 * n) + 'px }'+
           '.result-label { width:' + (150 * n) + 'px }'+
           '.kana-quiz .quiz-answer-zone:empty, .kana-quiz .quiz-item { width:' + (35 * n) + 'px }'+
           // height

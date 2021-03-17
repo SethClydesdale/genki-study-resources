@@ -569,12 +569,15 @@ window.GenkiExercises = [
   'lesson-13/workbook-7|Workbook: なら|p.17; I & II',
   'lesson-13/workbook-8|Workbook: 一週間に三回|p.18; I & II',
   'lesson-13/workbook-9|Workbook: Questions|p.19; I & II',
+  'lesson-13/workbook-10|Workbook: Listening Comprehension|p.20; A, B, & C',
+  'lesson-13/literacy-1|Kanji Practice: Readings|p.274-275',
+  'lesson-13/literacy-2|Kanji Practice: Meanings|p.274-275',
   
   // Appendix
-  'appendix/dictionary|Vocabulary Index (Dictionary)|p.360-377',
-  'appendix/map-of-japan|Map of Japan|p.378-379',
-  'appendix/numbers-chart|Numbers Chart|p.380-381',
-  'appendix/conjugation-chart|Conjugation Chart|p.382',
+  'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
+  'appendix/map-of-japan|Map of Japan|p.384-385',
+  'appendix/numbers-chart|Numbers Chart|p.386-387',
+  'appendix/conjugation-chart|Conjugation Chart|p.388-389',
 
   // Study Tools
   'study-tools/custom-vocab|Custom Vocabulary Practice',

@@ -1519,6 +1519,9 @@ ruby rt {
   padding:0 2px;
 }
 
+/* for single characters */
+.slim-ruby ruby { width:10px; }
+
 /* for non-furigana use */
 .ruby-always-visible ruby {
   display:inline-block !important;
@@ -1902,7 +1905,7 @@ ruby rt {
   min-width:0;
 }
 .fill-quiz .valign-off .writing-zone { vertical-align:0; }
-.fill-quiz .valign-top .writing-zone { vertical-align:top; }
+.fill-quiz .valign-top .writing-zone, .valign-top .button.play-button { vertical-align:top; }
 .fill-quiz .pad-zones .writing-zone {
   vertical-align:top;
   margin-bottom:25px;
