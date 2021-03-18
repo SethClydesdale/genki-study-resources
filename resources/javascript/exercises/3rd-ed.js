@@ -572,6 +572,12 @@ window.GenkiExercises = [
   'lesson-13/workbook-10|Workbook: Listening Comprehension|p.20; A, B, & C',
   'lesson-13/literacy-1|Kanji Practice: Readings|p.274-275',
   'lesson-13/literacy-2|Kanji Practice: Meanings|p.274-275',
+  'lesson-13/literacy-3|Kanji Practice: Stroke Order|p.274-275',
+  'lesson-13/literacy-4|Kanji Vocabulary: 物, 鳥, and 料|p.274',
+  'lesson-13/literacy-5|Kanji Vocabulary: 理, 特, and 安|p.274',
+  'lesson-13/literacy-6|Kanji Vocabulary: 販, 肉, and 悪|p.274-275',
+  'lesson-13/literacy-7|Kanji Vocabulary: 体, 同, 着, and 空|p.275',
+  'lesson-13/literacy-8|Kanji Vocabulary: 港, 昼, and 海|p.275',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
