@@ -580,6 +580,7 @@ window.GenkiExercises = [
   'lesson-13/literacy-8|Kanji Vocabulary: 港, 昼, and 海|p.275',
   'lesson-13/literacy-9|Kanji Practice: Write the Readings|p.276; I-A & B',
   'lesson-13/literacy-10|Reading Practice: Identify the Food|p.277; II-A',
+  'lesson-13/literacy-11|Reading Practice: 日本のおもしろい経験|p.277-278; II-B & C',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',

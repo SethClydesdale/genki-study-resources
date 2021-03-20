@@ -2257,6 +2257,7 @@ Genki.jisho = {
     { ja : '風呂に入る|ふろにはいる', en : 'to take a bath', v : 'u', l : '会L6' },
     { ja : 'プロポーズする', en : 'to propose marriage', v : 'irr', l : '会L14' },
     { ja : 'フロント', en : 'receptionist; front desk', l : '会L15(e)' },
+    { ja : '文|ぶん', en : 'sentence; text; writings', l : '読L13-II' },
     { ja : '文化|ぶんか', en : 'culture', l : '読L11-II, 会L19' },
     { ja : '文学|ぶんがく', en : 'literature', l : '会L1, 読L7-II' },
     { ja : '分割払い|ぶんかつばらい', en : 'payment in installments', l : '読L20-漢字表' },
