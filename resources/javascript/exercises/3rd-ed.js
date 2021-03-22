@@ -582,6 +582,15 @@ window.GenkiExercises = [
   'lesson-13/literacy-10|Reading Practice: Identify the Food|p.277; II-A',
   'lesson-13/literacy-11|Reading Practice: 日本のおもしろい経験|p.277-278; II-B & C',
   'lesson-13/literacy-12|Reading Practice: 留学生座談会|p.279-280; III-B & C',
+  'lesson-13/literacy-wb-1|Workbook: Kanji Writing Practice|p.111',
+  'lesson-13/literacy-wb-2|Workbook: Using Kanji|p.112',
+  
+  // Lesson 14
+  'lesson-14/vocab-1|Vocabulary: Nouns 1|p.48',
+  'lesson-14/vocab-2|Vocabulary: Nouns 2|p.48',
+  'lesson-14/vocab-3|Vocabulary: Adjectives and Verbs|p.48-49',
+  'lesson-14/vocab-4|Vocabulary: Adverbs and Other Expressions|p.49',
+  'lesson-14/vocab-5|Vocabulary: Counters|p.49',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
