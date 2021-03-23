@@ -591,6 +591,8 @@ window.GenkiExercises = [
   'lesson-14/vocab-3|Vocabulary: Adjectives and Verbs|p.48-49',
   'lesson-14/vocab-4|Vocabulary: Adverbs and Other Expressions|p.49',
   'lesson-14/vocab-5|Vocabulary: Counters|p.49',
+  'lesson-14/grammar-1|Practice: ほしい (Present)|p.57; I-A',
+  'lesson-14/grammar-2|Practice: ほしい (Past)|p.57; I-B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
