@@ -593,6 +593,8 @@ window.GenkiExercises = [
   'lesson-14/vocab-5|Vocabulary: Counters|p.49',
   'lesson-14/grammar-1|Practice: ほしい (Present)|p.57; I-A',
   'lesson-14/grammar-2|Practice: ほしい (Past)|p.57; I-B',
+  'lesson-14/grammar-3|Practice: ～かもしれません|p.59; II-A',
+  'lesson-14/grammar-4|Practice: あげる|p.61; III-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
