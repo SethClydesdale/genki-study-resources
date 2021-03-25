@@ -595,6 +595,9 @@ window.GenkiExercises = [
   'lesson-14/grammar-2|Practice: ほしい (Past)|p.57; I-B',
   'lesson-14/grammar-3|Practice: ～かもしれません|p.59; II-A',
   'lesson-14/grammar-4|Practice: あげる|p.61; III-A',
+  'lesson-14/grammar-5|Practice: くれる／もらう|p.62; III-C',
+  'lesson-14/grammar-6|Practice: あげる／くれる／もらう|p.62; III-D',
+  'lesson-14/grammar-7|Practice: ～たらどうですか|p.64; IV-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
