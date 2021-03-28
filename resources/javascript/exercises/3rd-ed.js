@@ -602,6 +602,7 @@ window.GenkiExercises = [
   'lesson-14/grammar-9|Practice: Number+も／Number+しか+Negative|p.65-66; V-B',
   'lesson-14/culture-1|Culture Note: Annual Events in Japan|p.68',
   'lesson-14/vocab-6|Useful Expressions: Counters|p.69',
+  'lesson-14/workbook-1|Workbook: ほしい|p.21; I, II, & III',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
