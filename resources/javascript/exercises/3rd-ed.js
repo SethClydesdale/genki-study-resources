@@ -603,6 +603,12 @@ window.GenkiExercises = [
   'lesson-14/culture-1|Culture Note: Annual Events in Japan|p.68',
   'lesson-14/vocab-6|Useful Expressions: Counters|p.69',
   'lesson-14/workbook-1|Workbook: ほしい|p.21; I, II, & III',
+  'lesson-14/workbook-2|Workbook: ～かもしれません|p.22; I & II',
+  'lesson-14/workbook-3|Workbook: あげる／くれる／もらう|p.23; I & II',
+  'lesson-14/workbook-4|Workbook: ～たらどうですか|p.24; I & II',
+  'lesson-14/workbook-5|Workbook: Number+も／Number+しか+Negative|p.25; I & II',
+  'lesson-14/workbook-6|Workbook: Questions|p.26; I & II',
+  'lesson-14/workbook-7|Workbook: Listening Comprehension|p.27; A, B, & C',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
