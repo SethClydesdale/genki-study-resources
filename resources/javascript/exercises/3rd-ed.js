@@ -609,6 +609,9 @@ window.GenkiExercises = [
   'lesson-14/workbook-5|Workbook: Number+も／Number+しか+Negative|p.25; I & II',
   'lesson-14/workbook-6|Workbook: Questions|p.26; I & II',
   'lesson-14/workbook-7|Workbook: Listening Comprehension|p.27; A, B, & C',
+  'lesson-14/literacy-1|Kanji Practice: Readings|p.281-282',
+  'lesson-14/literacy-2|Kanji Practice: Meanings|p.281-282',
+  'lesson-14/literacy-3|Kanji Practice: Stroke Order|p.281-282',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
