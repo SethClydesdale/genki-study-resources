@@ -284,7 +284,7 @@ Genki.jisho = {
     { ja : '映画館|えいがかん', en : 'movie theater', l : '会L15' },
     { ja : '影響を受ける|えいきょうをうける', en : 'to be affected', v : 'ru', l : '読L17-II' },
     { ja : '英語|えいご', en : 'English language', l : '会L1' },
-    { ja : '英国|えいこく', en : 'England', l : '読L14-漢字表' },
+    { ja : '英国|えいこく', en : 'United Kingdom', l : '読L14-漢字表' },
     { ja : '英雄|えいゆう', en : 'hero', l : '読L14-漢字表' },
     { ja : 'ええ', en : 'yes', l : '会L1' },
     { ja : 'ええと', en : 'well...; let me see...', l : '会L16' },
@@ -1743,6 +1743,7 @@ Genki.jisho = {
     { ja : '電車|でんしゃ', en : 'train', l : '会L6' },
     { ja : '天井|てんじょう', en : 'ceiling', l : '読L17-II' },
     { ja : '電池|でんち', en : 'battery', l : '会L15' },
+    { ja : '店長|てんちょう', en : 'store manager', l : '読L14-漢字表' },
     { ja : '点滴|てんてき', en : 'intravenous feeding; IV', l : '会L12(e)' },
     { ja : '天皇|てんのう', en : 'Japanese emperor', l : '読L5-漢字表' },
     { ja : '天ぷら|てんぷら', en : 'tempura', l : '会L10' },
@@ -1953,6 +1954,7 @@ Genki.jisho = {
     { ja : '人気がある|にんきがある', en : 'to be popular', v : 'u', l : '会L9' },
     { ja : '人魚|にんぎょ', en : 'mermaid', l : '読L15-漢字表' },
     { ja : '人間|にんげん', en : 'human being', l : '読L23-II' },
+    { ja : '忍者|にんじゃ', en : 'ninja', l : '読L14-漢字表' },
     { ja : 'にんじん', en : 'carrot', l : '会L8(e)' }
   ],
   
@@ -2023,7 +2025,7 @@ Genki.jisho = {
     { ja : '灰皿|はいざら', en : 'ashtray', l : '読L20-漢字表' },
     { ja : '歯医者|はいしゃ', en : 'dentist', l : '読L14-漢字表' },
     { ja : '配達|はいたつ', en : 'delivery', l : '読L21-漢字表' },
-    { ja : '売店|ばいてん', en : 'shop; stand', l : '会L10(e)' },
+    { ja : '売店|ばいてん', en : 'shop; stand; kiosk', l : '会L10(e)' },
     { ja : 'バイト', en : 'abbreviation of アルバイト', l : '会L21' },
     { ja : '売買|ばいばい', en : 'selling and buying', l : '読L10-漢字表' },
     { ja : 'ハイヒール', en : 'high heels', l : '会L20' },
@@ -2462,7 +2464,7 @@ Genki.jisho = {
     { ja : '未来|みらい', en : 'future', l : '読L16-II' },
     { ja : '見る|みる', en : 'to see; to look at; to watch', v : 'ru', l : '会L3' },
     { ja : 'ミルク', en : 'milk', l : '会L2' },
-    { ja : '民族|みんぞく', en : 'race', l : '読L14-漢字表' },
+    { ja : '民族|みんぞく', en : 'race; ethnic group', l : '読L14-漢字表' },
     { ja : 'みんな', en : 'all', l : '読L7-II, 会L9' },
     { ja : 'みんなで', en : 'all (of the people) together', l : '会L8' }
   ],

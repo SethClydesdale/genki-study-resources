@@ -612,6 +612,15 @@ window.GenkiExercises = [
   'lesson-14/literacy-1|Kanji Practice: Readings|p.281-282',
   'lesson-14/literacy-2|Kanji Practice: Meanings|p.281-282',
   'lesson-14/literacy-3|Kanji Practice: Stroke Order|p.281-282',
+  'lesson-14/literacy-4|Kanji Vocabulary: 彼, 代, and 留|p.281',
+  'lesson-14/literacy-5|Kanji Vocabulary: 族, 親, and 切|p.281',
+  'lesson-14/literacy-6|Kanji Vocabulary: 英, 店, and 去|p.281-282',
+  'lesson-14/literacy-7|Kanji Vocabulary: 急, 乗, and 当|p.282',
+  'lesson-14/literacy-8|Kanji Vocabulary: 音, 楽, 医, and 者|p.282',
+  'lesson-14/literacy-9|Kanji Practice: Write the Readings|p.283; I-A & B',
+  'lesson-14/literacy-10|Reading Practice: 悩みの相談|p.284-285; II-B & C',
+  'lesson-14/literacy-wb-1|Workbook: Kanji Writing Practice|p.113',
+  'lesson-14/literacy-wb-2|Workbook: Using Kanji|p.114',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
