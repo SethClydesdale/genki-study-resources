@@ -622,6 +622,15 @@ window.GenkiExercises = [
   'lesson-14/literacy-wb-1|Workbook: Kanji Writing Practice|p.113',
   'lesson-14/literacy-wb-2|Workbook: Using Kanji|p.114',
   
+  // Lesson 15
+  'lesson-15/vocab-1|Vocabulary: Nouns 1|p.72',
+  'lesson-15/vocab-2|Vocabulary: Nouns 2|p.72',
+  'lesson-15/vocab-3|Vocabulary: U-verbs|p.72-73',
+  'lesson-15/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.73',
+  'lesson-15/vocab-5|Vocabulary: Adverbs and Other Expressions|p.73',
+  'lesson-15/culture-1|Culture Note: Japanese Accommodations|p.77',
+  'lesson-15/vocab-6|Bonus Vocabulary: ～目|p.79',
+  
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
   'appendix/map-of-japan|Map of Japan|p.384-385',
