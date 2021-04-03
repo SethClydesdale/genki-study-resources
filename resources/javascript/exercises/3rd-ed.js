@@ -631,6 +631,7 @@ window.GenkiExercises = [
   'lesson-15/culture-1|Culture Note: Japanese Accommodations|p.77',
   'lesson-15/vocab-6|Bonus Vocabulary: ～目|p.79',
   'lesson-15/grammar-1|Practice: Volitional Form 1|p.80; I-A',
+  'lesson-15/grammar-2|Practice: Volitional Form 2|p.80-81; I-B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
