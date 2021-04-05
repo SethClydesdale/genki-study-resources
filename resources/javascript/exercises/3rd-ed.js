@@ -633,6 +633,9 @@ window.GenkiExercises = [
   'lesson-15/grammar-1|Practice: Volitional Form 1|p.80; I-A',
   'lesson-15/grammar-2|Practice: Volitional Form 2|p.80-81; I-B',
   'lesson-15/grammar-3|Practice: Volitional Form + と思っています|p.82; II-A',
+  'lesson-15/grammar-4|Practice: ～ておく|p.83; III-A',
+  'lesson-15/grammar-5|Practice: Using Sentences to Qualify Nouns 1|p.85; IV-A',
+  'lesson-15/grammar-6|Practice: Using Sentences to Qualify Nouns 2|p.85-86; IV-B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
