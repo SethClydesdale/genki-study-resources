@@ -636,6 +636,9 @@ window.GenkiExercises = [
   'lesson-15/grammar-4|Practice: ～ておく|p.83; III-A',
   'lesson-15/grammar-5|Practice: Using Sentences to Qualify Nouns 1|p.85; IV-A',
   'lesson-15/grammar-6|Practice: Using Sentences to Qualify Nouns 2|p.85-86; IV-B',
+  'lesson-15/grammar-7|Practice: Using Sentences to Qualify Nouns 3|p.86-87; IV-D',
+  'lesson-15/vocab-7|Useful Expressions: Hotel Vocab|p.91',
+  'lesson-15/vocab-8|Useful Expressions: At the Hotel|p.91',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
