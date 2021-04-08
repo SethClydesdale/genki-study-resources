@@ -644,6 +644,8 @@ window.GenkiExercises = [
   'lesson-15/workbook-3|Workbook: Volitional Form + と思っています|p.29; I & II',
   'lesson-15/workbook-4|Workbook: ～ておく|p.30; I & II',
   'lesson-15/workbook-5|Workbook: Using Sentences to Qualify Nouns 1|p.31; I & II',
+  'lesson-15/workbook-6|Workbook: Using Sentences to Qualify Nouns 2|p.32; I & II',
+  'lesson-15/workbook-7|Workbook: Questions|p.33; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
