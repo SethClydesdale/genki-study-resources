@@ -646,6 +646,9 @@ window.GenkiExercises = [
   'lesson-15/workbook-5|Workbook: Using Sentences to Qualify Nouns 1|p.31; I & II',
   'lesson-15/workbook-6|Workbook: Using Sentences to Qualify Nouns 2|p.32; I & II',
   'lesson-15/workbook-7|Workbook: Questions|p.33; I & II',
+  'lesson-15/workbook-8|Workbook: Listening Comprehension|p.34; A, B, & C',
+  'lesson-15/literacy-1|Kanji Practice: Readings|p.286-287',
+  'lesson-15/literacy-2|Kanji Practice: Meanings|p.286-287',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
