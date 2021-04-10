@@ -649,6 +649,7 @@ window.GenkiExercises = [
   'lesson-15/workbook-8|Workbook: Listening Comprehension|p.34; A, B, & C',
   'lesson-15/literacy-1|Kanji Practice: Readings|p.286-287',
   'lesson-15/literacy-2|Kanji Practice: Meanings|p.286-287',
+  'lesson-15/literacy-3|Kanji Practice: Stroke Order|p.286-287',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
