@@ -650,6 +650,11 @@ window.GenkiExercises = [
   'lesson-15/literacy-1|Kanji Practice: Readings|p.286-287',
   'lesson-15/literacy-2|Kanji Practice: Meanings|p.286-287',
   'lesson-15/literacy-3|Kanji Practice: Stroke Order|p.286-287',
+  'lesson-15/literacy-4|Kanji Vocabulary: 死, 意, and 味|p.286',
+  'lesson-15/literacy-5|Kanji Vocabulary: 注, 夏, 魚, and 寺|p.286',
+  'lesson-15/literacy-6|Kanji Vocabulary: 広, 足, and 転|p.286-287',
+  'lesson-15/literacy-7|Kanji Vocabulary: 借, 走, and 場|p.287',
+  'lesson-15/literacy-8|Kanji Vocabulary: 建, 地, and 通|p.287',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
