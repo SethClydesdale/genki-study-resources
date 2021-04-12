@@ -655,6 +655,10 @@ window.GenkiExercises = [
   'lesson-15/literacy-6|Kanji Vocabulary: 広, 足, and 転|p.286-287',
   'lesson-15/literacy-7|Kanji Vocabulary: 借, 走, and 場|p.287',
   'lesson-15/literacy-8|Kanji Vocabulary: 建, 地, and 通|p.287',
+  'lesson-15/literacy-9|Kanji Practice: Write the Readings|p.288; I-A & B',
+  'lesson-15/literacy-10|Reading Practice: 私が好きな所|p.289-292; II-B, C, & D',
+  'lesson-15/literacy-wb-1|Workbook: Kanji Writing Practice|p.115',
+  'lesson-15/literacy-wb-2|Workbook: Using Kanji|p.116',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
