@@ -666,6 +666,8 @@ window.GenkiExercises = [
   'lesson-16/vocab-3|Vocabulary: U-verbs|p.94-95',
   'lesson-16/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.95',
   'lesson-16/vocab-5|Vocabulary: Adverbs and Other Expressions|p.95',
+  'lesson-16/culture-1|Culture Note: Gift-giving in Japan|p.103',
+  'lesson-16/grammar-1|Practice: ～てあげる|p.104; I-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
