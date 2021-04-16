@@ -670,6 +670,8 @@ window.GenkiExercises = [
   'lesson-16/grammar-1|Practice: ～てあげる|p.104; I-A',
   'lesson-16/grammar-2|Practice: ～てくれる／～てもらう|p.105; I-C',
   'lesson-16/grammar-3|Practice: ～てあげる／～てくれる／～てもらう|p.105-106; I-E',
+  'lesson-16/grammar-4|Practice: ～ていただけませんか|p.107-108; II-A',
+  'lesson-16/grammar-5|Practice: ～といいですね|p.108-109; III-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
