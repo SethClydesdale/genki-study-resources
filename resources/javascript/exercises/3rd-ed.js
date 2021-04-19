@@ -674,6 +674,7 @@ window.GenkiExercises = [
   'lesson-16/grammar-5|Practice: ～といいですね|p.108-109; III-A',
   'lesson-16/grammar-6|Practice: ～時 1|p.110-111; IV-A',
   'lesson-16/grammar-7|Practice: ～時 2|p.111; IV-B',
+  'lesson-16/grammar-8|Practice: ～てすみませんでした 1|p.112; V-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
