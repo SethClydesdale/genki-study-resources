@@ -2172,6 +2172,7 @@ Genki.jisho = {
     { ja : '引っ越す|ひっこす', en : 'to move (to another place to live)', v : 'u', l : '会L19' },
     { ja : '必死|ひっし', en : 'desperate', l : '読L15-漢字表' },
     { ja : 'ビデオカメラ', en : 'camcorder', l : '会L14' },
+    { ja : 'ビデオチャット ', en : 'video chat', l : 'ワークブックL16' },
     { ja : '人|ひと', en : 'person', l : '会L4' },
     { ja : 'ひどい', en : 'awful', l : '会L21' },
     { ja : '一つ|ひとつ', en : 'one', l : '会L9' },
