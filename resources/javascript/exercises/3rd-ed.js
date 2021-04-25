@@ -685,6 +685,9 @@ window.GenkiExercises = [
   'lesson-16/workbook-7|Workbook: ～てすみませんでした|p.41; I & II',
   'lesson-16/workbook-8|Workbook: Questions|p.42; I & II',
   'lesson-16/workbook-9|Workbook: Listening Comprehension|p.43; A, B, & C',
+  'lesson-16/literacy-1|Kanji Practice: Readings|p.293-294',
+  'lesson-16/literacy-2|Kanji Practice: Meanings|p.293-294',
+  'lesson-16/literacy-3|Kanji Practice: Stroke Order|p.293-294',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
