@@ -688,6 +688,11 @@ window.GenkiExercises = [
   'lesson-16/literacy-1|Kanji Practice: Readings|p.293-294',
   'lesson-16/literacy-2|Kanji Practice: Meanings|p.293-294',
   'lesson-16/literacy-3|Kanji Practice: Stroke Order|p.293-294',
+  'lesson-16/literacy-4|Kanji Vocabulary: 供, 世, 界, and 全|p.293',
+  'lesson-16/literacy-5|Kanji Vocabulary: 部, 始, and 週|p.293',
+  'lesson-16/literacy-6|Kanji Vocabulary: 考, 開, and 屋|p.293-294',
+  'lesson-16/literacy-7|Kanji Vocabulary: 方, 運, and 動|p.294',
+  'lesson-16/literacy-8|Kanji Vocabulary: 教, 室, and 以|p.294',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
