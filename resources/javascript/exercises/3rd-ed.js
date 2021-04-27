@@ -693,6 +693,10 @@ window.GenkiExercises = [
   'lesson-16/literacy-6|Kanji Vocabulary: 考, 開, and 屋|p.293-294',
   'lesson-16/literacy-7|Kanji Vocabulary: 方, 運, and 動|p.294',
   'lesson-16/literacy-8|Kanji Vocabulary: 教, 室, and 以|p.294',
+  'lesson-16/literacy-9|Kanji Practice: Write the Readings|p.295; I-A & B',
+  'lesson-16/literacy-10|Reading Practice: まんが「ドラえもん」|p.296-298; II-B, C, & D',
+  'lesson-16/literacy-wb-1|Workbook: Kanji Writing Practice|p.117',
+  'lesson-16/literacy-wb-2|Workbook: Using Kanji|p.118',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
