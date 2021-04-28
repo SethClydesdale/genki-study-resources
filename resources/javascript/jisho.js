@@ -261,7 +261,7 @@ Genki.jisho = {
     { ja : '海|うみ', en : 'sea', l : '会L5' },
     { ja : '梅干し|うめぼし', en : 'umeboshi; pickled plums', l : '読L13-II' },
     { ja : '占い|うらない', en : 'fortunetelling', l : '読L21-II' },
-    { ja : 'うらやましい', en : 'envious', l : '会L17' },
+    { ja : 'うらやましい', en : 'envious; jealous', l : '会L17' },
     { ja : 'うらやましがる', en : '(somebody is) envious', l : '読L22-II' },
     { ja : '売る|うる', en : 'to sell', v : 'u', l : '読L10-II, 会L15' },
     { ja : 'うるさい', en : 'noisy; annoying', l : '会L22' },
