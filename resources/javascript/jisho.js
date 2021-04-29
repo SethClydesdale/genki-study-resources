@@ -1624,6 +1624,7 @@ Genki.jisho = {
     { ja : '茶店|ちゃみせ', en : 'teahouse', l : '読L20-II' },
     { ja : '～中|～ちゅう', en : 'while...', l : '読L19-II' },
     { ja : '注意する|ちゅういする', en : 'to watch out; to give warning', v : 'irr', l : '読L15-II, 会L19' },
+    { ja : '中華街|ちゅうかがい', en : 'Chinatown', l : '会L17' },
     { ja : '中学|ちゅうがく', en : 'junior high school (abbreviation)', l : '読L4-漢字表' },
     { ja : '中学生|ちゅうがくせい', en : 'junior high school student', l : '会L19' },
     { ja : '中学校|ちゅうがっこう', en : 'junior high school', l : '読L7-漢字表' },

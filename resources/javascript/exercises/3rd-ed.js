@@ -705,6 +705,7 @@ window.GenkiExercises = [
   'lesson-17/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.117',
   'lesson-17/vocab-5|Vocabulary: Adverbs and Other Expressions|p.117',
   'lesson-17/culture-1|Culture Note: Japanese Gestures|p.124',
+  'lesson-17/grammar-1|Practice: ～そうです (I hear)|p.125; I-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
