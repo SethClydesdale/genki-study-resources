@@ -706,6 +706,7 @@ window.GenkiExercises = [
   'lesson-17/vocab-5|Vocabulary: Adverbs and Other Expressions|p.117',
   'lesson-17/culture-1|Culture Note: Japanese Gestures|p.124',
   'lesson-17/grammar-1|Practice: ～そうです (I hear)|p.125; I-A',
+  'lesson-17/grammar-2|Practice: ～って|p.126; II-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
