@@ -709,6 +709,8 @@ window.GenkiExercises = [
   'lesson-17/grammar-2|Practice: ～って|p.126; II-A',
   'lesson-17/grammar-3|Practice: ～たら 1|p.127; III-A',
   'lesson-17/grammar-4|Practice: ～たら 2|p.127; III-B',
+  'lesson-17/grammar-5|Practice: ～なくてもいいです|p.128-129; IV-A',
+  'lesson-17/grammar-6|Practice: ～みたいです|p.130; V-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
