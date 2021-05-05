@@ -713,6 +713,9 @@ window.GenkiExercises = [
   'lesson-17/grammar-6|Practice: ～みたいです|p.130; V-A',
   'lesson-17/grammar-7|Practice: ～てから|p.132-133; VI-A',
   'lesson-17/grammar-8|Practice: ～前に|p.133; VI-B',
+  'lesson-17/vocab-6|Useful Expressions: At the Hair Salon|p.135',
+  'lesson-17/vocab-7|Useful Expressions: Hair Salon Words|p.135',
+  'lesson-17/workbook-1|Workbook: ～そうです (I hear)／～って|p.44; I, II, & III',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
