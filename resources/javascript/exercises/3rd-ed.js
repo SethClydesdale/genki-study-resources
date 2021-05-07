@@ -717,6 +717,8 @@ window.GenkiExercises = [
   'lesson-17/vocab-7|Useful Expressions: Hair Salon Words|p.135',
   'lesson-17/workbook-1|Workbook: ～そうです (I hear)／～って|p.44; I, II, & III',
   'lesson-17/workbook-2|Workbook: ～たら|p.45; I & II',
+  'lesson-17/workbook-3|Workbook: ～なくてもいいです|p.46; I, II, & III',
+  'lesson-17/workbook-4|Workbook: ～みたいです|p.47; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
