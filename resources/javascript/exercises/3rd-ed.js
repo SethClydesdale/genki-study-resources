@@ -721,6 +721,7 @@ window.GenkiExercises = [
   'lesson-17/workbook-4|Workbook: ～みたいです|p.47; I & II',
   'lesson-17/workbook-5|Workbook: ～前に／～てから|p.48; I & II',
   'lesson-17/workbook-6|Workbook: Questions|p.49; I & II',
+  'lesson-17/workbook-7|Workbook: Listening Comprehension|p.50; A, B, & C',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
