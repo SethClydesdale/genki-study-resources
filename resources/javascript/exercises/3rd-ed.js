@@ -722,6 +722,9 @@ window.GenkiExercises = [
   'lesson-17/workbook-5|Workbook: ～前に／～てから|p.48; I & II',
   'lesson-17/workbook-6|Workbook: Questions|p.49; I & II',
   'lesson-17/workbook-7|Workbook: Listening Comprehension|p.50; A, B, & C',
+  'lesson-17/literacy-1|Kanji Practice: Readings|p.299-300',
+  'lesson-17/literacy-2|Kanji Practice: Meanings|p.299-300',
+  'lesson-17/literacy-3|Kanji Practice: Stroke Order|p.299-300',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
