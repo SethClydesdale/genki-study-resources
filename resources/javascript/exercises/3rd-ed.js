@@ -731,6 +731,9 @@ window.GenkiExercises = [
   'lesson-17/literacy-7|Kanji Vocabulary: 真, 字, and 活|p.300',
   'lesson-17/literacy-8|Kanji Vocabulary: 結, 婚, and 歩|p.300',
   'lesson-17/literacy-9|Kanji Practice: Write the Readings|p.301; I-A &amp; B',
+  'lesson-17/literacy-10|Reading Practice: オノ・ヨーコ|p.302-304; I-A, B, &amp; C',
+  'lesson-17/literacy-wb-1|Workbook: Kanji Writing Practice|p.119',
+  'lesson-17/literacy-wb-2|Workbook: Using Kanji|p.120',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
