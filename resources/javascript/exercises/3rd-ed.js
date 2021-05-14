@@ -741,6 +741,8 @@ window.GenkiExercises = [
   'lesson-18/vocab-3|Vocabulary: U-verbs|p.138-139',
   'lesson-18/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.139',
   'lesson-18/vocab-5|Vocabulary: Adverbs and Other Expressions|p.139',
+  'lesson-18/vocab-6|Review: Transitivity Pairs|p.140',
+  'lesson-18/grammar-1|Practice: Transitivity Pairs|p.146; I-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
