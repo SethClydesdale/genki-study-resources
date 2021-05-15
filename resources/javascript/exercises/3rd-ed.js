@@ -743,6 +743,7 @@ window.GenkiExercises = [
   'lesson-18/vocab-5|Vocabulary: Adverbs and Other Expressions|p.139',
   'lesson-18/vocab-6|Review: Transitivity Pairs|p.140',
   'lesson-18/grammar-1|Practice: Transitivity Pairs|p.146; I-A',
+  'lesson-18/grammar-2|Practice: Paired Intransitive Verbs + ている|p.147-148; II-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
