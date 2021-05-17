@@ -745,6 +745,9 @@ window.GenkiExercises = [
   'lesson-18/grammar-1|Practice: Transitivity Pairs|p.146; I-A',
   'lesson-18/grammar-2|Practice: Paired Intransitive Verbs + ている|p.147-148; II-A',
   'lesson-18/grammar-3|Practice: ～てしまう 1|p.149; III-A',
+  'lesson-18/grammar-4|Practice: ～てしまう 2|p.150; III-B',
+  'lesson-18/grammar-5|Practice: ～ちゃう／～じゃう|p.150; III-C',
+  'lesson-18/grammar-6|Practice: ～と|p.151; IV-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
