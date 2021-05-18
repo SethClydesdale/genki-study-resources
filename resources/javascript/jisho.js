@@ -803,6 +803,7 @@ Genki.jisho = {
     { ja : '経済|けいざい', en : 'economics; economy', l : '会L1, 会L2' },
     { ja : '警察|けいさつ', en : 'police; police station', l : '会L21' },
     { ja : '警察官|けいさつかん', en : 'police officer', l : '会L11' },
+    { ja : '携帯|けいたい', en : 'cell phone; mobile phone', l : '会L18' },
     { ja : '芸術|げいじゅつ', en : 'art', l : '読L17-II' },
     { ja : 'ケーキ', en : 'cake', l : '会L10' },
     { ja : 'ゲーム', en : 'game', l : '会L7' },

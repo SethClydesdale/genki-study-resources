@@ -748,6 +748,7 @@ window.GenkiExercises = [
   'lesson-18/grammar-4|Practice: ～てしまう 2|p.150; III-B',
   'lesson-18/grammar-5|Practice: ～ちゃう／～じゃう|p.150; III-C',
   'lesson-18/grammar-6|Practice: ～と|p.151; IV-A',
+  'lesson-18/grammar-7|Practice: ～ながら|p.153; V-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
