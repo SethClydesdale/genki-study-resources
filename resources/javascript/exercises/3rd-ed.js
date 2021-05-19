@@ -749,6 +749,8 @@ window.GenkiExercises = [
   'lesson-18/grammar-5|Practice: ～ちゃう／～じゃう|p.150; III-C',
   'lesson-18/grammar-6|Practice: ～と|p.151; IV-A',
   'lesson-18/grammar-7|Practice: ～ながら|p.153; V-A',
+  'lesson-18/grammar-8|Practice: ～ばよかったです Conjugation|p.154; VI-A',
+  'lesson-18/grammar-9|Practice: ～ばよかったです|p.154-155; VI-B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
