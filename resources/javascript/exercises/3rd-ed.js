@@ -751,6 +751,13 @@ window.GenkiExercises = [
   'lesson-18/grammar-7|Practice: ～ながら|p.153; V-A',
   'lesson-18/grammar-8|Practice: ～ばよかったです Conjugation|p.154; VI-A',
   'lesson-18/grammar-9|Practice: ～ばよかったです|p.154-155; VI-B',
+  'lesson-18/culture-1|Culture Note: Sushi|p.159',
+  'lesson-18/culture-2|Culture Note: Popular Sushi Toppings|p.159',
+  'lesson-18/workbook-0|Workbook: Transitivity Pairs 0|bonus exercise',
+  'lesson-18/workbook-1|Workbook: Transitivity Pairs 1|p.51',
+  'lesson-18/workbook-2|Workbook: Transitivity Pairs 2|p.52; I & II',
+  'lesson-18/workbook-3|Workbook: Paired Intransitive Verbs + ている|p.53',
+  'lesson-18/workbook-4|Workbook: ～てしまう|p.54; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
