@@ -978,6 +978,7 @@ Genki.jisho = {
     { ja : 'サークル', en : 'club activity', l : '会L7' },
     { ja : 'サービス業|サービスぎょう', en : 'service industry', l : '読L18-漢字表' },
     { ja : 'サーフィン', en : 'surfing', l : '会L5' },
+    { ja : 'サーモン', en : 'salmon', l : '会L18(c)' },
     { ja : '～歳|～さい', en : '...years old', l : '会L1, 会L1(e)' },
     { ja : '最悪|さいあく', en : 'the worst', l : '読L20-II' },
     { ja : '再起動|さいきどう', en : 'reboot; restart', l : '読L12-漢字表' },
