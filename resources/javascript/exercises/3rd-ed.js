@@ -758,6 +758,9 @@ window.GenkiExercises = [
   'lesson-18/workbook-2|Workbook: Transitivity Pairs 2|p.52; I & II',
   'lesson-18/workbook-3|Workbook: Paired Intransitive Verbs + ている|p.53',
   'lesson-18/workbook-4|Workbook: ～てしまう|p.54; I & II',
+  'lesson-18/workbook-5|Workbook: ～と|p.55; I, II, & III',
+  'lesson-18/workbook-6|Workbook: ～ながら|p.56; I, II, & III',
+  'lesson-18/workbook-7|Workbook: ～ばよかったです|p.57; I, II, & III',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
