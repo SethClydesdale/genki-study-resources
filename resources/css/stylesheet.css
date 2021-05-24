@@ -2401,7 +2401,7 @@ input[disabled] + .genki_pseudo_checkbox, input[disabled] + .genki_pseudo_radio 
 .genki_pseudo_checkbox:after {
   content:"\f00c";
   color:#F60;
-  font-family:FontAwesome;
+  font-family:FontAwesomeWeb, FontAwesome;
   font-size:0px;
   position:absolute;
   top:0;

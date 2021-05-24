@@ -763,6 +763,8 @@ window.GenkiExercises = [
   'lesson-18/workbook-7|Workbook: ～ばよかったです|p.57; I, II, & III',
   'lesson-18/workbook-8|Workbook: Questions|p.58; I & II',
   'lesson-18/workbook-9|Workbook: Listening Comprehension|p.59; A, B, & C',
+  'lesson-18/literacy-1|Kanji Practice: Readings|p.306-307',
+  'lesson-18/literacy-2|Kanji Practice: Meanings|p.306-307',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
