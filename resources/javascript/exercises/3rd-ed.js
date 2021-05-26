@@ -766,6 +766,11 @@ window.GenkiExercises = [
   'lesson-18/literacy-1|Kanji Practice: Readings|p.306-307',
   'lesson-18/literacy-2|Kanji Practice: Meanings|p.306-307',
   'lesson-18/literacy-3|Kanji Practice: Stroke Order|p.306-307',
+  'lesson-18/literacy-4|Kanji Vocabulary: 目, 的, and 洋|p.306',
+  'lesson-18/literacy-5|Kanji Vocabulary: 服, 堂, 力, and 授|p.306',
+  'lesson-18/literacy-6|Kanji Vocabulary: 業, 試, and 験|p.306-307',
+  'lesson-18/literacy-7|Kanji Vocabulary: 貸, 図, and 館|p.307',
+  'lesson-18/literacy-8|Kanji Vocabulary: 終, 宿, and 題|p.307',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
