@@ -772,6 +772,8 @@ window.GenkiExercises = [
   'lesson-18/literacy-7|Kanji Vocabulary: 貸, 図, and 館|p.307',
   'lesson-18/literacy-8|Kanji Vocabulary: 終, 宿, and 題|p.307',
   'lesson-18/literacy-9|Kanji Practice: Write the Readings|p.308; I-A & B',
+  'lesson-18/literacy-10|Reading Practice: 大学生のアルバイト|p.308-309; II-B',
+  'lesson-18/literacy-11|Reading Practice: 橋本くんの大学生活|p.310-311; III-A & B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
