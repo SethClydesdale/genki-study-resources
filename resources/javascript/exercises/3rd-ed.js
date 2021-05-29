@@ -774,6 +774,8 @@ window.GenkiExercises = [
   'lesson-18/literacy-9|Kanji Practice: Write the Readings|p.308; I-A & B',
   'lesson-18/literacy-10|Reading Practice: 大学生のアルバイト|p.308-309; II-B',
   'lesson-18/literacy-11|Reading Practice: 橋本くんの大学生活|p.310-311; III-A & B',
+  'lesson-18/literacy-wb-1|Workbook: Kanji Writing Practice|p.121',
+  'lesson-18/literacy-wb-2|Workbook: Using Kanji|p.122',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
