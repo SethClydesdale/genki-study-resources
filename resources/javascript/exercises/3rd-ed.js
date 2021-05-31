@@ -783,6 +783,7 @@ window.GenkiExercises = [
   'lesson-19/vocab-3|Vocabulary: U-verbs|p.162-163',
   'lesson-19/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.163',
   'lesson-19/vocab-5|Vocabulary: Adverbs and Other Expressions|p.163',
+  'lesson-19/grammar-1|Practice: Honorific Verbs 1|p.170; I-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
