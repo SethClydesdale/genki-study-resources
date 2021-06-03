@@ -786,6 +786,8 @@ window.GenkiExercises = [
   'lesson-19/grammar-1|Practice: Honorific Verbs 1|p.170; I-A',
   'lesson-19/grammar-2|Practice: Honorific Verbs 2|p.170-171; I-B',
   'lesson-19/grammar-3|Practice: Honorific Verbs 3|p.171; I-C',
+  'lesson-19/grammar-4|Practice: Giving Respectful Advice|p.172; II',
+  'lesson-19/grammar-5|Practice: ～てくれてありがとう|p.173; III-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
