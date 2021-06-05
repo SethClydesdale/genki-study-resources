@@ -789,6 +789,7 @@ window.GenkiExercises = [
   'lesson-19/grammar-4|Practice: Giving Respectful Advice|p.172; II',
   'lesson-19/grammar-5|Practice: ～てくれてありがとう|p.173; III-A',
   'lesson-19/grammar-6|Practice: ～てよかったです|p.174; IV-A',
+  'lesson-19/grammar-7|Practice: ～はずです 1|p.175; V-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
