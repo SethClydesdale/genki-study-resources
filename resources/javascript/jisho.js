@@ -1738,6 +1738,7 @@ Genki.jisho = {
     { ja : '寺|てら', en : 'temple', l : '会L4' },
     { ja : '出る|でる', en : 'to exit; to appear; to attend', v : 'ru', l : '読L6-I, 会L9' },
     { ja : 'テレビ', en : 'TV', l : '会L3' },
+    { ja : 'テレビ局|テレビきょく', en : 'TV station', l : '会L19' },
     { ja : '天|てん', en : 'the heavens; the sky', l : '読L12-II' },
     { ja : '～点|～てん', en : '...points', l : '会L11' },
     { ja : '店員|てんいん', en : 'store clerk', l : '読L8-漢字表' },
