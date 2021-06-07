@@ -791,6 +791,18 @@ window.GenkiExercises = [
   'lesson-19/grammar-6|Practice: ～てよかったです|p.174; IV-A',
   'lesson-19/grammar-7|Practice: ～はずです 1|p.175; V-A',
   'lesson-19/grammar-8|Practice: ～はずです 2|p.176-177; V-C',
+  'lesson-19/culture-1|Culture Note: Visiting Someone\'s House|p.179',
+  'lesson-19/workbook-1|Workbook: Honorific Verbs 1|p.60',
+  'lesson-19/workbook-2|Workbook: Honorific Verbs 2|p.61; I & II',
+  'lesson-19/workbook-3|Workbook: Honorific Verbs 3・Giving Respectful Advice|p.62; I & II',
+  'lesson-19/workbook-4|Workbook: ～てくれてありがとう|p.63; I & II',
+  'lesson-19/workbook-5|Workbook: ～てよかったです|p.64; I & II',
+  'lesson-19/workbook-6|Workbook: ～はずです|p.65; I, II, & III',
+  'lesson-19/workbook-7|Workbook: Questions|p.66; I & II',
+  'lesson-19/workbook-8|Workbook: Listening Comprehension|p.67-68; A, B, & C',
+  'lesson-19/literacy-1|Kanji Practice: Readings|p.313-314',
+  'lesson-19/literacy-2|Kanji Practice: Meanings|p.313-314',
+  'lesson-19/literacy-3|Kanji Practice: Stroke Order|p.313-314',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
