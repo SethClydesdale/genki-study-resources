@@ -803,6 +803,12 @@ window.GenkiExercises = [
   'lesson-19/literacy-1|Kanji Practice: Readings|p.313-314',
   'lesson-19/literacy-2|Kanji Practice: Meanings|p.313-314',
   'lesson-19/literacy-3|Kanji Practice: Stroke Order|p.313-314',
+  'lesson-19/literacy-4|Kanji Vocabulary: 春, 秋, and 冬|p.313',
+  'lesson-19/literacy-5|Kanji Vocabulary: 花, 様, and 不|p.313',
+  'lesson-19/literacy-6|Kanji Vocabulary: 姉, 兄, 漢, and 卒|p.313-314',
+  'lesson-19/literacy-7|Kanji Vocabulary: 工, 研, and 究|p.314',
+  'lesson-19/literacy-8|Kanji Vocabulary: 質, 問, and 多|p.314',
+  'lesson-19/literacy-9|Kanji Practice: Write the Readings|p.315; I-A & B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
