@@ -809,6 +809,7 @@ window.GenkiExercises = [
   'lesson-19/literacy-7|Kanji Vocabulary: 工, 研, and 究|p.314',
   'lesson-19/literacy-8|Kanji Vocabulary: 質, 問, and 多|p.314',
   'lesson-19/literacy-9|Kanji Practice: Write the Readings|p.315; I-A & B',
+  'lesson-19/literacy-10|Reading Practice: お礼の手紙|p.316-317; II-A, B, & C',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
