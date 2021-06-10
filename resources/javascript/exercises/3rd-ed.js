@@ -810,6 +810,10 @@ window.GenkiExercises = [
   'lesson-19/literacy-8|Kanji Vocabulary: 質, 問, and 多|p.314',
   'lesson-19/literacy-9|Kanji Practice: Write the Readings|p.315; I-A & B',
   'lesson-19/literacy-10|Reading Practice: お礼の手紙|p.316-317; II-A, B, & C',
+  'lesson-19/literacy-11|Reading Practice: マリアさんのメール|p.318-319; II-A & B',
+  'lesson-19/literacy-12|Useful Expressions: Greeting Cards|p.320',
+  'lesson-19/literacy-wb-1|Workbook: Kanji Writing Practice|p.123',
+  'lesson-19/literacy-wb-2|Workbook: Using Kanji|p.124',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
