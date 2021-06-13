@@ -822,6 +822,7 @@ window.GenkiExercises = [
   'lesson-20/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.183',
   'lesson-20/vocab-5|Vocabulary: Adverbs and Other Expressions|p.183',
   'lesson-20/grammar-1|Practice: Extra-modest Expressions 1|p.191; I-A',
+  'lesson-20/grammar-2|Practice: Extra-modest Expressions 2|p.191; I-B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
