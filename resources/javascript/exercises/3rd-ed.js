@@ -823,6 +823,8 @@ window.GenkiExercises = [
   'lesson-20/vocab-5|Vocabulary: Adverbs and Other Expressions|p.183',
   'lesson-20/grammar-1|Practice: Extra-modest Expressions 1|p.191; I-A',
   'lesson-20/grammar-2|Practice: Extra-modest Expressions 2|p.191; I-B',
+  'lesson-20/grammar-3|Practice: Extra-modest Expressions 3|p.192; I-C',
+  'lesson-20/grammar-4|Practice: Extra-modest Expressions 4|p.192; I-D',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
