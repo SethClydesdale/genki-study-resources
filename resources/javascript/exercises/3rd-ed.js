@@ -826,6 +826,8 @@ window.GenkiExercises = [
   'lesson-20/grammar-3|Practice: Extra-modest Expressions 3|p.192; I-C',
   'lesson-20/grammar-4|Practice: Extra-modest Expressions 4|p.192; I-D',
   'lesson-20/grammar-5|Practice: Humble Expressions 1|p.193; II-A',
+  'lesson-20/grammar-6|Practice: Humble Expressions 2|p.193-194; II-B',
+  'lesson-20/grammar-7|Practice: Humble Expressions 3|p.195; II-D',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
