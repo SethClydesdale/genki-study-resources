@@ -828,6 +828,7 @@ window.GenkiExercises = [
   'lesson-20/grammar-5|Practice: Humble Expressions 1|p.193; II-A',
   'lesson-20/grammar-6|Practice: Humble Expressions 2|p.193-194; II-B',
   'lesson-20/grammar-7|Practice: Humble Expressions 3|p.195; II-D',
+  'lesson-20/grammar-8|Practice: ～ないで|p.196; III-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
