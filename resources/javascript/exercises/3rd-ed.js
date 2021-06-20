@@ -832,6 +832,8 @@ window.GenkiExercises = [
   'lesson-20/grammar-9|Practice: Questions within Larger Sentences|p.197; IV-A',
   'lesson-20/grammar-10|Practice: Name という Item|p.198; V-A',
   'lesson-20/grammar-11|Practice: ～やすい／～にくい|p.199-200; VI-A',
+  'lesson-20/culture-1|Culture Note: Japanese Pop Culture|p.205',
+  'lesson-20/workbook-1|Workbook: Extra-modest Expressions|p.69',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
