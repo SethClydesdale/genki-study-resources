@@ -834,6 +834,8 @@ window.GenkiExercises = [
   'lesson-20/grammar-11|Practice: ～やすい／～にくい|p.199-200; VI-A',
   'lesson-20/culture-1|Culture Note: Japanese Pop Culture|p.205',
   'lesson-20/workbook-1|Workbook: Extra-modest Expressions|p.69',
+  'lesson-20/workbook-2|Workbook: Humble Expressions 1|p.70',
+  'lesson-20/workbook-3|Workbook: Humble Expressions 2|p.71; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
