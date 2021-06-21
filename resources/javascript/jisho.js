@@ -682,7 +682,7 @@ Genki.jisho = {
     { ja : '厳しい|きびしい', en : 'strict', l : '会L13' },
     { ja : '気分が悪い|きぶんがわるい', en : 'to feel sick', l : '読L13-II, 会L18' },
     { ja : '期末試験|きまつしけん', en : 'final examination', l : '会L16' },
-    { ja : '決まる|きまる', en : 'to be decided', v : 'ru', l : '会L19' },
+    { ja : '決まる|きまる', en : 'to be decided', v : 'u', l : '会L19' },
     { ja : '決める|きめる', en : 'to decide', v : 'ru', l : '会L10' },
     { ja : '気持ち|きもち', en : 'feeling', l : '読L23-II' },
     { ja : '着物|きもの', en : 'kimono; Japanese tradition dress', l : '読L9-II, 会L13' },
