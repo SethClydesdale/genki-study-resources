@@ -836,6 +836,9 @@ window.GenkiExercises = [
   'lesson-20/workbook-1|Workbook: Extra-modest Expressions|p.69',
   'lesson-20/workbook-2|Workbook: Humble Expressions 1|p.70',
   'lesson-20/workbook-3|Workbook: Humble Expressions 2|p.71; I & II',
+  'lesson-20/workbook-4|Workbook: Three Types of Respect Language|p.72; I & II',
+  'lesson-20/workbook-5|Workbook: ～ないで|p.73; I & II',
+  'lesson-20/workbook-6|Workbook: Questions Within Larger Sentences|p.74; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
