@@ -2743,6 +2743,7 @@ Genki.jisho = {
     { ja : '例|れい', en : 'example', l : '会L11(e)' },
     { ja : '冷蔵庫|れいぞうこ', en : 'refrigerator', l : '会L18' },
     { ja : '歴史|れきし', en : 'history', l : '会L1, 会L2' },
+    { ja : 'レシピ', en : 'recipe', l : 'ワークブックL20' },
     { ja : 'レストラン', en : 'restaurant', l : '会L4' },
     { ja : 'レポート', en : '(term) paper', l : '会L13' },
     { ja : 'レモン', en : 'lemon', l : '読L2-I' },
