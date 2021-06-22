@@ -13,6 +13,31 @@ filter_regex = re.compile(r"format : 'kanji'|format : 'practice'|format : 'hirak
 output_folder = Path('.').absolute().joinpath('decks').joinpath(lessons_folder.name)
 
 
+def lesson_sort_key(path_name):
+    """
+    Generates sort key for lesson folders to approximate the order in which a
+    student would encounter the lessons in the Genki books.
+    """
+    match_groups = re.match(r'^.*-(\d\d*)$', path_name).groups()
+    return int(match_groups[0])
+
+
+def vocab_type_sort_key(path_name):
+    """
+    Generates sort key for vocab folders to approximate the order in which a
+    student would encounter the sections in the Genki books.
+    """
+    match_groups = re.match(r'^(.*)-(\d\d*)$', path_name).groups()
+    vocab_type = match_groups[0]
+    lesson_number = int(match_groups[1])
+    if vocab_type == "vocab":
+        return (lesson_number, 0)
+    elif vocab_type == "literacy":
+        return (lesson_number, 1)
+    else:
+        return (lesson_number, 2)
+
+
 def get_tags(html):
     """
     <title>Useful Expressions: Time (Minutes 11-30) - Lesson 1 | Genki ...</title>
@@ -98,18 +123,16 @@ ruby:hover rt {
     combined_deck.add_model(my_model)
 
     decks = [combined_deck]
-    for lesson_folder in lessons_folder.glob('lesson*'):
+    for lesson_folder in sorted(lessons_folder.glob('lesson*'),
+                                key=lambda path: lesson_sort_key(path.name)):
         lesson_number = lesson_folder.name.split('-')[-1]
-        
-        print(f'Getting vocab for Lesson {lesson_number}...')
-        
         my_deck = genanki.Deck(
             1810167044 + int(lesson_number),  # Random hardcoded id
             f'Genki lesson {lesson_number}')
         my_deck.add_model(my_model)
         decks.append(my_deck)
-        
-        for vocab_folder in chain(lesson_folder.glob('vocab*'), lesson_folder.glob('literacy*')):
+        for vocab_folder in sorted(chain(lesson_folder.glob('vocab*'), lesson_folder.glob('literacy*')),
+                                   key=lambda path: vocab_type_sort_key(path.name)):
             with open(vocab_folder.joinpath('index.html'), 'r', encoding='UTF8') as f:
                 html = f.read()
                 if filter_regex.search(html) == None: # Filter out exercise types that are NOT vocab
