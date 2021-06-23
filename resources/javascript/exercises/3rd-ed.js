@@ -839,6 +839,8 @@ window.GenkiExercises = [
   'lesson-20/workbook-4|Workbook: Three Types of Respect Language|p.72; I & II',
   'lesson-20/workbook-5|Workbook: ～ないで|p.73; I & II',
   'lesson-20/workbook-6|Workbook: Questions Within Larger Sentences|p.74; I & II',
+  'lesson-20/workbook-7|Workbook: Name という Item|p.75; I & II',
+  'lesson-20/workbook-8|Workbook: ～やすい／～にくい|p.76; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
