@@ -841,6 +841,10 @@ window.GenkiExercises = [
   'lesson-20/workbook-6|Workbook: Questions Within Larger Sentences|p.74; I & II',
   'lesson-20/workbook-7|Workbook: Name という Item|p.75; I & II',
   'lesson-20/workbook-8|Workbook: ～やすい／～にくい|p.76; I & II',
+  'lesson-20/workbook-9|Workbook: Questions|p.77; I & II',
+  'lesson-20/workbook-10|Workbook: Listening Comprehension|p.78; A, B, & C',
+  'lesson-20/literacy-1|Kanji Practice: Readings|p.321-322',
+  'lesson-20/literacy-2|Kanji Practice: Meanings|p.321-322',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
