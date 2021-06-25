@@ -266,7 +266,7 @@ Genki.jisho = {
     { ja : '売る|うる', en : 'to sell', v : 'u', l : '読L10-II, 会L15' },
     { ja : 'うるさい', en : 'noisy; annoying', l : '会L22' },
     { ja : 'うれしい', en : 'glad', l : '会L13' },
-    { ja : '売れる|うれる', en : 'to be sold', v : 'ru', l : '読L20II' },
+    { ja : '売れる|うれる', en : 'to be sold', v : 'ru', l : '読L20-II' },
     { ja : 'うん', en : 'uh-huh; yes', l : '会L8' },
     { ja : '運がいい|うんがいい', en : 'lucky', l : '読L16-漢字表' },
     { ja : '運転|うんてん', en : 'driving', l : '読L16-漢字表' },
@@ -818,7 +818,7 @@ Genki.jisho = {
     { ja : '化粧する|けしょうする', en : 'to put makeup on', v : 'irr', l : '会L17' },
     { ja : '化粧品|けしょうひん', en : 'cosmetics; toilet articles', l : '会L14' },
     { ja : '消す|けす', en : 'to turn off; to erase', v : 'u', l : '会L14' },
-    { ja : 'げた', en : 'wooden clogs', l : '会20' },
+    { ja : 'げた', en : 'wooden clogs', l : '会L20' },
     { ja : 'ケチ|けち（な）', en : 'stingy; cheap', l : '会14' },
     { ja : '結果|けっか', en : 'result', l : '読L23-II' },
     { ja : '結構です|けっこうです', en : "That would be fine.; That wouldn't be necessary.", l : '会L6' },
@@ -1494,7 +1494,7 @@ Genki.jisho = {
   ],
   
   'た' : [
-    { ja : '鯛|たい', en : 'sea bream; snapper', l : '会18(c)' },
+    { ja : '鯛|たい', en : 'sea bream; snapper', l : '会L18(c)' },
     { ja : 'タイ', en : 'Thailand', l : '読L2-I' },
     { ja : '題|だい', en : 'title', l : '読L18-漢字表' },
     { ja : '～代|～だい', en : 'charge; fee', l : '読L18-III' },
