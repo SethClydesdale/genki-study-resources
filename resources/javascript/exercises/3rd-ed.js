@@ -845,6 +845,12 @@ window.GenkiExercises = [
   'lesson-20/workbook-10|Workbook: Listening Comprehension|p.78; A, B, & C',
   'lesson-20/literacy-1|Kanji Practice: Readings|p.321-322',
   'lesson-20/literacy-2|Kanji Practice: Meanings|p.321-322',
+  'lesson-20/literacy-3|Kanji Practice: Stroke Order|p.321-322',
+  'lesson-20/literacy-4|Kanji Vocabulary: 皿, 声, and 茶|p.321',
+  'lesson-20/literacy-5|Kanji Vocabulary: 止, 枚, and 両|p.321',
+  'lesson-20/literacy-6|Kanji Vocabulary: 無, 払, and 心|p.321-322',
+  'lesson-20/literacy-7|Kanji Vocabulary: 笑, 絶, and 対|p.322',
+  'lesson-20/literacy-8|Kanji Vocabulary: 痛, 最, and 続|p.322',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
