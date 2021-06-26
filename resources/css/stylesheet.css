@@ -433,12 +433,14 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 }
 
 #link-edition   { background-color:#F60; border-bottom:2px solid #D40; }
+#link-anki      { background-color:#05C; border-bottom:2px solid #03A; }
 #link-help      { background-color:#39C; border-bottom:2px solid #17A; }
 #link-report    { background-color:#F66; border-bottom:2px solid #D44; }
 #link-download  { background-color:#9C6; border-bottom:2px solid #7A4; }
 #link-donate    { background-color:#C6C; border-bottom:2px solid #A4A; }
 #link-github    { background-color:#96F; border-bottom:2px solid #74D; }
 #link-edition:hover  { background-color:#E50; }
+#link-anki:hover     { background-color:#04B; }
 #link-help:hover     { background-color:#28B; }
 #link-report:hover   { background-color:#E55; }
 #link-download:hover { background-color:#8B5; }
@@ -446,6 +448,8 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 #link-github:hover   { background-color:#85E; }
 #link-edition:active,
 #link-edition:focus  { background-color:#D40; }
+#link-anki:active,
+#link-anki:focus     { background-color:#03A; }
 #link-help:active,
 #link-help:focus     { background-color:#17A; }
 #link-report:active,
