@@ -852,6 +852,9 @@ window.GenkiExercises = [
   'lesson-20/literacy-7|Kanji Vocabulary: 笑, 絶, and 対|p.322',
   'lesson-20/literacy-8|Kanji Vocabulary: 痛, 最, and 続|p.322',
   'lesson-20/literacy-9|Kanji Practice: Write the Readings|p.323; I-A & B',
+  'lesson-20/literacy-10|Reading Practice: 猫の皿|p.325-326; II-B & C',
+  'lesson-20/literacy-wb-1|Workbook: Kanji Writing Practice|p.125',
+  'lesson-20/literacy-wb-2|Workbook: Using Kanji|p.126',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
