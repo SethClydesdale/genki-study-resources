@@ -1614,7 +1614,7 @@ Genki.jisho = {
     { ja : '地下室|ちかしつ', en : 'basement', l : '読L16-漢字表' },
     { ja : '地下鉄|ちかてつ', en : 'subway', l : '会L10' },
     { ja : '力仕事|ちからしごと', en : 'physical labor such as construction', l : '読L18-III' },
-    { ja : 'ちかん', en : 'sexual offender; pervert', l : '会L21' },
+    { ja : 'ちかん', en : 'sexual offender; groper; pervert', l : '会L21' },
     { ja : '地球|ちきゅう', en : 'earth; globe', l : '読L15-漢字表' },
     { ja : 'チケット', en : 'ticket', l : '会L14' },
     { ja : '遅刻する|ちこくする', en : 'to be late (for an appointment)', v : 'irr', l : '会L11' },
