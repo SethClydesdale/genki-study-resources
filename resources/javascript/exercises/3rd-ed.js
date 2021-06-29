@@ -862,6 +862,7 @@ window.GenkiExercises = [
   'lesson-21/vocab-3|Vocabulary: U-verbs|p.208-209',
   'lesson-21/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.209',
   'lesson-21/vocab-5|Vocabulary: Adverbs and Other Expressions|p.209',
+  'lesson-21/grammar-1|Practice: Passive Sentences 1|p.217; I-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
