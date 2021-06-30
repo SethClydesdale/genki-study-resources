@@ -2117,7 +2117,7 @@ Genki.jisho = {
     { ja : 'パリ', en : 'Paris', l : 'ワークブックL1' },
     { ja : 'パリ経由|パリけいゆ', en : 'via Paris', l : '読L21-漢字表' },
     { ja : '春|はる', en : 'spring', l : '会L10' },
-    { ja : '貼る|はる', en : 'to post; to stick', v : 'u', l : '会L21' },
+    { ja : '貼る|はる', en : 'to post; to stick; to affix', v : 'u', l : '会L21' },
     { ja : '春巻|はるまき', en : 'spring roll', l : '読L19-漢字表' },
     { ja : '晴れ|はれ', en : 'sunny weather', l : '会L12' },
     { ja : '晴れる|はれる', en : 'to become sunny', v : 'ru', l : '会L19' },
