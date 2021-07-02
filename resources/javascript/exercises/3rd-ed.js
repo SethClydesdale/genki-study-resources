@@ -866,6 +866,8 @@ window.GenkiExercises = [
   'lesson-21/grammar-2|Practice: Passive Sentences 2|p.217-218; I-B',
   'lesson-21/grammar-3|Practice: ～てある|p.219; II-A',
   'lesson-21/grammar-4|Practice: ～間に|p.221; III-A',
+  'lesson-21/grammar-5|Practice: Adjective + する|p.222; IV-A',
+  'lesson-21/grammar-6|Practice: ～てほしい|p.223; V-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
