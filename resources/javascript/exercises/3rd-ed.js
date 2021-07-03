@@ -868,6 +868,9 @@ window.GenkiExercises = [
   'lesson-21/grammar-4|Practice: ～間に|p.221; III-A',
   'lesson-21/grammar-5|Practice: Adjective + する|p.222; IV-A',
   'lesson-21/grammar-6|Practice: ～てほしい|p.223; V-A',
+  'lesson-21/culture-1|Culture Note: Religion in Japan|p.227',
+  'lesson-21/culture-2|Culture Note: Shrine and Temple Words|p.227',
+  'lesson-21/workbook-1|Workbook: Passive Sentences 1|p.79; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
