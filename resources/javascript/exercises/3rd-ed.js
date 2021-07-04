@@ -871,6 +871,7 @@ window.GenkiExercises = [
   'lesson-21/culture-1|Culture Note: Religion in Japan|p.227',
   'lesson-21/culture-2|Culture Note: Shrine and Temple Words|p.227',
   'lesson-21/workbook-1|Workbook: Passive Sentences 1|p.79; I & II',
+  'lesson-21/workbook-2|Workbook: Passive Sentences 2|p.80; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
