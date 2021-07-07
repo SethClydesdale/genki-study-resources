@@ -876,6 +876,8 @@ window.GenkiExercises = [
   'lesson-21/workbook-4|Workbook: ～てある|p.82; I & II',
   'lesson-21/workbook-5|Workbook: ～間に|p.83; I & II',
   'lesson-21/workbook-6|Workbook: Adjective + する|p.84; I & II',
+  'lesson-21/workbook-7|Workbook: ～てほしい|p.85',
+  'lesson-21/workbook-8|Workbook: Questions|p.86; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
