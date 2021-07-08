@@ -95,6 +95,7 @@ Genki.jisho = {
     { ja : '雨がやむ|あめがやむ', en : 'the rain stops', v : 'u', l : '会L23' },
     { ja : 'アメリカ', en : 'U.S.A.; America', l : '会L1, 会L2' },
     { ja : '謝る|あやまる', en : 'to apologize', v : 'u', l : '会L18' },
+    { ja : 'アラーム', en : 'alarm', l : 'ワークブックL21' },
     { ja : '洗う|あらう', en : 'to wash', v : 'u', l : '会L8' },
     { ja : '表す|あらわす', en : 'to express; to show', v : 'u', l : '読L23-II' },
     { ja : 'ありがとう', en : 'Thank you.', l : '会G' },
