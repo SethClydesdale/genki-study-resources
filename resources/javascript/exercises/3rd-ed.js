@@ -878,6 +878,7 @@ window.GenkiExercises = [
   'lesson-21/workbook-6|Workbook: Adjective + する|p.84; I & II',
   'lesson-21/workbook-7|Workbook: ～てほしい|p.85',
   'lesson-21/workbook-8|Workbook: Questions|p.86; I & II',
+  'lesson-21/workbook-9|Workbook: Listening Comprehension|p.87; A, B, & C',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
