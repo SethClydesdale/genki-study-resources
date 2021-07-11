@@ -882,6 +882,11 @@ window.GenkiExercises = [
   'lesson-21/literacy-1|Kanji Practice: Readings|p.328-329',
   'lesson-21/literacy-2|Kanji Practice: Meanings|p.328-329',
   'lesson-21/literacy-3|Kanji Practice: Stroke Order|p.328-329',
+  'lesson-21/literacy-4|Kanji Vocabulary: 信, 経, and 台|p.328',
+  'lesson-21/literacy-5|Kanji Vocabulary: 風, 犬, and 重|p.328',
+  'lesson-21/literacy-6|Kanji Vocabulary: 初, 若, and 送|p.328-329',
+  'lesson-21/literacy-7|Kanji Vocabulary: 幸, 計, and 遅|p.329',
+  'lesson-21/literacy-8|Kanji Vocabulary: 配, 弟, and 妹|p.329',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
