@@ -887,6 +887,7 @@ window.GenkiExercises = [
   'lesson-21/literacy-6|Kanji Vocabulary: 初, 若, and 送|p.328-329',
   'lesson-21/literacy-7|Kanji Vocabulary: 幸, 計, and 遅|p.329',
   'lesson-21/literacy-8|Kanji Vocabulary: 配, 弟, and 妹|p.329',
+  'lesson-21/literacy-9|Kanji Practice: Write the Readings|p.330; I-A & B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
