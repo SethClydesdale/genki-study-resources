@@ -891,6 +891,13 @@ window.GenkiExercises = [
   'lesson-21/literacy-10|Reading Practice: 厄年|p.331-333; II-B & C',
   'lesson-21/literacy-wb-1|Workbook: Kanji Writing Practice|p.127',
   'lesson-21/literacy-wb-2|Workbook: Using Kanji|p.128',
+
+  // Lesson 22
+  'lesson-22/vocab-1|Vocabulary: Nouns 1|p.230',
+  'lesson-22/vocab-2|Vocabulary: Nouns 2|p.230',
+  'lesson-22/vocab-3|Vocabulary: Adjectives and U-verbs|p.230-231',
+  'lesson-22/vocab-4|Vocabulary: Ru-verbs and Irregular Verbs|p.231',
+  'lesson-22/vocab-5|Vocabulary: Adverbs and Other Expressions|p.231',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
