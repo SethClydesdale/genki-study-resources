@@ -900,6 +900,7 @@ window.GenkiExercises = [
   'lesson-22/vocab-5|Vocabulary: Adverbs and Other Expressions|p.231',
   'lesson-22/grammar-1|Practice: Causative Sentences 1|p.238; I-A',
   'lesson-22/grammar-2|Practice: Causative Sentences 2|p.238-239; I-B',
+  'lesson-22/grammar-3|Practice: Causative + てくれる|p.241; II-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
