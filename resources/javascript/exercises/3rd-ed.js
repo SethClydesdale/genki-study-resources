@@ -903,6 +903,8 @@ window.GenkiExercises = [
   'lesson-22/grammar-3|Practice: Causative + てくれる|p.241; II-A',
   'lesson-22/grammar-4|Practice: Causative + てください|p.242; II-D',
   'lesson-22/grammar-5|Practice: Verb Stem + なさい|p.243; III-A',
+  'lesson-22/grammar-6|Practice: ～ば|p.243; IV-A',
+  'lesson-22/grammar-7|Practice: ～ば大丈夫です|p.244-245; IV-B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
