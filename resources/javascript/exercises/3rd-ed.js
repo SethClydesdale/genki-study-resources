@@ -906,6 +906,9 @@ window.GenkiExercises = [
   'lesson-22/grammar-6|Practice: ～ば|p.243; IV-A',
   'lesson-22/grammar-7|Practice: ～ば大丈夫です|p.244-245; IV-B',
   'lesson-22/grammar-8|Practice: ～のに|p.245; V-A',
+  'lesson-22/grammar-9|Practice: ～のように|p.246; VI-A',
+  'lesson-22/culture-1|Culture Note: Japan\'s Educational System (2)|p.249',
+  'lesson-22/culture-2|Culture Note: Words for University and College Life|p.249',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
