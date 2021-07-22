@@ -909,6 +909,8 @@ window.GenkiExercises = [
   'lesson-22/grammar-9|Practice: ～のように|p.246; VI-A',
   'lesson-22/culture-1|Culture Note: Japan\'s Educational System (2)|p.249',
   'lesson-22/culture-2|Culture Note: Words for University and College Life|p.249',
+  'lesson-22/workbook-1|Workbook: Causative Sentences 1|p.88; I & II',
+  'lesson-22/workbook-2|Workbook: Causative Sentences 2|p.89',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
