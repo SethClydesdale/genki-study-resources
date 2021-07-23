@@ -911,6 +911,10 @@ window.GenkiExercises = [
   'lesson-22/culture-2|Culture Note: Words for University and College Life|p.249',
   'lesson-22/workbook-1|Workbook: Causative Sentences 1|p.88; I & II',
   'lesson-22/workbook-2|Workbook: Causative Sentences 2|p.89',
+  'lesson-22/workbook-3|Workbook: Causative + あげる／くれる|p.90; I & II',
+  'lesson-22/workbook-4|Workbook: Verb Stem + なさい|p.91; I & II',
+  'lesson-22/workbook-5|Workbook: ～ば|p.92; I, II, & III',
+  'lesson-22/workbook-6|Workbook: ～のに|p.93; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
