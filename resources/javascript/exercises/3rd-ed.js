@@ -915,6 +915,7 @@ window.GenkiExercises = [
   'lesson-22/workbook-4|Workbook: Verb Stem + なさい|p.91; I & II',
   'lesson-22/workbook-5|Workbook: ～ば|p.92; I, II, & III',
   'lesson-22/workbook-6|Workbook: ～のに|p.93; I & II',
+  'lesson-22/workbook-7|Workbook: ～のように／～のような|p.94; I, II, & III',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',

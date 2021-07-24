@@ -2128,6 +2128,7 @@ Genki.jisho = {
     { ja : '半|はん', en : 'half', l : '会L1' },
     { ja : '～番|～ばん', en : 'number...', l : '会L11(e), 会L15' },
     { ja : 'パン', en : 'bread', l : '会L4' },
+    { ja : 'パン屋さん|パンやさん', en : 'baker', l : 'ワークブックL22' },
     { ja : '繁栄|はんえい', en : 'prosperity; thriving; flourishing', l : 'ワークブック読L1' },
     { ja : '半額|はんがく', en : 'half price', l : '読L4-漢字表' },
     { ja : 'パンクする', en : '(tire) goes flat', v : 'irr', l : '会L23' },
