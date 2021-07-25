@@ -916,6 +916,8 @@ window.GenkiExercises = [
   'lesson-22/workbook-5|Workbook: ～ば|p.92; I, II, & III',
   'lesson-22/workbook-6|Workbook: ～のに|p.93; I & II',
   'lesson-22/workbook-7|Workbook: ～のように／～のような|p.94; I, II, & III',
+  'lesson-22/workbook-8|Workbook: Questions|p.95; I & II',
+  'lesson-22/workbook-9|Workbook: Listening Comprehension|p.96; A, B, & C',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
