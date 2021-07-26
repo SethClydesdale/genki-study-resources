@@ -918,6 +918,9 @@ window.GenkiExercises = [
   'lesson-22/workbook-7|Workbook: ～のように／～のような|p.94; I, II, & III',
   'lesson-22/workbook-8|Workbook: Questions|p.95; I & II',
   'lesson-22/workbook-9|Workbook: Listening Comprehension|p.96; A, B, & C',
+  'lesson-22/literacy-1|Kanji Practice: Readings|p.334-335',
+  'lesson-22/literacy-2|Kanji Practice: Meanings|p.334-335',
+  //'lesson-22/literacy-3|Kanji Practice: Stroke Order|p.334-335',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
