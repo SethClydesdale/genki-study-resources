@@ -921,6 +921,11 @@ window.GenkiExercises = [
   'lesson-22/literacy-1|Kanji Practice: Readings|p.334-335',
   'lesson-22/literacy-2|Kanji Practice: Meanings|p.334-335',
   'lesson-22/literacy-3|Kanji Practice: Stroke Order|p.334-335',
+  'lesson-22/literacy-4|Kanji Vocabulary: 記, 銀, and 回|p.334',
+  'lesson-22/literacy-5|Kanji Vocabulary: 夕, 黒, and 用|p.334',
+  'lesson-22/literacy-6|Kanji Vocabulary: 末, 待, and 残|p.334-335',
+  'lesson-22/literacy-7|Kanji Vocabulary: 駅, 番, and 説|p.335',
+  'lesson-22/literacy-8|Kanji Vocabulary: 案, 内, 忘, and 守|p.335',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
