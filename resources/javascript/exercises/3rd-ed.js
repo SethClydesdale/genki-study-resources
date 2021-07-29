@@ -926,6 +926,7 @@ window.GenkiExercises = [
   'lesson-22/literacy-6|Kanji Vocabulary: 末, 待, and 残|p.334-335',
   'lesson-22/literacy-7|Kanji Vocabulary: 駅, 番, and 説|p.335',
   'lesson-22/literacy-8|Kanji Vocabulary: 案, 内, 忘, and 守|p.335',
+  'lesson-22/literacy-9|Kanji Practice: Write the Readings|p.336; I-A & B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
