@@ -621,7 +621,7 @@ Genki.jisho = {
     { ja : 'かわいそう（な）', en : 'pitiful', l : '読L12-II' },
     { ja : '川口市|かわぐちし', en : 'Kawaguchi City', l : '読L11-漢字表' },
     { ja : '代わりに|かわりに', en : 'instead', l : '読L22-II' },
-    { ja : '眼科|がんか', en : 'ophthalmologist', l : '会L12(e)' },
+    { ja : '眼科／目医者|がんか／めいしゃ', en : 'ophthalmologist', l : '会L12(e)' },
     { ja : '考え|かんがえ', en : 'idea', l : '読L16-漢字表' },
     { ja : '考える|かんがえる', en : 'to think (about); to consider', v : 'ru', l : '読L13-III, 会L18' },
     { ja : '環境|かんきょう', en : 'environment', l : '会L21' },
