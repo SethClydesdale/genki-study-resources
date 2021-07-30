@@ -927,6 +927,9 @@ window.GenkiExercises = [
   'lesson-22/literacy-7|Kanji Vocabulary: 駅, 番, and 説|p.335',
   'lesson-22/literacy-8|Kanji Vocabulary: 案, 内, 忘, and 守|p.335',
   'lesson-22/literacy-9|Kanji Practice: Write the Readings|p.336; I-A & B',
+  'lesson-22/literacy-10|Reading Practice: 桜さんの日記|p.337-339; II-B, C, & D',
+  'lesson-22/literacy-wb-1|Workbook: Kanji Writing Practice|p.129',
+  'lesson-22/literacy-wb-2|Workbook: Using Kanji|p.130',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
