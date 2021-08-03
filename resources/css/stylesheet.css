@@ -313,7 +313,7 @@ a#fork-me:hover, a#fork-me:focus {
   border:1px solid #C30;
   border-right:none;
   border-left:none;
-  height:105px;
+  height:110px;
 }
 
 #announce-inner {
@@ -336,7 +336,7 @@ a#fork-me:hover, a#fork-me:focus {
 
 #announcement .announcement {
   font-size:14px;
-  height:70px;
+  height:75px;
   box-sizing:border-box;
   padding:3px 6px;
   overflow-y:auto;
