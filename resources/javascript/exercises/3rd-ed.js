@@ -941,6 +941,7 @@ window.GenkiExercises = [
   'lesson-23/grammar-2|Practice: Causative-passive Sentences 2|p.260-261; I-B',
   'lesson-23/grammar-3|Practice: Causative-passive Sentences 3|p.261; I-C',
   'lesson-23/grammar-4|Practice: ～ても 1|p.262-263; II-A',
+  'lesson-23/grammar-5|Practice: ～ても 2|p.263; II-B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
