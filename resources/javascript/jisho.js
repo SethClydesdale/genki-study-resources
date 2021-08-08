@@ -1608,6 +1608,7 @@ Genki.jisho = {
   'ち' : [
     { ja : '小さい|ちいさい', en : 'small', l : '会L5' },
     { ja : 'チーズ', en : 'cheese', l : 'ワークブック読L2' },
+    { ja : 'チーム', en : 'team', l : '会L23' },
     { ja : 'チェコ', en : 'Czech Republic', l : '読L2-I' },
     { ja : 'チェック', en : 'check', l : 'ワークブック読L2' },
     { ja : 'チェックする', en : 'to check', l : '会L23' },
