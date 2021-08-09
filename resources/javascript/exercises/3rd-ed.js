@@ -945,6 +945,7 @@ window.GenkiExercises = [
   'lesson-23/grammar-6|Practice: ～ことにする|p.264; III-A',
   'lesson-23/grammar-7|Practice: ～ことにしている|p.265; IV-A',
   'lesson-23/grammar-8|Practice: ～まで|p.266; V-A',
+  'lesson-23/grammar-9|Practice: ～方|p.268; VI-A',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
