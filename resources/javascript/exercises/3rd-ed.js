@@ -946,6 +946,8 @@ window.GenkiExercises = [
   'lesson-23/grammar-7|Practice: ～ことにしている|p.265; IV-A',
   'lesson-23/grammar-8|Practice: ～まで|p.266; V-A',
   'lesson-23/grammar-9|Practice: ～方|p.268; VI-A',
+  'lesson-23/culture-1|Culture Note: Japanese Proverbs|p.272',
+  'lesson-23/workbook-1|Workbook: Causative-passive Sentences 1|p.97-98; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
