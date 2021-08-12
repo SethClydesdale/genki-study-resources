@@ -950,6 +950,8 @@ window.GenkiExercises = [
   'lesson-23/workbook-1|Workbook: Causative-passive Sentences 1|p.97-98; I & II',
   'lesson-23/workbook-2|Workbook: Causative-passive Sentences 2|p.99; I & II',
   'lesson-23/workbook-3|Workbook: Passive and Causative-passive|p.100',
+  'lesson-23/workbook-4|Workbook: ～ても|p.101; I & II',
+  'lesson-23/workbook-5|Workbook: ～ことにする|p.102; I & II',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
