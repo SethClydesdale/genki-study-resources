@@ -2575,6 +2575,7 @@ Genki.jisho = {
     { ja : '持っていく|もっていく', en : 'to take (a thing)', v : 'u', l : '会L8' },
     { ja : '持ってくる|もってくる', en : 'to bring (a thing)', v : 'irr', l : '会L6' },
     { ja : 'もっと', en : 'more', l : '会L11' },
+    { ja : 'モットー', en : 'motto', l : 'ワークブックL23' },
     { ja : '最も|もっとも', en : 'most', l : '読L20-漢字表' },
     { ja : '持てる|もてる', en : 'to be popular (in terms of romantic interest)', v : 'ru', l : '会L19' },
     { ja : '戻ってくる|もどってくる', en : '(something/someone) comes back', v : 'irr', l : '会L23' },

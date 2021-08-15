@@ -955,6 +955,8 @@ window.GenkiExercises = [
   'lesson-23/workbook-6|Workbook: ～ことにしている|p.103; I & II',
   'lesson-23/workbook-7|Workbook: ～まで|p.104; I & II',
   'lesson-23/workbook-8|Workbook: ～方|p.105; I & II',
+  'lesson-23/workbook-9|Workbook: Questions|p.106; I',
+  'lesson-23/workbook-10|Workbook: Listening Comprehension|p.107; A, B, & C',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
