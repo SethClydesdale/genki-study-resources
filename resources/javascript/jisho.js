@@ -2741,7 +2741,7 @@ Genki.jisho = {
     { ja : '旅行会社|りょこうがいしゃ', en : 'travel agency', l : '会L17' },
     { ja : '旅行する|りょこうする', en : 'to travel', v : 'irr', l : '会L10' },
     { ja : '旅券|りょけん', en : 'passport', l : '読L11-漢字表' },
-    { ja : '履歴書|りれきしょ', en : 'résumé', l : '会L14' },
+    { ja : '履歴書|りれきしょ', en : 'resume; résumé', l : '会L14' },
     { ja : '理論|りろん', en : 'theory', l : 'ワークブック読L1' },
     { ja : 'りんご', en : 'apple', l : '会L10' }
   ],
