@@ -960,6 +960,12 @@ window.GenkiExercises = [
   'lesson-23/literacy-1|Kanji Practice: Readings|p.340-341',
   'lesson-23/literacy-2|Kanji Practice: Meanings|p.340-341',
   'lesson-23/literacy-3|Kanji Practice: Stroke Order|p.340-341',
+  'lesson-23/literacy-4|Kanji Vocabulary: 顔, 悲, and 怒|p.340',
+  'lesson-23/literacy-5|Kanji Vocabulary: 違, 変, and 比|p.340',
+  'lesson-23/literacy-6|Kanji Vocabulary: 情, 感, and 調|p.340-341',
+  'lesson-23/literacy-7|Kanji Vocabulary: 査, 果, and 化|p.341',
+  'lesson-23/literacy-8|Kanji Vocabulary: 横, 相, and 答|p.341',
+  'lesson-23/literacy-9|Kanji Practice: Write the Readings|p.342; I-A & B',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
