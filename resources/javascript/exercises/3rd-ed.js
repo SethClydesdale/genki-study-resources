@@ -966,6 +966,9 @@ window.GenkiExercises = [
   'lesson-23/literacy-7|Kanji Vocabulary: 査, 果, and 化|p.341',
   'lesson-23/literacy-8|Kanji Vocabulary: 横, 相, and 答|p.341',
   'lesson-23/literacy-9|Kanji Practice: Write the Readings|p.342; I-A & B',
+  'lesson-23/literacy-10|Reading Practice: 顔文字と絵文字|p.343-345; II-A, B, & C',
+  'lesson-23/literacy-wb-1|Workbook: Kanji Writing Practice|p.131',
+  'lesson-23/literacy-wb-2|Workbook: Using Kanji|p.132',
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
