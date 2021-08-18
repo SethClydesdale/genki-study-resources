@@ -21,13 +21,7 @@
     // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
     msg : [
       {
-        content : 'The 3rd Edition version of Genki Study Resources is currently under construction and will be expanded over time. You can follow updates to these resources via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">GitHub</a>, <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>, or <a href="https://ko-fi.com/sethc95/posts">Ko-fi</a>. Furthermore, if you have any feedback regarding the 3rd edition resources, feel free to let me know <a href="https://github.com/SethClydesdale/genki-study-resources/discussions/83">here</a>. Thank you!',
-        edition : '3rd'
-      },
-      
-      {
-        content : 'Want to stay up to date on the latest changes made to Genki Study Resources? You can follow updates via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">GitHub</a>, <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>, or <a href="https://ko-fi.com/sethc95/posts">Ko-fi</a>. Feel free to also contact us on <a href="https://github.com/SethClydesdale/genki-study-resources/discussions">the forum</a> if you have any questions or feedback.',
-        edition : '2nd'
+        content : 'Want to stay up to date on the latest changes made to Genki Study Resources? You can follow updates via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">GitHub</a>, <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>, or <a href="https://ko-fi.com/sethc95/posts">Ko-fi</a>. Feel free to also contact us on <a href="https://github.com/SethClydesdale/genki-study-resources/discussions">the forum</a> if you have any questions or feedback.'
       },
       
       {
