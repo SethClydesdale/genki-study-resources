@@ -301,7 +301,7 @@
                   
                   // push the question data
                   quizlet.push({
-                    question : (def[1] ? '<ruby>' : o.format == 'kanji' ? '<div class="big-kanji">' : '') + def[0] + (def[1] ? '<rt>' + def[1] + '</rt></ruby>' : o.format == 'kanji' ? '</div>' : ''),
+                    question : '<div class="multi-vocab">' + (def[1] ? '<ruby>' : o.format == 'kanji' ? '<div class="big-kanji">' : '') + def[0] + (def[1] ? '<rt>' + def[1] + '</rt></ruby>' : o.format == 'kanji' ? '</div>' : '') + '</div>',
                     answers : ['A' + currentAnswer]
                   });
                   
