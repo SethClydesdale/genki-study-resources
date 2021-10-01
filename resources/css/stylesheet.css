@@ -1467,6 +1467,16 @@ input.writing-zone-input:focus { border-color:#F60; }
 }
 
 .big-kanji { font-size:100px; }
+.multi-vocab {
+  font-size:32px;
+  min-height:64px;
+}
+
+.multi-vocab rt {
+  font-size:16px;
+  margin-top:-8px;
+}
+
 .kana-font { font-family:"NotoSansJP", "SawarabiGothic", "MS Gothic", "Yu Gothic", "Meiryo" }
 .drawing-quiz .quiz-item-text.kana-font { margin-top:-7px }
 .drawing-quiz .quiz-item { overflow:hidden; }
