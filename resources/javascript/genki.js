@@ -2299,6 +2299,9 @@
       
       // gets the selected text and shows the look up button
       getSelection : function () {
+        // disables quick jisho look up if preferred
+        if (storageOK && localStorage.genkiJishoLookUp == 'false') return false;
+        
         // returns if tabbing to the lookup button
         // required, as some browsers change selection when focusing a new element w/focus()
         if (Genki.quickJisho.tabbing) {

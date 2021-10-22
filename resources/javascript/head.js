@@ -167,6 +167,7 @@
           vocabHorizontal = localStorage.vocabHorizontal || 'false',
           randomExercise = localStorage.genkiRandomExercise || 'all',
           skipExType = localStorage.genkiSkipExType || 'false',
+          jishoLookUp = localStorage.genkiJishoLookUp || 'true',
           strokeOrder = localStorage.strokeOrderVisible || 'true',
           tracingGuide = localStorage.tracingGuideVisible || 'true';
       
@@ -228,6 +229,11 @@
           '<li>'+
             '<span class="label" title="Skips that pesky exercise type selection prompt and instantly starts exercises when enabled. (3rd edition only; Partial 2nd ed. support)\nThe exercise type can still be changed manually via the Change Exercise Type button at the bottom of an exercise.">Skip Exercise Type Selection:</span>'+
             '<button id="settings-skip-ex-type" class="button' + (skipExType == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateSkipExType(this);">' + (skipExType == 'true' ? 'ON' : 'OFF') + '</button>'+
+          '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Enable or disable the look up button that appears when you select texts. This feature may interfere with some IMEs, so it is recommended to disable it if you encounter any issues.">Quick Jisho Look Up:</span>'+
+            '<button id="settings-jisho-lookup" class="button' + (jishoLookUp == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateJishoLookUp(this);">' + (jishoLookUp == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
           '<li>'+
@@ -517,6 +523,14 @@
     updateSkipExType : function (caller) {
       GenkiSettings.updateButton(caller, function (state) {
         localStorage.genkiSkipExType = state == 'ON' ? 'true' : 'false';
+      });
+    },
+
+    
+    // updates exercise type selection skipping preference
+    updateJishoLookUp : function (caller) {
+      GenkiSettings.updateButton(caller, function (state) {
+        localStorage.genkiJishoLookUp = state == 'ON' ? 'true' : 'false';
       });
     },
 
