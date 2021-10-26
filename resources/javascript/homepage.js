@@ -21,11 +21,17 @@
     // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
     msg : [
       {
-        content : 'Want to stay up to date on the latest changes made to Genki Study Resources? You can follow updates via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">GitHub</a>, <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>, or <a href="https://ko-fi.com/sethc95/posts">Ko-fi</a>. Feel free to also contact us on <a href="https://github.com/SethClydesdale/genki-study-resources/discussions">the forum</a> if you have any questions or feedback.'
+        edition : '2nd',
+        content : 'Looking for more self-study resources? Visit the official <a href="http://genki.japantimes.co.jp/self_en">self-study room</a> for Genki or check out some of the resources in the <a href="https://github.com/SethClydesdale/genki-study-resources#resources-for-studying-japanese">readme</a> on GitHub.'
       },
       
       {
-        content : 'Looking for more self-study resources? Visit the official <a href="http://genki.japantimes.co.jp/self_en">self-study room</a> for Genki or check out some of the resources in the <a href="https://github.com/SethClydesdale/genki-study-resources#resources-for-studying-japanese">readme</a> on GitHub. If you use Anki to study vocab, you can find decks for the vocab on Genki Study Resources <a href="' + getPaths() + 'help/anki-decks/">here</a>! You can also find xlsx lists for the vocab <a href="https://github.com/SethClydesdale/genki-study-resources/tree/master/resources/tools/wordlist_E-J">here</a>.'
+        edition : '3rd',
+        content : 'Looking for more self-study resources? Visit the official <a href="https://genki3.japantimes.co.jp/en/student/">self-study room</a> for Genki or check out some of the resources in the <a href="https://github.com/SethClydesdale/genki-study-resources#resources-for-studying-japanese">readme</a> on GitHub.'
+      },
+      
+      {
+        content : 'Want to stay up to date on the latest changes made to Genki Study Resources? You can follow updates via <a href="https://github.com/SethClydesdale/genki-study-resources/commits/master">GitHub</a>, <a href="https://twitter.com/search?q=(%23GenkiStudyResources)%20(from%3Asethc1995)&src=typed_query&f=live">Twitter</a>, or <a href="https://ko-fi.com/sethc95/posts">Ko-fi</a>. Feel free to also contact us on <a href="https://github.com/SethClydesdale/genki-study-resources/discussions">the forum</a> if you have any questions or feedback.'
       },
 
       {
