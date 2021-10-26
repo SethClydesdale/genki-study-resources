@@ -58,7 +58,8 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 ##### Tools
 - [Anki - SRS Flashcard App](https://apps.ankiweb.net/) (great for memorizing vocab; you can find decks for Genki [here](https://sethclydesdale.github.io/genki-study-resources/help/anki-decks/))
 - [Jisho - Online Japanese Dictionary](http://jisho.org/) (extremely useful for looking up words, kanji, etc.)
-- [KanjiTomo - Japanese OCR Program](https://www.kanjitomo.net/) (very useful for reading manga, LNs, etc.)
+- [Capture2Text](http://capture2text.sourceforge.net/) (very useful for copying and looking up kanji in games, images, etc.)
+- [KanjiTomo](https://www.kanjitomo.net/) (useful for reading manga, LNs, etc.)
 - [Genki xlsx Vocab Lists](https://github.com/SethClydesdale/genki-study-resources/tree/master/resources/tools/wordlist_E-J) (these are based on the vocab in Genki/on the site -- useful for printing out/using as a quick reference)
 
 ##### Websites
