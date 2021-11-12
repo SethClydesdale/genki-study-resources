@@ -1615,12 +1615,12 @@
               for (; i < j; i++) {
                 correct = false;
                 data = input[i].dataset;
-                val = Genki.toHalfWidth(input[i].value).toLowerCase();
+                val = Genki.toHalfWidth(input[i].value).toLowerCase().replace(/。|、/g, '');
 
                 // check for the correct answer
                 for (k in data) {
                   if (/answer/.test(k)) {
-                    answer = Genki.toHalfWidth(data[k]).toLowerCase();
+                    answer = Genki.toHalfWidth(data[k]).toLowerCase().replace(/。|、/g, '');
 
                     // check if there's alternative answers in the answer
                     // alternative answers are given as %(alt1/alt2/etc.)
