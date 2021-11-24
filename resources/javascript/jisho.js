@@ -628,7 +628,7 @@ Genki.jisho = {
     { ja : '環境|かんきょう', en : 'environment', l : '会L21' },
     { ja : '観光する|かんこうする', en : 'to do sightseeing', v : 'irr', l : '会L15' },
     { ja : '韓国|かんこく', en : 'Korea', l : '会L1, 会L2' },
-    { ja : '看護師|かんごし', en : 'nurse', l : '会L11' },
+    { ja : '看護師|かんごし', en : 'nurse', l : '会L1, 会L11' },
     { ja : '関西|かんさい', en : 'Kansai area', l : '読L6-漢字表' },
     { ja : '漢字|かんじ', en : 'kanji; Chinese character', l : '会L6' },
     { ja : '元日|がんじつ', en : 'the first day of the year', l : '読L5-漢字表' },
