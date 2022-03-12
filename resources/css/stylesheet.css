@@ -53,7 +53,7 @@
 body {
   color:#333;
   background:#FFF;
-  font-size:13px;
+  font-size:14px;
   font-family:'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, sans-serif;
   padding:0;
   margin:0;
@@ -94,7 +94,7 @@ code {
 .button, a.button {
   color:#FFF;
   background:#F60;
-  font-size:13px;
+  font-size:14px;
   font-family:'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, sans-serif;
   text-decoration:none;
   border:none;
@@ -673,7 +673,7 @@ a.jump-arrow:hover, a.jump-arrow:focus { color:#C30; }
 
 /* lesson summary */
 .lesson-summary {
-  font-size:13px;
+  font-size:14px;
   margin:10px;
   padding:10px;
   background:#EEE;
@@ -1010,7 +1010,7 @@ footer li:first-child:before { display:none; }
 
 #exercise-list .lesson-title {
   color:#333;
-  font-size:13px;
+  font-size:15px;
   border-bottom:1px solid #CCC;
   margin:0;
   padding:3px;
@@ -1033,7 +1033,7 @@ footer li:first-child:before { display:none; }
 #exercise-list .lesson-title.lesson-open:before { content:"\f078"; }
 
 #exercise-list .sub-lesson-title {
-  font-size:13px;
+  font-size:14px;
   margin:12px 0 0 12px;
 }
 
@@ -2108,7 +2108,7 @@ ruby rt {
   list-style-type:none;
   display:inline-block;
   margin-right:10px;
-  font-size:13px;
+  font-size:14px;
 }
 
 #study-tool-settings .button { margin:0; }
@@ -2692,6 +2692,12 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
 
 /* DRAGULA CSS */
 .gu-mirror{position:fixed!important;margin:0!important;z-index:9999!important;opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80)}.gu-hide{display:none!important}.gu-unselectable{-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.gu-transit{opacity:.2;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";filter:alpha(opacity=20)}
+
+
+/* OS FIXES */
+.os-linux .sectionNumber3rd, .os-linux #quick-jisho-toggle, .os-linux .section-number {
+  line-height:normal;
+}
 
 
 /* RESPONSIVENESS */

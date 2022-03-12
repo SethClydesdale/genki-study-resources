@@ -2,6 +2,11 @@
 (function (window, document) {
   'use strict';
   
+  // apply class to body for OS based fixes
+  if (document.documentElement) {
+    document.documentElement.className += /Linux/.test(window.navigator.platform) ? ' os-linux' : '';
+  }
+  
   // Global used for telling if the site is being used offline with MS Edge (pre-chromium).
   // Helps prevent "unspecified errors" caused by checking for the existence of localStorage support offline.
   window.offlineEdge = window.location.protocol == 'file:' && /Edge/.test(navigator.userAgent);
