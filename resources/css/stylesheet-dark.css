@@ -7,6 +7,8 @@
 */
 
 /* 1. FONT COLORS */
+.spoiler { color:#000; }
+
 input[type="text"]::placeholder, input[type="number"]::placeholder, textarea::placeholder, input.writing-zone-input::placeholder, .fill-quiz .writing-zone-input::placeholder {
   color:#444;
 }
@@ -33,7 +35,7 @@ a, code {
 
 
 /* 2. BACKGROUND COLORS */
-.kanji-canvas { background-color:#000; }
+.kanji-canvas, .spoiler { background-color:#000; }
 
 body, #quick-jisho-window { background-color:#161616; }
 
