@@ -1407,7 +1407,7 @@
     breakTime : function () {
       GenkiModal.open({
         title : 'Take a Break?',
-        content : 'Taking a break and waiting before trying again can greatly help with building your memory. 5 to 10 minute breaks are recommended, but you\'re free to adjust the time to your liking.<br><br>'+
+        content : 'Taking a break and waiting before trying again can greatly help with building your memory. 5 to 10 minute breaks are recommended, but you\'re free to adjust the time to your liking.' + (/"format":"vocab"/.test(Genki.exerciseData) ? ' Please see <a href="' + getPaths() + '/help/vocab-memorization/" target="_blank">this page</a> for more tips on memorizing vocab.' : '') + '<br><br>'+
         '<div class="center">Wait <input id="break-minutes" class="center" type="number" value="5" min="1" max="60"> Minute(s)</div>',
         buttonText : 'Wait',
         keepOpen : true,
