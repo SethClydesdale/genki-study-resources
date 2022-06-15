@@ -202,7 +202,7 @@
       hitsCounter.innerHTML = hits ? '(' + hits + ') '+
         '<a '+
           'class="fa" '+
-          'style="color:#F60;" '+
+          'style="color:#F93;" '+
           'href="#copy-search-link" '+
           'title="Copy the search link" '+
           'onclick="GenkiModal.open({'+

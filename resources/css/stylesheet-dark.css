@@ -82,7 +82,7 @@ input[type="text"]::placeholder, input[type="text"]:hover, input[type="number"]:
 }
 
 input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:focus, input.writing-zone-input:focus, .fill-quiz .writing-zone-input:focus {
-  border-color:#F94;
+  border-color:#F93;
 }
 
 
