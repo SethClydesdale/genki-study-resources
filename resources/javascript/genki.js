@@ -1408,12 +1408,26 @@
       GenkiModal.open({
         title : 'Take a Break?',
         content : 'Taking a break and waiting before trying again can greatly help with building your memory. 5 to 10 minute breaks are recommended, but you\'re free to adjust the time to your liking.' + (/"format":"vocab"|"type":"drag"/.test(Genki.exerciseData) ? ' Please see <a href="' + getPaths() + 'help/vocab-memorization/' + Genki.local + '" target="_blank">this page</a> for more tips on memorizing vocab.' : '') + '<br><br>'+
-        '<div class="center">Wait <input id="break-minutes" class="center" type="number" value="5" min="1" max="60"> Minute(s)</div>',
+        '<div class="center">Wait <input id="break-minutes" class="center" type="number" value="' + Genki.breakTimer[Genki.breakMultiplier] + '" min="1" max="60" onchange="Genki.changeBreakMultiplier(this);"> Minute(s)</div>',
         buttonText : 'Wait',
         keepOpen : true,
         
         // initializes the break timer
         callback : function () {
+          // increment default break time
+          if (Genki.breakMultiplier < (Genki.breakTimer.length - 1)) {
+            // automatically hide furigana for the 3rd session (if time is set manually, this is ignored)
+            if (Genki.breakMultiplier == 2 && !Genki.breakTimerCustom) {
+              var f = document.getElementById('toggle-furigana');
+              if (f && /helper-present/.test(document.getElementById('quiz-zone').className) == true) {
+                f.click();
+              }
+            }
+            
+            
+            Genki.breakMultiplier++;
+          }
+          
           // request permission to show a notification when break time is up
           if (!Genki.local && Genki.canNotify && !/denied|granted/.test(Notification.permission)) {
             Notification.requestPermission();
@@ -1486,6 +1500,47 @@
           });
         }
       });
+    },
+    
+    // break time increments based on number of breaks taken (limited to 8 break periods (4hrs total) + 10 study sessions (avg per sesson is about 2-5 mintues))
+    // studying over this period of time seems to greatly help with retention, so long as you utilize the vocab afterwards by reading, writing, etc.
+    breakMultiplier : 0,
+    breakTimer : [
+      5,
+      10,
+      15, // recommended to hide furigana after this point (done automatically if timer isn't manually set)
+      20,
+      30,
+      40,
+      50,
+      60 // review vocab once more, then wait a day or two to review to check retention (reading anytime after this period is fine)
+    ],
+    
+    breakTimerCustom : false, // tells if time was set manually by the user so furigana state remains untouched
+    
+    // adjusts break multiplier based on user input
+    changeBreakMultiplier : function (caller) {
+      var n = Number(caller.value);
+      
+      if (n <= 5) {
+        Genki.breakMultiplier = 0;
+      } else if (n <= 10) {
+        Genki.breakMultiplier = 1;
+      } else if (n <= 15) {
+        Genki.breakMultiplier = 2;
+      } else if (n <= 20) {
+        Genki.breakMultiplier = 3;
+      } else if (n <= 30) {
+        Genki.breakMultiplier = 4;
+      } else if (n <= 40) {
+        Genki.breakMultiplier = 5;
+      } else if (n <= 50) {
+        Genki.breakMultiplier = 6;
+      } else if (n <= 60) {
+        Genki.breakMultiplier = 7;
+      }
+      
+      Genki.breakTimerCustom = true;
     },
     
 
