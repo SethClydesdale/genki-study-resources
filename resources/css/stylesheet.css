@@ -1540,6 +1540,16 @@ ruby rt {
   padding:0 2px;
 }
 
+/* hover to view furigana for multi-choice vocab */
+.helper-hidden .multi-vocab ruby:hover {
+  display:inline-block;
+  vertical-align:top;
+}
+
+.helper-hidden .multi-vocab ruby:hover rt {
+  display:block;
+}
+
 /* for single characters */
 .slim-ruby ruby { width:10px; }
 
