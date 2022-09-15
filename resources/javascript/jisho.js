@@ -1289,7 +1289,7 @@ Genki.jisho = {
     { ja : '知り合う|しりあう', en : 'to get acquainted with', v : 'u', l : '会L19' },
     { ja : '私立高校|しりつこうこう', en : 'private high school', l : '読L10-漢字表' },
     { ja : '私立大学|しりつだいがく', en : 'private university', l : '読L5-漢字表' },
-    { ja : '知りません|しりません', en : 'I do no know', l : '会L7' },
+    { ja : '知りません|しりません', en : 'I do not know', l : '会L7' },
     { ja : '知る|しる', en : 'to know', v : 'u', l : '会L7' },
     { ja : 'シルバー', en : 'silver', l : '会L9(e)' },
     { ja : '城|しろ', en : 'castle', l : '読L5-II' },
