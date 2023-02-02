@@ -19,13 +19,16 @@
     // checks if touchscreen controls
     isTouch : 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0,
     isTouching : false,
+
+    // tells us if timer is paused by popup
+    isTimerPausedByPopup: false,
     
     // tells us if text selection mode is enabled (for multi-choice quizzes)
     textSelectMode : false,
     
     // tells us if stroke numbers are visible (for stroke order exercises)
     strokeNumberDisplay : false,
-    
+
     // tells us if a quiz item is marked in a drag and drop quiz
     markedItem : null,
     
@@ -1097,6 +1100,10 @@
       timer.addEventListener('secondsUpdated', function (e) {
         clock.innerHTML = timer.getTimeValues().toString()
       });
+
+      if (storageOK && localStorage.timerAutoPause != 'false') {
+        document.addEventListener("visibilitychange", Genki.startOrPauseTimerByVisibility);
+      }
 
       Genki.timer = timer;
 
@@ -2490,7 +2497,31 @@
       }
     },
     
+
+    // start or pause timer according to page visibility
+    startOrPauseTimerByVisibility : function () {
+      if (document.hidden && Genki.timer.isRunning()) {
+        Genki.timer.pause();
+      } else if (!document.hidden && Genki.timer.isPaused() && !Genki.isTimerPausedByPopup) {
+        Genki.timer.start();
+      }
+    },
+
+
+    // pause timer when open popup
+    pauseTimerWhenOpenPopup: function () {
+       Genki.timer.pause();
+       Genki.isTimerPausedByPopup = true;
+    },
     
+
+    // start timer when close popup
+    startTimerWhenClosePopup: function () {
+       Genki.timer.start();
+       Genki.isTimerPausedByPopup = false;
+    },
+
+
     // initial setup for exercise functionality
     init : function () {
       // finds the currently active exercise in the exercise list and sets up essential data for following statements
