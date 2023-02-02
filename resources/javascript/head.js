@@ -253,7 +253,7 @@
           '</li>'+
 
           '<li>'+
-            '<span class="label" title="Enable or disable pausing timer when you leave or hide the exercise page">Pause timer automatically:</span>'+
+            '<span class="label" title="Enable or disable pausing timer when you leave or hide the exercise page">Pause Timer Automatically:</span>'+
             '<button id="settings-timer-auto-pause" class="button' + (timerAutoPause == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateTimerAutoPause(this);">' + (timerAutoPause == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         '</ul>',

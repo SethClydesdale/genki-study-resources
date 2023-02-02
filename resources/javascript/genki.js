@@ -1101,11 +1101,11 @@
         clock.innerHTML = timer.getTimeValues().toString()
       });
 
+      Genki.timer = timer;
+
       if (storageOK && localStorage.timerAutoPause != 'false') {
         document.addEventListener("visibilitychange", Genki.startOrPauseTimerByVisibility);
       }
-
-      Genki.timer = timer;
 
       // indicate the exercise has been loaded in
       document.getElementById('exercise').className += ' content-loaded ' + (o.type == 'stroke' ? 'stroke-quiz multi' : o.type) + '-quiz';
