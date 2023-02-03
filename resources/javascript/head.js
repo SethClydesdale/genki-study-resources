@@ -95,7 +95,7 @@
 
       // pause the timer when opening the modal
       if (window.Genki && Genki.timer && Genki.timer.isRunning()) {
-        Genki.timer.pause();
+        Genki.pauseTimerWhenOpenPopup();
       }
       
       return o;
@@ -112,7 +112,7 @@
 
       // resume the timer when closing the modal
       if (window.Genki && Genki.timer && Genki.timer.isPaused()) {
-        Genki.timer.start();
+        Genki.startTimerWhenClosePopup();
       }
     }
   };
@@ -174,7 +174,8 @@
           skipExType = localStorage.genkiSkipExType || 'false',
           jishoLookUp = localStorage.genkiJishoLookUp || 'true',
           strokeOrder = localStorage.strokeOrderVisible || 'true',
-          tracingGuide = localStorage.tracingGuideVisible || 'true';
+          tracingGuide = localStorage.tracingGuideVisible || 'true',
+          timerAutoPause = localStorage.timerAutoPause || 'true';
       
       // create stylesheet for settings
       if (!GenkiSettings.stylesheet) {
@@ -249,6 +250,11 @@
           '<li>'+
             '<span class="label" title="Enable or disable the tracing guide display in stroke order exercises (3rd edition only)">Tracing Guide:</span>'+
             '<button id="settings-tracing-guide" class="button' + (tracingGuide == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateTracingGuide(this);">' + (tracingGuide == 'true' ? 'ON' : 'OFF') + '</button>'+
+          '</li>'+
+
+          '<li>'+
+            '<span class="label" title="Enable or disable pausing timer when you leave or hide the exercise page">Pause Timer Automatically:</span>'+
+            '<button id="settings-timer-auto-pause" class="button' + (timerAutoPause == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateTimerAutoPause(this);">' + (timerAutoPause == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         '</ul>',
 
@@ -571,6 +577,19 @@
         // otherwise manually update the localStorage preference
         else {
           localStorage.tracingGuideVisible = state == 'ON' ? 'true' : 'false';
+        }
+      });
+    },
+
+    // updates timer auto pause preference
+    updateTimerAutoPause : function (caller) {
+      GenkiSettings.updateButton(caller, function (state) {
+        localStorage.timerAutoPause = state == 'ON' ? 'true' : 'false';
+
+        if (state == 'ON') {
+          document.addEventListener("visibilitychange", Genki.startOrPauseTimerByVisibility);
+        } else {
+          document.removeEventListener("visibilitychange", Genki.startOrPauseTimerByVisibility);
         }
       });
     },
