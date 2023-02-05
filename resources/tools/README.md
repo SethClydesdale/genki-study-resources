@@ -91,6 +91,11 @@ You can also generate decks by executing `anki_decks_maker-run.bat` and typing e
 All of the decks created are currently available under the [decks](decks/) folder
 
 
+ ### anki_kanji_decks_maker.py
+ 
+ Similarly to the script above, this generates kanji anki decks! You can generate decks by using `anki_kanji_decks_maker-run.bat`. This only supports the 3rd edition, since the 2nd edition doesn't have meanings/readings exercises.
+
+
 ### wordlist_E-J.py
  * Requires python 3.6+.
  
