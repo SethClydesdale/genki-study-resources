@@ -1629,7 +1629,7 @@
           window.setTimeout(function() { // delay required to prevent text duplication when proceeding to already filled inputs
             Genki.check.busy = false;
 
-            if (input.value) { // clears up duplicated texts from IMEs on current input
+            if (input.value && input.value == Genki.input.map[Genki.input.index - 1].value) { // clears up duplicated texts from IMEs on current input
               input.value = '';
             }
           }, 10);
