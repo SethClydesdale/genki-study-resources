@@ -1628,9 +1628,10 @@
         else if (Genki.check.busy) {
           window.setTimeout(function() { // delay required to prevent text duplication when proceeding to already filled inputs
             Genki.check.busy = false;
-
-            if (input.value && input.value == Genki.input.map[Genki.input.index - 1].value) { // clears up duplicated texts from IMEs on current input
-              input.value = '';
+            
+            // use `document.activeElement` over `input` as the latter causes previously input text to disappear
+            if (document.activeElement && document.activeElement.value && document.activeElement.value == Genki.input.map[Genki.input.index - 1].value) { // clears up duplicated texts from IMEs on current input
+              document.activeElement.value = '';
             }
           }, 10);
         }
