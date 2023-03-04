@@ -499,7 +499,7 @@
     },
     
     
-    // updates the random exercise preference
+    // updates the feedback mode preference
     updateFeedbackMode : function (caller) {
       if (caller) {
         localStorage.feedbackMode = caller.value;
@@ -512,6 +512,7 @@
         var next = document.getElementById('next-button');
         
         if (next) {
+          // automatically proceed to next question if the student answered while in instant mode and switched to classic mode
           if (Genki.feedbackMode == 'classic' && /visible/.test(next.style.visibility)) {
             next.firstChild.click();
           }
