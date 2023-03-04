@@ -512,6 +512,10 @@
         var next = document.getElementById('next-button');
         
         if (next) {
+          if (Genki.feedbackMode == 'classic' && /visible/.test(next.style.visibility)) {
+            next.firstChild.click();
+          }
+          
           next.style.display = Genki.feedbackMode == 'classic' ? 'none' : '';
         }
       }
