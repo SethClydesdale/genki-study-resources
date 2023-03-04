@@ -1231,7 +1231,7 @@
                 last : null
               };
             }
-            console.log(Genki.quizOver);
+            
             // prevent reanswering questions (by initiating "quiz ended" state) + show the next button
             Genki.quizOver = true;
             Genki.multiNodes.list.className += ' multi-quiz quiz-over';
