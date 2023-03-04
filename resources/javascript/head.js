@@ -170,6 +170,7 @@
           customCSS = localStorage.genkiCustomCSS || '',
           furigana = localStorage.furiganaVisible || 'true',
           vocabHorizontal = localStorage.vocabHorizontal || 'false',
+          feedbackMode = localStorage.feedbackMode || 'classic',
           randomExercise = localStorage.genkiRandomExercise || 'all',
           skipExType = localStorage.genkiSkipExType || 'false',
           jishoLookUp = localStorage.genkiJishoLookUp || 'true',
@@ -221,6 +222,14 @@
             '<select id="settings-vocab-mode" onchange="GenkiSettings.updateVocabMode(this);">'+
               '<option value="false"' + ( vocabHorizontal == 'false' ? ' selected' : '' ) + '>Vertical</option>'+
               '<option value="true"' + ( vocabHorizontal == 'true' ? ' selected' : '' ) + '>Horizontal</option>'+
+            '</select>'+
+          '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Changes the feedback mode for multple choice quizzes.\nInstant shows if your answer was correct right away, whereas Classic only shows your answers at the end of the quiz.">Multiple Choice Feedback Mode:</span>'+
+            '<select id="settings-feedback-mode" onchange="GenkiSettings.updateFeedbackMode(this);">'+
+              '<option value="classic"' + ( feedbackMode == 'classic' ? ' selected' : '' ) + '>Classic</option>'+
+              '<option value="instant"' + ( feedbackMode == 'instant' ? ' selected' : '' ) + '>Instant</option>'+
             '</select>'+
           '</li>'+
         
@@ -487,6 +496,25 @@
       
       // save setting to localStorage
       if (caller) localStorage.genkiCustomCSS = caller.value;
+    },
+    
+    
+    // updates the random exercise preference
+    updateFeedbackMode : function (caller) {
+      if (caller) {
+        localStorage.feedbackMode = caller.value;
+        
+        if (window.Genki && Genki.feedbackMode) {
+          Genki.feedbackMode = caller.value;
+        }
+        
+        // toggle display state of the next button
+        var next = document.getElementById('next-button');
+        
+        if (next) {
+          next.style.display = Genki.feedbackMode == 'classic' ? 'none' : '';
+        }
+      }
     },
     
     
