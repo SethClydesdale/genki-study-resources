@@ -23,6 +23,9 @@
     // tells us if timer is paused by popup
     isTimerPausedByPopup: false,
     
+    // tells us the student's preferred feedback mode for multi-choice quizzes (instant || classic)
+    feedbackMode : storageOK && localStorage.feedbackMode ? localStorage.feedbackMode : 'classic',
+    
     // tells us if text selection mode is enabled (for multi-choice quizzes)
     textSelectMode : false,
     
@@ -134,6 +137,7 @@
 
     // info about the currently active exercise
     active : {
+      type : null, // current exercise type
       exercise : null, // placeholder for the active exercise's data
       index : 0, // index where active.exercise is located
       path : window.location.pathname.replace(/.*?\/lessons.*?\/(.*?\/.*?)\/.*/g, '$1'), // current exercise path
@@ -456,6 +460,8 @@
         return false;
       }
       
+      // log current type
+      Genki.active.type = o.type;
 
       // # 1. DRAG AND DROP #
       if (o.type == 'drag') {
@@ -614,7 +620,7 @@
 
       // # 4. MULTIPLE CHOICE #
       else if (o.type == 'multi') {
-        var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
+        var quiz = '<div id="quiz-info">' + o.info + '<br><b style="color:#6F6;">NEW:</b> You can now choose between "Instant" and "Classic" Feedback Mode for multiple choice quizzes in the <a href="#genki-site-settings" onclick="GenkiSettings.manager(); return false;">Site Settings</a>.' + '</div><div id="question-list">',
             answers = '<div id="answer-list">',
             option = 65, // used for tagging answers as A(65), B(66), C(67)..
             isAnswer = false,
@@ -677,7 +683,9 @@
         }
 
         // add the multi-choice quiz to the quiz zone
-        zone.innerHTML = quiz + '</div><div id="quiz-progress"><div id="quiz-progress-bar"></div></div>'+
+        zone.innerHTML = quiz + '</div>'+
+          '<div id="next-button" class="quiz-multi-row" style="margin-top:-20px; visibility:hidden;' + (Genki.feedbackMode == 'classic' ? 'display:none;' : '') + '"><div tabindex="0" class="quiz-multi-answer next-question" onclick="Genki.showNextQuestion(this);" onkeypress="event.key == \'Enter\' && Genki.showNextQuestion(this);">NEXT</div></div>'+
+          '<div id="quiz-progress"><div id="quiz-progress-bar"></div></div>'+
           '<div id="review-exercise" class="center clearfix">'+ 
             (Genki.appendix ? '' : '<button class="button text-selection-mode-button" onclick="Genki.toggle.textSelection(this);"><i class="fa">&#xf246;</i> Enable Text Selection</button>')+
             (helper ? Genki.lang.toggle_furigana : '')+
@@ -1210,11 +1218,36 @@
         // if there's another question, show it and hide the last one
         var last = document.getElementById('quiz-q' + Genki.stats.solved++),
             next = document.getElementById('quiz-q' + Genki.stats.solved);
-
+        
         if (next) {
-          next.style.display = ''; // show the next question
-          last.style.display = 'none'; // hide the prior question
-          Genki.incrementProgressBar();
+          // instantly show if the answer was wrong or correct
+          if (Genki.feedbackMode == 'instant' && Genki.active.type == 'multi') {
+            // cache for nodes used in instant feedback mode
+            if (!Genki.multiNodes) {
+              Genki.multiNodes = {
+                list : document.getElementById('question-list'),
+                button : document.getElementById('next-button'),
+                next : null,
+                last : null
+              };
+            }
+            console.log(Genki.quizOver);
+            // prevent reanswering questions (by initiating "quiz ended" state) + show the next button
+            Genki.quizOver = true;
+            Genki.multiNodes.list.className += ' multi-quiz quiz-over';
+            Genki.multiNodes.button.style.visibility = 'visible';
+            
+            // cache these for use with showNextQuestion()
+            Genki.multiNodes.next = next;
+            Genki.multiNodes.last = last;
+          }
+          
+          // classic progression (answers shown only at end)
+          else {
+            next.style.display = ''; // show the next question
+            last.style.display = 'none'; // hide the prior question
+            Genki.incrementProgressBar();
+          }
 
         } else { // end the quiz if there's no new question
           Genki.endQuiz(flag == 'stroke' ? flag : 'multi');
@@ -1233,6 +1266,21 @@
       if (flag == 'stroke' && document.getElementById('canvas-' + Genki.stats.solved)) {
         KanjiCanvas.init('canvas-' + Genki.stats.solved);
       }
+    },
+    
+    // proceeds to next question without interacting with answer values (mainly used for instant feedback mode)
+    showNextQuestion : function (caller) {
+      // hide prev question + show next one
+      Genki.multiNodes.next.style.display = '';
+      Genki.multiNodes.last.style.display = 'none';
+      
+      // restore active quiz state (not ended) + hide next button
+      Genki.quizOver = false;
+      Genki.multiNodes.list.className = Genki.multiNodes.list.className.replace(' multi-quiz quiz-over', '');
+      Genki.multiNodes.button.style.visibility = 'hidden';
+      
+      // increment progress
+      Genki.incrementProgressBar();
     },
 
 
@@ -1356,6 +1404,10 @@
              score : 0,
            exclude : 0
         };
+        
+        if (Genki.multiNodes) {
+          delete Genki.multiNodes;
+        }
         
         // stop timer
         Genki.timer.isRunning() && Genki.timer.stop();
@@ -1629,7 +1681,7 @@
           window.setTimeout(function() { // delay required to prevent text duplication when proceeding to already filled inputs
             Genki.check.busy = false;
             
-            // use `document.activeElement` over `input` as the latter causes previously input text to disappear
+            // use `document.activeElement` over `input` as the latter causes previously input text to disappear on firefox
             if (document.activeElement && document.activeElement.value && document.activeElement.value == Genki.input.map[Genki.input.index - 1].value) { // clears up duplicated texts from IMEs on current input
               document.activeElement.value = '';
             }
