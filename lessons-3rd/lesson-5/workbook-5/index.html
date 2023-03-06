@@ -122,7 +122,7 @@
         
         '<div class="problem">'+
           '<span class="med-label">Q：どんな<ruby>家<rt>いえ</rt></ruby>ですか。</span>'+
-          '<div class="inline">A：{きれいな家です|きれいないえです|answer;width:200}。</div>'+
+          '<div class="inline">A：{きれいな家です|きれいないえです|' + Genki.getAlts('{きれい}な{家}です', '綺麗|いえ') + 'answer;width:200}。</div>'+
         '</div>'+
       '</div><br>'+
         

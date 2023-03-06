@@ -107,7 +107,7 @@
         
         '<div class="problem">'+
           'Q：どんな家ですか。<br>'+
-          'A：{きれいな家です|きれいないえです|answer}。'+
+          'A：{きれいな家です|きれいないえです|' + Genki.getAlts('{きれい}な{家}です', '綺麗|いえ') + 'answer}。'+
         '</div>'+
         
         '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
