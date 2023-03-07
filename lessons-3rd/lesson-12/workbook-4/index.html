@@ -113,7 +113,7 @@
           '<div class="inner-problem">'+
             'Q：<ruby>歌手<rt>かしゅ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>でだれが<ruby>好<rt>す</rt></ruby>きですか。<br>'+
             '(I like Miku (ミク), because she\'s good-looking.)<br>'+
-            'A：{かっこいいので、ミクが好きです|かっこいいので、ミクがすきです|answer}。'+
+            'A：{かっこいいので、ミクが好きです|かっこいいので、ミクがすきです|' + Genki.getAlts('かっこ{い}いので、ミクが{好}きです', '良|す') + Genki.getAlts('かっこ{よ}いので、ミクが{好}きです', '良|す') + 'answer}。'+
           '</div>'+
         '</div>'+
         

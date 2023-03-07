@@ -146,39 +146,39 @@
 
           '<div class="problem">'+
             'You are in class. You realize you need to go to the bathroom as soon as possible.<br>'+
-            '{トイレに行ってもいいですか|トイレにいってもいいですか|answer}。'+
+            '{トイレに行ってもいいですか|トイレにいってもいいですか|' + Genki.getAlts('トイレに{行}っても{よ}いですか', 'い|良') + 'answer}。'+
           '</div>'+
 
           '<div class="problem">'+
             'You are in class. You feel sick and want to return home.<br>'+
-            '{家に帰ってもいいですか|いえにかえってもいいですか|' + Genki.getAlts('{家}に{帰}ってもいいですか', 'いえ|かえ') + 'answer}。'+
+            '{家に帰ってもいいですか|いえにかえってもいいですか|' + Genki.getAlts('{家}に{帰}っても{い}いですか', 'いえ|かえ|良') + Genki.getAlts('{家}に{帰}っても{よ}いですか', 'いえ|かえ|良') + 'answer}。'+
           '</div>'+
 
           '<div class="problem">'+
             'You have forgotten to do the homework. You are sure you can bring it in tomorrow.<br>'+
-            '{あした宿題を持ってきてもいいですか|あしたしゅくだいをもってきてもいいですか|' + Genki.getAlts('{あした}{宿題}を{持}って{き}てもいいですか', '明日|しゅくだい|も|来') + 'answer}。'+
+            '{あした宿題を持ってきてもいいですか|あしたしゅくだいをもってきてもいいですか|' + Genki.getAlts('{あした}{宿題}を{持}って{き}ても{い}いですか', '明日|しゅくだい|も|来|良') + Genki.getAlts('{あした}{宿題}を{持}って{き}ても{よ}いですか', '明日|しゅくだい|も|来|良') + 'answer}。'+
           '</div>'+
 
           '<div class="problem">'+
             'You want to ask your teacher something, but you cannot phrase it in Japanese. (you want to speak English)<br>'+
-            '{英語を話してもいいですか|えいごをはなしてもいいですか|' + Genki.getAlts('{英語}を{話}してもいいですか', 'えいご|はな') + 'answer}。'+
+            '{英語を話してもいいですか|えいごをはなしてもいいですか|' + Genki.getAlts('{英語}を{話}しても{い}いですか', 'えいご|はな|良') + Genki.getAlts('{英語}を{話}しても{よ}いですか', 'えいご|はな|良') + 'answer}。'+
           '</div>'+
 
           '<h4>[With a friend]</h4>'+
 
           '<div class="problem">'+
             'You missed class yesterday. You want to borrow your friend\'s notebook.<br>'+
-            '{ノートを借りてもいいですか|ノートをかりてもいいですか|answer}。'+
+            '{ノートを借りてもいいですか|ノートをかりてもいいですか|' + Genki.getAlts('ノートを{借}りても{よ}いですか', 'か|良') + 'answer}。'+
           '</div>'+
 
           '<div class="problem">'+
             'You and your friend are in a dark room, and you feel somewhat uncomfortable. (you want to turn the light on)<br>'+
-            '{電気をつけてもいいですか|でんきをつけてもいいですか|answer}。'+
+            '{電気をつけてもいいですか|でんきをつけてもいいですか|' + Genki.getAlts('{電気}をつけても{よ}いですか', 'でんき|良') + 'answer}。'+
           '</div>'+
 
           '<div class="problem">'+
             'You are invited to your friend\'s party, and you want to bring your friend.<br>'+
-            '{友だちを連れてきてもいいですか|ともだちをつれてきてもいいですか|' + Genki.getAlts('{友}{だち}を{連}れて{き}てもいいですか', 'とも|達|つ|来') + 'answer}。'+
+            '{友だちを連れてきてもいいですか|ともだちをつれてきてもいいですか|' + Genki.getAlts('{友}{だち}を{連}れて{き}ても{い}いですか', 'とも|達|つ|来|良') + Genki.getAlts('{友}{だち}を{連}れて{き}ても{よ}いですか', 'とも|達|つ|来|良') + 'answer}。'+
           '</div>'+
         '</div>'
       ]

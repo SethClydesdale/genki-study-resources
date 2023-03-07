@@ -102,7 +102,7 @@
           '<div class="inner-problem">'+
             'Q：アパートを<ruby>探<rt>さが</rt></ruby>しています。どんなアパートがいいですか。<br>'+
             '(an apartment that has a swimming pool)<br>'+
-            'A：{プールがあるアパートがいいです}。'+
+            'A：{プールがあるアパートがいいです|プールがあるアパートが良いです|プールがあるアパートがよいです|answer}。'+
           '</div>'+
         '</div>'+
         
@@ -118,7 +118,7 @@
           '<div class="inner-problem">'+
             'Q：ルームメートを<ruby>探<rt>さが</rt></ruby>しています。どんな<ruby>人<rt>ひと</rt></ruby>がいいですか。<br>'+
             '(a person who is good at cooking)<br>'+
-            'A：{料理が上手な人がいいです|りょうりがじょうずなひとがいいです|' + Genki.getAlts('{料理}が{上手}な{人}がいいです', 'りょうり|じょうず|ひと') + 'answer}。'+
+            'A：{料理が上手な人がいいです|りょうりがじょうずなひとがいいです|' + Genki.getAlts('{料理}が{上手}な{人}が{い}いです', 'りょうり|じょうず|ひと|良') + Genki.getAlts('{料理}が{上手}な{人}が{よ}いです', 'りょうり|じょうず|ひと|良') + 'answer}。'+
           '</div>'+
         '</div>'+
       '</div>'

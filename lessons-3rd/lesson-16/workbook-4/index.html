@@ -70,28 +70,28 @@
         '<div class="problem">'+
           '<div class="inner-problem">'+
             'Your friend: あしたは<ruby>私<rt>わたし</rt></ruby>の<ruby>誕生日<rt>たんじょうび</rt></ruby>なんです。<br><br>'+
-            'You: {プレゼントがたくさんもらえるといいですね|(I hope you can receive a lot of presents.)}。'+
+            'You: {プレゼントがたくさんもらえるといいですね|プレゼントがたくさんもらえると良いですね|プレゼントがたくさんもらえるとよいですね|answer;hint:(I hope you can receive a lot of presents.)}。'+
           '</div>'+
         '</div>'+
         
         '<div class="problem">'+
           '<div class="inner-problem">'+
             'Your friend: <ruby>今<rt>いま</rt></ruby>、<ruby>仕事<rt>しごと</rt></ruby>を<ruby>探<rt>さが</rt></ruby>しているんです。<br><br>'+
-            'You: {いい仕事が見つかるといいですね|いいしごとがみつかるといいですね|' + Genki.getAlts('いい{仕事}が{見}つかるといいですね', 'しごと|み') + 'answer;hint:(I hope you find a good job.)}。'+
+            'You: {いい仕事が見つかるといいですね|いいしごとがみつかるといいですね|' + Genki.getAlts('{い}い{仕事}が{見}つかると{い}いですね', '良|しごと|み|良') + Genki.getAlts('{よ}い{仕事}が{見}つかると{よ}いですね', '良|しごと|み|良') + 'answer;hint:(I hope you find a good job.)}。'+
           '</div>'+
         '</div>'+
         
         '<div class="problem">'+
           '<div class="inner-problem">'+
             'Your friend: <ruby>来年<rt>らいねん</rt></ruby><ruby>留学<rt>りゅうがく</rt></ruby>する<ruby>予定<rt>よてい</rt></ruby>です。<br><br>'+
-            'You: {いろいろな経験ができるといいですね|いろいろなけいけんができるといいですね|' + Genki.getAlts('{いろいろ}な{経験}ができるといいですね', '色々|けいけん') + 'answer;hint:(I hope you can have various experiences.);width:300}。'+
+            'You: {いろいろな経験ができるといいですね|いろいろなけいけんができるといいですね|' + Genki.getAlts('{いろいろ}な{経験}ができると{い}いですね', '色々|けいけん|良') + Genki.getAlts('{いろいろ}な{経験}ができると{よ}いですね', '色々|けいけん|良') + 'answer;hint:(I hope you can have various experiences.);width:300}。'+
           '</div>'+
         '</div>'+
         
         '<div class="problem">'+
           '<div class="inner-problem">'+
             'Your friend: <ruby>私<rt>わたし</rt></ruby>の<ruby>猫<rt>ねこ</rt></ruby>が<ruby>病気<rt>びょうき</rt></ruby>なんです。<br><br>'+
-            'You: {早くよくなるといいですね|はやくよくなるといいですね|answer;width:264;hint:(I hope [your cat] gets better soon.)}。'+
+            'You: {早くよくなるといいですね|はやくよくなるといいですね|' + Genki.getAlts('{早}く{よ}くなると{い}いですね', 'はや|良|良') + Genki.getAlts('{早}く{よ}くなると{よ}いですね', 'はや|良|良') + 'answer;width:264;hint:(I hope [your cat] gets better soon.)}。'+
           '</div>'+
         '</div>'+
       '</div><br>'+
@@ -100,22 +100,22 @@
         '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Translate the sentences, using ～といいんですが.</p>'+
         '<div class="problem">'+
           'I want to go to a graduate school. I hope I can receive a scholarship.<br>'+
-          '{大学院に行きたいです。奨学金がもらえるといいんですが。|だいがくいんにいきたいです。しょうがくきんがもらえるといいんですが。|' + Genki.getAlts('{大学院}に{行}きたいです。{奨学金}がもらえるといいんですが。', 'だいがくいん|い|しょうがくきん') + 'answer}'+
+          '{大学院に行きたいです。奨学金がもらえるといいんですが。|だいがくいんにいきたいです。しょうがくきんがもらえるといいんですが。|' + Genki.getAlts('{大学院}に{行}きたいです。{奨学金}がもらえると{い}いんですが。', 'だいがくいん|い|しょうがくきん|良') + Genki.getAlts('{大学院}に{行}きたいです。{奨学金}がもらえると{よ}いんですが。', 'だいがくいん|い|しょうがくきん|良') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'There is an exam tomorrow morning. I hope I do not oversleep.<br>'+
-          '{あしたの朝、試験があります。朝寝坊しないといいんですが。|あしたのあさ、しけんがあります。あさねぼうしないといいんですが。|' + Genki.getAlts('{明日}の{朝}、{試験}があります。{朝寝坊}しないといいんですが。', 'あした|あさ|しけん|あさねぼう') + 'answer}'+
+          '{あしたの朝、試験があります。朝寝坊しないといいんですが。|あしたのあさ、しけんがあります。あさねぼうしないといいんですが。|' + Genki.getAlts('{明日}の{朝}、{試験}があります。{朝寝坊}しないと{い}いんですが。', 'あした|あさ|しけん|あさねぼう|良') + Genki.getAlts('{明日}の{朝}、{試験}があります。{朝寝坊}しないと{よ}いんですが。', 'あした|あさ|しけん|あさねぼう|良') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'I have to give a presentation tomorrow. I hope I will not be too nervous.<br>'+
-          '{あした、発表しなければいけません。緊張しすぎないといいんですが。|あした、はっぴょうしなければいけません。きんちょうしすぎないといいんですが。|' + Genki.getAlts('{あした}、{発表}しなければいけません。{緊張}しすぎないといいんですが。', '明日|はっぴょう|きんちょう') + 'answer}'+
+          '{あした、発表しなければいけません。緊張しすぎないといいんですが。|あした、はっぴょうしなければいけません。きんちょうしすぎないといいんですが。|' + Genki.getAlts('{あした}、{発表}しなければいけません。{緊張}しすぎないと{い}いんですが。', '明日|はっぴょう|きんちょう|良') + Genki.getAlts('{あした}、{発表}しなければいけません。{緊張}しすぎないと{よ}いんですが。', '明日|はっぴょう|きんちょう|良') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'We are planning on having a barbecue. I hope it does not rain.<br>'+
-          '{バーベキューをするつもりです。雨が降らないといいんですが。|バーベキューをするつもりです。あめがふらないといいんですが。|' + Genki.getAlts('バーベキューをするつもりです。{雨}が{降}らないといいんですが。', 'あめ|ふ') + 'answer}'+
+          '{バーベキューをするつもりです。雨が降らないといいんですが。|バーベキューをするつもりです。あめがふらないといいんですが。|' + Genki.getAlts('バーベキューをするつもりです。{雨}が{降}らないと{い}いんですが。', 'あめ|ふ|良') + Genki.getAlts('バーベキューをするつもりです。{雨}が{降}らないと{よ}いんですが。', 'あめ|ふ|良') + 'answer}'+
         '</div>'+
       '</div>'
         

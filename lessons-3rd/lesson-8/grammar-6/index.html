@@ -242,8 +242,8 @@
         '<div class="example-problem">'+
           '<div class="inner-problem valign-top">'+
             '<ruby>山下先生<rt>やましたせんせい</rt></ruby>はいい<ruby>先生<rt>せんせい</rt></ruby>ですか。<br>'+
-            'はい、{いい}{先生だ|せんせいだ|answer}と<ruby>思<rt>おも</rt></ruby>います。<br><br><br>'+
-            'いいえ、{いい}{先生|せんせい|answer}じゃないと<ruby>思<rt>おも</rt></ruby>います。'+
+            'はい、{いい|良い|よい|answer}{先生だ|せんせいだ|answer}と<ruby>思<rt>おも</rt></ruby>います。<br><br><br>'+
+            'いいえ、{いい|良い|よい|answer}{先生|せんせい|answer}じゃないと<ruby>思<rt>おも</rt></ruby>います。'+
           '</div>'+
         '</div>'+
         
@@ -256,7 +256,7 @@
             
             '<div class="problem">'+
               '<ruby>頭<rt>あたま</rt></ruby>がいいですか。<br>'+
-              '{はい、頭がいいと思います|いいえ、頭がよくないと思います|' + Genki.getAlts('はい、{頭}がいいと{思}います', 'あたま|おも') + Genki.getAlts('いいえ、{頭}がよくないと{思}います', 'あたま|おも') + 'answer}。'+
+              '{はい、頭がいいと思います|いいえ、頭がよくないと思います|' + Genki.getAlts('はい、{頭}が{い}いと{思}います', 'あたま|良|おも') + Genki.getAlts('はい、{頭}が{よ}いと{思}います', 'あたま|良|おも') + Genki.getAlts('いいえ、{頭}が{よ}くないと{思}います', 'あたま|良|おも') + 'answer}。'+
             '</div>'+
             
             '<div class="problem">'+
