@@ -71,25 +71,25 @@
         '<div class="problem">'+
           'レストランに<ruby>行<rt>い</rt></ruby>きましたが、<ruby>閉<rt>し</rt></ruby>まっていました<br>'+
           '(I should have called.)<br>'+
-          '{電話すればよかったです|でんわすればよかったです|answer}。'+
+          '{電話すればよかったです|でんわすればよかったです|' + Genki.getAlts('{電話}すれば{よ}かったです', 'でんわ|良') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いましたが、すぐ<ruby>壊<rt>こわ</rt></ruby>れてしまいました。<br>'+
           '(I should not have bought a cheap one.)<br>'+
-          '{安いのを買わなければよかったです|やすいのをかわなければよかったです|' + Genki.getAlts('{安}いのを{買}わなければよかったです', 'やす|か') + 'answer}。'+
+          '{安いのを買わなければよかったです|やすいのをかわなければよかったです|' + Genki.getAlts('{安}いのを{買}わなければ{よ}かったです', 'やす|か|良') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'ほしかった<ruby>服<rt>ふく</rt></ruby>が、もう<ruby>店<rt>みせ</rt></ruby>にありません。<br>'+
           '(I should have bought those clothes.)<br>'+
-          '{あの服を買えばよかったです|あのふくをかえばよかったです|' + Genki.getAlts('あの{服}を{買}えばよかったです', 'ふく|か') + 'answer}。'+
+          '{あの服を買えばよかったです|あのふくをかえばよかったです|' + Genki.getAlts('あの{服}を{買}えば{よ}かったです', 'ふく|か|良') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '<ruby>父<rt>ちち</rt></ruby>の<ruby>大切<rt>たいせつ</rt></ruby>な<ruby>時計<rt>とけい</rt></ruby>をなくしてしまったんです。<br>'+
           '(I should have been more cautious.)<br>'+
-          '{もっと気をつければよかったです|もっときをつければよかったです|answer}。'+
+          '{もっと気をつければよかったです|もっときをつければよかったです|' + Genki.getAlts('もっと{気}を{つ}ければ{よ}かったです', 'き|付|良') + 'answer}。'+
         '</div>'+
       '</div><br>'+
       
@@ -98,25 +98,25 @@
         '<div class="problem">'+
           'お<ruby>金<rt>かね</rt></ruby>がありません。<br>'+
           '(I should not have gone shopping.)<br>'+
-          '{買い物をしなければよかったです|かいものをしなければよかったです|answer}。'+
+          '{買い物をしなければよかったです|かいものをしなければよかったです|' + Genki.getAlts('{買}い{物}をしなければ{よ}かったです', 'か|もの|良') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '<ruby>気分<rt>きぶん</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>いです。<br>'+
           '(I should not have read a book in the car.)<br>'+
-          '{車の中で本を読まなければよかったです|くるまのなかでほんをよまなければよかったです|' + Genki.getAlts('{車}の{中}で{本}を{読}まなければよかったです', 'くるま|なか|ほん|よ') + 'answer}。'+
+          '{車の中で本を読まなければよかったです|くるまのなかでほんをよまなければよかったです|' + Genki.getAlts('{車}の{中}で{本}を{読}まなければ{よ}かったです', 'くるま|なか|ほん|よ|良') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           '<ruby>試験<rt>しけん</rt></ruby>の<ruby>成績<rt>せいせき</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>かったです。<br>'+
           '(I should have studied more.)<br>'+
-          '{もっと勉強すればよかったです|もっとべんきょうすればよかったです|answer}。'+
+          '{もっと勉強すればよかったです|もっとべんきょうすればよかったです|' + Genki.getAlts('もっと{勉強}すれば{よ}かったです', 'べんきょう|良') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'かぜをひいてしまいました。<br>'+
           '(Last night, I should not have gone out.)<br>'+
-          '{きのうの夜、出かけなければよかったです|きのうのよる、でかけなければよかったです|' + Genki.getAlts('{昨日}の{夜}、{出}かけなければよかったです', 'きのう|よる|で') + 'answer}。'+
+          '{きのうの夜、出かけなければよかったです|きのうのよる、でかけなければよかったです|' + Genki.getAlts('{昨日}の{夜}、{出}かけなければ{よ}かったです', 'きのう|よる|で|良') + 'answer}。'+
         '</div>'+
       '</div><br>'+
       
@@ -124,12 +124,12 @@
         '<p class="sectionDesc3rd"><span class="sectionNumber3rd">III</span>Translate the following sentences.</p>'+
         '<div class="problem">'+
           'I should not have drank old milk.<br>'+
-          '{古い牛乳を飲まなければよかったです|ふるいぎゅうにゅうをのまなければよかったです|' + Genki.getAlts('{古}い{牛乳}を{飲}まなければよかったです', 'ふる|ぎゅうにゅう|の') + 'answer}。'+
+          '{古い牛乳を飲まなければよかったです|ふるいぎゅうにゅうをのまなければよかったです|' + Genki.getAlts('{古}い{牛乳}を{飲}まなければ{よ}かったです', 'ふる|ぎゅうにゅう|の|良') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
           'I should have apologized that time.<br>'+
-          '{あの時謝ればよかったです|あのときあやまればよかったです|answer}。'+
+          '{あの時謝ればよかったです|あのときあやまればよかったです|' + Genki.getAlts('あの{時}{謝}れば{よ}かったです', 'とき|あやま|良') + 'answer}。'+
         '</div>'+
       '</div>'
        
