@@ -70,37 +70,37 @@
         '<p class="section-desc">Translate the sentences, using ～といいんですが.</p>'+
         '<div class="problem">'+
           'I want to go to a graduate school. I hope I can receive a scholarship.<br>'+
-          '{大学院に行きたいです。奨学金がもらえるといいんですが。|だいがくいんにいきたいです。しょうがくきんがもらえるといいんですが。|' + Genki.getAlts('{大学院}に{行}きたいです。{奨学金}がもらえるといいんですが。', 'だいがくいん|い|しょうがくきん') + 'answer}'+
+          '{大学院に行きたいです。奨学金がもらえるといいんですが。|だいがくいんにいきたいです。しょうがくきんがもらえるといいんですが。|' + Genki.getAlts('{大学院}に{行}きたいです。{奨学金}がもらえると{い}いんですが。', 'だいがくいん|い|しょうがくきん|良') + Genki.getAlts('{大学院}に{行}きたいです。{奨学金}がもらえると{よ}いんですが。', 'だいがくいん|い|しょうがくきん|良') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'There is an exam tomorrow morning. I hope I do not oversleep.<br>'+
-          '{あしたの朝、試験があります。朝寝坊しないといいんですが。|あしたのあさ、しけんがあります。あさねぼうしないといいんですが。|' + Genki.getAlts('{明日}の{朝}、{試験}があります。{朝寝坊}しないといいんですが。', 'あした|あさ|しけん|あさねぼう') + 'answer}'+
+          '{あしたの朝、試験があります。朝寝坊しないといいんですが。|あしたのあさ、しけんがあります。あさねぼうしないといいんですが。|' + Genki.getAlts('{明日}の{朝}、{試験}があります。{朝寝坊}しないと{い}いんですが。', 'あした|あさ|しけん|あさねぼう|良') + Genki.getAlts('{明日}の{朝}、{試験}があります。{朝寝坊}しないと{よ}いんですが。', 'あした|あさ|しけん|あさねぼう|良') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'I want to go to China. I hope I can go next year.<br>'+
-          '{中国に行きたいです。来年行けるといいんですが。|ちゅうごくにいきたいです。らいねんいけるといいんですが。|' + Genki.getAlts('{中国}に{行}きたいです。{来年}{行}けるといいんですが。', 'ちゅうごく|い|らいねん|い') + 'answer}'+
+          '{中国に行きたいです。来年行けるといいんですが。|ちゅうごくにいきたいです。らいねんいけるといいんですが。|' + Genki.getAlts('{中国}に{行}きたいです。{来年}{行}けると{い}いんですが。', 'ちゅうごく|い|らいねん|い|良') + Genki.getAlts('{中国}に{行}きたいです。{来年}{行}けると{よ}いんですが。', 'ちゅうごく|い|らいねん|い|良') + 'answer}'+
         '</div>'+
         
         '<div class="problem">'+
           'We are planning on having a barbecue. I hope it does not rain.<br>'+
-          '{バーベキューをするつもりです。雨が降らないといいんですが。|バーベキューをするつもりです。あめがふらないといいんですが。|' + Genki.getAlts('バーベキューをするつもりです。{雨}が{降}らないといいんですが。', 'あめ|ふ') + 'answer}'+
+          '{バーベキューをするつもりです。雨が降らないといいんですが。|バーベキューをするつもりです。あめがふらないといいんですが。|' + Genki.getAlts('バーベキューをするつもりです。{雨}が{降}らないと{い}いんですが。', 'あめ|ふ|良') + Genki.getAlts('バーベキューをするつもりです。{雨}が{降}らないと{よ}いんですが。', 'あめ|ふ|良') + 'answer}'+
         '</div>'+
         
         // II
         '<p class="section-desc">Wish the following people luck, using ～といいですね.</p>'+
         '<div>Your friend: あしたは私の誕生日なんです。</div><br>'+
-        '<div class="problem">You: {プレゼントがたくさんもらえるといいですね|(I hope you can receive a lot of presents.)}。</div>'+
+        '<div class="problem">You: {プレゼントがたくさんもらえるといいですね|プレゼントがたくさんもらえると良いですね|プレゼントがたくさんもらえるとよいですね|answer;hint:(I hope you can receive a lot of presents.)}。</div>'+
         
         '<div>Your friend: 今、仕事を探しているんです。</div><br>'+
-        '<div class="problem">You: {いい仕事が見つかるといいですね|いいしごとがみつかるといいですね|' + Genki.getAlts('いい{仕事}が{見}つかるといいですね', 'しごと|み') + 'answer;hint:(I hope you find a good job.)}。</div>'+
+        '<div class="problem">You: {いい仕事が見つかるといいですね|いいしごとがみつかるといいですね|' + Genki.getAlts('いい{仕事}が{見}つかると{い}いですね', 'しごと|み|良') + Genki.getAlts('いい{仕事}が{見}つかると{よ}いですね', 'しごと|み|良') + 'answer;hint:(I hope you find a good job.)}。</div>'+
         
         '<div>Your friend: 今日、試験があるんです。</div><br>'+
-        '<div class="problem">You: {試験が難しくないといいですね|しけんがむずかしくないといいですね|' + Genki.getAlts('{試験}が{難}しくないといいですね', 'しけん|むずか') + 'answer;hint:(I hope the test isn\'t difficult.)}。</div>'+
+        '<div class="problem">You: {試験が難しくないといいですね|しけんがむずかしくないといいですね|' + Genki.getAlts('{試験}が{難}しくないと{い}いですね', 'しけん|むずか|良') + Genki.getAlts('{試験}が{難}しくないと{よ}いですね', 'しけん|むずか|良') + 'answer;hint:(I hope the test isn\'t difficult.)}。</div>'+
         
         '<div>Your friend: 私の猫が病気なんです。</div><br>'+
-        '<div class="problem">You: {早くよくなるといいですね|はやくよくなるといいですね|answer;width:264;hint:(I hope [your cat] gets better soon.)}。</div>'+
+        '<div class="problem">You: {早くよくなるといいですね|はやくよくなるといいですね|' + Genki.getAlts('{早}く{よ}くなると{い}いですね', 'はや|良|良') + Genki.getAlts('{早}く{よ}くなると{よ}いですね', 'はや|良|良') + 'answer;width:264;hint:(I hope [your cat] gets better soon.)}。</div>'+
       '</div>'
         
     });</script>

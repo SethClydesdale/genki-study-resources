@@ -69,7 +69,7 @@
         '<p class="section-desc">Complete the sentences, using ～し.</p>'+
         '<div class="problem">{寒いし|さむいし|answer;width:98;hint:(it is cold)}、{眠いし|ねむいし|answer;width:70;hint:(sleepy)}、起きたくないです。</div>'+
         
-        '<div class="problem">{頭がいいし|あたまがいいし|answer;width:112;hint:(smart)}、{ギターが弾けるし|ギターがひけるし|answer;hint:(can play guitar)}、田中さんは人気があります。</div>'+
+        '<div class="problem">{頭がいいし|あたまがいいし|' + Genki.getAlts('{頭}が{い}いし', 'あたま|良') + Genki.getAlts('{頭}が{よ}いし', 'あたま|良') + 'answer;width:112;hint:(smart)}、{ギターが弾けるし|ギターがひけるし|answer;hint:(can play guitar)}、田中さんは人気があります。</div>'+
         
         '<div class="problem">{明日テストがあるし|あしたテストがあるし|answer;width:182;hint:(I have a test tomorrow)}、{先生に会わな%(きゃ/ければ)いけないし|せんせいにあわな%(きゃ/ければ)いけないし|' + Genki.getAlts('{先生}に{会}わな{きゃ}いけないし', 'せんせい|あ|ければ') + 'answer;width:238;hint:(I have to meet the teacher)}、今日は忙しいです。</div>'+
         

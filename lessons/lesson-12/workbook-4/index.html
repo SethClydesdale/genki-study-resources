@@ -107,7 +107,7 @@
         '<div class="problem">'+
           'Q：歌手の中でだれが好きですか。<br>'+
           '(I like Miku (ミク), because she\'s good-looking.)<br>'+
-          'A：{かっこいいので、ミクが好きです|かっこいいので、ミクがすきです|answer}。'+
+          'A：{かっこいいので、ミクが好きです|かっこいいので、ミクがすきです|' + Genki.getAlts('かっこ{い}いので、ミクが{好}きです', '良|す') + Genki.getAlts('かっこ{よ}いので、ミクが{好}きです', '良|す') + 'answer}。'+
         '</div>'+
         
         '<div class="problem">'+
