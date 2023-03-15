@@ -6,6 +6,8 @@ Genki Study Resources is a website that offers a vast collection of exercises fo
 
 **Offline Version:** [download](https://github.com/SethClydesdale/genki-study-resources/archive/master.zip)
 
+If you're interested in learning Japanese, please see [this guide](https://sethclydesdale.github.io/genki-study-resources/help/japanese-guide/)!
+
 -----
 
 **Quick Links**
