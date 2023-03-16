@@ -65,6 +65,7 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 - [Yomichan](https://foosoft.net/projects/yomichan/) (for quickly looking up words while reading, or for using the search page in tandem with Capture2Text)
 - [KanjiTomo](https://www.kanjitomo.net/) (useful for reading manga, LNs, etc.)
 - [Genki xlsx Vocab Lists](https://github.com/SethClydesdale/genki-study-resources/tree/master/resources/tools/wordlist_E-J) (these are based on the vocab in Genki/on the site -- useful for printing out/using as a quick reference)
+- [Useful Tools List](https://sethclydesdale.github.io/genki-study-resources/help/japanese-guide/#tools) (more in-depth list of tools for Japanese study)
 
 ##### Websites
 - [Genki Self-study Room](http://genki.japantimes.co.jp/self_en) | [Genki Online](https://genki3.japantimes.co.jp/) (official Genki sites/resources)
