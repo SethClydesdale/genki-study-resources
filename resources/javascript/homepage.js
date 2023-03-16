@@ -21,7 +21,11 @@
     // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
     msg : [
       {
-        content : '<b style="color:#6F6;">NEW:</b> Tobira Study Resources, the intermediate Japanese exercise website for Tobira: Gateway to Advanced Japanese, is now online! <a href="https://sethclydesdale.github.io/tobira-study-resources/">Click here</a> to give it a try or visit the <a href="https://github.com/SethClydesdale/tobira-study-resources#tobira-study-resources">GitHub repository</a> for more information on the project!'
+        content : 'Tobira Study Resources, the intermediate Japanese exercise website for Tobira: Gateway to Advanced Japanese, is now complete!<br><a href="https://sethclydesdale.github.io/tobira-study-resources/">Click here</a> to give it a try or visit the <a href="https://github.com/SethClydesdale/tobira-study-resources#tobira-study-resources">GitHub repository</a> for more information on the project!'
+      },
+      
+      {
+        content : 'Interested in learning Japanese? Check out <a href="' + getPaths() + 'help/japanese-guide/">our guide</a> for more information on how to learn the language, as well as useful tools that you can utilize in your studies!'
       },
       
       {
