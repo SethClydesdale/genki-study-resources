@@ -663,9 +663,17 @@
   
   // # DARK MODE #
   // applies the dark mode theme on page load
-  if (storageOK && localStorage.darkMode == 'on') {
-    document.write('<link id="dark-mode" href="' + getPaths() + 'resources/css/stylesheet-dark.min.css" rel="stylesheet">');
-    document.documentElement.className += ' dark-mode';
+  if (storageOK) {
+    // automatically enables dark mode (once) based on the user's preferences
+    if (!localStorage.darkMode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      localStorage.darkMode = 'on';
+    }
+
+    // applies the dark mode theme on page load
+    if (localStorage.darkMode == 'on') {
+      document.write('<link id="dark-mode" href="' + getPaths() + 'resources/css/stylesheet-dark.min.css" rel="stylesheet">');
+      document.documentElement.className += ' dark-mode';
+    }
   }
   
   
