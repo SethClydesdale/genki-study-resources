@@ -2276,14 +2276,14 @@ ruby rt {
 
 /* SETTINGS MANAGER */
 #genki-site-settings {
-  font-size:18px;
+  font-size:26px;
   display:inline-block;
-  height:26px;
-  line-height:26px;
-  margin-left:10px;
+  height:20px;
+  line-height:20px;
+  margin-left:15px;
 }
 #genki-site-settings:focus { color:#F93; }
-#genki-site-settings i { vertical-align:-2px; }
+#genki-site-settings i { vertical-align:-5px; }
 
 .genki-settings-list { list-style-type:none; }
 .genki-settings-list li { margin:10px 0; }
