@@ -1141,6 +1141,12 @@
         }
       }
       
+      // autofocus answer options
+      if (o.type == 'multi') {
+        var q = document.querySelector('.quiz-multi-answer');
+        if (q) q.focus();
+      }
+      
       // audio events
       for (var a = document.querySelectorAll('AUDIO'), i = 0, j = a.length; i < j; i++) {
         // pause all audio elements that are current playing and only plays the one that was just clicked
@@ -1236,6 +1242,7 @@
             Genki.quizOver = true;
             Genki.multiNodes.list.className += ' multi-quiz quiz-over';
             Genki.multiNodes.button.style.visibility = 'visible';
+            Genki.multiNodes.button.firstChild.focus(); // focus next button
             
             // cache these for use with showNextQuestion()
             Genki.multiNodes.next = next;
@@ -1246,6 +1253,11 @@
           else {
             next.style.display = ''; // show the next question
             last.style.display = 'none'; // hide the prior question
+            
+            // focus answer for next question
+            var q = next.querySelector('.quiz-multi-answer');
+            if (q) q.focus();
+            
             Genki.incrementProgressBar();
           }
 
@@ -1273,6 +1285,10 @@
       // hide prev question + show next one
       Genki.multiNodes.next.style.display = '';
       Genki.multiNodes.last.style.display = 'none';
+      
+      // focus answer for next question
+      var q = Genki.multiNodes.next.querySelector('.quiz-multi-answer');
+      if (q) q.focus();
       
       // restore active quiz state (not ended) + hide next button
       Genki.quizOver = false;
