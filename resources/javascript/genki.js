@@ -625,6 +625,7 @@
             option = 65, // used for tagging answers as A(65), B(66), C(67)..
             isAnswer = false,
             helper = false,
+            vocab = /"format":"vocab"/.test(Genki.exerciseData),
             q = o.quizlet,
             i = 0,
             j = q.length,
@@ -638,7 +639,7 @@
             if (data[0] == '!IMG') {
               return Genki.parse.image(data);
             }
-          }) : '<div class="text-passage' + (q[i].vertical ? ' vertical-text' : '') + '" ' + (q[i].text.replace(/<br>/g, '').length < 50 ? 'style="text-align:center;"' : '') + '>' + q[i].text + '</div>' + (q[i].helper || '')) + (o.questionsAlignLeft ? '</div>' : '') + '</div>';
+          }) : '<div class="text-passage' + (q[i].vertical ? ' vertical-text' : '') + '" ' + (q[i].text.replace(/<br>/g, '').length < 50 ? 'style="text-align:center;"' : '') + '>' + q[i].text + '</div>' + (q[i].helper || '')) + (o.questionsAlignLeft ? '</div>' : '') + '</div>'+ (vocab ? '<button class="button vocab-spoiler-toggle" onclick="Genki.toggle.vocabSpoiler(this);"><i class="fa"></i>Show Choices</button><div class="vocab-spoiler">' : '');
 
           // ready-only questions contain text only, no answers
           if (q[i].text) {
@@ -671,7 +672,7 @@
 
           }
 
-          quiz += '</div>'; // ends the question block
+          quiz += (vocab ? '</div>' : '') + '</div>'; // ends the question block
           option = 65; // resets the option id so the next answers begin with A, B, C..
           ++Genki.stats.problems; // increment problems number
         }
@@ -680,6 +681,11 @@
         if (/class="furigana"|class="inline-furi"|<ruby>/.test(quiz)) {
           helper = true;
           zone.className += ' helper-' + ((storageOK && localStorage.furiganaVisible == 'false') ? 'hidden' : 'present');
+        }
+        
+        // enables the vocab spoiler for multi-choice if preferred
+        if (vocab && storageOK && localStorage.spoilerMode == 'true') {
+          zone.className += ' spoiler-mode';
         }
 
         // add the multi-choice quiz to the quiz zone
@@ -1882,6 +1888,24 @@
         // save settings if supported
         if (storageOK) {
           localStorage.furiganaVisible = state;
+        }
+      },
+      
+      
+      // toggles the vocab spoiler in multi-choice vocab
+      vocabSpoiler : function (button) {
+        var spoiler = button.nextSibling;
+
+        // turn spoiler on
+        if (/spoiler-off/.test(spoiler.className)) {
+          spoiler.className = spoiler.className.replace('spoiler-off', '');
+          button.innerHTML = button.innerHTML.replace('Hide', 'Show');
+        }
+
+        // turn spoiler off
+        else {
+          spoiler.className += ' spoiler-off';
+          button.innerHTML = button.innerHTML.replace('Show', 'Hide');
         }
       },
       

@@ -47,7 +47,7 @@ code, input[type="text"], input[type="number"], textarea, select, .table td, .qu
   background-color:#222;
 }
 
-.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before, .genki_pseudo_radio:before, .sectionNumber3rd, .dark-mode .button.opt-off:focus {
+.writing-quiz .quiz-item:before, .helper-present #question-list .quiz-item:before, .genki_pseudo_radio:before, .sectionNumber3rd, .dark-mode .button.opt-off:focus, .dark-mode .spoiler-mode .vocab-spoiler:after {
   background-color:#333;
 }
 

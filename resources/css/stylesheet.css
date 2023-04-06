@@ -1484,6 +1484,31 @@ input.writing-zone-input:focus { border-color:#F93; }
   margin-top:-8px;
 }
 
+/* multi-choice vocab spoiler */
+.vocab-spoiler-toggle { display:none; }
+
+.spoiler-mode .vocab-spoiler-toggle {
+  display:block;
+  margin:10px auto 0 auto;
+}
+
+.spoiler-mode .vocab-spoiler { position:relative; }
+.spoiler-mode .vocab-spoiler:after {
+  content:"";
+  background:#CCC;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.quiz-over .vocab-spoiler-toggle, .quiz-over .vocab-spoiler:after, .spoiler-off.vocab-spoiler:after {
+  display:none;
+}
+
+
+/* stroke order quiz */
 .kana-font { font-family:"NotoSansJP", "SawarabiGothic", "MS Gothic", "Yu Gothic", "Meiryo" }
 .drawing-quiz .quiz-item-text.kana-font { margin-top:-7px }
 .drawing-quiz .quiz-item { overflow:hidden; }
@@ -1655,11 +1680,11 @@ ruby rt {
 .multi-quiz.quiz-over .quiz-multi-answer.selected-answer { border-color:#080; }
 .multi-quiz.quiz-over .quiz-multi-answer.selected-answer:before, .multi-quiz.quiz-over .quiz-multi-answer[data-answer="true"]:before { color:#080; }
 
-.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer.selected-answer { border-color:#F00; }
-.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer.selected-answer:before { color:#F00; }
+.multi-quiz.quiz-over .wrong-answer .quiz-multi-answer.selected-answer { border-color:#F00; }
+.multi-quiz.quiz-over .wrong-answer .quiz-multi-answer.selected-answer:before { color:#F00; }
 
-.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"] { border-color:#09F; }
-.multi-quiz.quiz-over .question-block.wrong-answer .quiz-multi-answer[data-answer="true"]:before { color:#09F; }
+.multi-quiz.quiz-over .wrong-answer .quiz-multi-answer[data-answer="true"] { border-color:#09F; }
+.multi-quiz.quiz-over .wrong-answer .quiz-multi-answer[data-answer="true"]:before { color:#09F; }
 
 .kanji-canvas[data-answer="true"] { border-color:#080; }
 .kanji-canvas[data-answer="false"] { border-color:#F00; }
