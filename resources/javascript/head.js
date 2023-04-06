@@ -169,6 +169,7 @@
           darkMode = localStorage.darkMode || 'off',
           customCSS = localStorage.genkiCustomCSS || '',
           furigana = localStorage.furiganaVisible || 'true',
+          spoilerMode = localStorage.spoilerMode || 'false',
           vocabHorizontal = localStorage.vocabHorizontal || 'false',
           feedbackMode = localStorage.feedbackMode || 'classic',
           randomExercise = localStorage.genkiRandomExercise || 'all',
@@ -231,6 +232,11 @@
               '<option value="classic"' + ( feedbackMode == 'classic' ? ' selected' : '' ) + '>Classic</option>'+
               '<option value="instant"' + ( feedbackMode == 'instant' ? ' selected' : '' ) + '>Instant</option>'+
             '</select>'+
+          '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Hides the choices in multiple choice vocab exercises, similar to a flash card mode.\nTurn this mode on if you keep looking at the choices to remember what a word means instead of recalling it from memory.">Multiple Choice Vocab Spoiler:</span>'+
+            '<button id="settings-vocab-spoiler" class="button' + (spoilerMode == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateSpoilerMode(this);">' + (spoilerMode == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
           '<li>'+
@@ -526,6 +532,25 @@
     // updates the random exercise preference
     updateRandomExercise : function (caller) {
       if (caller) localStorage.genkiRandomExercise = caller.value;
+    },
+    
+    
+    // updates vocab spoiler preference
+    updateSpoilerMode : function (caller) {
+      GenkiSettings.updateButton(caller, function (state) {
+
+        if (document.querySelector('.vocab-spoiler')) {
+          var zone = document.getElementById('quiz-zone');
+
+          if (state == 'ON') {
+            zone.className += ' spoiler-mode';
+          } else {
+            zone.className = zone.className.replace('spoiler-mode', '');
+          }
+        }
+
+        localStorage.spoilerMode = state == 'ON' ? 'true' : 'false';
+      });
     },
     
     
