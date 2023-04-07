@@ -1149,7 +1149,7 @@
       
       // autofocus answer options
       if (o.type == 'multi') {
-        var q = document.querySelector('.quiz-multi-answer');
+        var q = document.querySelector(document.querySelector('.spoiler-mode') ? '.vocab-spoiler-toggle' : '.quiz-multi-answer');
         if (q) q.focus();
       }
       
@@ -1261,7 +1261,7 @@
             last.style.display = 'none'; // hide the prior question
             
             // focus answer for next question
-            var q = next.querySelector('.quiz-multi-answer');
+            var q = next.querySelector(document.querySelector('.spoiler-mode') ? '.vocab-spoiler-toggle' : '.quiz-multi-answer');
             if (q) q.focus();
             
             Genki.incrementProgressBar();
@@ -1293,7 +1293,7 @@
       Genki.multiNodes.last.style.display = 'none';
       
       // focus answer for next question
-      var q = Genki.multiNodes.next.querySelector('.quiz-multi-answer');
+      var q = Genki.multiNodes.next.querySelector(document.querySelector('.spoiler-mode') ? '.vocab-spoiler-toggle' : '.quiz-multi-answer');
       if (q) q.focus();
       
       // restore active quiz state (not ended) + hide next button
