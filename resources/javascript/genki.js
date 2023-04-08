@@ -1292,14 +1292,14 @@
       Genki.multiNodes.next.style.display = '';
       Genki.multiNodes.last.style.display = 'none';
       
-      // focus answer for next question
-      var q = Genki.multiNodes.next.querySelector(document.querySelector('.spoiler-mode') ? '.vocab-spoiler-toggle' : '.quiz-multi-answer');
-      if (q) q.focus();
-      
       // restore active quiz state (not ended) + hide next button
       Genki.quizOver = false;
       Genki.multiNodes.list.className = Genki.multiNodes.list.className.replace(' multi-quiz quiz-over', '');
       Genki.multiNodes.button.style.visibility = 'hidden';
+      
+      // focus answer for next question
+      var q = Genki.multiNodes.next.querySelector(document.querySelector('.spoiler-mode') ? '.vocab-spoiler-toggle' : '.quiz-multi-answer');
+      if (q) q.focus();
       
       // increment progress
       Genki.incrementProgressBar();
