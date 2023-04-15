@@ -292,7 +292,7 @@
               // BEGIN conversion conditions for vocab or kana
               // multi-choice conversion
               if (o.type == 'multi') {
-                var quizlet = [], keys = [], keys2 = [], currentAnswer, answer, answers, def, i, j, k, n, n2;
+                var quizlet = [], keys = [], keys2 = [], currentAnswer, sentence, answer, answers, def, i, j, k, n, n2;
                 
                 // get keys for randomization of the vocabulary
                 for (i in o.quizlet) {
@@ -304,11 +304,15 @@
                 for (i = 0, j = keys.length; i < j; i++) {
                   n = Math.floor(Math.random() * keys.length);
                   def = keys[n].split('|');
-                  currentAnswer = o.quizlet[keys[n]];
+                  currentAnswer = o.quizlet[keys[n]].replace(/\|.*?$/, '');
+                  sentence = /\|/.test(o.quizlet[keys[n]]) ? o.quizlet[keys[n]].replace(/.*?\|(.*?$)/, '$1') : '';
                   
                   // push the question data
                   quizlet.push({
-                    question : '<div class="multi-vocab">' + (def[1] ? '<ruby>' : o.format == 'kanji' ? '<div class="big-kanji">' : '') + def[0] + (def[1] ? '<rt>' + def[1] + '</rt></ruby>' : o.format == 'kanji' ? '</div>' : '') + '</div>',
+                    question : '<div class="multi-vocab">'+
+                    (def[1] ? '<ruby>' : o.format == 'kanji' ? '<div class="big-kanji">' : '') + def[0] + (def[1] ? '<rt>' + def[1] + '</rt></ruby>' : o.format == 'kanji' ? '</div>' : '')+
+                    (sentence ? '<hr><div class="multi-vocab-sentence">' + sentence + '</div>' : '')+
+                    '</div>',
                     answers : ['A' + currentAnswer]
                   });
                   
@@ -320,7 +324,7 @@
                   while (k --> 0) {
                     if (answers.length) {
                       n2 = Math.floor(Math.random() * answers.length);
-                      answer = o.quizlet[answers[n2]];
+                      answer = o.quizlet[answers[n2]].replace(/\|.*?$/, '');
                       
                       // prevent identical answers from showing
                       if (answer == currentAnswer) {
@@ -397,7 +401,7 @@
                     quizlet += 
                     (i == n ? '</div><div>' : '')+ // changes columns
                     '<div class="problem">'+
-                      o.quizlet[keys[i]] + '<br>'+
+                      o.quizlet[keys[i]].replace(/\|.*?$/, '') + '<br>'+
                       // add '|answer' flag to problem if it contains a horizontal bar
                       // the horizontal bar indicates multiple answers in this instance
                       (/\|/.test(problem) ? problem.replace('}', '|answer}') : problem)+ 
@@ -512,7 +516,7 @@
         quiz += '<div id="answer-list">';
         while (keysA.length) {
           i = Math.floor(Math.random() * keysA.length);
-          quiz += '<div tabindex="0" class="quiz-item" data-answer="' + keysA[i].replace(/\|.*?$/, '') + '"><div class="quiz-item-text">' + o.quizlet[keysA[i]] + '</div></div>';
+          quiz += '<div tabindex="0" class="quiz-item" data-answer="' + keysA[i].replace(/\|.*?$/, '') + '"><div class="quiz-item-text">' + o.quizlet[keysA[i]].replace(/\|.*?$/, '') + '</div></div>';
           keysA.splice(i, 1);
         }
         quiz += '</div>'; // close the answer list

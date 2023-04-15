@@ -58,8 +58,9 @@
           '<li class="item-row">'+
             '<input type="text" placeholder="word/kanji" oninput="Genki.tools.updateJSON();" value="' + (/\|/.test(i) ? i.split('|')[0] : i) + '">&nbsp;'+
             '<input type="text" placeholder="furigana (optional)" oninput="Genki.tools.updateJSON();" value="' + (/\|/.test(i) ? i.split('|')[1] : '') + '">&nbsp;'+
-            '<input type="text" placeholder="definition/kana" oninput="Genki.tools.updateJSON();" value="' + data[i] + '">&nbsp;'+
+            '<input type="text" placeholder="definition/kana" oninput="Genki.tools.updateJSON();" value="' + (/\|/.test(data[i]) ? data[i].split('|')[0] : data[i]) + '">&nbsp;'+
             buttons+
+            '<input type="text" placeholder="sentence (optional)" oninput="Genki.tools.updateJSON();" class="sentence-field" value="' + (/\|/.test(data[i]) ? data[i].split('|')[1] : '') + '">'+
           '</li>';
         }
       }
@@ -132,7 +133,8 @@
           // 0 = word/kanji
           // 1 = furigana
           // 2 = definition/kana
-          code[input[0].value + (input[1].value ? '|' + input[1].value : '')] =  input[2].value;
+          // 3 = sentence
+          code[input[0].value + (input[1].value ? '|' + input[1].value : '')] =  input[2].value + (input[3].value ? '|' + input[3].value : '');
         }
       }
 
@@ -245,8 +247,8 @@
       if (type == 'vocab') {
         Genki.generateQuiz({
           format : 'vocab',
-          type : ['drag', 'multi', 'writing', 'fill'],
-          info : [Genki.lang.std_drag, Genki.lang.vocab_multi, Genki.lang.vocab_writing, Genki.lang.vocab_fill],
+          type : ['multi', 'drag', 'writing', 'fill'],
+          info : [Genki.lang.vocab_multi, Genki.lang.std_drag, Genki.lang.vocab_writing, Genki.lang.vocab_fill],
 
           quizlet : JSON.parse(quizlet)
         });
@@ -332,12 +334,31 @@
         this.handleCheckbox(caller);
         Genki.tools.updateJSON();
       },
+      
+      
+      // toggles the display of the sentence field in the custom vocab tool
+      toggleSentences : function (caller) {
+        this.handleCheckbox(caller);
+
+        if (caller.checked) {
+          document.body.className += ' show-sentences';
+
+        } else {
+          document.body.className = document.body.className.replace(' show-sentences', '');
+        }
+      },
 
 
       // handle checkbox input
       handleCheckbox : function (caller, state) {
         if (state) {
           caller.checked = state == 'true' ? true : false;
+          
+          // hide sentence fields
+          if (caller.id == 'showSentenceField' && state == 'true') {
+            document.body.className += ' show-sentences';
+          }
+          
         } else if (storageOK) {
           localStorage[caller.id] = caller.checked;
         }
@@ -349,7 +370,8 @@
         if (storageOK) {
           var settings = [
             'noStudyWarning', 
-            'prettyCode'
+            'prettyCode',
+            'showSentenceField'
           ],
 
           i = 0,

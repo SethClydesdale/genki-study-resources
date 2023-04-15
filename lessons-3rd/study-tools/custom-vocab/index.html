@@ -47,6 +47,7 @@
             <input type="text" placeholder="definition/kana" oninput="Genki.tools.updateJSON();">
             <button class="button row-add" title="add" onclick="Genki.tools.addRow(this);"><i class="fa">&#xf067;</i></button>
             <button class="button row-remove" title="remove" onclick="Genki.tools.removeRow(this);"><i class="fa">&#xf068;</i></button>
+            <input type="text" placeholder="sentence (optional)" oninput="Genki.tools.updateJSON();" class="sentence-field">
           </li>
         </ol>
         
@@ -62,6 +63,7 @@
           <li><button id="loadCode" class="button" title="Load custom exercise" onclick="this.nextSibling.click();">Load</button><input id="study-tool-file" type="file" accept=".txt,.json,.js" onchange="Genki.tools.loadCode(this);"></li>
           <li><input id="prettyCode" type="checkbox" onchange="Genki.tools.settings.prettify(this);"><label for="prettyCode">Prettify</label></li>
           <li><input id="noStudyWarning" type="checkbox" onchange="Genki.tools.settings.handleCheckbox(this);"><label for="noStudyWarning">Do not warn me</label></li>
+          <li><input id="showSentenceField" type="checkbox" onchange="Genki.tools.settings.toggleSentences(this);"><label for="showSentenceField">Show sentence fields</label></li>
         </ul>
         
         <div class="center">
@@ -73,12 +75,13 @@
           <strong>word/kanji</strong>: a Japanese word or kanji; the word to be matched to.<br>
           <strong>furigana</strong>: a textual aid for kanji; write the kana for a kanji or romaji for kana here, if necessary.<br>
           <strong>definition/kana</strong>: an equivalent definition in another language (i.e. English) or the kana reading for a kanji; the draggable word to be matched to the word/kanji.<br>
+          <strong>sentence</strong>: an example sentence to help you further memorize the word in multiple choice exercises. You can show the sentence fields by ticking the "Show sentence fields" option.<br>
           <strong>+</strong>: add a word<br>
           <strong>-</strong>: remove a word<br><br>
           
           <strong>Custom Vocabulary Code</strong>: If you're familiar with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">JSON</a>, you can edit the vocabulary code, too. Here's a few tips:<br>
-          1. The syntax for a vocabulary item is "{WORD/KANJI}|{FURIGANA}":"{DEFINITION/KANA}", with furigana being optional.<br>
-          2. If using no furigana, simply remove the horizontal bar. It should be removed automatically if using the textarea above.<br>
+          1. The syntax for a vocabulary item is "{WORD/KANJI}|{FURIGANA}":"{DEFINITION/KANA}|{SENTENCE}", with furigana and sentence being optional.<br>
+          2. If using no furigana or sentences, simply remove the horizontal bars. It should be removed automatically if using the textarea above.<br>
           3. Please note that trailing commas will throw a syntax error, so simply delete the trailing comma and the vocabulary list will be updated.
         </p>
       </div>
