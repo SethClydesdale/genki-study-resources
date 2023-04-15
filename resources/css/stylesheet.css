@@ -1484,6 +1484,9 @@ input.writing-zone-input:focus { border-color:#F93; }
   margin-top:-8px;
 }
 
+.multi-vocab hr { margin:10px 0; }
+.multi-vocab-sentence { font-size:24px; }
+
 /* multi-choice vocab spoiler */
 .vocab-spoiler-toggle { display:none; }
 
@@ -1566,13 +1569,18 @@ ruby rt {
 }
 
 /* hover to view furigana for multi-choice vocab */
-.helper-hidden .multi-vocab ruby:hover {
+.helper-hidden .multi-vocab ruby {
   display:inline-block;
   vertical-align:top;
 }
 
-.helper-hidden .multi-vocab ruby:hover rt {
+.helper-hidden .multi-vocab rt {
   display:block;
+  visibility:hidden;
+}
+
+.helper-hidden .multi-vocab ruby:hover rt {
+  visibility:visible;
 }
 
 /* for single characters */
@@ -2128,6 +2136,15 @@ ruby rt {
 #study-tool-ui li {
   margin:5px 0;
 }
+
+/* sentence field */
+#study-tool-ui .sentence-field {
+  display:none;
+  width:50%;
+  margin-top:5px;
+}
+
+.show-sentences #study-tool-ui .sentence-field { display:block; }
 
 /* textarea size for the JSON code */
 #study-tool-code textarea {
