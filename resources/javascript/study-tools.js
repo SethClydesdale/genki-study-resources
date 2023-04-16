@@ -375,11 +375,13 @@
           ],
 
           i = 0,
-          j = settings.length;
+          j = settings.length,
+          caller;
 
           for (; i < j; i++) {
             if (localStorage[settings[i]]) {
-              this.handleCheckbox(document.getElementById(settings[i]), localStorage[settings[i]]);
+              caller = document.getElementById(settings[i]);
+              if (caller) this.handleCheckbox(caller, localStorage[settings[i]]);
             }
           }
         }
