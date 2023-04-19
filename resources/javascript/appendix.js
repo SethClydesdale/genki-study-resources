@@ -415,11 +415,11 @@
       },
       
       
-      // launches an exercise based on a selected list of words
-      launchExercise : function () {
+      // purges bad definition ids (don't exist anymore or on the current site; e.g. going from tobira --> genki version which have different selectors)
+      purgeBadSelectors : function () {
         var j = Genki.appendix.jisho.selected.length;
         
-        // verify selected before launching the exercise
+        // verify selected definitions
         for (var i = 0, badId = []; i < j; i++) {
           if (!document.querySelector('#japanese-english [data-def="' + Genki.appendix.jisho.selected[i] + '"]')) {
             badId.push(Genki.appendix.jisho.selected[i]);
@@ -441,6 +441,15 @@
           // update with new length
           j = Genki.appendix.jisho.selected.length;
         }
+      },
+      
+      
+      // launches an exercise based on a selected list of words
+      launchExercise : function () {
+        var j = Genki.appendix.jisho.selected.length;
+        
+        // remove bad selectors before starting
+        Genki.appendix.jisho.purgeBadSelectors();
         
         // initiate an exercise once 5 or more words have been selected
         if (j < 5) {
@@ -469,8 +478,8 @@
               
               Genki.generateQuiz({
                 format : 'vocab',
-                type : ['drag', 'multi', 'writing', 'fill'],
-                info : [Genki.lang.std_drag, Genki.lang.vocab_multi, Genki.lang.vocab_writing, Genki.lang.vocab_fill],
+                type : ['multi', 'drag', 'writing', 'fill'],
+                info : [Genki.lang.vocab_multi, Genki.lang.std_drag, Genki.lang.vocab_writing, Genki.lang.vocab_fill],
 
                 quizlet : quizlet
               });
@@ -478,6 +487,80 @@
               Genki.appendix.showExercise();
             }
           });
+        }
+      },
+      
+      
+      // opens a modal for managing/viewing the words selected in the dictionary
+      manageWords : function () {
+        GenkiModal.open({
+          title : 'Manage Selected Words',
+          content : '<ol id="selected_words_list" class="dict-search-results"></ol>',
+
+          buttonText : 'Close',
+          noFocus : true,
+
+          customSize : {
+            top : '5%',
+            left : '10%',
+            bottom : '5%',
+            right : '10%'
+          }
+        });
+        
+        // remove bad selectors before showing current selection
+        Genki.appendix.jisho.purgeBadSelectors();
+
+        // disply currently selected words
+        var list = document.getElementById('selected_words_list'),
+            checked = storageOK && localStorage.selectedDefinitions ? localStorage.selectedDefinitions.split(',') : [],
+            i = 0,
+            j = Genki.appendix.jisho.selected.length,
+            frag, def, ja, ja_def;
+
+        if (j) {
+          frag = document.createDocumentFragment();
+
+          // parse selected definitions
+          for (; i < j; i++) {
+            def = document.createElement('LI');
+            def.className = 'definition clear';
+            def.dataset.def = Genki.appendix.jisho.selected[i];
+
+            // selected definition data
+            ja = Genki.jisho[Genki.appendix.jisho.selected[i].slice(0, 1)][Genki.appendix.jisho.selected[i].slice(1)];
+            ja_def = ja.ja.split('|');
+
+            def.innerHTML = 
+              '<input class="def-selector genki_input_hidden" type="checkbox" onchange="Genki.appendix.jisho.updateCheckboxes(this, \'' + def.dataset.def + '\');"' + (checked.indexOf(def.dataset.def) != -1 ? 'checked' : '') + '>'+
+              '<span tabindex="0" class="genki_pseudo_checkbox" onclick="this.previousSibling.click(); Genki.appendix.jisho.removeSelectedWord(this);" onkeypress="if (event.key == \'Enter\') { this.previousSibling.click(); Genki.appendix.jisho.removeSelectedWord(this); }"></span>'+
+              '<span class="def-ja' + (ja_def[1] ? ' def-furi' : '') + '">'+
+                ja_def[0]+
+                (ja_def[1] ? '<i>' + ja_def[1] + '</i>' : '')+
+              '</span>&nbsp;'+
+              '<span class="def-en">' + ja.en + '</span>'+
+              (ja.v ? ' <span class="def-vtype">[<i>' + ja.v + '</i>]</span>' : '')+
+              '<span class="def-label">' + ja.l + '</span>';
+
+            frag.appendChild(def);
+          }
+
+          list.appendChild(frag);
+          list.querySelector('.genki_pseudo_checkbox').focus();
+
+        } else {
+          list.innerHTML = 'No words selected.';
+        }
+      },
+
+
+      // removes selected dictionary word
+      removeSelectedWord : function (caller) {
+        var list = document.getElementById('selected_words_list');
+        list.removeChild(caller.parentNode);
+
+        if (!list.childNodes.length) {
+          list.innerHTML = 'No words selected.';
         }
       },
       

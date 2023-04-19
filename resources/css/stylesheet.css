@@ -2587,6 +2587,19 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   position:relative;
 }
 
+/* selected word manager */
+#selected_words_list.dict-search-results .definition {
+  list-style-type:decimal;
+  list-style-position:inside;
+}
+
+#selected_words_list.dict-search-results {
+  width:80%;
+  height:80%;
+  padding:5px 10px;
+  margin:0 auto;
+}
+
 /* groups */
 .dictionary-group {
   float:left;
