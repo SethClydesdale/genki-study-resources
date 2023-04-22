@@ -1685,6 +1685,10 @@ ruby rt {
 .multi-quiz.quiz-over .quiz-multi-answer { pointer-events:none; }
 .multi-quiz.quiz-over .text-selection-mode .quiz-multi-answer { pointer-events:auto; }
 
+.multi-quiz.quiz-over .wrong-answer .quiz-multi-answer.selected-answer, .multi-quiz.quiz-over .wrong-answer .quiz-multi-answer[data-answer="true"], .multi-quiz.quiz-over .quiz-multi-answer.selected-answer {
+  border-width:3px;
+}
+
 .multi-quiz.quiz-over .quiz-multi-answer.selected-answer { border-color:#080; }
 .multi-quiz.quiz-over .quiz-multi-answer.selected-answer:before, .multi-quiz.quiz-over .quiz-multi-answer[data-answer="true"]:before { color:#080; }
 
