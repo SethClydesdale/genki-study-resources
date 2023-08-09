@@ -132,7 +132,7 @@
   
   // # KEYBOARD SHORTCUTS #
   // various keyboard shortcuts used around the website
-  document.addEventListener('keyup', function (e) {
+  document.addEventListener('keydown', function (e) {
     if (e.ctrlKey && e.altKey) {
       var button;
 
