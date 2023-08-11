@@ -133,7 +133,7 @@
   // # KEYBOARD SHORTCUTS #
   // various keyboard shortcuts used around the website
   document.addEventListener('keydown', function (e) {
-    if (e.ctrlKey && e.altKey) {
+    if (e.ctrlKey && e.altKey || e.metaKey && e.altKey) {
       var button;
 
       // check what key was pressed
