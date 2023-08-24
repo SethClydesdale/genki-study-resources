@@ -133,7 +133,7 @@
   // # KEYBOARD SHORTCUTS #
   // various keyboard shortcuts used around the website
   document.addEventListener('keydown', function (e) {
-    if (e.ctrlKey && e.altKey || e.metaKey && e.altKey) {
+    if (e.ctrlKey && e.altKey || e.metaKey && e.shiftKey) {
       var button;
 
       // check what key was pressed
@@ -178,6 +178,11 @@
         // open site settings (ctrl+alt+m)
         case 'm':
           button = document.getElementById('genki-site-settings');
+          break;
+
+        // check answers (ctrl+alt+c)
+        case 'c':
+          button = document.getElementById('check-answers-button');
           break;
 
         default:
