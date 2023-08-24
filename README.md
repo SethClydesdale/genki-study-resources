@@ -28,7 +28,7 @@ If you're using the offline version you'll have to unzip the files. Once you've 
 
 
 ### Keyboard Shortcuts
-Genki Study Resources supports a few keyboard shortcuts which you can use to make things easier.
+Genki Study Resources supports a few keyboard shortcuts which you can use to make things easier. These shortcuts are typically used via <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>KEY</kbd> for Windows and <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>KEY</kbd> for Mac.
 
 #### Global
 Shortcuts that can be used anywhere.
@@ -49,6 +49,7 @@ Shortcuts that can only be used in exercises.
 | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>E</kbd> | Open/Close the Exercise List |
 | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Q</kbd> | Open/Close the Quick Dictionary |
 | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>F</kbd> | Toggle Furigana on/off |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>C</kbd> | Check answers (for written exercises) |
 
 
 ### Suggestions, Feedback, Bug Reports
