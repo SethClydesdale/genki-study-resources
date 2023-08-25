@@ -62,6 +62,7 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 - [Anki - SRS Flashcard App](https://apps.ankiweb.net/) (great for memorizing vocab; you can find decks for Genki [here](https://sethclydesdale.github.io/genki-study-resources/help/anki-decks/))
 - [Jisho - Online Japanese Dictionary](http://jisho.org/) (extremely useful for looking up words, kanji, etc.)
 - [Dictionary of Japanese Grammar](https://core6000.neocities.org/dojg/) (godsend for quickly looking up grammar points)
+- [Itazuraneko's Grammar Master Reference](https://kenrick95.github.io/itazuraneko/grammar/masterreference) (another great resource for looking up grammar points)
 - [Capture2Text](http://capture2text.sourceforge.net/) (very useful for copying and looking up kanji in games, images, etc.)
 - [Yomichan](https://foosoft.net/projects/yomichan/) (for quickly looking up words while reading, or for using the search page in tandem with Capture2Text)
 - [KanjiTomo](https://www.kanjitomo.net/) (useful for reading manga, LNs, etc.)
