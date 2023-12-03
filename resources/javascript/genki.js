@@ -2213,7 +2213,7 @@
             low: '<span id="result--low"> ',
           }
 
-          const resultSpan =  lessonResult > 70 ? resultSpans.good : lessonResult > 50 ? resultSpans.average >=0 : resultSpans.low;
+          const resultSpan =  lessonResult > 70 ? resultSpans.good : lessonResult > 50 ? resultSpans.average : resultSpans.low;
           const prevScore = lessonResult ? resultSpan + lessonResult +'%' +'</span>' : '';
 
           list += '<li id="menu-item-list"><a href="' + (lesson == '\\.\\.\\/' ? linkData[0] : '../../../' + Genki.ed + '/' + linkData[0] + '/') + Genki.local +
