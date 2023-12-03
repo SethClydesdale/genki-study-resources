@@ -1024,7 +1024,7 @@ footer li:first-child:before { display:none; }
 }
 
 #result--average {
-  color: rgb(255, 255, 0);
+  color: #f93;
   font-weight: 600;
 }
 
