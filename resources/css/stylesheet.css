@@ -1011,6 +1011,28 @@ footer li:first-child:before { display:none; }
   margin:0;
 }
 
+#menu-item-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+#result--good {
+  color: rgb(0, 119, 0);
+  font-weight: 600;
+}
+
+#result--average {
+  color: #f93;
+  font-weight: 600;
+}
+
+#result--low {
+  color: rgb(241, 0, 0);
+  font-weight: 600;
+}
+
 #exercise-list .lesson-title {
   color:#333;
   font-size:15px;
