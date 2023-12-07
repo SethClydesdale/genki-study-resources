@@ -1356,20 +1356,20 @@
 
       // save results in local storage
       if (Genki.active.exercise.length > 0) {
-        const lesson = Genki.active.exercise[0];
-        const genkiEdition = localStorage.GenkiEdition;
-        const lessonsResults =JSON.parse(localStorage.Results);
+        var lesson = Genki.active.exercise[0],
+            genkiEdition = localStorage.GenkiEdition,
+            lessonsResults = JSON.parse(localStorage.Results);
 
         if(!lessonsResults[genkiEdition]) lessonsResults[genkiEdition] = {};
-        const editionLessonsResults = lessonsResults[genkiEdition]
-        editionLessonsResults[lesson] =  Genki.stats.score;
+        var editionLessonsResults = lessonsResults[genkiEdition];
+        editionLessonsResults[lesson] = Genki.stats.score;
 
         localStorage.Results = JSON.stringify(lessonsResults);
 
         // refresh the exercise list with the new results
         Genki.create.removeExerciseList();
         Genki.create.exerciseList();
-    }
+      }
       
       // changes display over certain buttons
       if (type == 'stroke')  {
@@ -2144,8 +2144,11 @@
 
       // removes the exercise list when needed update without refreshing the page
       removeExerciseList : function () {
-        document.getElementById('exercise-list')?.remove();
-        document.getElementById('toggle-exercises')?.remove();
+        var list = document.getElementById('exercise-list'),
+            toggle = document.getElementById('toggle-exercises');
+        
+        if (list) list.parentNode.removeChild(list);
+        if (toggle) toggle.parentNode.removeChild(toggle);
       },
 
 
@@ -2174,12 +2177,16 @@
             };
 
 
-      if (storageOK) {
-        localStorage.GenkiEdition = /lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd';
-        
-        // Create storage for lessons results for specific edition
-        if(!localStorage.Results) localStorage.Results =JSON.stringify({[localStorage.GenkiEdition]: {}});
-      }
+        if (storageOK) {
+          localStorage.GenkiEdition = /lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd';
+
+          // Create storage for lessons results for specific edition
+          if (!localStorage.Results) {
+            var results = {};
+            results[localStorage.GenkiEdition] = {};
+            localStorage.Results = JSON.stringify(results);
+          }
+        }
 
         // loop over all the exercises and place them into their respectice lesson group
         for (; i < j; i++) {
@@ -2203,18 +2210,18 @@
           }
 
           // add the exercise link to the group and display results
-          const resultsStorage = JSON.parse(localStorage.Results)
-          const editionResultStorage = resultsStorage[localStorage.GenkiEdition]
+          var resultsStorage = JSON.parse(localStorage.Results),
+              editionResultStorage = resultsStorage[localStorage.GenkiEdition],
+              
+              lessonResult = editionResultStorage ? parseInt(editionResultStorage[linkData[0]]) : null,
+              resultSpans = {
+                good: '<span id="result--good"> ',
+                average: '<span id="result--average"> ',
+                low: '<span id="result--low"> ',
+              },
 
-          const lessonResult = editionResultStorage ? parseInt(editionResultStorage[linkData[0]]) : null;
-          const resultSpans = {
-            good: '<span id="result--good"> ',
-            average: '<span id="result--average"> ',
-            low: '<span id="result--low"> ',
-          }
-
-          const resultSpan =  lessonResult > 70 ? resultSpans.good : lessonResult > 50 ? resultSpans.average : resultSpans.low;
-          const prevScore = lessonResult ? resultSpan + lessonResult +'%' +'</span>' : '';
+              resultSpan =  lessonResult > 70 ? resultSpans.good : lessonResult > 50 ? resultSpans.average : resultSpans.low,
+              prevScore = lessonResult ? resultSpan + lessonResult +'%' +'</span>' : '';
 
           list += '<li id="menu-item-list"><a href="' + (lesson == '\\.\\.\\/' ? linkData[0] : '../../../' + Genki.ed + '/' + linkData[0] + '/') + Genki.local +
             Genki.debug + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') +
