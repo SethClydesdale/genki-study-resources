@@ -1353,6 +1353,23 @@
           '</div>'+
         '</div>'+
       '</div>';
+
+      // save results in local storage
+      if (Genki.active.exercise.length > 0) {
+        const lesson = Genki.active.exercise[0];
+        const genkiEdition = localStorage.GenkiEdition;
+        const lessonsResults =JSON.parse(localStorage.Results);
+
+        if(!lessonsResults[genkiEdition]) lessonsResults[genkiEdition] = {};
+        const editionLessonsResults = lessonsResults[genkiEdition]
+        editionLessonsResults[lesson] =  Genki.stats.score;
+
+        localStorage.Results = JSON.stringify(lessonsResults);
+
+        // refresh the exercise list with the new results
+        Genki.create.removeExerciseList();
+        Genki.create.exerciseList();
+    }
       
       // changes display over certain buttons
       if (type == 'stroke')  {
@@ -2125,6 +2142,12 @@
         document.getElementById('quiz-timer').insertAdjacentHTML('afterend', more + '</div>');
       },
 
+      // removes the exercise list when needed update without refreshing the page
+      removeExerciseList : function () {
+        document.getElementById('exercise-list')?.remove();
+        document.getElementById('toggle-exercises')?.remove();
+      },
+
 
       // creates the exercise list
       exerciseList : function () {
@@ -2132,7 +2155,7 @@
             list = 
             '<nav id="exercise-list">'+
               '<h3 class="main-title">Exercise List</h3>'+
-              '<button id="random-exercise" class="button" onclick="Genki.randomExercise();" title="Random Exericse"><i class="fa">&#xf074;</i></button>'+
+              '<button id="random-exercise" class="button" onclick="Genki.randomExercise();" title="Random Exercise"><i class="fa">&#xf074;</i></button>'+
               '<div id="lessons-list"><h4 ' + attrs + '>Page links</h4><ul id="page-links">',
             lesson = '\\.\\.\\/',
             i = 0,
@@ -2149,6 +2172,14 @@
               literacy : 'Reading and Writing',
               'literacy-wb' : 'Workbook: Reading and Writing'
             };
+
+
+      if (storageOK) {
+        localStorage.GenkiEdition = /lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd';
+        
+        // Create storage for lessons results for specific edition
+        if(!localStorage.Results) localStorage.Results =JSON.stringify({[localStorage.GenkiEdition]: {}});
+      }
 
         // loop over all the exercises and place them into their respectice lesson group
         for (; i < j; i++) {
@@ -2170,10 +2201,24 @@
             group = currentGroup;
             list += '<li><h4 class="sub-lesson-title">' + groupTitles[group] + '</h4></li>';
           }
-          
-          // add the exercise link to the group
-          list += '<li><a href="' + (lesson == '\\.\\.\\/' ? linkData[0] : '../../../' + Genki.ed + '/' + linkData[0] + '/') + Genki.local + Genki.debug + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') + (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '"' : '') + ' title="' + linkData[1] + '">' + linkData[1] + '</a></li>';
-          
+
+          // add the exercise link to the group and display results
+          const resultsStorage = JSON.parse(localStorage.Results)
+          const editionResultStorage = resultsStorage[localStorage.GenkiEdition]
+
+          const lessonResult = editionResultStorage ? parseInt(editionResultStorage[linkData[0]]) : null;
+          const resultSpans = {
+            good: '<span id="result--good"> ',
+            average: '<span id="result--average"> ',
+            low: '<span id="result--low"> ',
+          }
+
+          const resultSpan =  lessonResult > 70 ? resultSpans.good : lessonResult > 50 ? resultSpans.average : resultSpans.low;
+          const prevScore = lessonResult ? resultSpan + lessonResult +'%' +'</span>' : '';
+
+          list += '<li id="menu-item-list"><a href="' + (lesson == '\\.\\.\\/' ? linkData[0] : '../../../' + Genki.ed + '/' + linkData[0] + '/') + Genki.local +
+            Genki.debug + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') +
+            (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '"' : '') + ' title="' + linkData[1] + '">'+ linkData[1] +'</a>'+ " "+  prevScore +'</li>';
         }
 
         // add the exercise list to the document
