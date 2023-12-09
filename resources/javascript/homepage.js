@@ -296,4 +296,19 @@
   // Add arrows to each lesson title that will take the student back to the quick navigation
   AddJumpArrowsTo('.lesson-title', 'quick-nav', 'Jump to Quick Navigation');
   
+  
+  // # EXERCISE RESULTS #
+  // Displays exercise results next to each exercise
+  if (storageOK && localStorage.Results) {
+    var results = JSON.parse(localStorage.Results)[/lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd'], k, a;
+
+    for (k in results) {
+      a = document.querySelector('a[href*="' + k + '"]');
+
+      if (a) {
+        a.parentNode.insertAdjacentHTML('beforeend', '&nbsp;<span class="exercise-results result--' + (results[k] == 100 ? 'perfect' : results[k] >= 70 ? 'good' : results[k] >= 50 ? 'average' : 'low') + '" title="Exercise score"><i class="fa">' + (results[k] == 100 ? '&#xf005;' : results[k] >= 70 ? '&#xf00c;' : results[k] >= 50 ? '&#xf10c;' : '&#xf00d;') + '</i> ' + results[k] + '%</span>');
+      }
+    }
+  }  
+  
 }(window, document));

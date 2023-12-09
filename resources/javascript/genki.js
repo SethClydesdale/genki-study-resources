@@ -2215,15 +2215,16 @@
               
               lessonResult = editionResultStorage ? parseInt(editionResultStorage[linkData[0]]) : null,
               resultSpans = {
-                good: '<span id="result--good"> ',
-                average: '<span id="result--average"> ',
-                low: '<span id="result--low"> ',
+                perfect: '<span class="exercise-results result--perfect" title="Exercise score"><i class="fa">&#xf005;</i> ',
+                good: '<span class="exercise-results result--good" title="Exercise score"><i class="fa">&#xf00c;</i> ',
+                average: '<span class="exercise-results result--average" title="Exercise score"><i class="fa">&#xf10c;</i> ',
+                low: '<span class="exercise-results result--low" title="Exercise score"><i class="fa">&#xf00d;</i> ',
               },
 
-              resultSpan =  lessonResult > 70 ? resultSpans.good : lessonResult > 50 ? resultSpans.average : resultSpans.low,
+              resultSpan =  lessonResult == 100 ? resultSpans.perfect : lessonResult >= 70 ? resultSpans.good : lessonResult >= 50 ? resultSpans.average : resultSpans.low,
               prevScore = lessonResult ? resultSpan + lessonResult +'%' +'</span>' : '';
 
-          list += '<li id="menu-item-list"><a href="' + (lesson == '\\.\\.\\/' ? linkData[0] : '../../../' + Genki.ed + '/' + linkData[0] + '/') + Genki.local +
+          list += '<li class="menu-item-list"><a href="' + (lesson == '\\.\\.\\/' ? linkData[0] : '../../../' + Genki.ed + '/' + linkData[0] + '/') + Genki.local +
             Genki.debug + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') +
             (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '"' : '') + ' title="' + linkData[1] + '">'+ linkData[1] +'</a>'+ " "+  prevScore +'</li>';
         }
