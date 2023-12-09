@@ -1011,26 +1011,40 @@ footer li:first-child:before { display:none; }
   margin:0;
 }
 
-#menu-item-list {
+.menu-item-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  position:relative;
 }
 
-#result--good {
-  color: rgb(0, 119, 0);
+.result--perfect {
+  color: #F90;
   font-weight: 600;
 }
 
-#result--average {
-  color: #f93;
+.result--good {
+  color: #080;
   font-weight: 600;
 }
 
-#result--low {
-  color: rgb(241, 0, 0);
+.result--average {
+  color: #AA0;
   font-weight: 600;
+}
+
+.result--low {
+  color: #F00;
+  font-weight: 600;
+}
+
+.exercise-results {
+  min-width:65px;
+}
+
+.exercise-results .fa {
+  font-size:16px;
 }
 
 #exercise-list .lesson-title {
@@ -1079,7 +1093,6 @@ footer li:first-child:before { display:none; }
   text-overflow:ellipsis;
   overflow:hidden;
   display:block;
-  position:relative;
 }
 
 #exercise-list li a.active-lesson {
