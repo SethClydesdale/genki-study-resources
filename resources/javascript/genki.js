@@ -1355,7 +1355,7 @@
       '</div>';
 
       // save results in local storage
-      if (Genki.active.exercise.length > 0) {
+      if (Genki.active.exercise.length > 0 && !/appendix|study-tools/.test(Genki.active.exercise[0])) {
         var lesson = Genki.active.exercise[0],
             genkiEdition = localStorage.GenkiEdition,
             lessonsResults = JSON.parse(localStorage.Results);

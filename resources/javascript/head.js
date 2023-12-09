@@ -271,6 +271,12 @@
             '<span class="label" title="Enable or disable pausing timer when you leave or hide the exercise page">Pause Timer Automatically:</span>'+
             '<button id="settings-timer-auto-pause" class="button' + (timerAutoPause == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateTimerAutoPause(this);">' + (timerAutoPause == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
+
+          '<li>'+
+            '<span class="label" title="Save or load your exercise score data.\nThis data is stored locally in the browser, so it\'s highly recommended that you save your data periodically so you don\'t lose it.">Save/Load Exercise Score Data:</span>'+
+            '<a id="settings-save-exercise-data" class="button" download="Genki Exercise Score Data" href="data:,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '') + '"><i class="fa">&#xf019;</i>Save</a>'+
+            '<button id="settings-load-exercise-data" class="button" onclick="this.nextSibling.click();"><i class="fa">&#xf093;</i>Load</button><input id="settings-load-data" type="file" accept=".txt,.json,.js" onchange="GenkiSettings.loadExerciseData(this);" style="visibility:hidden;position:absolute;">'+
+          '</li>'+
         '</ul>',
 
         buttonText : 'Close',
@@ -284,6 +290,26 @@
           right : '10%'
         }
       });
+    },
+    
+    
+    // loads exercise score data
+    loadExerciseData : function (input) {
+      var file = input.files[0],
+          reader = new FileReader();
+      
+      reader.onload = function (e) {
+        if (/"3rd"\:|"2nd"\:/.test(e.target.result)) {
+          localStorage.Results = e.target.result;
+          
+          alert('Exercise score data has been loaded successfully! Please reload the page to update your scores.');
+          
+        } else {
+          alert('There was an error loading the exercise score data. Please try again or open a new issue on GitHub for help: https://github.com/SethClydesdale/genki-study-resources/issues');
+        }
+      };
+      
+      reader.readAsText(file, 'UTF-8');
     },
     
     
