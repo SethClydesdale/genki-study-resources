@@ -2240,6 +2240,7 @@
           // highlight the active exercise and scoll to it
           active = document.querySelector('a[href*="' + Genki.active.exercise[0] + '"]');
           active.className += ' active-lesson';
+          active = active.parentNode;
 
           // jump to the active exercise
           document.getElementById('lessons-list').scrollTop = active.offsetTop - (active.getBoundingClientRect().height + (window.matchMedia && matchMedia('(pointer:coarse)').matches ? 0 : 6));
