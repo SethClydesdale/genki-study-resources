@@ -2,13 +2,6 @@
 (function (window, document) {
   'use strict';
   
-  const PracticeType = Object.freeze({
-    DRAG: 'drag',
-    MULTI: 'multi',
-    WRITING: 'writing',
-    FILL: 'fill',
-    STROKE: 'stroke'
-  });
   // primary object for functionality of Genki exercises
   var Genki = {
     
@@ -176,7 +169,19 @@
       }
     },
 
-
+    
+    // quiz types
+    // feel free to use as a reference for selecting types or within code as Genki.QuizType.TYPE
+    QuizType : {
+      DRAG: 'drag',
+      KANA: 'kana',
+      WRITING: 'writing',
+      MULTI: 'multi',
+      FILL: 'fill',
+      STROKE: 'stroke',
+      DRAWING: 'drawing'
+    },
+    
     // To generate a quiz simply pass an object with the necessary data (see vocab-1/index.html and other quiz files for examples)
     generateQuiz : function (o) {
       // cache exercise data for resetting exercises
@@ -1279,7 +1284,7 @@
           }
 
         } else { // end the quiz if there's no new question
-          Genki.endQuiz(flag == PracticeType.STROKE ? flag : PracticeType.MULTI);
+          Genki.endQuiz(flag == Genki.QuizType.STROKE ? flag : Genki.QuizType.MULTI);
 
           // show all questions and answers
           for (var q = document.querySelectorAll('[id^="quiz-q"]'), i = 0, j = q.length; i < j; i++) {
@@ -1320,7 +1325,7 @@
     // ends the quiz
     endQuiz : function (type) {
       Genki.quizOver = true; // marks quiz as over
-      console.log("type: ", type);
+      
       // type value adjustments
       type = type == 'drawing' ? 'stroke' : type; // changes type to "stroke" for drawing practice, since they share many traits.
       
@@ -1368,8 +1373,9 @@
             lessonsResults = JSON.parse(localStorage.Results);
 
         if(!lessonsResults[genkiEdition]) lessonsResults[genkiEdition] = {};
+        
         var editionLessonsResults = lessonsResults[genkiEdition];
-        editionLessonsResults[lesson] = Genki.stats.score;
+        editionLessonsResults[lesson] = (typeof editionLessonsResults[lesson] == 'undefined' || Genki.stats.score > editionLessonsResults[lesson]) ? Genki.stats.score : editionLessonsResults[lesson];
 
         localStorage.Results = JSON.stringify(lessonsResults);
 
@@ -1855,7 +1861,7 @@
               }
             }
 
-            Genki.endQuiz(type ? type : PracticeType.WRITING); // show quiz results
+            Genki.endQuiz(type ? type : Genki.QuizType.WRITING); // show quiz results
           }
         });
       }
@@ -2229,8 +2235,8 @@
               },
 
               resultSpan =  lessonResult == 100 ? resultSpans.perfect : lessonResult >= 70 ? resultSpans.good : lessonResult >= 50 ? resultSpans.average : resultSpans.low,
-              prevScore = lessonResult ? resultSpan + lessonResult +'%' +'</span>' : '';
-
+              prevScore = lessonResult > -1 ? resultSpan + lessonResult +'%' +'</span>' : '';
+          
           list += '<li class="menu-item-list"><a href="' + (lesson == '\\.\\.\\/' ? linkData[0] : '../../../' + Genki.ed + '/' + linkData[0] + '/') + Genki.local +
             Genki.debug + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, '$1') < 13 ? 'I' : 'II') +
             (/workbook-|wb-/.test(linkData[0]) ? ' Workbook' : '') + ': ' + linkData[2] + '"' : '') + ' title="' + linkData[1] + '">'+ linkData[1] +'</a>'+ " "+  prevScore +'</li>';
