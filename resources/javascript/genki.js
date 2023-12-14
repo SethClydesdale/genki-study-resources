@@ -2,6 +2,13 @@
 (function (window, document) {
   'use strict';
   
+  const PracticeType = Object.freeze({
+    DRAG: 'drag',
+    MULTI: 'multi',
+    WRITING: 'writing',
+    FILL: 'fill',
+    STROKE: 'stroke'
+  });
   // primary object for functionality of Genki exercises
   var Genki = {
     
@@ -982,16 +989,17 @@
         // check if the answer is correct before dropping the element
         drake.on('drop', function (el, target, source) {
           if (Genki.isTouch) document.body.style.overflow = ''; // restore overflow
-          
           if (target.dataset.text) { // makes sure the element is a drop zone (data-text == data-answer)
 
             // if the answer is wrong we'll send the item back to the answer list
             if (el.dataset.answer != target.dataset.text) {
               document.getElementById('answer-list').appendChild(el);
-
+              
               // global mistakes are incremented along with mistakes specific to problems
               target.dataset.mistakes = ++target.dataset.mistakes;
-              ++Genki.stats.mistakes;
+              
+              // allows to see how many times target was gotten wrong while overall answers wrong number isn't bloated
+              target.dataset.mistakes > 1 ? Genki.stats.mistakes : ++Genki.stats.mistakes;
 
             } else {
               target.className += ' answer-correct';
@@ -1001,7 +1009,6 @@
                 Genki.markedItem.className = 'quiz-item';
                 Genki.markedItem = null;
               }
-              
               // when all problems have been solved..
               // stop the timer, show the score, and congratulate the student
               if (++Genki.stats.solved == Genki.stats.problems) {
@@ -1272,7 +1279,7 @@
           }
 
         } else { // end the quiz if there's no new question
-          Genki.endQuiz(flag == 'stroke' ? flag : 'multi');
+          Genki.endQuiz(flag == PracticeType.STROKE ? flag : PracticeType.MULTI);
 
           // show all questions and answers
           for (var q = document.querySelectorAll('[id^="quiz-q"]'), i = 0, j = q.length; i < j; i++) {
@@ -1313,7 +1320,7 @@
     // ends the quiz
     endQuiz : function (type) {
       Genki.quizOver = true; // marks quiz as over
-      
+      console.log("type: ", type);
       // type value adjustments
       type = type == 'drawing' ? 'stroke' : type; // changes type to "stroke" for drawing practice, since they share many traits.
       
@@ -1848,7 +1855,7 @@
               }
             }
 
-            Genki.endQuiz(type ? type : 'writing'); // show quiz results
+            Genki.endQuiz(type ? type : PracticeType.WRITING); // show quiz results
           }
         });
       }
