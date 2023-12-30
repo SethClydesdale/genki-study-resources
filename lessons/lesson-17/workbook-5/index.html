@@ -27,12 +27,12 @@
   </head>
 
   <body>
-    
+
     <header>
       <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
-    
+
     <div id="content">
       <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
@@ -40,7 +40,7 @@
         <div id="quiz-timer" class="center"></div>
       </div>
     </div>
-    
+
     <footer class="clear">
       <ul class="footer-left">
         <li><a href="../../../" id="footer-home">Home</a></li>
@@ -49,12 +49,12 @@
         <li><a href="../../../help/">Help</a></li>
         <li><a href="../../../donate/">Donate</a></li>
       </ul>
-      
+
       <ul class="footer-right">
         <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
       </ul>
     </footer>
-    
+
     <script src="../../../resources/javascript/dragula.min.js"></script>
     <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
@@ -63,8 +63,8 @@
     <script>Genki.generateQuiz({
       type : 'fill',
       info : 'Complete the following problems using ～前に／～てから.',
-      
-      quizlet : 
+
+      quizlet :
       '<div class="count-problems">'+
         '<p class="section-desc">Look at the timeline below and describe the sequence of events.</p>'+
         '<table class="table center">'+
@@ -77,7 +77,7 @@
             '<td>F</td>'+
             '<td>G</td>'+
           '</tr>'+
-        
+
           '<tr>'+
             '<td>wash hands</td>'+
             '<td>cook</td>'+
@@ -88,29 +88,29 @@
             '<td>brush teeth</td>'+
           '</tr>'+
         '</table><br>'+
-        
+
         '<div class="problem">(a) & (b)：{料理する|りょうりする|answer}前に{手を洗います|てをあらいます|' + Genki.getAlts('{手}を{洗}います', 'て|あら') + 'answer}。</div>'+
         '<div class="problem">(c) & (d)：{ご飯を食べる|ごはんをたべる|' + Genki.getAlts('ご{飯}を{食}べる', 'はん|た') + 'answer}前に{「いただきます」と言います|「いただきます」といいます|answer}。</div>'+
         '<div class="problem">(d) & (e)：{ご飯を食べて|ごはんをたべて|' + Genki.getAlts('ご{飯}を{食}べて', 'はん|た') + 'answer}から{「ごちそうさま」と言います|「ごちそうさま」といいます|answer}。</div>'+
         '<div class="problem">(f) & (g)：{皿を洗って|さらをあらって|' + Genki.getAlts('{皿}を{洗}って', 'さら|あら') + 'answer}から{歯を磨きます|はをみがきます|' + Genki.getAlts('{歯}を{磨}きます', 'は|みが') + 'answer}。</div>'+
-        
+
         '<p class="section-desc">Translate the following sentences.</p>'+
         '<div class="problem">'+
           'After playing tennis, I studied Japanese for an hour.<br>'+
           '{テニスをしてから、日本語を一時間勉強しました|テニスをしてから、にほんごをいちじかんべんきょうしました|' + Genki.getAlts('テニスをしてから、{日本語}を{一時間}{勉強}しました', 'にほんご|いちじかん|べんきょう') + 'answer}。'+
         '</div>'+
-        
+
         '<div class="problem">'+
           'After locking (the door), I went to bed.<br>'+
-          '{かぎをかけてから寝ました|かぎをかけてからねました|answer}。'+
+          '{鍵をかけてから寝ました|かぎをかけてから寝ました|かぎをかけてからねました|answer}。'+
         '</div>'+
-        
+
         '<div class="problem">'+
           'Before going out, I always watch the weather forecast.<br>'+
           '{出かける前に、いつも天気予報を見ます|でかけるまえに、いつもてんきよほうをみます|' + Genki.getAlts('{出}かける{前}に、いつも{天気予報}を{見}ます', 'で|まえ|てんきよほう|み') + 'answer}。'+
         '</div>'+
       '</div>'
-        
+
     });</script>
   </body>
 </html>
