@@ -2653,6 +2653,12 @@
         var regex = new RegExp(window.location.href.replace(/.*?(lesson-\d+).*/, '$1/')),
             list = Genki.exercises.filter(function(a) { return regex.test(a) });
       } 
+
+      // random exercise preference (random, previously completed lesson)
+      else if (storageOK && localStorage.genkiRandomExercise == 'completed' && localStorage.Results && JSON.parse(localStorage.Results)[localStorage.GenkiEdition]) {
+        var editionLessonResults = JSON.parse(localStorage.Results)[localStorage.GenkiEdition];
+        var list = Genki.exercises.filter(function(a) { return a.split('|')[0] in editionLessonResults });
+      }
       
       // default (all lessons), triggers this instead of preference if in the appendix or study tools since they're not lessons
       else {
