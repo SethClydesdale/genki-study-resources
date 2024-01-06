@@ -244,6 +244,7 @@
             '<select id="random-exercise-type" onchange="GenkiSettings.updateRandomExercise(this);">'+
               '<option value="all"' + ( randomExercise == 'all' ? ' selected' : '' ) + '>All Lessons</option>'+
               '<option value="lesson"' + ( randomExercise == 'lesson' ? ' selected' : '' ) + '>Current Lesson</option>'+
+              '<option value="completed"' + ( randomExercise == 'completed' ? ' selected' : '' ) + '>Practice Completed Exercises</option>'+
             '</select>'+
           '</li>'+
         
