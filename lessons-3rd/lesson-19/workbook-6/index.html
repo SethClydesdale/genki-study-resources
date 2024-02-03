@@ -27,12 +27,12 @@
   </head>
 
   <body>
-    
+
     <header>
       <h1><a href="../../" id="home-link" class="edition-icon third-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
-    
+
     <div id="content">
       <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
@@ -40,7 +40,7 @@
         <div id="quiz-timer" class="center"></div>
       </div>
     </div>
-    
+
     <footer class="clear">
       <ul class="footer-left">
         <li><a href="../../" id="footer-home">Home</a></li>
@@ -49,12 +49,12 @@
         <li><a href="../../../help/">Help</a></li>
         <li><a href="../../../donate/">Donate</a></li>
       </ul>
-      
+
       <ul class="footer-right">
         <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
       </ul>
     </footer>
-    
+
     <script src="../../../resources/javascript/dragula.min.js"></script>
     <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
@@ -63,25 +63,25 @@
     <script>Genki.generateQuiz({
       type : 'fill',
       info : 'Complete the following problems using ～はずです.',
-      
-      quizlet : 
+
+      quizlet :
       '<div class="count-problems">'+
         '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Translate the sentences, using ～はずです.</p>'+
         '<div class="problem">'+
           'I believe that Sora will tidy up her room, because her boyfriend will come.<br>'+
           '{彼が来るから、ソラさんは部屋を片付けるはずです|かれがくるから、ソラさんはへやをかたづけるはずです|' + Genki.getAlts('{彼}が{来}るから、ソラさんは{部屋}を{片付}けるはずです', 'かれ|く|へや|かたづ') + 'answer}。'+
         '</div>'+
-        
+
         '<div class="problem">'+
           'I believe that Mary will not cut classes, because she is a good student.<br>'+
           '{メアリーさんはいい学生だから、授業をサボらないはずです|メアリーさんはいいがくせいだから、じゅぎょうをサボらないはずです|' + Genki.getAlts('メアリーさんは{い}い{学生}だから、{授業}をサボらないはずです', '良|がくせい|じゅぎょう') + Genki.getAlts('メアリーさんは{よ}い{学生}だから、{授業}をサボらないはずです', '良|がくせい|じゅぎょう') + 'answer}。'+
         '</div>'+
-        
+
         '<div class="problem">'+
           'I believe that Canada (カナダ) is larger than the United States.<br>'+
           '{カナダはアメリカより大きいはずです|カナダはアメリカよりおおきいはずです|answer}。'+
         '</div>'+
-        
+
         '<div class="problem">'+
           'I believe that John is good at Chinese, because he lived in China.<br>'+
           '{ジョンさんは中国に住んでいたから、中国語が上手なはずです|ジョンさんはちゅうごくにすんでいたから、ちゅうごくごがじょうずなはずです|' + Genki.getAlts('ジョンさんは{中国}に{住}んでいたから、{中国語}が{上手}なはずです', 'ちゅうごく|す|ちゅうごくご|じょうず') + 'answer}。'+
@@ -96,7 +96,7 @@
             'B：<ruby>山田<rt>やまだ</rt></ruby>さんはベジタリアン（vegetarian）だから、{食べないはず%(です/だよ)|たべないはず%(です/だよ)|answer}。'+
           '</div>'+
         '</div>'+
-        
+
         '<div class="problem">'+
           '<div class="inner-problem">'+
             '<ruby>先生<rt>せんせい</rt></ruby>：メアリーさんがいませんね。<ruby>今日<rt>きょう</rt></ruby>はクラスを<ruby>休<rt>やす</rt></ruby>むんでしょうか。<br>'+
@@ -108,9 +108,9 @@
       '<div class="count-problems valign-top">'+
         '<p class="sectionDesc3rd"><span class="sectionNumber3rd">III</span>Complete the sentences, using ～はずでした for the failed predictions.</p>'+
         '<div class="problem"><ruby>飛行機<rt>ひこうき</rt></ruby>は<ruby>九時<rt>くじ</rt></ruby>に<ruby>空港<rt>くうこう</rt></ruby>に{着くはずでした|つくはずでした|answer}が、<ruby>雪<rt>ゆき</rt></ruby>で<ruby>遅<rt>おく</rt></ruby>れてしまいました。</div>'+
-        '<div class="problem">{来年結婚するはずでした|らいねんけっこんするはずでした|' + Genki.getAlts('{来年}{結婚}するはずでした', 'らいねん|けっこん') + 'answer}が、<ruby>別<rt>わか</rt></ruby>れてしまいました。</div>'+
+        '<div class="problem">来年二人は{結婚するはずでした|けっこんするはずでした|' + Genki.getAlts('{結婚}するはずでした', 'けっこん') + 'answer}が、<ruby>別<rt>わか</rt></ruby>れてしまいました。</div>'+
       '</div>'
-        
+
     });</script>
   </body>
 </html>
