@@ -2658,6 +2658,10 @@
       else if (storageOK && localStorage.genkiRandomExercise == 'completed' && localStorage.Results && JSON.parse(localStorage.Results)[localStorage.GenkiEdition]) {
         var editionLessonResults = JSON.parse(localStorage.Results)[localStorage.GenkiEdition];
         var list = Genki.exercises.filter(function(a) { return a.split('|')[0] in editionLessonResults });
+        
+        if (!list[0]) {
+          return alert('Cannot select a random exercise, because you have not completed enough exercises yet.');
+        }
       }
       
       // default (all lessons), triggers this instead of preference if in the appendix or study tools since they're not lessons
