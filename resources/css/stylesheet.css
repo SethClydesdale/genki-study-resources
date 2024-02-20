@@ -1612,6 +1612,7 @@ ruby rt {
 
 .helper-hidden .multi-vocab rt {
   display:block;
+  display:ruby-text;
   visibility:hidden;
 }
 
