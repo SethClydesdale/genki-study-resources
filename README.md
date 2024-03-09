@@ -51,6 +51,16 @@ Shortcuts that can only be used in exercises.
 | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>F</kbd> | Toggle Furigana on/off |
 | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>C</kbd> | Check answers (for written exercises) |
 
+##### Multiple Choice
+The following shortcuts can only be used in multiple choice exercises to quickly select an answer.
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>ALT</kbd>+<kbd>A</kbd> | Selects option A |
+| <kbd>ALT</kbd>+<kbd>B</kbd> | Selects option B |
+| <kbd>ALT</kbd>+<kbd>C</kbd> | Selects option C |
+| <kbd>ALT</kbd>+<kbd>D</kbd> | Selects option D |
+
 
 ### Suggestions, Feedback, Bug Reports
 If you have any suggestions, feedback, questions, or bugs to report, feel free to [open a new discussion](https://github.com/SethClydesdale/genki-study-resources/discussions) in this repository. For alternative contact methods and detailed reporting information, please see the [report page](https://sethclydesdale.github.io/genki-study-resources/report/) for Genki Study Resources.
