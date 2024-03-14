@@ -2743,6 +2743,13 @@
           Genki.isTouching = true;
         }
         
+        // extra fallback for preventing page scroll while dragging objects
+        document.addEventListener('touchmove', function (e) {
+          if (Genki.isTouching && /hidden/i.test(document.body.style.overflow)) {
+            e.preventDefault();
+          }
+        }, { passive : false });
+        
         document.ontouchend = function () {
           Genki.isTouching = false;
         }
