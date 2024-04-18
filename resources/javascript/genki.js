@@ -1371,7 +1371,7 @@
         var lesson = Genki.active.exercise[0],
             genkiEdition = localStorage.GenkiEdition,
             lessonsResults = JSON.parse(localStorage.Results);
-
+        
         if(!lessonsResults[genkiEdition]) lessonsResults[genkiEdition] = {};
         
         var editionLessonsResults = lessonsResults[genkiEdition];
@@ -2194,8 +2194,8 @@
           localStorage.GenkiEdition = /lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd';
 
           // Create storage for lessons results for specific edition
-          if (!localStorage.Results) {
-            var results = {};
+          if (!localStorage.Results || !new RegExp(localStorage.GenkiEdition).test(localStorage.Results)) {
+            var results = localStorage.Results ? JSON.parse(localStorage.Results) : {};
             results[localStorage.GenkiEdition] = {};
             localStorage.Results = JSON.stringify(results);
           }
