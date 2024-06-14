@@ -2004,7 +2004,7 @@ ruby rt {
 .fill-quiz .writing-zone {
   background:none;
   display:inline-block;
-  vertical-align:bottom;
+  vertical-align:top;
   margin:0 1px;
   min-width:0;
 }
