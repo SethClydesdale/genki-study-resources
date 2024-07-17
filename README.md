@@ -72,8 +72,6 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 - [Anki - SRS Flashcard App](https://apps.ankiweb.net/) (great for memorizing vocab; you can find decks for Genki [here](https://sethclydesdale.github.io/genki-study-resources/help/anki-decks/))
 - [Jisho - Online Japanese Dictionary](http://jisho.org/) (extremely useful for looking up words, kanji, etc.)
 - [Jotoba - Japanese Dictionary website](https://jotoba.de/) (another very useful dictionary with search suggestions, pitch accent support and many other helpful features for learning Japanese)
-- [Dictionary of Japanese Grammar](https://core6000.neocities.org/dojg/) (godsend for quickly looking up grammar points)
-- [Itazuraneko's Grammar Master Reference](https://kenrick95.github.io/itazuraneko/grammar/masterreference) (another great resource for looking up grammar points)
 - [Capture2Text](http://capture2text.sourceforge.net/) (very useful for copying and looking up kanji in games, images, etc.)
 - [Yomichan](https://foosoft.net/projects/yomichan/) (for quickly looking up words while reading, or for using the search page in tandem with Capture2Text)
 - [KanjiTomo](https://www.kanjitomo.net/) (useful for reading manga, LNs, etc.)
@@ -82,6 +80,9 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 
 ##### Websites
 - [Genki Self-study Room](http://genki.japantimes.co.jp/self_en) | [Genki Online](https://genki3.japantimes.co.jp/) (official Genki sites/resources)
+- [Tobira Grammar Index](https://sethclydesdale.github.io/tobira-study-resources/lessons/appendix/grammar-index/) (for intermediate to advanced grammar explanations)
+- [Dictionary of Japanese Grammar](https://core6000.neocities.org/dojg/) (godsend for quickly looking up grammar points)
+- [Itazuraneko's Grammar Master Reference](https://kenrick95.github.io/itazuraneko/grammar/masterreference) (another great resource for looking up grammar points)
 - [Tae Kim's Guide to Learning Japanese](http://www.guidetojapanese.org/learn/) (good for supplementary learning/explanations)
 - [Imabi](http://www.imabi.net/) (very useful for more advanced learning/explanations)
 - [/r/LearnJapanese Wiki](https://www.reddit.com/r/LearnJapanese/wiki/index) (additional resources, guides, etc.)
@@ -111,4 +112,4 @@ The following resources were used in this project. I couldn't have done it witho
 - [Genanki](https://github.com/kerrickstaley/genanki) for the simple package to create Anki decks
 
 ### Donate
-Please see the [Donate page](https://sethclydesdale.github.io/genki-study-resources/donate/) for ways to support my work.
+If you found this project helpful and would like to donate, please see the [Donate page](https://sethclydesdale.github.io/genki-study-resources/donate/) for ways to support my work.
