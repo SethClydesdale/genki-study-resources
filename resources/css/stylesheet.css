@@ -421,7 +421,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 }
 
 /* link list */
-#page-links { margin:15px 0 0 0; }
+#page-links, #related-projects { margin:15px 0 0 0; }
 #link-list { font-size:0; }
 #link-list span { font-size:14px; }
 
@@ -474,6 +474,12 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   margin-right:6px;
 }
 #link-github i, #link-help i { font-size:18px; }
+
+/* related projects */
+#project-list img {
+  height:120px;
+  margin:10px 4px 0 0;
+}
 
 /* quick navigation and quick search */
 #quick-actions > div { margin:0; }
