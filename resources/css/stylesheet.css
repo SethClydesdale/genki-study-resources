@@ -423,7 +423,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 /* link list */
 #page-links, #related-projects { margin:15px 0 0 0; }
 #link-list { font-size:0; }
-#link-list span { font-size:14px; }
+#link-list span, #link-list a { font-size:14px; }
 
 #link-list a {
   color:#FFF;
@@ -435,6 +435,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   margin:10px 10px 0 0;
 }
 
+#link-home.button { border-bottom:2px solid #D71; }
 #link-edition   { background-color:#F93; border-bottom:2px solid #D71; }
 #link-anki      { background-color:#05C; border-bottom:2px solid #03A; }
 #link-help      { background-color:#39C; border-bottom:2px solid #17A; }
@@ -475,10 +476,25 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 }
 #link-github i, #link-help i { font-size:18px; }
 
+#exercise-list #page-links {
+  margin:0;
+  padding:0;
+}
+#exercise-list .indent-block { margin-left:10px; }
+
 /* related projects */
 #project-list img {
   height:120px;
   margin:10px 4px 0 0;
+}
+
+#related img {
+  height:120px;
+  margin:5px;
+}
+#related h3 {
+  margin-top:20px;
+  margin-bottom:5px;
 }
 
 /* quick navigation and quick search */
