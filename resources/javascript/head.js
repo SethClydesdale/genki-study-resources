@@ -177,7 +177,8 @@
           jishoLookUp = localStorage.genkiJishoLookUp || 'true',
           strokeOrder = localStorage.strokeOrderVisible || 'true',
           tracingGuide = localStorage.tracingGuideVisible || 'true',
-          timerAutoPause = localStorage.timerAutoPause || 'true';
+          timerAutoPause = localStorage.timerAutoPause || 'true',
+          dataBackupReminder = localStorage.dataBackupReminder || 'true';
       
       // create stylesheet for settings
       if (!GenkiSettings.stylesheet) {
@@ -271,6 +272,11 @@
           '<li>'+
             '<span class="label" title="Enable or disable pausing timer when you leave or hide the exercise page">Pause Timer Automatically:</span>'+
             '<button id="settings-timer-auto-pause" class="button' + (timerAutoPause == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateTimerAutoPause(this);">' + (timerAutoPause == 'true' ? 'ON' : 'OFF') + '</button>'+
+          '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Shows a reminder every 10 exercises to backup your exercise score data.">Exercise Data Backup Reminder:</span>'+
+            '<button id="settings-data-backup-reminder" class="button' + (dataBackupReminder == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateDataBackupReminder(this);">' + (dataBackupReminder == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
 
           '<li>'+
@@ -663,6 +669,13 @@
         else {
           localStorage.tracingGuideVisible = state == 'ON' ? 'true' : 'false';
         }
+      });
+    },
+    
+    // updates data backup reminder
+    updateDataBackupReminder : function (caller) {
+      GenkiSettings.updateButton(caller, function (state) {
+        localStorage.dataBackupReminder = state == 'ON' ? 'true' : 'false';
       });
     },
 
