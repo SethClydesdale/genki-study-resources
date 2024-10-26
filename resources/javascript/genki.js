@@ -1402,7 +1402,8 @@
                     '<label class="checkbox-label" for="modal-data-backup-reminder">Disable Data Backup Reminders</label>'+
                   '</div>'+
                 '</div>',
-                zIndex : 'low'
+                zIndex : 'low',
+                focus : '#save-exercise-data'
               });
             }, 100);
           }
