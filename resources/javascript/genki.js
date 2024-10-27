@@ -26,6 +26,9 @@
     // tells us the student's preferred feedback mode for multi-choice quizzes (instant || classic)
     feedbackMode : storageOK && localStorage.feedbackMode ? localStorage.feedbackMode : 'classic',
     
+    // counter for displaying the data backup reminder
+    dataBackupReminderCount : storageOK && localStorage.dataBackupReminderCount ? +localStorage.dataBackupReminderCount : 0,
+    
     // tells us if text selection mode is enabled (for multi-choice quizzes)
     textSelectMode : false,
     
@@ -1367,7 +1370,7 @@
       '</div>';
 
       // save results in local storage
-      if (Genki.active.exercise.length > 0 && !/appendix|study-tools/.test(Genki.active.exercise[0])) {
+      if (storageOK && Genki.active.exercise.length > 0 && !/appendix|study-tools/.test(Genki.active.exercise[0])) {
         var lesson = Genki.active.exercise[0],
             genkiEdition = localStorage.GenkiEdition,
             lessonsResults = JSON.parse(localStorage.Results);
@@ -1382,6 +1385,31 @@
         // refresh the exercise list with the new results
         Genki.create.removeExerciseList();
         Genki.create.exerciseList();
+        
+        // shows data backup reminder if 10 or more exercises were completed
+        if (localStorage.dataBackupReminder == 'true' || localStorage.dataBackupReminder == undefined) {
+          if (++Genki.dataBackupReminderCount >= 10) {
+            Genki.dataBackupReminderCount = 0;
+            setTimeout(function() {
+              GenkiModal.open({
+                title : 'Backup Exercise Score Data?',
+                content : 'You\'ve recently completed 10 exercises. Would you like to backup your exercise score data?<br><br>'+
+                '<div class="center">'+
+                  '<a id="save-exercise-data" class="button" download="Tobira Exercise Score Data" href="data:,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '') + '"><i class="fa">&#xf019;</i>Save Data</a><br><br>'+
+                  '<div title="Stops this popup from showing every 10 exercises.\nYou can re-enable the data backup reminder via the settings manager.">'+
+                    '<input id="modal-data-backup-reminder" class="genki_input_hidden" type="checkbox" onchange="localStorage.dataBackupReminder = this.checked == true ? false : true;">'+
+                    '<span tabindex="0" class="genki_pseudo_checkbox" onclick="this.previousSibling.click();" onkeypress="event.key == \'Enter\' && this.previousSibling.click();"></span>'+
+                    '<label class="checkbox-label" for="modal-data-backup-reminder">Disable Data Backup Reminders</label>'+
+                  '</div>'+
+                '</div>',
+                zIndex : 'low',
+                focus : '#save-exercise-data'
+              });
+            }, 100);
+          }
+          // save count for other pages
+          localStorage.dataBackupReminderCount = Genki.dataBackupReminderCount;
+        }
       }
       
       // changes display over certain buttons
