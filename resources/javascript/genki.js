@@ -1399,7 +1399,12 @@
                   '<div title="Stops this popup from showing every 10 exercises.\nYou can re-enable the data backup reminder via the settings manager.">'+
                     '<input id="modal-data-backup-reminder" class="genki_input_hidden" type="checkbox" onchange="localStorage.dataBackupReminder = this.checked == true ? false : true;">'+
                     '<span tabindex="0" class="genki_pseudo_checkbox" onclick="this.previousSibling.click();" onkeypress="event.key == \'Enter\' && this.previousSibling.click();"></span>'+
-                    '<label class="checkbox-label" for="modal-data-backup-reminder">Disable Data Backup Reminders</label>'+
+                    '<label class="checkbox-label" for="modal-data-backup-reminder">Disable Data Backup Reminders</label><br><br>'+
+                
+                    '<div class="donate-box clear">'+
+                      '<div class="donate-icon"><i class="fa">&#xf004;</i></div>'+
+                      '<div class="donate-text">If Genki Study Resources has helped you with your studies, please also consider <a href="' + getPaths() + 'donate/' + Genki.local + '" target="_blank">making a donation <i class="fa">&#xf08e;</i></a> if you can, to help support the continued development and maintenance of these resources. Your support is greatly appreciated!</div>'+
+                    '</div>'+
                   '</div>'+
                 '</div>',
                 zIndex : 'low',
