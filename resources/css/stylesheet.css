@@ -493,6 +493,71 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 }
 #exercise-list .indent-block { margin-left:10px; }
 
+/* donate box */
+.donate-box {
+  color:#333;
+  background:#FCF;
+  border:1px solid #C6C;
+  position:relative;
+  padding:5px;
+  padding-left:35px;
+  margin:5px auto;
+  text-align:left;
+  width:80%;
+  max-width:600px;
+}
+.donate-icon {
+  color:#FCF;
+  background:#C6C;
+  font-size:20px;
+  width:30px;
+  text-align:center;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.donate-text a {
+  color:#039;
+  font-weight:bold;
+}
+.donate-text a i {
+  font-size:12px;
+  font-weight:normal;
+  vertical-align:super;
+  margin-left:-3px;
+}
+.info-box {
+  color:#333;
+  background:#EFF;
+  border:1px solid #17A;
+  position:relative;
+  padding:5px;
+  padding-left:35px;
+  margin:5px auto;
+  text-align:left;
+  width:80%;
+  max-width:600px;
+}
+.info-icon {
+  color:#EFF;
+  background:#17A;
+  font-size:20px;
+  width:30px;
+  text-align:center;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
 /* related projects */
 #project-list img {
   height:120px;
