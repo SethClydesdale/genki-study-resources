@@ -2912,14 +2912,14 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
 .gu-mirror{position:fixed!important;margin:0!important;z-index:9999!important;opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80)}.gu-hide{display:none!important}.gu-unselectable{-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.gu-transit{opacity:.2;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";filter:alpha(opacity=20)}
 
 
-/* OS FIXES */
-.os-linux .sectionNumber3rd, .os-linux #quick-jisho-toggle, .os-linux .section-number {
+/* OS FIXES:DISABLED */
+/*.os-linux .sectionNumber3rd, .os-linux #quick-jisho-toggle, .os-linux .section-number {
   line-height:normal;
 }
 
 .os-linux .sectionNumber3rd.fa, .os-linux .section-number.fa {
   line-height:22px;
-}
+}*/
 
 
 /* RESPONSIVENESS */
