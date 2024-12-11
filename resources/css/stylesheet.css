@@ -346,10 +346,13 @@ a#fork-me:hover, a#fork-me:focus {
   font-weight:bold;
 }
 
-#announcement h3 { margin:10px 0 0 0; }
+#announcement h3 {
+  font-size:18px;
+  margin:10px 0 0 0;
+}
 
 #announcement .announcement {
-  font-size:14px;
+  font-size:16px;
   height:75px;
   box-sizing:border-box;
   padding:3px 6px;
@@ -362,13 +365,13 @@ a#fork-me:hover, a#fork-me:focus {
 
 #announcement .announcement .date {
   color:#FFF;
-  font-size:11px;
+  font-size:13px;
   font-weight:normal;
   background:#E82;
   border:1px solid #D71;;
   border-radius:3px;
   padding:1px;
-  margin-right:3px;
+  margin-right:5px;
 }
 
 #announce-list {
