@@ -23,6 +23,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '12/14/24',
+          content : "I've been slowly rolling out ads on my website recently. They're optional for this project, however, so please <a href=\"https://ko-fi.com/post/Statement-Regarding-Ads-V7V717GGS6\" target=\"_blank\">click here</a> to learn more about this update."
+        },
+        
+        {
           date : '10/26/24',
           content : '<a href="https://ko-fi.com/post/GenkiTobira-Recent-Updates-Future-Plans-Z8Z6158OWB" target="_blank">Click here</a> to learn about the recent updates made to the website as well as my future plans.'
         },

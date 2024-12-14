@@ -1964,6 +1964,14 @@ ruby rt {
   width:120px;
   max-width:100%;
 }
+
+.label[title]:after {
+  content:attr(title);
+  font-size:13px;
+  font-weight:normal;
+  display:block;
+}
+
 .sm-label { width:80px; }
 .med-label { width:200px; }
 .big-label { width:300px; }
@@ -2924,6 +2932,11 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   line-height:22px;
 }*/
 
+/* ADS */
+.ad-container {
+  text-align:center;
+  margin:25px 0;
+}
 
 /* RESPONSIVENESS */
 @media (max-width:1000px) {
