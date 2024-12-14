@@ -167,6 +167,7 @@
       var fontSize = +localStorage.genkiFontSize || 100,
           pageWidth = +localStorage.genkiPageWidth || 100,
           darkMode = localStorage.darkMode || 'off',
+          adverts = localStorage.adverts || 'on',
           customCSS = localStorage.genkiCustomCSS || '',
           furigana = localStorage.furiganaVisible || 'true',
           spoilerMode = localStorage.spoilerMode || 'false',
@@ -192,7 +193,7 @@
         '<div class="section-title">Display</div>'+
         '<ul class="genki-settings-list">'+
           '<li>'+
-            '<span class="label" title="Increases the font size for the site (increase this if you have trouble reading -- page width may require an increase as well)">Font Size:</span>'+
+            '<span class="label" title="Increases the font size for the site.">Font Size:</span>'+
             '<input id="font-size-range" type="range" min="100" max="500" value="' + fontSize + '" oninput="GenkiSettings.updateFontSize(this);" onchange="GenkiSettings.updateFontSize(this, true);"><span id="font-size-value">' + fontSize + '%</span>'+
           '</li>'+
         
@@ -202,9 +203,14 @@
           '</li>'+
         
           '<li>'+
-            '<span class="label" title="Enable or disable Dark Mode (great for late night studying!)">Dark Mode:</span>'+
+            '<span class="label" title="Enable or disable Dark Mode.">Dark Mode:</span>'+
             '<button id="settings-dark-mode" class="button' + (darkMode == 'on' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateDarkMode(this);">' + (darkMode == 'on' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
+        
+          (window.location.protocol == 'file:' ? '' : '<li>'+
+            '<span class="label" title="Enable or disable Ads.\nAds help support the developer, but if they\'re annoying or distracting, you can turn them off with this option.">Ads:</span>'+
+            '<button id="settings-dark-mode" class="button' + (adverts == 'on' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateAdverts(this);">' + (adverts == 'on' ? 'ON' : 'OFF') + '</button>'+
+          '</li>')+
         
           '<li>'+
             '<span class="label" title="Use your own CSS to customize the design of the site to your liking">Custom CSS:<br><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank" style="font-weight:normal;"><small>What is CSS?</small></a></span>'+
@@ -215,7 +221,7 @@
         '<div class="section-title">Exercises</div>'+
         '<ul class="genki-settings-list">'+
           '<li>'+
-            '<span class="label" title="Enable or disable furigana (reading aid) for kanji (challenge your brain and memorize those kanji!)">Furigana:</span>'+
+            '<span class="label" title="Enable or disable furigana (reading aid) for kanji.">Furigana:</span>'+
             '<button id="settings-furigana" class="button' + (furigana == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateFurigana(this);">' + (furigana == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
@@ -513,6 +519,29 @@
     updateDarkMode : function (caller) {
       document.getElementById('light-switch-checkbox').click();
       GenkiSettings.updateButton(caller);
+    },
+    
+    
+    // updates adverts state
+    updateAdverts : function (caller) {
+      GenkiSettings.updateButton(caller, function (state) {
+        localStorage.adverts = state == 'ON' ? 'on' : 'off';
+        
+        GenkiModal.open({
+          title : 'Reload Required',
+          content : 'The page needs to be reloaded for this setting to take effect. Do you want to reload now?',
+          buttonText : 'Reload',
+          closeButtonText : 'Return to Settings',
+          
+          callback : function () {
+            window.location.reload();
+          },
+          
+          closeCallback : function () {
+            setTimeout(GenkiSettings.manager, 10);
+          }
+        });
+      });
     },
     
     
