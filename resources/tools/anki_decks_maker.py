@@ -27,6 +27,11 @@ def vocab_type_sort_key(path_name):
     Generates sort key for vocab folders to approximate the order in which a
     student would encounter the sections in the Genki books.
     """
+    if path_name == "greetings":
+      path_name = "greetings-1"
+    elif path_name == "greetings-practice":
+      path_name = "greetings-3"
+      
     match_groups = re.match(r'^(.*)-(\d\d*)$', path_name).groups()
     vocab_type = match_groups[0]
     lesson_number = int(match_groups[1])
@@ -44,7 +49,10 @@ def get_tags(html):
     Useful_Expressions , Time_(Minutes_11-30)
     """
     match = title_regex.search(html)
-    return match.group(1).strip().replace(' ', '_'), match.group(2).strip().replace(' ', '_')
+    try:
+      return match.group(1).strip().replace(' ', '_'), match.group(2).strip().replace(' ', '_')
+    except Exception:
+      return "Vocabulary", "Greetings"
 
 
 def get_vocab(html):
@@ -131,7 +139,13 @@ ruby:hover rt {
             f'Genki lesson {lesson_number}')
         my_deck.add_model(my_model)
         decks.append(my_deck)
-        for vocab_folder in sorted(chain(lesson_folder.glob('vocab*'), lesson_folder.glob('literacy*')),
+        
+        patterns = ['vocab*', 'literacy*', 'greetings*']
+        all_files = []
+        for pattern in patterns:
+          all_files.extend(lesson_folder.glob(pattern))
+        
+        for vocab_folder in sorted(all_files,
                                    key=lambda path: vocab_type_sort_key(path.name)):
             with open(vocab_folder.joinpath('index.html'), 'r', encoding='UTF8') as f:
                 html = f.read()
