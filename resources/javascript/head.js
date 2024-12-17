@@ -189,7 +189,7 @@
       // open settings popup
       GenkiModal.open({
         title : 'Settings Manager',
-        content : '<p>Here you can manage your settings for Genki Study Resources. To learn more about a setting, hover over its label for a short description.</p>'+
+        content : '<p>You can manage your settings for Genki Study Resources in this window.<br>※ Please note that all data is saved locally to the browser, so clearing your browser\'s cache will reset your settings.</p>'+
         '<div class="section-title">Display</div>'+
         '<ul class="genki-settings-list">'+
           '<li>'+
