@@ -2427,18 +2427,18 @@
         box.id = 'quick-jisho-window';
         box.className = 'quick-jisho-hidden';
         box.innerHTML = 
-        '<div class="quick-jisho-header">' +
-          '<h3 id="quick-jisho-title" class="main-title"> Quick Dictionary <span id="quick-jisho-hits"></span> </h3> ' +
-          '<i class="fa fa-hover" onclick="Genki.quickJisho.toggle()">&#xf2d1;</i>  ' +
-        '</div>' +
-        '<div id="quick-jisho-content">' +
-          '<div class="quick-jisho-row center">' +
-            '<input tabindex="0" id="quick-jisho-search" type="text" placeholder="Search..." oninput="Genki.quickJisho.search(this.value);">' +
+          '<div class="quick-jisho-header">' +
+            '<h3 id="quick-jisho-title" class="main-title"> Quick Dictionary <span id="quick-jisho-hits"></span> </h3> ' +
+            '<i class="fa fa-hover" tabindex="0" onclick="Genki.quickJisho.toggle();" onkeydown="event.key == \'Enter\' && Genki.quickJisho.toggle();" title="Minimize">&#xf2d1;</i>  ' +
           '</div>' +
-          '<div class="quick-jisho-row">' +
-            '<ul id="quick-jisho-results"></ul>' +
-          '</div>' +
-        '</div>';
+          '<div id="quick-jisho-content">' +
+            '<div class="quick-jisho-row center">' +
+              '<input tabindex="0" id="quick-jisho-search" type="text" placeholder="Search..." oninput="Genki.quickJisho.search(this.value);">' +
+            '</div>' +
+            '<div class="quick-jisho-row">' +
+              '<ul id="quick-jisho-results"></ul>' +
+            '</div>' +
+          '</div>';
         
         // selection button
         selector.id = 'quick-jisho-selector';
