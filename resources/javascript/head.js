@@ -817,4 +817,27 @@
     console.warn('Cookies are not available either due to host or browser settings. Genki Study Resources will function in limited mode where settings are not remembered and certain features are unavailable. This issue can commonly be resolved by enabling third-party cookies. Please see the following page for help.\nhttps://sethclydesdale.github.io/genki-study-resources/help/stuck-loading/\n\nIf the issue still occurs after enabling third-party cookies, please contact the developer for further assistance.\nhttps://github.com/SethClydesdale/genki-study-resources/issues');
   }
   
+  
+  // AJAX page getter
+  window.Get = function (url, callback, type) {
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        callback(this.response); // callback on success
+      }
+    };
+
+    // set response type
+    if (typeof type != 'undefined') {
+      xhttp.responseType = type;
+    }
+
+    // open and send the request
+    xhttp.open('get', url, true);
+    xhttp.send();
+
+    return xhttp;
+  };
+  
 }(window, document));

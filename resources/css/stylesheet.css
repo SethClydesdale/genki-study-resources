@@ -189,6 +189,17 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
   bottom:2px;
   border-bottom:1px solid #333;
 }
+.ul-color {
+  display:inline-block;
+  border-bottom:2px solid #F93;
+}
+
+.box-color {
+  display:inline-block;
+  border:2px solid #F93;
+  padding:3px;
+  margin:3px;
+}
 
 .inline { display:inline-block; }
 .t-valign-top { vertical-align:top; }
@@ -197,7 +208,7 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 .t-red { color:#F00; }
 .t-green { color:#080; }
 .t-blue { color:#09F; }
-.t-orange { color:#F93; }
+.t-orange, .main-color { color:#F93; }
 .t-bold { font-weight:bold; }
 
 /* margin */
@@ -442,7 +453,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 
 #link-list a {
   color:#FFF;
-  text-shadow:1px 1px 0 rgba(0, 0, 0, 0.3);
+  text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);
   font-weight:bold;
   text-decoration:none;
   display:inline-block;
@@ -452,6 +463,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 
 #link-home.button { border-bottom:2px solid #D71; }
 #link-edition   { background-color:#F93; border-bottom:2px solid #D71; }
+#link-grammar   { background-color:#FC0; border-bottom:2px solid #DA0; }
 #link-anki      { background-color:#05C; border-bottom:2px solid #03A; }
 #link-help      { background-color:#39C; border-bottom:2px solid #17A; }
 #link-report    { background-color:#F66; border-bottom:2px solid #D44; }
@@ -460,6 +472,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 #link-github    { background-color:#96F; border-bottom:2px solid #74D; }
 #link-settings  { background-color:#666; border-bottom:2px solid #444; }
 #link-edition:hover  { background-color:#E82; }
+#link-grammar:hover  { background-color:#EB0; }
 #link-anki:hover     { background-color:#04B; }
 #link-help:hover     { background-color:#28B; }
 #link-report:hover   { background-color:#E55; }
@@ -469,6 +482,8 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 #link-settings:hover   { background-color:#555; }
 #link-edition:active,
 #link-edition:focus  { background-color:#D71; }
+#link-grammar:active,
+#link-grammar:focus  { background-color:#DA0; }
 #link-anki:active,
 #link-anki:focus     { background-color:#03A; }
 #link-help:active,
@@ -496,6 +511,19 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   padding:0;
 }
 #exercise-list .indent-block { margin-left:10px; }
+
+#link-grammar { position:relative; }
+#link-grammar:after {
+  content:"NEW!";
+  font-size:12px;
+  color:#FF0;
+  position:absolute;
+  top:-5px;
+  left:-10px;
+  transform:rotate(-30deg);
+  text-shadow:1px 1px 2px #330, -1px -1px 2px #330, 0px 0px 3px #330;
+  pointer-events:none;
+}
 
 /* donate box */
 .donate-box {
@@ -624,7 +652,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 
 #quick-nav-list li ul li:before {
   background:transparent;
-  border:1px solid #F93;
+  border:2px solid #F93;
   height:4px;
   width:4px;
 }
@@ -1704,6 +1732,10 @@ ruby rt {
   margin-top:-1px;
   /* END   ruby-position:under; hack */
   padding:0 2px;
+}
+
+#announcement ruby rt {
+  color:#A40;
 }
 
 /* hover to view furigana for multi-choice vocab */
