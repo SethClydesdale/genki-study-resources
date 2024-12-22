@@ -76,7 +76,7 @@
     <script>Genki.generateQuiz({
       format : 'practice',
       type : ['multi', 'fill'],
-      info : ['Look at the table below and describe each person\'s nationality.<br><br>'+
+      info : ['Look at the table below and describe each person\'s nationality using {!GRI|XはYです|l1-p1}.<br><br>'+
       '<table class="center">'+
         '<tr style="font-weight:bold">'+
           '<td></td>'+
@@ -113,7 +113,7 @@
           '<td>22</td>'+
           '<td>47</td>'+
         '</tr>'+
-      '</table>', 'Look at the table below and describe each person\'s nationality.'],
+      '</table>', 'Look at the table below and describe each person\'s nationality using {!GRI|XはYです|l1-p1}.'],
 
       quizlet : [
         [
@@ -212,7 +212,7 @@
             '</div>'+
           '</div>'+
 
-          '<div class="problem">'+
+          '{!GRI|XはYです|l1-p1}<div class="problem">'+
             'What is Takeshi\'s nationality?<br>'+
             '{たけしさんはにほんじんです|たけしさんは日本人です|answer}。'+
           '</div>'+

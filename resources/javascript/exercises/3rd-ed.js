@@ -965,6 +965,7 @@ window.GenkiExercises = [
   
   // Appendix
   'appendix/dictionary|Vocabulary Index (Dictionary)|p.352-383',
+  'appendix/grammar-index|Grammar Index',
   'appendix/map-of-japan|Map of Japan|p.384-385',
   'appendix/numbers-chart|Numbers Chart|p.386-387',
   'appendix/conjugation-chart|Conjugation Chart|p.388-389',

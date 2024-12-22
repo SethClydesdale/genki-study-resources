@@ -481,6 +481,14 @@
       
       // log current type
       Genki.active.type = o.type;
+      
+      // format grammar index links in the quiz info
+      if (/\!GRI/.test(o.info)) {
+        o.info = o.info.replace(/\{.*?\}/g, function (match) {
+          var data = match.slice(1, match.length - 1).split('|'), hint, flag, sub, width, placeholder;
+          return '<a href="' + getPaths() + 'lessons-3rd/appendix/grammar-index/' + Genki.local + '#' + data[2] + '" target="_blank"' + ((Genki.local && !Genki.debug) ? '' : ' onclick="Genki.getGrammarPoint(this, \'' + data[2] + '\'); return false;"') + '>' + data[1] + '</a>';
+        });
+      }
 
       // # 1. DRAG AND DROP #
       if (o.type == 'drag') {
@@ -639,7 +647,7 @@
 
       // # 4. MULTIPLE CHOICE #
       else if (o.type == 'multi') {
-        var quiz = '<div id="quiz-info">' + o.info + '<br><b style="color:#6F6;">NEW:</b> You can now choose between "Instant" and "Classic" Feedback Mode for multiple choice quizzes in the <a href="#genki-site-settings" onclick="GenkiSettings.manager(); return false;">Site Settings</a>.' + '</div><div id="question-list">',
+        var quiz = '<div id="quiz-info">' + o.info + '</div><div id="question-list">',
             answers = '<div id="answer-list">',
             option = 65, // used for tagging answers as A(65), B(66), C(67)..
             isAnswer = false,
@@ -737,6 +745,9 @@
           
           if (data[0] == '!IMG') {
             return Genki.parse.image(data);
+            
+          } else if (data[0] == '!GRI') { // Grammar Index links
+            return '<a href="' + getPaths() + 'lessons-3rd/appendix/grammar-index/' + Genki.local + '#' + data[2] + '" target="_blank"' + ((Genki.local && !Genki.debug) ? '' : ' onclick="Genki.getGrammarPoint(this, \'' + data[2] + '\'); return false;"') + '>' + data[1] + '</a>';
             
           } else if (data[0] == '!AUDIO') { // audio tracks
             return '<div class="audio-block center">'+
@@ -2196,6 +2207,7 @@
         var main = 
           '<div id="link-list" class="normal-block indent-block">'+
             '<div><a id="link-home" class="button" href="' + (getPaths() + (storageOK && localStorage.GenkiEdition == '3rd' ? 'lessons-3rd/' : '') + Genki.local) + '"><i class="fa">&#xf015;</i>Home</a></div>'+
+            '<div><a id="link-grammar" href="' + getPaths() + 'lessons-3rd/appendix/grammar-index/' + Genki.local + '"><i class="fa">&#xf02d;</i>Grammar Index</a></div>'+
             '<div><a id="link-anki" href="' + getPaths() + 'help/anki-decks/' + Genki.local + '"><i class="fa">&#xf005;</i>Anki Decks</a></div>'+
             '<div><a id="link-help" href="' + getPaths() + 'help/' + Genki.local + '"><i class="fa">&#xf059;</i>Help &amp; FAQ</a></div>'+
             '<div><a id="link-report" href="' + getPaths() + 'report/' + Genki.local + '"><i class="fa">&#xf188;</i>Reports &amp; Feedback</a></div>'+
@@ -2295,7 +2307,7 @@
             Genki.toggle.list(document.getElementById(/^appendix/.test(Genki.active.exercise[0]) ? 'appendix' : /^study-tools/.test(Genki.active.exercise[0]) ? 'study-tools' : Genki.active.exercise[0].replace(/(lesson-\d+)\/.*/, '$1')).previousSibling);
 
             // highlight the active exercise and scoll to it
-            active = document.querySelector('a[href*="' + Genki.active.exercise[0] + '"]');
+            active = document.querySelector('a[href*="' + Genki.active.exercise[0] + '"]:not(#link-grammar)');
             active.className += ' active-lesson';
             active = active.parentNode;
 
@@ -2705,6 +2717,40 @@
       }
 
       return arrayOnly ? results : '%(' + results.join('/') + ')|';
+    },
+    
+    
+    // returns the specified grammar point in a popup window
+    getGrammarPoint : function (caller, id) {
+      GenkiModal.open({
+        title : 'Quick Grammar Review',
+        content : '<div id="appendix-tool" class="loading"></div>',
+        customButton : '<a href="' + caller.href + '" class="button" target="_blank"><i class="fa">&#xf08e;</i>View in Grammar Index</a>',
+        customSize : {
+          top : '10%',
+          left : '20%',
+          bottom : '10%',
+          right : '20%'
+        }
+      });
+      
+      Get(caller.href, function (data) {
+        var zone = document.getElementById('appendix-tool'),
+            grammar = data.match(new RegExp('(<h3 id="' + id + '"[\\s\\S]*?<\/table>)', 'm')), // should return h3 title and table right below it
+            style = data.match(new RegExp('(<style>[\\s\\S]*?</style>)', 'm')), // grammar index specific styles
+            url = caller.href.replace(/#.*$/, ''); // clean grammar index url for use in anchor links
+        
+        if (grammar && grammar[0] && style && style[0]) {
+          if (zone) {
+            // trim out grammar point number and format anchor links for use with the quick grammar review modal
+            zone.innerHTML = style[0] + grammar[0].replace(/\d+\. /, '').replace(/href="#(.*?)"/g, 'onclick="Genki.getGrammarPoint(this, \'$1\'); return false;" target="_blank" href="' + url + '#$1"');
+            zone.className = Genki.ed == 'lessons' ? 'second-ed' : 'third-ed';
+          }
+        } else if (zone) {
+          zone.innerHTML = '<br><b>Failed to retrieve grammar point. Click "View in Grammar Index" to try viewing the grammar point directly.</b>';
+          zone.className = 'center';
+        }
+      });
     },
     
     

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <title>Grammar Index | Genki Study Resources</title>
+    <meta name="title" content="Grammar Index | Genki Study Resources">
+    <meta name="twitter:title" content="Grammar Index | Genki Study Resources">
+    <meta property="og:title" content="Grammar Index | Genki Study Resources">
+    <meta name="description" content="Welcome to the Grammar Index! Here you can quickly find and review the grammar points taught in Genki.">
+    <meta property="og:description" content="Welcome to the Grammar Index! Here you can quickly find and review the grammar points taught in Genki.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki, japanese, grammar, dictionary" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons/appendix/grammar-index/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <style>
+      .wip {
+        color:#333;
+        background:#F9BF3A;
+        border:2px solid #333;
+        border-radius:10px;
+        text-align:center;
+        font-size:16px;
+        font-weight:bold;
+        margin:5px auto;
+        padding:5px;
+        max-width:500px;
+        box-shadow:0 0 3px #F9BF3A, 0 0 3px #F9BF3A, 0 0 3px #F9BF3A;
+      }
+      
+      #quick-nav-list .page-data, .second-ed .ex-list { display:none; }
+      
+      #appendix-tool #quick-search-results li {
+        padding:1px;
+      }
+      
+      .page-data {
+        font-size:12px;
+        color:#FFF;
+        background:#F93;
+        border:1px solid #E82;
+        padding:3px 6px;
+        border-radius:30px;
+      }
+      
+      .lesson-title, .workbook-title, #quick-search-results { position:relative; }
+      .lesson-title .page-data, .workbook-title .page-data {
+        position:absolute;
+        right:30px;
+      }
+
+      #quick-search-results .page-data, #genki-modal-content .workbook-title .page-data {
+        position:absolute;
+        right:3px;
+      }
+      
+      .example {
+        border:1px solid #CCC;
+        border-left:3px solid #F93;
+        margin:10px 5px;
+        padding:5px;
+        background:#FFF;
+      }
+
+      .columns-2-in > div.example {
+        display:inline-block;
+        width:47%;
+        margin:10px 5px;
+        vertical-align:top;
+      }
+      
+      .dark-mode .example {
+        background:#161616;
+        border-color:#333;
+        border-left-color:#F93;
+      }
+      
+      #appendix-tool .workbook-title {
+        color:#F93;
+        font-size:16px;
+        margin:0 0 0 20px;
+      }
+      
+      #appendix-tool li a {
+        display:inline-block;
+        padding:3px;
+      }
+
+      #appendix-tool .lesson-title {
+        margin-bottom:20px;
+      }
+
+      #appendix-tool .workbook-title {
+        margin-bottom:10px;
+        margin-left:0;
+      }
+
+      .table.grammar-table td {
+        font-size:15px;
+      }
+
+      .table.grammar-table td:nth-child(2), .table td { background:#F7F7F7 }
+      .table.grammar-table tr td:first-child, .table .table-head td {
+        width:60px;
+        font-weight:bold;
+        text-align:center;
+        background:#EEE;
+      }
+      .dark-mode .table.grammar-table tr td:first-child, .dark-mode .table .table-head td { background:#222; }
+      .dark-mode .table.grammar-table tr td:nth-child(2), .dark-mode .table td { background:#1A1A1A; }
+
+      .table.grammar-table ul, .table.grammar-table ol, .table ul, .table ol {
+        margin:0;
+        padding-left:30px;
+      }
+      
+      .lesson-exercises { display:none; }
+      .grammar-toggler { margin-bottom:10px; }
+      
+      @media (max-width:1000px) {
+        .columns-2-in > div.example {
+          display:block;
+          width:auto;
+        }
+      }
+    </style>
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body id="quiz-zone">
+    <noscript><style>.lesson-exercises {display:block}.grammar-toggler{display:none}</style></noscript>
+    <script src="../../../resources/javascript/grammar-index.min.js"></script>
+
+    <header>
+      <h1><a href="../../" id="home-link" class="edition-icon third-ed">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+
+    <div id="announcement">
+      <div id="announce-inner">
+        <h3><i class="fa">&#xf0a1;</i> News and Info</h3>
+        <div id="announce-list">
+          <div id="announcement-controls" style="display:none;">
+            <button class="button announce-controls button-left" onclick="GenkiAnn.next(-1, true);"><i class="fa">&#xf060;</i></button>
+            <button class="button announce-controls button-right" onclick="GenkiAnn.next(+1, true);"><i class="fa">&#xf061;</i></button>
+          </div>
+          <noscript><div class="announcement">Please enable JavaScript to get the latest news and info.</div></noscript>
+        </div>
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="appendix-tool" class="content-block">
+        <h2 id="main-dict-title" class="title center">巻末 - Grammar Index</h2>
+
+        <p>Welcome to the Grammar Index! Here you can quickly find and review the grammar points taught in Genki. Use the quick navigation to jump to a lesson's grammar or use the quick search to find the grammar point you want to read up on.</p>
+
+        <div class="wip">
+          <div>WORK IN PROGRESS</div>
+          <div style="font-weight:normal;">New grammar points will be added periodically. You can check on the progress of this page <a href="https://github.com/SethClydesdale/genki-study-resources/issues/295" target="_blank"><strong>here</strong></a>.</div>
+        </div>
+        
+        <div id="check-answers" class="center"><button class="button" href="#genki-site-settings" onclick="GenkiSettings.manager(); return false;"><i class="fa">&#xf013;</i>Site Settings</button><button class="button" onclick="GRIndex.toggleAll(this);"><i class="fa">&#xf07c;</i>Show All Grammar Points</button></div>
+
+        <div id="quick-actions" class="columns-2 clear">
+          <div>
+            <h2 id="quick-nav">Quick Navigation</h2>
+            <ul id="quick-nav-list">
+              <li><a href="#grammar-note-usage">Grammar Notes Usage</a></li>
+              <li><a href="#lesson-grammar-1">Lesson 1: New Friends</a></li>
+              <li><a href="#lesson-grammar-2">Lesson 2: Coming Soon</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 id="quick-search-exercises">Quick Search <span id="quick-search-hits"></span></h2>
+            <div id="quick-search-wrapper">
+              <input id="quick-search" type="text" placeholder="Search grammar...">
+              <ul id="quick-search-results"></ul>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="grammar-note-usage" class="lesson-title">Grammar Notes Usage</h2>
+        <div>
+          <h3 id="note-1" class="workbook-title">Grammar Key Meanings</h3>
+          <table class="table">
+            <tr class="table-head center">
+              <td style="width:15%;">Key</td>
+              <td style="width:85%;">Meaning</td>
+            </tr>
+
+            <tr>
+              <td class="center"><ruby>本文<rt>ほんぶん</rt></ruby></td>
+              <td>Passage (from the dialogue)</td>
+            </tr>
+
+            <tr>
+              <td class="center"><ruby>説明<rt>せつめい</rt></ruby></td>
+              <td>Explanation</td>
+            </tr>
+
+            <tr>
+              <td class="center"><ruby>英訳<rt>えいやく</rt></ruby></td>
+              <td>English translation/equivalent</td>
+            </tr>
+
+            <tr>
+              <td class="center"><ruby>文型<rt>ぶんけい</rt></ruby></td>
+              <td>Sentence structure</td>
+            </tr>
+
+            <tr>
+              <td class="center"><ruby>例文<rt>れいぶん</rt></ruby></td>
+              <td>Example sentence</td>
+            </tr>
+
+            <tr>
+              <td class="center"><ruby>練習<rt>れんしゅう</rt></ruby></td>
+              <td>Practice exercises</td>
+            </tr>
+          </table>
+          <br>
+          
+          <h3 id="note-2" class="workbook-title">Abbreviations used in the Grammar Notes</h3>
+          <table class="table">
+            <tr class="table-head center">
+              <td style="width:15%;">Abbreviation</td>
+              <td style="width:50%;">Meaning</td>
+              <td style="width:35%;">Examples</td>
+            </tr>
+
+            <tr>
+              <td class="center">S</td>
+              <td>Sentence</td>
+              <td><ruby>学生<rt>がくせい</rt></ruby>が<ruby>来<rt>く</rt></ruby>る</td>
+            </tr>
+
+            <tr>
+              <td class="center">N</td>
+              <td>Noun</td>
+              <td><ruby>学生<rt>がくせい</rt></ruby>; <ruby>日本<rt>にほん</rt></ruby>; バス</td>
+            </tr>
+
+            <tr>
+              <td class="center">NP</td>
+              <td>Noun Phrase</td>
+              <td><ruby>日本語<rt>にほんご</rt></ruby>の<ruby>勉強<rt>べんきょう</rt></ruby></td>
+            </tr>
+
+            <tr>
+              <td class="center">VN</td>
+              <td>Noun which forms a suru-verb by affixing する</td>
+              <td><ruby>勉強<rt>べんきょう</rt></ruby>; <ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>; サイン</td>
+            </tr>
+
+            <tr>
+              <td class="center">V</td>
+              <td>Verb</td>
+              <td><ruby>話<rt>はな</rt></ruby>す; <ruby>食<rt>た</rt></ruby>べる; <ruby>来<rt>く</rt></ruby>る</td>
+            </tr>
+
+            <tr>
+              <td class="center">V-masu</td>
+              <td>Stem of verb's masu form (=masu form minus masu)</td>
+              <td><ruby>話<rt>はな</rt></ruby>し; <ruby>食<rt>た</rt></ruby>べ; <ruby>来<rt>き</rt></ruby></td>
+            </tr>
+
+            <tr>
+              <td class="center">V-nai</td>
+              <td>Stem of verb's nai form (=nai form minus nai)</td>
+              <td><ruby>話<rt>はな</rt></ruby>さ; <ruby>食<rt>た</rt></ruby>べ; <ruby>来<rt>こ</rt></ruby></td>
+            </tr>
+
+            <tr>
+              <td class="center">V-vol</td>
+              <td>Verb's volitional form</td>
+              <td><ruby>話<rt>はな</rt></ruby>そう; <ruby>食<rt>た</rt></ruby>べよう; <ruby>来<rt>こ</rt></ruby>よう</td>
+            </tr>
+
+            <tr>
+              <td class="center">A</td>
+              <td>i-adjective</td>
+              <td><ruby>大<rt>おお</rt></ruby>きい; おもしろい</td>
+            </tr>
+
+            <tr>
+              <td class="center">A-stem</td>
+              <td>Stem of i-adjective</td>
+              <td><ruby>大<rt>おお</rt></ruby>き; おもしろ</td>
+            </tr>
+
+            <tr>
+              <td class="center">A-nai</td>
+              <td>Stem of i-adjective's nai form (=nai form minus nai)</td>
+              <td><ruby>大<rt>おお</rt></ruby>きく; おもしろく</td>
+            </tr>
+
+            <tr>
+              <td class="center">ANa</td>
+              <td>Stem of na-adjective</td>
+              <td><ruby>静<rt>しず</rt></ruby>か; <ruby>便利<rt>べんり</rt></ruby></td>
+            </tr>
+
+            <tr>
+              <td class="center">ANo</td>
+              <td>Stem of no-adjective</td>
+              <td><ruby>普通<rt>ふつう</rt></ruby>; <ruby>最高<rt>さいこう</rt></ruby></td>
+            </tr>
+
+            <tr>
+              <td class="center">An</td>
+              <td>Non-conjugational adjective</td>
+              <td>すぐ; ゆっくり; <ruby>大<rt>おお</rt></ruby>きく; <ruby>静<rt>しず</rt></ruby>かに</td>
+            </tr>
+
+            <tr>
+              <td class="center">DemP</td>
+              <td>Demonstrative pronoun</td>
+              <td>これ; それ; あれ</td>
+            </tr>
+
+            <tr>
+              <td class="center">DemA</td>
+              <td>Demonstative adjective</td>
+              <td>この; その; こんな; あんな</td>
+            </tr>
+
+            <tr>
+              <td class="center">Conj</td>
+              <td>Conjunction</td>
+              <td>が; から; しかし</td>
+            </tr>
+
+            <tr>
+              <td class="center">Prt</td>
+              <td>Particle</td>
+              <td>が; を; に; よ; ね</td>
+            </tr>
+
+            <tr>
+              <td class="center">QW</td>
+              <td>Question word</td>
+              <td><ruby>何<rt>なに</rt></ruby>; だれ; いつ; どの; いくら</td>
+            </tr>
+
+            <tr>
+              <td class="center">Da</td>
+              <td>だ and its conjugations</td>
+              <td>だ; だった; です; でした</td>
+            </tr>
+
+            <tr>
+              <td class="center">te</td>
+              <td>te-form</td>
+              <td><ruby>話<rt>はな</rt></ruby>して; <ruby>高<rt>たか</rt></ruby>くて; <ruby>静<rt>しず</rt></ruby>かで</td>
+            </tr>
+
+            <tr>
+              <td class="center">plain</td>
+              <td>plain form</td>
+              <td><ruby>話<rt>はな</rt></ruby>す; <ruby>話<rt>はな</rt></ruby>した; <ruby>高<rt>たか</rt></ruby>い; <ruby>静<rt>しず</rt></ruby>かだった</td>
+            </tr>
+
+            <tr>
+              <td class="center">non-past</td>
+              <td>non-past form</td>
+              <td><ruby>話<rt>はな</rt></ruby>す; <ruby>高<rt>たか</rt></ruby>い; <ruby>静<rt>しず</rt></ruby>かだ</td>
+            </tr>
+
+            <tr>
+              <td class="center">past</td>
+              <td>past form</td>
+              <td><ruby>話<rt>はな</rt></ruby>した; <ruby>高<rt>たか</rt></ruby>った; <ruby>静<rt>しず</rt></ruby>かだった</td>
+            </tr>
+
+            <tr>
+              <td class="center">aff</td>
+              <td>affirmative form</td>
+              <td><ruby>話<rt>はな</rt></ruby>す; <ruby>高<rt>たか</rt></ruby>い; <ruby>静<rt>しず</rt></ruby>かだ</td>
+            </tr>
+
+            <tr>
+              <td class="center">neg</td>
+              <td>negative form</td>
+              <td><ruby>話<rt>はな</rt></ruby>さない; <ruby>高<rt>たか</rt></ruby>くない; <ruby>静<rt>しず</rt></ruby>かじゃない</td>
+            </tr>
+
+            <tr>
+              <td class="center">cond</td>
+              <td>conditional form (=ba-form)</td>
+              <td><ruby>話<rt>はな</rt></ruby>せば; <ruby>高<rt>たか</rt></ruby>ければ; <ruby>静<rt>しず</rt></ruby>かなら(ば); 静かであれば</td>
+            </tr>
+          </table>
+          <br>
+          
+        </div>
+
+        <h2 id="lesson-grammar-1" class="lesson-title">Lesson 1: New Friends <span class="page-data">Genki I: p.41-43</span></h2>
+        <div class="center"><button id="toggler-1" class="button grammar-toggler" onclick="GRIndex.toggle(this, 1);"><i class="fa">&#xf07c;</i>Show Grammar Points</button></div>
+        <div id="exercises-1" class="lesson-exercises">
+          <h3 id="l1-p1" class="workbook-title" data-keywords="ha、wa、desu、it is、to be、copula">1. XはYです <span class="page-data">Genki I: p.41-42</span></h3>
+          <table class="table grammar-table">
+            <tr>
+              <td><ruby>本文<rt>ほんぶん</rt></ruby></td>
+              <td>
+                <ul>
+                  <li>
+                    こんにちは。きむら たけし<strong class="main-color">です</strong>。【Dialogue I：//.1】<br>
+                    Hello. I am Takeshi Kimura.
+                  </li>
+                  <li>
+                    せんこう<strong class="main-color">は</strong>にほんご<strong class="main-color">です</strong>。【Dialogue II：//.3】<br>
+                    My major is Japanese.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>説明<rt>せつめい</rt></ruby></td>
+              <td>です is a copula used for connecting additional information to the subject. Often times when the subject is known, the subject + は (pronounced <em>wa</em> when used as a particle) is dropped in Japanese. If it's not clear what's being talked about, however, the subject can be stated by marking it as a topic with は as in examples 4-7.</td>
+            </tr>
+            <tr>
+              <td><ruby>英訳<rt>えいやく</rt></ruby></td>
+              <td>
+                a. ～です = It is.../to be...
+                <br>b. XはYです = X is Y. As for X, it is Y.
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>文型<rt>ぶんけい</rt></ruby></td>
+              <td>
+                a. ～です<br>
+                b. ～は～です
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>例文<rt>れいぶん</rt></ruby></td>
+              <td>
+                <ol>
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">がくせい<strong class="main-color">です</strong>。</div>
+                      <div class="example">(I) am a student.</div>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">にほんご<strong class="main-color">です</strong>。</div>
+                      <div class="example">(My major) is the Japanese language.</div>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">じゅうにじはん<strong class="main-color">です</strong>。</div>
+                      <div class="example">(It) is half past twelve.</div>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">せんこう<strong class="main-color">は</strong>にほんご<strong class="main-color">です</strong>。</div>
+                      <div class="example">(My) major is the Japanese language.</div>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">わたし<strong class="main-color">は</strong>ソラ・キム<strong class="main-color">です</strong>。</div>
+                      <div class="example">I am Sora Kim.</div>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">やましたさん<strong class="main-color">は</strong>せんせい<strong class="main-color">です</strong>。</div>
+                      <div class="example">Mr. Yamashita is a teacher.</div>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">メアリーさん<strong class="main-color">は</strong>アメリカじん<strong class="main-color">です</strong>。</div>
+                      <div class="example">Mary is an American.</div>
+                    </div>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+            <tr class="ex-list">
+              <td><ruby>練習<rt>れんしゅう</rt></ruby></td>
+              <td>
+                <ul>
+                  <li><a href="../../lesson-1/grammar-1/">Practice: XはYです 1 (Nationality)</a></li>
+                  <li><a href="../../lesson-1/grammar-2/">Practice: XはYです 2 (Year in School)</a></li>
+                  <li><a href="../../lesson-1/grammar-3/">Practice: XはYです 3 (Age)</a></li>
+                  <li><a href="../../lesson-1/workbook-1/">Workbook: XはYです</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <br>
+          
+          <h3 id="l1-p2" class="workbook-title" data-keywords="ka、yes?、no?、is it?、isn't it?、なん、何、なに、nan、nani">2. Question Sentences (～か) <span class="page-data">Genki I: p.42-43</span></h3>
+          <table class="table grammar-table">
+            <tr>
+              <td><ruby>本文<rt>ほんぶん</rt></ruby></td>
+              <td>
+                <ul>
+                  <li>
+                    メアリー・ハートです。あのう、りゅうがくせいです<strong class="main-color">か</strong>。【Dialogue I：//.2】<br>
+                    I am Mary Hart. Um...are you an international student?
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>説明<rt>せつめい</rt></ruby></td>
+              <td>
+                か turns a statement into a question when added at the end of a sentence.
+                <div class="columns-2-in">
+                  <div class="example">りゅうがくせいです。<br>(I am) an international student.</div>
+                  <div class="example">りゅうがくせいです<strong class="main-color">か</strong>。<br>(Are you) an international student?</div>
+                </div>
+                <small>※ Question sentences in Japanese usually don't end with a question mark when か is used. </small><br><br>
+                The question sentence above is a "yes/no" question. Question sentences may also contain a "question word" like なん or <ruby>何<rt>なに</rt></ruby> (what). なん is typically used before です or counters (as seen in the examples below), whereas <ruby>何<rt>なに</rt></ruby> is used before a particle such as が、を、etc., as in <ruby>何<rt>なに</rt></ruby>をしていますか (What are you doing?).
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>英訳<rt>えいやく</rt></ruby></td>
+              <td>か = yes?/no?/isn't it?/is it?</td>
+            </tr>
+            <tr>
+              <td><ruby>文型<rt>ぶんけい</rt></ruby></td>
+              <td>Sか</td>
+            </tr>
+            <tr>
+              <td><ruby>例文<rt>れいぶん</rt></ruby></td>
+              <td>
+                <ol>
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">
+                        Ａ：せんこうは<span class="ul-color">なん</span>です<strong class="main-color">か</strong>。<br>
+                        　　What is your major?
+                      </div>
+                      <div class="example">
+                        Ｂ：(せんこうは)<span class="ul-color">えいご</span>です。<br>
+                        　　(My major) is English.
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">
+                        Ａ：いま<span class="ul-color">なんじ</span>です<strong class="main-color">か</strong>。<br>
+                        　　What time is it now?
+                      </div>
+                      <div class="example">
+                        Ｂ：(いま)<span class="ul-color">くじ</span>です。<br>
+                        　　It is nine o'clock.
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">
+                        Ａ：メアリーさんは<span class="ul-color">なんさい</span>です<strong class="main-color">か</strong>。<br>
+                        　　How old are you, Mary?
+                      </div>
+                      <div class="example">
+                        Ｂ：<span class="ul-color">じゅうきゅうさい</span>です。<br>
+                        　　I'm nineteen years old.
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">
+                        Ａ：<span class="ul-color">なんねんせい</span>です<strong class="main-color">か</strong>。<br>
+                        　　What year are you in college?
+                      </div>
+                      <div class="example">
+                        Ｂ：<span class="ul-color">にねんせい</span>です。<br>
+                        　　I'm a sophomore.
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example">
+                        Ａ：でんわばんごうは<span class="ul-color">なんばん</span>です<strong class="main-color">か</strong>。<br>
+                        　　What is your telephone number?
+                      </div>
+                      <div class="example">
+                        Ｂ：<span class="ul-color">867-5309</span>です。<br>
+                        　　It is 867-5309.
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+            <tr class="ex-list">
+              <td><ruby>練習<rt>れんしゅう</rt></ruby></td>
+              <td>
+                <ul>
+                  <li><a href="../../lesson-1/grammar-4/">Practice: Question Sentences 1</a></li>
+                  <li><a href="../../lesson-1/grammar-5/">Practice: Question Sentences 2</a></li>
+                  <li><a href="../../lesson-1/grammar-6/">Practice: Question Sentences 3</a></li>
+                  <li><a href="../../lesson-1/workbook-2/">Workbook: Question Sentences</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <br>
+          
+          <h3 id="l1-p3" class="workbook-title" data-keywords="possessive、no、's、of">3. NounのNoun <span class="page-data">Genki I: p.43</span></h3>
+          <table class="table grammar-table">
+            <tr>
+              <td><ruby>本文<rt>ほんぶん</rt></ruby></td>
+              <td>
+                <ul>
+                  <li>
+                    アリゾナだいがく<strong class="main-color">の</strong>がくせいです。【Dialogue II：//.2】<br>
+                    I am a student <strong class="main-color">of</strong> the University of Arizona.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>説明<rt>せつめい</rt></ruby></td>
+              <td>
+                の is a particle that connects two nouns. The second noun provides the main idea and the first noun makes it more specific. It can be used like the possessive (Takeshi's) in English, as in the example below.
+                <div class="columns-2-in">
+                  <div class="example"><span class="ul-color">たけしさん</span><strong class="main-color">の</strong>でんわばんごう</div>
+                  <div class="example"><span class="ul-color">Takeshi</span><strong class="main-color">'s</strong> phone number.</div>
+                </div><br>
+                
+                NounのNoun acts more or less like one big noun and can be put wherever you can put a noun, as in the following example.
+                <div class="columns-2-in">
+                  <div class="example"><span class="box-color"><span class="ul-color">たけしさん</span><strong class="main-color">の</strong>おかあさん</span>は<span class="box-color"><span class="ul-color">こうこう</span><strong class="main-color">の</strong>せんせい</span>です。</div>
+                  <div class="example"><span class="box-color"><span class="ul-color">Takeshi</span><strong class="main-color">'s</strong> mother</span> is <span class="box-color">a <span class="ul-color">high school</span> teacher</span>.</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>英訳<rt>えいやく</rt></ruby></td>
+              <td>NounのNoun = 's/of; indicates possessiveness</td>
+            </tr>
+            <tr>
+              <td><ruby>文型<rt>ぶんけい</rt></ruby></td>
+              <td>NのN</td>
+            </tr>
+            <tr>
+              <td><ruby>例文<rt>れいぶん</rt></ruby></td>
+              <td>
+                <ol>
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example"><span class="ul-color">だいがく</span><strong class="main-color">の</strong>せんせい</div>
+                      <div class="example">a <span class="ul-color">college</span> professor</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example"><span class="ul-color">にほんご</span><strong class="main-color">の</strong>がくせい</div>
+                      <div class="example">a student <strong class="main-color">of</strong> the <span class="ul-color">Japanese language</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example"><span class="ul-color">にほん</span><strong class="main-color">の</strong>だいがく</div>
+                      <div class="example">a college <strong class="main-color">in</strong> <span class="ul-color">Japan</span>.</div>
+                    </div>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+            <tr class="ex-list">
+              <td><ruby>練習<rt>れんしゅう</rt></ruby></td>
+              <td>
+                <ul>
+                  <li><a href="../../lesson-1/grammar-7/">Practice: Noun の Noun 1</a></li>
+                  <li><a href="../../lesson-1/grammar-8/">Practice: Noun の Noun 2</a></li>
+                  <li><a href="../../lesson-1/grammar-9/">Practice: Noun の Noun 3</a></li>
+                  <li><a href="../../lesson-1/workbook-3/">Workbook: Noun の Noun</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <br>
+        </div>
+        
+        <h2 id="lesson-grammar-2" class="lesson-title">Lesson 2: Coming Soon</h2>
+        <div class="center"><button id="toggler-2" class="button grammar-toggler" onclick="GRIndex.toggle(this, 2);"><i class="fa">&#xf07c;</i>Show Grammar Points</button></div>
+        <div id="exercises-2" class="lesson-exercises">
+          <h3 id="placeholder" class="workbook-title"><em>Coming soon...</em></h3>
+        </div>
+        
+        <!--
+        <h2 id="lesson-grammar-1" class="lesson-title">Lesson 1:  <span class="page-data">Genki I: p.</span></h2>
+        <div class="center"><button id="toggler-1" class="button grammar-toggler" onclick="GRIndex.toggle(this, 1);"><i class="fa">&#xf07c;</i>Show Grammar Points</button></div>
+        <div id="exercises-1" class="lesson-exercises">
+          <h3 id="placeholder" class="workbook-title"><em>More coming soon...</em></h3>
+        </div>
+
+          <h3 id="l1-p" class="workbook-title" data-keywords="">.  <span class="page-data">Genki I: p.</span></h3>
+          <table class="table grammar-table">
+            <tr>
+              <td><ruby>本文<rt>ほんぶん</rt></ruby></td>
+              <td>
+                <ul>
+                  <li>
+                    <strong class="main-color"></strong>【Dialogue I：//.】<br>
+                    
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>説明<rt>せつめい</rt></ruby></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><ruby>英訳<rt>えいやく</rt></ruby></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><ruby>文型<rt>ぶんけい</rt></ruby></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><ruby>例文<rt>れいぶん</rt></ruby></td>
+              <td>
+                <ol>
+                  <li>
+                    <div class="columns-2-in">
+                      <div class="example"></div>
+                      <div class="example"></div>
+                    </div>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+            <tr class="ex-list">
+              <td><ruby>練習<rt>れんしゅう</rt></ruby></td>
+              <td>
+                <ul>
+                  <li><a href="../../lesson-1/grammar-/">Practice:</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <br>
+          -->
+        <br>
+      </div>
+
+      <div id="exercise" class="content-block" style="display:none;">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../../" id="footer-home">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+        <li><a href="../../../donate/">Donate</a></li>
+      </ul>
+
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
+      </ul>
+    </footer>
+
+    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/homepage.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/jisho.min.js"></script>
+    <script src="../../../resources/javascript/appendix.min.js"></script>
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>
+      AddJumpArrowsTo('.workbook-title', 'quick-nav', 'Jump to Quick Navigation');
+      document.getElementById('check-answers').innerHTML += Genki.lang.toggle_furigana;
+      Genki.quickJisho.create();
+      window.setTimeout(GRIndex.jump, 50);
+    </script>
+  </body>
+</html>

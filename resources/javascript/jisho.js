@@ -646,6 +646,7 @@ Genki.jisho = {
     { ja : '頑張る|がんばる', en : "to do one's best; to try hard", v : 'u', l : '会L13' },
     { ja : 'がんぺき', en : 'cliff', l : '読L1-I' },
     { ja : '漢方薬|かんぽうやく', en : 'Chinese herbal medicine', l : '読L19-漢字表' },
+    { ja : '巻末|かんまつ', en : 'end of book; appendix', l : '巻末' },
     { ja : '漢和辞典|かんわじてん', en : 'Kanji dictionary', l : '読L19-漢字表' }
   ],
   
