@@ -2731,7 +2731,8 @@
           left : '20%',
           bottom : '10%',
           right : '20%'
-        }
+        },
+        zIndex : 'low'
       });
       
       Get(caller.href, function (data) {
