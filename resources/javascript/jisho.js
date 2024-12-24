@@ -287,6 +287,7 @@ Genki.jisho = {
     { ja : '影響を受ける|えいきょうをうける', en : 'to be affected', v : 'ru', l : '読L17-II' },
     { ja : '英語|えいご', en : 'English language', l : '会L1' },
     { ja : '英国|えいこく', en : 'United Kingdom', l : '読L14-漢字表' },
+    { ja : "英訳|えいやく", en : "English translation", v : "VN", l : "Grammar Index" },
     { ja : '英雄|えいゆう', en : 'hero', l : '読L14-漢字表' },
     { ja : 'ええ', en : 'yes', l : '会L1' },
     { ja : 'ええと', en : 'well...; let me see...', l : '会L16' },
@@ -2307,6 +2308,7 @@ Genki.jisho = {
     { ja : '文化|ぶんか', en : 'culture', l : '読L11-II, 会L19' },
     { ja : '文学|ぶんがく', en : 'literature', l : '会L1, 読L7-II' },
     { ja : '分割払い|ぶんかつばらい', en : 'payment in installments', l : '読L20-漢字表' },
+    { ja : "文型|ぶんけい", en : "grammar pattern", v : "N", l : "Grammar Index" },
     { ja : '文法|ぶんぽう', en : 'grammar', l : '会L11(e), 会L13' },
     { ja : '文明|ぶんめい', en : 'civilization', l : '読L11-漢字表' },
     { ja : '分野|ぶんや', en : 'field; realm', l : '読L17-II' },
@@ -2394,7 +2396,8 @@ Genki.jisho = {
     { ja : '本当は|ほんとうは', en : 'in fact; originally', l : '会L19' },
     { ja : '本音|ほんね', en : 'real intention', l : '読L14-漢字表' },
     { ja : '本屋|ほんや', en : 'bookstore', l : '会L4' },
-    { ja : '翻訳する|ほんやくする', en : 'to translate', v : 'irr', l : '会L22' }
+    { ja : '翻訳する|ほんやくする', en : 'to translate', v : 'irr', l : '会L22' },
+    { ja : "本文|ほんぶん", en : "passage (from the dialogue); text (of a book, etc.); this sentence", v : "N", l : "Grammar Index" }
   ],
   
   'ま' : [
@@ -2759,6 +2762,7 @@ Genki.jisho = {
   'れ' : [
     { ja : '例|れい', en : 'example', l : '会L11(e)' },
     { ja : '冷蔵庫|れいぞうこ', en : 'refrigerator', l : '会L18' },
+    { ja : "例文|れいぶん", en : "example sentence", v : "N", l : "Tobira: 漢字表" },
     { ja : '歴史|れきし', en : 'history', l : '会L1, 会L2' },
     { ja : 'レシピ', en : 'recipe', l : 'ワークブックL20' },
     { ja : 'レストラン', en : 'restaurant', l : '会L4' },
