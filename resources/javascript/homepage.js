@@ -12,7 +12,7 @@
   // # QUICK SEARCH #
   if (document.getElementById('quick-search')) {
     window.QuickSearcher = {
-      grammarIndex : /grammar-index/.test(window.location.href),
+      grammarIndex : /grammar-index/.test(window.location.pathname),
       search : document.getElementById('quick-search'),
       results : document.getElementById('quick-search-results'),
       hitsCounter : document.getElementById('quick-search-hits'),
@@ -24,12 +24,12 @@
       // search for the specified value
       query : function (value) {
         // clear existing timeout
-        if (window.GenkiSearchTimeout) {
-          window.clearTimeout(GenkiSearchTimeout);
+        if (QuickSearcher.timeout) {
+          clearTimeout(QuickSearcher.timeout);
         }
 
         // wait 300ms before submitting search, just in case the user is still typing
-        window.GenkiSearchTimeout = window.setTimeout(function() {
+        QuickSearcher.timeout = setTimeout(function() {
           var frag = document.createDocumentFragment(),
               hits = 0,
               i = 0,
@@ -98,13 +98,13 @@
               '}); return false;"'+
             '>&#xf0ea;</a>' : '';
 
-          delete window.GenkiSearchTimeout;
+          delete QuickSearcher.timeout;
         }, 300);
       }
     };
     
     // set remaining data for search functionality
-    QuickSearcher.li = document.querySelectorAll(QuickSearcher.grammarIndex ?  '.workbook-title' : '.lesson-exercises li');
+    QuickSearcher.li = document.querySelectorAll(QuickSearcher.grammarIndex ? '.workbook-title' : '.lesson-exercises li');
     QuickSearcher.exLen = QuickSearcher.li.length;
 
 

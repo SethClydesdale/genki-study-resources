@@ -143,7 +143,7 @@
       }
     };
     
-    // holiday easter eggs
+    // holiday easter eggs/messages
     var date = new Date(),
         month = date.getMonth() + 1,
         day = date.getDate();
@@ -248,6 +248,13 @@
       };
 
       document.addEventListener('DOMContentLoaded', _scrollSpider.init); // perform initialization when the DOM is loaded
+    }
+    
+    // new year's
+    else if (month == 1 && day == 1) {
+      GenkiAnn.msg.splice(0, 0, {
+        content : "<ruby>皆<rt>みな</rt></ruby>さん、あけましておめでとうございます！<ruby>今年<rt>ことし</rt></ruby>も<ruby>頑張<rt>がんば</rt></ruby>りましょう！"
+      });
     }
     
     // initialize the announcement module
