@@ -2762,7 +2762,7 @@ Genki.jisho = {
   'れ' : [
     { ja : '例|れい', en : 'example', l : '会L11(e)' },
     { ja : '冷蔵庫|れいぞうこ', en : 'refrigerator', l : '会L18' },
-    { ja : "例文|れいぶん", en : "example sentence", v : "N", l : "Tobira: 漢字表" },
+    { ja : "例文|れいぶん", en : "example sentence", v : "N", l : "Grammar Index" },
     { ja : '歴史|れきし', en : 'history', l : '会L1, 会L2' },
     { ja : 'レシピ', en : 'recipe', l : 'ワークブックL20' },
     { ja : 'レストラン', en : 'restaurant', l : '会L4' },
