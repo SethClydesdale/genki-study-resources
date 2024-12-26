@@ -139,9 +139,9 @@
   
   // # QUICK NAV SUB-SECTIONS #
   // Adds buttons for showing sub-sections in each lesson.
-  for (var a = document.querySelectorAll('#quick-nav-list a'), i = 0, j = a.length, l; i < j; i++) {
-    if (/lesson-(?:grammar-|)\d+/.test(a[i])) {
-      l = a[i].href.replace(/.*?lesson-(?:grammar-|)(\d+).*/, '$1'); // get lesson number
+  for (var a = document.querySelectorAll('#quick-nav-list a'), i = 0, j = a.length, lesson_regex = /grammar-index/.test(window.location.pathname) ? /.*?lesson-grammar-(\d+).*/ : /.*?lesson-(\d+).*/, l; i < j; i++) {
+    if (/lesson-\d+|lesson-grammar-\d+/.test(a[i])) {
+      l = a[i].href.replace(lesson_regex, '$1'); // get lesson number
       
       // create button and list
       a[i].insertAdjacentHTML('beforebegin', '<a class="sub-section-button fa" href="#toggle-sub-section" onclick="ToggleSubSection(this, '+ l +'); return false;" title="Toggle sub-sections" data-open="false"></a>');
