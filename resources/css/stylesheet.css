@@ -319,7 +319,8 @@ a#fork-me {
   line-height:30px;
   height:30px;
   width:200px;
-  transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+          transform:rotate(45deg);
   position:absolute;
   right:-55px;
   top:30px;
@@ -438,7 +439,8 @@ a.anchor {
 
 .anchor-icon {
   display:inline-block;
-  transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+          transform:rotate(-45deg);
   visibility:hidden;
 }
 
@@ -520,7 +522,8 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   position:absolute;
   top:-5px;
   left:-10px;
-  transform:rotate(-30deg);
+  -webkit-transform:rotate(-30deg);
+          transform:rotate(-30deg);
   text-shadow:1px 1px 2px #330, -1px -1px 2px #330, 0px 0px 3px #330;
   pointer-events:none;
 }
