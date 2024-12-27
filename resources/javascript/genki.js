@@ -2737,7 +2737,7 @@
       
       Get(caller.href, function (data) {
         var zone = document.getElementById('appendix-tool'),
-            grammar = data.match(new RegExp('(<h3 id="' + id + '"[\\s\\S]*?<\/table>)', 'm')), // should return h3 title and table right below it
+            grammar = data.match(new RegExp('(<h3 id="' + id + '"[\\s\\S]*?<\/table><br>)', 'm')), // should return h3 title and table right below it
             style = data.match(new RegExp('(<style>[\\s\\S]*?</style>)', 'm')), // grammar index specific styles
             url = caller.href.replace(/#.*$/, ''); // clean grammar index url for use in anchor links
         
