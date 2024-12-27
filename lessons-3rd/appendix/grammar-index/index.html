@@ -109,16 +109,17 @@
         font-size:15px;
       }
 
-      .table.grammar-table td:nth-child(2), .table td { background:#F7F7F7 }
-      .table.grammar-table tr td:first-child, .table .table-head td {
+      .table.grammar-table > tbody > tr > td:nth-child(2), .table td { background:#F7F7F7 }
+      .table.grammar-table > tbody > tr > td:first-child, .table .table-head td {
         width:60px;
         font-weight:bold;
         text-align:center;
         background:#EEE;
       }
-      .dark-mode .table.grammar-table tr td:first-child, .dark-mode .table .table-head td { background:#222; }
-      .dark-mode .table.grammar-table tr td:nth-child(2), .dark-mode .table td { background:#1A1A1A; }
-
+      .dark-mode .table.grammar-table > tbody > tr > td:first-child, .dark-mode .table .table-head td { background:#222 !important; }
+      .dark-mode .table.grammar-table > tbody > tr > td:nth-child(2), .dark-mode .table td { background:#1A1A1A; }
+      .dark-mode .table.alt-cell-color td { background-color:#161616; }
+      
       .table.grammar-table ul, .table.grammar-table ol, .table ul, .table ol {
         margin:0;
         padding-left:30px;
@@ -273,7 +274,7 @@
             </tr>
 
             <tr>
-              <td class="center">V-masu</td>
+              <td class="center">V-stem</td>
               <td>Stem of verb's masu form (=masu form minus masu)</td>
               <td><ruby>話<rt>はな</rt></ruby>し; <ruby>食<rt>た</rt></ruby>べ; <ruby>来<rt>き</rt></ruby></td>
             </tr>
@@ -1281,6 +1282,231 @@
         <h2 id="lesson-grammar-3" class="lesson-title">Lesson 3: Making a Date <span class="page-data">Genki I: p.86-92</span></h2>
         <div class="center"><button id="toggler-3" class="button grammar-toggler" onclick="GRIndex.toggle(this, 3);"><i class="fa">&#xf07c;</i>Show Grammar Points</button></div>
         <div id="exercises-3" class="lesson-exercises">
+          <h3 id="l3-p1" class="workbook-title" data-keywords="masu、masen、ru-verbs、u-verbs、irregular verbs、ichidan、godan、verbal nouns、suru-verbs、affirmative、negative">1. Verb Conjugation (Long form: ～ます・～ません) <span class="page-data">Genki I: p.86-88</span></h3>
+          <table class="table grammar-table">
+            <tr>
+              <td><ruby>本文<rt>ほんぶん</rt></ruby></td>
+              <td>
+                <ul>
+                  <li>
+                    ええ、<ruby>今日<rt>きょう</rt></ruby>は<ruby>京都<rt>きょうと</rt></ruby>に<ruby>行<rt>い</rt></ruby>き<strong class="main-color">ます</strong>。【Dialogue II: //.3】<br>
+                    Yes, I'm going to Kyoto today.
+                  </li>
+                  <li>
+                    食べ<strong class="main-color">ません</strong>。【Dialogue II: //.7】<br>
+                    I will not eat.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>説明<rt>せつめい</rt></ruby></td>
+              <td>
+                Japanese has three groups of verbs based on their conjugation: ru-verbs (also called ichidan verbs), u-verbs (godan verbs), and irregular verbs.<br><br>
+                
+                <strong>(1) Ru-verbs</strong><br>
+                The stem of Ru-verbs (<ruby>食<rt>た</rt></ruby>べる --> <ruby>食<rt>た</rt></ruby>べ; tabe, remove る to find the stem) ends with either <em>e</em> or <em>i</em> plus the suffix る. All ru-verbs, therefore, end with <em>eru</em> or <em>iru</em>. There are a few exceptions, however, such as <ruby>帰<rt>かえ</rt></ruby>る, which is an u-verb.
+                <div class="example">
+                  <ruby>食<rt>た</rt></ruby>べる (tab<span class="ul-color">e + ru</span>)　<ruby>寝<rt>ね</rt></ruby>る (n<span class="ul-color">e + ru</span>)　　<ruby>起<rt>お</rt></ruby>きる (ok<span class="ul-color">i + ru</span>)　<ruby>見<rt>み</rt></ruby>る (m<span class="ul-color">i + ru</span>)　
+                </div><br>
+                
+                <strong>(2) U-verbs</strong><br>
+                U-verbs have a consonant-final stem plus <em>u</em> (e.g., <ruby>飲<rt>の</rt></ruby>む nom + u). As mentioned above, <ruby>帰<rt>かえ</rt></ruby>る is an exception to this rule. The る in this verb is not considered a suffix like with ru-verbs.
+                <div class="example">
+                  <ruby>飲<rt>の</rt></ruby>む (no<span class="ul-color">m + u</span>)　<ruby>読<rt>よ</rt></ruby>む (yo<span class="ul-color">m + u</span>)　<ruby>話<rt>はな</rt></ruby>す (hana<span class="ul-color">s + u</span>)<br>
+                  <ruby>聞<rt>き</rt></ruby>く (ki<span class="ul-color">k + u</span>)　　<ruby>行<rt>い</rt></ruby>く (i<span class="ul-color">k + u</span>)　　<ruby>帰<rt>かえ</rt></ruby>る (kae<span class="ul-color">r + u</span>)
+                </div><br>
+                
+                <strong>(3) Irregular Verbs</strong><br>
+                There are two "irregular verbs," する and くる. する can be combined with certain nouns called "Verbal Nouns" or "Suru-verbs" to create a verb out of a noun, such as <ruby>勉強<rt>べんきょう</rt></ruby> (study) + する (to do) = <ruby>勉強<rt>べんきょう</rt></ruby>する (to study).
+                <div class="example">
+                  する　　<ruby>勉強<rt>べんきょう</rt></ruby>する　　くる
+                </div><br><br>
+                
+                <strong>Present Tense Conjugation (Long form)</strong><br>
+                The long form of verbs, ます (affirmative) and ません (negative), makes them more polite compared to their dictionary forms or "plain forms" (not conjugated). To conjugate ru-verbs into the long form, simply replace the final る with ます or ません.
+                <div class="example">
+                  <strong class="main-color">Ru-verbs</strong>
+                  <table class="table" style="margin:10px 0;">
+                    <tr class="table-head">
+                      <td style="width:30%">Plain form</td>
+                      <td style="width:30%">Present, affirmative</td>
+                      <td style="width:30%">Present, negative</td>
+                    </tr>
+                    <tr>
+                      <td><ruby>食<rt>た</rt></ruby>べ<span class="ul-color">る</span></td>
+                      <td><ruby>食<rt>た</rt></ruby>べ<span class="ul-color">ます</span></td>
+                      <td><ruby>食<rt>た</rt></ruby>べ<span class="ul-color">ません</span></td>
+                    </tr>
+                    <tr>
+                      <td><ruby>寝<rt>ね</rt></ruby><span class="ul-color">る</span></td>
+                      <td><ruby>寝<rt>ね</rt></ruby><span class="ul-color">ます</span></td>
+                      <td><ruby>寝<rt>ね</rt></ruby><span class="ul-color">ません</span></td>
+                    </tr>
+                    <tr>
+                      <td><ruby>起<rt>お</rt></ruby>き<span class="ul-color">る</span></td>
+                      <td><ruby>起<rt>お</rt></ruby>き<span class="ul-color">ます</span></td>
+                      <td><ruby>起<rt>お</rt></ruby>き<span class="ul-color">ません</span></td>
+                    </tr>
+                    <tr>
+                      <td><ruby>見<rt>み</rt></ruby><span class="ul-color">る</span></td>
+                      <td><ruby>見<rt>み</rt></ruby><span class="ul-color">ます</span></td>
+                      <td><ruby>見<rt>み</rt></ruby><span class="ul-color">ません</span></td>
+                    </tr>
+                  </table>
+                </div><br>
+                
+                To conjugate u-verbs into the long form, you replace <em>u</em> with <em>imasu</em> or <em>imasen</em>. For example, the final む changes to み, く changes to き and so on.
+                <div class="example">
+                  <strong class="main-color">U-verbs</strong>
+                  <table class="table" style="margin:10px 0;">
+                    <tr class="table-head">
+                      <td style="width:30%">Plain form</td>
+                      <td style="width:30%">Present, affirmative</td>
+                      <td style="width:30%">Present, negative</td>
+                    </tr>
+                    <tr>
+                      <td><ruby>飲<rt>の</rt></ruby><span class="ul-color">む</span></td>
+                      <td><ruby>飲<rt>の</rt></ruby><span class="ul-color">みます</span></td>
+                      <td><ruby>飲<rt>の</rt></ruby><span class="ul-color">みません</span></td>
+                    </tr>
+                    <tr>
+                      <td><ruby>読<rt>よ</rt></ruby><span class="ul-color">む</span></td>
+                      <td><ruby>読<rt>よ</rt></ruby><span class="ul-color">みます</span></td>
+                      <td><ruby>読<rt>よ</rt></ruby><span class="ul-color">みません</span></td>
+                    </tr>
+                    <tr>
+                      <td><ruby>話<rt>はな</rt></ruby><span class="ul-color">す</span></td>
+                      <td><ruby>話<rt>はな</rt></ruby><span class="ul-color">します</span></td>
+                      <td><ruby>話<rt>はな</rt></ruby><span class="ul-color">しません</span></td>
+                    </tr>
+                    <tr>
+                      <td><ruby>聞<rt>き</rt></ruby><span class="ul-color">く</span></td>
+                      <td><ruby>聞<rt>き</rt></ruby><span class="ul-color">きます</span></td>
+                      <td><ruby>聞<rt>き</rt></ruby><span class="ul-color">きません</span></td>
+                    </tr>
+                    <tr>
+                      <td><ruby>行<rt>い</rt></ruby><span class="ul-color">く</span></td>
+                      <td><ruby>行<rt>い</rt></ruby><span class="ul-color">きます</span></td>
+                      <td><ruby>行<rt>い</rt></ruby><span class="ul-color">きません</span></td>
+                    </tr>
+                  </table>
+                </div>
+                <ruby>帰<rt>かえ</rt></ruby>る is an u-verb, so it is <strong>not</strong> conjugated like a ru-verb: ×<ruby>帰<rt>かえ</rt></ruby>ます. Instead, you take the final る and change it to り, like so:
+                <table class="table alt-cell-color" style="margin:10px 0;">
+                  <tr class="table-head">
+                    <td style="width:30%">Plain form</td>
+                    <td style="width:30%">Present, affirmative</td>
+                    <td style="width:30%">Present, negative</td>
+                  </tr>
+                  <tr>
+                    <td><ruby>帰<rt>かえ</rt></ruby><span class="ul-color">る</span></td>
+                    <td><ruby>帰<rt>かえ</rt></ruby><span class="ul-color">ります</span></td>
+                    <td><ruby>帰<rt>かえ</rt></ruby><span class="ul-color">りません</span></td>
+                  </tr>
+                </table><br>
+                
+                The conjugation for irregular verbs looks like the following.
+                <div class="example">
+                  <strong class="main-color">Irregular verbs</strong>
+                  <table class="table" style="margin:10px 0;">
+                    <tr class="table-head">
+                      <td style="width:30%">Plain form</td>
+                      <td style="width:30%">Present, affirmative</td>
+                      <td style="width:30%">Present, negative</td>
+                    </tr>
+                    <tr>
+                      <td><span class="ul-color">する</span></td>
+                      <td><span class="ul-color">します</span></td>
+                      <td><span class="ul-color">しません</span></td>
+                    </tr>
+                    <tr>
+                      <td><ruby>勉強<rt>べんきょう</rt></ruby><span class="ul-color">する</span></td>
+                      <td><ruby>勉強<rt>べんきょう</rt></ruby><span class="ul-color">します</span></td>
+                      <td><ruby>勉強<rt>べんきょう</rt></ruby><span class="ul-color">しません</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="ul-color">くる</span></td>
+                      <td><span class="ul-color">きます</span></td>
+                      <td><span class="ul-color">きません</span></td>
+                    </tr>
+                  </table>
+                </div><br>
+                
+                To recap, if a verb ends with
+                <ul>
+                  <li><em>aru</em> or <em>oru</em>, it is definitely an u-verb</li>
+                  <li><em>uru</em>, it can either be an irregular verb or an u-verb</li>
+                  <li><em>iru</em> or <em>eru</em>, it is more likely to be a ru-verb, but it can also be an u-verb in some cases.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>文型<rt>ぶんけい</rt></ruby></td>
+              <td>
+                a. V-stemます<br>
+                b. V-stemません
+              </td>
+            </tr>
+            <tr class="ex-list">
+              <td><ruby>練習<rt>れんしゅう</rt></ruby></td>
+              <td>
+                <ul>
+                  <li><a href="../../lesson-3/grammar-1/">Practice: Verb Conjugation</a></li>
+                  <li><a href="../../lesson-3/workbook-1/">Workbook: Verb Conjugation</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <br>
+          
+          <h3 id="l3-p2" class="workbook-title" data-keywords="habitual actions、future actions">2. Verb Types and the "Present Tense" <span class="page-data">Genki I: p.88</span></h3>
+          <table class="table grammar-table">
+            <tr>
+              <td><ruby>本文<rt>ほんぶん</rt></ruby></td>
+              <td>
+                <ul>
+                  <li>
+                    メアリーさん、<ruby>週末<rt>しゅうまつ</rt></ruby>は<strong class="main-color">たいてい</strong><ruby>何<rt>なに</rt></ruby>をしますか。【Dialogue I: //.1】<br>
+                    Mary, what do you <strong class="main-color">usually</strong> do on the weekend?
+                  </li>
+                  <li>
+                    ええ、<ruby>今日<rt>きょう</rt></ruby>は<ruby>京都<rt>きょうと</rt></ruby>に<ruby>行<rt>い</rt></ruby>き<strong class="main-color">ます</strong>。【Dialogue II: //.3】<br>
+                    Yes, I'm going to Kyoto today.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>説明<rt>せつめい</rt></ruby></td>
+              <td>
+                Among the many verbs in Japanese are those that describe human actions. These are often called "action verbs," and the "present tense" of these verbs either means (1) that a person habitually or regularly engages in these activities, or (2) that a person will, or is planning to, perform these activities in the future.<br><br>
+                
+                <strong>Habitual actions:</strong>
+                <div class="columns-2-in">
+                  <div class="example"><ruby>私<rt>わたし</rt></ruby>は<strong class="main-color">よく</strong>テレビを<ruby>見<rt>み</rt></ruby>ます。</div>
+                  <div class="example">I <strong class="main-color">often</strong> watch TV.</div>
+                </div>
+                <div class="columns-2-in">
+                  <div class="example">メアリーさんは<strong class="main-color">ときどき</strong><ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べません。</div>
+                  <div class="example">Mary <strong class="main-color">sometimes</strong> doesn't eat breakfast.</div>
+                </div><br>
+                
+                <strong>Future actions:</strong>
+                <div class="columns-2-in">
+                  <div class="example"><ruby>私<rt>わたし</rt></ruby>は<strong class="main-color">あした</strong><ruby>京都<rt>きょうと</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。</div>
+                  <div class="example">I will go to Kyoto <strong class="main-color">tomorrow</strong>.</div>
+                </div>
+                <div class="columns-2-in">
+                  <div class="example">ソラさんは<strong class="main-color"><ruby>今日<rt>きょう</rt></ruby></strong>うちに<ruby>帰<rt>かえ</rt></ruby>りません。</div>
+                  <div class="example">Sora will not return home <strong class="main-color">today</strong>.</div>
+                </div><br>
+                
+                It is usually easy to tell which action is implied by the usage of frequency adverbs, time references, and so on. You may need to rely on context in other cases.
+              </td>
+            </tr>
+          </table>
+          <br>
           
           <br><h3 id="placeholder" class="workbook-title"><em>Coming soon...</em></h3>
         </div>
@@ -1292,7 +1518,7 @@
           <h3 id="placeholder" class="workbook-title"><em>More coming soon...</em></h3>
         </div>
 
-          <h3 id="l2-p" class="workbook-title" data-keywords="">.  <span class="page-data">Genki I: p.</span></h3>
+          <h3 id="l3-p" class="workbook-title" data-keywords="">.  <span class="page-data">Genki I: p.</span></h3>
           <table class="table grammar-table">
             <tr>
               <td><ruby>本文<rt>ほんぶん</rt></ruby></td>
@@ -1334,7 +1560,7 @@
               <td><ruby>練習<rt>れんしゅう</rt></ruby></td>
               <td>
                 <ul>
-                  <li><a href="../../lesson-2/grammar-/">Practice:</a></li>
+                  <li><a href="../../lesson-3/grammar-/">Practice:</a></li>
                 </ul>
               </td>
             </tr>
