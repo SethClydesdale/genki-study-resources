@@ -69,9 +69,18 @@
     }
   };
   
-  // jumps to the clicked grammar point
+  // jumps to the clicked entry
   document.addEventListener('click', function (e) {
-    if (e.target && e.target.href && /l\d+-p\d+|lesson-grammar-\d+/.test(e.target.href)) {
+    var target = e.target;
+    
+    // loop through parents to find an anchor
+    // this is required for cases such as the index list that employs <ruby> tags inside the anchors sometimes
+    while (target.tagName != 'A') {
+      if (!target.parentNode || target.parentNode.tagName == 'BODY') break;
+      else target = target.parentNode;
+    }
+    
+    if (target && target.href && /l\d+-p\d+|lesson-grammar-\d+/.test(target.href)) {
       window.setTimeout(GRIndex.jump, 50); // slight delay before the hash is changed
     }
   });
