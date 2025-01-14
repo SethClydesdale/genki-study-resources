@@ -82,6 +82,8 @@ hr {
   border-bottom:1px solid #999;
 }
 
+hr.main-color { border-color:#F93; }
+
 a {
   color:#039;
   text-decoration:none;
