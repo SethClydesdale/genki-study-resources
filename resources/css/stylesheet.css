@@ -202,6 +202,11 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
   padding:3px;
   margin:3px;
 }
+.box-color.spaced {
+  margin:10px 3px;
+}
+.box-color.bg { background:#FFF; }
+.dark-mode .box-color.bg { background:#161616; }
 
 .inline { display:inline-block; }
 .t-valign-top { vertical-align:top; }
