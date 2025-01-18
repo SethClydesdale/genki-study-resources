@@ -1744,11 +1744,11 @@ ruby rt {
   padding:0 2px;
 }
 
-#announcement ruby rt, .workbook-title ruby rt, .main-color ruby rt, #quick-search-results ruby rt, .section-title ruby rt, .lesson-title ruby rt {
+#announcement ruby rt, .workbook-title ruby rt, .main-color ruby rt, .section-title ruby rt, .lesson-title ruby rt {
   color:#B50;
 }
 
-#quick-nav-list li a ruby rt,  a ruby rt {
+#quick-nav-list li a ruby rt,  a ruby rt, #quick-search-results ruby rt {
   color:#367;
 }
 
