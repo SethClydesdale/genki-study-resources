@@ -69,10 +69,10 @@
             <tr>
               <td style="width:25px">verb types</td>
               <td style="width:25px">dictionary forms</td>
-              <td style="width:134px">long forms<br>(<a href="../../../#lesson-3" target="_blank">L.3</a>)</td>
-              <td style="width:134px">te-forms<br>(<a href="../../../#lesson-6" target="_blank">L.6</a>)</td>
+              <td style="width:134px">long forms<br>(<a href="../../../lessons-3rd/appendix/grammar-index/#l3-p1" target="_blank" class="grammar-link">L.3</a>)</td>
+              <td style="width:134px">te-forms<br>(<a href="../../../lessons-3rd/appendix/grammar-index/#l6-p1" target="_blank" class="grammar-link">L.6</a>)</td>
               <td style="width:134px">short past<br>(<a href="../../../#lesson-9" target="_blank">L.9</a>)</td>
-              <td style="width:134px">short present neg.<br>(<a href="../../../#lesson-8" target="_blank">L.8</a>)</td>
+              <td style="width:134px">short present neg.<br>(<a href="../../../lessons-3rd/appendix/grammar-index/#l8-p1" target="_blank" class="grammar-link">L.8</a>)</td>
               <td style="width:134px">short past neg.<br>(<a href="../../../#lesson-9" target="_blank">L.9</a>)</td>
             </tr>
             
@@ -737,6 +737,18 @@
             '<td>{はなさせられる}</td>'+
           '</tr>'+
         '</table>';
+      
+      // format grammar links
+      (function (window, document) {
+        if (!Genki.local || /debug/.test(window.location.search)) {
+          for (var a = document.querySelectorAll('.grammar-link'), i = 0, j = a.length; i < j; i++) {
+            a[i].onclick = function () {
+              Genki.getGrammarPoint(this, this.href.replace(/.*?(l\d+\-p\d+).*/, '$1'));
+              return false;
+            };
+          }
+        }
+      }(window, document));
       
       Genki.appendix.finishedLoading();
     </script>
