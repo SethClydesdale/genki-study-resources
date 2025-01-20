@@ -208,6 +208,7 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 .box-color.bg { background:#FFF; }
 .dark-mode .box-color.bg { background:#161616; }
 
+.hidden { visibility:hidden; }
 .inline { display:inline-block; }
 .t-valign-top { vertical-align:top; }
 
