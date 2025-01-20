@@ -740,7 +740,7 @@
       
       // format grammar links
       (function (window, document) {
-        if (/debug/.test(window.location.search) || !Genki.local) {
+        if (!Genki.local || /debug/.test(window.location.search)) {
           for (var a = document.querySelectorAll('.grammar-link'), i = 0, j = a.length; i < j; i++) {
             a[i].onclick = function () {
               Genki.getGrammarPoint(this, this.href.replace(/.*?(l\d+\-p\d+).*/, '$1'));
