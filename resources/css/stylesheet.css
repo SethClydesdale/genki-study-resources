@@ -205,6 +205,10 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 .box-color.spaced {
   margin:10px 3px;
 }
+.box-color.inline {
+  display:inline;
+  padding:0px 3px;
+}
 .box-color.bg { background:#FFF; }
 .dark-mode .box-color.bg { background:#161616; }
 
