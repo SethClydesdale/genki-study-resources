@@ -73,6 +73,30 @@
         padding:5px;
         background:#FFF;
       }
+      
+      .example .line .name:after { content:":"; }
+      .example .line .name {
+        font-weight:bold;
+        text-align:right;
+        float:left;
+        width:25%;
+        padding-right:5px;
+        word-wrap:break-word;
+      }
+
+      .example .line .text {
+        float:left;
+        width:72%;
+      }
+      
+      .example.AB .line .name { width:10% }
+      .example.AB .line .text { width:87% }
+      
+      .line:after {
+        content:"";
+        display:table;
+        clear:both;
+      }
 
       .columns-2-in > div.example {
         display:inline-block;
@@ -612,63 +636,128 @@
               <td>
                 <ol>
                   <li>
-                    <div class="columns-2-in">
-                      <div class="example">
-                        Ａ：せんこうは<span class="ul-color">なん</span>です<strong class="main-color">か</strong>。<br>
-                        　　What is your major?
-                      </div>
-                      <div class="example">
-                        Ｂ：(せんこうは)<span class="ul-color">えいご</span>です。<br>
-                        　　(My major) is English.
-                      </div>
+                    <div class="columns-2-in clear">
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">せんこうは<span class="ul-color">なん</span>です<strong class="main-color">か</strong>。</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">(せんこうは)<span class="ul-color">えいご</span>です。</div>
+                        </div>
+                      </div>  
+
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">What is your major?</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">(My major) is English.</div>
+                        </div>
+                      </div>  
                     </div>
                   </li>
                   <li>
-                    <div class="columns-2-in">
-                      <div class="example">
-                        Ａ：いま<span class="ul-color">なんじ</span>です<strong class="main-color">か</strong>。<br>
-                        　　What time is it now?
-                      </div>
-                      <div class="example">
-                        Ｂ：(いま)<span class="ul-color">くじ</span>です。<br>
-                        　　It is nine o'clock.
-                      </div>
+                    <div class="columns-2-in clear">
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">いま<span class="ul-color">なんじ</span>です<strong class="main-color">か</strong>。</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">(いま)<span class="ul-color">くじ</span>です。</div>
+                        </div>
+                      </div>  
+
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">What time is it now?</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">It is nine o'clock.</div>
+                        </div>
+                      </div>  
                     </div>
                   </li>
                   <li>
-                    <div class="columns-2-in">
-                      <div class="example">
-                        Ａ：メアリーさんは<span class="ul-color">なんさい</span>です<strong class="main-color">か</strong>。<br>
-                        　　How old are you, Mary?
-                      </div>
-                      <div class="example">
-                        Ｂ：<span class="ul-color">じゅうきゅうさい</span>です。<br>
-                        　　I'm nineteen years old.
-                      </div>
+                    <div class="columns-2-in clear">
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">メアリーさんは<span class="ul-color">なんさい</span>です<strong class="main-color">か</strong>。</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text"><span class="ul-color">じゅうきゅうさい</span>です。</div>
+                        </div>
+                      </div>  
+
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">How old are you, Mary?</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">I'm nineteen years old.</div>
+                        </div>
+                      </div>  
                     </div>
                   </li>
                   <li>
-                    <div class="columns-2-in">
-                      <div class="example">
-                        Ａ：<span class="ul-color">なんねんせい</span>です<strong class="main-color">か</strong>。<br>
-                        　　What year are you in college?
-                      </div>
-                      <div class="example">
-                        Ｂ：<span class="ul-color">にねんせい</span>です。<br>
-                        　　I'm a sophomore.
-                      </div>
+                    <div class="columns-2-in clear">
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text"><span class="ul-color">なんねんせい</span>です<strong class="main-color">か</strong>。</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text"><span class="ul-color">にねんせい</span>です。</div>
+                        </div>
+                      </div>  
+
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">What year are you in college?</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">I'm a sophomore.</div>
+                        </div>
+                      </div>  
                     </div>
                   </li>
                   <li>
-                    <div class="columns-2-in">
-                      <div class="example">
-                        Ａ：でんわばんごうは<span class="ul-color">なんばん</span>です<strong class="main-color">か</strong>。<br>
-                        　　What is your telephone number?
-                      </div>
-                      <div class="example">
-                        Ｂ：<span class="ul-color">867-5309</span>です。<br>
-                        　　It is 867-5309.
-                      </div>
+                    <div class="columns-2-in clear">
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">でんわばんごうは<span class="ul-color">なんばん</span>です<strong class="main-color">か</strong>。</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text"><span class="ul-color">867-5309</span>です。</div>
+                        </div>
+                      </div>  
+
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">What is your telephone number?</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">It is 867-5309.</div>
+                        </div>
+                      </div>  
                     </div>
                   </li>
                 </ol>
@@ -1029,15 +1118,28 @@
               <td>
                 <ol>
                   <li>
-                    <div class="columns-2-in">
-                      <div class="example">
-                        Ａ：これは<strong class="main-color">だれの</strong>かばんですか。<br>
-                        Ｂ：それは<strong class="main-color">ソラさんの</strong>がばんです。
-                      </div>
-                      <div class="example">
-                        Ａ：<strong class="main-color">Whose</strong> bag is this?<br>
-                        Ｂ：That is <strong class="main-color">Sora's</strong> bag.
-                      </div>
+                    <div class="columns-2-in clear">
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">これは<strong class="main-color">だれの</strong>かばんですか。</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">それは<strong class="main-color">ソラさんの</strong>がばんです。</div>
+                        </div>
+                      </div>  
+
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text"><strong class="main-color">Whose</strong> bag is this?</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">That is <strong class="main-color">Sora's</strong> bag.</div>
+                        </div>
+                      </div>  
                     </div>
                   </li>
                 </ol>
@@ -1158,17 +1260,34 @@
                 </div><br>
                 
                 です and じゃない must always be accompanied by a noun when answering a question; they do not stand alone.
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：にほんじんですか。<br>
-                    Ｂ：いいえ、<span class="ul-color">にほんじん<strong class="main-color">じゃない</strong></span>です。<br>
-                    　　×いいえ、じゃないです。
-                  </div>
-                  <div class="example">
-                    Ａ：Are you Japanese.<br>
-                    Ｂ：No, I <span class="ul-color"><strong class="main-color">am not</strong> Japanese</span>.<br>
-                    　　×No, am not.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">にほんじんですか。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">
+                        いいえ、<span class="ul-color">にほんじん<strong class="main-color">じゃない</strong></span>です。<br>
+                        ×いいえ、じゃないです。
+                      </div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">Are you Japanese.</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">
+                        No, I <span class="ul-color"><strong class="main-color">am not</strong> Japanese</span>.<br>
+                        ×No, am not.
+                      </div>
+                    </div>
+                  </div>  
                 </div><br>
                 
                 To summarize:
@@ -1734,27 +1853,53 @@
               <td>
                 <ol>
                   <li>
-                    <div class="columns-2-in">
-                      <div class="example">
-                        Ａ：<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べ<strong class="main-color">ませんか</strong>。<br>
-                        Ｂ：いいですね。
-                      </div>
-                      <div class="example">
-                        Ａ：<strong class="main-color">What do you say to</strong> having lunch with me?<br>
-                        Ｂ：Sounds great.
-                      </div>
+                    <div class="columns-2-in clear">
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text"><ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べ<strong class="main-color">ませんか</strong>。</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">いいですね。</div>
+                        </div>
+                      </div>  
+
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text"><strong class="main-color">What do you say to</strong> having lunch with me?</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">Sounds great.</div>
+                        </div>
+                      </div>  
                     </div>
                   </li>
                   <li>
-                    <div class="columns-2-in">
-                      <div class="example">
-                        Ａ：テニスをし<strong class="main-color">ませんか</strong>。<br>
-                        Ｂ：うーん、ちょっと。
-                      </div>
-                      <div class="example">
-                        Ａ：<strong class="main-color">Would you like to</strong> play tennis with me?<br>
-                        Ｂ：Um, it's slightly (inconvenient for me at the moment).
-                      </div>
+                    <div class="columns-2-in clear">
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">テニスをし<strong class="main-color">ませんか</strong>。</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">うーん、ちょっと。</div>
+                        </div>
+                      </div>  
+
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text"><strong class="main-color">Would you like to</strong> play tennis with me?</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">Um, it's slightly (inconvenient for me at the moment).</div>
+                        </div>
+                      </div>  
                     </div>
                   </li>
                 </ol>
@@ -1931,15 +2076,28 @@
                   <div class="example">I'm going to Kyoto <strong class="main-color">today</strong>.</div>
                 </div>
                 In the examples above, は presents time expressions as the topic of each sentence. Its effects can be paraphased like so: "Let's talk about weekends; what do you do on the weekend?" "Let me say what I will do today; I will go to Kyoto."<br>
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：<strong class="main-color"><ruby>晩<rt>ばん</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>は</strong>？<br>
-                    Ｂ：<ruby>食<rt>た</rt></ruby>べません。
-                  </div>
-                  <div class="example">
-                    Ａ：How about <strong class="main-color">dinner</strong>?<br>
-                    Ｂ：I will not eat.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><strong class="main-color"><ruby>晩<rt>ばん</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>は</strong>？</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text"><ruby>食<rt>た</rt></ruby>べません。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">How about <strong class="main-color">dinner</strong>?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">I will not eat.</div>
+                    </div>
+                  </div>  
                 </div>
                 In this example, は is used in directing the listener's attention (with rising intonation) and inviting a comment or completion of a sentence. You may notice that the topic, <ruby>晩<rt>ばん</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>, does not act as a subject here, but is rather a direct object to the verb <ruby>食<rt>た</rt></ruby>べる.
               </td>
@@ -2081,15 +2239,28 @@
               <td><ruby>説明<rt>せつめい</rt></ruby></td>
               <td>
                 In <a href="#l2-p3">Lesson 2</a> we learned how to ask for, and give, the location of item X.
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：マクドナルドはどこですか。<br>
-                    Ｂ：マクドナルドは{ここ／そこ／あそこ}です。
-                  </div>
-                  <div class="example">
-                    Ａ：Where's McDonald's?<br>
-                    Ｂ：McDonald's is {right here/right there near you/over there}.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">マクドナルドはどこですか。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">マクドナルドは{ここ／そこ／あそこ}です。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">Where's McDonald's?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">McDonald's is {right here/right there near you/over there}.</div>
+                    </div>
+                  </div>  
                 </div>
                 Now we will learn how to describe the location of an item relative to another item, as in "X is in front of Y." The Japanese version looks like XはYの<ruby>前<rt>まえ</rt></ruby>です.
                 <div class="columns-2-in">
@@ -2745,26 +2916,52 @@
                   </tr>
                 </table>
                 
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：その<ruby>本<rt>ほん</rt></ruby>は<strong class="main-color">おもしろ</strong><span class="ul-color"><strong class="main-color">い</strong>です</span>か。<br>
-                    Ｂ：いいえ、あまり<strong class="main-color">おもしろ</strong><span class="ul-color"><strong class="main-color">くない</strong>です</span>。
-                  </div>
-                  <div class="example">
-                    Ａ：Is that book <strong class="main-color">interesting</strong>?<br>
-                    Ｂ：No, it is <strong class="main-color">not</strong> very <strong class="main-color">interesting</strong>.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">その<ruby>本<rt>ほん</rt></ruby>は<strong class="main-color">おもしろ</strong><span class="ul-color"><strong class="main-color">い</strong>です</span>か。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">いいえ、あまり<strong class="main-color">おもしろ</strong><span class="ul-color"><strong class="main-color">くない</strong>です</span>。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">Is that book <strong class="main-color">interesting</strong>?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">No, it is <strong class="main-color">not</strong> very <strong class="main-color">interesting</strong>.</div>
+                    </div>
+                  </div>  
                 </div>
                 
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：<ruby>今日<rt>きょう</rt></ruby>、<strong class="main-color">ひま</strong><span class="ul-color">です</span>か。<br>
-                    Ｂ：いいえ、<strong class="main-color">ひま</strong><span class="ul-color"><strong class="main-color">じゃない</strong>です</span>。
-                  </div>
-                  <div class="example">
-                    Ａ：Are you <strong class="main-color">free</strong> today?<br>
-                    Ｂ：No, I'm <strong class="main-color">not free</strong>.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><ruby>今日<rt>きょう</rt></ruby>、<strong class="main-color">ひま</strong><span class="ul-color">です</span>か。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">いいえ、<strong class="main-color">ひま</strong><span class="ul-color"><strong class="main-color">じゃない</strong>です</span>。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">Are you <strong class="main-color">free</strong> today?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">No, I'm <strong class="main-color">not free</strong>.</div>
+                    </div>
+                  </div>  
                 </div>
                 
                 There are two negative forms for い- and な-adjectives: ないです and ありません. ないです is more colloquial, and ありません is more conservative and more appropriate in the written language. Just like negation with nouns (see <a href="#l2-p6">Lesson 2</a>), じゃ in the negative version can also be replaced with では in more formal situations. Don't apply the noun/な-adjective pattern to い-adjectives. It is wrong to say ×さむいじゃないです, for example.<br><br>
@@ -2880,26 +3077,52 @@
                   </tr>
                 </table>
                 
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：テストは<strong class="main-color"><ruby>難<rt>むずか</rt></ruby>し<span class="ul-color">かった</span></strong><span class="ul-color">です</span>か。<br>
-                    Ｂ：いいえ、ぜんぜん<strong class="main-color"><ruby>難<rt>むずか</rt></ruby>し<span class="ul-color">くなかった</span></strong><span class="ul-color">です</span>。
-                  </div>
-                  <div class="example">
-                    Ａ：<strong class="main-color">Was</strong> the exam <strong class="main-color">difficult</strong>?<br>
-                    Ｂ：No, it <strong class="main-color">was not difficult</strong> at all.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">テストは<strong class="main-color"><ruby>難<rt>むずか</rt></ruby>し<span class="ul-color">かった</span></strong><span class="ul-color">です</span>か。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">いいえ、ぜんぜん<strong class="main-color"><ruby>難<rt>むずか</rt></ruby>し<span class="ul-color">くなかった</span></strong><span class="ul-color">です</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><strong class="main-color">Was</strong> the exam <strong class="main-color">difficult</strong>?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">No, it <strong class="main-color">was not difficult</strong> at all.</div>
+                    </div>
+                  </div>  
                 </div>
                 
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：その<ruby>町<rt>まち</rt></ruby>は<strong class="main-color">にぎやか</strong><span class="ul-color">でした</span>か。<br>
-                    Ｂ：いいえ、<strong class="main-color">にぎやか<span class="ul-color">じゃなかった</span></strong><span class="ul-color">です</span>。
-                  </div>
-                  <div class="example">
-                    Ａ：<span class="ul-color">Was</span> the town <strong class="main-color">lively</strong>?<br>
-                    Ｂ：No, it <strong class="main-color">was not lively.</strong>
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">その<ruby>町<rt>まち</rt></ruby>は<strong class="main-color">にぎやか</strong><span class="ul-color">でした</span>か。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">いいえ、<strong class="main-color">にぎやか<span class="ul-color">じゃなかった</span></strong><span class="ul-color">です</span>。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><span class="ul-color">Was</span> the town <strong class="main-color">lively</strong>?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">No, it <strong class="main-color">was not lively</strong>.</div>
+                    </div>
+                  </div>  
                 </div><br>
                 
                 The い-adjective いい (good) is irregular and has it's first syllable changed to よ as in the present tense conjugations.
@@ -3536,15 +3759,28 @@
                     </div>
                   </li>
                   <li>
-                    <div class="columns-2-in">
-                      <div class="example">
-                        Ａ：トイレに行<strong class="main-color">ってもいいですか</strong>。<br>
-                        Ｂ：はい、<strong class="main-color">いいです</strong>よ。／どうぞ。
-                      </div>
-                      <div class="example">
-                        Ａ：<strong class="main-color">May I</strong> go to the bathroom?<br>
-                        Ｂ：<strong class="main-color">You may</strong>./Please.
-                      </div>
+                    <div class="columns-2-in clear">
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">トイレに行<strong class="main-color">ってもいいですか</strong>。</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">はい、<strong class="main-color">いいです</strong>よ。／どうぞ。</div>
+                        </div>
+                      </div>  
+
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text"><strong class="main-color">May I</strong> go to the bathroom?</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text"><strong class="main-color">You may</strong>./Please.</div>
+                        </div>
+                      </div>  
                     </div>
                   </li>
                 </ol>
@@ -4549,42 +4785,76 @@
               <td><ruby>説明<rt>せつめい</rt></ruby></td>
               <td>
                 Close friends or family members speak with each other using short forms at the end of sentences as a sign of intimacy. The use of long forms, in contrast, tends to imply the speaker's intention to "keep a proper distance" from the listener. Short forms, then, are like talking on a first-name basis, while long forms are like using "Mr." and "Ms."
-                <table class="table alt-cell-color">
+                <table class="table alt-cell-color example AB">
                   <tr>
                     <td class="center">(Between friends)</td>
                     <td>
-                      Ａ：<ruby>今日<rt>きょう</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby><span class="ul-color">く</span>？(Short form)<br>
-                      　　Are you going to school today?<br>
-                      Ｂ：ううん、<ruby>行<rt>い</rt></ruby><span class="ul-color">かない</span>。<br>
-                      　　No, I'm not.
+                      <div class="line">
+                        <div class="name">A</div>
+                        <div class="text">
+                          <ruby>今日<rt>きょう</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby><span class="ul-color">く</span>？(Short form)<br>
+                          Are you going to school today?
+                        </div>
+                      </div>
+                      <div class="line">
+                        <div class="name">B</div>
+                        <div class="text">
+                          ううん、<ruby>行<rt>い</rt></ruby><span class="ul-color">かない</span>。<br>
+                          No, I'm not.
+                        </div>
+                      </div>
                     </td>
                   </tr>
                   <tr>
                     <td class="center">(To a stranger)</td>
                     <td>
-                      Ａ：すみません、この<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>新宿<rt>しんじゅく</rt></ruby>に<ruby>行<rt>い</rt></ruby><span class="ul-color">きます</span>か。(Long form)<br>
-                      　　Excuse me, does this train go to Shinjuku?<br>
-                      Ｂ：いいえ、<ruby>行<rt>い</rt></ruby><span class="ul-color">きません</span>よ。<br>
-                      　　No, it doesn't.
+                      <div class="line">
+                        <div class="name">A</div>
+                        <div class="text">
+                          すみません、この<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>新宿<rt>しんじゅく</rt></ruby>に<ruby>行<rt>い</rt></ruby><span class="ul-color">きます</span>か。(Long form)<br>
+                          Excuse me, does this train go to Shinjuku?
+                        </div>
+                      </div>
+                      <div class="line">
+                        <div class="name">B</div>
+                        <div class="text">
+                          いいえ、<ruby>行<rt>い</rt></ruby><span class="ul-color">きません</span>よ。<br>
+                          No, it doesn't.
+                        </div>
+                      </div>
                     </td>
                   </tr>
                 </table>
                 <br>
                 
                 It may not be easy to decide when it is appropriate to switch to short forms. Firstly, Japanese speakers are often very conscious of seniority. A year's difference in age may in many cases totally rule out the possibility of establishing a truly "equal" relationship. Secondly, license to use short forms is not mutual; seniors may feel perfectly justified in using short forms while expecting their juniors to continue addressing them with long forms. Thus, if somebody who is older, say, your Japanese language professor, talks to you using short forms, they would be greatly surprised if you were to do the same.
-                <div class="columns-2-in">
+                <div class="columns-2-in clear">
                   <div class="example">
-                    Professor：この<ruby>漢字<rt>かんじ</rt></ruby>、わか<span class="ul-color">る</span>？<br>
-                    Student：はい、わか<span class="ul-color">ります</span>。<br>
-                    <span class="hidden">Student：</span>(×うん、わかる。)<br>
-                    <span class="hidden">Student：</span>(Long form preferred, because you are talking to somebody who is older than you)
-                  </div>
+                    <div class="line">
+                      <div class="name">Professor</div>
+                      <div class="text">この<ruby>漢字<rt>かんじ</rt></ruby>、わか<span class="ul-color">る</span>？</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">Student</div>
+                      <div class="text">
+                        はい、わか<span class="ul-color">ります</span>。<br>
+                        (×うん、わかる。)<br>
+                        (Long form preferred, because you are talking to somebody who is older than you)
+                      </div>
+                    </div>
+                  </div>  
+
                   <div class="example">
-                    Professor：Do you know this kanji?<br>
-                    Student：Yes, I do.
-                  </div>
-                </div>
-                <br>
+                    <div class="line">
+                      <div class="name">Professor</div>
+                      <div class="text">Do you know this kanji?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">Student</div>
+                      <div class="text">Yes, I do.</div>
+                    </div>
+                  </div>  
+                </div><br>
                 
                 In casual conversations, particles are often dropped. One such particle, the question particle か, can be dropped, and rising intonation used instead to ask a question. In the written language, however, か is usually replaced with a question mark.
                 <div class="columns-2-in">
@@ -4594,16 +4864,31 @@
                 <br>
                 
                 Also, in the spoken language, you usually drop the sentence-final だ after a な-adjective or a noun. (You keep the last だ in the written language, however.)
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：<ruby>元気<rt>げんき</rt></ruby>？<br>
-                    Ｂ：うん、<ruby>元気<rt>げんき</rt></ruby>。<br>
-                    <span class="hidden">Ｂ：</span>(Rather than: <ruby>元気<rt>げんき</rt></ruby><span class="ul-color">だ</span>。)
-                  </div>
-                  <div class="example">
-                    Ａ：Are you good?<br>
-                    Ｂ：Yeah, I'm good.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><ruby>元気<rt>げんき</rt></ruby>？</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">
+                        うん、<ruby>元気<rt>げんき</rt></ruby>。<br>
+                        </span>(Rather than: <ruby>元気<rt>げんき</rt></ruby><span class="ul-color">だ</span>。)
+                      </div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">Are you good?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">Yeah, I'm good.</div>
+                    </div>
+                  </div>  
                 </div>
                 
                 You keep だ when you follow it up with ね or よ, however.
@@ -4617,16 +4902,28 @@
                 <br>
                 
                 はい and いいえ are usually replaced by the more casual うん and ううん.
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">よくスポーツをする？</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text"><strong class="main-color">うん</strong>、する。／<strong class="main-color">ううん</strong>、しない。</div>
+                    </div>
+                  </div>  
 
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：よくスポーツをする？<br>
-                    Ｂ：<strong class="main-color">うん</strong>、する。／<strong class="main-color">ううん</strong>、しない。
-                  </div>
-                  <div class="example">
-                    Ａ：Do you play sports often?<br>
-                    Ｂ：<strong class="main-color">Yeah</strong>, I do. / <strong class="main-color">Nah</strong>, I don't.
-                  </div>
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">Do you play sports often?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text"><strong class="main-color">Yeah</strong>, I do. / <strong class="main-color">Nah</strong>, I don't.</div>
+                    </div>
+                  </div>  
                 </div>
               </td>
             </tr>
@@ -4831,19 +5128,30 @@
                 <span class="box-color bg spaced">　verb (short, negative) + でください = Please don't...　</span>
                 <br>
                 ないでください is often a better response to a てもいいですか question than <a href="#l6-p5">てはいけません</a> due to its softer tone. てはいけません on the other hand has a harsher feel to it due to being used mainly by those in a position of authority or for prohibitory signs/rules.
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：この<ruby>部屋<rt>へや</rt></ruby>に<ruby>入<rt>はい</rt></ruby>ってもいいですか。<br>
-                    　　May I enter this room?<br>
-                    Ｂ：<ruby>入<rt>はい</rt></ruby>ら<strong class="main-color">ないでください</strong>。<br>
-                    　　<strong class="main-color">Please don't</strong>.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">
+                        この<ruby>部屋<rt>へや</rt></ruby>に<ruby>入<rt>はい</rt></ruby>ってもいいですか。<br>
+                        May I enter this room?<br>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">
+                        <ruby>入<rt>はい</rt></ruby>ら<strong class="main-color">ないでください</strong>。<br>
+                        <strong class="main-color">Please don't</strong>.
+                      </div>
+                    </div>
+                  </div>  
+
                   <div class="example">
                     <span class="hidden">＿</span><br>
                     <span class="hidden">＿</span><br>
                     Compare: <ruby>入<rt>はい</rt></ruby>ってはいけません。<br>
                     (Implies that you are in a position of authority.)
-                  </div>
+                  </div>  
                 </div>
               </td>
             </tr>
@@ -5021,25 +5329,52 @@
                   <div class="example">Compare: ×だれ<span class="ul-color">は</span><ruby>沖縄<rt>おきなわ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きましたか。</div>
                 </div>
                 As we learned in <a href="#l2-p2">Lesson 2</a>, a question word that is the subject of a sentence is never followed by the particle は, but always by the particle が (p.61). As we have seen, a noun that will provide the answer to such a question is also followed by the particle が.
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：どのクラス<strong class="main-color">が</strong>おもしろいですか。<br>
-                    Ｂ：<ruby>日本語<rt>にほんご</rt></ruby>のクラス<strong class="main-color">が</strong>おもしろいです。
-                  </div>
-                  <div class="example">
-                    Ａ：<em>Which class</em> is (the most) interesting?<br>
-                    Ｂ：<em>Japanese class</em> is.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">どのクラス<strong class="main-color">が</strong>おもしろいですか。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text"><ruby>日本語<rt>にほんご</rt></ruby>のクラス<strong class="main-color">が</strong>おもしろいです。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><em>Which class</em> is (the most) interesting?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text"><em>Japanese class</em> is.</div>
+                    </div>
+                  </div>  
                 </div>
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：(このクラスで)だれ<strong class="main-color">が</strong>めがねをかけていますか。<br>
-                    Ｂ：<ruby>山下先生<rt>やましたせんせい</rt></ruby><strong class="main-color">が</strong>めがねをかけています。
-                  </div>
-                  <div class="example">
-                    Ａ：<em>Who</em> wears glasses (in this class)?<br>
-                    Ｂ：<em>Professor Yamashita</em> does.
-                  </div>
+                
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">(このクラスで)だれ<strong class="main-color">が</strong>めがねをかけていますか。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text"><ruby>山下先生<rt>やましたせんせい</rt></ruby><strong class="main-color">が</strong>めがねをかけています。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><em>Who</em> wears glasses (in this class)?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text"><em>Professor Yamashita</em> does.</div>
+                    </div>
+                  </div>  
                 </div>
               </td>
             </tr>
@@ -5299,28 +5634,53 @@
               <td><ruby>説明<rt>せつめい</rt></ruby></td>
               <td>
                 Short form predicates in the past tense can be used in the same way as the <a href="#l8-p2">present tense forms</a>. Note that the question particle か is dropped in informal speech and replaced by a question mark in the written language.
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：けさ、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べ<span class="ul-color">た</span>？<br>
-                    Ｂ：うん、<ruby>食<rt>た</rt></ruby>べ<span class="ul-color">た</span>／ううん、<ruby>食<rt>た</rt></ruby>べな<span class="ul-color">かった</span>。
-                  </div>
-                  <div class="example">
-                    Ａ：Did you have breakfast this morning?<br>
-                    Ｂ：Yeah, I did. / Nah, I didn't.
-                  </div>
-                </div>
-                <br>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">けさ、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べ<span class="ul-color">た</span>？</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">うん、<ruby>食<rt>た</rt></ruby>べ<span class="ul-color">た</span>／ううん、<ruby>食<rt>た</rt></ruby>べな<span class="ul-color">かった</span>。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">Did you have breakfast this morning?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">Yeah, I did. / Nah, I didn't.</div>
+                    </div>
+                  </div>  
+                </div><br>
                 
                 Unlike だ in the present tense, だった is not dropped in informal speech.
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：<ruby>先週<rt>せんしゅう</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しかった？<br>
-                    Ｂ：ううん、<ruby>忙<rt>いそが</rt></ruby>しくなかった。ひま<span class="ul-color">だった</span>。
-                  </div>
-                  <div class="example">
-                    Ａ：Were you busy last week?<br>
-                    Ｂ：Nah, I wasn't. I had time to kill. (=I had free time.)
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><ruby>先週<rt>せんしゅう</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しかった？</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">ううん、<ruby>忙<rt>いそが</rt></ruby>しくなかった。ひま<span class="ul-color">だった</span>。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">Were you busy last week?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">Nah, I wasn't. I had time to kill. (=I had free time.)</div>
+                    </div>
+                  </div>  
                 </div>
               </td>
             </tr>
@@ -5385,15 +5745,28 @@
               <td>
                 <ol>
                   <li>
-                    <div class="columns-2-in">
-                      <div class="example">
-                        Ａ：あ、<ruby>私<rt>わたし</rt></ruby>のとんかつがない！<br>
-                        Ｂ：トムさんが<ruby><span class="ul-color">食</span><rt>た</rt></ruby><span class="ul-color">べた</span><strong class="main-color">と<ruby>思<rt>おも</rt></ruby>います</strong>。
-                      </div>
-                      <div class="example">
-                        Ａ：Hey, my pork cutlet is gone!<br>
-                        Ｂ：<strong class="main-color">I think</strong> Tom <span class="ul-color">ate</span> it.
-                      </div>
+                    <div class="columns-2-in clear">
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">あ、<ruby>私<rt>わたし</rt></ruby>のとんかつがない！</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text">トムさんが<ruby><span class="ul-color">食</span><rt>た</rt></ruby><span class="ul-color">べた</span><strong class="main-color">と<ruby>思<rt>おも</rt></ruby>います</strong>。</div>
+                        </div>
+                      </div>  
+
+                      <div class="example AB">
+                        <div class="line">
+                          <div class="name">A</div>
+                          <div class="text">Hey, my pork cutlet is gone!</div>
+                        </div>
+                        <div class="line">
+                          <div class="name">B</div>
+                          <div class="text"><strong class="main-color">I think</strong> Tom <span class="ul-color">ate</span> it.</div>
+                        </div>
+                      </div>  
                     </div>
                   </li>
                   <li>
@@ -5537,16 +5910,30 @@
                 <br>
                 
                 Here we focus on a verb + ている, which is very frequently used as noun modifiers, describing people on the basis of their current actions and states.
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：ゆいさんはどの<ruby>人<rt>ひと</rt></ruby>ですか。<br>
-                    Ｂ：<span class="box-color inline">あそこで<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいる</span><strong class="main-color"><ruby>人<rt>ひと</rt></ruby></strong>です。
-                  </div>
-                  <div class="example">
-                    Ａ：Which person is Yui?<br>
-                    Ｂ：The <strong class="main-color">person</strong> <span class="box-color inline">who is reading a book over there</span>.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">ゆいさんはどの<ruby>人<rt>ひと</rt></ruby>ですか。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text"><span class="box-color inline">あそこで<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいる</span><strong class="main-color"><ruby>人<rt>ひと</rt></ruby></strong>です。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">Which person is Yui?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">The <strong class="main-color">person</strong> <span class="box-color inline">who is reading a book over there</span>.</div>
+                    </div>
+                  </div>  
                 </div>
+                
                 <div class="columns-2-in">
                   <div class="example"><span class="box-color inline">あそこで<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>っている</span><strong class="main-color"><ruby>学生<rt>がくせい</rt></ruby></strong>はロバートさんです。</div>
                   <div class="example">The <strong class="main-color">student</strong> <span class="box-color inline">taking pictures over there</span> is Robert.</div>
@@ -5777,16 +6164,30 @@
                   　AとBと　{どちら／どっち}のほうが (property)。<br>
                   　　　　　 = Between A and B, which is more (property)?　
                 </span><br>
+                
                 So a typical exchange looks like this:
-                <div class="columns-2-in">
-                  <div class="example">
-                    Ａ：<ruby>日本<rt>にほん</rt></ruby>とカナダと<span class="ul-color">どちら</span><strong class="main-color">のほうが</strong><ruby>寒<rt>さむ</rt></ruby>いですか。<br>
-                    Ｂ：カナダ<strong class="main-color">のほうが</strong><ruby>寒<rt>さむ</rt></ruby>いです。
-                  </div>
-                  <div class="example">
-                    Ａ：<span class="ul-color">Which</span> is cold<strong class="main-color">er</strong>, Japan or Canada?<br>
-                    Ｂ：Canada is cold<strong class="main-color">er</strong>.
-                  </div>
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><ruby>日本<rt>にほん</rt></ruby>とカナダと<span class="ul-color">どちら</span><strong class="main-color">のほうが</strong><ruby>寒<rt>さむ</rt></ruby>いですか。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">カナダ<strong class="main-color">のほうが</strong><ruby>寒<rt>さむ</rt></ruby>いです。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><span class="ul-color">Which</span> is cold<strong class="main-color">er</strong>, Japan or Canada?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">Canada is cold<strong class="main-color">er</strong>.</div>
+                    </div>
+                  </div>  
                 </div>
                 In place of どちらのほう and どっちのほう, you can also use どちら and どっち. Any one of these can be used in question sentences seeking comparisons between two items. どっち and どっちのほう are slightly more casual than どちら and どちらのほう.
                 <div class="columns-2-in">
@@ -5816,6 +6217,102 @@
                 <ul>
                   <li><a href="../../lesson-10/grammar-1/">Practice: Comparison between Two Items</a></li>
                   <li><a href="../../lesson-10/workbook-1/">Workbook: Comparison between Two Items</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table><br>
+          
+          <h3 id="l10-p2" class="workbook-title" data-keywords="の中で、のなかで、nonakade、一番、いちばん、ichiban、among the group of items、the most">2. Comparison among Three or More Items (～の<ruby>中<rt>なか</rt></ruby>で) <span class="page-data">Genki I: p.234-235</span></h3>
+          <table class="table grammar-table">
+            <tr>
+              <td><ruby>説明<rt>せつめい</rt></ruby></td>
+              <td>
+                In comparison among three or more items, the degree qualifier <ruby>一番<rt>いちばん</rt></ruby> is used.<br>
+                <span class="box-color bg spaced">
+                  　AとBとC<strong class="main-color">の<ruby>中<rt>なか</rt></ruby>で</strong>Aが<ruby><span class="ul-color">一番</span><rt>いちばん</rt></ruby>(property)。　<br>
+                  　　　　　　= A is <span class="ul-color">the most</span> (property) <strong class="main-color">among</strong> (the group of items).　
+                </span><br>
+                
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">カナダとフランスと<ruby>日本<rt>にほん</rt></ruby><strong class="main-color">の<ruby>中<rt>なか</rt></ruby>で</strong>、どこが<ruby><span class="ul-color">一番</span><rt>いちばん</rt></ruby><ruby>寒<rt>さむ</rt></ruby>いですか。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">カナダが<ruby><span class="ul-color">一番</span><rt>いちばん</rt></ruby><ruby>寒<rt>さむ</rt></ruby>いと<ruby>思<rt>おも</rt></ruby>います。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><strong class="main-color">Among</strong> Canada, France, and Japan, which country has the cold<span class="ul-color">est</span> climate?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">Canada is the cold<span class="ul-color">est</span>, I think.</div>
+                    </div>
+                  </div>  
+                </div>
+                
+                <div class="columns-2-in clear">
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text"><ruby>季節<rt>きせつ</rt></ruby><strong class="main-color">の<ruby>中<rt>なか</rt></ruby>で</strong>いつが<ruby><span class="ul-color">一番</span><rt>いちばん</rt></ruby><ruby>好<rt>す</rt></ruby>きですか。</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text"><ruby>秋<rt>あき</rt></ruby>が<ruby><span class="ul-color">一番</span><rt>いちばん</rt></ruby><ruby>好<rt>す</rt></ruby>きです。</div>
+                    </div>
+                  </div>  
+
+                  <div class="example AB">
+                    <div class="line">
+                      <div class="name">A</div>
+                      <div class="text">What season do you like <span class="ul-color">best</span>?</div>
+                    </div>
+                    <div class="line">
+                      <div class="name">B</div>
+                      <div class="text">I like fall the <span class="ul-color">most</span>.</div>
+                    </div>
+                  </div>  
+                </div>
+                  
+                Note that the words のほう and どっち are not used in statements of comparison among three or more items. Normal question words like だれ, どれ, <ruby>何<rt>なに</rt></ruby>, and どこ are used instead. In general, どれ is used when a list of items is presented and <ruby>何<rt>なに</rt></ruby> when a group is referred to collectively. Compare:
+                <div class="columns-2-in">
+                  <div class="example"><span class="ul-color">りんごとみかんとさくらんぼ</span>の<ruby>中<rt>なか</rt></ruby>で、<strong class="main-color">どれ</strong>が<ruby>一番<rt>いちばん</rt></ruby><ruby>好<rt>す</rt></ruby>きですか。</div>
+                  <div class="example"><strong class="main-color">Which</strong> do you like best, <span class="ul-color">apples, tangerines, or cherries</span>?</div>
+                </div>
+                
+                <div class="columns-2-in">
+                  <div class="example"><ruby><span class="ul-color">果物</span><rt>くだもの</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で、<strong class="main-color"><ruby>何<rt>なに</rt></ruby></strong>が<ruby>一番<rt>いちばん</rt></ruby><ruby>好<rt>す</rt></ruby>きですか。</div>
+                  <div class="example"><strong class="main-color">What</strong> <span class="ul-color">fruit</span> do you like best?</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>英訳<rt>えいやく</rt></ruby></td>
+              <td>
+                ～の中で = among...; out of...<br>
+                <ruby>一番<rt>いちばん</rt></ruby> = the best; the most
+              </td>
+            </tr>
+            <tr>
+              <td><ruby>文型<rt>ぶんけい</rt></ruby></td>
+              <td>
+                a. AとBとCの<ruby>中<rt>なか</rt></ruby>で{A/B/C}が<ruby>一番<rt>いちばん</rt></ruby>property。= {A/B/C} is the most (property) [among (the group of items)].<br>
+                b. AとBとCの<ruby>中<rt>なか</rt></ruby>でQWが<ruby>一番<rt>いちばん</rt></ruby>propertyですか。= Among A, B, and C, {what/which/who/etc.} is the most (property)?
+              </td>
+            </tr>
+            <tr class="ex-list">
+              <td><ruby>練習<rt>れんしゅう</rt></ruby></td>
+              <td>
+                <ul>
+                  <li><a href="../../lesson-10/grammar-2/">Practice: Comparison among Three or More Items</a></li>
+                  <li><a href="../../lesson-10/workbook-2/">Workbook: Comparison among Three or More Items</a></li>
                 </ul>
               </td>
             </tr>
