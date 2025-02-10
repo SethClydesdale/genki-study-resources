@@ -1,0 +1,95 @@
+/* 
+  # Genki II Color Scheme
+  1. COLOR 1
+  2. COLOR 2 
+  3. COLOR 3 
+  4. COLOR 4 
+  5. COLOR 5 
+*/
+
+
+/* 1. COLOR 1 */
+.t-orange, .main-color, a.jump-arrow, #exercise:before, #exercise:after, .loading:before, .loading:after, .lesson-title, .title, .section-title, #exercise-title, .lesson-summary:before, .lesson-point:before, .drag-quiz .quiz-answer-zone:focus, .drag-quiz .quiz-item:focus, .kana-quiz .quiz-answer-zone:focus, .kana-quiz .quiz-item:focus, #exercise-list .lesson-title:hover, #exercise-list .lesson-title:focus, #exercise-list li a.active-lesson, #exercise-list li a:hover, #exercise-list li a:focus, #exercise-list li a:hover:before, #exercise-list li a:focus:before, .answer-correct .quiz-item:before, .drag-quiz .answer-correct .quiz-item-text:before, .writing-zone.answer-correct:after, .quiz-multi-answer:hover:before, .quiz-multi-answer:focus:before, .kanji-stroke-order .button:hover, .kanji-stroke-order .button:focus, .example-problem:before, #genki-site-settings:focus, .genki_pseudo_checkbox:after, #dictionary-modes .button.active-mode, .dictionary-index li a, #quick-jisho-results .definition:focus, #appendix-tool .workbook-title {
+  color:#6B5;
+}
+
+#quick-search-hits a {
+  color:#6B5 !important;
+}
+
+.button, a.button, header, #announcement, #quick-nav-list li:before, #quick-nav-list a.sub-section-button, #quick-search-results li[data-lesson]:before, #quiz-info, #exercise-list .main-title, #exercise-list li a[data-page]:hover:after, #exercise-list li a[data-page]:focus:after, #quiz-progress-bar, #complete-banner, #genki-modal-header, .genki_pseudo_radio:after, #quick-jisho-toggle, .quick-jisho-header, #appendix-tool .page-data {
+  background-color:#6B5;
+}
+
+.taking-a-break #genki-modal-header {
+  background-color:rgba(102, 187, 85, 0.50);
+}
+
+hr.main-color, input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:focus, .box-color, #quick-nav-list li ul li:before, .drag-quiz .quiz-answer-zone:focus, .drag-quiz .quiz-item:focus, .kana-quiz .quiz-answer-zone:focus, .kana-quiz .quiz-item:focus, .quiz-item.markedItem, input.writing-zone-input:focus, .kanji-canvas:focus, .quiz-multi-answer:hover, .quiz-multi-answer:focus, #quiz-progress, .example-problem:before, .fill-quiz .writing-zone-input:focus, #genki-modal-body, #light-switch:focus, .genki_pseudo_checkbox:hover, .genki_pseudo_radio:hover, .genki_pseudo_checkbox:focus, .genki_pseudo_radio:focus, #dictionary-modes .button.active-mode {
+  border-color:#6B5;
+}
+
+.kanji-canvas:focus, .taking-a-break #genki-modal-body {
+  border-color:rgba(102, 187, 85, 0.50);
+}
+
+.ul-color, .lesson-title, .section-title, .drawing-quiz .quiz-answer-row {
+  border-bottom-color:#6B5;
+}
+
+#appendix-tool .example {
+  border-left-color:#6B5;
+}
+
+a:focus img, .quiz-item.markedItem, .text-selection-mode .quiz-multi-answer {
+  outline-color:#6B5 !important;
+}
+
+/* text selection color */
+::selection { color:#FFF; background-color:#6B5; }
+::-moz-selection { color:#FFF; background-color:#6B5; }
+
+/* scroll bar */
+.writing-quiz .quiz-item-text::-webkit-scrollbar-thumb, .vocab-horizontal .quiz-item-text::-webkit-scrollbar-thumb {
+  background-color:#6B5;
+}
+
+
+/* 2. COLOR 2 */
+.button:hover, a.button:hover, #announcement .announcement .date, #quiz-info table, #toggle-exercises:focus, .writing-quiz .quiz-item-text::-webkit-scrollbar-thumb:hover, .vocab-horizontal .quiz-item-text::-webkit-scrollbar-thumb:hover {
+  background-color:#5A4;
+}
+
+#quick-search-results li[data-lesson]:before, #exercise-list li a[data-page]:hover:after, #exercise-list li a[data-page]:focus:after, #appendix-tool .page-data {
+  border-color:#5A4;
+}
+
+
+/* 3. COLOR 3 */
+.button:focus, a.button:focus, #quick-nav-list a.sub-section-button:hover, #quick-nav-list a.sub-section-button:focus, #toggle-exercises:hover, .writing-quiz .quiz-item-text::-webkit-scrollbar-thumb:active, .vocab-horizontal .quiz-item-text::-webkit-scrollbar-thumb:active {
+  background-color:#493;
+}
+
+#announcement .announcement .date, #quiz-info table td {
+  border-color:#493;
+}
+
+
+/* 4. COLOR 4 */
+a.jump-arrow:hover, a.jump-arrow:focus, .dictionary-index li a:hover {
+  color:#382;
+}
+
+#toggle-exercises {
+  background-color:#382;
+}
+
+#announcement {
+  border-color:#382;
+}
+
+
+/* 5. COLOR 5 */
+#announcement ruby rt, .workbook-title ruby rt, .main-color ruby rt, .section-title ruby rt, .lesson-title ruby rt {
+  color:#271;
+}

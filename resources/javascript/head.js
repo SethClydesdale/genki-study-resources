@@ -166,6 +166,7 @@
       // various settings and their selected||default values
       var fontSize = +localStorage.genkiFontSize || 100,
           pageWidth = +localStorage.genkiPageWidth || 100,
+          genkiTheme = localStorage.genkiTheme || 'genki1',
           darkMode = localStorage.darkMode || 'off',
           adverts = localStorage.adverts || 'on',
           customCSS = localStorage.genkiCustomCSS || '',
@@ -200,6 +201,14 @@
           '<li>'+
             '<span class="label" title="Increases the maximum page width for the site (up to the size of your screen)">Page Width:</span>'+
             '<input id="page-width-range" type="range" min="100" max="500" value="' + pageWidth + '" oninput="GenkiSettings.updatePageWidth(this);" onchange="GenkiSettings.updatePageWidth(this, true);"><span id="page-width-value">' + pageWidth + '%</span>'+
+          '</li>'+
+        
+          '<li>'+
+            '<span class="label" title="Changes the main color of the website.">Theme:</span>'+
+            '<select id="settings-vocab-mode" onchange="GenkiSettings.updateTheme(this);">'+
+              '<option value="genki1"' + ( genkiTheme == 'genki1' ? ' selected' : '' ) + '>Genki I</option>'+
+              '<option value="genki2"' + ( genkiTheme == 'genki2' ? ' selected' : '' ) + '>Genki II</option>'+
+            '</select>'+
           '</li>'+
         
           '<li>'+
@@ -515,6 +524,31 @@
     },
     
     
+    // updates theme state
+    updateTheme : function (caller) {
+      var theme = document.getElementById('website-theme');
+      
+      // remove current theme
+      if (theme) {
+        theme.parentNode.removeChild(theme);
+      }
+      
+      // apply new theme
+      if (caller.value != 'genki1') {
+        var theme = document.createElement('LINK');
+        theme.id = 'website-theme';
+        theme.href = getPaths() + 'resources/css/theme-' + caller.value + '.min.css';
+        theme.rel = 'stylesheet';
+        document.head.appendChild(theme);
+      }
+      
+      // save preference to cache
+      if (storageOK) {
+        localStorage.genkiTheme = caller.value;
+      }
+    },
+    
+    
     // updates dark mode state
     updateDarkMode : function (caller) {
       document.getElementById('light-switch-checkbox').click();
@@ -767,6 +801,15 @@
     if (localStorage.darkMode == 'on') {
       document.write('<link id="dark-mode" href="' + getPaths() + 'resources/css/stylesheet-dark.min.css" rel="stylesheet">');
       document.documentElement.className += ' dark-mode';
+    }
+  }
+  
+  
+  // # THEME #
+  // applies the selected theme on page load
+  if (storageOK) {
+    if (localStorage.genkiTheme && localStorage.genkiTheme != 'genki1') {
+      document.write('<link id="website-theme" href="' + getPaths() + 'resources/css/theme-' + localStorage.genkiTheme + '.min.css" rel="stylesheet">');
     }
   }
   
