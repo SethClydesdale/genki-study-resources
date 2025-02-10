@@ -23,6 +23,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '2/10/25',
+          content : "You can now change the main theme color to the Genki II color scheme via the settings manager! <a href=\"https://ko-fi.com/post/New-Theme-Option-for-Genki-Study-Resources-L3L21ADWSN\" target=\"_blank\">Click here</a> to learn more about this new setting."
+        },
+        
+        {
           date : '1/15/25',
           content : "Happy New Year! With the new year, comes new projects! <a href=\"https://ko-fi.com/post/Plans-for-2025-C0C2192FBX\" target=\"_blank\">Click here</a> to learn about what I have planned for 2025."
         },
