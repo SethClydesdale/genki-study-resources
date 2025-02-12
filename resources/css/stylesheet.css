@@ -1753,6 +1753,8 @@ ruby rt {
   color:#B50;
 }
 
+.t-red ruby rt { color:#900; }
+
 #quick-nav-list li a ruby rt,  a ruby rt, #quick-search-results ruby rt {
   color:#367;
 }

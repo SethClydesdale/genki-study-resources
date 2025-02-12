@@ -9,7 +9,6 @@
     document.getElementById('footer-home').href += 'lessons-3rd/';
   }
   
-  
   // # ANNOUNCEMENTS #
   if (document.getElementById('announcement')) {
     window.GenkiAnn = {
