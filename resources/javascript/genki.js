@@ -2213,7 +2213,7 @@
             '<div><a id="link-report" href="' + getPaths() + 'report/' + Genki.local + '"><i class="fa">&#xf188;</i>Reports &amp; Feedback</a></div>'+
             '<div><a id="link-download" href="' + getPaths() + 'download/' + Genki.local + '"><i class="fa">&#xf019;</i>Download</a></div>'+
             '<div><a id="link-donate" href="' + getPaths() + 'donate/' + Genki.local + '"><i class="fa">&#xf004;</i>Donate</a></div>'+
-            '<div><a id="link-github" href="https://github.com/SethClydesdale/tobira-study-resources"><i class="fa">&#xf09b;</i>GitHub</a></div>'+
+            '<div><a id="link-github" href="https://github.com/SethClydesdale/genki-study-resources"><i class="fa">&#xf09b;</i>GitHub</a></div>'+
             '<div><a id="link-settings" href="#genki-site-settings" onclick="GenkiSettings.manager(); return false;"><i class="fa">&#xf013;</i>Settings</a></div>'+
           '</div>'+
           '<div id="related" class="indent-block">'+

@@ -2375,6 +2375,7 @@ Genki.jisho = {
     { ja : '～募集|～ぼしゅう', en : 'looking for...', l : '読L11-II' },
     { ja : 'ポスター', en : 'poster', l : '会L21' },
     { ja : 'ホストファミリー', en : 'host family', l : '読L9-II, 会L11' },
+    { ja : '補足|ほそく', en : 'supplement; supplemental information', l : 'Grammar Index' },
     { ja : '北海道|ほっかいどう', en : 'Hokkaido', l : '読L6-漢字表' },
     { ja : '北極|ほっきょく', en : 'North Pole', l : '読L6-漢字表' },
     { ja : 'ポップコーン', en : 'popcorn', l : '会L18' },
