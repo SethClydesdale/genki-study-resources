@@ -129,6 +129,13 @@ code {
 .button:hover, a.button:hover { background:#E82; }
 .button:focus, a.button:focus { background:#D71; }
 
+.button[disabled] {
+  opacity:0.5;
+  filter:grayscale(1);
+  cursor:default;
+  pointer-events:none;
+}
+
 /* button icons */
 .button .fa {
   font-size:18px;
@@ -844,6 +851,10 @@ a.jump-arrow:hover, a.jump-arrow:focus { color:#C60; }
 .lesson-point:before {
   content:"• ";
   color:#F93;
+}
+
+.lesson-summary-link {
+  margin-top:5px;
 }
 
 
