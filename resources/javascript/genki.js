@@ -2722,17 +2722,41 @@
     
     // returns the specified grammar point in a popup window
     getGrammarPoint : function (caller, id) {
+      // check if grammar point is being opened in the popup window, to cache the currently opened grammar point
+      var parent = caller.parentNode;
+      while (parent) {
+        if (parent.id == 'genki-modal-content') {
+          // push new history entry
+          Genki.grammarPointHistory.push(parent.innerHTML);
+          break;
+          
+        } else if (parent.tagName == 'BODY' || !parent) {
+          break;
+          
+        } else {
+          parent = parent.parentNode;
+        }
+      }
+      
+      // open modal
       GenkiModal.open({
         title : 'Quick Grammar Review',
         content : '<div id="appendix-tool" class="loading"></div>',
-        customButton : '<a href="' + caller.href + '" class="button" target="_blank"><i class="fa">&#xf08e;</i>View in Grammar Index</a>',
+        customButton : 
+        (Genki.grammarPointHistory.length ? '<button id="genki-modal-back" class="button" onclick="Genki.grammarPointBack(this);" title="Go back to previous grammar point."><i class="fa">&#xf112;</i>Back</button>' : '')+
+        '<a href="' + caller.href + '" class="button" target="_blank"><i class="fa">&#xf08e;</i>View in Grammar Index</a>',
         customSize : {
           top : '10%',
           left : '20%',
           bottom : '10%',
           right : '20%'
         },
-        zIndex : 'low'
+        zIndex : 'low',
+        
+        // clears grammar history when closed
+        closeCallback : function () {
+          Genki.grammarPointHistory = [];
+        }
       });
       
       Get(caller.href, function (data) {
@@ -2752,6 +2776,21 @@
           zone.className = 'center';
         }
       });
+    },
+    
+    // return to a previously viewed grammar point in the quick grammar review window
+    grammarPointHistory : [],
+    grammarPointBack : function (button) {
+      if (Genki.grammarPointHistory.length) {
+        var content = document.getElementById('genki-modal-content');
+        content.innerHTML = Genki.grammarPointHistory.pop();
+        content.scrollTop = 0;
+        
+        // hide button if no more history entries
+        if (!Genki.grammarPointHistory.length) {
+          button.style.display = 'none';
+        }
+      }
     },
     
     
