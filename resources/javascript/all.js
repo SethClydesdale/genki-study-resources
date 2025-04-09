@@ -22,7 +22,7 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
-          date : '4/08/25',
+          date : '4/8/25',
           content : 'The Genki <a href="https://ko-fi.com/post/The-Genki-Grammar-Index-is-now-Complete-U7U01D73DJ" target="_blank">Grammar Index</a> is now complete! If you notice any typos or have any suggestions, please don\'t hesitate to let us know on GitHub. Happy Studying!'
         },
         
