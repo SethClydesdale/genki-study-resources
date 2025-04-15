@@ -8,6 +8,12 @@ Genki Study Resources is a website that offers a vast collection of exercises fo
 
 If you're interested in learning Japanese, please see [this guide](https://sethclydesdale.github.io/genki-study-resources/help/japanese-guide/)!
 
+### Other Languages
+
+Genki Study Resources is also available in other languages, courtesy of contributors on GitHub.
+
+- [French](https://github.com/brice/genki-study-resources-fr) (Thanks to [@brice](https://github.com/brice) and [@damienBAUDET](https://github.com/damienBAUDET), see [#160](https://github.com/SethClydesdale/genki-study-resources/discussions/160) for discussion)
+
 -----
 
 **Quick Links**
