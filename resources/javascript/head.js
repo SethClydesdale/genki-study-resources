@@ -205,7 +205,7 @@
         
           '<li>'+
             '<span class="label" title="Changes the main color of the website.">Theme:</span>'+
-            '<select id="settings-vocab-mode" onchange="GenkiSettings.updateTheme(this);">'+
+            '<select id="settings-theme" onchange="GenkiSettings.updateTheme(this);">'+
               '<option value="genki1"' + ( genkiTheme == 'genki1' ? ' selected' : '' ) + '>Genki I</option>'+
               '<option value="genki2"' + ( genkiTheme == 'genki2' ? ' selected' : '' ) + '>Genki II</option>'+
             '</select>'+
