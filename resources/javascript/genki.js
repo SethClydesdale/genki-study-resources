@@ -2762,14 +2762,13 @@
       Get(caller.href, function (data) {
         var zone = document.querySelector('#genki-modal #appendix-tool'),
             grammar = data.match(new RegExp('(<h3 id="' + id + '"[\\s\\S]*?<\/table><br>)', 'm')), // should return h3 title and table right below it
-            style = data.match(new RegExp('(<style>[\\s\\S]*?</style>)', 'm')), // grammar index specific styles
             url = caller.href.replace(/#.*$/, ''); // clean grammar index url for use in anchor links
         
-        if (grammar && grammar[0] && style && style[0]) {
+        if (grammar && grammar[0]) {
           if (zone) {
             // trim out grammar point number and format anchor links for use with the quick grammar review modal
-            zone.innerHTML = style[0] + grammar[0].replace(/\d+\. /, '').replace(/href="#(.*?)"/g, 'onclick="Genki.getGrammarPoint(this, \'$1\'); return false;" target="_blank" href="' + url + '#$1"');
-            zone.className = Genki.ed == 'lessons' ? 'second-ed' : 'third-ed';
+            zone.innerHTML = grammar[0].replace(/\d+\. /, '').replace(/href="#(.*?)"/g, 'onclick="Genki.getGrammarPoint(this, \'$1\'); return false;" target="_blank" href="' + url + '#$1"');
+            zone.className = 'grammar-index ' + (Genki.ed == 'lessons' ? 'second-ed' : 'third-ed');
           }
         } else if (zone) {
           zone.innerHTML = '<br><b>Failed to retrieve grammar point. Click "View in Grammar Index" to try viewing the grammar point directly.</b>';

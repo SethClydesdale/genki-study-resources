@@ -271,6 +271,11 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
   padding:3px;
 }
 
+.table-head {
+  font-size:16px;
+  font-weight:bold;
+}
+
 .example-row td { vertical-align:top; }
 .example-row div { margin:10px 0; }
 
@@ -2983,6 +2988,150 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   margin:0;
   position:absolute;
   z-index:9999;
+}
+
+
+/* GRAMMAR INDEX */
+.grammar-index .wip {
+  color:#333;
+  background:#F9BF3A;
+  border:2px solid #333;
+  border-radius:10px;
+  text-align:center;
+  font-size:16px;
+  font-weight:bold;
+  margin:5px auto;
+  padding:5px;
+  max-width:500px;
+  box-shadow:0 0 3px #F9BF3A, 0 0 3px #F9BF3A, 0 0 3px #F9BF3A;
+}
+
+.grammar-index .grammar-table ul li { margin-bottom:5px; }
+.grammar-index .grammar-table .ex-list ul li, .grammar-index .grammar-table .sup-list ul li { margin-bottom:0px; }
+.grammar-index .grammar-table .sup-list ul { margin-bottom:5px !important; }
+
+.grammar-index #quick-nav-list .page-data, .grammar-index .second-ed .ex-list { display:none; }
+
+.grammar-index #quick-search-results li {
+  padding:1px;
+}
+
+.grammar-index .page-data {
+  font-size:12px;
+  color:#FFF;
+  background:#F93;
+  border:1px solid #E82;
+  padding:3px 6px;
+  border-radius:30px;
+}
+
+.grammar-index .lesson-title, .grammar-index .workbook-title, .grammar-index #quick-search-results { position:relative; }
+.grammar-index .lesson-title .page-data, .grammar-index .workbook-title .page-data {
+  position:absolute;
+  right:30px;
+}
+
+.grammar-index #quick-search-results .page-data, .grammar-index #genki-modal-content .workbook-title .page-data {
+  position:absolute;
+  right:3px;
+}
+
+.grammar-index .example {
+  border:1px solid #CCC;
+  border-left:3px solid #F93;
+  margin:10px 5px;
+  padding:5px;
+  background:#FFF;
+}
+
+.grammar-index .example .line .name:after { content:":"; }
+.grammar-index .example .line .name {
+  font-weight:bold;
+  text-align:right;
+  float:left;
+  width:25%;
+  padding-right:5px;
+  word-wrap:break-word;
+}
+
+.grammar-index .example .line .text {
+  float:left;
+  width:72%;
+}
+
+.grammar-index .example.AB .line .name { width:10% }
+.grammar-index .example.AB .line .text { width:87% }
+
+.grammar-index .line:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.grammar-index .columns-2-in > div.example {
+  display:inline-block;
+  width:47%;
+  margin:10px 5px;
+  vertical-align:top;
+  box-sizing:border-box;
+}
+
+.dark-mode .grammar-index .example {
+  background:#161616;
+  border-color:#333;
+  border-left-color:#F93;
+}
+
+.grammar-index .workbook-title {
+  color:#F93;
+  font-size:16px;
+  margin:0 0 0 20px;
+}
+
+.grammar-index li a {
+  display:inline-block;
+  padding:3px;
+}
+
+.grammar-index .lesson-title {
+  margin-bottom:20px;
+}
+
+.grammar-index .workbook-title {
+  margin-bottom:10px;
+  margin-left:0;
+}
+
+.grammar-index .table.grammar-table .table { margin:10px 0; }
+
+.grammar-index .table.grammar-table td {
+  font-size:15px;
+}
+
+.grammar-index .table.grammar-table > tbody > tr > td:nth-child(2), .grammar-index .table td { background:#F7F7F7 }
+.grammar-index .table.grammar-table > tbody > tr > td:first-child, .grammar-index .table .table-head td {
+  width:60px;
+  font-weight:bold;
+  text-align:center;
+  background:#EEE;
+}
+.dark-mode .grammar-index .table.grammar-table > tbody > tr > td:first-child, .dark-mode .grammar-index .table .table-head td { background:#222 !important; }
+.dark-mode .grammar-index .table.grammar-table > tbody > tr > td:nth-child(2), .dark-mode .grammar-index .table td { background:#1A1A1A; }
+.dark-mode .grammar-index .table.alt-cell-color td { background-color:#161616; }
+
+.grammar-index .table.grammar-table ul, .grammar-index .table.grammar-table ol, .grammar-index .table ul, .grammar-index .table ol {
+  margin:0;
+  padding-left:30px;
+}
+
+.grammar-index .lesson-exercises { display:none; }
+.grammar-index .grammar-toggler { margin-bottom:10px; }
+
+@media (max-width:1000px) {
+  .grammar-index .columns-2-in > div.example {
+    display:block;
+    width:auto;
+  }
 }
 
 
