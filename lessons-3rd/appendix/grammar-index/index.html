@@ -22,149 +22,6 @@
     <meta name="twitter:creator" content="@SethC1995">
 
     <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
-    <style>
-      .wip {
-        color:#333;
-        background:#F9BF3A;
-        border:2px solid #333;
-        border-radius:10px;
-        text-align:center;
-        font-size:16px;
-        font-weight:bold;
-        margin:5px auto;
-        padding:5px;
-        max-width:500px;
-        box-shadow:0 0 3px #F9BF3A, 0 0 3px #F9BF3A, 0 0 3px #F9BF3A;
-      }
-      
-      .grammar-table ul li { margin-bottom:5px; }
-      .grammar-table .ex-list ul li, .grammar-table .sup-list ul li { margin-bottom:0px; }
-      .grammar-table .sup-list ul { margin-bottom:5px !important; }
-      
-      #quick-nav-list .page-data, .second-ed .ex-list { display:none; }
-      
-      #appendix-tool #quick-search-results li {
-        padding:1px;
-      }
-      
-      .page-data {
-        font-size:12px;
-        color:#FFF;
-        background:#F93;
-        border:1px solid #E82;
-        padding:3px 6px;
-        border-radius:30px;
-      }
-      
-      .lesson-title, .workbook-title, #quick-search-results { position:relative; }
-      .lesson-title .page-data, .workbook-title .page-data {
-        position:absolute;
-        right:30px;
-      }
-
-      #quick-search-results .page-data, #genki-modal-content .workbook-title .page-data {
-        position:absolute;
-        right:3px;
-      }
-      
-      .example {
-        border:1px solid #CCC;
-        border-left:3px solid #F93;
-        margin:10px 5px;
-        padding:5px;
-        background:#FFF;
-      }
-      
-      .example .line .name:after { content:":"; }
-      .example .line .name {
-        font-weight:bold;
-        text-align:right;
-        float:left;
-        width:25%;
-        padding-right:5px;
-        word-wrap:break-word;
-      }
-
-      .example .line .text {
-        float:left;
-        width:72%;
-      }
-      
-      .example.AB .line .name { width:10% }
-      .example.AB .line .text { width:87% }
-      
-      .line:after {
-        content:"";
-        display:table;
-        clear:both;
-      }
-
-      .columns-2-in > div.example {
-        display:inline-block;
-        width:47%;
-        margin:10px 5px;
-        vertical-align:top;
-        box-sizing:border-box;
-      }
-      
-      .dark-mode .example {
-        background:#161616;
-        border-color:#333;
-        border-left-color:#F93;
-      }
-      
-      #appendix-tool .workbook-title {
-        color:#F93;
-        font-size:16px;
-        margin:0 0 0 20px;
-      }
-      
-      #appendix-tool li a {
-        display:inline-block;
-        padding:3px;
-      }
-
-      #appendix-tool .lesson-title {
-        margin-bottom:20px;
-      }
-
-      #appendix-tool .workbook-title {
-        margin-bottom:10px;
-        margin-left:0;
-      }
-
-      .table.grammar-table .table { margin:10px 0; }
-      
-      .table.grammar-table td {
-        font-size:15px;
-      }
-
-      .table.grammar-table > tbody > tr > td:nth-child(2), .table td { background:#F7F7F7 }
-      .table.grammar-table > tbody > tr > td:first-child, .table .table-head td {
-        width:60px;
-        font-weight:bold;
-        text-align:center;
-        background:#EEE;
-      }
-      .dark-mode .table.grammar-table > tbody > tr > td:first-child, .dark-mode .table .table-head td { background:#222 !important; }
-      .dark-mode .table.grammar-table > tbody > tr > td:nth-child(2), .dark-mode .table td { background:#1A1A1A; }
-      .dark-mode .table.alt-cell-color td { background-color:#161616; }
-      
-      .table.grammar-table ul, .table.grammar-table ol, .table ul, .table ol {
-        margin:0;
-        padding-left:30px;
-      }
-      
-      .lesson-exercises { display:none; }
-      .grammar-toggler { margin-bottom:10px; }
-      
-      @media (max-width:1000px) {
-        .columns-2-in > div.example {
-          display:block;
-          width:auto;
-        }
-      }
-    </style>
     <script src="../../../resources/javascript/head.min.js"></script>
     <script src="../../../resources/javascript/ga.js" async></script>
   </head>
@@ -192,7 +49,7 @@
     </div>
 
     <div id="content">
-      <div id="appendix-tool" class="content-block">
+      <div id="appendix-tool" class="content-block grammar-index">
         <h2 id="main-dict-title" class="title center">巻末 - Grammar Index</h2>
 
         <p>Welcome to the Grammar Index! Here you can quickly find and review the grammar points taught in Genki. Use the quick navigation to jump to a lesson's grammar or use the quick search to find the grammar point you want to read up on.<br>If you found this page helpful, please consider purchasing a <a href="https://genki3.japantimes.co.jp/bookstores/">copy of the textbooks</a>, if you haven't yet, to support the authors!</p>
@@ -20577,7 +20434,7 @@
 
     <footer class="clear">
       <ul class="footer-left">
-        <li><a href="../../../" id="footer-home">Home</a></li>
+        <li><a href="../../" id="footer-home">Home</a></li>
         <li><a href="../../../privacy/">Privacy</a></li>
         <li><a href="../../../report/">Report a Bug</a></li>
         <li><a href="../../../help/">Help</a></li>
