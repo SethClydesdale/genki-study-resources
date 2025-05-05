@@ -464,9 +464,11 @@
     
 
     // shortcuts for multi-choice options
-    // ALT + A/B/C/D
-    if (Genki.active.type == 'multi' && e.altKey && /a|b|c|d/i.test(e.key)) {
-      var opt = document.querySelector('#quiz-q' + Genki.stats.solved + ' div[data-option="' + e.key.toUpperCase() + '"]');
+    // ALT + A/B/C/D/...
+    if (Genki.active.type == 'multi' && e.altKey) {
+      // Use the physical keyboard press to ignore the special character produced from the modifier
+      var answer = e.code.replace('Key', '').toUpperCase()
+      var opt = document.querySelector('#quiz-q' + Genki.stats.solved + ' div[data-option="' + answer + '"]');
       
       if (opt) {
         opt.click();
