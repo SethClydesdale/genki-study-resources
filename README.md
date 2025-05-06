@@ -62,7 +62,7 @@ The following shortcuts can only be used in multiple choice exercises to quickly
 
 | Shortcut | Description |
 | -------- | ----------- |
-| <kbd>ALT</kbd>+<kbd>LETTER</kbd> | Selects option for letter |
+| <kbd>ALT</kbd>+<kbd>A/B/C/D/etc.</kbd> | Selects option A/B/C/D/etc. |
 
 
 ### Suggestions, Feedback, Bug Reports
