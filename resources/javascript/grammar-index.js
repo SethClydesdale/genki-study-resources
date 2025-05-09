@@ -14,13 +14,13 @@
       // show points
       if (/Show/.test(caller.innerHTML)) {
         list.style.display = 'block';
-        caller.innerHTML = caller.innerHTML.replace('Show', 'Hide');
+        caller.innerHTML = caller.innerHTML.replace('Show', 'Hide').replace('表示', '非表示');
       }
 
       // hide points
       else {
         list.style.display = '';
-        caller.innerHTML = caller.innerHTML.replace('Hide', 'Show');
+        caller.innerHTML = caller.innerHTML.replace('Hide', 'Show').replace('非表示', '表示');
       }
     },
     
@@ -42,7 +42,7 @@
         }
       }
       
-      caller.innerHTML = state == 'show' ? caller.innerHTML.replace('Show', 'Hide') : caller.innerHTML.replace('Hide', 'Show');
+      caller.innerHTML = state == 'show' ? caller.innerHTML.replace('Show', 'Hide').replace('表示', '非表示') : caller.innerHTML.replace('Hide', 'Show').replace('非表示', '表示');
     },
     
     // jumps to the specified grammar point in the URL

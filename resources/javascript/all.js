@@ -22,6 +22,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '5/9/25',
+          content : "You can now change the interface language of the website to 日本語 via the settings manager! <a href=\"https://ko-fi.com/post/New-Language-Option-for-GenkiTobira-A0A41EQV3C\" target=\"_blank\">Click here</a> to learn more about this new setting."
+        },
+        
+        {
           date : '4/8/25',
           content : 'The Genki <a href="https://ko-fi.com/post/The-Genki-Grammar-Index-is-now-Complete-U7U01D73DJ" target="_blank">Grammar Index</a> is now complete! If you notice any typos or have any suggestions, please don\'t hesitate to let us know on GitHub. Happy Studying!'
         },
@@ -359,12 +364,12 @@
     
     // set container params
     container.id = 'light-switch-container';
-    container.innerHTML = '<label id="light-switch-label" for="light-switch-checkbox">Dark Mode </label>';
+    container.innerHTML = '<label id="light-switch-label" for="light-switch-checkbox"><span class="en">Dark Mode</span><span class="ja">ダークモード</span> </label>';
     
     // settings button
     settings.id = 'genki-site-settings';
     settings.innerHTML = '<i class="fa">&#xf013;</i>';
-    settings.title = 'Site Settings';
+    settings.title = GenkiLang == 'ja' ? 'ウェブサイトの設定' : 'Site Settings';
     settings.href = '#';
     settings.onclick = function () {
       // prevent opening popup when one is already opened
@@ -390,7 +395,7 @@
         container = document.createElement('DIV');
     
     container.id = 'light-switch-container';
-    container.innerHTML = '<a href="' + getPaths() + 'help/stuck-loading/' + (window.location.protocol == 'file:' ? 'index.html' : '') + '"><strong>Where is Dark Mode?</strong></a>';
+    container.innerHTML = '<a href="' + getPaths() + 'help/stuck-loading/' + (window.location.protocol == 'file:' ? 'index.html' : '') + '"><strong><span class="en">Where is Dark Mode?</span><span class="ja">ダークモードはどこ？</span></strong></a>';
     
     footer.appendChild(container);
   }

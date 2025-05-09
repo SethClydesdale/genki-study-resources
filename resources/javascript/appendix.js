@@ -149,7 +149,7 @@
         Genki.appendix.jisho.restoreSettings();
         
         // add jump arrows
-        AddJumpArrowsTo('.dictionary-group .section-title', 'dictionary-top', 'Return to the top of the dictionary');
+        AddJumpArrowsTo('.dictionary-group .section-title', 'dictionary-top', GenkiLang == 'ja' ? '辞書索引に戻る' : 'Return to the top of the dictionary');
         
         // update exercise title name
         document.getElementById('exercise-title').insertAdjacentHTML('beforeend', ' Word Practice');
@@ -299,10 +299,10 @@
             for (; i < j; i++) {
               list[i].className = list[i].className.replace(' hidden', '');
               buttons[i].className = buttons[i].className.replace(' hidden', '');
-              toggles[i].innerHTML = toggles[i].innerHTML.replace('Show', 'Hide');
+              toggles[i].innerHTML = toggles[i].innerHTML.replace('Show', 'Hide').replace('表示', '非表示');
             }
-            
-            caller.innerHTML = caller.innerHTML.replace('Show', 'Hide');
+
+            caller.innerHTML = caller.innerHTML.replace('Show', 'Hide').replace('表示', '非表示');
           } 
           
           // hide definitions
@@ -310,10 +310,10 @@
             for (; i < j; i++) {
               if (!/hidden/.test(list[i].className)) list[i].className += ' hidden';
               if (!/hidden/.test(buttons[i].className)) buttons[i].className += ' hidden';
-              toggles[i].innerHTML = toggles[i].innerHTML.replace('Hide', 'Show');
+              toggles[i].innerHTML = toggles[i].innerHTML.replace('Hide', 'Show').replace('非表示', '表示');
             }
-            
-            caller.innerHTML = caller.innerHTML.replace('Hide', 'Show');
+
+            caller.innerHTML = caller.innerHTML.replace('Hide', 'Show').replace('非表示', '表示');
           }
         }
         
@@ -327,14 +327,14 @@
           if (/hidden/.test(list.className)) {
             list.className = list.className.replace(' hidden', '');
             buttons.className = buttons.className.replace(' hidden', '');
-            caller.innerHTML = caller.innerHTML.replace('Show', 'Hide')
+            caller.innerHTML = caller.innerHTML.replace('Show', 'Hide').replace('表示', '非表示')
           }
 
           // hide definitions
           else {
             list.className += ' hidden';
             buttons.className += ' hidden';
-            caller.innerHTML = caller.innerHTML.replace('Hide', 'Show')
+            caller.innerHTML = caller.innerHTML.replace('Hide', 'Show').replace('非表示', '表示')
           }
         }
       },
@@ -404,7 +404,7 @@
 
             } else {
               results.parentNode.querySelector('.group-selectors').style.visibility = 'hidden';
-              results.innerHTML = value ? '<li>No results found for "' + value + '".</li>' : '';
+              results.innerHTML = value ? '<li><span class="en">No results found for "' + value + '".</span><span class="ja">「' + value + '」が見つかりませんでした。</span></li>' : '';
             }
 
             hitsCounter.innerHTML = hits ? '(' + hits + ') ' : '';
@@ -454,14 +454,14 @@
         // initiate an exercise once 5 or more words have been selected
         if (j < 5) {
           GenkiModal.open({
-            title : 'Please select more words.',
-            content : 'Please select <b>' + (5 - j) + '</b> more word' + (5 - j == 1 ? '' : 's') + ' to begin a practice exercise.'
+            title : '<span class="en">Please select more words.</span><span class="ja">言葉をもっと選択してください。</span>',
+            content : '<span class="en">Please select <b>' + (5 - j) + '</b> more word' + (5 - j == 1 ? '' : 's') + ' to begin a practice exercise.</span><span class="ja">言葉を<b>' + (5 - j) + '</b>つ選択してください。</span>'
           });
           
         } else {
           GenkiModal.open({
-            title : 'Begin Practice?',
-            content : 'Are you ready to practice your selected words?',
+            title : '<span class="en">Begin Practice?</span><span class="ja">練習を始めますか？</span>',
+            content : '<span class="en">Are you ready to practice your selected words?</span><span class="ja">選択した言葉を練習してもよろしいですか？</span>',
             buttonText : 'Yes',
             keepOpen : true,
             
@@ -494,7 +494,7 @@
       // opens a modal for managing/viewing the words selected in the dictionary
       manageWords : function () {
         GenkiModal.open({
-          title : 'Manage Selected Words',
+          title : '<span class="en">Manage Selected Words</span><span class="ja">選択した言葉</span>',
           content : '<ol id="selected_words_list" class="dict-search-results"></ol>',
 
           buttonText : 'Close',
@@ -549,7 +549,7 @@
           list.querySelector('.genki_pseudo_checkbox').focus();
 
         } else {
-          list.innerHTML = 'No words selected.';
+          list.innerHTML = '<span class="en">No words selected.</span><span class="ja">言葉は選択していません。</span>';
         }
       },
 
@@ -560,7 +560,7 @@
         list.removeChild(caller.parentNode);
 
         if (!list.childNodes.length) {
-          list.innerHTML = 'No words selected.';
+          list.innerHTML = '<span class="en">No words selected.</span><span class="ja">言葉は選択していません。</span>';
         }
       },
       

@@ -60,6 +60,11 @@
 ::selection { color:#FFF; background-color:#F93; }
 ::-moz-selection { color:#FFF; background-color:#F93; }
 
+/* page language */
+.lang-en .ja, .lang-ja .en {
+  display:none !important;
+}
+
 
 /* body/general styles */
 body {
@@ -753,6 +758,7 @@ a.jump-arrow:hover, a.jump-arrow:focus { color:#C60; }
   right:0;
   margin-top:40px;
 }
+.lang-ja #exercise:before, .lang-ja .loading:before { content:"ロードしています…"; }
 
 #exercise:after, .loading:after {
   content:"\f1ce";
@@ -981,6 +987,7 @@ footer li:first-child:before { display:none; }
   content:"Time Elapsed";
   display:block;
 }
+.lang-ja #quiz-timer:before { content:"かかった時間"; }
 
 /* answer styles */
 .quiz-answer-zone:empty {
@@ -1322,6 +1329,7 @@ footer li:first-child:before { display:none; }
   top:3px;
   right:-85px;
 }
+.lang-ja .quiz-over [data-mistakes]:after { content:"\f060\A0 不正解 " attr(data-mistakes) "x"; }
 
 .quiz-over .vocab-horizontal [data-mistakes]:after {
   content:"x" attr(data-mistakes);
@@ -1343,6 +1351,7 @@ footer li:first-child:before { display:none; }
   right:-70px;
   pointer-events:none;
 }
+.lang-ja #wrongAnswer:before { ;content:"\f00d\A0 不正解"; }
 
 .vocab-horizontal #wrongAnswer:before {
   right:auto;

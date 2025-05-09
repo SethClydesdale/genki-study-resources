@@ -221,8 +221,8 @@
         this.begin();
       } else {
         GenkiModal.open({
-          title : 'Ready to Study?',
-          content : 'Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save" to save it to a text document. (click "do not warn me" to disable this message)'+
+          title : '<span class="en">Ready to Study?</span><span class="ja">勉強の準備はOK？</span>',
+          content : '<span class="en">Are you sure you\'re ready to study? Your custom exercise will be temporarily saved to the browser cache, however, if you want to use it again later, click "cancel", and then click "Save" to save it to a text document. (click "do not warn me" to disable this message)</span><span class="ja">カスタム練習コードはブラウザーのキャッシュで保存していますがセーブするのがおすすめです。勉強してもよろしいですか？（このメッセージが邪魔の場合は「注意しないで」をクリックしてください。）</span>'+
           (navigator.cookieEnabled && !offlineEdge ? '' : '<br><br><div style="color:#F00;font-weight:bold;">WARNING: Cookies are blocked by your browser, so your custom exercise will NOT be saved. Please click "close" and then click "Save" to backup your custom exercise.</div>'),
           keepOpen : Genki.tools.type == 'vocab' ? true : false,
 
@@ -258,7 +258,7 @@
       else if (type == 'spelling') {
         Genki.generateQuiz({
           type : 'writing',
-          info : 'Practice spelling the following words.',
+          info : Genki.lang.vocab_writing,
 
           columns : +document.getElementById('spellingColumns').value,
           quizlet : JSON.parse(quizlet)
@@ -269,7 +269,7 @@
       else if (type == 'quiz') {
         Genki.generateQuiz({
           type : 'multi',
-          info : 'Answer the following questions.',
+          info : Genki.lang.std_questions,
 
           quizlet : JSON.parse(quizlet)
         });
@@ -279,7 +279,7 @@
       else if (type == 'fill') {
         Genki.generateQuiz({
           type : 'fill',
-          info : 'Answer the following questions.',
+          info : Genki.lang.std_written,
 
           quizlet : JSON.parse(quizlet).quiz
         });
@@ -290,8 +290,8 @@
     // imports snippets for custom written quizzes
     importSnippet : function (id) {
       GenkiModal.open({
-        title : 'Import Snippet?',
-        content : 'Are you sure you want to import this snippet? It will overwrite your current quiz settings.',
+        title : '<span class="en">Import Snippet?</span><span class="ja">練習コードをインポートしますか？</span>',
+        content : '<span class="en">Are you sure you want to import this snippet? It will overwrite your current quiz settings.</span><span class="ja">今の練習コードは失います。インポートしてもよろしいですか？</span>',
 
         callback : function () {
           document.querySelector('#study-tool-ui textarea').value = document.getElementById(id).value;

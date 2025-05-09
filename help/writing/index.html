@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
     <title>How to Type in Japanese - Help | Genki Study Resources</title>
@@ -72,7 +72,7 @@
         <p>Below is a list of tips and tricks for making effective use of the Microsoft IME. These shortcuts may work for other IMEs as well. You can use the button below to open a textarea and test out some of these tips firsthand.</p>
         
         <div class="center">
-          <button class="button" onclick="GenkiTestarea.open();">Open Textarea</button>
+          <button class="button" onclick="GenkiTestarea.open();"><span class="en">Open Textarea</span><span class="ja">入力欄を表示する</span></button>
         </div>
         
         <h4 class="sub-title" id="microsoft-shortcuts">Shortcuts</h4>
@@ -186,7 +186,7 @@
           txt.innerHTML = 
             '<textarea placeholder="タイプしてみましょうね！"></textarea>'+
             '<div class="center">'+
-              '<button class="button" onclick="GenkiTestarea.close();">Close Textarea</button>'+
+              '<button class="button" onclick="GenkiTestarea.close();"><span class="en">Close Textarea</span><span class="ja">入力欄を非表示する</span></button>'+
             '</div>';
           
           document.body.appendChild(txt);
