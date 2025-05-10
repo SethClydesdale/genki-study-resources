@@ -2044,11 +2044,9 @@ ruby rt {
   max-width:100%;
 }
 
-.label[title]:after {
-  content:attr(title);
+.genki-settings-list .label .desc {
   font-size:13px;
   font-weight:normal;
-  display:block;
 }
 
 .sm-label { width:80px; }

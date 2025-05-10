@@ -317,7 +317,10 @@
             '<a id="settings-save-exercise-data" class="button" download="Genki Exercise Score Data" href="data:,' + (storageOK && localStorage.GenkiResults ? encodeURIComponent(localStorage.GenkiResults.replace(/\n/g, '\r\n')) : '') + '"><i class="fa">&#xf019;</i><span class="en">Save</span><span class="ja">セーブする</span></a>'+
             '<button id="settings-load-exercise-data" class="button" onclick="this.nextSibling.click();"><i class="fa">&#xf093;</i><span class="en">Load</span><span class="ja">ロードする</span></button><input id="settings-load-data" type="file" accept=".txt,.json,.js" onchange="GenkiSettings.loadExerciseData(this);" style="visibility:hidden;position:absolute;">'+
           '</li>'+
+        '</ul>'+
         
+        '<div class="section-title"><span class="en">Other</span><span class="ja">他の設定</span></div>'+
+        '<ul class="genki-settings-list">'+
           '<li>'+
             '<span class="label" title="' + (GenkiLang == 'ja' ? 'すべての設定が初期状態に戻せます。' : 'Resets all settings to their default value.') + '"><span class="en">Revert to Default Settings:</span><span class="ja">デフォルト設定に戻す：</span></span>'+
             '<button id="settings-load-exercise-data" class="button" onclick="GenkiSettings.revert();"><i class="fa">&#xf0e2;</i><span class="en">Reset Settings</span><span class="ja">設定をリセットする</span></button>'+
@@ -335,6 +338,11 @@
           right : '10%'
         }
       });
+      
+      // insert label title description as visible text under the label
+      for (var a = document.querySelectorAll('.genki-settings-list .label'), i = 0, j = a.length; i < j; i++) {
+        a[i].insertAdjacentHTML('beforeEnd', '<div class="desc">' + a[i].title.replace(/\n/g, '<br>') + '</div>');
+      }
     },
 
 
