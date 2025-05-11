@@ -203,17 +203,26 @@
         '<div class="section-title"><span class="en">Display</span><span class="ja">表示</span></div>'+
         '<ul class="genki-settings-list">'+
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? 'ウェブサイトのフォントサイズが増えられます。' : 'Increases the font size for the site.') + '"><span class="en">Font Size:</span><span class="ja">フォントサイズ：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Font Size:</span><span class="ja">フォントサイズ：</span>'+
+              '<span class="desc"><small class="en">Increases the font size for the site.</small><small class="ja">ウェブサイトのフォントサイズが増えられます。</small></span>'+
+            '</span>'+
             '<input id="font-size-range" type="range" min="100" max="500" value="' + fontSize + '" oninput="GenkiSettings.updateFontSize(this);" onchange="GenkiSettings.updateFontSize(this, true);"><span id="font-size-value">' + fontSize + '%</span>'+
           '</li>'+
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? 'スクリーンサイズまで最高のページ幅が増えられます。' : 'Increases the maximum page width for the site (up to the size of your screen).') + '"><span class="en">Page Width:</span><span class="ja">ページ幅：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Page Width:</span><span class="ja">ページ幅：</span>'+
+              '<span class="desc"><small class="en">Increases the maximum page width for the site (up to the size of your screen).</small><small class="ja">スクリーンサイズまで最高のページ幅が増えられます。</small></span>'+
+            '</span>'+
             '<input id="page-width-range" type="range" min="100" max="500" value="' + pageWidth + '" oninput="GenkiSettings.updatePageWidth(this);" onchange="GenkiSettings.updatePageWidth(this, true);"><span id="page-width-value">' + pageWidth + '%</span>'+
           '</li>'+
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? 'ボタン、ポップアップなどの言語が変更できます。' : 'Changes the language of buttons, popups, etc. on the website. Try changing the language to 日本語 for some extra immersion!') + '"><span class="en">Interface Language:</span><span class="ja">引用仕様の言語：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Interface Language:</span><span class="ja">引用仕様の言語：</span>'+
+              '<span class="desc"><small class="en">Changes the language of buttons, popups, etc. on the website. Try changing the language to 日本語 for some extra immersion!</small><small class="ja">ボタン、ポップアップなどの言語が変更できます。</small></span>'+
+            '</span>'+
             '<select id="settings-lang" onchange="GenkiSettings.updateLang(this);">'+
               '<option value="en"' + ( genkiLang == 'en' ? ' selected' : '' ) + '>English</option>'+
               '<option value="ja"' + ( genkiLang == 'ja' ? ' selected' : '' ) + '>日本語</option>'+
@@ -221,7 +230,10 @@
           '</li>'+
         
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? 'ウェブサイトのテームが変更できます。' : 'Changes the main color of the website.') + '"><span class="en">Theme:</span><span class="ja">テーマ：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Theme:</span><span class="ja">テーマ：</span>'+
+              '<span class="desc"><small class="en">Changes the main color of the website.</small><small class="ja">ウェブサイトのテームが変更できます。</small></span>'+
+            '</span>'+
             '<select id="settings-theme" onchange="GenkiSettings.updateTheme(this);">'+
               '<option value="genki1"' + ( genkiTheme == 'genki1' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? 'げんき' : 'Genki ') + 'I</option>'+
               '<option value="genki2"' + ( genkiTheme == 'genki2' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? 'げんき' : 'Genki ') + 'II</option>'+
@@ -229,17 +241,26 @@
           '</li>'+
         
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? 'ダークモードのテーマがトグルできます。' : 'Enable or disable Dark Mode.') + '"><span class="en">Dark Mode:</span><span class="ja">ダークモード：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Dark Mode:</span><span class="ja">ダークモード：</span>'+
+              '<span class="desc"><small class="en">Enable or disable Dark Mode.</small><small class="ja">ダークモードのテーマがトグルできます。</small></span>'+
+            '</span>'+
             '<button id="settings-dark-mode" class="button' + (darkMode == 'on' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateDarkMode(this);">' + (darkMode == 'on' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
           (window.location.protocol == 'file:' ? '' : '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '広告がトグルできます。\n広告はこのウェブサイトの開発者が支援しますが邪魔だったら無効にできます。' : 'Enable or disable Ads.\nAds help support the developer, but if they\'re annoying or distracting, you can turn them off with this option.') + '"><span class="en">Ads:</span><span class="ja">広告：</span></span>'+
+            '<span class="label">'+
+                '<span class="en">Ads:</span><span class="ja">広告：</span>'+
+                '<span class="desc"><small class="en">Enable or disable Ads.<br>Ads help support the developer, but if they\'re annoying or distracting, you can turn them off with this option.</small><small class="ja">広告がトグルできます。<br>広告はこのウェブサイトの開発者が支援しますが邪魔だったら無効にできます。</small></span>'+
+              '</span>'+
             '<button id="settings-dark-mode" class="button' + (adverts == 'on' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateAdverts(this);">' + (adverts == 'on' ? 'ON' : 'OFF') + '</button>'+
           '</li>')+
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '自分のCSSが使えます。' : 'Use your own CSS to customize the design of the site to your liking.') + '"><span class="en">Custom CSS:</span><span class="ja">カスタムCSS：</span><br><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank" style="font-weight:normal;"><small><span class="en">What is CSS?</span><span class="ja">CSSって何？</span></small></a></span>'+
+            '<span class="label">'+
+              '<span class="en">Custom CSS:</span><span class="ja">カスタムCSS：</span><br><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank" style="font-weight:normal;"><small><span class="en">What is CSS?</span><span class="ja">CSSって何？</span></small></a>'+
+              '<span class="desc"><small class="en">Use your own CSS to customize the design of the site to your liking.</small><small class="ja">自分のCSSが使えます。</small></span>'+
+            '</span>'+
             '<textarea id="page-custom-css" oninput="GenkiSettings.updateCustomCSS(this, true);">' + customCSS + '</textarea>'+
           '</li>'+
         '</ul>'+
@@ -247,12 +268,18 @@
         '<div class="section-title"><span class="en">Exercises</span><span class="ja">練習</span></div>'+
         '<ul class="genki-settings-list">'+
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '漢字の振り仮名がトグルできます。' : 'Enable or disable furigana for kanji.') + '"><span class="en">Furigana:</span><span class="ja">振り仮名：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Furigana:</span><span class="ja">振り仮名：</span>'+
+              '<span class="desc"><small class="en">Enable or disable furigana for kanji.</small><small class="ja">漢字の振り仮名がトグルできます。</small></span>'+
+            '</span>'+
             '<button id="settings-furigana" class="button' + (furigana == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateFurigana(this);">' + (furigana == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '単語の練習の方向が変更できます。' : 'Changes the orientation used for drag and drop vocabulary exercises.') + '"><span class="en">Drag and Drop Mode:</span><span class="ja">ドラッグ＆ドロップモード：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Drag and Drop Mode:</span><span class="ja">ドラッグ＆ドロップモード：</span>'+
+              '<span class="desc"><small class="en">Changes the orientation used for drag and drop vocabulary exercises.</small><small class="ja">単語の練習の方向が変更できます。</small></span>'+
+            '</span>'+
             '<select id="settings-vocab-mode" onchange="GenkiSettings.updateVocabMode(this);">'+
               '<option value="false"' + ( vocabHorizontal == 'false' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? '垂直' : 'Vertical') + '</option>'+
               '<option value="true"' + ( vocabHorizontal == 'true' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? '水平' : 'Horizontal') + '</option>'+
@@ -260,7 +287,10 @@
           '</li>'+
         
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '選択式モードが変更できます。\n「インスタント」は答えが正解か不正解をすぐに見せます。' : 'Changes the feedback mode for multple choice quizzes.\nInstant shows if your answer was correct right away, whereas Classic only shows your answers at the end of the quiz.') + '"><span class="en">Multiple Choice Feedback Mode:</span><span class="ja">選択式モード：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Multiple Choice Feedback Mode:</span><span class="ja">選択式モード：</span>'+
+              '<span class="desc"><small class="en">Changes the feedback mode for multple choice quizzes.<br>Instant shows if your answer was correct right away, whereas Classic only shows your answers at the end of the quiz.</small><small class="ja">選択式モードが変更できます。<br>「インスタント」は答えが正解か不正解をすぐに見せます。</small></span>'+
+            '</span>'+
             '<select id="settings-feedback-mode" onchange="GenkiSettings.updateFeedbackMode(this);">'+
               '<option value="classic"' + ( feedbackMode == 'classic' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? 'クラシック' : 'Classic') + '</option>'+
               '<option value="instant"' + ( feedbackMode == 'instant' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? 'インスタント' : 'Instant') + '</option>'+
@@ -268,12 +298,18 @@
           '</li>'+
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '単語の選択式モードで選択肢が隠せます。' : 'Hides the choices in multiple choice vocab exercises, similar to a flash card mode.\nTurn this mode on if you keep looking at the choices to remember what a word means instead of recalling it from memory.') + '"><span class="en">Multiple Choice Vocab Spoiler:</span><span class="ja">単語の選択式モードのネタバレ：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Multiple Choice Vocab Spoiler:</span><span class="ja">単語の選択式モードのネタバレ：</span>'+
+              '<span class="desc"><small class="en">Hides the choices in multiple choice vocab exercises, similar to a flash card mode.<br>Turn this mode on if you keep looking at the choices to remember what a word means instead of recalling it from memory.</small><small class="ja">単語の選択式モードで選択肢が隠せます。</small></span>'+
+            '</span>'+
             '<button id="settings-vocab-spoiler" class="button' + (spoilerMode == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateSpoilerMode(this);">' + (spoilerMode == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '練習問題一覧でランダム練習ボタンの範囲が変更できます。' : 'Changes the range for the Random Exercise button in the exercise list.\nChange to Current Lesson if you want to avoid exercises above your current level.') + '"><span class="en">Random Exercise Range:</span><span class="ja">ランダム練習の範囲：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Random Exercise Range:</span><span class="ja">ランダム練習の範囲：</span>'+
+              '<span class="desc"><small class="en">Changes the range for the Random Exercise button in the exercise list.<br>Change to Current Lesson if you want to avoid exercises above your current level.</small><small class="ja">練習問題一覧でランダム練習ボタンの範囲が変更できます。</small></span>'+
+            '</span>'+
             '<select id="random-exercise-type" onchange="GenkiSettings.updateRandomExercise(this);">'+
               '<option value="all"' + ( randomExercise == 'all' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? 'すべての課' : 'All Lessons') + '</option>'+
               '<option value="lesson"' + ( randomExercise == 'lesson' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? '今の課' : 'Current Lesson') + '</option>'+
@@ -282,47 +318,72 @@
           '</li>'+
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '練習型を選択するポップアップがスキップしてすぐに練習できます。\n練習型を変更したいなら練習ページの下の「練習型を変更する」をクリックしてください。' : 'Skips that pesky exercise type selection prompt and instantly starts exercises when enabled.\nThe exercise type can still be changed manually via the Change Exercise Type button at the bottom of an exercise.') + '"><span class="en">Skip Exercise Type Selection:</span><span class="ja">練習型の選択をスキップする：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Skip Exercise Type Selection:</span><span class="ja">練習型の選択をスキップする：</span>'+
+              '<span class="desc"><small class="en">Skips that pesky exercise type selection prompt and instantly starts exercises when enabled.<br>The exercise type can still be changed manually via the Change Exercise Type button at the bottom of an exercise.</small><small class="ja">練習型を選択するポップアップがスキップしてすぐに練習できます。<br>練習型を変更したいなら練習ページの下の「練習型を変更する」をクリックしてください。</small></span>'+
+            '</span>'+
             '<button id="settings-skip-ex-type" class="button' + (skipExType == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateSkipExType(this);">' + (skipExType == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? 'テキストを選択した時に調べるポップアップの表示がトグルできます。' : 'Enable or disable the look up button that appears when you select texts.\nThis feature may interfere with some IMEs, so it is recommended to disable it if you encounter any issues.') + '"><span class="en">Quick Jisho Look Up:</span><span class="ja">クイック辞書の調べるポップアップ：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Quick Jisho Look Up:</span><span class="ja">クイック辞書の調べるポップアップ：</span>'+
+              '<span class="desc"><small class="en">Enable or disable the look up button that appears when you select texts.<br>This feature may interfere with some IMEs, so it is recommended to disable it if you encounter any issues.</small><small class="ja">テキストを選択した時に調べるポップアップの表示がトグルできます。</small></span>'+
+            '</span>'+
             '<button id="settings-jisho-lookup" class="button' + (jishoLookUp == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateJishoLookUp(this);">' + (jishoLookUp == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '書き順の練習での書き順の表記がトグルできます。' : 'Enable or disable the stroke order display in stroke order exercises.') + '"><span class="en">Stroke Order:</span><span class="ja">書き順の表示：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Stroke Order:</span><span class="ja">書き順の表示：</span>'+
+              '<span class="desc"><small class="en">Enable or disable the stroke order display in stroke order exercises.</small><small class="ja">書き順の練習での書き順の表記がトグルできます。</small></span>'+
+            '</span>'+
             '<button id="settings-stroke-order" class="button' + (strokeOrder == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateStrokeOrder(this);">' + (strokeOrder == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '書き順の練習でのトレスガイドの表示がトグルできます。' : 'Enable or disable the tracing guide display in stroke order exercises.') + '"><span class="en">Tracing Guide:</span><span class="ja">書き順のトレスガイド：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Tracing Guide:</span><span class="ja">書き順のトレスガイド：</span>'+
+              '<span class="desc"><small class="en">Enable or disable the tracing guide display in stroke order exercises.</small><small class="ja">書き順の練習でのトレスガイドの表示がトグルできます。</small></span>'+
+            '</span>'+
             '<button id="settings-tracing-guide" class="button' + (tracingGuide == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateTracingGuide(this);">' + (tracingGuide == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '練習でページを変更すると時間が停止できます。' : 'Enable or disable pausing timer when you leave or hide the exercise page') + '"><span class="en">Pause Timer Automatically:</span><span class="ja">練習の時間の停止：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Pause Timer Automatically:</span><span class="ja">練習の時間の停止：</span>'+
+              '<span class="desc"><small class="en">Enable or disable pausing timer when you leave or hide the exercise page</small><small class="ja">練習でページを変更すると時間が停止できます。</small></span>'+
+            '</span>'+
             '<button id="settings-timer-auto-pause" class="button' + (timerAutoPause == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateTimerAutoPause(this);">' + (timerAutoPause == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '練習データを保存するリマインダーのポップアップがトグルできます。' : 'Shows a reminder every 10 exercises to backup your exercise score data.') + '"><span class="en">Exercise Data Backup Reminder:</span><span class="ja">練習データを保存するリマインダー：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Exercise Data Backup Reminder:</span><span class="ja">練習データを保存するリマインダー：</span>'+
+              '<span class="desc"><small class="en">Shows a reminder every 10 exercises to backup your exercise score data.</small><small class="ja">練習データを保存するリマインダーのポップアップがトグルできます。</small></span>'+
+            '</span>'+
             '<button id="settings-data-backup-reminder" class="button' + (dataBackupReminder == 'true' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateDataBackupReminder(this);">' + (dataBackupReminder == 'true' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
 
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? '練習データがセーブ／ロードできます。\nこのデータはブラウザーで保存していますのでキャッシュをクリアすると失います。ですから、定期的にセーブするのがおすすめします。' : 'Save or load your exercise score data.\nThis data is stored locally in the browser, so it\'s highly recommended that you save your data periodically so you don\'t lose it.') + '"><span class="en">Save/Load Exercise Score Data:</span><span class="ja">練習データをセーブ／ロードする：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Save/Load Exercise Score Data:</span><span class="ja">練習データをセーブ／ロードする：</span>'+
+              '<span class="desc"><small class="en">Save or load your exercise score data.<br>This data is stored locally in the browser, so it\'s highly recommended that you save your data periodically so you don\'t lose it.</small><small class="ja">練習データがセーブ／ロードできます。<br>このデータはブラウザーで保存していますのでキャッシュをクリアすると失います。ですから、定期的にセーブするのがおすすめします。</small></span>'+
+            '</span>'+
             '<a id="settings-save-exercise-data" class="button" download="Genki Exercise Score Data" href="data:,' + (storageOK && localStorage.GenkiResults ? encodeURIComponent(localStorage.GenkiResults.replace(/\n/g, '\r\n')) : '') + '"><i class="fa">&#xf019;</i><span class="en">Save</span><span class="ja">セーブする</span></a>'+
             '<button id="settings-load-exercise-data" class="button" onclick="this.nextSibling.click();"><i class="fa">&#xf093;</i><span class="en">Load</span><span class="ja">ロードする</span></button><input id="settings-load-data" type="file" accept=".txt,.json,.js" onchange="GenkiSettings.loadExerciseData(this);" style="visibility:hidden;position:absolute;">'+
+            '<button id="settings-view-exercise-data" class="button" onclick="GenkiSettings.viewExerciseData();"><i class="fa">&#xf1c9;</i><span class="en">View Data</span><span class="ja">データを見る</span></button>'+
           '</li>'+
         '</ul>'+
         
         '<div class="section-title"><span class="en">Other</span><span class="ja">他の設定</span></div>'+
         '<ul class="genki-settings-list">'+
           '<li>'+
-            '<span class="label" title="' + (GenkiLang == 'ja' ? 'すべての設定が初期状態に戻せます。' : 'Resets all settings to their default value.') + '"><span class="en">Revert to Default Settings:</span><span class="ja">デフォルト設定に戻す：</span></span>'+
+            '<span class="label">'+
+              '<span class="en">Revert to Default Settings:</span><span class="ja">デフォルト設定に戻す：</span>'+
+              '<span class="desc"><small class="en">Resets all settings to their default value.</small><small class="ja">すべての設定が初期状態に戻せます。</small></span>'+
+            '</span>'+
             '<button id="settings-load-exercise-data" class="button" onclick="GenkiSettings.revert();"><i class="fa">&#xf0e2;</i><span class="en">Reset Settings</span><span class="ja">設定をリセットする</span></button>'+
           '</li>'+
         '</ul>',
@@ -425,6 +486,23 @@
       };
       
       reader.readAsText(file, 'UTF-8');
+    },
+    
+    
+    // displays the user's exercise score data in a popup so they can view/copy it
+    viewExerciseData : function () {
+      GenkiModal.open({
+        title : '<span class="en">Exercise Score Data</span><span class="ja">練習の得点データ</span>',
+        content : 
+        '<div class="center">'+
+          '<textarea id="copy-data" onfocus="this.select();" style="width:80%;height:150px;" readonly>' + JSON.stringify(JSON.parse(localStorage.TobiraResults), '', '  ') + '</textarea><br>'+
+          '<button class="button" onclick="CopyText(document.getElementById(\'copy-data\').value, this);"><i class="fa">&#xf0c5;</i><span class="en">Copy</span><span class="ja">コピーする</span></button>'+
+        '</div>',
+        
+        closeCallback : function () {
+          window.setTimeout(GenkiSettings.manager, 10);
+        }
+      });
     },
     
     
@@ -985,6 +1063,52 @@
     xhttp.send();
 
     return xhttp;
+  };
+  
+  
+  // copies text to the user's clipboard
+  window.CopyText = function (text, caller, callback) {
+    if (text) {
+      // cache original HTML
+      if (!window.CopyTextDefault && caller) {
+        window.CopyTextDefault = caller.innerHTML;
+      }
+      
+      // clear text change timeout
+      if (window.CopyTextTimeout) {
+        clearTimeout(CopyTextTimeout);
+      }
+      
+      // try copying the text
+      try {
+        navigator.clipboard.writeText(text);
+        
+        if (caller) {
+          caller.innerHTML = '<i class="fa">&#xf00c;</i><span class="en">Copied!</span><span class="ja">コピーした！</span>';
+        }
+        
+        callback && callback(true);
+
+      } catch (err) {
+        console.error(err);
+                
+        if (caller) {
+          caller.innerHTML = '<i class="fa">&#xf071;</i><span class="en">Copy Failed</span><span class="ja">コピーが失敗した</span>';
+        }
+        
+        callback && callback(false);
+      }
+      
+      // return text default state
+      window.CopyTextTimeout = setTimeout(function () {
+        caller.innerHTML = CopyTextDefault;
+        delete window.CopyTextTimeout;
+        delete window.CopyTextDefault;
+      }, 1000);
+      
+    } else {
+      return false;
+    }
   };
   
 }(window, document));

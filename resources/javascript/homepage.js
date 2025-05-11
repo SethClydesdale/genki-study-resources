@@ -90,16 +90,25 @@
               'style="color:#F93;" '+
               'href="#copy-search-link" '+
               'title="' + (GenkiLang == 'ja' ? 'サーチリンクをコピーする' : 'Copy the search link') + '" '+
-              'onclick="GenkiModal.open({'+
-                'title : \'<span class=&quot;en&quot;>Copy Search Link</span><span class=&quot;ja&quot;>サーチリンクをコピーする</span>\','+
-                'content : \'<div class=&quot;center&quot;><p><span class=&quot;en&quot;>You can copy the direct search link from the box below.</span><span class=&quot;ja&quot;>下の箱からサーチリンクがコピーできます。</span></p>'+
-                '<textarea id=&quot;copied-search-link&quot; onfocus=&quot;this.select();&quot; style=&quot;width:80%;height:100px;&quot;>' + (window.location.protocol + '//' + window.location.host + window.location.pathname) + '?search=' + encodeURIComponent(value) + '#quick-search-exercises</textarea></div>\','+
-                'focus : \'#copied-search-link\''+
-              '}); return false;"'+
+              'onclick="QuickSearcher.copyLink(\'' + value + '\'); return false;"'+
             '>&#xf0ea;</a>' : '';
 
           delete QuickSearcher.timeout;
         }, 300);
+      },
+      
+      // opens a popup for copying the search link
+      copyLink : function (value) {
+        GenkiModal.open({
+          title : '<span class="en">Copy Search Link</span><span class="ja">サーチリンクをコピーする</span>',
+          content : 
+          '<div class="center">'+
+            '<p><span class="en">You can copy the direct search link from the box below.</span><span class="ja">下の箱からサーチリンクがコピーできます。</span></p>'+
+            '<textarea id="copied-search-link" onfocus="this.select();" style="width:80%;height:100px;">' + (window.location.protocol + '//' + window.location.host + window.location.pathname) + '?search=' + encodeURIComponent(value) + '#quick-search-exercises</textarea><br>'+
+            '<button class="button" onclick="CopyText(document.getElementById(\'copied-search-link\').value, this);"><i class="fa">&#xf0c5;</i><span class="en">Copy</span><span class="ja">コピーする</span></button>'+
+          '</div>',
+          focus : '#copied-search-link'
+        });
       }
     };
     
