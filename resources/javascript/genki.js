@@ -1425,7 +1425,7 @@
                 title : '<span class="en">Backup Exercise Score Data?</span><span class="ja">練習の得点データを保存しますか？</span>',
                 content : '<span class="en">You\'ve recently completed 10 exercises. Would you like to backup your exercise score data?</span><span class="ja">練習が10回終わりました。練習の得点データを保存しますか？</span><br><br>'+
                 '<div class="center">'+
-                  '<a id="save-exercise-data" class="button" download="Genki Exercise Score Data" href="data:text/plain,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '') + '"><i class="fa">&#xf019;</i><span class="en">Save Data</span><span class="ja">セーブする</span></a><br><br>'+
+                  '<a id="save-exercise-data" class="button" download="Genki Exercise Score Data" href="data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '') + '"><i class="fa">&#xf019;</i><span class="en">Save Data</span><span class="ja">セーブする</span></a><br><br>'+
                   '<div title="' + (GenkiLang == 'ja' ? 'このポップアップを無効にします。\nデータを保存するリマインダーが再有効にしたいなら設定で有効にできます。' : 'Stops this popup from showing every 10 exercises.\nYou can re-enable the data backup reminder via the settings manager. ') + '">'+
                     '<input id="modal-data-backup-reminder" class="genki_input_hidden" type="checkbox" onchange="localStorage.dataBackupReminder = this.checked == true ? false : true;">'+
                     '<span tabindex="0" class="genki_pseudo_checkbox" onclick="this.previousSibling.click();" onkeypress="event.key == \'Enter\' && this.previousSibling.click();"></span>'+
