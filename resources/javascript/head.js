@@ -371,7 +371,7 @@
               '<span class="en">Save/Load Exercise Score Data:</span><span class="ja">練習データをセーブ／ロードする：</span>'+
               '<span class="desc"><small class="en">Save or load your exercise score data.<br>This data is stored locally in the browser, so it\'s highly recommended that you save your data periodically so you don\'t lose it.</small><small class="ja">練習データがセーブ／ロードできます。<br>このデータはブラウザーで保存していますのでキャッシュをクリアすると失います。ですから、定期的にセーブするのがおすすめします。</small></span>'+
             '</span>'+
-            '<a id="settings-save-exercise-data" class="button" download="Genki Exercise Score Data" href="data:,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '') + '"><i class="fa">&#xf019;</i><span class="en">Save</span><span class="ja">セーブする</span></a>'+
+            '<a id="settings-save-exercise-data" class="button" download="Genki Exercise Score Data" href="data:text/plain,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '') + '"><i class="fa">&#xf019;</i><span class="en">Save</span><span class="ja">セーブする</span></a>'+
             '<button id="settings-load-exercise-data" class="button" onclick="this.nextSibling.click();"><i class="fa">&#xf093;</i><span class="en">Load</span><span class="ja">ロードする</span></button><input id="settings-load-data" type="file" accept=".txt,.json,.js" onchange="GenkiSettings.loadExerciseData(this);" style="visibility:hidden;position:absolute;">'+
             '<button id="settings-view-exercise-data" class="button" onclick="GenkiSettings.viewExerciseData();"><i class="fa">&#xf1c9;</i><span class="en">View Data</span><span class="ja">データを見る</span></button>'+
           '</li>'+
@@ -495,7 +495,7 @@
         title : '<span class="en">Exercise Score Data</span><span class="ja">練習の得点データ</span>',
         content : 
         '<div class="center">'+
-          '<textarea id="copy-data" onfocus="this.select();" style="width:80%;height:150px;" readonly>' + JSON.stringify(JSON.parse(localStorage.TobiraResults), '', '  ') + '</textarea><br>'+
+          '<textarea id="copy-data" onfocus="this.select();" style="width:80%;height:150px;" readonly>' + JSON.stringify(JSON.parse(localStorage.Results), '', '  ') + '</textarea><br>'+
           '<button class="button" onclick="CopyText(document.getElementById(\'copy-data\').value, this);"><i class="fa">&#xf0c5;</i><span class="en">Copy</span><span class="ja">コピーする</span></button>'+
         '</div>',
         
