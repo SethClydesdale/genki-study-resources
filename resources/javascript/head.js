@@ -861,7 +861,7 @@
             item = '<div data-lesson="' + data[0].replace(/.*?lesson-(\d+).*/, 'L$1') + '" data-path="' + data[0] + '" data-name="' + data[1] + '">'+
                 '<input class="def-selector genki_input_hidden" type="checkbox" onchange="GenkiSettings.updateRandomList(this, \'' + GenkiExercises[i] + '\');"' + (GenkiRandomList.indexOf(GenkiExercises[i]) != -1 ? ' checked' : '') + '>'+
                 '<span tabindex="0" class="genki_pseudo_checkbox" onclick="this.previousSibling.click();" onkeypress="event.key == \'Enter\' && this.previousSibling.click();"></span>'+
-              '<a href="' + getPaths() + 'lessons/' + data[0] + '/' + (window.location.protocol == 'file:' ? 'index.html' : '') + '" target="_blank">' + data[1] + '</a>'+
+              '<a href="' + getPaths() + 'lessons' + (GenkiEd == '3rd' ? '-3rd' : '') + '/' + data[0] + '/' + (window.location.protocol == 'file:' ? 'index.html' : '') + '" target="_blank">' + data[1] + '</a>'+
             '</div>';
             
             list += item;

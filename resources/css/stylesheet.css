@@ -661,6 +661,10 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   width:95%;
   position:relative;
 }
+.random-exercise-list > div {
+  white-space:nowrap;
+  overflow:hidden;
+}
 
 #quick-search-results li {
   white-space:nowrap;
