@@ -15,8 +15,14 @@
   // prevents long winded conditions everytime we want to use storage
   window.storageOK = navigator.cookieEnabled && !offlineEdge && window.localStorage ? true : false;
   
+  // current edition
+  window.GenkiEd = /lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd';
+  
   // user language preference (either en or ja)
   window.GenkiLang = storageOK && localStorage.genkiLang ? localStorage.genkiLang : 'en';
+  
+  // user's random exercise list
+  window.GenkiRandomList = storageOK && localStorage['genkiRandomList' + GenkiEd] ? JSON.parse(localStorage['genkiRandomList' + GenkiEd]) : [];
   
   // # GENKI MODAL #
   // creates a modal or closes one
@@ -308,13 +314,15 @@
           '<li>'+
             '<span class="label">'+
               '<span class="en">Random Exercise Range:</span><span class="ja">ランダム練習の範囲：</span>'+
-              '<span class="desc"><small class="en">Changes the range for the Random Exercise button in the exercise list.<br>Change to Current Lesson if you want to avoid exercises above your current level.</small><small class="ja">練習問題一覧でランダム練習ボタンの範囲が変更できます。</small></span>'+
+              '<span class="desc"><small class="en">Changes the range for the Random Exercise button in the exercise list.<br>Change to Current Lesson if you want to avoid exercises above your current level.<br>Custom allows you to select your own exercises.</small><small class="ja">練習問題一覧でランダム練習ボタンの範囲が変更できます。<br>「カスタム」は自分で練習問題が選択できます。</small></span>'+
             '</span>'+
             '<select id="random-exercise-type" onchange="GenkiSettings.updateRandomExercise(this);">'+
               '<option value="all"' + ( randomExercise == 'all' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? 'すべての課' : 'All Lessons') + '</option>'+
               '<option value="lesson"' + ( randomExercise == 'lesson' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? '今の課' : 'Current Lesson') + '</option>'+
               '<option value="completed"' + ( randomExercise == 'completed' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? '終えた練習問題のみ' : 'Practice Completed Exercises') + '</option>'+
+              '<option value="custom"' + ( randomExercise == 'custom' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? 'カスタム' : 'Custom') + '</option>'+
             '</select>'+
+            '<button id="random-exercise-list" class="button" style="display:' + (randomExercise == 'custom' ? '' : 'none') + ';" onclick="GenkiSettings.randomExerciseList();"><i class="fa">&#xf03a;</i><span class="en">Random Exercise List</span><span class="ja">ランダム練習リスト</span></button>'+
           '</li>'+
 
           '<li>'+
@@ -800,7 +808,115 @@
     
     // updates the random exercise preference
     updateRandomExercise : function (caller) {
-      if (caller) localStorage.genkiRandomExercise = caller.value;
+      var list = document.getElementById('random-exercise-list');
+      
+      if (caller) { 
+        localStorage.genkiRandomExercise = caller.value;
+        
+        if (list) {
+          list.style.display = caller.value == 'custom' ? '' : 'none';
+        }
+      }
+    },
+    
+    // opens a window to manage random exercise selection
+    randomExerciseList : function () {
+      GenkiModal.open({
+        title : '<span class="en">Random Exercise List</span><span class="ja">ランダム練習リスト</span>',
+        content : 
+          '<span class="en">Please select the exercises that you would like to practice.</span><span class="ja">練習するための練習問題を選択してください。</span>'+
+          '<div class="columns-2 clear">'+
+            '<div>'+
+              '<h3 class="main-color"><span class="en">Selected Exercises</span><span class="ja">選択した練習問題</span></h3>'+
+              '<div id="random-selected" class="random-exercise-list"></div>'+
+            '</div>'+
+            '<div>'+
+              '<h3 class="main-color"><span class="en">Exercises</span><span class="ja">練習問題</span></h3>'+
+              '<div id="random-list" class="random-exercise-list"></div>'+
+            '</div>'+
+          '</div>'+
+          '<div class="center"><button class="button" onclick="GenkiSettings.clearRandomList();"><i class="fa">&#xf12d;</i><span class="en">Clear Selected Exercises</span><span class="ja">選択した練習問題を解除する</span></button></div>',
+        closeButtonText : '<span class="en">Return to Settings</span><span class="ja">設定に戻る</span>',
+
+        closeCallback : function () {
+          setTimeout(GenkiSettings.manager, 10);
+        },
+        
+        customSize : {
+          top : '5%',
+          left : '10%',
+          bottom : '5%',
+          right : '10%'
+        }
+      });
+      
+      // parse random exercise list
+      var parseExercises = function () {
+        // parse the exercise list and selected exercise list
+        for (var list = '', selected = '', i = 0, j = GenkiExercises.length, data, checked, item; i < j; i++) {
+          checked = GenkiRandomList.indexOf(GenkiExercises[i]) != -1;
+          data = GenkiExercises[i].split('|');
+          
+          if (!/study-tools|appendix/i.test(data[0])) {
+            item = '<div data-lesson="' + data[0].replace(/.*?lesson-(\d+).*/, 'L$1') + '" data-path="' + data[0] + '" data-name="' + data[1] + '">'+
+                '<input class="def-selector genki_input_hidden" type="checkbox" onchange="GenkiSettings.updateRandomList(this, \'' + GenkiExercises[i] + '\');"' + (GenkiRandomList.indexOf(GenkiExercises[i]) != -1 ? ' checked' : '') + '>'+
+                '<span tabindex="0" class="genki_pseudo_checkbox" onclick="this.previousSibling.click();" onkeypress="event.key == \'Enter\' && this.previousSibling.click();"></span>'+
+              '<a href="' + getPaths() + 'lessons/' + data[0] + '/' + (window.location.protocol == 'file:' ? 'index.html' : '') + '" target="_blank">' + data[1] + '</a>'+
+            '</div>';
+            
+            list += item;
+            if (checked) selected += item;
+          }
+        }
+        
+        // add the exercises to their respective lists
+        document.getElementById('random-list').innerHTML = list;
+        document.getElementById('random-selected').innerHTML = selected;
+      };
+      
+      // load exercise data
+      if (!window.GenkiExercises) {
+        var exercises = document.createElement('SCRIPT');
+        exercises.src = getPaths() + 'resources/javascript/exercises/' + (/lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd') + '-ed.min.js';
+        exercises.onload = parseExercises;
+        document.body.appendChild(exercises);
+      } else {
+        parseExercises();
+      }
+    },
+    
+    // updates the user's selected random exercises
+    updateRandomList : function (caller, data) {
+      
+      // add exercise to the random list
+      if (caller.checked) {
+        GenkiRandomList.push(data);
+        
+        document.getElementById('random-selected').appendChild(caller.parentNode.cloneNode(true));
+      }
+      
+      // remove exercise from the random list
+      else {
+        GenkiRandomList.splice(GenkiRandomList.indexOf(data), 1);
+        
+        var selected = document.querySelector('#random-selected [data-path="' + caller.parentNode.dataset.path + '"]'),
+            checkbox = document.querySelector('#random-list [data-path="' + caller.parentNode.dataset.path + '"] input');
+        
+        if (selected) selected.parentNode.removeChild(selected);
+        if (checkbox) checkbox.checked = false;
+      }
+      
+      // save selected exercises to local storage
+      localStorage['genkiRandomList' + GenkiEd] = JSON.stringify(GenkiRandomList);
+    },
+    
+    // clears the random exercise list
+    clearRandomList : function () {
+      if (confirm(GenkiLang == 'ja' ? 'すべての選択した練習問題を解除してもよろしいですか？' : 'All selected exercises will be cleared. Do you want to continue?')) {
+        for (var a = document.querySelectorAll('#random-selected input'), i = 0, j = a.length; i < j; i++) {
+          a[i].click();
+        }
+      }
     },
     
     

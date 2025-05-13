@@ -650,12 +650,16 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
   margin-top:1em;
 }
 
-#quick-search-results { border:1px solid #CCC; }
+#quick-search-results, .random-exercise-list { border:1px solid #CCC; }
 #quick-search-results:empty { border-color:transparent; }
-#quick-search-results:not(:empty) {
+#quick-search-results:not(:empty), .random-exercise-list {
   height:300px;
   padding:3px;
   overflow:auto;
+}
+.random-exercise-list {
+  width:95%;
+  position:relative;
 }
 
 #quick-search-results li {
@@ -727,7 +731,7 @@ a.jump-arrow {
 a.jump-arrow:hover, a.jump-arrow:focus { color:#C60; }
 
 /* lesson numbers */
-#quick-search-results li[data-lesson]:before {
+#quick-search-results li[data-lesson]:before, .random-exercise-list [data-lesson]:before {
   content:attr(data-lesson);
   color:#FFF;
   font-size:11px;

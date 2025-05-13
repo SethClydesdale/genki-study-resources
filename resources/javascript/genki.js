@@ -2833,6 +2833,10 @@
         }
       }
       
+      else if (storageOK && localStorage.genkiRandomExercise == 'custom' && GenkiRandomList.length) {
+        var list = GenkiRandomList;
+      } 
+      
       // default (all lessons), triggers this instead of preference if in the appendix or study tools since they're not lessons
       else {
         var list = Genki.exercises;
