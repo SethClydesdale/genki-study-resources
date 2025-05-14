@@ -319,7 +319,7 @@
             '<select id="random-exercise-type" onchange="GenkiSettings.updateRandomExercise(this);">'+
               '<option value="all"' + ( randomExercise == 'all' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? 'すべての課' : 'All Lessons') + '</option>'+
               '<option value="lesson"' + ( randomExercise == 'lesson' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? '今の課' : 'Current Lesson') + '</option>'+
-              '<option value="completed"' + ( randomExercise == 'completed' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? '終えた練習問題のみ' : 'Practice Completed Exercises') + '</option>'+
+              '<option value="completed"' + ( randomExercise == 'completed' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? '終えた練習問題のみ' : 'Completed Exercises') + '</option>'+
               '<option value="custom"' + ( randomExercise == 'custom' ? ' selected' : '' ) + '>' + (GenkiLang == 'ja' ? 'カスタム' : 'Custom') + '</option>'+
             '</select>'+
             '<button id="random-exercise-list" class="button" style="display:' + (randomExercise == 'custom' ? '' : 'none') + ';" onclick="GenkiSettings.randomExerciseList();"><i class="fa">&#xf03a;</i><span class="en">Random Exercise List</span><span class="ja">ランダム練習リスト</span></button>'+
@@ -503,7 +503,8 @@
         title : '<span class="en">Exercise Score Data</span><span class="ja">練習の得点データ</span>',
         content : 
         '<div class="center">'+
-          '<textarea id="copy-data" onfocus="this.select();" style="width:80%;height:150px;" readonly>' + JSON.stringify(JSON.parse(localStorage.Results), '', '  ') + '</textarea><br>'+
+          '<textarea id="copy-data" onfocus="this.select();" style="width:80%;height:150px;" readonly>' + (storageOK && localStorage.Results ? JSON.stringify(JSON.parse(localStorage.Results), '', '  ') : GenkiLang == 'ja' ? 'データが見つかりませんでした。(ᓀ‸ᓂ)' : 'No data found. (ᓀ‸ᓂ)') + '</textarea><br>'+
+
           '<button class="button" onclick="CopyText(document.getElementById(\'copy-data\').value, this);"><i class="fa">&#xf0c5;</i><span class="en">Copy</span><span class="ja">コピーする</span></button>'+
         '</div>',
         
