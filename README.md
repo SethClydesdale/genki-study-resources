@@ -43,6 +43,7 @@ Shortcuts that can be used anywhere.
 | -------- | ----------- |
 | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>D</kbd> | Toggle Dark Mode on/off |
 | <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>M</kbd> | Open Settings Manager |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>L</kbd> | Toggle interface language between English and Japanese |
 
 #### Exercises
 Shortcuts that can only be used in exercises.

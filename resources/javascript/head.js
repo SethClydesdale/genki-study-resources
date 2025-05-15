@@ -730,18 +730,20 @@
     
     
     // updates language preference
-    updateLang : function (caller) {
-      GenkiLang = caller.value;
-      document.documentElement.className = document.documentElement.className.replace(/lang-(?:en|ja)/, 'lang-' + caller.value);
+    updateLang : function (caller, lang) {
+      GenkiLang = lang ? lang : caller.value;
+      document.documentElement.className = document.documentElement.className.replace(/lang-(?:en|ja)/, 'lang-' + (lang ? lang : caller.value));
       
       // save preference to cache
       if (storageOK) {
-        localStorage.genkiLang = caller.value;
+        localStorage.genkiLang = lang ? lang : caller.value;
       }
       
       // reset settings manager to apply new language
-      GenkiSettings.manager();
-      document.getElementById('settings-lang').focus();
+      if (!lang) {
+        GenkiSettings.manager();
+        document.getElementById('settings-lang').focus();
+      }
     },
     
     

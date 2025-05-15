@@ -455,6 +455,11 @@
         case 'c':
           button = document.getElementById('check-answers-button');
           break;
+          
+        // toggle language (ctrl+alt+l)
+        case 'l':
+          GenkiSettings.updateLang(null, GenkiLang == 'ja' ? 'en' : 'ja');
+          break;
 
         default:
           break;
