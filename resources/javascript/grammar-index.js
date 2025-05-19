@@ -49,20 +49,21 @@
     jump : function () {
       if (/l\d+-p\d+|lesson-grammar-\d+/.test(window.location.hash)) {
         var head = /lesson-grammar-\d+/.test(window.location.hash),
-            l = head ? window.location.hash.replace(/.*?lesson-grammar-(\d+).*?/, '$1') : window.location.hash.replace(/.*?l(\d+)-p\d+.*?/, '$1'),
-            p = window.location.hash.replace(/.*?l\d+-p(\d+).*?/, '$1'),
+            id = window.location.hash.slice(1),
+            l = head ? window.location.hash.replace(/.*?lesson-grammar-(\d+).*/, '$1') : window.location.hash.replace(/.*?l(\d+)-p\d+.*/, '$1'),
+            p = window.location.hash.replace(/.*?l\d+-p(\d+).*/, '$1'),
             button = document.getElementById('toggler-' + l);
         
         // open grammar points if they're closed
-        if (/Show/.test(button.innerHTML)) {
+        if (button && /Show/.test(button.innerHTML)) {
           button.click();
           
           try {
-            document.getElementById(head ? 'lesson-grammar-' + l : 'l' + l + '-p' + p).scrollIntoView();
+            document.getElementById(id).scrollIntoView();
             
           } catch (error) { // fallback for the ancients
             window.location.hash = '#';
-            window.location.hash = head ? '#lesson-grammar-' + l : '#l' + l + '-p' + p;
+            window.location.hash = '#' + id;
           }
         }
       }
