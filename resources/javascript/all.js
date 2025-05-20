@@ -22,6 +22,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '5/13/25',
+          content : "You can now choose what exercises you want to practice for the Random Exercise Button via the settings manager! <a href=\"https://ko-fi.com/post/New-Custom-Random-Exercise-Range-for-GenkiTobira-U6U41EXQ3G\" target=\"_blank\">Click here</a> to learn more about this new setting."
+        },
+        
+        {
           date : '5/9/25',
           content : "You can now change the interface language of the website to 日本語 via the settings manager! <a href=\"https://ko-fi.com/post/New-Language-Option-for-GenkiTobira-A0A41EQV3C\" target=\"_blank\">Click here</a> to learn more about this new setting."
         },
