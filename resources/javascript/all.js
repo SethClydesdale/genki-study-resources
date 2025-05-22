@@ -164,6 +164,53 @@
             GenkiAnn.rotate();
           }
         }
+        
+        // Live Stream announcement (only shows when stream is active)
+        if (window.location.protocol != 'file:') {
+          window.onload = function () {
+            var script = document.createElement('SCRIPT'),
+                stream = document.createElement('DIV');
+
+            stream.id = 'stream';
+            stream.style.display = 'none';
+
+            script.src = 'https://player.twitch.tv/js/embed/v1.js';
+            script.async = true;
+            script.onload = function () {
+              var options = {
+                width: 300,
+                height: 300,
+                channel: "sethc95",
+                parent: ["sethclydesdale.github.io"],
+                muted: true,
+                autoplay: false
+              };
+
+              var player = new Twitch.Player("stream", options);
+
+              // offline; do nothing except kill the iframe
+              player.addEventListener(Twitch.Player.OFFLINE, function () {
+                stream.querySelector('iframe').src = 'about:blank';
+              });
+
+              // online; show live stream announcement and kill the iframe
+              player.addEventListener(Twitch.Player.ONLINE, function () {
+                stream.querySelector('iframe').src = 'about:blank';
+                document.querySelector('.announcement:not(.announce-hidden)').className += ' announce-hidden';
+                GenkiAnn.list.insertAdjacentHTML('afterBegin',
+                  '<div class="announcement">'+
+                    '<span class="date"><span class="t-red" style="margin-right:1px;">●</span>LIVE</span>'+
+                    'Come hang out and watch the development progress of Quartet Study Resources on <a href="https://www.twitch.tv/sethc95" target="_blank">Twitch</a>.'+
+                  '</div>'
+                );
+                GenkiAnn.msg = document.querySelectorAll('.announcement');
+              });
+            };
+
+            document.body.appendChild(script);
+            document.body.appendChild(stream);
+          };
+        }
       }
     };
     
