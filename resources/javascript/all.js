@@ -22,6 +22,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '5/22/25',
+          content : "From today on, I will be streaming the development progress of Quartet Study Resources on Twitch each day to share the process of building these websites. <a href=\"https://ko-fi.com/post/About-Development-Streams-Z8Z61FDRV3\" target=\"_blank\">Click here</a> for more information, such as my schedule."
+        },
+        
+        {
           date : '5/13/25',
           content : "You can now choose what exercises you want to practice for the Random Exercise Button via the settings manager! <a href=\"https://ko-fi.com/post/New-Custom-Random-Exercise-Range-for-GenkiTobira-U6U41EXQ3G\" target=\"_blank\">Click here</a> to learn more about this new setting."
         },
