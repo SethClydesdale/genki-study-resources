@@ -53,9 +53,9 @@
       std_kana : '<span class="en">Drag the Kana to the matching Romaji.<br>TIP: Click the kana to mark it, then click an empty field to drop the answer there.</span><span class="ja">仮名をローマ字にドラッグしなさい。<br>ヒント：言葉をクリックすると選択になります。空のフィールドをクリックすると選択した言葉をドロップします。</span>',
       std_num : '<span class="en">Drag the Numbers to the matching Kana.<br>TIP: Click a number to mark it, then click an empty field to drop the answer there.</span><span class="ja">数を仮名にドラッグしなさい。<br>ヒント：言葉をクリックすると選択になります。空のフィールドをクリックすると選択した言葉をドロップします。</span>',
       std_multi : '<span class="en">Solve the problems by choosing the correct answers.</span><span class="ja">正解の答えを選択しなさい。</span>',
-      std_questions : '<span class="en">Answer the questions as best as you can.</span><span class="ja">問題を答えなさい。</span>',
-      std_written : '<span class="en">Complete the following problems.</span><span class="ja">次の問題を解きなさい。</span>',
-      std_culture : '<span class="en">Answer the questions about Japanese culture as best as you can.</span><span class="ja">日本の文化について問題を答えなさい。</span>',
+      std_questions : '<span class="en">Answer the questions as best as you can.</span><span class="ja">質問に答えなさい。</span>',
+      std_written : '<span class="en">Complete the following problems.</span><span class="ja">次の質問に答えなさい。</span>',
+      std_culture : '<span class="en">Answer the questions about Japanese culture as best as you can.</span><span class="ja">日本の文化について質問に答えなさい。</span>',
       std_stroke_order : '<span class="en">Practice drawing each kanji by following the stroke order.</span><span class="ja">それぞれの漢字の書き順を練習しなさい。</span>',
       std_drawing : '<span class="en">Practice drawing the following kanji multiple times.</span><span class="ja">それぞれの漢字を何度も書きなさい。</span>',
       
