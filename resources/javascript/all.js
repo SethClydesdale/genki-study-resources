@@ -172,7 +172,7 @@
         
         // Live Stream announcement (only shows when stream is active)
         if (window.location.protocol != 'file:') {
-          window.onload = function () {
+          window.addEventListener('load', function () {
             var script = document.createElement('SCRIPT'),
                 stream = document.createElement('DIV');
 
@@ -185,22 +185,25 @@
               var options = {
                 width: 300,
                 height: 300,
-                channel: "sethc95",
-                parent: ["sethclydesdale.github.io"],
+                channel: 'sethc95',
+                parent: ['sethclydesdale.github.io'],
                 muted: true,
                 autoplay: false
               };
 
-              var player = new Twitch.Player("stream", options);
+              var player = new Twitch.Player('stream', options);
 
               // offline; do nothing except kill the iframe
               player.addEventListener(Twitch.Player.OFFLINE, function () {
                 stream.querySelector('iframe').src = 'about:blank';
+                document.body.removeChild(stream);
               });
 
               // online; show live stream announcement and kill the iframe
               player.addEventListener(Twitch.Player.ONLINE, function () {
                 stream.querySelector('iframe').src = 'about:blank';
+                document.body.removeChild(stream);
+                
                 document.querySelector('.announcement:not(.announce-hidden)').className += ' announce-hidden';
                 GenkiAnn.list.insertAdjacentHTML('afterBegin',
                   '<div class="announcement">'+
@@ -212,9 +215,9 @@
               });
             };
 
-            document.body.appendChild(script);
+            document.head.appendChild(script);
             document.body.appendChild(stream);
-          };
+          });
         }
       }
     };
