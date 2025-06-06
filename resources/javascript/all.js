@@ -23,7 +23,7 @@
       msg : [
         {
           date : '6/6/25',
-          content : "Quartet Study Resources is now available. <a href=\"https://ko-fi.com/post/Quartet-Study-Resources-is-Now-Available-Y8Y61G3093\" target=\"_blank\">Click here</a> to learn more about this new Japanese practice website."
+          content : "Quartet Study Resources is now available! <a href=\"https://ko-fi.com/post/Quartet-Study-Resources-is-Now-Available-Y8Y61G3093\" target=\"_blank\">Click here</a> to learn more about this new Japanese practice website."
         },
         
         {
