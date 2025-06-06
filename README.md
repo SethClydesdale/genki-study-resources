@@ -86,6 +86,7 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 - [Genki Self-study Room](https://genki3.japantimes.co.jp/en/student/) | [Genki Online](https://genki3.japantimes.co.jp/) (official Genki sites/resources)
 - [Genki Grammar Index](https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/appendix/grammar-index/) (for reviewing grammar in Genki)
 - [Tobira Grammar Index](https://sethclydesdale.github.io/tobira-study-resources/lessons/appendix/grammar-index/) (for intermediate to advanced grammar explanations)
+- [Quartet Grammar Index](https://sethclydesdale.github.io/quartet-study-resources/lessons/appendix/grammar-index/) (for additional intermediate to advanced grammar explanations)
 - [Dictionary of Japanese Grammar](https://core6000.neocities.org/dojg/) (godsend for quickly looking up grammar points)
 - [Itazuraneko's Grammar Master Reference](https://kenrick95.github.io/itazuraneko/grammar/masterreference) (another great resource for looking up grammar points)
 - [Tae Kim's Guide to Learning Japanese](http://www.guidetojapanese.org/learn/) (good for supplementary learning/explanations)

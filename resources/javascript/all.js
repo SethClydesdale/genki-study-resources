@@ -22,6 +22,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '6/6/25',
+          content : "Quartet Study Resources is now available. <a href=\"https://ko-fi.com/post/Quartet-Study-Resources-is-Now-Available-Y8Y61G3093\" target=\"_blank\">Click here</a> to learn more about this new Japanese practice website."
+        },
+        
+        {
           date : '5/22/25',
           content : "From today on, I will be streaming the development progress of Quartet Study Resources on Twitch each day to share the process of building these websites. <a href=\"https://ko-fi.com/post/About-Development-Streams-Z8Z61FDRV3\" target=\"_blank\">Click here</a> for more information, such as my schedule."
         },

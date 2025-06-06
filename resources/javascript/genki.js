@@ -2239,6 +2239,7 @@
           '<div id="related" class="indent-block">'+
             '<h3><span class="en">Related Projects</span><span class="ja">関連のプロジェクト</span></h3>'+
             '<a href="https://sethclydesdale.github.io/tobira-study-resources/" title="Tobira Study Resources"><img src="' + getPaths() + 'resources/images/tobira-img.png" alt="Tobira Study Resources"></a>'+
+            '<a href="https://sethclydesdale.github.io/quartet-study-resources/" title="Quartet Study Resources"><img src="' + getPaths() + 'resources/images/quartet-img.png" alt="Quartet Study Resources"></a>'+
             '<a href="https://sethclydesdale.github.io/colloquial-kansai-dictionary/" title="Colloquial Kansai Japanese"><img src="' + getPaths() + 'resources/images/kansai-img.png" alt="Colloquial Kansai Japanese"></a>'+
           '</div>';
         
