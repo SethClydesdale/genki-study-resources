@@ -176,53 +176,79 @@
         }
         
         // Live Stream announcement (only shows when stream is active)
+        // only execute on the online version, since checking twitch state offline doesn't work due to CORS policy
         if (window.location.protocol != 'file:') {
-          window.addEventListener('load', function () {
-            var script = document.createElement('SCRIPT'),
-                stream = document.createElement('DIV');
+          // caches streaming state for 30 minutes to reduce amount of requests
+          var cacheState = function (state) {
+            if (storageOK) {
+              localStorage.twitchLiveState = state;
+              localStorage.twitchLiveState_exp = +new Date;
+            }
+          },
 
-            stream.id = 'stream';
-            stream.style.display = 'none';
+          // displays an announcement that the developer is streaming live on Twitch
+          displayLiveAnnouncement = function () {
+            document.querySelector('.announcement:not(.announce-hidden)').className += ' announce-hidden';
+            GenkiAnn.list.insertAdjacentHTML('afterBegin',
+              '<div class="announcement">'+
+                '<span class="date"><span class="t-red" style="margin-right:1px;">●</span>LIVE</span>'+
+                'Come hang out and watch the development progress of Quartet Study Resources on <a href="https://www.twitch.tv/sethc95" target="_blank">Twitch</a>.'+
+              '</div>'
+            );
+            GenkiAnn.msg = document.querySelectorAll('.announcement');
+          };
+          
+          // display live announcement without checking if online and 10 minutes hasn't passed
+          if (storageOK && localStorage.twitchLiveState && localStorage.twitchLiveState_exp > +new Date - 30*60*1000) {
+            if (localStorage.twitchLiveState == 'online') {
+              displayLiveAnnouncement();
+            }
+          }
+          
+          // check twitch to see if developer is streaming live
+          else {
+            window.addEventListener('load', function () {
+              var script = document.createElement('SCRIPT'),
+                  stream = document.createElement('DIV');
 
-            script.src = 'https://player.twitch.tv/js/embed/v1.js';
-            script.async = true;
-            script.onload = function () {
-              var options = {
-                width: 300,
-                height: 300,
-                channel: 'sethc95',
-                parent: ['sethclydesdale.github.io'],
-                muted: true,
-                autoplay: false
+              stream.id = 'stream';
+              stream.style.display = 'none';
+
+              script.src = 'https://player.twitch.tv/js/embed/v1.js';
+              script.async = true;
+              script.onload = function () {
+                var options = {
+                  width: 300,
+                  height: 300,
+                  channel: 'sethc95',
+                  parent: ['sethclydesdale.github.io'],
+                  muted: true,
+                  autoplay: false
+                };
+
+                var player = new Twitch.Embed('stream', options);
+
+                // offline; do nothing except kill the iframe
+                player.addEventListener(Twitch.Player.OFFLINE, function () {
+                  stream.querySelector('iframe').src = 'about:blank';
+                  document.body.removeChild(stream);
+                  cacheState('offline');
+                });
+
+                // online; show live stream announcement and kill the iframe
+                player.addEventListener(Twitch.Player.ONLINE, function () {
+                  stream.querySelector('iframe').src = 'about:blank';
+                  document.body.removeChild(stream);
+
+                  displayLiveAnnouncement();
+                  cacheState('online');
+                });
               };
 
-              var player = new Twitch.Embed('stream', options);
-
-              // offline; do nothing except kill the iframe
-              player.addEventListener(Twitch.Player.OFFLINE, function () {
-                stream.querySelector('iframe').src = 'about:blank';
-                document.body.removeChild(stream);
-              });
-
-              // online; show live stream announcement and kill the iframe
-              player.addEventListener(Twitch.Player.ONLINE, function () {
-                stream.querySelector('iframe').src = 'about:blank';
-                document.body.removeChild(stream);
-                
-                document.querySelector('.announcement:not(.announce-hidden)').className += ' announce-hidden';
-                GenkiAnn.list.insertAdjacentHTML('afterBegin',
-                  '<div class="announcement">'+
-                    '<span class="date"><span class="t-red" style="margin-right:1px;">●</span>LIVE</span>'+
-                    'Come hang out and watch the development progress of Quartet Study Resources on <a href="https://www.twitch.tv/sethc95" target="_blank">Twitch</a>.'+
-                  '</div>'
-                );
-                GenkiAnn.msg = document.querySelectorAll('.announcement');
-              });
-            };
-
-            document.head.appendChild(script);
-            document.body.appendChild(stream);
-          });
+              document.head.appendChild(script);
+              document.body.appendChild(stream);
+            });
+          }
         }
       }
     };
