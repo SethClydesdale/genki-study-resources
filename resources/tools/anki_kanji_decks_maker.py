@@ -109,7 +109,7 @@ hr {
 
     combined_deck = genanki.Deck(
         1810167044,  # Random hardcoded id
-        f'Genki')
+        f'Genki All Kanji')
     combined_deck.add_model(my_model)
 
     decks = [combined_deck]
