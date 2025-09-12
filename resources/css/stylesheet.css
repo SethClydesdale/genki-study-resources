@@ -549,7 +549,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 #exercise-list .indent-block { margin-left:10px; }
 
 #link-grammar { position:relative; }
-#link-grammar:after {
+/*#link-grammar:after {
   content:"NEW!";
   font-size:12px;
   color:#FF0;
@@ -560,7 +560,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
           transform:rotate(-30deg);
   text-shadow:1px 1px 2px #330, -1px -1px 2px #330, 0px 0px 3px #330;
   pointer-events:none;
-}
+}*/
 
 /* donate box */
 .donate-box {
