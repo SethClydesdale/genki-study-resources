@@ -67,6 +67,11 @@
 
 
 /* body/general styles */
+.disabled {
+  opacity:0.5;
+  pointer-events:none;
+}
+
 body {
   color:#333;
   background:#FFF;

@@ -22,6 +22,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '9/11/25',
+          content : "<strong class='t-red'>IMPORTANT:</strong> The 3rd Edition resources have been removed at the request of <a href=\"https://bookclub.japantimes.co.jp/en/contact/\" target=\"_blank\">The Japan Times</a>. Please <a href=\"https://ko-fi.com/post/Important-Information-Regarding-Genki-and-Quartet-D1D21L4B1S\" target=\"_blank\">click here</a> for more details."
+        },
+        
+        {
           date : '6/6/25',
           content : "Quartet Study Resources is now available! <a href=\"https://ko-fi.com/post/Quartet-Study-Resources-is-Now-Available-Y8Y61G3093\" target=\"_blank\">Click here</a> to learn more about this new Japanese practice website."
         },
@@ -177,7 +182,7 @@
         
         // Live Stream announcement (only shows when stream is active)
         // only execute on the online version, since checking twitch state offline doesn't work due to CORS policy
-        if (window.location.protocol != 'file:') {
+        /*if (window.location.protocol != 'file:') {
           // caches streaming state for 30 minutes to reduce amount of requests
           var cacheState = function (state) {
             if (storageOK) {
@@ -249,7 +254,7 @@
               document.body.appendChild(stream);
             });
           }
-        }
+        }*/
       }
     };
     

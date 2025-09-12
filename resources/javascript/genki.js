@@ -2227,7 +2227,7 @@
         var main = 
           '<div id="link-list" class="normal-block indent-block">'+
             '<div><a id="link-home" class="button" href="' + (getPaths() + (storageOK && localStorage.GenkiEdition == '3rd' ? 'lessons-3rd/' : '') + Genki.local) + '"><i class="fa">&#xf015;</i><span class="en">Home</span><span class="ja">トップページ</span></a></div>'+
-            '<div><a id="link-grammar" href="' + getPaths() + 'lessons-3rd/appendix/grammar-index/' + Genki.local + '"><i class="fa">&#xf02d;</i><span class="en">Grammar Index</span><span class="ja">文法索引</span></a></div>'+
+            '<div><a id="link-grammar" href="' + getPaths() + 'lessons-3rd/appendix/grammar-index/' + Genki.local + '" class="disabled"><i class="fa">&#xf02d;</i><span class="en">Grammar Index</span><span class="ja">文法索引</span></a></div>'+
             '<div><a id="link-anki" href="' + getPaths() + 'help/anki-decks/' + Genki.local + '"><i class="fa">&#xf005;</i><span class="en">Anki Decks</span><span class="ja">Ankiのデッキ</span></a></div>'+
             '<div><a id="link-help" href="' + getPaths() + 'help/' + Genki.local + '"><i class="fa">&#xf059;</i><span class="en">Help &amp; FAQ</span><span class="ja">FAQ</span></a></div>'+
             '<div><a id="link-report" href="' + getPaths() + 'report/' + Genki.local + '"><i class="fa">&#xf188;</i><span class="en">Reports &amp; Feedback</span><span class="ja">フィードバックを送る</span></a></div>'+
