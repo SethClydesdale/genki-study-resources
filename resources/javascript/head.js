@@ -381,6 +381,7 @@
             '</span>'+
             '<a id="settings-save-exercise-data" class="button" download="Genki Exercise Score Data.txt" href="data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '') + '"><i class="fa">&#xf019;</i><span class="en">Save</span><span class="ja">セーブする</span></a>'+
             '<button id="settings-load-exercise-data" class="button" onclick="this.nextSibling.click();"><i class="fa">&#xf093;</i><span class="en">Load</span><span class="ja">ロードする</span></button><input id="settings-load-data" type="file" accept=".txt,.json,.js" onchange="GenkiSettings.loadExerciseData(this);" style="visibility:hidden;position:absolute;">'+
+            '<button id="settings-swap-exercise-data" class="button" onclick="GenkiSettings.swapExerciseData();"><i class="fa">&#xf074;</i><span class="en">Swap Data</span><span class="ja">データを見る</span></button>'+
             '<button id="settings-view-exercise-data" class="button" onclick="GenkiSettings.viewExerciseData();"><i class="fa">&#xf1c9;</i><span class="en">View Data</span><span class="ja">データを見る</span></button>'+
           '</li>'+
         '</ul>'+
@@ -507,6 +508,40 @@
 
           '<button class="button" onclick="CopyText(document.getElementById(\'copy-data\').value, this);"><i class="fa">&#xf0c5;</i><span class="en">Copy</span><span class="ja">コピーする</span></button>'+
         '</div>',
+        
+        closeCallback : function () {
+          window.setTimeout(GenkiSettings.manager, 10);
+        }
+      });
+    },
+    
+    // swaps the user's exercise score data between the 2nd and 3rd edition
+    swapExerciseData : function () {
+      GenkiModal.open({
+        title : 'Swap Exercise Score Data',
+        buttonHTML : 'Swap Data',
+        content : 
+        '<p>This feature is mainly used for swapping data from the now defunct 3rd Edition to the current version of Genki Study Resources. Click the "Swap Data" button below to swap in your 3rd Edition score data.</p>'+
+        '<p>※ Your 2nd Edition data will be preserved in the background so that you can swap back to it at any time by using this function again.</p>',
+        
+        callback : function () {
+          // create new data from the old data
+          var oldData = JSON.parse(localStorage.Results),
+          newData = {
+            '3rd' : {},
+            '2nd' : {}
+          }, k;
+          
+          // swap the data and save it
+          for (k in oldData['3rd']) newData['2nd'][k] = oldData['3rd'][k];
+          for (k in oldData['2nd']) newData['3rd'][k] = oldData['2nd'][k];
+          
+          localStorage.Results = JSON.stringify(newData);
+          localStorage.dataSwapped = true;
+          
+          // prompt to reload the page
+          setTimeout(GenkiSettings.reloadPrompt, 10);
+        },
         
         closeCallback : function () {
           window.setTimeout(GenkiSettings.manager, 10);

@@ -2995,4 +2995,27 @@
   
   // initial setup
   Genki.init();
+  
+  
+  // # 3RD EDITION IMPORT NOTIFICATION #
+  if (storageOK && localStorage.dataSwapped != 'true' && localStorage.Results) {
+    if (JSON.parse(localStorage.Results)['3rd']) {
+      GenkiModal.open({
+        title : '3rd Edition Data Notice',
+        buttonHTML : 'Open Settings',
+        content : 
+        '<p>3rd Edition Exercise Score Data has been detected. The 3rd Edition is no longer available. However, you can import your 3rd Edition Exercise Score Data into the current exercise list via the Settings Manager.</p>'+
+        '<p>If you would like to import your 3rd Edition scores, click "Open Settings" below, scroll to the bottom, and then click the "Swap Data" button to swap your exercise score data. This will transfer over your 3rd Edition scores while maintaining your 2nd Edition scores in the background.</p>',
+        
+        callback : function () {
+          localStorage.dataSwapped = true;
+          window.setTimeout(GenkiSettings.manager, 10);
+        },
+        
+        closeCallback : function () {
+          localStorage.dataSwapped = true;
+        }
+      });
+    }
+  }
 }(window, document));
