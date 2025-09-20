@@ -22,6 +22,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '9/20/25',
+          content : "The 2nd Edition resources have been upgraded. Please <a href=\"https://ko-fi.com/post/Genki-Study-Resources-2nd-Edition-Upgrade-N4N21LK1L0\" target=\"_blank\">click here</a> for more details."
+        },
+        
+        {
           date : '9/11/25',
           content : "<strong class='t-red'>IMPORTANT:</strong> The 3rd Edition resources have been removed at the request of <a href=\"https://bookclub.japantimes.co.jp/en/contact/\" target=\"_blank\">The Japan Times</a>. Please <a href=\"https://ko-fi.com/post/Important-Information-Regarding-Genki-and-Quartet-D1D21L4B1S\" target=\"_blank\">click here</a> for more details."
         },
