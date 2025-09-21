@@ -504,7 +504,8 @@
       if (/\!GRI/.test(o.info)) {
         o.info = o.info.replace(/\{.*?\}/g, function (match) {
           var data = match.slice(1, match.length - 1).split('|'), hint, flag, sub, width, placeholder;
-          return '<a href="' + getPaths() + 'lessons-3rd/appendix/grammar-index/' + Genki.local + '#' + data[2] + '" target="_blank"' + ((Genki.local && !Genki.debug) ? '' : ' onclick="Genki.getGrammarPoint(this, \'' + data[2] + '\'); return false;"') + '>' + data[1] + '</a>';
+          //return '<a href="' + getPaths() + 'lessons-3rd/appendix/grammar-index/' + Genki.local + '#' + data[2] + '" target="_blank"' + ((Genki.local && !Genki.debug) ? '' : ' onclick="Genki.getGrammarPoint(this, \'' + data[2] + '\'); return false;"') + '>' + data[1] + '</a>';
+          return data[1];
         });
       }
 
