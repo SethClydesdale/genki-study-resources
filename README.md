@@ -1,10 +1,10 @@
 ﻿# Genki Study Resources
-Genki Study Resources is a website that offers a vast collection of exercises for practicing what is taught in [Genki: An Integrated Course in Elementary Japanese](http://genki.japantimes.co.jp/index_en). It was mainly created to help aid with self-study, as such, you can use it online or offline depending on your needs. Choose one of the links below to begin testing the Japanese you've learned in Genki!
+Genki Study Resources is a website that offers a vast collection of exercises for practicing what is taught in [Genki: An Integrated Course in Elementary Japanese](https://genki3.japantimes.co.jp/en/). It was mainly created to help aid with self-study, as such, you can use it online or offline depending on your needs. Choose one of the links below to begin testing the Japanese you've learned in Genki!
 
 
-**Online Version:** [2nd Edition](https://sethclydesdale.github.io/genki-study-resources/) | [3rd Edition](https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/)
+**Online Version:** [https://sethclydesdale.github.io/genki-study-resources/](https://sethclydesdale.github.io/genki-study-resources/)
 
-**Offline Version:** [download](https://ko-fi.com/Post/Important-Information-Regarding-Genki-and-Quartet-D1D21L4B1S) (scroll down to the 9/12 update)
+**Offline Version:** [download](https://github.com/SethClydesdale/genki-study-resources/archive/master.zip)
 
 If you're interested in learning Japanese, please see [this guide](https://sethclydesdale.github.io/genki-study-resources/help/japanese-guide/)!
 
@@ -84,9 +84,7 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 
 ##### Websites
 - [Genki Self-study Room](https://genki3.japantimes.co.jp/en/student/) | [Genki Online](https://genki3.japantimes.co.jp/) (official Genki sites/resources)
-- [Genki Grammar Index](https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/appendix/grammar-index/) (for reviewing grammar in Genki)
 - [Tobira Grammar Index](https://sethclydesdale.github.io/tobira-study-resources/lessons/appendix/grammar-index/) (for intermediate to advanced grammar explanations)
-- [Quartet Grammar Index](https://sethclydesdale.github.io/quartet-study-resources/lessons/appendix/grammar-index/) (for additional intermediate to advanced grammar explanations)
 - [Dictionary of Japanese Grammar](https://core6000.neocities.org/dojg/) (godsend for quickly looking up grammar points)
 - [Itazuraneko's Grammar Master Reference](https://kenrick95.github.io/itazuraneko/grammar/masterreference) (another great resource for looking up grammar points)
 - [Tae Kim's Guide to Learning Japanese](http://www.guidetojapanese.org/learn/) (good for supplementary learning/explanations)

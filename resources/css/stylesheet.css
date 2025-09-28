@@ -3012,6 +3012,39 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
 
 
 /* GRAMMAR INDEX */
+.setsumei:before {
+  content:"Please see the following page(s) in your textbook for an explanation on this topic.";
+  display:block;
+  margin-bottom:5px;
+}
+
+.setsumei .first:after {
+  content:"1st";
+}
+
+.setsumei .second:after {
+  content:"2nd";
+}
+
+.setsumei .third:after {
+  content:"3rd";
+}
+
+.setsumei .first:after, .setsumei .second:after, .setsumei .third:after {
+  color:#FFF;
+  font-size:11px;
+  font-weight:bold;
+  background:#F93;
+  border:1px solid #E82;
+  border-radius:3px;
+  padding:0px 2px;
+  margin-left:4px;
+  vertical-align:top;
+  display:inline-block;
+  text-align:center;
+  width:25px;
+}
+
 .grammar-index .wip {
   color:#333;
   background:#F9BF3A;

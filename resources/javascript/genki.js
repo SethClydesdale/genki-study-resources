@@ -42,7 +42,7 @@
     ed : 'lessons' + (/lessons-3rd/.test(window.location.pathname) ? '-3rd' : ''),
     
     // tells us if Genki is being used on a local file system so we can append index.html to URLs
-    local : window.location.protocol == 'file:' ? 'index.html' : '',
+    local : (window.location.protocol == 'file:' || /localhost/.test(window.location.href)) ? 'index.html' : '',
     
     // tells us if debug mode is active so we can append ?debug to exercise URLs
     debug : /debug/.test(window.location.search) ? '?debug' : '',
@@ -504,8 +504,7 @@
       if (/\!GRI/.test(o.info)) {
         o.info = o.info.replace(/\{.*?\}/g, function (match) {
           var data = match.slice(1, match.length - 1).split('|'), hint, flag, sub, width, placeholder;
-          //return '<a href="' + getPaths() + 'lessons-3rd/appendix/grammar-index/' + Genki.local + '#' + data[2] + '" target="_blank"' + ((Genki.local && !Genki.debug) ? '' : ' onclick="Genki.getGrammarPoint(this, \'' + data[2] + '\'); return false;"') + '>' + data[1] + '</a>';
-          return data[1];
+          return '<a href="' + getPaths() + 'lessons/appendix/grammar-index/' + Genki.local + '#' + data[2] + '" target="_blank"' + ((Genki.local && !Genki.debug) ? '' : ' onclick="Genki.getGrammarPoint(this, \'' + data[2] + '\'); return false;"') + '>' + data[1] + '</a>';
         });
       }
 
@@ -766,7 +765,7 @@
             return Genki.parse.image(data);
             
           } else if (data[0] == '!GRI') { // Grammar Index links
-            return '<a href="' + getPaths() + 'lessons-3rd/appendix/grammar-index/' + Genki.local + '#' + data[2] + '" target="_blank"' + ((Genki.local && !Genki.debug) ? '' : ' onclick="Genki.getGrammarPoint(this, \'' + data[2] + '\'); return false;"') + '>' + data[1] + '</a>';
+            return '<a href="' + getPaths() + 'lessons/appendix/grammar-index/' + Genki.local + '#' + data[2] + '" target="_blank"' + ((Genki.local && !Genki.debug) ? '' : ' onclick="Genki.getGrammarPoint(this, \'' + data[2] + '\'); return false;"') + '>' + data[1] + '</a>';
             
           } else if (data[0] == '!AUDIO') { // audio tracks
             return '<div class="audio-block center">'+
@@ -2228,7 +2227,7 @@
         var main = 
           '<div id="link-list" class="normal-block indent-block">'+
             '<div><a id="link-home" class="button" href="' + (getPaths() + (storageOK && localStorage.GenkiEdition == '3rd' ? 'lessons-3rd/' : '') + Genki.local) + '"><i class="fa">&#xf015;</i><span class="en">Home</span><span class="ja">トップページ</span></a></div>'+
-            //'<div><a id="link-grammar" href="' + getPaths() + 'lessons-3rd/appendix/grammar-index/' + Genki.local + '"><i class="fa">&#xf02d;</i><span class="en">Grammar Index</span><span class="ja">文法索引</span></a></div>'+
+            '<div><a id="link-grammar" href="' + getPaths() + 'lessons/appendix/grammar-index/' + Genki.local + '"><i class="fa">&#xf02d;</i><span class="en">Grammar Index</span><span class="ja">文法索引</span></a></div>'+
             '<div><a id="link-anki" href="' + getPaths() + 'help/anki-decks/' + Genki.local + '"><i class="fa">&#xf005;</i><span class="en">Anki Decks</span><span class="ja">Ankiのデッキ</span></a></div>'+
             '<div><a id="link-help" href="' + getPaths() + 'help/' + Genki.local + '"><i class="fa">&#xf059;</i><span class="en">Help &amp; FAQ</span><span class="ja">FAQ</span></a></div>'+
             '<div><a id="link-report" href="' + getPaths() + 'report/' + Genki.local + '"><i class="fa">&#xf188;</i><span class="en">Reports &amp; Feedback</span><span class="ja">フィードバックを送る</span></a></div>'+
@@ -2792,7 +2791,7 @@
           if (zone) {
             // trim out grammar point number and format anchor links for use with the quick grammar review modal
             zone.innerHTML = grammar[0].replace(/\d+\. /, '').replace(/href="#(.*?)"/g, 'onclick="Genki.getGrammarPoint(this, \'$1\'); return false;" target="_blank" href="' + url + '#$1"');
-            zone.className = 'grammar-index ' + (Genki.ed == 'lessons' ? 'second-ed' : 'third-ed');
+            zone.className = 'grammar-index third-ed'// + (Genki.ed == 'lessons' ? 'second-ed' : 'third-ed');
           }
         } else if (zone) {
           zone.innerHTML = '<br><b><span class="en">Failed to retrieve grammar point. Click "View in Grammar Index" to try viewing the grammar point directly.</span><span class="ja">文法ノートが見つかりませんでした。「文法索引で見る」をクリックして文法索引で見てみます。</span></b>';

@@ -384,9 +384,9 @@
   
   // # OFFLINE LINK MODIFICATIONS #
   // appends index.html to links if this project is hosted on the local file system
-  if (window.location.protocol == 'file:') {
+  if (window.location.protocol == 'file:' || /localhost/.test(window.location.href)) {
     for (var a = document.getElementsByTagName('A'), i = 0, j = a.length; i < j; i++) {
-      if (!/http/.test(a[i].href)) {
+      if (!/http/.test(a[i].href) || /localhost/.test(a[i].href)) {
         if (/\/$/.test(a[i].href)) {
           a[i].href += 'index.html';
         } else if (/\/#.*?$/.test(a[i].href)) {
@@ -496,7 +496,7 @@
         container = document.createElement('DIV');
     
     container.id = 'light-switch-container';
-    container.innerHTML = '<a href="' + getPaths() + 'help/stuck-loading/' + (window.location.protocol == 'file:' ? 'index.html' : '') + '"><strong><span class="en">Where is Dark Mode?</span><span class="ja">ダークモードはどこ？</span></strong></a>';
+    container.innerHTML = '<a href="' + getPaths() + 'help/stuck-loading/' + ((window.location.protocol == 'file:' || /localhost/.test(window.location.href)) ? 'index.html' : '') + '"><strong><span class="en">Where is Dark Mode?</span><span class="ja">ダークモードはどこ？</span></strong></a>';
     
     footer.appendChild(container);
   }
