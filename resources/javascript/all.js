@@ -22,6 +22,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '9/29/25',
+          content : "<strong class='t-red'>IMPORTANT:</strong> If any exercises are missing, it is because The Japan Times requested their removal. Please <a href=\"https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E\" target=\"_blank\">click here</a> for more details."
+        },
+        
+        {
           date : '9/20/25',
           content : "The 2nd Edition resources have been upgraded. Please <a href=\"https://ko-fi.com/post/Genki-Study-Resources-2nd-Edition-Upgrade-N4N21LK1L0\" target=\"_blank\">click here</a> for more details."
         },
