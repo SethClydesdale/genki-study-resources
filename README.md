@@ -1,5 +1,5 @@
 ﻿# Genki Study Resources
-Genki Study Resources is a website that offers a vast collection of exercises for practicing what is taught in [Genki: An Integrated Course in Elementary Japanese](https://genki3.japantimes.co.jp/en/). It was mainly created to help aid with self-study, as such, you can use it online or offline depending on your needs. Choose one of the links below to begin testing the Japanese you've learned in Genki!
+Genki Study Resources is a website that offers exercises for practicing what is taught in [Genki: An Integrated Course in Elementary Japanese](https://genki3.japantimes.co.jp/en/). It was mainly created to help aid with self-study, as such, you can use it online or offline depending on your needs. Choose one of the links below to begin!
 
 
 **Online Version:** [https://sethclydesdale.github.io/genki-study-resources/](https://sethclydesdale.github.io/genki-study-resources/)
@@ -94,7 +94,7 @@ If you have any suggestions, feedback, questions, or bugs to report, feel free t
 
 ### Special Thanks
 Genki Study Resources was made possible thanks to...
-- [The Japan Times](https://bookclub.japantimes.co.jp/en/), Eri Banno, Yoko Ikeda, Yutaka Ohno, Chikako Shinagawa, and Kyoko Tokashiki for Genki: An Integrated Course in Elementary Japanese.
+- ~~[The Japan Times](https://bookclub.japantimes.co.jp/en/)~~, Eri Banno, Yoko Ikeda, Yutaka Ohno, Chikako Shinagawa, and Kyoko Tokashiki for Genki: An Integrated Course in Elementary Japanese.
 - Noriko Udagawa and Reiko Maruyama for some Illustrations that were used.
 - [DavidBurela](https://github.com/DavidBurela) for gifting me the 3rd Edition textbook and workbook of Genki I.
 - [Maarten Jacobs](https://github.com/maartenJacobs) for gifting me the 3rd Edition textbook and workbook of Genki II.
