@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Custom Written Quiz - Study Tools | Genki Study Resources</title>
+    <meta name="title" content="Custom Written Quiz - Study Tools | Genki Study Resources">
+    <meta name="twitter:title" content="Custom Written Quiz - Study Tools | Genki Study Resources">
+    <meta property="og:title" content="Custom Written Quiz - Study Tools | Genki Study Resources">
+    <meta name="description" content="Setup a custom written quiz to help test yourself.">
+    <meta property="og:description" content="Setup a custom written quiz to help test yourself.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="sethclydesdale.github.io">
+    <meta property="og:url" content="https://sethclydesdale.github.io/genki-study-resources/lessons/study-tools/custom-written-quiz/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sethclydesdale.github.io/genki-study-resources/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+  </head>
+
+  <body ondrop="Genki.tools.dropFile(event);">
+    
+    <header>
+      <h1><a href="../../../" id="home-link" class="edition-icon">Genki Study Resources</a></h1>
+      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    </header>
+    
+    <div id="announcement">
+      <div id="announce-inner">
+        <h3><i class="fa">&#xf0a1;</i> News and Info</h3>
+        <div id="announce-list">
+          <div id="announcement-controls" style="display:none;">
+            <button class="button announce-controls button-left" onclick="GenkiAnn.next(-1, true);"><i class="fa">&#xf060;</i></button>
+            <button class="button announce-controls button-right" onclick="GenkiAnn.next(+1, true);"><i class="fa">&#xf061;</i></button>
+          </div>
+          <noscript><div class="announcement">Please enable JavaScript to get the latest news and info.</div></noscript>
+        </div>
+      </div>
+    </div>
+    
+    <div id="content">
+      <div id="study-tool-editor" class="content-block loading">
+        <h2 id="custom-quiz" class="title center">ツール - Custom Written Quiz</h2>
+        <p>Welcome to the custom written quiz tool! Here you will be able to setup your own custom quiz that requires input via keyboard. These quizzes are a bit more advanced and require some <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="blank">HTML</a> to set things up properly. Please read over the <a href="#help-notes-and-tricks">help section</a> for more information.</p>
+        
+        <h2 id="quiz-settings" class="section-title"><span class="en">Written Quiz HTML</span><span class="ja">筆記テストのHTML</span></h2>
+        <p>Use the textarea below to setup your custom written quiz.</p>
+        <ol id="study-tool-ui" class="written-quiz">
+          <li class="item-row">
+            <textarea oninput="Genki.tools.updateJSON();"></textarea>
+          </li>
+        </ol>
+        
+        <h3 id="quiz-code" class="sub-title"><span class="en">Custom Written Quiz Code (JSON)</span><span class="ja">カスタム練習コード</span></h3>
+        <p>The custom written quiz code is used to save your quiz. You can save this code to a text file for later, so you don't have to setup your quiz again. When you're ready to study once more, just load the file or drag and drop it into this textarea and click "study" to continue where you left off.</p>
+        
+        <div id="study-tool-code">
+          <textarea id="study-tool-json" oninput="Genki.tools.updateUI();Genki.tools.updateJSON();"></textarea>
+        </div>
+        
+        <ul id="study-tool-settings" class="clear">
+          <li><a id="downloadCode" class="button" title="Save custom exercise" download="Custom Written Quiz"><span class="en">Save</span><span class="ja">セーブする</span></a></li>
+          <li><button id="loadCode" class="button" title="Load custom exercise" onclick="this.nextSibling.click();"><span class="en">Load</span><span class="ja">ロードする</span></button><input id="study-tool-file" type="file" accept=".txt,.json,.js" onchange="Genki.tools.loadCode(this);"></li>
+          <li><input id="prettyCode" type="checkbox" onchange="Genki.tools.settings.prettify(this);"><label for="prettyCode"><span class="en">Prettify</span><span class="ja">プリティファイ</span></label></li>
+          <li><input id="noStudyWarning" type="checkbox" onchange="Genki.tools.settings.handleCheckbox(this);"><label for="noStudyWarning"><span class="en">Do not warn me</span><span class="ja">注意しないで</span></label></li>
+        </ul>
+        
+        <div class="center">
+          <button class="button" onclick="Genki.tools.study();"><i class="fa">&#xf040;</i><span class="en">Study</span><span class="ja">勉強する</span></button>
+        </div><br>
+        
+        <h3 id="help-notes-and-tricks" class="section-title"><span class="en">Help, Notes, and Tips</span><span class="ja">ヒント</span></h3>
+        <p>The custom written quiz tool is a bit more advanced than the others, as it requires some minimal knowledge of HTML to use properly. However, because of this, these exercises are a bit more flexible in what you can create. Please read over each section carefully.</p>
+        
+        <strong>Quick Navigation</strong>
+        <ul>
+          <li><a href="#creating-input-zones">Creating Input Zones</a></li>
+          <li><a href="#input-zones-with-hints">Input Zones with Hints</a></li>
+          <li><a href="#input-zones-with-two-answers">Input Zones with Two Answers</a></li>
+          <li><a href="#input-zones-with-sub-answers">Input Zones with Sub-Answers</a></li>
+          <li><a href="#input-zones-with-furigana">Input Zones with Furigana</a></li>
+          <li><a href="#input-zones-with-custom-width">Input Zones with Custom Width</a></li>
+          <li><a href="#useful-html-elements">Useful HTML Elements</a></li>
+        </ul>
+        
+        <br>
+        <h4 id="creating-input-zones" class="sub-title">Creating Input Zones</h4>
+        <p>Input Zones are used for answering questions that you create. They're fairly simple and straightforward. Your standard Input Zone looks like the following.</p>
+        <code>{ANSWER}</code>
+        <p>The two curly braces {} indicate an input zone, the text between these braces is the answer to a question. If the answer is wrong it'll show the correct answer at the end of the quiz below the input zone. (see example below.)</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="ANSWER" data-mistakes="1" style="width:84px;"></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="ANSWER" data-answer="ANSWER" data-mistakes="0" style="width:84px;" disabled></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="HELLO" data-answer="ANSWER" data-mistakes="1" style="width:84px;" disabled><span class="problem-answer">ANSWER</span></span></div>
+          </div>
+        </div>
+        
+        <br>
+        <h4 id="input-zones-with-hints" class="sub-title">Input Zones with Hints</h4>
+        <p>If you want to provide a hint for your input zone, add a horizontal bar after the answer; the text after the horizontal bar is the hint.</p>
+        <code>{ANSWER|HINT}</code>
+        <p>The hint will be shown beneath the input zone while the quiz is in progress, once the quiz is completed the correct answer will be shown, if it was answered incorrectly.</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="ANSWER" data-mistakes="0" style="width:80px;"><span class="problem-hint">HINT</span></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" value="ANSWER" data-answer="ANSWER" data-mistakes="0" style="width:80px;" disabled=""><span class="problem-hint">HINT</span></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="HELLO" data-answer="ANSWER" data-mistakes="1" style="width:80px;" disabled=""><span class="problem-hint">HINT</span><span class="problem-answer">ANSWER</span></span></div>
+          </div>
+        </div>
+        
+        <br>
+        <h4 id="input-zones-with-two-answers" class="sub-title">Input Zones with Two Answers</h4>
+        <p>If you want to allow an input zone to have two answers you use the syntax below.</p>
+        <code>{ANSWER1|ANSWER2|answer}</code>
+        <p>ANSWER1 and ANSWER2 will be answers to a question. The last text "answer" is a flag that tells the API that the HINT is now an ANSWER.</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="ANSWER1" data-answer2="ANSWER2" data-mistakes="0" tabindex="0" style="width:80px;"></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" value="ANSWER2" data-answer="ANSWER1" data-answer2="ANSWER2" data-mistakes="0" tabindex="0" style="width:80px;" disabled=""></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="HELLO" data-answer="ANSWER1" data-answer2="ANSWER2" data-mistakes="1" tabindex="0" style="width:80px;" disabled=""><span class="problem-answer">ANSWER1<span class="secondary-answer">ANSWER2</span></span></span></div>
+          </div>
+        </div>
+        
+        <br>
+        <h4 id="input-zones-with-sub-answers" class="sub-title">Input Zones with Sub-Answers</h4>
+        <p>If you want to allow an answer to use more than one word or phrase use the syntax below.</p>
+        <code>{%(あの/その/この)ねこ}</code>
+        <p><code>%()</code> initializes a sub-answer list within an answer, which allows a limitless amount of possible words or phrases, separated by a "/", that can be used to answer the question. Only one of these can be used per answer, which means you can use 1 in ANSWER1 and another 1 in ANSWER2. For example: <code>{%(あの/その/この)ねこ|%(あの/その/この)いぬ|answer}</code> has a total of 6 possible answers.</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="%(あの/その/この)ねこ" data-mistakes="0" tabindex="0" style="width:70px;"></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" data-answer="%(あの/その/この)ねこ" value="このねこ" data-mistakes="0" tabindex="0" style="width:70px;" disabled=""></span></div>
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" data-answer="%(あの/その/この)ねこ" value="そのねこ" data-mistakes="0" tabindex="0" style="width:70px;" disabled=""></span></div>
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" data-answer="%(あの/その/この)ねこ" value="あのねこ" data-mistakes="0" tabindex="0" style="width:70px;" disabled=""></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="%(あの/その/この)ねこ" value="ねこ" data-mistakes="1" tabindex="0" style="width:70px;" disabled=""><span class="problem-answer"><span class="alt-phrase">(</span>あの<span class="alt-phrase-sep">/</span>その<span class="alt-phrase-sep">/</span>この<span class="alt-phrase">)</span>ねこ</span></span></div>
+          </div>
+        </div>
+        
+        <br>
+        <h4 id="input-zones-with-furigana" class="sub-title">Input Zones with Furigana</h4>
+        <p>If you want to show only furigana when an answer is wrong, pass "furigana" to the third parameter.</p>
+        <code>{ANSWER|FURIGANA|furigana}</code>
+        <p>ANSWER is the answer, FURIGANA is the furigana, and "furigana" is a flag that tells the API the second parameter is FURIGANA; not a hint or answer.</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="ANSWER" data-furigana="FURIGANA" data-mistakes="0" tabindex="0" style="width:70px;"></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" value="ANSWER" data-answer="ANSWER" data-furigana="FURIGANA" data-mistakes="0" tabindex="0" style="width:70px;" disabled=""></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="HELLO" data-answer="ANSWER" data-furigana="FURIGANA" data-mistakes="1" tabindex="0" style="width:70px;" disabled=""><span class="problem-answer">ANSWER<span class="secondary-answer furigana-only">FURIGANA</span></span></span></div>
+          </div>
+        </div>
+        
+        <h4 id="input-zones-with-custom-width" class="sub-title">Input Zones with Custom Width</h4>
+        <p>The width of input zones is automatically calculated based on the amount of characters in ANSWER or HINT. Sometimes the width may be inadequate when using a HINT and you'll need to set it manually using the method below.</p>
+        <code>{ANSWER|HINT|width:N}</code>
+        <p>ANSWER is the answer, HINT is the hint, and "width:N" is a flag that tells the API to set a custom width -- N being a number. Note: the width is set in pixels. (200px in the example below; ex. <code>{ANSWER|HINT|width:200}</code>)</p>
+        <div class="text-block">
+          <strong>QUIZ IN PROGRESS</strong>
+          <div class="fill-quiz">
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" data-answer="ANSWER" data-mistakes="0" style="width:200px;"><span class="problem-hint">HINT</span></span></div>
+          </div>
+          
+          <strong>QUIZ COMPLETE</strong>
+          <div class="fill-quiz quiz-over">
+            Correct
+            <div class="problem"><span class="writing-zone answer-correct"><input class="writing-zone-input" type="text" value="ANSWER" data-answer="ANSWER" data-mistakes="0" style="width:200px;" disabled=""><span class="problem-hint">HINT</span></span></div>
+            
+            Wrong
+            <div class="problem"><span class="writing-zone"><input class="writing-zone-input" type="text" value="HELLO" data-answer="ANSWER" data-mistakes="1" style="width:200px;" disabled=""><span class="problem-hint">HINT</span><span class="problem-answer">ANSWER</span></span></div>
+          </div>
+        </div>
+        
+        <h4 id="useful-html-elements" class="sub-title">Useful HTML Eelements</h4>
+        <p>Below is a list of useful HTML elements that you can use to format your quizzes.</p>
+        <div class="text-block fill-quiz">
+          <strong>PROBLEMS</strong><br><br>
+          <div class="problem"><code>&lt;div class="problem"&gt;&lt;/div&gt;</code> it is recommended that you put input zones inside this element. It adds a large margin below the input zone, preventing the correct answers from overlapping other elements. You may have multiple input zones inside a div.problem block.</div>
+          
+          <div class="problem"><code>&lt;div class="count-problems"&gt;&lt;/div&gt;</code> put your problem blocks in this element to add numbers next to each problem.</div>
+          
+          <div class="problem"><code>&lt;div class="columns-2 clear"&gt;&lt;div&gt;COLUMN1&lt;/div&gt;&lt;div&gt;COLUMN2&lt;/div&gt;&lt;/div&gt;</code> put problems in COLUMN1 or COLUMN2 to display them side by side.</div>
+          
+          <div class="problem"><code>&lt;p class="section-desc"&gt;&lt;/p&gt;</code> can be used for section descriptions. It creates a bold text section, usually for giving instructions.</div>
+          
+          <strong>TEXT PASSAGES</strong><br><br>
+          <div class="problem"><code>&lt;div class="sub-section"&gt;&lt;/div&gt;</code> you can use this element to add contrast between sections. It creates a block with a white background.</div>
+          
+          <div class="problem"><code>&lt;div class="sub-section text-passage"&gt;&lt;/div&gt;</code> if you're planning to write a lot of text that's going to be read, it's best that you use a div.sub-section.text-passage block, as it increases the size of the text making it more readable.</div>
+          
+          <div class="problem"><code>&lt;div class="sub-section text-passage vertical-text"&gt;&lt;/div&gt;</code> if you're creating a text-passage for vertical text, use this block instead.</div>
+        </div>
+        
+        
+      </div>
+      
+      <div id="exercise" class="content-block" style="display:none;">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+    
+    <footer class="clear">
+      <ul class="footer-left">
+        <li><a href="../../../" id="footer-home">Home</a></li>
+        <li><a href="../../../privacy/">Privacy</a></li>
+        <li><a href="../../../report/">Report a Bug</a></li>
+        <li><a href="../../../help/">Help</a></li>
+        <li><a href="../../../donate/">Donate</a></li>
+      </ul>
+      
+      <ul class="footer-right">
+        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
+      </ul>
+    </footer>
+    
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/study-tools.min.js"></script>
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>
+      Genki.tools.type = 'fill';
+      Genki.tools.settings.restore();
+      Genki.tools.restore();
+      Genki.tools.finishedLoading();
+    </script>
+  </body>
+</html>
