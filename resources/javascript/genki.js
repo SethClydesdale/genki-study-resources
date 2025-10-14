@@ -2235,13 +2235,13 @@
             '<div><a id="link-donate" href="' + getPaths() + 'donate/' + Genki.local + '"><i class="fa">&#xf004;</i><span class="en">Donate</span><span class="ja">支援する</span></a></div>'+
             '<div><a id="link-github" href="https://github.com/SethClydesdale/genki-study-resources"><i class="fa">&#xf09b;</i>GitHub</a></div>'+
             '<div><a id="link-settings" href="#genki-site-settings" onclick="GenkiSettings.manager(); return false;"><i class="fa">&#xf013;</i><span class="en">Settings</span><span class="ja">設定</span></a></div>'+
-          '</div>'
-          /*'<div id="related" class="indent-block">'+
+          '</div>'+
+          '<div id="related" class="indent-block">'+
             '<h3><span class="en">Related Projects</span><span class="ja">関連のプロジェクト</span></h3>'+
             '<a href="https://sethclydesdale.github.io/tobira-study-resources/" title="Tobira Study Resources"><img src="' + getPaths() + 'resources/images/tobira-img.png" alt="Tobira Study Resources"></a>'+
             '<a href="https://sethclydesdale.github.io/quartet-study-resources/" title="Quartet Study Resources"><img src="' + getPaths() + 'resources/images/quartet-img.png" alt="Quartet Study Resources"></a>'+
             '<a href="https://sethclydesdale.github.io/colloquial-kansai-dictionary/" title="Colloquial Kansai Japanese"><img src="' + getPaths() + 'resources/images/kansai-img.png" alt="Colloquial Kansai Japanese"></a>'+
-          '</div>'*/;
+          '</div>';
         
         if (Genki.exercises) {
           var attrs = 'class="lesson-title" onclick="Genki.toggle.list(this);" onkeydown="event.key == \'Enter\' && Genki.toggle.list(this);" tabindex="0"', // lesson-title attrs
