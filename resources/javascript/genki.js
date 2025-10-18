@@ -2997,25 +2997,19 @@
   Genki.init();
   
   
-  // # 3RD EDITION IMPORT NOTIFICATION #
-  if (storageOK && localStorage.dataSwapped != 'true' && localStorage.Results) {
-    if (JSON.parse(localStorage.Results)['3rd']) {
-      GenkiModal.open({
-        title : '3rd Edition Data Notice',
-        buttonHTML : 'Open Settings',
-        content : 
-        '<p>3rd Edition Exercise Score Data has been detected. The 3rd Edition is no longer available. However, you can import your 3rd Edition Exercise Score Data into the current exercise list via the Settings Manager.</p>'+
-        '<p>If you would like to import your 3rd Edition scores, click "Open Settings" below, scroll to the bottom, and then click the "Swap Data" button to swap your exercise score data. This will transfer over your 3rd Edition scores while maintaining your 2nd Edition scores in the background.</p>',
-        
-        callback : function () {
-          localStorage.dataSwapped = true;
-          window.setTimeout(GenkiSettings.manager, 10);
-        },
-        
-        closeCallback : function () {
-          localStorage.dataSwapped = true;
-        }
-      });
-    }
+  // # SURVEY NOTICE #
+  if (storageOK && localStorage.surveySeen != 'true') {
+    GenkiModal.open({
+      title : 'New Project Survey',
+      content : 
+      '<p>Hello!</p>'+
+      '<p>We just published a survey for our new Japanese language learning project and we\'d like to hear from you! If you\'d like to take the survey, please <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1Va17b0VOOWq1-kviAnN1xirbWDdDrEoy859TZdrd7hKyXg/viewform?usp=sharing&ouid=118165279165809355359%E2%80%8B" target="_blank">click here</a>.</p>'+
+      '<p>You can find more information on this new project and the survey <a href="https://ko-fi.com/Post/New-Project-Survey-L3L51MZM9T" target="_blank">here</a>.</p>'+
+      '<p>Thank you and we look forward to hearing from you!</p>',
+
+      closeCallback : function () {
+        localStorage.surveySeen = true;
+      }
+    });
   }
 }(window, document));
