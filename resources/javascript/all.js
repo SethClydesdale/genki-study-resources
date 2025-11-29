@@ -22,6 +22,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '11/19/25',
+          content : "Work on our new project is going well so far thanks to everyone's feedback! <a href=\"https://ko-fi.com/post/Project-Kantan-Progress-Update-I2I41ORTG4\" target=\"_blank\">Click here</a> to read our progress update and to see a preview of the new website."
+        },
+        
+        {
           date : '10/17/25',
           content : "We'd like to hear from you! Please <a href=\"https://ko-fi.com/Post/New-Project-Survey-L3L51MZM9T\" target=\"_blank\">click here</a> to take the survey for our new project."
         },
