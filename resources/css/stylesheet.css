@@ -449,6 +449,36 @@ a#fork-me:hover, a#fork-me:focus {
 #announcement .announce-controls.button-left { left:-20px; }
 #announcement .announce-controls.button-right { right:-20px; }
 
+/* random word module */
+#random-word-content {
+  margin-top:10px;
+}
+
+.random-word {
+  text-align:center;
+}
+
+.random-word ruby {
+  font-size:32px;
+}
+
+.random-word ruby rt {
+  font-size:18px;
+}
+
+.random-word .word-en {
+  font-size:24px;
+}
+
+.random-word .spoiler {
+  padding:6px;
+}
+
+.random-word .label {
+  text-align:right;
+  font-weight:bold;
+}
+
 /* content */
 #content { flex:1 0 auto; }
 
