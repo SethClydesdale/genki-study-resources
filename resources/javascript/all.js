@@ -22,7 +22,7 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
-          date : '2/14/25',
+          date : '2/14/26',
           content : "Happy New Year! To kick off the new year we\'ve posted a new <a href=\"https://ko-fi.com/post/Kantan-Japanese-Progress-Update-3-Z8Z01U7DVR\" target=\"_blank\">progress update</a> for Kantan Japanese! We hope you look forward to it!"
         },
         
