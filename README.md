@@ -1,4 +1,15 @@
-﻿# Genki Study Resources
+# IMPORTANT
+This project has been discontinued at [the request of The Japan Times](https://ko-fi.com/post/All-Exercises-for-GenkiQuartet-Study-Resources-Wi-R6R81M8LLN). I am currently in the process of working on a new, independent, website for learning, practicing, and teaching the Japanese language called "Kantan Japanese." You can follow my progress on this new project via Ko-Fi.
+
+- [Progress Update #1](https://ko-fi.com/post/Project-Kantan-Progress-Update-I2I41ORTG4) [Nov 19, 2025]
+- [Progress Update #2](https://ko-fi.com/post/Kantan-Japanese-Progress-Update-2-P5P71QTZFD) [Dec 24, 2025]
+- [Progress Update #3](https://ko-fi.com/post/Kantan-Japanese-Progress-Update-3-Z8Z01U7DVR) [Feb 14, 2026]
+
+I expect to release this new website on GitHub either around April or May 2026, hopefully!
+
+-----
+
+# Genki Study Resources
 Genki Study Resources is a website that offers exercises for practicing what is taught in [Genki: An Integrated Course in Elementary Japanese](https://genki3.japantimes.co.jp/en/). It was mainly created to help aid with self-study, as such, you can use it online or offline depending on your needs. Choose one of the links below to begin!
 
 
