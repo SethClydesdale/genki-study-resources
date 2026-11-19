@@ -2238,6 +2238,7 @@
           '</div>'+
           '<div id="related" class="indent-block">'+
             '<h3><span class="en">Related Projects</span><span class="ja">関連のプロジェクト</span></h3>'+
+            '<a href="https://sethclydesdale.github.io/kantan-japanese/" title="Kantan Japanese"><img src="' + getPaths() + 'resources/images/kantan-img.jpg" alt="Kantan Japanese"></a><br>'+
             '<a href="https://sethclydesdale.github.io/tobira-study-resources/" title="Tobira Study Resources"><img src="' + getPaths() + 'resources/images/tobira-img.png" alt="Tobira Study Resources"></a>'+
             '<a href="https://sethclydesdale.github.io/quartet-study-resources/" title="Quartet Study Resources"><img src="' + getPaths() + 'resources/images/quartet-img.png" alt="Quartet Study Resources"></a>'+
             '<a href="https://sethclydesdale.github.io/colloquial-kansai-dictionary/" title="Colloquial Kansai Japanese"><img src="' + getPaths() + 'resources/images/kansai-img.png" alt="Colloquial Kansai Japanese"></a>'+
@@ -2998,17 +2999,24 @@
   
   
   // # SURVEY NOTICE #
-  if (storageOK && localStorage.surveySeen != 'true') {
+  if (storageOK && localStorage.kantanSeen != 'true') {
     GenkiModal.open({
-      title : 'New Project Survey',
+      title : 'Try Out Our New Project!',
       content : 
       '<p>Hello!</p>'+
-      '<p>We just published a survey for our new Japanese language learning project and we\'d like to hear from you! If you\'d like to take the survey, please <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1Va17b0VOOWq1-kviAnN1xirbWDdDrEoy859TZdrd7hKyXg/viewform?usp=sharing&ouid=118165279165809355359%E2%80%8B" target="_blank">click here</a>.</p>'+
-      '<p>You can find more information on this new project and the survey <a href="https://ko-fi.com/Post/New-Project-Survey-L3L51MZM9T" target="_blank">here</a>.</p>'+
-      '<p>Thank you and we look forward to hearing from you!</p>',
+      '<p>We\'re happy to announce that our successor to Genki Study Resources, Kantan Japanese, is now available! You can read about it <a href="https://ko-fi.com/post/Kantan-Japanese-is-Now-Available-O2I52AX2TN" target="_blank"><b>on Ko-Fi</b></a> or visit Kantan Japanese by clicking the banner below!</p>'+
+      '<div class="center"><a href="https://sethclydesdale.github.io/kantan-japanese/" title="Kantan Japanese"><img src="resources/images/kantan-img.jpg" alt="Kantan Japanese"></a></div>'+
+      '<p>Kan-tan looks forward to studying with you!!</p>',
 
       closeCallback : function () {
-        localStorage.surveySeen = true;
+        localStorage.kantanSeen = true;
+      },
+      
+      customSize : {
+        top : '10%',
+        left : '20%',
+        bottom : '10%',
+        right : '20%'
       }
     });
   }

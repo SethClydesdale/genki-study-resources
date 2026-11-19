@@ -22,6 +22,11 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
+          date : '11/19/26',
+          content : "Kantan Japanese is now available! <a href=\"https://sethclydesdale.github.io/kantan-japanese/\" target=\"_blank\">Click here</a> to try out the successor to Genki Study Resources!"
+        },
+        
+        {
           date : '8/23/26',
           content : "Check out our latest <a href=\"https://ko-fi.com/post/Kantan-Japanese-Progress-Update-6-R0H325ITMV\" target=\"_blank\">progress update</a> for Kantan Japanese!"
         },

@@ -1,12 +1,7 @@
 # IMPORTANT
-This project has been discontinued at [the request of The Japan Times](https://ko-fi.com/post/All-Exercises-for-GenkiQuartet-Study-Resources-Wi-R6R81M8LLN). I am currently in the process of working on a new, independent, website for learning, practicing, and teaching the Japanese language called "Kantan Japanese." You can follow my progress on this new project via Ko-Fi.
+This project has been discontinued at [the request of The Japan Times](https://ko-fi.com/post/All-Exercises-for-GenkiQuartet-Study-Resources-Wi-R6R81M8LLN). If you're looking for a resource similar to this one, please check out my new project, Kantan Japanese, below!
 
-- [Progress Update #1](https://ko-fi.com/post/Project-Kantan-Progress-Update-I2I41ORTG4) [Nov 19, 2025]
-- [Progress Update #2](https://ko-fi.com/post/Kantan-Japanese-Progress-Update-2-P5P71QTZFD) [Dec 24, 2025]
-- [Progress Update #3](https://ko-fi.com/post/Kantan-Japanese-Progress-Update-3-Z8Z01U7DVR) [Feb 14, 2026]
-- [Progress Update #4](https://ko-fi.com/post/Kantan-Japanese-Progress-Update-4-A0A11Y0IA1) [Apr 18, 2026]
-- [Progress Update #5](https://ko-fi.com/post/Kantan-Japanese-Progress-Update-5-I8K121Q9CD) [Jun 20, 2026]
-- [Progress Update #6](https://ko-fi.com/post/Kantan-Japanese-Progress-Update-6-R0H325ITMV) [Aug 23, 2026]
+https://github.com/SethClydesdale/kantan-japanese
 
 -----
 
